@@ -32,7 +32,7 @@ class SmsService {
     private static ?self $instance = null;
     public ?string $from;
     public string $to;
-    public string $driver;
+    public string $driver='netfun';
     public ?string $body;
 
     public array $vars=[];
@@ -57,6 +57,10 @@ class SmsService {
         return $this;
     }
 
+    public function mergeVars(array $vars):self{
+        $this->vars=array_merge($this->vars,$vars);
+        return $this;
+    }
 
     public function send(){
         $class='\Modules\Notify\Services\SmsEngines\\'.Str::studly($this->driver).'Engine';
