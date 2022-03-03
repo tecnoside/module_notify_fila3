@@ -35,6 +35,9 @@ class CreateNotifyThemesTable extends XotBaseMigration {
         //-- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
+            if (! $this->hasColumn('from')) {
+                $table->string('from')->nullable();
+            }
             if (! $this->hasColumn('updated_at')) {
                 $table->timestamps();
             }
