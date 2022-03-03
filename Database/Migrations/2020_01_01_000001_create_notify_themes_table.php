@@ -42,6 +42,10 @@ class CreateNotifyThemesTable extends XotBaseMigration {
                 $table->string('updated_by')->nullable()->after('updated_at');
                 $table->string('created_by')->nullable()->after('created_at');
             }
+            if (! $this->hasColumn('post_type')) {
+                $table->nullableMorphs('post');
+            }
+
         }); //end update
     }
 
