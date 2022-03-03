@@ -139,7 +139,7 @@ class NotifyThemePanel extends XotBasePanel {
   ),
   
   (object) array(
-     'type' => 'Wysiwyg',
+     'type' => 'WysiwygSummerNote',
      'name' => 'body',
      'comment' => NULL,
   ),
