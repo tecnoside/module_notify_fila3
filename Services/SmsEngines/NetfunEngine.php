@@ -176,8 +176,8 @@ class NetfunEngine {
         $body=[
             'api_token'=> $token,
             //"gateway"=> 99,
-            "sender"=> "PamAnderson",
-            'text_template'=> "Prova",
+            "sender"=> $this->from,
+            'text_template'=> $this->body,
             'delivery_callback'=> "https://www.google.com?code={{code}}",
             "default_placeholders"=> [
                 "code"=> "0000"
@@ -187,8 +187,9 @@ class NetfunEngine {
             "utf8_enabled"=> false,
             "destinations"=> [
                 [
-                  "number"=> "+393475896127",
-                  //"number"=> "+393283597515",
+                  //"number"=> "+393475896127",
+                  "number"=> $this->to,
+                  
                   "placeholders"=> [
                     "fullName"=> "Santi",
                     "body"=> "Ciao, hai vinto il premio",
@@ -199,7 +200,7 @@ class NetfunEngine {
                
         ];
 
-       
+       //dddx($body);
 
         $client = new Client($headers);
         try{

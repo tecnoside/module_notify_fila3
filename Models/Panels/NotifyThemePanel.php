@@ -49,9 +49,13 @@ class NotifyThemePanel extends XotBasePanel {
      'name' => 'lang',
      'comment' => NULL,
 <<<<<<< HEAD
+<<<<<<< HEAD
      'col_size' =>3
 =======
 >>>>>>> 42aa20e (.)
+=======
+     'col_size' =>3
+>>>>>>> 8b046e1 (.)
   ),
   
   (object) array(
@@ -59,6 +63,9 @@ class NotifyThemePanel extends XotBasePanel {
      'name' => 'type',
      'comment' => NULL,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8b046e1 (.)
      'col_size' =>3
   ),
   (object) array(
@@ -67,14 +74,18 @@ class NotifyThemePanel extends XotBasePanel {
     'comment' => NULL,
     'col_size' =>3
  ),
+<<<<<<< HEAD
 =======
   ),
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 8b046e1 (.)
   
   (object) array(
      'type' => 'String',
      'name' => 'subject',
      'comment' => NULL,
+<<<<<<< HEAD
 <<<<<<< HEAD
      'col_size' =>12
   ),
@@ -92,10 +103,13 @@ class NotifyThemePanel extends XotBasePanel {
      'comment' => NULL,
      'except'=>['index'],
 =======
+=======
+     'col_size' =>12
+>>>>>>> 8b046e1 (.)
   ),
   
   (object) array(
-     'type' => 'WysiwygSummerNote',
+     'type' => 'WysiwygSceditor',
      'name' => 'body',
      'comment' => NULL,
 >>>>>>> 42aa20e (.)
