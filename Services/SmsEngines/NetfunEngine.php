@@ -185,22 +185,25 @@ class NetfunEngine {
             //"gateway"=> 99,
             'sender' => $this->from,
             'text_template' => $this->body,
+            /*
             'delivery_callback' => 'https://www.google.com?code={{code}}',
             'default_placeholders' => [
                 'code' => '0000',
             ],
+            */
             'async' => true,
             'max_sms_length' => 1,
             'utf8_enabled' => false,
             'destinations' => [
                 [
                     'number' => $this->to,
-
+                    /*
                     'placeholders' => [
                         'fullName' => 'Santi',
                         'body' => 'Ciao, hai vinto il premio',
                         'code' => '1234',
                     ],
+                    */
                 ],
             ],
         ];
@@ -214,10 +217,14 @@ class NetfunEngine {
             dddx($e);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         echo '<pre>' . var_export($response->getStatusCode(), true) . '</pre>';
         echo '<pre>' . var_export($response->getBody()->getContents(), true) . '</pre>';
 >>>>>>> 42aa20e (.)
 =======
+=======
+
+>>>>>>> a43b060 (.)
         echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
         echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
 >>>>>>> 6c92430 (.)
