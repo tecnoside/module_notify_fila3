@@ -18,6 +18,7 @@ class NotifyTheme extends BaseModel{
         'type',
         'subject',
         'body',
+        'body_html',
         'from',
     ];
 }
