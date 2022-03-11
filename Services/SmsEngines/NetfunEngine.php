@@ -281,7 +281,9 @@ class NetfunEngine {
             dddx($e);
 >>>>>>> 42aa20e (.)
         }
-
+        echo '<hr/>';
+        echo '<pre>'.$this->to.'</pre>';
+        echo '<pre>'.$this->body.'</pre>';
         echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
         echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
 
