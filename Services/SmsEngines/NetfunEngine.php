@@ -1,10 +1,16 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * @link https://smsvi-docs.web.app/docs/restful/send-batch/
  */
 =======
 >>>>>>> 42aa20e (.)
+=======
+/**
+ * @link https://smsvi-docs.web.app/docs/restful/send-batch/
+ */
+>>>>>>> 468f0a0 (.)
 
 declare(strict_types=1);
 
@@ -20,6 +26,7 @@ use Exception;
 =======
 >>>>>>> 6c92430 (.)
 use GuzzleHttp\Client;
+use Illuminate\Support\Str;
 use GuzzleHttp\Exception\ClientException;
 <<<<<<< HEAD
 use Modules\Tenant\Services\TenantService;
@@ -107,6 +114,7 @@ class NetfunEngine {
             $this->to='+39'.$this->to;
         }
 
+<<<<<<< HEAD
         $body = [
             'api_token' => $token,
             //"gateway"=> 99,
@@ -180,11 +188,13 @@ class NetfunEngine {
 
         //dddx([ord($this->body[0]), $this->body]);
 
+=======
+>>>>>>> 468f0a0 (.)
         $body = [
             'api_token' => $token,
             //"gateway"=> 99,
             'sender' => $this->from,
-            'text_template' => $this->body,
+            'text_template' => $this->body.'  '.rand(1,100),
             /*
             'delivery_callback' => 'https://www.google.com?code={{code}}',
             'default_placeholders' => [
@@ -192,8 +202,8 @@ class NetfunEngine {
             ],
             */
             'async' => true,
-            'max_sms_length' => 1,
-            'utf8_enabled' => false,
+            //'max_sms_length' => 1,
+            'utf8_enabled' => true,
             'destinations' => [
                 [
                     'number' => $this->to,
@@ -228,9 +238,14 @@ class NetfunEngine {
 >>>>>>> a43b060 (.)
 =======
         echo '<hr/>';
+<<<<<<< HEAD
         echo '<pre>'.$this->to.'</pre>';
         echo '<pre>'.$this->body.'</pre>';
 >>>>>>> 683ae82 (.)
+=======
+        echo '<pre>to: '.$this->to.'</pre>';
+        echo '<pre>body: '.$this->body.'</pre>';
+>>>>>>> 468f0a0 (.)
         echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
         echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
 >>>>>>> 6c92430 (.)
