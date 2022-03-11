@@ -894,6 +894,7 @@ class NetfunEngine {
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         echo '<pre>' . var_export($response->getStatusCode(), true) . '</pre>';
         echo '<pre>' . var_export($response->getBody()->getContents(), true) . '</pre>';
 >>>>>>> 42aa20e (.)
@@ -901,6 +902,11 @@ class NetfunEngine {
 =======
 
 >>>>>>> a43b060 (.)
+=======
+        echo '<hr/>';
+        echo '<pre>'.$this->to.'</pre>';
+        echo '<pre>'.$this->body.'</pre>';
+>>>>>>> 683ae82 (.)
         echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
         echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
 >>>>>>> 6c92430 (.)
