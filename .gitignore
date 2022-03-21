@@ -23,12 +23,18 @@ Homestead.json
 .phpunit.result.cache
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 23a7ddf (.)
 
 *.stackdump
 *.cache
 
+<<<<<<< HEAD
 =======
 >>>>>>> 1b86d70 (Initial commit)
 =======
 *.cache
 >>>>>>> 6c92430 (.)
+=======
+>>>>>>> 23a7ddf (.)
