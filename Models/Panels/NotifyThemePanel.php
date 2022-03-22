@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Models\Panels;
 
 use Illuminate\Http\Request;
-use Modules\Xot\Contracts\RowsContract;
 //--- Services --
 
 use Modules\Xot\Models\Panels\XotBasePanel;
@@ -23,8 +24,6 @@ class NotifyThemePanel extends XotBasePanel {
      */
     public static string $title = 'title';
 
-
-
     /**
      * Get the fields displayed by the resource.
      *
@@ -36,92 +35,55 @@ class NotifyThemePanel extends XotBasePanel {
         'value'=>'..',
      */
     public function fields(): array {
-        return array (
-  
-  (object) array(
-     'type' => 'Id',
-     'name' => 'id',
-     'comment' => NULL,
-  ),
-  
-  (object) array(
-     'type' => 'String',
-     'name' => 'lang',
-     'comment' => NULL,
-<<<<<<< HEAD
-<<<<<<< HEAD
-     'col_size' =>3
-=======
->>>>>>> 42aa20e (.)
-=======
-     'col_size' =>3
->>>>>>> 8b046e1 (.)
-  ),
-  
-  (object) array(
-     'type' => 'String',
-     'name' => 'type',
-     'comment' => NULL,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8b046e1 (.)
-     'col_size' =>3
-  ),
-  (object) array(
-    'type' => 'String',
-    'name' => 'from',
-    'comment' => NULL,
-    'col_size' =>3
- ),
-<<<<<<< HEAD
-=======
-  ),
->>>>>>> 42aa20e (.)
-=======
->>>>>>> 8b046e1 (.)
-  
-  (object) array(
-     'type' => 'String',
-     'name' => 'subject',
-     'comment' => NULL,
-<<<<<<< HEAD
-<<<<<<< HEAD
-     'col_size' =>12
-  ),
+        return [
+            (object) [
+                'type' => 'Id',
+                'name' => 'id',
+                'comment' => null,
+            ],
 
-  (object) array(
-    'type' => 'Textarea',
-    'name' => 'body',
-    'comment' => NULL,
-    'except'=>['index'],
- ),
+            (object) [
+                'type' => 'String',
+                'name' => 'lang',
+                'comment' => null,
+                'col_size' => 3,
+            ],
 
-<<<<<<< HEAD
-  (object) array(
-     'type' => 'WysiwygSceditor',
-     'name' => 'body_html',
-     'comment' => NULL,
-     'except'=>['index'],
-=======
-=======
-     'col_size' =>12
->>>>>>> 8b046e1 (.)
-  ),
-  
-=======
->>>>>>> 468f0a0 (.)
-  (object) array(
-     'type' => 'WysiwygSceditor',
-     'name' => 'body_html',
-     'comment' => NULL,
-<<<<<<< HEAD
->>>>>>> 42aa20e (.)
-=======
-     'except'=>['index'],
->>>>>>> 468f0a0 (.)
-  ),
-);
+            (object) [
+                'type' => 'String',
+                'name' => 'type',
+                'comment' => null,
+                'col_size' => 3,
+            ],
+            (object) [
+                'type' => 'String',
+                'name' => 'from',
+                'comment' => null,
+                'col_size' => 3,
+            ],
+
+            (object) [
+                'type' => 'String',
+                'name' => 'subject',
+                'comment' => null,
+                'col_size' => 12,
+            ],
+
+            (object) [
+                'type' => 'Textarea',
+                'name' => 'body',
+                'comment' => null,
+                'except' => ['index'],
+            ],
+
+            (object) [
+                'type' => 'WysiwygSceditor',
+                'name' => 'body_html',
+                'comment' => null,
+                'except' => ['index'],
+                'col_size' => 12,
+            ],
+        ];
     }
 
     /**
@@ -129,7 +91,7 @@ class NotifyThemePanel extends XotBasePanel {
      *
      * @return array
      */
-    public function tabs():array {
+    public function tabs(): array {
         $tabs_name = [];
 
         return $tabs_name;
@@ -140,7 +102,7 @@ class NotifyThemePanel extends XotBasePanel {
      *
      * @return array
      */
-    public function cards(Request $request):array {
+    public function cards(Request $request): array {
         return [];
     }
 
@@ -151,7 +113,7 @@ class NotifyThemePanel extends XotBasePanel {
      *
      * @return array
      */
-    public function filters(Request $request = null):array {
+    public function filters(Request $request = null): array {
         return [];
     }
 
@@ -160,7 +122,7 @@ class NotifyThemePanel extends XotBasePanel {
      *
      * @return array
      */
-    public function lenses(Request $request):array {
+    public function lenses(Request $request): array {
         return [];
     }
 
@@ -169,7 +131,7 @@ class NotifyThemePanel extends XotBasePanel {
      *
      * @return array
      */
-    public function actions():array {
+    public function actions(): array {
         return [];
     }
 }
