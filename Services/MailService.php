@@ -57,4 +57,14 @@ class MailService {
             ->setLocalVars($this->vars)
             ->send();
     }
+
+    /**
+     * ---.
+     */
+    public function try() {
+        $class = '\Modules\Notify\Services\MailEngines\\'.Str::studly($this->driver).'Engine';
+        $class::make()
+            ->setLocalVars($this->vars)
+            ->try();
+    }
 }
