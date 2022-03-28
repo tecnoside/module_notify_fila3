@@ -8,6 +8,7 @@ namespace Modules\Notify\Models\Panels\Actions;
 
 //-------- services --------
 
+use Modules\Notify\Services\MailService;
 use Modules\Theme\Services\ThemeService;
 use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
@@ -16,18 +17,16 @@ use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 /**
  * Class TestAction.
  */
-class TestMailAction extends XotBasePanelAction
-{
+class TestMailAction extends XotBasePanelAction {
     public bool $onItem = true;
     public string $icon = '<i class="fas fa-vial"></i>Mail';
 
     /**
      * @return mixed
      */
-    public function handle()
-    {
+    public function handle() {
         $drivers = [
-            'netfun',
+            'duocircle',
         ];
         $i = request('i');
 
@@ -51,5 +50,16 @@ class TestMailAction extends XotBasePanelAction
         //}
 
         //return 'not exists ['.$view.']';
+    }
+
+    /**
+     * ---.
+     */
+    public function postHandle() {
+        $data = request()->all();
+        $vars = collect($data)->only(['driver', 'from', 'to', 'body'])->all();
+        MailService::make()
+            ->setLocalVars($vars)
+            ->try();
     }
 }
