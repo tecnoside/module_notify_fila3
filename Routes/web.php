@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,7 +12,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::prefix('notify')->group(function() {
     Route::get('/', 'NotifyController@index');
 });
+*/
