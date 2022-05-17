@@ -6,7 +6,7 @@ namespace Modules\Notify\Services;
 
 use Illuminate\Support\Str;
 
-//---------CSS------------
+// ---------CSS------------
 
 /**
  * Class SmsService.

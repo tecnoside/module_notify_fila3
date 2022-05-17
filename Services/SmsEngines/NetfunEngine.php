@@ -11,7 +11,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Str;
 
-//---------CSS------------
+// ---------CSS------------
 
 /**
  * Class SmsService.
@@ -64,7 +64,7 @@ class NetfunEngine {
         ];
         $token = env('NETFUN_TOKEN');
 
-        //dddx([ord($this->body[0]), $this->body]);
+        // dddx([ord($this->body[0]), $this->body]);
 
         $this->to = $this->to.'';
         if (Str::startsWith($this->to, '00')) {
@@ -77,7 +77,7 @@ class NetfunEngine {
 
         $body = [
             'api_token' => $token,
-            //"gateway"=> 99,
+            // "gateway"=> 99,
             'sender' => $this->from,
             'text_template' => $this->body.'  '.rand(1, 100),
             /*
@@ -87,7 +87,7 @@ class NetfunEngine {
             ],
             */
             'async' => true,
-            //'max_sms_length' => 1,
+            // 'max_sms_length' => 1,
             'utf8_enabled' => true,
             'destinations' => [
                 [
@@ -103,7 +103,7 @@ class NetfunEngine {
             ],
         ];
 
-        //dddx($body);
+        // dddx($body);
 
         $client = new Client($headers);
         try {

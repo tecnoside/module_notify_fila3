@@ -9,7 +9,7 @@ namespace Modules\Notify\Services\MailEngines;
 
 use GuzzleHttp\Client;
 
-//---------CSS------------
+// ---------CSS------------
 
 /**
  * Class SmsService.
@@ -70,17 +70,17 @@ class DuocircleEngine {
         /** @var \Webklex\PHPIMAP\Client $client */
         $client = \Webklex\IMAP\Facades\Client::account('default');
 
-        //Connect to the IMAP Server
+        // Connect to the IMAP Server
         $client->connect();
 
-        //Get all Mailboxes
+        // Get all Mailboxes
         /** @var \Webklex\PHPIMAP\Support\FolderCollection $folders */
         $folders = $client->getFolders();
 
-        //Loop through every Mailbox
+        // Loop through every Mailbox
         /** @var \Webklex\PHPIMAP\Folder $folder */
         foreach ($folders as $folder) {
-            //Get all Messages of the current Mailbox $folder
+            // Get all Messages of the current Mailbox $folder
             /** @var \Webklex\PHPIMAP\Support\MessageCollection $messages */
             $messages = $folder->messages()->all()->get();
 
@@ -90,7 +90,7 @@ class DuocircleEngine {
                 echo 'Attachments: '.$message->getAttachments()->count().'<br />';
                 echo $message->getHTMLBody();
 
-                //Move the current Message to 'INBOX.read'
+                // Move the current Message to 'INBOX.read'
                 if (true == $message->move('INBOX.read')) {
                     echo 'Message has ben moved';
                 } else {
