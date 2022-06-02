@@ -296,7 +296,7 @@ abstract class BaseModel extends Model {
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
     protected static function newFactory() {
-        return FactoryService::newFactory(get_called_class());
+        return FactoryService::newFactory(static::class);
     }
 }
 >>>>>>> 89120cb (rebase)
