@@ -27,6 +27,7 @@ class TestMailAction extends XotBasePanelAction {
     public function handle() {
         $drivers = [
             'duocircle',
+            'mailtrap',
         ];
         $i = request('i');
 
