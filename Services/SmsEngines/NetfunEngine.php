@@ -203,6 +203,8 @@ class NetfunEngine {
     public string $driver;
     public ?string $body;
 
+    public array $vars = [];
+
     public string $send_method = 'batch';
 
     public function __construct() {
@@ -226,6 +228,10 @@ class NetfunEngine {
         }
 
         return $this;
+    }
+
+    public function getVars(){
+        return $this->vars;
     }
 
     public function send(): self {
@@ -291,11 +297,16 @@ class NetfunEngine {
         } catch (ClientException $e) {
             throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']');
         }
+        /*
         echo '<hr/>';
         echo '<pre>to: '.$this->to.'</pre>';
         echo '<pre>body: '.$this->body.'</pre>';
         echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
         echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
+        */
+
+        $this->vars['status_code'] = $response->getStatusCode();
+        $this->vars['status_txt'] = $response->getBody()->getContents();
 
         return $this;
     }
