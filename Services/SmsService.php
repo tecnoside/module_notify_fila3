@@ -50,9 +50,17 @@ class SmsService {
 
     public function send():self {
         $class = '\Modules\Notify\Services\SmsEngines\\'.Str::studly($this->driver).'Engine';
-        $class::make()
+        $instance = $class::make()
             ->setLocalVars($this->vars)
             ->send();
+
+        $this->mergeVars($instance->getVars());
+
         return $this;
     }
+
+    public function getVars(){
+        return $this->vars;
+    }
+    
 }
