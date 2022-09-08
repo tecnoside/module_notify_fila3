@@ -5,9 +5,6 @@ declare(strict_types=1);
 namespace Modules\Notify\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
-
-use Modules\Notify\Models\NotifyTheme;
 
 class NotifyThemeFactory extends Factory {
     /**
@@ -23,8 +20,6 @@ class NotifyThemeFactory extends Factory {
      * @return array
      */
     public function definition() {
-       
-
         return [
             'id' => $this->faker->randomNumber(5, false),
             'lang' => $this->faker->word,
@@ -32,7 +27,7 @@ class NotifyThemeFactory extends Factory {
             'subject' => $this->faker->word,
             'body' => $this->faker->text,
             'body_html' => $this->faker->text,
-            'from' => $this->faker->word
+            'from' => $this->faker->word,
         ];
     }
 }

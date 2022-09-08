@@ -51,7 +51,7 @@ class NetfunEngine {
         return $this;
     }
 
-    public function getVars(){
+    public function getVars() {
         return $this->vars;
     }
 

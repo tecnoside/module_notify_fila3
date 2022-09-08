@@ -49,7 +49,8 @@ class NotifyServiceProvider extends ServiceProvider {
             module_path($this->moduleName, 'Config/config.php') => config_path($this->moduleNameLower.'.php'),
         ], 'config');
         $this->mergeConfigFrom(
-            module_path($this->moduleName, 'Config/config.php'), $this->moduleNameLower
+            module_path($this->moduleName, 'Config/config.php'),
+            $this->moduleNameLower
         );
     }
 
@@ -96,10 +97,10 @@ class NotifyServiceProvider extends ServiceProvider {
 
     private function getPublishableViewPaths(): array {
         $paths = [];
-        //$view_paths=\Config::get('view.paths');
-        $view_paths=config('view.paths');
-        
-        if(!is_iterable($view_paths)){
+        // $view_paths=\Config::get('view.paths');
+        $view_paths = config('view.paths');
+
+        if (! is_iterable($view_paths)) {
             throw new Exception('['.__LINE__.']['.class_basename(__CLASS__).']');
         }
         foreach ($view_paths as $path) {
