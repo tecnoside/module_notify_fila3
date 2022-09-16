@@ -3,26 +3,16 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-<<<<<<< HEAD
 // ----- models -----
 
 // ----- bases ----
-=======
-//----- models -----
-
-//----- bases ----
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
  * Class CreateThemesTable.
  */
 class CreateNotifyThemesTable extends XotBaseMigration {
-<<<<<<< HEAD
     // use XotBaseMigrationTrait;
-=======
-    //use XotBaseMigrationTrait;
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
 
     /**
      * Run the migrations.
@@ -30,11 +20,7 @@ class CreateNotifyThemesTable extends XotBaseMigration {
      * @return void
      */
     public function up() {
-<<<<<<< HEAD
         // -- CREATE --
-=======
-        //-- CREATE --
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->increments('id');
@@ -45,7 +31,6 @@ class CreateNotifyThemesTable extends XotBaseMigration {
             }
         );
 
-<<<<<<< HEAD
         // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
@@ -70,31 +55,4 @@ class CreateNotifyThemesTable extends XotBaseMigration {
     }
 
     // end function up
-=======
-
-        //-- UPDATE --
-        $this->tableUpdate(
-            function (Blueprint $table) {
-            if (! $this->hasColumn('from')) {
-                $table->string('from')->nullable();
-            }
-            if (! $this->hasColumn('updated_at')) {
-                $table->timestamps();
-            }
-            if (! $this->hasColumn('updated_by')) {
-                $table->string('updated_by')->nullable()->after('updated_at');
-                $table->string('created_by')->nullable()->after('created_at');
-            }
-            if (! $this->hasColumn('post_type')) {
-                $table->nullableMorphs('post');
-            }
-            if (! $this->hasColumn('body_html')) {
-                $table->text('body_html')->nullable();
-            }
-
-        }); //end update
-    }
-
-    //end function up
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
 }

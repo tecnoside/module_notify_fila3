@@ -5,17 +5,12 @@ declare(strict_types=1);
 namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
-<<<<<<< HEAD
 // //use Laravel\Scout\Searchable;
-=======
-////use Laravel\Scout\Searchable;
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
 use Modules\Xot\Traits\Updater;
 
 /**
  * Class BasePivot.
  */
-<<<<<<< HEAD
 abstract class BasePivot extends Pivot {
     use Updater;
     /**
@@ -30,12 +25,6 @@ abstract class BasePivot extends Pivot {
     protected $perPage = 30;
 
     // use Searchable;
-=======
-abstract class BasePivot extends Pivot
-{
-    use Updater;
-    //use Searchable;
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
 
     /**
      * @var string
@@ -46,11 +35,7 @@ abstract class BasePivot extends Pivot
      */
     protected $appends = [];
     /**
-<<<<<<< HEAD
      * @var array<string, string>
-=======
-     * @var array
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
      */
     protected $casts = [];
     /**
