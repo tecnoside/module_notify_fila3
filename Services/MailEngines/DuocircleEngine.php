@@ -7,10 +7,16 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services\MailEngines;
 
+<<<<<<< HEAD
 use Exception;
 use GuzzleHttp\Client;
 
 // ---------CSS------------
+=======
+use GuzzleHttp\Client;
+
+//---------CSS------------
+>>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
 
 /**
  * Class SmsService.
@@ -68,6 +74,7 @@ class DuocircleEngine {
 
         dddx($request);
         */
+<<<<<<< HEAD
         if (! class_exists(\Webklex\PHPIMAP\Client::class)) {
             throw new Exception('class [Webklex\\PHPIMAP\\Client] not exists ['.__LINE__.']['.class_basename(__CLASS__).']');
         }
@@ -93,12 +100,36 @@ class DuocircleEngine {
             $messages = $folder->messages()->all()->get();
 
             // / @var \Webklex\PHPIMAP\Message $message
+=======
+        /** @var \Webklex\PHPIMAP\Client $client */
+        $client = \Webklex\IMAP\Facades\Client::account('default');
+
+        //Connect to the IMAP Server
+        $client->connect();
+
+        //Get all Mailboxes
+        /** @var \Webklex\PHPIMAP\Support\FolderCollection $folders */
+        $folders = $client->getFolders();
+
+        //Loop through every Mailbox
+        /** @var \Webklex\PHPIMAP\Folder $folder */
+        foreach ($folders as $folder) {
+            //Get all Messages of the current Mailbox $folder
+            /** @var \Webklex\PHPIMAP\Support\MessageCollection $messages */
+            $messages = $folder->messages()->all()->get();
+
+            /** @var \Webklex\PHPIMAP\Message $message */
+>>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
             foreach ($messages as $message) {
                 echo $message->getSubject().'<br />';
                 echo 'Attachments: '.$message->getAttachments()->count().'<br />';
                 echo $message->getHTMLBody();
 
+<<<<<<< HEAD
                 // Move the current Message to 'INBOX.read'
+=======
+                //Move the current Message to 'INBOX.read'
+>>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
                 if (true == $message->move('INBOX.read')) {
                     echo 'Message has ben moved';
                 } else {

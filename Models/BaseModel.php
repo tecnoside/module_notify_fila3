@@ -5,9 +5,15 @@ declare(strict_types=1);
 namespace Modules\Notify\Models;
 
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+<<<<<<< HEAD
 // ---------- traits
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 // //use Laravel\Scout\Searchable;
+=======
+//---------- traits
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+////use Laravel\Scout\Searchable;
+>>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Services\FactoryService;
 use Modules\Xot\Traits\Updater;
@@ -15,6 +21,7 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseModel.
  */
+<<<<<<< HEAD
 abstract class BaseModel extends Model {
     use Updater;
 
@@ -39,6 +46,23 @@ abstract class BaseModel extends Model {
      */
     protected $casts = [
         // 'published_at' => 'datetime:Y-m-d', // da verificare
+=======
+abstract class BaseModel extends Model
+{
+    use Updater;
+    //use Searchable;
+    //use Cachable;
+    use HasFactory;
+
+    protected $connection = 'notify';
+
+
+    /**
+     * @var array
+     */
+    protected $casts = [
+        //'published_at' => 'datetime:Y-m-d', // da verificare
+>>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
     ];
 
     /**
@@ -54,10 +78,17 @@ abstract class BaseModel extends Model {
      */
     public $incrementing = true;
     /**
+<<<<<<< HEAD
      * @var array<int, string>
      */
     protected $hidden = [
         // 'password'
+=======
+     * @var array
+     */
+    protected $hidden = [
+        //'password'
+>>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
     ];
     /**
      * @var bool
@@ -69,7 +100,13 @@ abstract class BaseModel extends Model {
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
+<<<<<<< HEAD
     protected static function newFactory() {
         return FactoryService::newFactory(static::class);
+=======
+    protected static function newFactory()
+    {
+        return FactoryService::newFactory(get_called_class());
+>>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
     }
 }

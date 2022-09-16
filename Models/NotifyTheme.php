@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Models;
 
 /**
+<<<<<<< HEAD
  * Modules\Notify\Models\NotifyTheme.
  *
  * @property int                             $id
@@ -40,6 +41,9 @@ namespace Modules\Notify\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereUpdatedBy($value)
  *
  * @mixin \Eloquent
+=======
+ * --.
+>>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
  */
 class NotifyTheme extends BaseModel {
     /**
