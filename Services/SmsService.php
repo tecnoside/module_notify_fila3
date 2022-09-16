@@ -6,11 +6,7 @@ namespace Modules\Notify\Services;
 
 use Illuminate\Support\Str;
 
-<<<<<<< HEAD
 // ---------CSS------------
-=======
-//---------CSS------------
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
 
 /**
  * Class SmsService.
@@ -52,7 +48,6 @@ class SmsService {
         return $this;
     }
 
-<<<<<<< HEAD
     public function send(): self {
         $class = '\Modules\Notify\Services\SmsEngines\\'.Str::studly($this->driver).'Engine';
         $instance = $class::make()
@@ -66,12 +61,5 @@ class SmsService {
 
     public function getVars() {
         return $this->vars;
-=======
-    public function send() {
-        $class = '\Modules\Notify\Services\SmsEngines\\'.Str::studly($this->driver).'Engine';
-        $class::make()
-            ->setLocalVars($this->vars)
-            ->send();
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
     }
 }
