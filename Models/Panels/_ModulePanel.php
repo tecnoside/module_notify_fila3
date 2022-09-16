@@ -14,10 +14,7 @@ class _ModulePanel extends XotBasePanel {
         return [
             new Actions\TestSmsAction(),
             new Actions\TestMailAction(),
-<<<<<<< HEAD
             new Actions\TrySendMailAction(),
-=======
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
         ];
     }
 }
