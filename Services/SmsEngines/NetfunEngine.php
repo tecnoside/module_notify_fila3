@@ -7,19 +7,12 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services\SmsEngines;
 
-<<<<<<< HEAD
 use Exception;
-=======
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Str;
 
-<<<<<<< HEAD
 // ---------CSS------------
-=======
-//---------CSS------------
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
 
 /**
  * Class SmsService.
@@ -31,11 +24,8 @@ class NetfunEngine {
     public string $driver;
     public ?string $body;
 
-<<<<<<< HEAD
     public array $vars = [];
 
-=======
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
     public string $send_method = 'batch';
 
     public function __construct() {
@@ -61,13 +51,10 @@ class NetfunEngine {
         return $this;
     }
 
-<<<<<<< HEAD
     public function getVars() {
         return $this->vars;
     }
 
-=======
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
     public function send(): self {
         switch ($this->send_method) {
             case 'batch': return $this->sendBatch();
@@ -84,11 +71,7 @@ class NetfunEngine {
         ];
         $token = env('NETFUN_TOKEN');
 
-<<<<<<< HEAD
         // dddx([ord($this->body[0]), $this->body]);
-=======
-        //dddx([ord($this->body[0]), $this->body]);
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
 
         $this->to = $this->to.'';
         if (Str::startsWith($this->to, '00')) {
@@ -101,11 +84,7 @@ class NetfunEngine {
 
         $body = [
             'api_token' => $token,
-<<<<<<< HEAD
             // "gateway"=> 99,
-=======
-            //"gateway"=> 99,
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
             'sender' => $this->from,
             'text_template' => $this->body.'  '.rand(1, 100),
             /*
@@ -115,11 +94,7 @@ class NetfunEngine {
             ],
             */
             'async' => true,
-<<<<<<< HEAD
             // 'max_sms_length' => 1,
-=======
-            //'max_sms_length' => 1,
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
             'utf8_enabled' => true,
             'destinations' => [
                 [
@@ -135,36 +110,24 @@ class NetfunEngine {
             ],
         ];
 
-<<<<<<< HEAD
         // dddx($body);
-=======
-        //dddx($body);
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
 
         $client = new Client($headers);
         try {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
-<<<<<<< HEAD
             throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']');
         }
         /*
-=======
-            dddx($e);
-        }
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
         echo '<hr/>';
         echo '<pre>to: '.$this->to.'</pre>';
         echo '<pre>body: '.$this->body.'</pre>';
         echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
         echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
-<<<<<<< HEAD
         */
 
         $this->vars['status_code'] = $response->getStatusCode();
         $this->vars['status_txt'] = $response->getBody()->getContents();
-=======
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
 
         return $this;
     }
@@ -187,11 +150,7 @@ class NetfunEngine {
         try {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
-<<<<<<< HEAD
             throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']');
-=======
-            dddx($e);
->>>>>>> 8cd37156187c5a52f4a3a2836a5ddeb3c57e8dbf
         }
         echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
         echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
