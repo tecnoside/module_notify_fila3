@@ -54,5 +54,7 @@ class TrySendMailAction extends XotBasePanelAction {
         } catch (ErrorException $e) {
             throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
+
+        echo '<h3>Done</h3>';
     }
 }
