@@ -45,10 +45,11 @@ class TrySendMailAction extends XotBasePanelAction {
      */
     public function postHandle() {
         $data = request()->all();
-        // dddx($data);
+        //$options['ssl'] = array('verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true);
+        //dddx($data);
         try {
             Mail::raw($data['body'], function ($msg) use ($data) {
-                $msg->to($data['to'])->subject('Test Email');
+                $msg->to($data['to'])->subject($data['subject']);
             });
         } catch (ErrorException $e) {
             throw new Exception('['.__LINE__.']['.__FILE__.']');
