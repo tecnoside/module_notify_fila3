@@ -29,4 +29,11 @@ class _ModulePanelPolicy extends XotBasePanelPolicy {
     public function trySendMail(UserContract $user, PanelContract $panel): bool {
         return true;
     }
+
+    /**
+     * --.
+     */
+    public function TryAlert(UserContract $user, PanelContract $panel): bool {
+        return true;
+    }
 }
