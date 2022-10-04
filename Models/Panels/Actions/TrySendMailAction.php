@@ -9,6 +9,7 @@ namespace Modules\Notify\Models\Panels\Actions;
 // -------- services --------
 
 use Illuminate\Support\Facades\Mail;
+use Modules\Notify\Emails\BeautyEmail;
 use Modules\Theme\Services\ThemeService;
 use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
@@ -30,11 +31,18 @@ class TrySendMailAction extends XotBasePanelAction {
             'Mailtrap' => 'mailtrap',
         ];
 
+        $template_options = [
+            'ark' => 'ark',
+            'minty' => 'minty',
+            'sunny' => 'sunny',
+        ];
+
         $view = ThemeService::getView();
 
         $view_params = [
             'view' => $view,
             'options' => $options,
+            'template_options'=>$template_options,
         ];
 
         return view()->make($view, $view_params);
@@ -47,6 +55,7 @@ class TrySendMailAction extends XotBasePanelAction {
         $data = request()->all();
         //$options['ssl'] = array('verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true);
         //dddx($data);
+        /*
         try {
             Mail::raw($data['body'], function ($msg) use ($data) {
                 $msg->to($data['to'])->subject($data['subject']);
@@ -54,7 +63,29 @@ class TrySendMailAction extends XotBasePanelAction {
         } catch (ErrorException $e) {
             throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
+        */
+        //$view='notify::emails.welcome';
+        $view='notify::emails.samples.ark';
+        
+        $beautymail = app()->make(BeautyEmail::class);
+        $view_params=$beautymail->getSettings();
+
+        return view($view,$view_params);
+
+        $beautymail->send($view, [], 
+            function(\Illuminate\Mail\Message $message) use($data){
+		        $res=$message
+			        //->from($data['from'])
+			        ->to($data['to'])
+			        ->subject($data['subject']);
+	        }
+        );
+        //*/
+
+
+
 
         echo '<h3>Done</h3>';
     }
 }
+
