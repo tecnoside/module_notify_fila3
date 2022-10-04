@@ -1,15 +1,16 @@
 <html>
 	<head>
-		<title>{{ isset($senderName) ? $senderName : '' }}</title>
+		<title>{{ isset($senderName) ? $senderName : '' }}.</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<style type="text/css">{{ file_get_contents(app_path() . '/../vendor/snowfire/beautymail/src/styles/css/ark.css') }}</style>
-		@if($css)
+		<style type="text/css">{{ Theme::viewpath('notify::css/ark.css') }}</style>
+		@if(isset($css))
 		<style type="text/css">
 			{{ $css }}
-		</style>
+		</style> 
 		@endif
 	</head>
 	<body>
+	[{{ (\Modules\Xot\Services\FileService::assetPath('notify::css/ark.css')) }}]
 	<table id="background-table" border="0" cellpadding="0" cellspacing="0" width="100%">
 		<tbody>
 		<tr>
@@ -24,7 +25,9 @@
 					</tr>
 					<tr class="mobile_only">
 						<td class="w640" width="640" align="center">
+							
 							<img class="mobile_only" border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : '' }}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
+							
 						</td>
 					</tr>
 					<tr class="mobile_only">
