@@ -53,5 +53,8 @@ class NotifyTheme extends BaseModel {
         'body',
         'body_html',
         'from',
+        'post_type',
+        'post_id',
+        'theme',
     ];
 }
