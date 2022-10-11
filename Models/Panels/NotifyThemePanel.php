@@ -29,6 +29,7 @@ class NotifyThemePanel extends XotBasePanel {
             (object) [
                 'type' => 'Id',
                 'name' => 'id',
+                'col_size' => 3,
                 'comment' => null,
             ],
 
