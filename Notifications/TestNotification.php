@@ -5,6 +5,7 @@ namespace Modules\Notify\Notifications;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Notifications\AnonymousNotifiable;
 use Illuminate\Notifications\Messages\MailMessage;
 
 class TestNotification extends Notification {
@@ -28,7 +29,7 @@ class TestNotification extends Notification {
      * @return array
      */
     public function via($notifiable){
-        dddx($notifiable->routes);
+        //dddx($notifiable->routes);
         //
 
         return ['mail'];
@@ -41,11 +42,53 @@ class TestNotification extends Notification {
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable){
+        /*
+        $address = $notifiable instanceof AnonymousNotifiable
+            ? $notifiable->routeNotificationFor('mail')
+            : $notifiable->email;
+        */
         //dddx($notifiable);
         return (new MailMessage)
+                    // ->from('barrett@example.com', 'Barrett Blair')
+                    //->subject('Invoice Payment Failed')
+                    //->mailer('postmark')
+                    //->attach('/path/to/file');
+                    //->attach('/path/to/file', [
+                    //'as' => 'name.pdf',
+                    //'mime' => 'application/pdf',
+                    //]);
+                    //->to($notifiable->email)
+                    //->attachFromStorage('/path/to/file');
+                    //->attachMany([
+                    //'/path/to/forge.svg',
+                    //'/path/to/vapor.svg' => [
+                    //    'as' => 'Logo.svg',
+                    //    'mime' => 'image/svg+xml',
+                    //],
+                    //]);
+                    //  ->attachData($this->pdf, 'name.pdf', [
+                    // 'mime' => 'application/pdf',
+                    // ]);
                     ->line('The introduction to the notification.')
                     ->action('Notification Action', 'https://laravel.com')
                     ->line('Thank you for using our application!');
+        /*
+        return (new MailMessage)->view(
+            'emails.name', ['invoice' => $this->invoice]
+        );
+        */
+        /*
+        return (new MailMessage)->view(
+            ['emails.name.html', 'emails.name.plain'],
+            ['invoice' => $this->invoice]
+        );
+        */
+        /*
+        return (new InvoicePaidMailable($this->invoice))
+                ->to($notifiable->email);
+        */
+
+
     }
 
     /**
