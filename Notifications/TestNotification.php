@@ -7,6 +7,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\AnonymousNotifiable;
 use Illuminate\Notifications\Messages\MailMessage;
+use Modules\Notify\Notifications\Channels\SmsChannel;
 
 class TestNotification extends Notification {
     use Queueable;
@@ -32,7 +33,10 @@ class TestNotification extends Notification {
         //dddx($notifiable->routes);
         //
 
-        return ['mail'];
+        //return ['mail'];
+        //return ['sms']; //Driver [sms] not supported.
+        return [SmsChannel::class];
+        //return ['zibibbo'];//Driver [zibibbo] not supported.
     }
 
     /**
@@ -49,6 +53,7 @@ class TestNotification extends Notification {
         */
         //dddx($notifiable);
         return (new MailMessage)
+                    //->to('marco76tv@hotmail.com')
                     // ->from('barrett@example.com', 'Barrett Blair')
                     //->subject('Invoice Payment Failed')
                     //->mailer('postmark')
@@ -90,6 +95,13 @@ class TestNotification extends Notification {
 
 
     }
+
+
+    public function toSms($notifiable){
+        dddx($notifiable);
+    }
+
+
 
     /**
      * Get the array representation of the notification.
