@@ -10,7 +10,10 @@ namespace Modules\Notify\Models\Panels\Actions;
 
 use Illuminate\Support\Facades\Mail;
 use Modules\Notify\Emails\BeautyEmail;
+use Modules\Notify\Notifications\Notify;
 use Modules\Theme\Services\ThemeService;
+use Illuminate\Support\Facades\Notification;
+use Modules\Notify\Notifications\TestNotification;
 use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
 // -------- bases -----------
@@ -66,7 +69,13 @@ class TrySendMailAction extends XotBasePanelAction {
         */
         //$view='notify::emails.welcome';
         $view='notify::emails.samples.ark';
-        
+        $test=(object)['a'=>'b'];
+        $users=[
+            new Notify('mail','marco.sottana@gmail.com'),
+        ];
+
+        Notification::send($users, new TestNotification($test));
+        /*
         $beautymail = app()->make(BeautyEmail::class);
         $view_params=$beautymail->getSettings();
 
@@ -80,6 +89,7 @@ class TrySendMailAction extends XotBasePanelAction {
 			        ->subject($data['subject']);
 	        }
         );
+        */
         //*/
 
 
