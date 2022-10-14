@@ -90,6 +90,7 @@ class NotifyThemePanel extends XotBasePanel {
                 'comment' => null,
                 'col_size' => 3,
                 'options' => [
+                    'empty' => 'empty',
                     'ark' => 'ark',
                     'minty' => 'minty',
                     'sunny' => 'sunny',
