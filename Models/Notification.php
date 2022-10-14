@@ -6,5 +6,7 @@ namespace Modules\Notify\Models;
 
 
 class Notification extends BaseModel {
+    protected $fillable=[''];
+
     
 }
