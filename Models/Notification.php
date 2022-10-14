@@ -137,6 +137,8 @@ class Notification extends DatabaseNotification
 =======
 
 class Notification extends BaseModel {
+    protected $fillable=[''];
+
     
 >>>>>>> 82d1f8c (up)
 }
