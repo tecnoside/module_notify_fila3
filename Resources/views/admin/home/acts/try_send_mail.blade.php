@@ -16,6 +16,8 @@
                 --}}
                 <x-input.group type="select" name="template" :options="$template_options"/>
 
+                <x-input.group type="select" name="mailer" :options="$mailer_options"/>
+
                 <button class="btn btn-primary" type="submit">go!</button>
 
             </form>

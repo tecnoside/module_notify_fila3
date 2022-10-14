@@ -9,11 +9,11 @@ namespace Modules\Notify\Models\Panels\Actions;
 // -------- services --------
 
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Notification;
 use Modules\Notify\Emails\BeautyEmail;
 use Modules\Notify\Notifications\Notify;
-use Modules\Theme\Services\ThemeService;
-use Illuminate\Support\Facades\Notification;
 use Modules\Notify\Notifications\TestNotification;
+use Modules\Theme\Services\ThemeService;
 use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
 // -------- bases -----------
@@ -39,13 +39,16 @@ class TrySendMailAction extends XotBasePanelAction {
             'minty' => 'minty',
             'sunny' => 'sunny',
         ];
+        $mailer_options = array_keys(config('mail.mailers'));
+        $mailer_options = array_combine($mailer_options, $mailer_options);
 
         $view = ThemeService::getView();
 
         $view_params = [
             'view' => $view,
             'options' => $options,
-            'template_options'=>$template_options,
+            'template_options' => $template_options,
+            'mailer_options' => $mailer_options,
         ];
 
         return view()->make($view, $view_params);
@@ -56,23 +59,25 @@ class TrySendMailAction extends XotBasePanelAction {
      */
     public function postHandle() {
         $data = request()->all();
-        //$options['ssl'] = array('verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true);
-        //dddx($data);
-        /*
+        // $options['ssl'] = array('verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true);
+        // dddx($data);
+        // *
         try {
-            Mail::raw($data['body'], function ($msg) use ($data) {
+            Mail::mailer($data['mailer'])->raw($data['body'], function ($msg) use ($data) {
                 $msg->to($data['to'])->subject($data['subject']);
             });
         } catch (ErrorException $e) {
             throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
-        */
-        //$view='notify::emails.welcome';
-        $view='notify::emails.samples.ark';
-        $test=(object)['a'=>'b'];
-        $users=[
-            //new Notify('mail',['marco.sottana@gmail.com','marco76tv@hotmail.com']),
-            new Notify('mail','marco.sottana@gmail.com'),
+
+        return 'done';
+        // */
+        // $view='notify::emails.welcome';
+        $view = 'notify::emails.samples.ark';
+        $test = (object) ['a' => 'b'];
+        $users = [
+            // new Notify('mail',['marco.sottana@gmail.com','marco76tv@hotmail.com']),
+            new Notify('mail', 'marco.sottana@gmail.com'),
         ];
 
         Notification::send($users, new TestNotification($test));
@@ -82,21 +87,17 @@ class TrySendMailAction extends XotBasePanelAction {
 
         return view($view,$view_params);
 
-        $beautymail->send($view, [], 
+        $beautymail->send($view, [],
             function(\Illuminate\Mail\Message $message) use($data){
-		        $res=$message
-			        //->from($data['from'])
-			        ->to($data['to'])
-			        ->subject($data['subject']);
-	        }
+                $res=$message
+                    //->from($data['from'])
+                    ->to($data['to'])
+                    ->subject($data['subject']);
+            }
         );
         */
-        //*/
-
-
-
+        // */
 
         echo '<h3>Done</h3>';
     }
 }
-
