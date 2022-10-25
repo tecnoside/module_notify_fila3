@@ -102,6 +102,8 @@ class BeautyEmail implements Mailer {
     }
 
     /**
+     * @param mixed $view
+     *
      * @return \Illuminate\View\View
      */
     public function view($view, array $data = []) {
