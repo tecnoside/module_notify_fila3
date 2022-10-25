@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Actions;
 
 use Exception;
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Str;
 use Modules\Notify\Data\SmsData;
-use GuzzleHttp\Exception\ClientException;
 use Spatie\QueueableAction\QueueableAction;
 
 class NetfunSendAction {
@@ -14,7 +16,8 @@ class NetfunSendAction {
 
     public string $token;
 
-    public array $vars=[];
+    public array $vars = [];
+
     /**
      * Create a new action instance.
      *
@@ -22,14 +25,14 @@ class NetfunSendAction {
      */
     public function __construct() {
         // Prepare the action for execution, leveraging constructor injection.
-        $token=config('services.netfun.token');
-        if($token==null){
+        $token = config('services.netfun.token');
+        if (null === $token) {
             throw new Exception('put [NETFUN_TOKEN] variable to your .env and config [services.netfun.token] ');
         }
-        $this->token=$token;
+        $this->token = $token;
     }
 
-       /**
+    /**
      * Execute the action.
      */
     public function execute(SmsData $sms): array {
@@ -38,7 +41,6 @@ class NetfunSendAction {
             'Cache-Control' => 'no-cache',
             'Content-Type' => 'application/json',
         ];
-        
 
         // dddx([ord($this->body[0]), $this->body]);
 
@@ -55,7 +57,7 @@ class NetfunSendAction {
             'api_token' => $this->token,
             // "gateway"=> 99,
             'sender' => $sms->from,
-            'text_template' => $sms->body,//.'  '.rand(1, 100),
+            'text_template' => $sms->body, // .'  '.rand(1, 100),
             /*
             'delivery_callback' => 'https://www.google.com?code={{code}}',
             'default_placeholders' => [
@@ -97,6 +99,7 @@ class NetfunSendAction {
 
         $this->vars['status_code'] = $response->getStatusCode();
         $this->vars['status_txt'] = $response->getBody()->getContents();
+
         return $this->vars;
     }
 }

@@ -1,20 +1,18 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
+declare(strict_types=1);
+
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-
 class CreateNotificationsTable extends XotBaseMigration {
-
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up(){
-         // -- CREATE --
+    public function up() {
+        // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->uuid('id')->primary();
@@ -25,7 +23,7 @@ class CreateNotificationsTable extends XotBaseMigration {
                 $table->timestamps();
             }
         );
-         // -- UPDATE --
+        // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
                 if (! $this->hasColumn('updated_at')) {
@@ -38,6 +36,4 @@ class CreateNotificationsTable extends XotBaseMigration {
             }
         );
     }
-
-    
-};
+}

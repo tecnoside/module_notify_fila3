@@ -13,6 +13,6 @@
         {!! $html !!}
     @include('notify::emails.templates.ark.contentEnd')
 
-    
+
 
 @stop

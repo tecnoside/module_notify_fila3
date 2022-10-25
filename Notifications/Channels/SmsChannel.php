@@ -1,16 +1,15 @@
 <?php
+
+declare(strict_types=1);
 /**
  * @see https://github.com/laravel/vonage-notification-channel/blob/3.x/src/Channels/VonageSmsChannel.php
  */
 
-
 namespace Modules\Notify\Notifications\Channels;
 
 use Illuminate\Notifications\Notification;
- 
+
 class SmsChannel {
-
-
     /**
      * The Vonage client instance.
      *
@@ -25,24 +24,23 @@ class SmsChannel {
      */
     protected $from;
 
-
-
     /**
      * Send the given notification.
      *
-     * @param  mixed  $notifiable
-     * @param  \Illuminate\Notifications\Notification  $notification
+     * @param mixed $notifiable
+     *
      * @return void
      */
     public function send($notifiable, Notification $notification) {
-        //if (! $to = $notifiable->routeNotificationFor('sms', $notification)) {
+        // if (! $to = $notifiable->routeNotificationFor('sms', $notification)) {
         if (! $to = $notifiable->routeNotificationFor('sms')) {
             dddx($to);
+
             return;
         }
 
         $message = $notification->toSms($notifiable);
- 
+
         // Send notification to the $notifiable instance...
     }
 }

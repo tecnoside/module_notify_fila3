@@ -14,9 +14,6 @@ use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
 // -------- bases -----------
 
-/**
- 
- */
 class TryMailAction extends XotBasePanelAction {
     public bool $onItem = true;
     public string $icon = '<i class="fas fa-vial"></i>Mail';

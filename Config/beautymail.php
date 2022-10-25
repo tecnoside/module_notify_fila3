@@ -1,7 +1,8 @@
 <?php
 
-return [
+declare(strict_types=1);
 
+return [
     // These CSS rules will be applied after the regular template CSS
 
     /*
@@ -11,27 +12,24 @@ return [
     */
 
     'colors' => [
-
         'highlight' => '#004ca3',
-        'button'    => '#004cad',
-
+        'button' => '#004cad',
     ],
 
     'view' => [
-        'senderName'  => null,
-        'reminder'    => null,
+        'senderName' => null,
+        'reminder' => null,
         'unsubscribe' => null,
-        'address'     => null,
+        'address' => null,
 
-        'logo'        => [
-            'path'   => '%PUBLIC%/vendor/beautymail/assets/images/sunny/logo.png',
-            'width'  => '',
+        'logo' => [
+            'path' => '%PUBLIC%/vendor/beautymail/assets/images/sunny/logo.png',
+            'width' => '',
             'height' => '',
         ],
 
-        'twitter'  => null,
+        'twitter' => null,
         'facebook' => null,
-        'flickr'   => null,
+        'flickr' => null,
     ],
-
 ];
