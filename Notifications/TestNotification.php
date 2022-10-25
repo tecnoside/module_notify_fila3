@@ -16,6 +16,8 @@ class TestNotification extends Notification {
     /**
      * Create a new notification instance.
      *
+     * @param mixed $a
+     *
      * @return void
      */
     public function __construct($a) {
