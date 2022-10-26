@@ -1,12 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Notifications;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Notification;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\AnonymousNotifiable;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
 use Modules\Notify\Notifications\Channels\SmsChannel;
 
 class TestNotification extends Notification {
@@ -17,8 +18,8 @@ class TestNotification extends Notification {
      *
      * @return void
      */
-    public function __construct($a){
-        //dddx($a);  //
+    public function __construct($a) {
+        // dddx($a);  //
         // TestNotification($test)
         //
     }
@@ -27,50 +28,52 @@ class TestNotification extends Notification {
      * Get the notification's delivery channels.
      *
      * @param mixed $notifiable
+     *
      * @return array
      */
-    public function via($notifiable){
-        //dddx($notifiable->routes);
+    public function via($notifiable) {
+        // dddx($notifiable->routes);
         //
 
-        //return ['mail'];
-        //return ['sms']; //Driver [sms] not supported.
+        // return ['mail'];
+        // return ['sms']; //Driver [sms] not supported.
         return [SmsChannel::class];
-        //return ['zibibbo'];//Driver [zibibbo] not supported.
+        // return ['zibibbo'];//Driver [zibibbo] not supported.
     }
 
     /**
      * Get the mail representation of the notification.
      *
      * @param mixed $notifiable
+     *
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function toMail($notifiable){
+    public function toMail($notifiable) {
         /*
         $address = $notifiable instanceof AnonymousNotifiable
             ? $notifiable->routeNotificationFor('mail')
             : $notifiable->email;
         */
-        //dddx($notifiable);
-        return (new MailMessage)
-                    //->to('marco76tv@hotmail.com')
+        // dddx($notifiable);
+        return (new MailMessage())
+                    // ->to('marco76tv@hotmail.com')
                     // ->from('barrett@example.com', 'Barrett Blair')
-                    //->subject('Invoice Payment Failed')
-                    //->mailer('postmark')
-                    //->attach('/path/to/file');
-                    //->attach('/path/to/file', [
-                    //'as' => 'name.pdf',
-                    //'mime' => 'application/pdf',
-                    //]);
-                    //->to($notifiable->email)
-                    //->attachFromStorage('/path/to/file');
-                    //->attachMany([
-                    //'/path/to/forge.svg',
-                    //'/path/to/vapor.svg' => [
+                    // ->subject('Invoice Payment Failed')
+                    // ->mailer('postmark')
+                    // ->attach('/path/to/file');
+                    // ->attach('/path/to/file', [
+                    // 'as' => 'name.pdf',
+                    // 'mime' => 'application/pdf',
+                    // ]);
+                    // ->to($notifiable->email)
+                    // ->attachFromStorage('/path/to/file');
+                    // ->attachMany([
+                    // '/path/to/forge.svg',
+                    // '/path/to/vapor.svg' => [
                     //    'as' => 'Logo.svg',
                     //    'mime' => 'image/svg+xml',
-                    //],
-                    //]);
+                    // ],
+                    // ]);
                     //  ->attachData($this->pdf, 'name.pdf', [
                     // 'mime' => 'application/pdf',
                     // ]);
@@ -92,27 +95,23 @@ class TestNotification extends Notification {
         return (new InvoicePaidMailable($this->invoice))
                 ->to($notifiable->email);
         */
-
-
     }
 
-
-    public function toSms($notifiable){
+    public function toSms($notifiable) {
         dddx($notifiable);
     }
-
-
 
     /**
      * Get the array representation of the notification.
      *
      * @param mixed $notifiable
+     *
      * @return array
      */
-    public function toArray($notifiable){
+    public function toArray($notifiable) {
         dddx($notifiable);
+
         return [
-            //
         ];
     }
 }
