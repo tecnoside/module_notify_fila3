@@ -6,20 +6,21 @@ namespace Modules\Notify\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
 use Modules\Notify\Data\SmsData;
 
 class RowAttributeNotification extends Notification {
     use Queueable;
     public Model $model;
+
     /**
      * Create a new notification instance.
      *
      * @return void
      */
     public function __construct(Model $row) {
-        $this->row=$row;
+        $this->row = $row;
     }
 
     /**
@@ -45,9 +46,7 @@ class RowAttributeNotification extends Notification {
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable) {
-        
-        
-        $message= (new MailMessage())
+        $message = (new MailMessage())
             ->subject($this->row->mail_subject)
             ->line('---')
             ->view('notify::emails.templates.ark.mail', ['html' => $this->row->mail_body]);
@@ -62,20 +61,20 @@ class RowAttributeNotification extends Notification {
         $this->row->sendEmailCallback();
 
         return $message;
-        
     }
 
     /**
-     * Undocumented function
+     * Undocumented function.
      *
      * @param mixed $notifiable
+     *
      * @return SmsData
      */
     public function toSms($notifiable) {
         return SmsData::from([
             'from' => $this->row->sms_from,
-            'to'=>  $this->row->mobile_phone,
-            'body'=>$this->row->sms_body,
+            'to' => $this->row->mobile_phone,
+            'body' => $this->row->sms_body,
         ]);
     }
 
