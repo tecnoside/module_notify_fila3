@@ -6,7 +6,7 @@
 		@if(isset($css))
 		<style type="text/css">
 			{{ $css }}
-		</style> 
+		</style>
 		@endif
 	</head>
 	<body>
@@ -28,9 +28,9 @@
 					</tr>
 					<tr class="mobile_only">
 						<td class="w640" width="640" align="center">
-							
+
 							<img class="mobile_only" border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : '' }}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
-							
+
 						</td>
 					</tr>
 					<tr class="mobile_only">

@@ -3,11 +3,11 @@
     <x-col size="12">
             <form action="{!! Request::fullUrlWithQuery([]) !!}" method="POST">
                 @csrf
-                
+
                 <x-input.group type="text" name="subject" value="mail test" />
 
                 <x-input.group type="text" name="from" value="staff@example.com" />
-                
+
                 <x-input.group type="text" name="to" value="marco.sottana@gmail.com" />
 
                 <x-input.group type="text" name="body" value="invio mail di test" />
