@@ -91,7 +91,7 @@
 				font-size: 18px !important;
 			}
 		}
-		
+
 		{{ isset($css) ? $css : '' }}
 	</style>
 </head>

@@ -15,7 +15,15 @@ class NotifyController extends Controller {
      * @return Renderable
      */
     public function index() {
-        return view('notify::index');
+        /**
+         * @phpstan-var view-string
+         */
+        $view = 'notify::index';
+        $view_params = [
+            'view' => $view,
+        ];
+
+        return view($view, $view_params);
     }
 
     /**
@@ -24,7 +32,15 @@ class NotifyController extends Controller {
      * @return Renderable
      */
     public function create() {
-        return view('notify::create');
+        /**
+         * @phpstan-var view-string
+         */
+        $view = 'notify::create';
+        $view_params = [
+            'view' => $view,
+        ];
+
+        return view($view, $view_params);
     }
 
     /**
@@ -43,7 +59,15 @@ class NotifyController extends Controller {
      * @return Renderable
      */
     public function show($id) {
-        return view('notify::show');
+        /**
+         * @phpstan-var view-string
+         */
+        $view = 'notify::show';
+        $view_params = [
+            'view' => $view,
+        ];
+
+        return view($view, $view_params);
     }
 
     /**
@@ -54,7 +78,15 @@ class NotifyController extends Controller {
      * @return Renderable
      */
     public function edit($id) {
-        return view('notify::edit');
+        /**
+         * @phpstan-var view-string
+         */
+        $view = 'notify::edit';
+        $view_params = [
+            'view' => $view,
+        ];
+
+        return view($view, $view_params);
     }
 
     /**

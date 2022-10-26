@@ -28,11 +28,19 @@ class BeautyEmail implements Mailer {
      * Initialise the settings and mailer.
      */
     public function __construct(?array $settings = null) {
+<<<<<<< HEAD
         if (null == $settings) {
             $settings = array_merge(
                 config('beautymail.view'),
                 [
                     'css' => ! is_null(config('beautymail.css')) && count(config('beautymail.css')) > 0 ? implode(' ', config('beautymail.css')) : '',
+=======
+        if (null === $settings) {
+            $settings = array_merge(
+                config('beautymail.view'),
+                [
+                    'css' => null !== config('beautymail.css') && \count(config('beautymail.css')) > 0 ? implode(' ', config('beautymail.css')) : '',
+>>>>>>> 7e949962572b8b9a78570b971f00298176a3b5df
                 ]
             );
         }
@@ -102,6 +110,11 @@ class BeautyEmail implements Mailer {
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * @param mixed $view
+     *
+>>>>>>> 7e949962572b8b9a78570b971f00298176a3b5df
      * @return \Illuminate\View\View
      */
     public function view($view, array $data = []) {
