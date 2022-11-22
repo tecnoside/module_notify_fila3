@@ -27,6 +27,9 @@ class ApplyModelAttrsToThemeAction {
                 'subject' => '---',
             ]
         );
+
+        dddx($theme);
+
         if ('' === $theme->body_html) {
             $theme->body_html = '<div class="row">
                 <div class="col">##title##</div>
