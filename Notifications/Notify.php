@@ -6,7 +6,7 @@ namespace Modules\Notify\Notifications;
 
 use Illuminate\Notifications\Notification;
 
-class Notify extends Notification {
+class Notify {
     /**
      * All of the notification routing information.
      *
