@@ -5,10 +5,11 @@ declare(strict_types=1);
 namespace Modules\Notify\Notifications;
 
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class HtmlNotification extends Notification {
+class HtmlNotification extends Notification implements ShouldQueue {
     use Queueable;
     public string $subject;
     public string $html;
