@@ -4,9 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Notifications;
 
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
 
-class Notify {
+class Notify extends Notification implements ShouldQueue {
+    use Queueable;
     /**
      * All of the notification routing information.
      *
