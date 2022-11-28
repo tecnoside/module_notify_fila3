@@ -69,6 +69,7 @@ class NotifyThemePanel extends XotBasePanel {
                 'options' => [
                     'it' => 'it',
                     'fr' => 'fr',
+                    'en' => 'en',
                 ],
             ],
 
