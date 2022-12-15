@@ -91,6 +91,7 @@ Homestead.json
 >>>>>>> 3a0e0a5 (up)
 =======
 /vendor/
+vendor/
 node_modules/
 npm-debug.log
 yarn-error.log
@@ -118,6 +119,8 @@ Homestead.json
 
 *.stackdump
 *.cache
+*.lock
+*.log
 
 <<<<<<< HEAD
 <<<<<<< HEAD
