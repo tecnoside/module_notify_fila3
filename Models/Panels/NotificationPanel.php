@@ -6,8 +6,8 @@ namespace Modules\Notify\Models\Panels;
 
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
+use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Xot\Contracts\RowsContract;
-use Modules\Xot\Models\Panels\XotBasePanel;
 
 class NotificationPanel extends XotBasePanel {
     /**
