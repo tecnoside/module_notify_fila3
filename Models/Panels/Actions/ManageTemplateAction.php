@@ -6,8 +6,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models\Panels\Actions;
 
+use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Notify\Models\NotifyTheme;
-use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
 class ManageTemplateAction extends XotBasePanelAction {
     public bool $onContainer = true;
