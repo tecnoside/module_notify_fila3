@@ -18,6 +18,7 @@ class ApplyModelAttrsToThemeAction {
      * Execute the action.
      */
     public function execute(Model $model, string $name, array $extra = []): NotifyTheme {
+      
         $theme = NotifyTheme::firstOrCreate(
             [
                 'lang' => app()->getLocale(),
@@ -27,6 +28,7 @@ class ApplyModelAttrsToThemeAction {
                 'subject' => '---',
             ]
         );
+
         if ('' === $theme->body_html) {
             $theme->body_html = '<div class="row">
                 <div class="col">##title##</div>
@@ -46,7 +48,7 @@ class ApplyModelAttrsToThemeAction {
         }
 
         $html = preg_replace('/##\w+##/', 'N.D.', $html);
-
+        
         $theme->mail_body = $html;
 
         // dddx($theme->mail_body);
