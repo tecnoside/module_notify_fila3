@@ -40,6 +40,7 @@ class ApplyModelAttrsToThemeAction {
         $data = $model->toArray();
 
         $data = array_merge($data, $extra);
+    
         $html = $theme->body_html;
         foreach ($data as $k => $v) {
             if (\is_string($v)) {
@@ -48,7 +49,7 @@ class ApplyModelAttrsToThemeAction {
         }
 
         $html = preg_replace('/##\w+##/', 'N.D.', $html);
-        
+
         $theme->mail_body = $html;
 
         // dddx($theme->mail_body);
