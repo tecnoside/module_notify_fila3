@@ -48,7 +48,7 @@ class NotifyController extends Controller {
      *
      * @return Renderable
      */
-    public function store(Request $request) {
+    public function store(Request $request):Renderable {
     }
 
     /**

@@ -8,6 +8,8 @@ namespace Modules\Notify\Models\Panels\Actions;
 
 // -------- services --------
 
+use ErrorException;
+use Exception;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Notification;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
