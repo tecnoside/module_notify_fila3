@@ -7,6 +7,7 @@ namespace Modules\Notify\Models\Panels;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Modules\Cms\Models\Panels\XotBasePanel;
+use Modules\Notify\Models\NotifyThemeable;
 use Modules\Xot\Contracts\RowsContract;
 
 class NotifyThemeablePanel extends XotBasePanel {
@@ -45,7 +46,7 @@ class NotifyThemeablePanel extends XotBasePanel {
      * quando aggiungi un campo select, è il numero della chiave
      * che viene messo come valore su value="id"
      *
-     * @param Modules\Notify\Models\NotifyThemeable $row
+     * @param NotifyThemeable $row
      *
      * @return int|string|null
      */
