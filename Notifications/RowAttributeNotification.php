@@ -12,7 +12,7 @@ use Modules\Notify\Data\SmsData;
 
 class RowAttributeNotification extends Notification {
     use Queueable;
-    public Model $model;
+    public Model $row;
 
     /**
      * Create a new notification instance.
