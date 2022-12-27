@@ -7,15 +7,17 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Emails;
 
-use Illuminate\Contracts\Mail\Mailer;
+use Exception;
 use Illuminate\Mail\PendingMail;
+use Illuminate\Contracts\Mail\Mailer;
+use Modules\Notify\Data\BeautyEmailData;
 use Modules\Theme\Services\ThemeService;
 
 class BeautyEmail implements Mailer {
     /**
      * Contains settings for emails processed by Beautymail.
      */
-    private $settings;
+    private array $settings=[];
 
     /**
      * The mailer contract depended upon.
@@ -27,42 +29,43 @@ class BeautyEmail implements Mailer {
     /**
      * Initialise the settings and mailer.
      */
-    public function __construct(?array $settings = null) {
-        if (null == $settings) {
-            $settings = array_merge(
-                config('beautymail.view'),
-                [
-                    'css' => ! is_null(config('beautymail.css')) && count(config('beautymail.css')) > 0 ? implode(' ', config('beautymail.css')) : '',
-                ]
-            );
-        }
+    public function __construct(array $settings = []) {
+        $beauty=BeautyEmailData::from(config('beautymail'));
+        
+        //$default['css'] = ! is_null(config('beautymail.css')) && count(config('beautymail.css')) > 0 ? implode(' ', config('beautymail.css')) : '';
+        $beauty->view['css'] =  implode(' ', $beauty->css);
+
+        $settings = array_merge($beauty->view,$settings);
         $this->settings = $settings;
-        $this->mailer = app()->make('Illuminate\Contracts\Mail\Mailer');
+        $mailer=app()->make('Illuminate\Contracts\Mail\Mailer');
+        if(!$mailer instanceof Mailer){
+            throw new Exception('['.__LINE__.']['.__FILE__.']');
+        }
+        $this->mailer = $mailer;
         $this->setLogoPath();
     }
 
-    public function getSettings() {
+    public function getSettings():array {
         return $this->settings;
     }
 
-    public function to($users) {
+    public function to($users):PendingMail {
         return (new PendingMail($this))->to($users);
     }
 
-    public function bcc($users) {
+    public function bcc($users):PendingMail {
         return (new PendingMail($this))->bcc($users);
     }
 
-    public function cc($users) {
+    public function cc($users):PendingMail {
         return (new PendingMail($this))->cc($users);
     }
 
     /**
      * Retrieve the settings.
      *
-     * @return mixed
      */
-    public function getData() {
+    public function getData():array {
         return $this->settings;
     }
 
