@@ -31,10 +31,6 @@ class RowAttributeNotification extends Notification {
      * @return array
      */
     public function via($notifiable) {
-        /*
-        dddx(['via'=>$this->row->getNotifyVia(),'notifiable'=>$notifiable,'row'=>$this->row]);
-        return ['mail'];
-        */
         return $this->row->getNotifyVia();
     }
 
@@ -51,16 +47,7 @@ class RowAttributeNotification extends Notification {
             ->line('---')
             // non so se posso modificare questa riga senza creare errori in altre parti
             ->view('notify::emails.templates.ark.mail', ['html' => $this->row->mail_body]);
-        // ->view('notify::emails.templates.'.$this->row->mail_theme, ['html' => $this->row->mail_body]);
-
-        /*
-        $up=[
-            'mail_sent_at' => now(),
-            'mail_count' => (int) $this->row->email_count + 1,
-        ];
-
-        $this->row->update($up);
-        */
+      
         $this->row->sendEmailCallback();
 
         return $message;
