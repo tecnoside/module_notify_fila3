@@ -71,14 +71,23 @@ class BeautyEmail implements Mailer {
         return $this->settings;
     }
 
+    /**
+     * @param mixed $users
+     */
     public function to($users):PendingMail {
         return (new PendingMail($this))->to($users);
     }
 
+    /**
+     * @param mixed $users
+     */
     public function bcc($users):PendingMail {
         return (new PendingMail($this))->bcc($users);
     }
 
+    /**
+     * @param mixed $users
+     */
     public function cc($users):PendingMail {
         return (new PendingMail($this))->cc($users);
     }
@@ -104,12 +113,12 @@ class BeautyEmail implements Mailer {
      * @param string|array    $view
      * @param \Closure|string $callback
      *
-     * @return void
+     * @return \Illuminate\Mail\SentMessage|null
      */
     public function send($view, array $data = [], $callback = null) {
         $data = array_merge($this->settings, $data);
 
-        $this->mailer->send($view, $data, $callback);
+        return $this->mailer->send($view, $data, $callback);
     }
 
     /**
@@ -146,21 +155,22 @@ class BeautyEmail implements Mailer {
      * @param string $text
      * @param mixed  $callback
      *
-     * @return void
+     * @return \Illuminate\Mail\SentMessage|null
      */
     public function raw($text, $callback) {
         return $this->mailer->send(['raw' => $text], [], $callback);
     }
 
-    /**
+    /*
      * Get the array of failed recipients.
-     *
+     * Call to an undefined method Illuminate\Contracts\Mail\Mailer::failures()
      * @return array
-     */
+    
     public function failures() {
         return $this->mailer->failures();
     }
-
+    */
+    
     /**
      * @return mixed
      */
