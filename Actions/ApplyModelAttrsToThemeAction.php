@@ -66,7 +66,7 @@ class ApplyModelAttrsToThemeAction
         $html = $theme->body_html;
         $html = $this->replacer($model, $extra, $html);
 
-        $theme->mail_body = $html;
+        $theme->body_html = $html;
 
         return $theme;
     }
