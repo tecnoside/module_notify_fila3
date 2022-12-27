@@ -72,8 +72,7 @@ class ApplyModelAttrsToThemeAction
         return $theme;
     }
 
-    public function replacer($model, $extra, $html)
-    {
+    public function replacer($model, $extra, $html):string {
         $data = $model->toArray();
         $data = array_merge($data, $extra);
 

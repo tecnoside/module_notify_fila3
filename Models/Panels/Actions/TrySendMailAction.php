@@ -106,6 +106,6 @@ class TrySendMailAction extends XotBasePanelAction {
         */
         // */
 
-        echo '<h3>Done</h3>';
+        //echo '<h3>Done</h3>';
     }
 }
