@@ -46,7 +46,11 @@ class NotifyThemeablePanel extends XotBasePanel {
      * quando aggiungi un campo select, è il numero della chiave
      * che viene messo come valore su value="id"
      *
+<<<<<<< Updated upstream
      * @param NotifyThemeable $row
+=======
+     * @param \Modules\Notify\Models\NotifyThemeable $row
+>>>>>>> Stashed changes
      *
      * @return int|string|null
      */
@@ -56,9 +60,12 @@ class NotifyThemeablePanel extends XotBasePanel {
 
     /**
      * on select the option label.
+     *
+     * @param \Modules\Notify\Models\NotifyThemeable $row
+     * 
      */
     public function optionLabel($row): string {
-        return (string) $row->title;
+        return '';
     }
 
     /**

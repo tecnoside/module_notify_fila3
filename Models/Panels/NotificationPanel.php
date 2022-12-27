@@ -45,7 +45,7 @@ class NotificationPanel extends XotBasePanel {
      * quando aggiungi un campo select, è il numero della chiave
      * che viene messo come valore su value="id"
      *
-     * @param Modules\Notify\Models\Notification $row
+     * @param \Modules\Notify\Models\Notification $row
      *
      * @return int|string|null
      */
