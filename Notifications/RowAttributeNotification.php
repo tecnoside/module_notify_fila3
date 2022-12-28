@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Notify\Notifications;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Data\SmsData;
