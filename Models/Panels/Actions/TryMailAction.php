@@ -35,7 +35,7 @@ use Modules\Notify\Notifications\SampleNotification;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 >>>>>>> 56255db (up)
 use Modules\Notify\Services\MailService;
-use Modules\Theme\Services\ThemeService;
+use Modules\UI\Services\ThemeService;
 
 <<<<<<< HEAD
 //-------- bases -----------

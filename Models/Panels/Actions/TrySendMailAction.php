@@ -16,7 +16,7 @@ use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Notify\Emails\BeautyEmail;
 use Modules\Notify\Notifications\Notify;
 use Modules\Notify\Notifications\TestNotification;
-use Modules\Theme\Services\ThemeService;
+use Modules\UI\Services\ThemeService;
 
 // -------- bases -----------
 

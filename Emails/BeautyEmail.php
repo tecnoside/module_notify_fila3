@@ -11,7 +11,7 @@ use Exception;
 use Illuminate\Mail\PendingMail;
 use Illuminate\Contracts\Mail\Mailer;
 use Modules\Notify\Data\BeautyEmailData;
-use Modules\Theme\Services\ThemeService;
+use Modules\UI\Services\ThemeService;
 
 class BeautyEmail implements Mailer {
     /**
