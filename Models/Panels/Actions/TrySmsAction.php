@@ -43,7 +43,7 @@ use Modules\Notify\Notifications\SampleNotification;
 
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Notify\Services\SmsService;
-use Modules\Theme\Services\ThemeService;
+use Modules\UI\Services\ThemeService;
 
 <<<<<<< HEAD
 //-------- bases -----------
