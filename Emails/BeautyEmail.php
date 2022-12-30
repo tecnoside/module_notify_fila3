@@ -35,6 +35,7 @@ class BeautyEmail implements Mailer {
         $beauty=BeautyEmailData::from(config('beautymail'));
         
         //$default['css'] = ! is_null(config('beautymail.css')) && count(config('beautymail.css')) > 0 ? implode(' ', config('beautymail.css')) : '';
+        
         $beauty->view['css'] =  implode(' ', $beauty->css);
 
         $settings = array_merge($beauty->view,$settings);
@@ -138,15 +139,16 @@ class BeautyEmail implements Mailer {
         return $this->mailer->send(['raw' => $text], [], $callback);
     }
 
-    /*
-     * Get the array of failed recipients.
+    
+     /* Get the array of failed recipients.
      * Call to an undefined method Illuminate\Contracts\Mail\Mailer::failures()
      * @return array
-    
+     * 
+     */    
     public function failures() {
         return $this->mailer->failures();
     }
-    */
+    
     
     /**
      * @return mixed
