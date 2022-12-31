@@ -155,6 +155,7 @@ namespace Modules\Notify\Models;
  * @property string|null                     $post_type
  * @property int|null                        $post_id
  * @property string|null                     $body_html
+ * @property string|null                     $theme
  *
  * @method static \Modules\Notify\Database\Factories\NotifyThemeFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     newModelQuery()
