@@ -57,13 +57,13 @@ class MailtrapEngine {
 
         // Mail::raw('Hello World!', function($msg) {$msg->to('vair81@gmail.com')->subject('Test Email'); });
 
-        //try {
-            Mail::raw((string)$this->body, function ($msg) {
-                $msg->to($this->to)->subject('Test Email');
-            });
-        //Dead catch - ErrorException is never thrown in the try block. 
-        //} catch (ErrorException $e) {
+        // try {
+        Mail::raw((string) $this->body, function ($msg) {
+            $msg->to($this->to)->subject('Test Email');
+        });
+        // Dead catch - ErrorException is never thrown in the try block.
+        // } catch (ErrorException $e) {
         //    throw new Exception('['.__LINE__.']['.__FILE__.']');
-        //}
+        // }
     }
 }

@@ -41,8 +41,8 @@ class TrySendMailAction extends XotBasePanelAction {
             'minty' => 'minty',
             'sunny' => 'sunny',
         ];
-        $mail_mailers=config('mail.mailers');
-        if(!is_array($mail_mailers)){
+        $mail_mailers = config('mail.mailers');
+        if (! is_array($mail_mailers)) {
             throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
         $mailer_options = array_keys($mail_mailers);
@@ -106,6 +106,6 @@ class TrySendMailAction extends XotBasePanelAction {
         */
         // */
 
-        //echo '<h3>Done</h3>';
+        // echo '<h3>Done</h3>';
     }
 }
