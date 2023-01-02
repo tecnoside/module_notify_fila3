@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Notifications\Channels;
 
-use Illuminate\Notifications\Notification;
+
 use Modules\Notify\Actions\NetfunSendAction;
 use Modules\Xot\Contracts\ModelContactContract;
+use Modules\Notify\Notifications\RowAttributeNotification;
 
 class NetfunChannel {
     public function __construct() {
@@ -19,8 +20,7 @@ class NetfunChannel {
      *
      * @return void
      */
-    public function send($notifiable, Notification $notification) {
-        // Call to an undefined method Illuminate\Notifications\Notification::toSms().
+    public function send($notifiable, RowAttributeNotification $notification) {
         $message = $notification->toSms($notifiable);
         // Send notification to the $notifiable instance...
         $data = app(NetfunSendAction::class)->execute($message);
