@@ -37,7 +37,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property string|null                     $updated_by
  * @property string|null                     $post_type
  * @property int|null                        $post_id
- * @property string|null                     $body_html
+ * @property string                          $body_html
  * @property string|null                     $theme
 <<<<<<< HEAD
  * @property string|null                     $from_email
