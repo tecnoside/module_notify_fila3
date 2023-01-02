@@ -25,9 +25,8 @@ class BeautyEmail implements Mailer {
     /**
      * The mailer contract depended upon.
      *
-     * @var \Illuminate\Contracts\Mail\Mailer
      */
-    private MailFake $mailer;
+    private Mailer $mailer;
 
     /**
      * Initialise the settings and mailer.
