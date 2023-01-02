@@ -9,11 +9,12 @@ namespace Modules\Notify\Emails;
 
 use Closure;
 use Exception;
-use Illuminate\Contracts\Mail\Mailer;
-use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Mail\PendingMail;
-use Modules\Notify\Data\BeautyEmailData;
+use Illuminate\Contracts\Mail\Mailer;
 use Modules\UI\Services\ThemeService;
+use Modules\Notify\Data\BeautyEmailData;
+use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Support\Testing\Fakes\MailFake;
 
 class BeautyEmail implements Mailer {
     /**
@@ -26,7 +27,7 @@ class BeautyEmail implements Mailer {
      *
      * @var \Illuminate\Contracts\Mail\Mailer
      */
-    private $mailer;
+    private MailFake $mailer;
 
     /**
      * Initialise the settings and mailer.
@@ -181,7 +182,7 @@ class BeautyEmail implements Mailer {
      * @return array
      *
      */
-    public function failures() {
+    public function failures():array {
         return $this->mailer->failures();
     }
 
