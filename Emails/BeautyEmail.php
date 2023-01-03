@@ -165,9 +165,9 @@ class BeautyEmail implements Mailer {
 >>>>>>> 39a76ff (up)
      */
     public function view(string $view, array $data = []): Renderable {
-        $data = array_merge($this->settings, $data);
+        $data = array_merge($this->settings, $data, ['view'=>$view]);
 
-        return view($view, $data);
+        return view()->make($view, $data);
     }
 
     /**
