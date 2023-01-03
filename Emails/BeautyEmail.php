@@ -122,9 +122,9 @@ class BeautyEmail implements Mailer {
      * @return Renderable
      */
     public function view(string $view, array $data = []): Renderable {
-        $data = array_merge($this->settings, $data);
+        $data = array_merge($this->settings, $data, ['view'=>$view]);
 
-        return view($view, $data);
+        return view()->make($view, $data);
     }
 
     /**
