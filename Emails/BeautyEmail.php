@@ -25,7 +25,7 @@ class BeautyEmail implements Mailer {
      * The mailer contract depended upon.
      *
      */
-    private $mailer;
+    private Mailer $mailer;
 
     /**
      * Initialise the settings and mailer.
