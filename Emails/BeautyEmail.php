@@ -187,9 +187,9 @@ class BeautyEmail implements Mailer {
      * @return array
      *
      */
-    public function failures():array {
+    /*public function failures():array {
         return $this->mailer->failures();
-    }
+    }*/
 
     /**
      * @return mixed
