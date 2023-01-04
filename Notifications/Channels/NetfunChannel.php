@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Notifications\Channels;
 
-
 use Modules\Notify\Actions\NetfunSendAction;
-use Modules\Xot\Contracts\ModelContactContract;
 use Modules\Notify\Notifications\RowAttributeNotification;
+use Modules\Xot\Contracts\ModelContactContract;
 
 class NetfunChannel {
     public function __construct() {
