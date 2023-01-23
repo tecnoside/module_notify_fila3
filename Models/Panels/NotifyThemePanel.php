@@ -349,7 +349,7 @@ class NotifyThemePanel extends XotBasePanel {
                 'type' => 'String',
                 'name' => 'from_email',
                 // 'rules' => 'required|max:11', // max:11 solo se è sms
-                'rules' => 'required',
+                // 'rules' => 'required',
                 'comment' => null,
                 'col_size' => 3,
             ],
