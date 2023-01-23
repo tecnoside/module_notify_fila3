@@ -105,6 +105,7 @@ class NotifyThemePanel extends XotBasePanel {
                     'ark' => 'ark',
                     'minty' => 'minty',
                     'sunny' => 'sunny',
+                    'widgets' => 'widgets',
                 ],
             ],
             (object) [
