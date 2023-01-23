@@ -44,7 +44,7 @@ class RowAttributeNotification extends Notification {
     public function toMail($notifiable) {
         //dddx($this->row->email);
         $message = (new MailMessage())
-            ->from($this->row->email)
+            ->from($this->row->from)
             ->subject($this->row->mail_subject)
             ->line('---')
             // non so se posso modificare questa riga senza creare errori in altre parti
