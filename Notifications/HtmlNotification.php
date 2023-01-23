@@ -13,13 +13,15 @@ class HtmlNotification extends Notification implements ShouldQueue {
     use Queueable;
     public string $subject;
     public string $html;
+    public string $from;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct(string $subject, string $html) {
+    public function __construct(string $from,string $subject, string $html) {
+        $this->from=$from;
         $this->subject = $subject;
         $this->html = $html;
     }
@@ -44,6 +46,7 @@ class HtmlNotification extends Notification implements ShouldQueue {
      */
     public function toMail($notifiable) {
         return (new MailMessage())
+            ->from($this->from)
             ->subject($this->subject)
             ->line('---')
             ->view('notify::notifications.html', ['html' => $this->html]);
