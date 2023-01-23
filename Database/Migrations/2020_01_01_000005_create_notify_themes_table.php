@@ -94,6 +94,9 @@ class CreateNotifyThemesTable extends XotBaseMigration {
                 if (! $this->hasColumn('theme')) {
                     $table->string('theme')->nullable();
                 }
+                if (! $this->hasColumn('from_email')) {
+                    $table->string('from_email')->nullable();
+                }
             }
         ); // end update
     }
