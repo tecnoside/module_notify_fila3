@@ -241,6 +241,7 @@ class NotifyTheme extends BaseModel {
         'body',
         'body_html',
         'from',
+        'from_email',
         'post_type',
         'post_id',
         'theme',
