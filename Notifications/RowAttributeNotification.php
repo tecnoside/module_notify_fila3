@@ -42,11 +42,13 @@ class RowAttributeNotification extends Notification {
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable) {
+        //dddx($this->row->email);
         $message = (new MailMessage())
+            ->from($this->row->email)
             ->subject($this->row->mail_subject)
             ->line('---')
             // non so se posso modificare questa riga senza creare errori in altre parti
-            ->view('notify::emails.templates.ark.mail', ['html' => $this->row->mail_body]);
+            ->view('notify::emails.templates.ark.mail', ['html' => $this->row->mail_body,'logo'=>[]]);
 
         $this->row->sendEmailCallback();
 
