@@ -87,7 +87,8 @@ class NotifyThemePanel extends XotBasePanel {
             (object) [
                 'type' => 'String',
                 'name' => 'from',
-                'rules' => 'required|max:11',
+                // 'rules' => 'required|max:11', // max:11 solo se è sms
+                'rules' => 'required',
                 'comment' => null,
                 'col_size' => 3,
             ],
