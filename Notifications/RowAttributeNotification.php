@@ -10,7 +10,8 @@ use Illuminate\Notifications\Notification;
 use Modules\Notify\Data\SmsData;
 use Modules\Xot\Contracts\ModelContactContract;
 
-class RowAttributeNotification extends Notification {
+class RowAttributeNotification extends Notification
+{
     use Queueable;
     public ModelContactContract $row;
 
@@ -19,7 +20,8 @@ class RowAttributeNotification extends Notification {
      *
      * @return void
      */
-    public function __construct(ModelContactContract $row) {
+    public function __construct(ModelContactContract $row)
+    {
         $this->row = $row;
     }
 
@@ -30,7 +32,8 @@ class RowAttributeNotification extends Notification {
      *
      * @return array
      */
-    public function via($notifiable) {
+    public function via($notifiable)
+    {
         return $this->row->getNotifyVia();
     }
 
@@ -41,14 +44,17 @@ class RowAttributeNotification extends Notification {
      *
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function toMail($notifiable) {
-        //dddx($this->row->email);
+    public function toMail($notifiable)
+    {
+
+        $theme = $this->row->notifyThemes->first()->theme ?? 'ark';
+
         $message = (new MailMessage())
-            ->from($this->row->from)
+            ->from($this->row->mail_from)
             ->subject($this->row->mail_subject)
             ->line('---')
             // non so se posso modificare questa riga senza creare errori in altre parti
-            ->view('notify::emails.templates.ark.mail', ['html' => $this->row->mail_body,'logo'=>[]]);
+            ->view('notify::emails.templates.' . $theme . '.mail', ['html' => $this->row->mail_body, 'logo' => []]);
 
         $this->row->sendEmailCallback();
 
@@ -62,7 +68,8 @@ class RowAttributeNotification extends Notification {
      *
      * @return SmsData
      */
-    public function toSms($notifiable) {
+    public function toSms($notifiable)
+    {
         return SmsData::from([
             'from' => $this->row->sms_from,
             'to' => $this->row->mobile_phone,
@@ -77,10 +84,10 @@ class RowAttributeNotification extends Notification {
      *
      * @return array
      */
-    public function toArray($notifiable) {
+    public function toArray($notifiable)
+    {
         dddx($notifiable);
 
-        return [
-        ];
+        return [];
     }
 }
