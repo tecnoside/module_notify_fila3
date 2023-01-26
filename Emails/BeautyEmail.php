@@ -59,7 +59,7 @@ class BeautyEmail implements Mailer {
 =======
         // $default['css'] = ! is_null(config('beautymail.css')) && count(config('beautymail.css')) > 0 ? implode(' ', config('beautymail.css')) : '';
 
-        $beauty->view->css = implode(' ', $beauty->css);
+        $beauty->view['css'] = implode(' ', $beauty->css);
 
         $settings = array_merge($beauty->view, $settings);
 >>>>>>> 06bf12b (up)
