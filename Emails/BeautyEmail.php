@@ -59,8 +59,6 @@ class BeautyEmail implements Mailer {
 =======
         // $default['css'] = ! is_null(config('beautymail.css')) && count(config('beautymail.css')) > 0 ? implode(' ', config('beautymail.css')) : '';
 
-        //css must not be accessed before its inizialization
-        //manca css in view in BeautyMailData
         $beauty->view->css = implode(' ', $beauty->css);
 
         $settings = array_merge($beauty->view, $settings);
