@@ -62,6 +62,7 @@ class NotifyThemePanel extends XotBasePanel {
                 'name' => 'from',
                 // 'rules' => 'required|max:11', // max:11 solo se è sms
                 'rules' => 'required',
+<<<<<<< Updated upstream
                 'comment' => null,
                 'col_size' => 3,
             ],
@@ -70,6 +71,8 @@ class NotifyThemePanel extends XotBasePanel {
                 'name' => 'from_email',
                 // 'rules' => 'required|max:11', // max:11 solo se è sms
                 // 'rules' => 'required',
+=======
+>>>>>>> Stashed changes
                 'comment' => null,
                 'col_size' => 3,
             ],
