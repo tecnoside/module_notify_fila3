@@ -15,7 +15,7 @@ class CreateContactsTable extends XotBaseMigration {
         // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
-                $table->uuid('id')->primary();
+                $table->increments('id');
                 $table->morphs('model');
                 $table->string('contact_type')->nullable();
                 $table->string('value')->nullable();
