@@ -32,7 +32,8 @@ class TrySmsAction extends XotBasePanelAction {
 
         $driver = isset($drivers[$i]) ? $drivers[$i] : null;
 
-        $view = ThemeService::getView();
+        //$view = ThemeService::getView();
+$view = $this->panel->getView();
 
         $view_params = [
             'view' => $view,
