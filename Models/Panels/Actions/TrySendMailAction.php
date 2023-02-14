@@ -48,7 +48,8 @@ class TrySendMailAction extends XotBasePanelAction {
         $mailer_options = array_keys($mail_mailers);
         $mailer_options = array_combine($mailer_options, $mailer_options);
 
-        $view = ThemeService::getView();
+        //$view = ThemeService::getView();
+$view = $this->panel->getView();
 
         $view_params = [
             'view' => $view,
