@@ -46,8 +46,6 @@ class EsendexSendAction {
         $info = curl_getinfo($ch);
         curl_close($ch);
 
-        dddx(json_decode($response, true));
-
         if (201 != $info['http_code']) {
             return [];
         }
