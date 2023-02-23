@@ -65,7 +65,6 @@ public function login() {
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
     $response = curl_exec($ch);
-
     $info = curl_getinfo($ch);
 
     curl_close($ch);
