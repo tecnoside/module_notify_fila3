@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services;
 
+use GuzzleHttp\Client;
+use GuzzleHttp\RequestOptions;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 
@@ -65,7 +67,16 @@ class NamirialService {
         $prepareResponse = Http::acceptJson()->withToken($this->api_secret)->attach(
             'attachment', $this->params['File'], $this->params['FileName']
         )->post($this->endpoint);
+
         $this->response = $prepareResponse->json();
+
+        return $this;
+    }
+
+    private function download(?string $filename = 'test.pdf'): self {
+        $response = Http::withHeaders($this->headers)->{$this->http_method}($this->endpoint, $this->params);
+        $contents = $response->getBody()->getContents();
+        Storage::disk('local')->put($filename, $contents);
 
         return $this;
     }
@@ -328,8 +339,7 @@ class NamirialService {
         $this->http_method = 'get';
         $this->params = [];
         $this->request();
-
-        $this->last_envelope_file_id = $this->response['FinishedDocuments']['FileId'] ?? null;
+        $this->last_envelope_file_id = $this->response['Documents'][0]['FileId'] ?? null;
 
         // if last_envelope_file_id is null then give error
         if (null === $this->last_envelope_file_id) {
@@ -339,7 +349,7 @@ class NamirialService {
         return $this;
     }
 
-    public function downloadDocument(): self {
+    public function downloadDocument(?string $filename = ''): self {
         if (null === $this->last_envelope_file_id) {
             throw new \Exception('last_envelope_file_id is null');
         }
@@ -347,7 +357,14 @@ class NamirialService {
         $this->endpoint = $this->full_base_endpoint.'/file/'.$this->last_envelope_file_id;
         $this->http_method = 'get';
         $this->params = [];
-        $this->request();
+
+        $client = new Client();
+
+        $this->download($filename);
+        /*$response = $client->request($this->http_method, $this->endpoint, [$this->headers, RequestOptions::HTTP_ERRORS => false,
+            RequestOptions::ALLOW_REDIRECTS => true]);
+        $contents = $response->getBody()->getContents();
+        Storage::disk('local')->put('test.pdf', $contents);*/
 
         return $this;
     }
