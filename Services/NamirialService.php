@@ -349,23 +349,4 @@ class NamirialService {
         return $this;
     }
 
-    public function downloadDocument(?string $filename = ''): self {
-        if (null === $this->last_envelope_file_id) {
-            throw new \Exception('last_envelope_file_id is null');
-        }
-
-        $this->endpoint = $this->full_base_endpoint.'/file/'.$this->last_envelope_file_id;
-        $this->http_method = 'get';
-        $this->params = [];
-
-        $client = new Client();
-
-        $this->download($filename);
-        /*$response = $client->request($this->http_method, $this->endpoint, [$this->headers, RequestOptions::HTTP_ERRORS => false,
-            RequestOptions::ALLOW_REDIRECTS => true]);
-        $contents = $response->getBody()->getContents();
-        Storage::disk('local')->put('test.pdf', $contents);*/
-
-        return $this;
-    }
-}
+    public function
