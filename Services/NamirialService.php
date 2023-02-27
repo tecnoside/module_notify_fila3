@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services;
 
-use GuzzleHttp\Client;
-use GuzzleHttp\RequestOptions;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 
@@ -349,4 +347,17 @@ class NamirialService {
         return $this;
     }
 
-    public function
+    public function downloadDocument(?string $filename = ''): self {
+        if (null === $this->last_envelope_file_id) {
+            throw new \Exception('last_envelope_file_id is null');
+        }
+
+        $this->endpoint = $this->full_base_endpoint.'/file/'.$this->last_envelope_file_id;
+        $this->http_method = 'get';
+        $this->params = [];
+
+        $this->download($filename);
+
+        return $this;
+    }
+}
