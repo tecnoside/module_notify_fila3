@@ -58,7 +58,7 @@ $view = $this->panel->getView();
             'mailer_options' => $mailer_options,
         ];
 
-        return view()->make($view, $view_params);
+        return view($view, $view_params);
     }
 
     /**

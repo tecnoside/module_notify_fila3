@@ -73,7 +73,7 @@ class TrySmsAction extends XotBasePanelAction {
             'driver' => $driver,
         ];
 
-        return view()->make($view, $view_params);
+        return view($view, $view_params);
     }
 
     public function postHandle() {
