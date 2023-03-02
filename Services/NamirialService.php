@@ -300,6 +300,9 @@ class NamirialService {
         ];
         $this->request();
 
+        if (empty($this->response['EnvelopeId'])) {
+            throw new \Exception('EnvelopeId is empty. Might you need to set a valid email address');
+        }
         $this->last_envelope_id = $this->response['EnvelopeId'];
 
         return $this;
