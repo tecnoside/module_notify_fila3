@@ -66,6 +66,10 @@ class NamirialService {
             'attachment', $this->params['File'], $this->params['FileName']
         )->post($this->endpoint);
 
+        if (200 != $prepareResponse->status()) {
+            throw new \Exception('Invalid Request. Response for file '.$this->params['FileName'].' is status '.$prepareResponse->status().' ['.__LINE__.']['.__FILE__.']');
+        }
+
         $this->response = $prepareResponse->json();
 
         return $this;
@@ -82,6 +86,10 @@ class NamirialService {
     private function request(): self {
         $prepareResponse = Http::acceptJson()->withHeaders($this->headers)->{$this->http_method}($this->endpoint, $this->params);
         $this->response = $prepareResponse->json();
+
+        /*if (200 != $prepareResponse->status()) {
+            throw new \Exception('Invalid Request. Response is status '.$prepareResponse->status().' ['.__LINE__.']['.__FILE__.']');
+        }*/
 
         return $this;
     }
