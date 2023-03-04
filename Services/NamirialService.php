@@ -66,6 +66,7 @@ class NamirialService {
             'attachment', $this->params['File'], $this->params['FileName']
         )->post($this->endpoint);
 
+        // dd([$prepareResponse, $this]);
         if (200 != $prepareResponse->status()) {
             throw new \Exception('Invalid Request. Response for file '.$this->params['FileName'].' is status '.$prepareResponse->status().' ['.__LINE__.']['.__FILE__.']');
         }
@@ -309,8 +310,10 @@ class NamirialService {
         $this->request();
 
         if (empty($this->response['EnvelopeId'])) {
+            // dddx(json_encode($this->params));
             throw new \Exception('EnvelopeId is empty. Might you need to set a valid email address');
         }
+
         $this->last_envelope_id = $this->response['EnvelopeId'];
 
         return $this;
