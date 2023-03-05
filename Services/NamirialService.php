@@ -310,7 +310,7 @@ class NamirialService {
         $this->request();
 
         if (empty($this->response['EnvelopeId'])) {
-            // dddx(json_encode($this->params));
+            dddx([$this->params, $this->response]);
             throw new \Exception('EnvelopeId is empty. Might you need to set a valid email address');
         }
 
