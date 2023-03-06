@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services;
 
+use Barryvdh\Debugbar\Facades\Debugbar;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 
@@ -72,6 +73,8 @@ class NamirialService {
         }
 
         $this->response = $prepareResponse->json();
+
+        Debugbar::info('uploadRequest Response', $this->response['FileId']);
 
         return $this;
     }
@@ -172,6 +175,10 @@ class NamirialService {
                 ],
             ];
 
+        Debugbar::info('filePrepare Params', $this->params);
+
+        Debugbar::info('filePrepare Response', $this->response);
+
         $this->request();
 
         return $this;
@@ -185,7 +192,7 @@ class NamirialService {
             'Documents' => [
                 [
                     'FileId' => $this->last_file_id,
-                    // 'DocumentNumber' => 1,
+                    'DocumentNumber' => 1,
                 ],
             ],
             'Name' => 'Delega Privacy Federation',
@@ -252,12 +259,12 @@ class NamirialService {
                             'SigningGroup' => '1',
                         ],
                     ],
-                    /*'VisibilityOptions' => [
+                    'VisibilityOptions' => [
                         [
                             'DocumentNumber' => 1,
                             'IsHidden' => false,
                         ],
-                    ],*/
+                    ],
                 ],
                 [
                     'Action' => [
@@ -268,12 +275,12 @@ class NamirialService {
                             'CopyingGroup' => '2',
                         ],
                     ],
-                    /*'VisibilityOptions' => [
+                    'VisibilityOptions' => [
                         [
                             'DocumentNumber' => 1,
                             'IsHidden' => false,
                         ],
-                    ],*/
+                    ],
                 ],
             ],
             'EmailConfiguration' => [
@@ -309,9 +316,13 @@ class NamirialService {
         ];
         $this->request();
 
+        Debugbar::info('envelopeSend Params', $this->params);
+
+        Debugbar::info('envelopeSend Response', $this->response);
+
         if (empty($this->response['EnvelopeId'])) {
-            dddx([$this->params, $this->response]);
-            throw new \Exception('EnvelopeId is empty. Might you need to set a valid email address');
+            // dddx([$this->params, $this->response]);
+            throw new \Exception('EnvelopeId is empty. Might you need to set a valid email address. You may also have reached the limit of envelopes that can be sent');
         }
 
         $this->last_envelope_id = $this->response['EnvelopeId'];
