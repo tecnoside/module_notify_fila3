@@ -15,16 +15,16 @@ class EmailTemplateReplacerAction
     /**
      * Execute the action.
      */
-    public function execute(Model $notify_theme, Model $model, string $keyword): string
+    public function execute(string $body_html, Model $model, string $keyword): string
     {
 
-        $text = $notify_theme->body_html;
+        $text = $body_html;
 
         $model_to_array = $model->toArray();
 
         foreach ($model_to_array as $key => $value) {
             if (is_string($value) || null == $value) {
-                if ($model == 'profile') {
+                if ($keyword == 'profile') {
                     $val = $model->getProfileExtraFieldValueAttribute('name', $key);
                 } else {
                     $val = $model->{$key};
