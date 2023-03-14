@@ -35,6 +35,7 @@ class EmailTemplateReplacerAction
 
         $text = str_replace('[now]', now()->format('d/m/Y'), $text);
 
+
         return $text;
     }
 }
