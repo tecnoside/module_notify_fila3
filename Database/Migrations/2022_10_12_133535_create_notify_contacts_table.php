@@ -3,9 +3,12 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
+use Modules\Notify\Models\Contact;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-class CreateContactsTable extends XotBaseMigration {
+class CreateNotifyContactsTable extends XotBaseMigration {
+    protected ?string $model_class = Contact::class;
+
     /**
      * Run the migrations.
      *
