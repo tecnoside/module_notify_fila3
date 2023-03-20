@@ -334,9 +334,6 @@ class NamirialService
             ],*/
         ];
 
-        //sbagliato. non prende il dato preferito di email
-        //dd($this);
-
         $this->request();
 
         //Debugbar::info('envelopeSend Params', $this->params);
