@@ -46,8 +46,9 @@ class RowAttributeNotification extends Notification
      */
     public function toMail($notifiable)
     {
-
+        
         $theme = $this->row->notifyThemes->first()->theme ?? 'ark';
+
         // dddx([
         //     'row' => $this->row,
         //     'from_email' => $this->row->mail_from,
