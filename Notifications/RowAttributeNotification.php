@@ -8,6 +8,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Data\SmsData;
+use Modules\Notify\Datas\EmailData;
 use Modules\Xot\Contracts\ModelContactContract;
 
 class RowAttributeNotification extends Notification
@@ -48,7 +49,7 @@ class RowAttributeNotification extends Notification
     {
         
         $theme = $this->row->notifyThemes->first()->theme ?? 'ark';
-
+        // dddx($theme);
         // dddx([
         //     'row' => $this->row,
         //     'from_email' => $this->row->mail_from,
@@ -56,13 +57,26 @@ class RowAttributeNotification extends Notification
         //     'subject' => $this->row->mail_subject,
         //     'row email' => $this->row->email,
         //     'body' => $this->row->mail_body,
+        //     // 'body_html' => $this->row->
         // ]);
+
+
+        // $email_data = EmailData::from([
+        //     'from' =>$this->row->mail_from_email,
+        //     'from_email' => $this->row->mail_from,
+        //     'subject' => $this->row->mail_subject,
+        //     'body_html' => $theme->body_html,
+        //     'body' => $this->row->mail_body,
+        // ]);
+        // dddx($email_data);
+
         $message = (new MailMessage())
-            ->from($this->row->mail_from, $this->row->mail_from_email)
+            ->from($this->row->mail_from_email, $this->row->mail_from)
             ->subject($this->row->mail_subject)
-            ->line('---')
-            // non so se posso modificare questa riga senza creare errori in altre parti
-            ->view('notify::emails.templates.' . $theme . '.mail', ['html' => $this->row->mail_body, 'logo' => []]);
+            // ->line('---')
+            // // non so se posso modificare questa riga senza creare errori in altre parti
+            // ->view('notify::emails.templates.' . $theme . '.mail', ['html' => $this->row->mail_body, 'logo' => []]);
+            ->view('quaeris::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
 
         $this->row->sendEmailCallback();
 
