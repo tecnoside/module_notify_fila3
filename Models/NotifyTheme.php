@@ -42,7 +42,8 @@ namespace Modules\Notify\Models;
  *
  * @mixin \Eloquent
  */
-class NotifyTheme extends BaseModel {
+class NotifyTheme extends BaseModel
+{
     /**
      * @var array<string>
      */
@@ -58,5 +59,22 @@ class NotifyTheme extends BaseModel {
         'post_type',
         'post_id',
         'theme',
+        'logo_src',
+        'logo_width',
+        'logo_height'
     ];
+
+    protected $appends = [
+        'logo'
+    ];
+
+
+    public function getLogoAttribute(?array $value): array
+    {
+        return [
+            'path' => $this->logo_src,
+            'width' => $this->logo_width,
+            'height' => $this->logo_height,
+        ];
+    }
 }
