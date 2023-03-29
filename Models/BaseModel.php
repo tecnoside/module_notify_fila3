@@ -41,6 +41,8 @@ abstract class BaseModel extends Model {
         // 'published_at' => 'datetime:Y-m-d', // da verificare
     ];
 
+    protected $appends = [];
+
     /**
      * @var string[]
      */
