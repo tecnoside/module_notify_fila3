@@ -15,13 +15,17 @@ class BuildMailMessageAction {
 
     public function execute(string $name, Model $model, array $view_params): MailMessage {
         $view_params = array_merge($view_params, $model->toArray());
-
+        $type='email';
         $theme = NotifyTheme::firstOrCreate([
-            'lang' => $view_params['lang'],
-            'type' => $view_params['via'] ?? 'email', // email,sms,whatsapp,piccione
+            'lang' => $view_params['lang'] ?? app()->getLocale(),
+            'type' => $type, // email,sms,whatsapp,piccione
             'post_type' => $name,
             'post_id' => $view_params['post_id'] ?? 0,
         ]);
+
+        
+
+
         if (null == $theme->subject) {
             $subject = trans('lu::auth.'.$name.'.subject');
             $theme->update(['subject' => $subject]);
