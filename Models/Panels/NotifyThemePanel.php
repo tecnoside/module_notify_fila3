@@ -137,7 +137,7 @@ class NotifyThemePanel extends XotBasePanel {
             ],
 
             (object) [
-                'type' => 'String',
+                'type' => 'UploadImage',
                 'name' => 'logo_path',
                 'col_size' => 3,
                 'comment' => null,
