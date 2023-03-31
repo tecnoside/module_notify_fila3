@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions;
 
-use Modules\Notify\Data\SmsData;
+use Modules\Notify\Datas\SmsData;
 use Spatie\QueueableAction\QueueableAction;
 
 /**

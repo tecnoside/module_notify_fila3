@@ -8,7 +8,7 @@ use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Str;
-use Modules\Notify\Data\SmsData;
+use Modules\Notify\Datas\SmsData;
 use Spatie\QueueableAction\QueueableAction;
 
 class NetfunSendAction {

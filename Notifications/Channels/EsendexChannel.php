@@ -16,6 +16,7 @@ class EsendexChannel {
 
     //public function send($notifiable, SmsNotification $notification) {
     public function send(object $notifiable, Notification $notification): void  {
+        
         // Send notification to the $notifiable instance...
         $message = $notification->toSms($notifiable);
         // Send notification to the $notifiable instance...
