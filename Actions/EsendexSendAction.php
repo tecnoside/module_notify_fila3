@@ -21,6 +21,7 @@ class EsendexSendAction {
      * Sends an SMS message.
      */
     public function execute(SmsData $sms): array {
+        
         $auth = $this->login();
 
         $data = [
