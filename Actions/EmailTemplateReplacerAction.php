@@ -29,7 +29,10 @@ class EmailTemplateReplacerAction
                 } else {
                     $val = $model->{$key};
                 }
-                $text = str_replace('[' . $keyword . '.' . $key . ']', (string) $val ?? '', $text);
+
+                if(is_null($val) || is_string($val)){
+                    $text = str_replace('[' . $keyword . '.' . $key . ']', (string) $val ?? '', $text);
+                }
             }
         }
 
