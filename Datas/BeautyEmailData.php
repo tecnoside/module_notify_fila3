@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Modules\Notify\Data;
+namespace Modules\Notify\Datas;
 
 use Spatie\LaravelData\Data;
-use Modules\Notify\Data\BeautyEmailViewData;
+//use Modules\Notify\Datas\BeautyEmailViewData;
 
 class BeautyEmailData extends Data
 {
