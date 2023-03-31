@@ -1,5 +1,5 @@
 <?php
-
+//https://blog.quickadminpanel.com/laravel-notifications-with-database-driver-internal-messages/
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
