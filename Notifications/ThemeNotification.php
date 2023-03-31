@@ -9,25 +9,25 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Data\SmsData;
+use Modules\Notify\Notifications\Channels\EsendexChannel;
 
-class HtmlNotification extends Notification implements ShouldQueue {
+
+
+class ThemeNotification extends Notification implements ShouldQueue {
     use Queueable;
-    public string $subject;
-    public string $html;
-    public string $from;
+    public array $data;
+    
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct(string $from, string $subject, string $html) {
-        $this->from = $from;
-        $this->subject = $subject;
-        $this->html = $html;
+    public function __construct(array $data) {
+        $this->data=$data;
     }
 
-    /**
+    /*
      * Get the notification's delivery channels.
      *
      * @param mixed $notifiable
@@ -35,10 +35,14 @@ class HtmlNotification extends Notification implements ShouldQueue {
      * @return array
      */
     public function via($notifiable) {
-        
-        return ['mail'];
+        //$via=[$this->data['driver']];
+        //return $via;
+        //return EsendexChannel::class;
+        $channels = [];
+        $channels[] = 'essendex';
+        return $channels;
     }
-
+        
     /**
      * Get the mail representation of the notification.
      *
@@ -47,11 +51,16 @@ class HtmlNotification extends Notification implements ShouldQueue {
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable) {
+        dddx('oo');
         return (new MailMessage())
             ->from($this->from)
             ->subject($this->subject)
             ->line('---')
             ->view('notify::notifications.html', ['html' => $this->html]);
+    }
+
+    public function toEssendex($notifiable) {
+        dddx($notifiable);
     }
 
     /**
@@ -62,6 +71,7 @@ class HtmlNotification extends Notification implements ShouldQueue {
      * @return SmsData
      */
     public function toSms($notifiable) {
+        dddx('a');
         return SmsData::from([
             'from' => $this->from,
             'to' => $notifiable->routeNotificationFor('mobile'),
@@ -77,7 +87,7 @@ class HtmlNotification extends Notification implements ShouldQueue {
      * @return array
      */
     public function toArray($notifiable) {
-      
+        dddx($notifiable);
 
         return [
         ];

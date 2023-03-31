@@ -15,6 +15,7 @@ class _ModulePanel extends XotBasePanel {
             new Actions\TrySmsAction(),
             new Actions\TryMailAction(),
             new Actions\TrySendMailAction(),
+            new Actions\TrySendNotificationAction(),
             // new Actions\TryAlertAction(),
         ];
     }
