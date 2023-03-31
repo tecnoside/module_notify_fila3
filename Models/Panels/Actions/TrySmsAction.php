@@ -34,7 +34,7 @@ class TrySmsAction extends XotBasePanelAction {
     public function handle() {
         $drivers = [
             'netfun'=>'netfun',
-            'essendex'=>'essendex',
+            'esendex'=>'esendex',
         ];
         $i = request('i');
 
@@ -52,6 +52,7 @@ class TrySmsAction extends XotBasePanelAction {
 
     public function postHandle() {
         $data = request()->all();
+        $data['channels']=[$data['driver']];
         $hows=NotificationData::from($data);
         Notification::send([$hows], new SampleNotification($data));
         echo '<h3>+Done</h3>';
