@@ -334,26 +334,26 @@ class EsendexSendAction {
 >>>>>>> c43e2d9 (up)
     }
 
-/**
- * Authenticates the user given it's username and password.
- * Returns the pair user_key, Session_key.
- */
-public function login() {
-    $ch = curl_init();
+    /**
+     * Authenticates the user given it's username and password.
+     * Returns the pair user_key, Session_key.
+     */
+    public function login() {
+        $ch = curl_init();
 
-    curl_setopt($ch, CURLOPT_URL, $this->base_endpoint.'login?username='.config('esendex.username').'&password='.config('esendex.password'));
+        curl_setopt($ch, CURLOPT_URL, $this->base_endpoint.'login?username='.config('esendex.username').'&password='.config('esendex.password'));
 
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-    $response = curl_exec($ch);
-    $info = curl_getinfo($ch);
+        $response = curl_exec($ch);
+        $info = curl_getinfo($ch);
 
-    curl_close($ch);
+        curl_close($ch);
 
-    if (200 != $info['http_code']) {
-        return null;
+        if (200 != $info['http_code']) {
+            return null;
+        }
+
+        return explode(';', $response);
     }
-
-    return explode(';', $response);
-}
 }
