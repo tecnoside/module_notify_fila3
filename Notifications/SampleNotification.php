@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Notify\Notifications;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Actions\BuildMailMessageAction;
 use Modules\Notify\Datas\SmsData;
@@ -69,13 +68,6 @@ class SampleNotification extends Notification {
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable) {
-        // dddx('oo');
-        /*
-        return (new MailMessage())
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', 'https://laravel.com')
-                    ->line('Thank you for using our application!');
-        */
         $view_params = $notifiable->toArray();
         if (isset($view_params['body']) && ! isset($view_params['body_html'])) {
             $view_params['body_html'] = $view_params['body'];
