@@ -10,18 +10,20 @@ use Spatie\QueueableAction\QueueableAction;
 /**
  * @property string $base_endpoint
  */
-class EsendexSendAction {
+class EsendexSendAction
+{
     use QueueableAction;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->base_endpoint = 'https://app.esendex.it/API/v1.0/REST/';
     }
 
     /**
      * Sends an SMS message.
      */
-    public function execute(SmsData $sms): array {
-        
+    public function execute(SmsData $sms): array
+    {
         $auth = $this->login();
 
         $data = [
@@ -51,14 +53,20 @@ class EsendexSendAction {
             return [];
         }
 
-        return json_decode($response, true);
+        $res = json_decode($response, true);
+        if (! is_array($res)) {
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
+        }
+
+        return $res;
     }
 
     /**
      * Authenticates the user given it's username and password.
      * Returns the pair user_key, Session_key.
      */
-    public function login() {
+    public function login()
+    {
         $ch = curl_init();
 
         curl_setopt($ch, CURLOPT_URL, $this->base_endpoint.'login?username='.config('esendex.username').'&password='.config('esendex.password'));

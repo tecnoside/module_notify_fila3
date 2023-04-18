@@ -7,11 +7,13 @@ namespace Modules\Notify\Services;
 use Barryvdh\Debugbar\Facades\Debugbar;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
+use Modules\Notify\Datas\NamirialData;
 
 /**
  * Class NamirialService.
  */
-class NamirialService {
+class NamirialService
+{
     private static ?self $instance = null;
     private string $base_endpoint;
     private string $endpoint_version;
@@ -23,7 +25,8 @@ class NamirialService {
     private string $endpoint;
     private string $http_method;
     private array $params;
-    private string $api_key;
+    // Property Modules\Notify\Services\NamirialService::$api_key is never read, only written.
+    // private string $api_key;
     private string $api_secret;
     private array $headers;
     private string $last_file_id;
@@ -35,13 +38,15 @@ class NamirialService {
 
     private array $recipient_informations;
 
-    public function __construct() {
-        $this->base_endpoint = config('namirial.endpoint');
+    public function __construct()
+    {
+        $namirial = NamirialData::make();
+        $this->base_endpoint = $namirial->endpoint;
         $this->endpoint_version = '/v6';
         $this->full_base_endpoint = $this->base_endpoint.$this->endpoint_version;
-        $this->api_key = config('namirial.api_key');
+        // $this->api_key = $namirial->api_key;
         // authorization bearer
-        $this->api_secret = config('namirial.api_secret');
+        $this->api_secret = $namirial->api_secret;
         $this->headers = [
             'Authorization' => 'Bearer '.$this->api_secret,
             'Content-Type' => 'application/json',
@@ -50,7 +55,8 @@ class NamirialService {
         $this->recipient_informations['LanguageCode'] = 'IT';
     }
 
-    public static function getInstance(): self {
+    public static function getInstance(): self
+    {
         if (null === self::$instance) {
             self::$instance = new self();
         }
@@ -58,11 +64,13 @@ class NamirialService {
         return self::$instance;
     }
 
-    public static function make(): self {
+    public static function make(): self
+    {
         return static::getInstance();
     }
 
-    private function uploadRequest(): self {
+    private function uploadRequest(): self
+    {
         $prepareResponse = Http::acceptJson()->withToken($this->api_secret)->attach(
             'attachment',
             $this->params['File'],
@@ -81,7 +89,8 @@ class NamirialService {
         return $this;
     }
 
-    private function download(?string $filename = 'test.pdf'): self {
+    private function download(?string $filename = 'test.pdf'): self
+    {
         $response = Http::withHeaders($this->headers)->{$this->http_method}($this->endpoint, $this->params);
         $contents = $response->getBody()->getContents();
         Storage::disk('local')->put($filename, $contents);
@@ -89,7 +98,8 @@ class NamirialService {
         return $this;
     }
 
-    private function request(): self {
+    private function request(): self
+    {
         $prepareResponse = Http::acceptJson()->withHeaders($this->headers)->{$this->http_method}($this->endpoint, $this->params);
         $this->response = $prepareResponse->json();
 
@@ -100,35 +110,41 @@ class NamirialService {
         return $this;
     }
 
-    public function getEnvelopeId(): string {
+    public function getEnvelopeId(): string
+    {
         return $this->last_envelope_id;
     }
 
-    public function setEnvelopeId(string $envelope_id): self {
+    public function setEnvelopeId(string $envelope_id): self
+    {
         $this->last_envelope_id = $envelope_id;
 
         return $this;
     }
 
-    public function setRecipientGivenName(string $name): self {
+    public function setRecipientGivenName(string $name): self
+    {
         $this->recipient_informations['GivenName'] = $name;
 
         return $this;
     }
 
-    public function setRecipientEmail(string $email): self {
+    public function setRecipientEmail(string $email): self
+    {
         $this->recipient_informations['Email'] = $email;
 
         return $this;
     }
 
-    public function setRecipientPhoneNumber(string $phone_number): self {
+    public function setRecipientPhoneNumber(string $phone_number): self
+    {
         $this->recipient_informations['PhoneNumber'] = $phone_number;
 
         return $this;
     }
 
-    public function setRecipientSurname(string $surname): self {
+    public function setRecipientSurname(string $surname): self
+    {
         $this->recipient_informations['Surname'] = $surname;
 
         return $this;
@@ -137,11 +153,13 @@ class NamirialService {
     /**
      * @return array|mixed
      */
-    public function getResponse() {
+    public function getResponse()
+    {
         return $this->response;
     }
 
-    public function systemVersion(): self {
+    public function systemVersion(): self
+    {
         $this->endpoint = $this->full_base_endpoint.'/system/version';
         $this->http_method = 'get';
         $this->params = [];
@@ -150,7 +168,8 @@ class NamirialService {
         return $this;
     }
 
-    public function fileUpload($file_path): self {
+    public function fileUpload($file_path): self
+    {
         // Get the contents of the file as a string
         $fileContents = Storage::disk('local')->get($file_path);
 
@@ -167,7 +186,8 @@ class NamirialService {
         return $this;
     }
 
-    public function filePrepare(): self {
+    public function filePrepare(): self
+    {
         $this->endpoint = $this->full_base_endpoint.'/file/prepare';
         $this->http_method = 'post';
         $this->params =
@@ -186,7 +206,8 @@ class NamirialService {
         return $this;
     }
 
-    public function envelopeSend(): self {
+    public function envelopeSend(): self
+    {
         $this->endpoint = $this->full_base_endpoint.'/envelope/send';
         $this->http_method = 'post';
 
@@ -332,7 +353,8 @@ class NamirialService {
         return $this;
     }
 
-    public function envelopeFind(?array $custom_params = []): self {
+    public function envelopeFind(?array $custom_params = []): self
+    {
         $this->endpoint = $this->full_base_endpoint.'/envelope/find';
         $this->http_method = 'post';
 
@@ -350,7 +372,8 @@ class NamirialService {
         return $this;
     }
 
-    public function envelopeInformations(): self {
+    public function envelopeInformations(): self
+    {
         $this->endpoint = $this->full_base_endpoint.'/envelope/'.$this->last_envelope_id;
         $this->http_method = 'get';
         $this->params = [];
@@ -359,7 +382,8 @@ class NamirialService {
         return $this;
     }
 
-    public function envelopeFiles(): self {
+    public function envelopeFiles(): self
+    {
         $this->endpoint = $this->full_base_endpoint.'/envelope/'.$this->last_envelope_id.'/files';
         $this->http_method = 'get';
         $this->params = [];
@@ -374,7 +398,8 @@ class NamirialService {
         return $this;
     }
 
-    public function downloadDocument(?string $filename = ''): self {
+    public function downloadDocument(?string $filename = ''): self
+    {
         if (null === $this->last_envelope_file_id) {
             throw new \Exception('last_envelope_file_id is null');
         }
