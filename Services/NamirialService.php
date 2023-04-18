@@ -92,7 +92,7 @@ class NamirialService
     private function download(?string $filename = 'test.pdf'): self
     {
         $response = Http::withHeaders($this->headers)->{$this->http_method}($this->endpoint, $this->params);
-        $contents = $response->getBody()->getContents();
+        $contents = strval($response->getBody()->getContents());
         Storage::disk('local')->put($filename, $contents);
 
         return $this;
@@ -168,7 +168,7 @@ class NamirialService
         return $this;
     }
 
-    public function fileUpload($file_path): self
+    public function fileUpload(string $file_path): self
     {
         // Get the contents of the file as a string
         $fileContents = Storage::disk('local')->get($file_path);
