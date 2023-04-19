@@ -21,6 +21,9 @@ class EsendexChannel
     {
         // Send notification to the $notifiable instance...
         // Call to an undefined method Illuminate\Notifications\Notification::toSms().
+        if (! method_exists($notification, 'toSms')) {
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
+        }
         $message = $notification->toSms($notifiable);
         // Send notification to the $notifiable instance...
         $data = app(EsendexSendAction::class)->execute($message);

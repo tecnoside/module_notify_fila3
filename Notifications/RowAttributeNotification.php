@@ -47,7 +47,14 @@ class RowAttributeNotification extends Notification
     public function toMail($notifiable)
     {
         // Access to an undefined property Modules\Xot\Contracts\ModelContactContract::$notifyThemes.
-        $theme = $this->row->notifyThemes->first()->theme ?? 'ark';
+        // $theme = $this->row->notifyThemes->first()->theme ?? 'ark';
+
+        if (! property_exists($this->row, 'mail_from')) {
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
+        }
+        if (! property_exists($this->row, 'mail_from_email')) {
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
+        }
 
         $message = (new MailMessage())
             ->from($this->row->mail_from_email, $this->row->mail_from)
