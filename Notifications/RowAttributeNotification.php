@@ -8,7 +8,6 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Datas\SmsData;
-use Modules\Notify\Datas\EmailData;
 use Modules\Xot\Contracts\ModelContactContract;
 
 class RowAttributeNotification extends Notification
@@ -47,28 +46,8 @@ class RowAttributeNotification extends Notification
      */
     public function toMail($notifiable)
     {
-        
+        // Access to an undefined property Modules\Xot\Contracts\ModelContactContract::$notifyThemes.
         $theme = $this->row->notifyThemes->first()->theme ?? 'ark';
-        // dddx($theme);
-        // dddx([
-        //     'row' => $this->row,
-        //     'from_email' => $this->row->mail_from,
-        //     'from' => $this->row->mail_from_email,
-        //     'subject' => $this->row->mail_subject,
-        //     'row email' => $this->row->email,
-        //     'body' => $this->row->mail_body,
-        //     // 'body_html' => $this->row->
-        // ]);
-
-
-        // $email_data = EmailData::from([
-        //     'from' =>$this->row->mail_from_email,
-        //     'from_email' => $this->row->mail_from,
-        //     'subject' => $this->row->mail_subject,
-        //     'body_html' => $theme->body_html,
-        //     'body' => $this->row->mail_body,
-        // ]);
-        // dddx($email_data);
 
         $message = (new MailMessage())
             ->from($this->row->mail_from_email, $this->row->mail_from)

@@ -21,6 +21,7 @@ namespace Modules\Notify\Models;
  * @property int|null                        $post_id
  * @property string                          $body_html
  * @property string|null                     $theme
+ *
  * @method static \Modules\Notify\Database\Factories\NotifyThemeFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     newQuery()
@@ -38,19 +39,23 @@ namespace Modules\Notify\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereUpdatedBy($value)
+ *
  * @property string|null $from_email
  * @property string|null $logo_src
- * @property int|null $logo_width
- * @property int|null $logo_height
- * @property-read array $logo
+ * @property int|null    $logo_width
+ * @property int|null    $logo_height
+ * @property array       $logo
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereFromEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereLogoHeight($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereLogoSrc($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereLogoWidth($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereTheme($value)
+ *
  * @mixin \Eloquent
  */
-class NotifyTheme extends BaseModel {
+class NotifyTheme extends BaseModel
+{
     /**
      * @var array<string>
      */
@@ -75,11 +80,12 @@ class NotifyTheme extends BaseModel {
         'logo',
     ];
 
-    public function getLogoAttribute(?array $value): array {
+    public function getLogoAttribute(?array $value): array
+    {
         return [
-            'path' => asset($this->logo_src),
-            'width' => $this->logo_width,
-            'height' => $this->logo_height,
+            'path' => asset(strval($this->logo_src)),
+            'width' => $this->logo_width ?? 50,
+            'height' => $this->logo_height ?? 50,
         ];
     }
 }
