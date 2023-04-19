@@ -9,7 +9,8 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Datas\SmsData;
 
-class SmsNotification extends Notification implements ShouldQueue {
+class SmsNotification extends Notification implements ShouldQueue
+{
     use Queueable;
     public string $subject;
     public string $html;
@@ -20,7 +21,8 @@ class SmsNotification extends Notification implements ShouldQueue {
      *
      * @return void
      */
-    public function __construct(string $from, string $subject, string $html) {
+    public function __construct(string $from, string $subject, string $html)
+    {
         $this->from = $from;
         $this->subject = $subject;
         $this->html = $html;
@@ -33,18 +35,20 @@ class SmsNotification extends Notification implements ShouldQueue {
      *
      * @return array
      */
-    public function via($notifiable) {
+    public function via($notifiable)
+    {
         return ['esendex'];
     }
 
     /**
      * Undocumented function.
      *
-     * @param mixed $notifiable
+     * @param object $notifiable
      *
      * @return SmsData
      */
-    public function toSms($notifiable) {
+    public function toSms($notifiable)
+    {
         return SmsData::from([
             'from' => $this->from,
             'to' => $notifiable->routeNotificationFor('sms'),
@@ -59,7 +63,8 @@ class SmsNotification extends Notification implements ShouldQueue {
      *
      * @return array
      */
-    public function toArray($notifiable) {
+    public function toArray($notifiable)
+    {
         dddx($notifiable);
 
         return [
