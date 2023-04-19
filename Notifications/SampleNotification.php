@@ -11,15 +11,19 @@ use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Models\Notification as NotificationModel;
 use Modules\Notify\Notifications\Channels\EsendexChannel;
 
-class SampleNotification extends Notification {
+class SampleNotification extends Notification
+{
     use Queueable;
+
+    public array $data;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct(array $data) {
+    public function __construct(array $data)
+    {
         $this->data = $data;
     }
 
@@ -28,7 +32,8 @@ class SampleNotification extends Notification {
      *
      * @param mixed $notifiable
      */
-    public function via($notifiable): array {
+    public function via($notifiable): array
+    {
         return $notifiable->channels;
         // $channels = [];
         // $channels[]=EsendexChannel::class;
@@ -45,11 +50,20 @@ class SampleNotification extends Notification {
      *
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function toEsendex($notifiable) {
+    public function toEsendex($notifiable)
+    {
         dddx($notifiable);
     }
 
-    public function toSms($notifiable) {
+    /**
+     * Undocumented function.
+     *
+     * @param mixed $notifiable
+     *
+     * @return SmsData
+     */
+    public function toSms($notifiable)
+    {
         $res = SmsData::from([
             'from' => $this->data['from'],
             // 'to' => $notifiable->routeNotificationFor('sms'),
@@ -67,7 +81,8 @@ class SampleNotification extends Notification {
      *
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function toMail($notifiable) {
+    public function toMail($notifiable)
+    {
         $view_params = $notifiable->toArray();
         if (isset($view_params['body']) && ! isset($view_params['body_html'])) {
             $view_params['body_html'] = $view_params['body'];
@@ -83,14 +98,23 @@ class SampleNotification extends Notification {
      *
      * @return array
      */
-    public function toArray($notifiable) {
+    public function toArray($notifiable)
+    {
         dddx('oo');
 
         return [
         ];
     }
 
-    public function toDatabase($notifiable) {
+    /**
+     * Get the array representation of the notification.
+     *
+     * @param mixed $notifiable
+     *
+     * @return array
+     */
+    public function toDatabase($notifiable)
+    {
         return $notifiable->toArray();
     }
 }
