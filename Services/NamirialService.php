@@ -18,10 +18,8 @@ class NamirialService
     private string $base_endpoint;
     private string $endpoint_version;
     private string $full_base_endpoint;
-    /**
-     * @var array|mixed
-     */
-    private $response;
+
+    private array $response;
     private string $endpoint;
     private string $http_method;
     private array $params;
