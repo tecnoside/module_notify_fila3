@@ -7,7 +7,8 @@ namespace Modules\Notify\Notifications;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
-use Modules\LU\Actions\BuildUserMailMessageAction;
+use Modules\Notify\Actions\BuildMailMessageAction;
+use Modules\Notify\Contracts\CanThemeNotificationContract;
 use Modules\Notify\Datas\SmsData;
 
 class ThemeNotification extends Notification implements ShouldQueue
@@ -50,7 +51,8 @@ class ThemeNotification extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
-        return app(BuildUserMailMessageAction::class)->execute($this->name, $this->view_params);
+        return app(BuildMailMessageAction::class)
+            ->execute($this->name, $notifiable->getModel(), $this->view_params);
     }
 
     // public function toEssendex($notifiable)

@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services;
 
-use Barryvdh\Debugbar\Facades\Debugbar;
+// use Barryvdh\Debugbar\Facades\Debugbar;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Modules\Notify\Datas\NamirialData;
 
 /**
@@ -81,7 +82,7 @@ class NamirialService
         }
         $json = $prepareResponse->json();
         if (! is_array($json)) {
-            throw new Exception('['.__LINE__.']['.__FILE__.']');
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
         $this->response = $json;
 
@@ -246,7 +247,7 @@ class NamirialService
                             'Elements' => [
                                 'Signatures' => [
                                     [
-                                        'ElementId' => str()->uuid()->toString(),
+                                        'ElementId' => Str::uuid(),
                                         'Required' => true,
                                         'DocumentNumber' => 1,
                                         'UseExternalTimestampServer' => false,
@@ -399,7 +400,7 @@ class NamirialService
         return $this;
     }
 
-    public function downloadDocument(?string $filename = ''): self
+    public function downloadDocument(string $filename = 'tmp'): self
     {
         if (null === $this->last_envelope_file_id) {
             throw new \Exception('last_envelope_file_id is null');
