@@ -53,7 +53,7 @@ class EsendexSendAction
             return [];
         }
 
-        $res = json_decode($response, true);
+        $res = json_decode(strval($response), true);
         if (! is_array($res)) {
             throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
@@ -65,7 +65,7 @@ class EsendexSendAction
      * Authenticates the user given it's username and password.
      * Returns the pair user_key, Session_key.
      */
-    public function login()
+    public function login(): array
     {
         $ch = curl_init();
 

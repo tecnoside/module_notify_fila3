@@ -24,7 +24,7 @@ class ContactFactory extends Factory
     public function definition()
     {
         return [
-            'model_id' => $this->faker->integer,
+            // 'model_id' => $this->faker->integer,
             'model_type' => $this->faker->word,
             'contact_type' => $this->faker->word,
             'value' => $this->faker->word,
@@ -33,7 +33,7 @@ class ContactFactory extends Factory
             'created_at' => $this->faker->dateTime,
             'updated_by' => $this->faker->word,
             'created_by' => $this->faker->word,
-            'user_id' => $this->faker->integer,
+            // 'user_id' => $this->faker->integer,
             'token' => $this->faker->word,
         ];
     }
