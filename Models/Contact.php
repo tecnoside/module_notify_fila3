@@ -7,18 +7,18 @@ namespace Modules\Notify\Models;
 /**
  * Modules\Notify\Models\Contact.
  *
- * @property string                          $token
+ * @property int                             $id
  * @property string                          $model_type
  * @property string                          $model_id
- * @property string                          $user_id
- * @property string                          $contact_type
+ * @property string|null                     $contact_type
+ * @property string|null                     $value
+ * @property string|null                     $user_id
  * @property \Illuminate\Support\Carbon|null $verified_at
- * @property mixed                           $value
- * @property int                             $id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property string|null                     $updated_by
  * @property string|null                     $created_by
+ * @property string|null                     $token
  *
  * @method static \Modules\Notify\Database\Factories\ContactFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Contact     newModelQuery()
