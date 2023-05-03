@@ -15,7 +15,8 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseModel.
  */
-abstract class BaseModel extends Model {
+abstract class BaseModel extends Model
+{
     // use Searchable;
     // use Cachable;
     use HasFactory;
@@ -46,7 +47,7 @@ abstract class BaseModel extends Model {
     /**
      * @var string[]
      */
-    protected $dates = ['published_at', 'created_at', 'updated_at'];
+    protected $dates = ['published_at', 'created_at', 'updated_at', 'verified_at'];
     /**
      * @var string
      */
@@ -71,7 +72,8 @@ abstract class BaseModel extends Model {
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
-    protected static function newFactory() {
+    protected static function newFactory()
+    {
         return FactoryService::newFactory(static::class);
     }
 }
