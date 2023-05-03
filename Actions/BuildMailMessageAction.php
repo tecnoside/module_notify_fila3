@@ -10,10 +10,12 @@ use Illuminate\Support\Str;
 use Modules\Notify\Models\NotifyTheme;
 use Spatie\QueueableAction\QueueableAction;
 
-class BuildMailMessageAction {
+class BuildMailMessageAction
+{
     use QueueableAction;
 
-    public function execute(string $name, Model $model, array $view_params = []): MailMessage {
+    public function execute(string $name, Model $model, array $view_params = []): MailMessage
+    {
         $view_params = array_merge($view_params, $model->toArray());
         $type = 'email';
 
@@ -58,7 +60,7 @@ class BuildMailMessageAction {
         }
         $view_params = array_merge($theme->toArray(), $view_params);
 
-        $body_html = $theme->body_html;
+        $body_html = strval($theme->body_html);
         foreach ($view_params as $k => $v) {
             if (is_string($v)) {
                 $body_html = Str::replace('##'.$k.'##', $v, $body_html);
