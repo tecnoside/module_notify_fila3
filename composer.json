@@ -24,7 +24,8 @@
     },
     "require": {
         "laraxot/module_xot": "dev-master",
-        "illuminate/contracts": "^8.83|^9.30|^10.0",
+        "illuminate/contracts": "^9.0|^10.0",
+        "illuminate/support": "^9.12|^10.0",
         "phpdocumentor/type-resolver": "^1.5"
     },
     "require-dev": {
