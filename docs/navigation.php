@@ -71,9 +71,9 @@ return [
 >>>>>>> ca8af38 (.)
     'Funzione del Modulo' => [
         'url' => 'docs/module_notify',
-        // 'children' => [
-        //     'TrySendMailAction' => 'docs/try_send_mail_action',
-        // ],
+        'children' => [
+            'Notifica ThemeNotification' => 'docs/theme-notification',
+        ],
     ],
     'TrySendMailAction' => [
         'url' => 'docs/try_send_mail_action',
