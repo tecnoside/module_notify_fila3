@@ -7,4 +7,6 @@ section: content
 
 # Funzione del Modulo {#module_notify}
 
-Modulo nato per occuparsi degli invii email/sms/ecc.
+Modulo nato per occuparsi degli invii delle varie notifiche (email/sms/ecc) utilizzate nel progetto.  
+E' possibile memorizzarle nella tabella notify_themes.  
+

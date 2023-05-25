@@ -7,4 +7,4 @@ section: content
 
 # Notifica ThemeNotification
 
-Classe notifica utilizzata per inviare email/sms/ecc.
+Classe notifica utilizzata per gestire le notifiche (email/sms/ecc).
