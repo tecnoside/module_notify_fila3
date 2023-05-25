@@ -8,4 +8,4 @@ section: content
 # Classe BuildMailMessageAction
 
 Classe, utilizzata all'interno di ThemeNotification,  
-che si occupa di richiamare la mail richiamata tramite parametro.
+che si occupa di recuperare la notifica richiamata tramite parametro.
