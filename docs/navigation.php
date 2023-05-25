@@ -127,9 +127,12 @@ return [
 >>>>>>> b12d3b6 (.)
     'Funzione del Modulo' => [
         'url' => 'docs/module_notify',
-        'children' => [
-            'TrySendMailAction' => 'docs/try_send_mail_action',
-        ],
+        // 'children' => [
+        //     'TrySendMailAction' => 'docs/try_send_mail_action',
+        // ],
+    ],
+    'TrySendMailAction' => [
+        'url' => 'docs/try_send_mail_action',
     ],
 <<<<<<< HEAD
 >>>>>>> 8f4c37e (.)
