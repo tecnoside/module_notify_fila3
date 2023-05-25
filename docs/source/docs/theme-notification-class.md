@@ -7,4 +7,4 @@ section: content
 
 # Notifica ThemeNotification
 
-aaaa
+Classe notifica utilizzata per inviare email/sms/ecc.
