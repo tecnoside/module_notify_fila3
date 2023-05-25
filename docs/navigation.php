@@ -71,9 +71,12 @@ return [
 >>>>>>> ca8af38 (.)
     'Funzione del Modulo' => [
         'url' => 'docs/module_notify',
-        'children' => [
-            'TrySendMailAction' => 'docs/try_send_mail_action',
-        ],
+        // 'children' => [
+        //     'TrySendMailAction' => 'docs/try_send_mail_action',
+        // ],
+    ],
+    'TrySendMailAction' => [
+        'url' => 'docs/try_send_mail_action',
     ],
 <<<<<<< HEAD
 >>>>>>> 996ab99 (.)
