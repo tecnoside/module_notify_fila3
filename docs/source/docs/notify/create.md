@@ -28,3 +28,6 @@ Questi parametri dovranno essere utilizzati nel corpo della notifica, esempio:
 ```php
 Ciao [profile.first_name] [profile.last_name] come stai?
 ```
+
+Ciò significa che per utilizzare questa email, come parametro dovrà avere un array profile,  
+con all'interno first_name e last_name.
