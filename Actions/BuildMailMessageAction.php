@@ -14,11 +14,14 @@ class BuildMailMessageAction
 {
     use QueueableAction;
 
+    // --- modificare con Modules\Notify\Actions\NotifyTheme\Get
+
     public function execute(string $name, Model $model, array $view_params = [], ?array $attachments = []): MailMessage
     {
         $view_params = array_merge($view_params, $model->toArray());
         $type = 'email';
 
+        /*
         if (! isset($view_params['post_id'])) {
             $view_params['post_id'] = 0;
         }
@@ -68,12 +71,13 @@ class BuildMailMessageAction
             }
         }
         $view_params['body_html'] = $body_html;
-
+        */
+        $theme = app(\Modules\Notify\Actions\NotifyTheme\Get::class)->execute($name, $type, $view_params);
         $view_html = 'notify::email';
 
         $email = (new MailMessage())
             ->subject($view_params['subject'] ?? $theme->subject)
-            ->view($view_html, $view_params);
+            ->view($view_html, $theme->view_params);
 
         // TO-DO: va messo qua il ciclo degli attachments?
         if (! empty($attachments)) {

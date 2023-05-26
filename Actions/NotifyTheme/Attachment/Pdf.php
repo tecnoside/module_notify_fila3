@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions\NotifyTheme\Attachment;
 
-use Modules\Notify\Models\NotifyTheme;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Modules\Notify\Datas\AttachmentData;
+use Modules\Xot\Services\HtmlService;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
@@ -14,14 +17,23 @@ class Pdf
 {
     use QueueableAction;
 
-    public function execute(string $post_type, array $view_params)
+    public function execute(string $post_type, array $view_params): AttachmentData
     {
-        $lang = app()->getLocale();
-        $notify_theme = NotifyTheme::firstOrCreate([
-            'lang' => $lang,
-            'type' => 'pdf',
-            'post_type' => $post_type,
-            'post_id' => 0,
+        $notify_theme_data = app(\Modules\Notify\Actions\NotifyTheme\Get::class)->execute($post_type, 'pdf', $view_params);
+        $html = $notify_theme_data->body_html;
+
+        $file_name = Str::slug($notify_theme_data->subject).'.pdf';
+        if (isset($view_params[$file_name])) {
+            $file_name = $view_params[$file_name];
+        }
+        $file_path = Storage::disk('cache')->path($file_name);
+
+        HtmlService::toPdf(['filename' => $file_path, 'html' => $html, 'out' => 'file', 'pdforientation' => 'P']);
+
+        return AttachmentData::from([
+            'path' => $file_path,
+            'as' => $file_name,
+            'mime' => 'application/pdf',
         ]);
     }
 }
