@@ -61,12 +61,12 @@ class BuildMailMessageAction
         $view_params = array_merge($theme->toArray(), $view_params);
 
         $body_html = strval($theme->body_html);
+
         foreach ($view_params as $k => $v) {
             if (is_string($v)) {
                 $body_html = Str::replace('##'.$k.'##', $v, $body_html);
             }
         }
-
         $view_params['body_html'] = $body_html;
 
         $view_html = 'notify::email';
@@ -78,6 +78,8 @@ class BuildMailMessageAction
         return (new MailMessage())
             // ->from('barrett@example.com', 'Barrett Blair')
             ->subject($view_params['subject'] ?? $theme->subject)
-            ->view($view_html, $view_params);
+            ->view($view_html, $view_params)
+            // TO-DO: va messo qua il ciclo degli attachments?
+        ;
     }
 }
