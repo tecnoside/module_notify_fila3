@@ -9,7 +9,7 @@ use Modules\Notify\Datas\NotificationData;
 
 interface CanThemeNotificationContract
 {
-    public function getNotificationData(string $name): NotificationData;
+    public function getNotificationData(string $name, array $view_params = []): NotificationData;
 
     public function getModel(): Model;
 }
