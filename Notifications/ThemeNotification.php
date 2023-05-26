@@ -55,7 +55,7 @@ class ThemeNotification extends Notification
     public function toMail($notifiable)
     {
         $attachments = $notifiable
-            ->getNotificationData($this->name)
+            ->getNotificationData($this->name, $this->view_params)
             ->attachments;
 
         $mail_message = app(BuildMailMessageAction::class)

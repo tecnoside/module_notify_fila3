@@ -51,10 +51,6 @@ class Get
                 $html = '##body_html##';
             }
 
-            // if ('verify-email' == $name && 3 == $view_params['post_id']) {
-            //    $html .= '<br/>When you\'ll re-login this will be your password: ##password##';
-            // }
-
             $theme->update(['body_html' => $html]);
         }
         $view_params = array_merge($theme->toArray(), $view_params);
@@ -68,7 +64,12 @@ class Get
                 $subject = Str::replace('##'.$k.'##', $v, $subject);
             }
         }
+
         $view_params['body_html'] = $body_html;
+
+        if (empty($theme->view_params)) {
+            $theme->update(['view_params' => $view_params]);
+        }
 
         return NotifyThemeData::from([
             'subject' => $subject,
