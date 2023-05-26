@@ -7,6 +7,7 @@ namespace Modules\Notify\Datas;
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Models\Notification as NotificationModel;
 use Spatie\LaravelData\Data;
+use Spatie\LaravelData\DataCollection;
 
 class NotificationData extends Data
 {
@@ -20,6 +21,12 @@ class NotificationData extends Data
     public ?string $body_html = null;
     public string $body;
     public array $channels = [];
+
+    /**
+     * @var DataCollection<AttachmentData>
+     */
+    public ?DataCollection $attachments = null;
+    // public ?array $attachment_paths = [];
 
     /** Get the notification routing information for the given driver.
      *

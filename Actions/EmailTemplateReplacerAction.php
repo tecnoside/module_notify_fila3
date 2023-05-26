@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace Modules\Notify\Actions;
 
 use Illuminate\Database\Eloquent\Model;
+use Modules\ExtraField\Models\ExtraField;
+use Modules\ExtraField\Models\ExtraFieldMorph;
 use Spatie\QueueableAction\QueueableAction;
 
 class EmailTemplateReplacerAction
@@ -23,17 +25,13 @@ class EmailTemplateReplacerAction
         foreach ($model_to_array as $key => $value) {
             if (is_string($value) || null == $value) {
                 if ('profile' == $keyword) {
-                    if (! method_exists($model, 'getProfileExtraFieldValueAttribute')) {
-                        throw new \Exception('['.__LINE__.']['.__FILE__.']');
-                    }
-                    $val = $model->getProfileExtraFieldValueAttribute('name', $key);
+                    $val_field_id = ExtraField::firstWhere('name', $key)->id ?? $key.' NON PRESENTE';
+                    $val = ExtraFieldMorph::firstWhere(['user_id' => (string) auth()->id(), 'extra_field_id' => $val_field_id, 'model_type' => 'profile'])?->value ?? ' NON PRESENTE';
                 } else {
                     $val = $model->{$key};
                 }
 
-                // if (is_null($val) || is_string($val)) {
                 $text = str_replace('['.$keyword.'.'.$key.']', $val, $text);
-                // }
             }
         }
 
