@@ -31,7 +31,7 @@ class EmailTemplateReplacerAction
                     $val = $model->{$key};
                 }
 
-                $text = str_replace('['.$keyword.'.'.$key.']', $val, $text);
+                $text = str_replace('['.$keyword.'.'.$key.']', (string) $val, $text);
             }
         }
 
