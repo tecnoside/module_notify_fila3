@@ -59,6 +59,7 @@ class NotifyThemePanel extends XotBasePanel
                     'mail' => 'mail',
                     'email' => 'email',
                     'sms' => 'sms',
+                    'pdf' => 'pdf',
                 ],
             ],
             (object) [
@@ -119,6 +120,14 @@ class NotifyThemePanel extends XotBasePanel
                 'fields' => $this->logoFields(),
                 'comment' => null,
             ],
+            // *
+            (object) [
+                'type' => 'ArrayStatic',
+                'name' => 'view_params',
+                'col_size' => 12,
+                'except' => ['index'],
+            ],
+            // */
         ];
     }
 
