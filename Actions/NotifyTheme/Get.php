@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Actions\NotifyTheme;
 
 use Illuminate\Support\Str;
+use Modules\Notify\Datas\NotifyThemeData;
 use Modules\Notify\Models\NotifyTheme;
 use Modules\Xot\Datas\XotData;
 use Spatie\QueueableAction\QueueableAction;
@@ -16,7 +17,7 @@ class Get
 {
     use QueueableAction;
 
-    public function execute(string $name, string $type, array $view_params)
+    public function execute(string $name, string $type, array $view_params): NotifyThemeData
     {
         $xot = XotData::make();
         if (! isset($view_params['post_id'])) {
@@ -59,12 +60,20 @@ class Get
         $view_params = array_merge($theme->toArray(), $view_params);
 
         $body_html = strval($theme->body_html);
+        $subject = strval($theme->subject);
 
         foreach ($view_params as $k => $v) {
             if (is_string($v)) {
                 $body_html = Str::replace('##'.$k.'##', $v, $body_html);
+                $subject = Str::replace('##'.$k.'##', $v, $subject);
             }
         }
         $view_params['body_html'] = $body_html;
+
+        return NotifyThemeData::from([
+            'subject' => $subject,
+            'body_html' => $body_html,
+            'view_params' => $view_params,
+        ]);
     }
 }
