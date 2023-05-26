@@ -180,10 +180,6 @@ class BuildMailMessageAction
 
         $view_html = 'notify::email';
 
-        // $out = view($view_html, $this->view_params);
-        // dddx($this->view_params);
-        // die($out->render());
-
         return (new MailMessage())
             // ->from('barrett@example.com', 'Barrett Blair')
             ->subject($view_params['subject'] ?? $theme->subject)
