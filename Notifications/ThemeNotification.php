@@ -23,11 +23,10 @@ class ThemeNotification extends Notification
      *
      * @return void
      */
-    public function __construct(string $name, array $view_params, ?array $attachments = [])
+    public function __construct(string $name, array $view_params)
     {
         $this->name = $name;
         $this->view_params = $view_params;
-        $this->attachments = $attachments;
     }
 
     /**
@@ -55,8 +54,12 @@ class ThemeNotification extends Notification
      */
     public function toMail($notifiable)
     {
+        $attachments = $notifiable
+            ->getNotificationData($this->name)
+            ->attachments;
+
         $mail_message = app(BuildMailMessageAction::class)
-             ->execute($this->name, $notifiable->getModel(), $this->view_params, $this->attachments);
+             ->execute($this->name, $notifiable->getModel(), $this->view_params, $attachments);
 
         return $mail_message;
     }
