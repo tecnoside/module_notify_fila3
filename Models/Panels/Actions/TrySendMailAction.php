@@ -61,6 +61,8 @@ class TrySendMailAction extends XotBasePanelAction {
 
     /**
      * ---.
+     *
+     * @return mixed
      */
     public function postHandle() {
         $data = request()->all();
