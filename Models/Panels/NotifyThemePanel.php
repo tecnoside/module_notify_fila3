@@ -9,8 +9,7 @@ use Illuminate\Http\Request;
 
 use Modules\Cms\Models\Panels\XotBasePanel;
 
-class NotifyThemePanel extends XotBasePanel
-{
+class NotifyThemePanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
      */
@@ -25,8 +24,7 @@ class NotifyThemePanel extends XotBasePanel
      * Get the fields displayed by the resource.
         'value'=>'..',
      */
-    public function fields(): array
-    {
+    public function fields(): array {
         return [
             (object) [
                 'type' => 'Id',
@@ -131,8 +129,7 @@ class NotifyThemePanel extends XotBasePanel
         ];
     }
 
-    public function logoFields(): array
-    {
+    public function logoFields(): array {
         return [
             (object) [
                 'type' => 'Select',
@@ -172,8 +169,7 @@ class NotifyThemePanel extends XotBasePanel
     /**
      * Get the tabs available.
      */
-    public function tabs(): array
-    {
+    public function tabs(): array {
         $tabs_name = [];
 
         return $tabs_name;
@@ -182,8 +178,7 @@ class NotifyThemePanel extends XotBasePanel
     /**
      * Get the cards available for the request.
      */
-    public function cards(Request $request): array
-    {
+    public function cards(Request $request): array {
         return [];
     }
 
@@ -192,24 +187,21 @@ class NotifyThemePanel extends XotBasePanel
      *
      * @param \Illuminate\Http\Request $request
      */
-    public function filters(Request $request = null): array
-    {
+    public function filters(Request $request = null): array {
         return [];
     }
 
     /**
      * Get the lenses available for the resource.
      */
-    public function lenses(Request $request): array
-    {
+    public function lenses(Request $request): array {
         return [];
     }
 
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array
-    {
+    public function actions(): array {
         return [];
     }
 }
