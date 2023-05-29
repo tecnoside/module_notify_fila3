@@ -7,8 +7,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Emails;
 
-use Closure;
-use Exception;
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Mail\PendingMail;
@@ -75,7 +73,7 @@ class BeautyEmail implements Mailer {
         $this->settings = $settings;
         $mailer = app()->make('Illuminate\Contracts\Mail\Mailer');
         if (! $mailer instanceof Mailer) {
-            throw new Exception('['.__LINE__.']['.__FILE__.']');
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
         $this->mailer = $mailer;
         $this->setLogoPath();
@@ -183,14 +181,14 @@ class BeautyEmail implements Mailer {
     public function view(string $view, array $data = []): Renderable {
         $data = array_merge($this->settings, $data, ['view' => $view]);
 
-        return view()->make($view, $data);
+        return view($view, $data);
     }
 
     /**
      * Send a new message when only a raw text part.
      *
-     * @param string              $text
-     * @param Closure|string|null $callback
+     * @param string               $text
+     * @param \Closure|string|null $callback
      *
      * @return \Illuminate\Mail\SentMessage|null
      */
