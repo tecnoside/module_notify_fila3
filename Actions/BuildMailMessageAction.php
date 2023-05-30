@@ -10,16 +10,14 @@ use Modules\Notify\Datas\AttachmentData;
 use Spatie\LaravelData\DataCollection;
 use Spatie\QueueableAction\QueueableAction;
 
-class BuildMailMessageAction
-{
+class BuildMailMessageAction {
     use QueueableAction;
 
-    // --- modificare con Modules\Notify\Actions\NotifyTheme\Get
     /**
      * @param DataCollection<AttachmentData>
      */
-    public function execute(string $name, Model $model, array $view_params = [], ?DataCollection $attachments = null): MailMessage
-    {
+    public function execute(
+        string $name, Model $model, array $view_params = [], ?DataCollection $attachments = null): MailMessage {
         $view_params = array_merge($model->toArray(), $view_params);
 
         $type = 'email';

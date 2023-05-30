@@ -8,16 +8,11 @@ namespace Modules\Notify\Models\Panels\Actions;
 
 // -------- services --------
 
+use Illuminate\Support\Facades\Notification;
 use Modules\Cms\Actions\GetViewAction;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
-use Modules\Notify\Services\SmsService;
-use Modules\UI\Services\ThemeService;
-use Illuminate\Broadcasting\Channel;
-use Illuminate\Support\Facades\Notification;
-
-use  Modules\Notify\Notifications\ThemeNotification;
-use  Modules\Notify\Notifications\SampleNotification;
-use Modules\Notify\Datas\NotificationData;;
+use Modules\Notify\Datas\NotificationData;
+use Modules\Notify\Notifications\SampleNotification;
 
 // -------- bases -----------
 
@@ -33,8 +28,8 @@ class TrySmsAction extends XotBasePanelAction {
      */
     public function handle() {
         $drivers = [
-            'netfun'=>'netfun',
-            'esendex'=>'esendex',
+            'netfun' => 'netfun',
+            'esendex' => 'esendex',
         ];
         $i = request('i');
 
@@ -50,10 +45,13 @@ class TrySmsAction extends XotBasePanelAction {
         return view($view, $view_params);
     }
 
+    /**
+     * @return mixed
+     */
     public function postHandle() {
         $data = request()->all();
-        $data['channels']=[$data['driver']];
-        $hows=NotificationData::from($data);
+        $data['channels'] = [$data['driver']];
+        $hows = NotificationData::from($data);
         Notification::send([$hows], new SampleNotification($data));
         echo '<h3>+Done</h3>';
     }
