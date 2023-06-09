@@ -41,7 +41,7 @@ class _ModulePanel extends XotBasePanel
 >>>>>>> df8079b (up)
 =======
             new Actions\TrySendNotificationAction(),
-            new Actions\TryThemeNotificationAction(),
+            // new Actions\TryThemeNotificationAction(),
             // new Actions\TryAlertAction(),
 >>>>>>> fe06862 (.)
         ];
