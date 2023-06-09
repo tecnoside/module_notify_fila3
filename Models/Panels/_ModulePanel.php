@@ -104,7 +104,7 @@ class _ModulePanel extends XotBasePanel {
             new Actions\TryMailAction(),
             new Actions\TrySendMailAction(),
             new Actions\TrySendNotificationAction(),
-            new Actions\TryThemeNotificationAction(),
+            // new Actions\TryThemeNotificationAction(),
             // new Actions\TryAlertAction(),
 >>>>>>> a758bd5 (.)
         ];
