@@ -61,6 +61,9 @@ class ThemeNotification extends Notification
         $mail_message = app(BuildMailMessageAction::class)
              ->execute($this->name, $notifiable->getModel(), $this->view_params, $attachments);
 
+
+        $notifiable->sendEmailCallback();
+
         return $mail_message;
     }
 
@@ -88,6 +91,8 @@ class ThemeNotification extends Notification
             'body' => $this->html,
         ]);
         */
+
+        // $notifiable->sendSmsCallback()
     }
 
     /**
