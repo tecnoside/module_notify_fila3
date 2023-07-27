@@ -50,8 +50,9 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereUpdatedBy($value)
- * @mixin \Eloquent
  * @mixin IdeHelperNotifyTheme
+ * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $linkable
+ * @mixin \Eloquent
  */
 class NotifyTheme extends BaseModel
 {
