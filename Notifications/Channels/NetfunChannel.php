@@ -18,12 +18,14 @@ class NetfunChannel
     /**
      * Send the given notification.
      *
-     * @param mixed $notifiable
+     * @param \Modules\Notify\Contracts\CanThemeNotificationContract $notifiable
      *
      * @return void
      */
     public function send($notifiable, ThemeNotification $notification)
     {
+
+
         $message = $notification->toSms($notifiable);
         // Send notification to the $notifiable instance...
         $data = app(NetfunSendAction::class)->execute($message);
