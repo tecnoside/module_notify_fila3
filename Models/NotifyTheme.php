@@ -178,7 +178,6 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  * @property int|null                        $logo_width
  * @property int|null                        $logo_height
  * @property array                           $logo
- *
  * @method static \Modules\Notify\Database\Factories\NotifyThemeFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     newQuery()
@@ -201,8 +200,8 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereUpdatedBy($value)
- *
  * @mixin \Eloquent
+ * @mixin IdeHelperNotifyTheme
  */
 class NotifyTheme extends BaseModel
 {
