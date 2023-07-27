@@ -12,4 +12,6 @@ interface CanThemeNotificationContract
     public function getNotificationData(string $name, array $view_params = []): NotificationData;
 
     public function getModel(): Model;
+
+    public function sendEmailCallback();
 }
