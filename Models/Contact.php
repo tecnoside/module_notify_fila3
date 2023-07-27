@@ -19,7 +19,6 @@ namespace Modules\Notify\Models;
  * @property string|null                     $updated_by
  * @property string|null                     $created_by
  * @property string|null                     $token
- *
  * @method static \Modules\Notify\Database\Factories\ContactFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Contact     newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Contact     newQuery()
@@ -36,8 +35,8 @@ namespace Modules\Notify\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Contact     whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact     whereValue($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact     whereVerifiedAt($value)
- *
  * @mixin \Eloquent
+ * @mixin IdeHelperContact
  */
 class Contact extends BaseModel
 {

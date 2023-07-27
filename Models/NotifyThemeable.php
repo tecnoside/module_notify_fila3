@@ -27,6 +27,7 @@ namespace Modules\Notify\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyThemeable whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyThemeable whereUpdatedBy($value)
  * @mixin \Eloquent
+ * @mixin IdeHelperNotifyThemeable
  */
 class NotifyThemeable extends BaseMorphPivot {
 }
