@@ -7,6 +7,12 @@ namespace Modules\Notify\Actions;
 use Modules\Notify\Datas\SmsData;
 use Spatie\QueueableAction\QueueableAction;
 
+use function Safe\curl_init;
+use function Safe\curl_setopt;
+use function Safe\curl_exec;
+use function Safe\curl_getinfo;
+use function Safe\json_decode;
+
 /**
  * @property string $base_endpoint
  */
