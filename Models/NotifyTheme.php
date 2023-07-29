@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 /**
@@ -54,8 +56,10 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $linkable
  * @mixin \Eloquent
  */
-class NotifyTheme extends BaseModel
+class NotifyTheme extends BaseModel implements HasMedia
 {
+    use InteractsWithMedia;
+
     /**
      * @var array<string>
      */
@@ -92,7 +96,8 @@ class NotifyTheme extends BaseModel
     public function getLogoAttribute(?array $value): array
     {
         return [
-            'path' => asset(strval($this->logo_src)),
+            // 'path' => asset(strval($this->logo_src)),
+            'path' => url($this->getFirstMediaUrl()),
             'width' => $this->logo_width ?? 50,
             'height' => $this->logo_height ?? 50,
         ];
