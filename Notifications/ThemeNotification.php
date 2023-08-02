@@ -11,8 +11,8 @@ use Modules\Notify\Actions\BuildMailMessageAction;
 use Modules\Notify\Contracts\CanThemeNotificationContract;
 use Modules\Notify\Datas\SmsData;
 
-class ThemeNotification extends Notification
-{ /* -- implements ShouldQueue -- */
+class ThemeNotification extends Notification implements ShouldQueue
+{ 
     use Queueable;
     public array $view_params;
     public string $name;
