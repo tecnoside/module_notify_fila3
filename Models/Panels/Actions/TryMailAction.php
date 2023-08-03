@@ -225,7 +225,7 @@ $view = $this->panel->getView();
     }
 
     /**
-     * ---.
+     * @return void
      */
     public function postHandle() {
         $data = request()->all();
