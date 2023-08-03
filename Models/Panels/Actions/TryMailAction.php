@@ -44,7 +44,7 @@ class TryMailAction extends XotBasePanelAction {
     }
 
     /**
-     * ---.
+     * @return void
      */
     public function postHandle() {
         $data = request()->all();
