@@ -20,6 +20,8 @@ class EsendexSendAction
 {
     use QueueableAction;
 
+    public string $base_endpoint;
+
     public function __construct()
     {
         $this->base_endpoint = 'https://app.messaggissima.it/API/v1.0/REST/';
