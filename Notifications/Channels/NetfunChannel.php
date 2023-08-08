@@ -31,9 +31,12 @@ class NetfunChannel
         $data = app(NetfunSendAction::class)->execute($message);
 
         if ($notifiable instanceof ModelContactContract) {
+            $notifiable->increment('sms',$data);
+            /*
             $data['sms_sent_at'] = now();
             $data['sms_count'] = (int) $notifiable->sms_count + 1;
             $notifiable->update($data);
+            */
         }
     }
 }
