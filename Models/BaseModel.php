@@ -227,7 +227,7 @@ use Modules\Xot\Traits\Updater;
 abstract class BaseModel extends Model
 {
     // use Searchable;
-    // use Cachable;
+    // //use Cachable;
     use HasFactory;
 
     use Updater;
