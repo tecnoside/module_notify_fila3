@@ -15,11 +15,11 @@
     @endphp
 
     <x-col size="12">
-       @if($driver)
+       @if ($driver)
         <form action="{!! Request::fullUrlWithQuery([]) !!}" method="POST">
 
             @csrf
-            <input type="text" name="driver" value="{{$driver}}" />
+            <input type="text" name="driver" value="{{ $driver }}" />
             from: <input type="text" name="from" />
             to:<input type="text" name="to" value="3475896127" />
 

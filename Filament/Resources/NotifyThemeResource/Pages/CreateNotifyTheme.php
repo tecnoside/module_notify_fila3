@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
 
 use Filament\Resources\Pages\CreateRecord;

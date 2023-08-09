@@ -16,29 +16,35 @@ use Illuminate\Support\Facades\Mail;
 /**
  * Class SmsService.
  */
-class MailtrapEngine {
+class MailtrapEngine
+{
     private static ?self $instance = null;
+
     public ?string $from;
     public string $to;
     public string $driver;
     public ?string $body;
 
-    public function __construct() {
+    public function __construct()
+    {
     }
 
-    public static function getInstance(): self {
+    public static function getInstance(): self
+    {
         if (null === self::$instance) {
-            self::$instance = new self();
+            self::$instance = new self;
         }
 
         return self::$instance;
     }
 
-    public static function make(): self {
+    public static function make(): self
+    {
         return static::getInstance();
     }
 
-    public function setLocalVars(array $vars): self {
+    public function setLocalVars(array $vars): self
+    {
         foreach ($vars as $k => $v) {
             $this->{$k} = $v;
         }
@@ -46,13 +52,15 @@ class MailtrapEngine {
         return $this;
     }
 
-    public function send(): self {
+    public function send(): self
+    {
         dddx('WIP');
 
         return $this;
     }
 
-    public function try(): void {
+    public function try(): void
+    {
         // dddx($this);
 
         // Mail::raw('Hello World!', function($msg) {$msg->to('vair81@gmail.com')->subject('Test Email'); });

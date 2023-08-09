@@ -11,8 +11,10 @@ use Illuminate\Support\Str;
 /**
  * Class SmsService.
  */
-class MailService {
+class MailService
+{
     private static ?self $instance = null;
+
     public ?string $from;
     public string $to;
 
@@ -21,19 +23,22 @@ class MailService {
 
     public array $vars = [];
 
-    public static function getInstance(): self {
+    public static function getInstance(): self
+    {
         if (null === self::$instance) {
-            self::$instance = new self();
+            self::$instance = new self;
         }
 
         return self::$instance;
     }
 
-    public static function make(): self {
+    public static function make(): self
+    {
         return static::getInstance();
     }
 
-    public function setLocalVars(array $vars): self {
+    public function setLocalVars(array $vars): self
+    {
         foreach ($vars as $k => $v) {
             $this->{$k} = $v;
         }
@@ -42,7 +47,8 @@ class MailService {
         return $this;
     }
 
-    public function mergeVars(array $vars): self {
+    public function mergeVars(array $vars): self
+    {
         $this->vars = array_merge($this->vars, $vars);
 
         return $this;
@@ -51,8 +57,9 @@ class MailService {
     /**
      * ---.
      */
-    public function send(): self {
-        $class = '\Modules\Notify\Services\MailEngines\\'.Str::studly($this->driver).'Engine';
+    public function send(): self
+    {
+        $class = '\Modules\Notify\Services\MailEngines\\' . Str::studly($this->driver) . 'Engine';
         $class::make()
             ->setLocalVars($this->vars)
             ->send();
@@ -63,8 +70,9 @@ class MailService {
     /**
      * ---.
      */
-    public function try(): self {
-        $class = '\Modules\Notify\Services\MailEngines\\'.Str::studly($this->driver).'Engine';
+    public function try(): self
+    {
+        $class = '\Modules\Notify\Services\MailEngines\\' . Str::studly($this->driver) . 'Engine';
         $class::make()
             ->setLocalVars($this->vars)
             ->try();

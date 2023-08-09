@@ -36,5 +36,4 @@ return [
             'Link utili' => 'docs/duocircle/links',
         ],
     ],
-
 ];

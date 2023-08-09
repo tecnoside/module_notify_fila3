@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Filament\Resources;
 
 use Filament\Forms;
@@ -76,7 +78,6 @@ class NotifyThemeResource extends Resource
                     ->options(self::fieldOptions('post_type')),
                 Tables\Filters\SelectFilter::make('type')
                     ->options(self::fieldOptions('type')),
-
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -89,7 +90,7 @@ class NotifyThemeResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //RelationManagers\LinkableRelationManager::class,
+            // RelationManagers\LinkableRelationManager::class,
         ];
     }
 

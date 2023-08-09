@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Notifications;
 
+use Exception;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
@@ -31,8 +32,6 @@ class SmsNotification extends Notification implements ShouldQueue
     /**
      * Get the notification's delivery channels.
      *
-     * @param mixed $notifiable
-     *
      * @return array
      */
     public function via($notifiable)
@@ -43,14 +42,13 @@ class SmsNotification extends Notification implements ShouldQueue
     /**
      * Undocumented function.
      *
-     * @param object $notifiable
-     *
+     * @param  object  $notifiable
      * @return SmsData
      */
     public function toSms($notifiable)
     {
         if (! method_exists($notifiable, 'routeNotificationFor')) {
-            throw new \Exception('['.__LINE__.']['.__FILE__.']');
+            throw new Exception('[' . __LINE__ . '][' . __FILE__ . ']');
         }
 
         return SmsData::from([
@@ -62,8 +60,6 @@ class SmsNotification extends Notification implements ShouldQueue
 
     /**
      * Get the array representation of the notification.
-     *
-     * @param mixed $notifiable
      *
      * @return array
      */

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Http\Middleware;
 
 use Modules\Xot\Http\Middleware\XotBaseFilamentMiddleware;
