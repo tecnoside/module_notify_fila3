@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Filament\Resources\NotifyThemeResource\RelationManagers;
 
 use Filament\Forms;
@@ -31,7 +33,6 @@ class LinkableRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('id'),
             ])
             ->filters([
-
             ])
             ->headerActions([
                 Tables\Actions\CreateAction::make(),

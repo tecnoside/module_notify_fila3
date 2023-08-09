@@ -29,10 +29,12 @@ abstract class BaseModel extends Model
      * @var bool
      */
     public static $snakeAttributes = true;
+
     /**
      * @var bool
      */
     public $incrementing = true;
+
     /**
      * @var bool
      */
@@ -55,10 +57,12 @@ abstract class BaseModel extends Model
      * @var array<string>
      */
     protected $dates = ['published_at', 'created_at', 'updated_at', 'verified_at'];
+
     /**
      * @var string
      */
     protected $primaryKey = 'id';
+
     /**
      * @var array<int, string>
      */

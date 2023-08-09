@@ -49,11 +49,11 @@ class NetfunSendAction
 
         $sms->to .= '';
         if (Str::startsWith($sms->to, '00')) {
-            $sms->to = '+39'.substr($sms->to, 2);
+            $sms->to = '+39' . substr($sms->to, 2);
         }
 
         if (! Str::startsWith($sms->to, '+')) {
-            $sms->to = '+39'.$sms->to;
+            $sms->to = '+39' . $sms->to;
         }
 
         $body = [
@@ -90,7 +90,7 @@ class NetfunSendAction
         try {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
-            throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']');
+            throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']');
         }
         /*
         echo '<hr/>';

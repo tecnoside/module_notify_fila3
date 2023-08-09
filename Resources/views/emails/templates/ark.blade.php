@@ -3,7 +3,7 @@
 		<title>{{ isset($senderName) ? $senderName : '' }}.</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<style type="text/css">{{ $_theme->cssInLine('notify::css/ark.css') }}</style>
-		@if(isset($css))
+		@if (isset($css))
 		<style type="text/css">
 			{{ $css }}
 		</style>
@@ -48,7 +48,7 @@
 								<tr>
 									<td class="w20" width="20"></td>
 									<td id="logo" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" valign="top">
-										<img border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : ''}}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
+										<img border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : '' }}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
 									</td>
 									<td class="w30" width="30"></td>
 								</tr>

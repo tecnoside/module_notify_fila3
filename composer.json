@@ -41,12 +41,13 @@
         "pestphp/pest-plugin-laravel": "*",
         "phpstan/extension-installer": "*",
         "phpunit/phpunit": "*",
-        "psalm/plugin-laravel": "*",
+        "psalm/plugin-laravel": "^2.8",
         "spatie/laravel-typescript-transformer": "*",
         "spatie/pest-plugin-snapshots": "*",
         "spatie/phpunit-snapshot-assertions": "*",
         "spatie/test-time": "*",
-        "thecodingmachine/phpstan-safe-rule": "*"
+        "thecodingmachine/phpstan-safe-rule": "*",
+        "tightenco/duster": "^2.2"
     },
     "scripts": {
         "post-autoload-dump": [
