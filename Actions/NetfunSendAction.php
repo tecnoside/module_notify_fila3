@@ -11,7 +11,8 @@ use Illuminate\Support\Str;
 use Modules\Notify\Datas\SmsData;
 use Spatie\QueueableAction\QueueableAction;
 
-class NetfunSendAction {
+class NetfunSendAction
+{
     use QueueableAction;
 
     public string $token;
@@ -23,7 +24,8 @@ class NetfunSendAction {
      *
      * @return void
      */
-    public function __construct() {
+    public function __construct()
+    {
         // Prepare the action for execution, leveraging constructor injection.
         $token = config('services.netfun.token');
         if (! is_string($token)) {
@@ -35,7 +37,8 @@ class NetfunSendAction {
     /**
      * Execute the action.
      */
-    public function execute(SmsData $sms): array {
+    public function execute(SmsData $sms): array
+    {
         $endpoint = 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json';
         $headers = [
             'Cache-Control' => 'no-cache',
@@ -44,7 +47,7 @@ class NetfunSendAction {
 
         // dddx([ord($this->body[0]), $this->body]);
 
-        $sms->to = $sms->to.'';
+        $sms->to .= '';
         if (Str::startsWith($sms->to, '00')) {
             $sms->to = '+39'.substr($sms->to, 2);
         }

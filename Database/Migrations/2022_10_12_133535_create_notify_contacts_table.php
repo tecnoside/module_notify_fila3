@@ -6,7 +6,8 @@ use Illuminate\Database\Schema\Blueprint;
 use Modules\Notify\Models\Contact;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-class CreateNotifyContactsTable extends XotBaseMigration {
+class CreateNotifyContactsTable extends XotBaseMigration
+{
     protected ?string $model_class = Contact::class;
 
     /**
@@ -14,7 +15,8 @@ class CreateNotifyContactsTable extends XotBaseMigration {
      *
      * @return void
      */
-    public function up() {
+    public function up()
+    {
         // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
@@ -34,6 +36,7 @@ class CreateNotifyContactsTable extends XotBaseMigration {
                 if (! $this->hasColumn('token')) {
                     $table->string('token')->nullable();
                 }
-            });
+            }
+        );
     }
 }

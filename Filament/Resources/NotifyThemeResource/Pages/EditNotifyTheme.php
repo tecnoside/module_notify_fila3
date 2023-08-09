@@ -2,9 +2,9 @@
 
 namespace Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
 
-use Modules\Notify\Filament\Resources\NotifyThemeResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\EditRecord;
+use Modules\Notify\Filament\Resources\NotifyThemeResource;
 
 class EditNotifyTheme extends EditRecord
 {
