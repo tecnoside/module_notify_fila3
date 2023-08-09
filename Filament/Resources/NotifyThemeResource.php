@@ -216,7 +216,7 @@ class NotifyThemeResource extends Resource
 =======
     public static function fieldOptions(string $field): array
     {
-        returnNotifyTheme::select($field)
+        return NotifyTheme::select($field)
             ->where($field, '!=', null)
             ->distinct()
             ->pluck($field, $field)
