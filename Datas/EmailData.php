@@ -6,7 +6,8 @@ namespace Modules\Notify\Datas;
 
 use Spatie\LaravelData\Data;
 
-class EmailData extends Data {
+class EmailData extends Data
+{
     public string $from;
     public string $from_email;
     public string $subject;

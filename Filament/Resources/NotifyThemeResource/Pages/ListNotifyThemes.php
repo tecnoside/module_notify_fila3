@@ -2,9 +2,9 @@
 
 namespace Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
 
-use Modules\Notify\Filament\Resources\NotifyThemeResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\ListRecords;
+use Modules\Notify\Filament\Resources\NotifyThemeResource;
 
 class ListNotifyThemes extends ListRecords
 {

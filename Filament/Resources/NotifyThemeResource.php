@@ -2,16 +2,13 @@
 
 namespace Modules\Notify\Filament\Resources;
 
-use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
-use Modules\Notify\Filament\Resources\NotifyThemeResource\RelationManagers;
-use Modules\Notify\Models\NotifyTheme;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
+use Modules\Notify\Models\NotifyTheme;
 use Savannabits\FilamentModules\Concerns\ContextualResource;
 
 class NotifyThemeResource extends Resource
@@ -46,25 +43,23 @@ class NotifyThemeResource extends Resource
                         'widgets' => 'widgets',
                     ]
                 )
-                ->default('empty'),
+                    ->default('empty'),
                 Forms\Components\RichEditor::make('body')->columnSpanFull(),
                 Forms\Components\RichEditor::make('body_html')->columnSpanFull(),
             ]);
     }
 
-    public static function fieldOptions(string $field): array{
-        $options=NotifyTheme::select($field)
-            ->where($field,'!=',null)
+    public static function fieldOptions(string $field): array
+    {
+        returnNotifyTheme::select($field)
+            ->where($field, '!=', null)
             ->distinct()
-                ->pluck($field, $field)
-                ->toArray();
-        return $options;
+            ->pluck($field, $field)
+            ->toArray();
     }
 
     public static function table(Table $table): Table
     {
-        
-        
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')->sortable(),
@@ -81,7 +76,7 @@ class NotifyThemeResource extends Resource
                     ->options(self::fieldOptions('post_type')),
                 Tables\Filters\SelectFilter::make('type')
                     ->options(self::fieldOptions('type')),
-                
+
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -90,14 +85,14 @@ class NotifyThemeResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //RelationManagers\LinkableRelationManager::class,
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -105,5 +100,5 @@ class NotifyThemeResource extends Resource
             'create' => Pages\CreateNotifyTheme::route('/create'),
             'edit' => Pages\EditNotifyTheme::route('/{record}/edit'),
         ];
-    }    
+    }
 }

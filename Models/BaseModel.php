@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
-use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 // ---------- traits
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 // //use Laravel\Scout\Searchable;
@@ -30,6 +29,14 @@ abstract class BaseModel extends Model
      * @var bool
      */
     public static $snakeAttributes = true;
+    /**
+     * @var bool
+     */
+    public $incrementing = true;
+    /**
+     * @var bool
+     */
+    public $timestamps = true;
 
     protected $perPage = 30;
 
@@ -45,7 +52,7 @@ abstract class BaseModel extends Model
     protected $appends = [];
 
     /**
-     * @var string[]
+     * @var array<string>
      */
     protected $dates = ['published_at', 'created_at', 'updated_at', 'verified_at'];
     /**
@@ -53,19 +60,11 @@ abstract class BaseModel extends Model
      */
     protected $primaryKey = 'id';
     /**
-     * @var bool
-     */
-    public $incrementing = true;
-    /**
      * @var array<int, string>
      */
     protected $hidden = [
         // 'password'
     ];
-    /**
-     * @var bool
-     */
-    public $timestamps = true;
 
     /**
      * Create a new factory instance for the model.

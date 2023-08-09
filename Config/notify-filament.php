@@ -2,11 +2,9 @@
 
 declare(strict_types=1);
 
-use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Http\Middleware\MirrorConfigToSubpackages;
 use Filament\Pages;
-use Filament\Widgets;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -57,7 +55,7 @@ return [
 
     'pages' => [
         'namespace' => $contextNs.'\\Pages',
-        'path' => base_path('Modules/'.$moduleName."/$contextPath/Pages"),
+        'path' => base_path('Modules/'.$moduleName."/{$contextPath}/Pages"),
         'register' => [
             Pages\Dashboard::class,
         ],
@@ -75,7 +73,7 @@ return [
 
     'resources' => [
         'namespace' => $contextNs.'\\Resources',
-        'path' => base_path('Modules/'.$moduleName."/$contextPath/Resources"),
+        'path' => base_path('Modules/'.$moduleName."/{$contextPath}/Resources"),
         'register' => [],
     ],
 
@@ -91,7 +89,7 @@ return [
 
     'widgets' => [
         'namespace' => $contextNs.'\\Widgets',
-        'path' => base_path('Modules/'.$moduleName."/$contextPath/Widgets"),
+        'path' => base_path('Modules/'.$moduleName."/{$contextPath}/Widgets"),
         'register' => [
             //Widgets\AccountWidget::class,
             //Widgets\FilamentInfoWidget::class,
