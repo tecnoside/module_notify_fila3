@@ -10,6 +10,7 @@ use Modules\Xot\Providers\XotBaseServiceProvider;
 class NotifyServiceProvider extends XotBaseServiceProvider
 {
     public string $module_name = 'notify';
+
     protected string $module_dir = __DIR__;
     protected string $module_ns = __NAMESPACE__;
 
