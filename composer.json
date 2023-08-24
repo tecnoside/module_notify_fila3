@@ -1,7 +1,20 @@
 {
-    "name": "laraxot/module_notify",
-    "description": "",
-    "homepage": "https://laraxot.github.io/module_notify",
+    "name": "laraxot/module_notify_fila",
+    "description": "notify module dedicated to managing notifications",
+    "keywords": [
+        "laraxot",
+        "laravel",
+        "filament",
+        "module_notify",
+        "Laravel", 
+        "Notify module", 
+        "Notify",
+        "Emails",
+        "Smss",
+        "Whatsapp"
+    ],
+    "homepage": "https://github.com/laraxot/module_notify_fila.git",
+    "license": "MIT",
     "authors": [{
         "name": "Marco Sottana",
         "email": "marco.sottana@gmail.com",
