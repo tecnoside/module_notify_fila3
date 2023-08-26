@@ -12,6 +12,7 @@ use Filament\Tables;
 use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
 use Modules\Notify\Models\NotifyTheme;
 use Savannabits\FilamentModules\Concerns\ContextualResource;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class NotifyThemeResource extends Resource
 {
@@ -32,7 +33,13 @@ class NotifyThemeResource extends Resource
                 Forms\Components\TextInput::make('subject'),
                 Forms\Components\TextInput::make('from'),
                 Forms\Components\TextInput::make('from_email'),
-                Forms\Components\TextInput::make('logo_src'),
+                Forms\Components\SpatieMediaLibraryFileUpload::make('logo_src')
+                    ->enableOpen()
+                    ->enableDownload()
+                    ->columnSpanFull()
+                    ->disk('uploads')
+                    ->directory('photos')
+                    ->preserveFilenames(),
                 Forms\Components\TextInput::make('logo_width'),
                 Forms\Components\TextInput::make('logo_height'),
                 // Forms\Components\TextInput::make('theme'),
@@ -46,8 +53,9 @@ class NotifyThemeResource extends Resource
                     ]
                 )
                     ->default('empty'),
-                Forms\Components\RichEditor::make('body')->columnSpanFull(),
-                Forms\Components\RichEditor::make('body_html')->columnSpanFull(),
+                Forms\Components\Textarea::make('body')->columnSpanFull(),
+                // Forms\Components\RichEditor::make('body_html')->columnSpanFull(),
+                TinyEditor::make('body_html')->columnSpanFull(),
             ]);
     }
 
@@ -64,12 +72,12 @@ class NotifyThemeResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('id')->sortable(),
-                Tables\Columns\TextColumn::make('lang')->sortable(),
-                Tables\Columns\TextColumn::make('type')->sortable(),
-                Tables\Columns\TextColumn::make('post_id')->sortable(),
-                Tables\Columns\TextColumn::make('post_type')->sortable(),
-                Tables\Columns\TextColumn::make('logo_src')->sortable(),
+                'id' => Tables\Columns\TextColumn::make('id')->sortable(),
+                'lang' => Tables\Columns\TextColumn::make('lang')->sortable(),
+                'type' => Tables\Columns\TextColumn::make('type')->sortable(),
+                'post_id' => Tables\Columns\TextColumn::make('post_id')->sortable(),
+                'post_type' => Tables\Columns\TextColumn::make('post_type')->sortable(),
+                'logo_src' => Tables\Columns\TextColumn::make('logo_src')->sortable(),
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('lang')
