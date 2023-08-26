@@ -11,8 +11,8 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
 use Modules\Notify\Models\NotifyTheme;
-use Savannabits\FilamentModules\Concerns\ContextualResource;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
+use Savannabits\FilamentModules\Concerns\ContextualResource;
 
 class NotifyThemeResource extends Resource
 {
