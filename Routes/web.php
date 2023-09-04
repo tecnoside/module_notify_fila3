@@ -7,6 +7,7 @@
 
 declare(strict_types=1);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 3a0e0a5 (up)
@@ -82,3 +83,5 @@ Route::prefix('notify')->group(function() {
 });
 */
 >>>>>>> 188c25a (.)
+=======
+>>>>>>> 9f492fe (up)

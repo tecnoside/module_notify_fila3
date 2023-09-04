@@ -6,7 +6,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models\Panels\Actions;
 
-<<<<<<< HEAD
 // -------- services --------
 
 use Modules\Notify\Services\MailService;
@@ -14,6 +13,7 @@ use Modules\Theme\Services\ThemeService;
 use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
 // -------- bases -----------
+<<<<<<< HEAD
 =======
 //-------- services --------
 
@@ -23,6 +23,8 @@ use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
 //-------- bases -----------
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 9f492fe (up)
 
 /**
  * Class TestAction.
@@ -49,6 +51,7 @@ class TestMailAction extends XotBasePanelAction {
         $drivers = [
             'duocircle',
             'mailtrap',
+<<<<<<< HEAD
 =======
     public function handle()
     {
@@ -60,6 +63,8 @@ class TestMailAction extends XotBasePanelAction {
         $drivers = [
             'duocircle',
 >>>>>>> 6d517f2 (.)
+=======
+>>>>>>> 9f492fe (up)
         ];
         $i = request('i');
 
@@ -73,7 +78,6 @@ class TestMailAction extends XotBasePanelAction {
             'driver' => $driver,
         ];
 
-<<<<<<< HEAD
         // return view()->make($view, $view_params);
         // Parameter #1 $view of function view expects view-string|null, mixed given.
         // The custom 'view-string' type class. It's a subset of the string type. Every string that passes the
@@ -84,6 +88,7 @@ class TestMailAction extends XotBasePanelAction {
         // }
 
         // return 'not exists ['.$view.']';
+<<<<<<< HEAD
     }
 
     /**
@@ -107,6 +112,8 @@ class TestMailAction extends XotBasePanelAction {
 
         //return 'not exists ['.$view.']';
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 9f492fe (up)
     }
 
     /**

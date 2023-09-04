@@ -32,6 +32,7 @@ use Illuminate\Support\ServiceProvider;
 class NotifyServiceProvider extends ServiceProvider {
     /**
      * @var string
+<<<<<<< HEAD
      */
     protected $moduleName = 'Notify';
 
@@ -58,11 +59,17 @@ class NotifyServiceProvider extends ServiceProvider
 {
     /**
      * @var string $moduleName
+=======
+>>>>>>> 9f492fe (up)
      */
     protected $moduleName = 'Notify';
 
     /**
+<<<<<<< HEAD
      * @var string $moduleNameLower
+=======
+     * @var string
+>>>>>>> 9f492fe (up)
      */
     protected $moduleNameLower = 'notify';
 
@@ -71,9 +78,13 @@ class NotifyServiceProvider extends ServiceProvider
      *
      * @return void
      */
+<<<<<<< HEAD
     public function boot()
     {
 >>>>>>> 42aa20e (.)
+=======
+    public function boot() {
+>>>>>>> 9f492fe (up)
         $this->registerTranslations();
         $this->registerConfig();
         $this->registerViews();
@@ -85,12 +96,14 @@ class NotifyServiceProvider extends ServiceProvider
      *
      * @return void
      */
-<<<<<<< HEAD
     public function register() {
+<<<<<<< HEAD
 =======
     public function register()
     {
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 9f492fe (up)
         $this->app->register(RouteServiceProvider::class);
     }
 
@@ -99,10 +112,10 @@ class NotifyServiceProvider extends ServiceProvider
      *
      * @return void
      */
-<<<<<<< HEAD
     protected function registerConfig() {
         $this->publishes([
             module_path($this->moduleName, 'Config/config.php') => config_path($this->moduleNameLower.'.php'),
+<<<<<<< HEAD
 =======
     protected function registerConfig()
     {
@@ -112,6 +125,12 @@ class NotifyServiceProvider extends ServiceProvider
         ], 'config');
         $this->mergeConfigFrom(
             module_path($this->moduleName, 'Config/config.php'), $this->moduleNameLower
+=======
+        ], 'config');
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, 'Config/config.php'),
+            $this->moduleNameLower
+>>>>>>> 9f492fe (up)
         );
     }
 
@@ -120,25 +139,29 @@ class NotifyServiceProvider extends ServiceProvider
      *
      * @return void
      */
-<<<<<<< HEAD
     public function registerViews() {
         $viewPath = resource_path('views/modules/'.$this->moduleNameLower);
+<<<<<<< HEAD
 =======
     public function registerViews()
     {
         $viewPath = resource_path('views/modules/' . $this->moduleNameLower);
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 9f492fe (up)
 
         $sourcePath = module_path($this->moduleName, 'Resources/views');
 
         $this->publishes([
-<<<<<<< HEAD
             $sourcePath => $viewPath,
         ], ['views', $this->moduleNameLower.'-module-views']);
+<<<<<<< HEAD
 =======
             $sourcePath => $viewPath
         ], ['views', $this->moduleNameLower . '-module-views']);
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 9f492fe (up)
 
         $this->loadViewsFrom(array_merge($this->getPublishableViewPaths(), [$sourcePath]), $this->moduleNameLower);
     }
@@ -148,14 +171,16 @@ class NotifyServiceProvider extends ServiceProvider
      *
      * @return void
      */
-<<<<<<< HEAD
     public function registerTranslations() {
         $langPath = resource_path('lang/modules/'.$this->moduleNameLower);
+<<<<<<< HEAD
 =======
     public function registerTranslations()
     {
         $langPath = resource_path('lang/modules/' . $this->moduleNameLower);
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 9f492fe (up)
 
         if (is_dir($langPath)) {
             $this->loadTranslationsFrom($langPath, $this->moduleNameLower);
@@ -169,7 +194,6 @@ class NotifyServiceProvider extends ServiceProvider
      *
      * @return array
      */
-<<<<<<< HEAD
     public function provides() {
         return [];
     }
@@ -302,6 +326,7 @@ class NotifyServiceProvider extends ServiceProvider {
             }
         }
 
+<<<<<<< HEAD
         return $paths;
     }
 }
@@ -434,6 +459,8 @@ class NotifyServiceProvider extends ServiceProvider {
                 $paths[] = $path . '/modules/' . $this->moduleNameLower;
             }
         }
+=======
+>>>>>>> 9f492fe (up)
         return $paths;
     }
 }

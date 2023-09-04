@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 namespace Modules\Notify\Providers;
@@ -88,6 +89,8 @@ class RouteServiceProvider extends ServiceProvider {
 >>>>>>> 8be0eaa (up)
 <?php
 
+=======
+>>>>>>> 9f492fe (up)
 declare(strict_types=1);
 
 namespace Modules\Notify\Providers;
@@ -96,6 +99,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider {
+<<<<<<< HEAD
 =======
 <?php
 
@@ -107,6 +111,8 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 class RouteServiceProvider extends ServiceProvider
 {
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 9f492fe (up)
     /**
      * The module namespace to assume when generating URLs to actions.
      *
@@ -121,12 +127,14 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-<<<<<<< HEAD
     public function boot() {
+<<<<<<< HEAD
 =======
     public function boot()
     {
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 9f492fe (up)
         parent::boot();
     }
 
@@ -135,12 +143,14 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-<<<<<<< HEAD
     public function map() {
+<<<<<<< HEAD
 =======
     public function map()
     {
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 9f492fe (up)
         $this->mapApiRoutes();
 
         $this->mapWebRoutes();
@@ -153,12 +163,14 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-<<<<<<< HEAD
     protected function mapWebRoutes() {
+<<<<<<< HEAD
 =======
     protected function mapWebRoutes()
     {
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 9f492fe (up)
         Route::middleware('web')
             ->namespace($this->moduleNamespace)
             ->group(module_path('Notify', '/Routes/web.php'));
@@ -171,12 +183,14 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-<<<<<<< HEAD
     protected function mapApiRoutes() {
+<<<<<<< HEAD
 =======
     protected function mapApiRoutes()
     {
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 9f492fe (up)
         Route::prefix('api')
             ->middleware('api')
             ->namespace($this->moduleNamespace)
