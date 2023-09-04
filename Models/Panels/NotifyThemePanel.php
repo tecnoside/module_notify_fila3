@@ -40,7 +40,7 @@ class NotifyThemePanel extends XotBasePanel {
             ],
 
             (object) [
-                //'type' => 'String',
+                // 'type' => 'String',
                 'type' => 'Select',
                 'name' => 'type',
                 'comment' => null,

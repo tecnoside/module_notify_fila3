@@ -9,7 +9,6 @@ namespace Modules\Notify\Models\Panels\Actions;
 // -------- services --------
 
 use Illuminate\Support\Facades\Mail;
-use Modules\Notify\Services\MailService;
 use Modules\Theme\Services\ThemeService;
 use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
@@ -21,7 +20,7 @@ use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 class TrySendMailAction extends XotBasePanelAction {
     public bool $onItem = true;
     public string $icon = '<i class="fas fa-vial"></i>TrySendMail';
-    
+
     /**
      * @return mixed
      */
@@ -46,7 +45,7 @@ class TrySendMailAction extends XotBasePanelAction {
      */
     public function postHandle() {
         $data = request()->all();
-        //dddx($data);
+        // dddx($data);
         try {
             Mail::raw($data['body'], function ($msg) use ($data) {
                 $msg->to($data['to'])->subject('Test Email');

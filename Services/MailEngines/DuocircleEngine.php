@@ -68,10 +68,10 @@ class DuocircleEngine {
 
         dddx($request);
         */
-        if(!class_exists(\Webklex\PHPIMAP\Client::class)){
+        if (! class_exists(\Webklex\PHPIMAP\Client::class)) {
             throw new Exception('class [Webklex\\PHPIMAP\\Client] not exists ['.__LINE__.']['.class_basename(__CLASS__).']');
         }
-        if(!class_exists(\Webklex\IMAP\Facades\Client::class)){
+        if (! class_exists(\Webklex\IMAP\Facades\Client::class)) {
             throw new Exception('class [Webklex\IMAP\Facades\\Client] not exists ['.__LINE__.']['.class_basename(__CLASS__).']');
         }
 
@@ -92,7 +92,7 @@ class DuocircleEngine {
             // @var \Webklex\PHPIMAP\Support\MessageCollection $messages
             $messages = $folder->messages()->all()->get();
 
-            /// @var \Webklex\PHPIMAP\Message $message
+            // / @var \Webklex\PHPIMAP\Message $message
             foreach ($messages as $message) {
                 echo $message->getSubject().'<br />';
                 echo 'Attachments: '.$message->getAttachments()->count().'<br />';

@@ -130,7 +130,7 @@ class SmsService {
         return $this;
     }
 
-    public function send():self {
+    public function send(): self {
         $class = '\Modules\Notify\Services\SmsEngines\\'.Str::studly($this->driver).'Engine';
         $instance = $class::make()
             ->setLocalVars($this->vars)
@@ -141,10 +141,9 @@ class SmsService {
         return $this;
     }
 
-    public function getVars(){
+    public function getVars() {
         return $this->vars;
     }
-    
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
