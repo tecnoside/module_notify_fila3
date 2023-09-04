@@ -7,7 +7,7 @@ namespace Modules\Notify\Notifications;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
-use Modules\Notify\Data\SmsData;
+use Modules\Notify\Datas\SmsData;
 
 class SmsNotification extends Notification implements ShouldQueue {
     use Queueable;

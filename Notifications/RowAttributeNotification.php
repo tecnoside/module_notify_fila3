@@ -7,7 +7,7 @@ namespace Modules\Notify\Notifications;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
-use Modules\Notify\Data\SmsData;
+use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Datas\EmailData;
 use Modules\Xot\Contracts\ModelContactContract;
 

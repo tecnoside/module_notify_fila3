@@ -6,7 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
-use Modules\Notify\Data\SmsData;
+use Modules\Notify\Datas\SmsData;
 
 use Modules\Notify\Notifications\Channels\EsendexChannel;
 
@@ -33,10 +33,12 @@ class SampleNotification extends Notification
      */
     public function via($notifiable):array
     {
+        //dddx($notifiable); //Modules\Notify\Datas\NotificationData 
         $channels = [];
-        $channels[]=EsendexChannel::class;
-        //$channels[]='esendex'; //Driver [esendex] not supported.
-        //$channels[]='database';
+        //$channels[]=EsendexChannel::class;
+        $channels[]='esendex'; //Driver [esendex] not supported.
+        //$channels[]='array'; //Driver [array] not supported.
+        //$channels[]='database'; //Driver [array] not supported.
         return $channels;
     }
 
@@ -46,20 +48,18 @@ class SampleNotification extends Notification
      * @param mixed $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function toEssendex($notifiable){
+    public function toEsendex($notifiable){
         dddx($notifiable);
     }
 
 
     public function toSms($notifiable){
-        
         $res= SmsData::from([
             'from' => $this->data['from'],
             //'to' => $notifiable->routeNotificationFor('sms'),
             'to' => $this->data['to'],
             'body' => $this->data['body'],
         ]);
-        dddx($res);
         return $res;
     }
 
@@ -91,5 +91,11 @@ class SampleNotification extends Notification
         return [
             //
         ];
+    }
+
+    public function toDatabase($notifiable)
+    {
+        return $notifiable->toArray();
+        
     }
 }
