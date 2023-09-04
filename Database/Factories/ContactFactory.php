@@ -28,6 +28,7 @@ class ContactFactory extends Factory
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             // 'model_id' => $this->faker->randomNumber(5, false),
 =======
             'model_id' => $this->faker->integer,
@@ -41,6 +42,9 @@ class ContactFactory extends Factory
 =======
             // 'model_id' => $this->faker->randomNumber(5, false),
 >>>>>>> ed6f50e (up)
+=======
+            'model_id' => $this->faker->integer,
+>>>>>>> 3d1ec9b (up)
             'model_type' => $this->faker->word,
             'contact_type' => $this->faker->word,
             'value' => $this->faker->word,
@@ -49,6 +53,7 @@ class ContactFactory extends Factory
             'created_at' => $this->faker->dateTime,
             'updated_by' => $this->faker->word,
             'created_by' => $this->faker->word,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,6 +71,9 @@ class ContactFactory extends Factory
 =======
             // 'user_id' => $this->faker->randomNumber(5, false),
 >>>>>>> ed6f50e (up)
+=======
+            'user_id' => $this->faker->integer,
+>>>>>>> 3d1ec9b (up)
             'token' => $this->faker->word,
         ];
     }
