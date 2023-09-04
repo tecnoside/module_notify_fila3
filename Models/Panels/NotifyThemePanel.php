@@ -387,6 +387,7 @@ class NotifyThemePanel extends XotBasePanel {
     'except'=>['index'],
  ),
 
+<<<<<<< HEAD
   (object) array(
      'type' => 'WysiwygSceditor',
      'name' => 'body_html',
@@ -398,11 +399,17 @@ class NotifyThemePanel extends XotBasePanel {
 >>>>>>> 8b046e1 (.)
   ),
   
+=======
+>>>>>>> 468f0a0 (.)
   (object) array(
      'type' => 'WysiwygSceditor',
-     'name' => 'body',
+     'name' => 'body_html',
      'comment' => NULL,
+<<<<<<< HEAD
 >>>>>>> 42aa20e (.)
+=======
+     'except'=>['index'],
+>>>>>>> 468f0a0 (.)
   ),
 );
 >>>>>>> d27db1b (.)
