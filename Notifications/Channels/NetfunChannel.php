@@ -17,6 +17,7 @@ namespace Modules\Notify\Notifications\Channels;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Notify\Actions\NetfunSendAction;
 use Modules\Notify\Notifications\ThemeNotification;
 use Modules\Xot\Contracts\ModelContactContract;
@@ -86,8 +87,11 @@ declare(strict_types=1);
 namespace Modules\Notify\Notifications\Channels;
 
 use Illuminate\Database\Eloquent\Model;
+=======
+>>>>>>> e7bd73e (.)
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Actions\NetfunSendAction;
+use Modules\Xot\Contracts\ModelContactContract;
 
 class NetfunChannel {
 <<<<<<< HEAD
@@ -263,14 +267,19 @@ class NetfunChannel {
         // Send notification to the $notifiable instance...
         $data = app(NetfunSendAction::class)->execute($message);
 
+<<<<<<< HEAD
 =======
 >>>>>>> b3b016d (up)
         if ($notifiable instanceof Model) {
+=======
+        if ($notifiable instanceof ModelContactContract) {
+>>>>>>> e7bd73e (.)
             $data['sms_sent_at'] = now();
             $data['sms_count'] = $notifiable->sms_count + 1;
             $notifiable->update($data);
         }
     }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -279,3 +288,6 @@ class NetfunChannel {
 >>>>>>> c3e3fc0 (up)
 =======
 >>>>>>> b3b016d (up)
+=======
+}
+>>>>>>> e7bd73e (.)
