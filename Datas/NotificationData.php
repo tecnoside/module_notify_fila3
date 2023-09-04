@@ -68,10 +68,13 @@ class NotificationData extends Data
      *
      * @param  string  $driver
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return string|\Modules\Notify\Models\Notification
 =======
      * @return mixed
 >>>>>>> 5df40a5 (up)
+=======
+>>>>>>> 6df2b8a (Dusting)
      */
     public function routeNotificationFor($driver, Notification $notification)
     {
@@ -92,6 +95,7 @@ class NotificationData extends Data
             'body' => $this->body,
         ]);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     public ?string $from_email=null;
@@ -146,3 +150,6 @@ class NotificationData extends Data
 =======
 }
 >>>>>>> 5df40a5 (up)
+=======
+}
+>>>>>>> 6df2b8a (Dusting)
