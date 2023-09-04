@@ -138,9 +138,13 @@ return [
             return $path;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b735fbf (.)
+=======
+
+>>>>>>> 68cf2d6 (Dusting)
         // return url('/'.$page->lang.'/'.trimPath($path));
         return url('/' . trimPath($path));
     },
