@@ -83,7 +83,8 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /**
  * Class CreateThemesTable.
  */
-class CreateNotifyThemesTable extends XotBaseMigration {
+class CreateNotifyThemesTable extends XotBaseMigration
+{
     // use XotBaseMigrationTrait;
 <<<<<<< HEAD
 =======
@@ -97,7 +98,8 @@ class CreateNotifyThemesTable extends XotBaseMigration {
      *
      * @return void
      */
-    public function up() {
+    public function up()
+    {
         // -- CREATE --
 <<<<<<< HEAD
 =======
@@ -118,27 +120,36 @@ class CreateNotifyThemesTable extends XotBaseMigration {
         // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
-                if (! $this->hasColumn('from')) {
+                if (!$this->hasColumn('from')) {
                     $table->string('from')->nullable();
                 }
-                if (! $this->hasColumn('updated_at')) {
+                if (!$this->hasColumn('updated_at')) {
                     $table->timestamps();
                 }
-                if (! $this->hasColumn('updated_by')) {
+                if (!$this->hasColumn('updated_by')) {
                     $table->string('updated_by')->nullable()->after('updated_at');
                     $table->string('created_by')->nullable()->after('created_at');
                 }
-                if (! $this->hasColumn('post_type')) {
+                if (!$this->hasColumn('post_type')) {
                     $table->nullableMorphs('post');
                 }
-                if (! $this->hasColumn('body_html')) {
+                if (!$this->hasColumn('body_html')) {
                     $table->text('body_html')->nullable();
                 }
-                if (! $this->hasColumn('theme')) {
+                if (!$this->hasColumn('theme')) {
                     $table->string('theme')->nullable();
                 }
-                if (! $this->hasColumn('from_email')) {
+                if (!$this->hasColumn('from_email')) {
                     $table->string('from_email')->nullable();
+                }
+                if (!$this->hasColumn('logo_src')) {
+                    $table->string('logo_src')->nullable();
+                }
+                if (!$this->hasColumn('logo_width')) {
+                    $table->integer('logo_width')->nullable();
+                }
+                if (!$this->hasColumn('logo_height')) {
+                    $table->integer('logo_height')->nullable();
                 }
             }
         ); // end update
