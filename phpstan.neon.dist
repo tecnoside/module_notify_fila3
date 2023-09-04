@@ -2,6 +2,7 @@ includes:
     - phpstan-baseline.neon
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - ./vendor/nunomaduro/larastan/extension.neon
     
 =======
@@ -10,6 +11,10 @@ includes:
 =======
 
 >>>>>>> fe06862 (.)
+=======
+    - ./vendor/nunomaduro/larastan/extension.neon
+    
+>>>>>>> fbcbc78 (..)
 parameters:
     level: 1
     paths:
