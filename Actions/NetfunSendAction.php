@@ -1,11 +1,15 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> 48d3f55 (up)
 namespace Modules\Notify\Actions;
 
 use Exception;
 use GuzzleHttp\Client;
+<<<<<<< HEAD
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Str;
 use Modules\Notify\Datas\SmsData;
@@ -13,17 +17,30 @@ use Spatie\QueueableAction\QueueableAction;
 
 class NetfunSendAction
 {
+=======
+use Illuminate\Support\Str;
+use Modules\Notify\Data\SmsData;
+use GuzzleHttp\Exception\ClientException;
+use Spatie\QueueableAction\QueueableAction;
+
+class NetfunSendAction {
+>>>>>>> 48d3f55 (up)
     use QueueableAction;
 
     public string $token;
 
+<<<<<<< HEAD
     public array $vars = [];
 
+=======
+    public array $vars=[];
+>>>>>>> 48d3f55 (up)
     /**
      * Create a new action instance.
      *
      * @return void
      */
+<<<<<<< HEAD
     public function __construct()
     {
         // Prepare the action for execution, leveraging constructor injection.
@@ -39,11 +56,27 @@ class NetfunSendAction
      */
     public function execute(SmsData $sms): array
     {
+=======
+    public function __construct() {
+        // Prepare the action for execution, leveraging constructor injection.
+        $token=config('services.netfun.token');
+        if($token==null){
+            throw new Exception('put [NETFUN_TOKEN] variable to your .env and config [services.netfun.token] ');
+        }
+        $this->token=$token;
+    }
+
+       /**
+     * Execute the action.
+     */
+    public function execute(SmsData $sms): array {
+>>>>>>> 48d3f55 (up)
         $endpoint = 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json';
         $headers = [
             'Cache-Control' => 'no-cache',
             'Content-Type' => 'application/json',
         ];
+<<<<<<< HEAD
 
         // dddx([ord($this->body[0]), $this->body]);
 
@@ -54,13 +87,30 @@ class NetfunSendAction
 
         if (! Str::startsWith($sms->to, '+')) {
             $sms->to = '+39' . $sms->to;
+=======
+        
+
+        // dddx([ord($this->body[0]), $this->body]);
+
+        $sms->to = $sms->to.'';
+        if (Str::startsWith($sms->to, '00')) {
+            $sms->to = '+39'.substr($sms->to, 2);
+        }
+
+        if (! Str::startsWith($sms->to, '+')) {
+            $sms->to = '+39'.$sms->to;
+>>>>>>> 48d3f55 (up)
         }
 
         $body = [
             'api_token' => $this->token,
             // "gateway"=> 99,
             'sender' => $sms->from,
+<<<<<<< HEAD
             'text_template' => $sms->body, // .'  '.rand(1, 100),
+=======
+            'text_template' => $sms->body,//.'  '.rand(1, 100),
+>>>>>>> 48d3f55 (up)
             /*
             'delivery_callback' => 'https://www.google.com?code={{code}}',
             'default_placeholders' => [
@@ -90,7 +140,11 @@ class NetfunSendAction
         try {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
+<<<<<<< HEAD
             throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']');
+=======
+            throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']');
+>>>>>>> 48d3f55 (up)
         }
         /*
         echo '<hr/>';
@@ -102,7 +156,13 @@ class NetfunSendAction
 
         $this->vars['status_code'] = $response->getStatusCode();
         $this->vars['status_txt'] = $response->getBody()->getContents();
+<<<<<<< HEAD
 
         return $this->vars;
     }
 }
+=======
+        return $this->vars;
+    }
+}
+>>>>>>> 48d3f55 (up)
