@@ -167,7 +167,7 @@
     },
     "require": {
         "laraxot/module_xot": "dev-master",
-        "illuminate/contracts": "^8.83|^9.30",
+        "illuminate/contracts": "^8.83|^9.30|^10.0",
         "phpdocumentor/type-resolver": "^1.5"
     },
     "require-dev": {
@@ -218,6 +218,7 @@
     }]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> 842d9e1 (.)
 =======
@@ -226,3 +227,6 @@
 =======
 }
 >>>>>>> db14753 (.)
+=======
+}
+>>>>>>> 826c9ea (.)
