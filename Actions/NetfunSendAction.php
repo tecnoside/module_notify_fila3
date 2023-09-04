@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
@@ -20,10 +21,13 @@ declare(strict_types=1);
 declare(strict_types=1);
 
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> 01282f2 (up)
 namespace Modules\Notify\Actions;
 
 use Exception;
 use GuzzleHttp\Client;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -64,10 +68,19 @@ class NetfunSendAction {
 class NetfunSendAction
 {
 >>>>>>> 42f9249 (.)
+=======
+use Illuminate\Support\Str;
+use Modules\Notify\Data\SmsData;
+use GuzzleHttp\Exception\ClientException;
+use Spatie\QueueableAction\QueueableAction;
+
+class NetfunSendAction {
+>>>>>>> 01282f2 (up)
     use QueueableAction;
 
     public string $token;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -89,11 +102,15 @@ class NetfunSendAction
     public array $vars = [];
 
 >>>>>>> fe06862 (.)
+=======
+    public array $vars=[];
+>>>>>>> 01282f2 (up)
     /**
      * Create a new action instance.
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,11 +172,27 @@ class NetfunSendAction
     public function execute(SmsData $sms): array
     {
 >>>>>>> 42f9249 (.)
+=======
+    public function __construct() {
+        // Prepare the action for execution, leveraging constructor injection.
+        $token=config('services.netfun.token');
+        if($token==null){
+            throw new Exception('put [NETFUN_TOKEN] variable to your .env and config [services.netfun.token] ');
+        }
+        $this->token=$token;
+    }
+
+       /**
+     * Execute the action.
+     */
+    public function execute(SmsData $sms): array {
+>>>>>>> 01282f2 (up)
         $endpoint = 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json';
         $headers = [
             'Cache-Control' => 'no-cache',
             'Content-Type' => 'application/json',
         ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -200,12 +233,26 @@ class NetfunSendAction
 =======
             $sms->to = '+39' . $sms->to;
 >>>>>>> b735fbf (.)
+=======
+        
+
+        // dddx([ord($this->body[0]), $this->body]);
+
+        $sms->to = $sms->to.'';
+        if (Str::startsWith($sms->to, '00')) {
+            $sms->to = '+39'.substr($sms->to, 2);
+        }
+
+        if (! Str::startsWith($sms->to, '+')) {
+            $sms->to = '+39'.$sms->to;
+>>>>>>> 01282f2 (up)
         }
 
         $body = [
             'api_token' => $this->token,
             // "gateway"=> 99,
             'sender' => $sms->from,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -223,6 +270,9 @@ class NetfunSendAction
 =======
             'text_template' => $sms->body, // .'  '.rand(1, 100),
 >>>>>>> fe06862 (.)
+=======
+            'text_template' => $sms->body,//.'  '.rand(1, 100),
+>>>>>>> 01282f2 (up)
             /*
             'delivery_callback' => 'https://www.google.com?code={{code}}',
             'default_placeholders' => [
@@ -255,6 +305,7 @@ class NetfunSendAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']');
 =======
             throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']');
@@ -265,6 +316,9 @@ class NetfunSendAction
 =======
             throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']');
 >>>>>>> b735fbf (.)
+=======
+            throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']');
+>>>>>>> 01282f2 (up)
         }
         /*
         echo '<hr/>';
@@ -280,6 +334,7 @@ class NetfunSendAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> bc60653 (up)
 =======
@@ -304,3 +359,8 @@ class NetfunSendAction
 >>>>>>> 602db11 (up)
 =======
 >>>>>>> fe06862 (.)
+=======
+        return $this->vars;
+    }
+}
+>>>>>>> 01282f2 (up)
