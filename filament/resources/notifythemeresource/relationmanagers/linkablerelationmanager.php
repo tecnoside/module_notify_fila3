@@ -23,6 +23,7 @@ use Filament\Tables;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -33,6 +34,8 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 >>>>>>> bc733de (up)
+=======
+>>>>>>> 34ed535 (.)
 
 class LinkableRelationManager extends RelationManager
 {
@@ -61,6 +64,7 @@ class LinkableRelationManager extends RelationManager
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 //
 >>>>>>> 9658d21 (up)
@@ -72,6 +76,9 @@ class LinkableRelationManager extends RelationManager
 =======
                 //
 >>>>>>> bc733de (up)
+=======
+
+>>>>>>> 34ed535 (.)
             ])
             ->headerActions([
                 Tables\Actions\CreateAction::make(),
@@ -86,6 +93,7 @@ class LinkableRelationManager extends RelationManager
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 =======
     }    
@@ -96,4 +104,7 @@ class LinkableRelationManager extends RelationManager
 =======
     }    
 >>>>>>> bc733de (up)
+=======
+    }
+>>>>>>> 34ed535 (.)
 }
