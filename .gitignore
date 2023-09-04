@@ -82,6 +82,7 @@ Homestead.json
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 23a7ddf (.)
@@ -190,3 +191,6 @@ package-lock.json
 >>>>>>> fefee90 (.)
 =======
 >>>>>>> 81505b8 (Initial commit)
+=======
+*.cache
+>>>>>>> 830dc60 (.)
