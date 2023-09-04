@@ -17,6 +17,7 @@ class _ModulePanel extends XotBasePanel {
             new Actions\TrySendMailAction(),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 42aa20e (.)
 =======
@@ -24,6 +25,9 @@ class _ModulePanel extends XotBasePanel {
 =======
             new Actions\TryAlertAction(),
 >>>>>>> 626ce4c (up)
+=======
+            //new Actions\TryAlertAction(),
+>>>>>>> a5593ab (.)
         ];
     }
 }

@@ -83,6 +83,7 @@ class NotifyController extends Controller
      *
      * @return Renderable
      */
+<<<<<<< HEAD:Http/Controllers/NotifyController.php
     public function store(Request $request) {
 <<<<<<< HEAD
 =======
@@ -95,6 +96,9 @@ class NotifyController extends Controller
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+    public function store(Request $request):Renderable {
+>>>>>>> a5593ab (.):Http/Controllers/NotifyController.old2
     }
 
     /**
