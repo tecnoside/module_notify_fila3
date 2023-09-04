@@ -47,6 +47,7 @@ Classe notifica utilizzata per gestire le notifiche (email/sms/ecc).
 Notification::send($company->reporter, new ThemeNotification('accepted_company', $company->toArray()));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ```
 >>>>>>> 4741bb3 (.)
 =======
@@ -81,3 +82,6 @@ Classe notifica utilizzata per gestire le notifiche (email/sms/ecc).
 =======
 ```
 >>>>>>> 9255087 (.)
+=======
+```
+>>>>>>> 9ef66f5 (.)
