@@ -52,7 +52,10 @@ class RowAttributeNotification extends Notification implements ShouldQueue
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6f575c4 (up)
         // if (! property_exists($this->row, 'mail_from')) {
         //     throw new \Exception('['.__LINE__.']['.__FILE__.']');
         // }
@@ -60,15 +63,19 @@ class RowAttributeNotification extends Notification implements ShouldQueue
         //     throw new \Exception('['.__LINE__.']['.__FILE__.']');
         // }
 
+<<<<<<< HEAD
 >>>>>>> a514540 (up)
 =======
 >>>>>>> 7f10d5f (.)
+=======
+>>>>>>> 6f575c4 (up)
         $message = (new MailMessage())
             ->from($this->row->mail_from_email, $this->row->mail_from)
             ->subject($this->row->mail_subject)
             // ->line('---')
             // // non so se posso modificare questa riga senza creare errori in altre parti
             // ->view('notify::emails.templates.' . $theme . '.mail', ['html' => $this->row->mail_body, 'logo' => []]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             ->view('notify::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
@@ -78,6 +85,9 @@ class RowAttributeNotification extends Notification implements ShouldQueue
 =======
             ->view('notify::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
 >>>>>>> 248c405 (..)
+=======
+            ->view('quaeris::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
+>>>>>>> 6f575c4 (up)
 
         $this->row->sendEmailCallback();
 
