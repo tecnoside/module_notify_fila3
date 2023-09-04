@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Providers;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // --- bases ---
 use Modules\Xot\Providers\XotBaseRouteServiceProvider;
 
@@ -82,6 +83,18 @@ class RouteServiceProvider extends ServiceProvider {
             ->group(module_path('Notify', '/Routes/api.php'));
     }
 >>>>>>> 5f3f456 (up)
+=======
+// --- bases ---
+use Modules\Xot\Providers\XotBaseRouteServiceProvider;
+
+class RouteServiceProvider extends XotBaseRouteServiceProvider {
+    /**
+     * The module namespace to assume when generating URLs to actions.
+     */
+    protected string $moduleNamespace = 'Modules\Notify\Http\Controllers';
+    protected string $module_dir = __DIR__;
+    protected string $module_ns = __NAMESPACE__;
+>>>>>>> 478bb60 (up)
 }
 =======
 =======

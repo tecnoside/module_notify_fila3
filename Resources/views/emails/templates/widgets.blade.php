@@ -128,6 +128,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 									<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="1" height="20" class="hide">
 =======
 									<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="20" class="hide">
@@ -141,11 +142,15 @@
 =======
 									<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="20" class="hide">
 >>>>>>> 83df11d (up)
+=======
+									<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="1" height="20" class="hide">
+>>>>>>> 478bb60 (up)
 									<br class="hide">
 									@if (isset($logo))
 										<img src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" alt="{{ isset($senderName) ? $senderName : '' }}" style="-ms-interpolation-mode:bicubic;">
 									@endif
 									<br>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -182,6 +187,14 @@
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> 83df11d (up)
+=======
+									<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="1" height="10" class="hide"><br class="hide"></td>
+								<td align="right" width="350" class="hide" style="color:#a6a6a6;font-size:12px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;text-shadow: 0 1px 0 #ffffff;" valign="top" bgcolor="#e4e4e4"><img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="1" height="63"><br></td>
+							</tr>
+						</table>
+
+						<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="1" height="15" class="divider"><br>
+>>>>>>> 478bb60 (up)
 
 						@section('content')
 						@show
@@ -194,6 +207,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="1" height="25" class="divider"><br>
 =======
 			<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="25" class="divider"><br>
@@ -207,6 +221,9 @@
 =======
 			<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="25" class="divider"><br>
 >>>>>>> 83df11d (up)
+=======
+			<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="1" height="25" class="divider"><br>
+>>>>>>> 478bb60 (up)
 
 			<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f2f2f2">
 				<tr>
@@ -216,6 +233,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 						<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="1" height="30"><br>
 =======
 						<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="30"><br>
@@ -229,6 +247,9 @@
 =======
 						<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="30"><br>
 >>>>>>> 83df11d (up)
+=======
+						<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="1" height="30"><br>
+>>>>>>> 478bb60 (up)
 
 						<table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="table">
 							<tr>
@@ -238,6 +259,7 @@
 										<tr>
 											<td width="380" valign="top" class="footershow">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -267,6 +289,9 @@
 >>>>>>> b735fbf (.)
 =======
 												<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="8"><br>
+=======
+												<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="1" height="8"><br>
+>>>>>>> 478bb60 (up)
 
 												@if (isset($reminder))
 													<p style="color:#a6a6a6;font-size:12px;font-family:Helvetica,Arial,sans-serif;margin-top:0;margin-bottom:15px;padding-top:0;padding-bottom:0;line-height:18px;" class="reminder">{!! $reminder  !!}</p>
@@ -287,6 +312,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
 															<td><a href="https://www.flickr.com/photos/{{ $flickr }}"><img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/flickr.gif" width="42" height="32" alt="See our photos on Flickr"></a></td>
@@ -321,15 +347,22 @@
 >>>>>>> fe06862 (.)
 =======
 															<td><a href="https://www.flickr.com/photos/{{ $flickr }}"><img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/flickr.gif" width="42" height="32" alt="See our photos on Flickr"></a></td>
+=======
+															<td><a href="https://www.flickr.com/photos/{{ $flickr }}"><img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/flickr.gif" width="42" height="32" alt="See our photos on Flickr"></a></td>
+>>>>>>> 478bb60 (up)
 														@endif
 
 														@if (isset($twitter))
-															<td><a href="https://twitter.com/{{ $twitter }}"><img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/twitter.gif" width="42" height="32" alt="Follow us on Twitter"></a></td>
+															<td><a href="https://twitter.com/{{ $twitter }}"><img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/twitter.gif" width="42" height="32" alt="Follow us on Twitter"></a></td>
 														@endif
 
 														@if (isset($facebook))
+<<<<<<< HEAD
 															<td><a href="https://www.facebook.com/{{ $facebook }}"><img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/facebook.gif" width="32" height="32" alt="Visit us on Facebook"></a></td>
 >>>>>>> 83df11d (up)
+=======
+															<td><a href="https://www.facebook.com/{{ $facebook }}"><img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/facebook.gif" width="32" height="32" alt="Visit us on Facebook"></a></td>
+>>>>>>> 478bb60 (up)
 														@endif
 
 													</tr>
@@ -339,6 +372,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 												<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="1" height="10"><br><p style="color:#b3b3b3;font-size:11px;line-height:15px;font-family:Helvetica,Arial,sans-serif;margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;font-weight:bold;">{{ isset($senderName) ? $senderName : '' }}</p>
 =======
 												<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="10"><br><p style="color:#b3b3b3;font-size:11px;line-height:15px;font-family:Helvetica,Arial,sans-serif;margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;font-weight:bold;">{{ isset($senderName) ? $senderName : '' }}</p>
@@ -352,6 +386,9 @@
 =======
 												<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="10"><br><p style="color:#b3b3b3;font-size:11px;line-height:15px;font-family:Helvetica,Arial,sans-serif;margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;font-weight:bold;">{{ isset($senderName) ? $senderName : '' }}</p>
 >>>>>>> 83df11d (up)
+=======
+												<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="1" height="10"><br><p style="color:#b3b3b3;font-size:11px;line-height:15px;font-family:Helvetica,Arial,sans-serif;margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;font-weight:bold;">{{ isset($senderName) ? $senderName : '' }}</p>
+>>>>>>> 478bb60 (up)
 
 												@if (isset($address))
 													<p style="color:#b3b3b3;font-size:11px;line-height:15px;font-family:Helvetica,Arial,sans-serif;margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;font-weight:normal;">
@@ -371,6 +408,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 						<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="1" height="25"><br>
 =======
 						<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="25"><br>
@@ -384,6 +422,9 @@
 =======
 						<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="25"><br>
 >>>>>>> 83df11d (up)
+=======
+						<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="1" height="25"><br>
+>>>>>>> 478bb60 (up)
 
 					</td>
 				</tr>

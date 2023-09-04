@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<title>{{ isset($senderName) ? $senderName : '' }}.</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<style type="text/css">{{ $_theme->cssInLine('notify::css/ark.css') }}</style>
@@ -34,12 +35,19 @@
 >>>>>>> b735fbf (.)
 =======
 >>>>>>> 83df11d (up)
+=======
+		<title>{{ isset($senderName) ? $senderName : '' }}.</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style type="text/css">{{ Theme::viewpath('notify::css/ark.css') }}</style>
+		@if(isset($css))
+>>>>>>> 478bb60 (up)
 		<style type="text/css">
 			{{ $css }}
-		</style>
+		</style> 
 		@endif
 	</head>
 	<body>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,6 +74,9 @@
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> 83df11d (up)
+=======
+	[{{ (\Modules\Xot\Services\FileService::assetPath('notify::css/ark.css')) }}]
+>>>>>>> 478bb60 (up)
 	<table id="background-table" border="0" cellpadding="0" cellspacing="0" width="100%">
 		<tbody>
 		<tr>
@@ -80,6 +91,7 @@
 					</tr>
 					<tr class="mobile_only">
 						<td class="w640" width="640" align="center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,6 +121,11 @@
 =======
 							<img class="mobile_only" border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : '' }}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
 >>>>>>> 83df11d (up)
+=======
+							
+							<img class="mobile_only" border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : '' }}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
+							
+>>>>>>> 478bb60 (up)
 						</td>
 					</tr>
 					<tr class="mobile_only">

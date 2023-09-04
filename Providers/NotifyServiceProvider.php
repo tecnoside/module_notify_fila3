@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Providers;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Notification;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 
@@ -411,10 +412,15 @@ class NotifyServiceProvider extends ServiceProvider {
 =======
 =======
 >>>>>>> fe06862 (.)
+=======
+use Modules\Xot\Providers\XotBaseServiceProvider;
+
+>>>>>>> 478bb60 (up)
 class NotifyServiceProvider extends XotBaseServiceProvider {
     protected string $module_dir = __DIR__;
     protected string $module_ns = __NAMESPACE__;
     public string $module_name = 'notify';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 7616aad (up)
@@ -551,6 +557,8 @@ class NotifyServiceProvider extends ServiceProvider {
 
         return $paths;
     }
+=======
+>>>>>>> 478bb60 (up)
 }
 >>>>>>> 89120cb (rebase)
 =======
