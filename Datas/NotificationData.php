@@ -69,12 +69,16 @@ class NotificationData extends Data
      * @param  string  $driver
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return string|\Modules\Notify\Models\Notification
 =======
      * @return mixed
 >>>>>>> 5df40a5 (up)
 =======
 >>>>>>> 6df2b8a (Dusting)
+=======
+     * @return string|\Modules\Notify\Models\Notification
+>>>>>>> d7dda89 (up)
      */
     public function routeNotificationFor($driver, Notification $notification)
     {
