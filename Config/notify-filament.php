@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 <<<<<<< HEAD
@@ -16,6 +17,10 @@ declare(strict_types=1);
 >>>>>>> b36983f (up)
 =======
 >>>>>>> 01564cc (up)
+=======
+declare(strict_types=1);
+
+>>>>>>> 35b9476 (up)
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Http\Middleware\MirrorConfigToSubpackages;
@@ -45,6 +50,7 @@ $contextPath = 'Filament';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 return [
 =======
@@ -59,6 +65,10 @@ return [
 return [
 
 >>>>>>> 01564cc (up)
+=======
+
+return [
+>>>>>>> 35b9476 (up)
     /*
     |--------------------------------------------------------------------------
     | Filament Path
@@ -252,6 +262,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             'login' => Modules\Notify\Http\Livewire\Auth\FilamentLogin::class,
 =======
             'login' => Modules\Quaeris\Http\Livewire\Auth\FilamentLogin::class,
@@ -262,6 +273,9 @@ return [
 =======
             'login' => Modules\Quaeris\Http\Livewire\Auth\FilamentLogin::class,
 >>>>>>> 01564cc (up)
+=======
+            'login' => Modules\Notify\Http\Livewire\Auth\FilamentLogin::class,
+>>>>>>> 35b9476 (up)
         ],
     ],
 
@@ -280,6 +294,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             //  Authenticate::class,
             Modules\Notify\Http\Middleware\FilamentMiddleware::class,
 =======
@@ -294,6 +309,10 @@ return [
         //  Authenticate::class,
             Modules\Quaeris\Http\Middleware\FilamentMiddleware::class
 >>>>>>> 01564cc (up)
+=======
+            //  Authenticate::class,
+            Modules\Notify\Http\Middleware\FilamentMiddleware::class,
+>>>>>>> 35b9476 (up)
         ],
         'base' => [
             EncryptCookies::class,
