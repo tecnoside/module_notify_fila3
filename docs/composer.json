@@ -1,37 +1,7 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     "name": "laraxot/module_notify",
     "description": "live user management",
     "license": "MIT",
-=======
->>>>>>> 404660b (up)
-=======
-    "name": "laraxot/module_notify",
-    "description": "live user management",
-    "license": "MIT",
->>>>>>> 95a4930 (.)
-=======
-    "name": "laraxot/module_notify",
-    "description": "live user management",
-    "license": "MIT",
->>>>>>> fe06862 (.)
-=======
->>>>>>> becf1dc (up)
-=======
-    "name": "laraxot/module_notify",
-    "description": "live user management",
-    "license": "MIT",
->>>>>>> 4a63f54 (.)
-=======
-    "name": "laraxot/module_notify",
-    "description": "live user management",
-    "license": "MIT",
->>>>>>> a758bd5 (.)
     "require": {
         "tightenco/jigsaw": "^1.6",
         "tightenco/jigsaw-docs-template": "^1.1",

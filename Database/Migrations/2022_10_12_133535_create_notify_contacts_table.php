@@ -6,34 +6,8 @@ use Illuminate\Database\Schema\Blueprint;
 use Modules\Notify\Models\Contact;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 class CreateNotifyContactsTable extends XotBaseMigration
 {
-=======
-class CreateNotifyContactsTable extends XotBaseMigration {
->>>>>>> 0972249 (up)
-=======
-class CreateNotifyContactsTable extends XotBaseMigration {
->>>>>>> fe06862 (.)
-=======
-class CreateNotifyContactsTable extends XotBaseMigration
-{
->>>>>>> 42f9249 (.)
-=======
-class CreateNotifyContactsTable extends XotBaseMigration {
->>>>>>> 70cdb0c (up)
-=======
-class CreateNotifyContactsTable extends XotBaseMigration {
->>>>>>> a758bd5 (.)
-=======
-class CreateNotifyContactsTable extends XotBaseMigration
-{
->>>>>>> 34ed535 (.)
     protected ?string $model_class = Contact::class;
 
     /**
@@ -41,34 +15,8 @@ class CreateNotifyContactsTable extends XotBaseMigration
      *
      * @return void
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function up()
     {
-=======
-    public function up() {
->>>>>>> 0972249 (up)
-=======
-    public function up() {
->>>>>>> fe06862 (.)
-=======
-    public function up()
-    {
->>>>>>> 42f9249 (.)
-=======
-    public function up() {
->>>>>>> 70cdb0c (up)
-=======
-    public function up() {
->>>>>>> a758bd5 (.)
-=======
-    public function up()
-    {
->>>>>>> 34ed535 (.)
         // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
@@ -88,33 +36,7 @@ class CreateNotifyContactsTable extends XotBaseMigration
                 if (! $this->hasColumn('token')) {
                     $table->string('token')->nullable();
                 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             }
         );
-=======
-            });
->>>>>>> 0972249 (up)
-=======
-            });
->>>>>>> fe06862 (.)
-=======
-            }
-        );
->>>>>>> 42f9249 (.)
-=======
-            });
->>>>>>> 70cdb0c (up)
-=======
-            });
->>>>>>> a758bd5 (.)
-=======
-            }
-        );
->>>>>>> 34ed535 (.)
     }
 }

@@ -24,39 +24,7 @@ class ContactFactory extends Factory
     public function definition()
     {
         return [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             // 'model_id' => $this->faker->randomNumber(5, false),
-=======
-            'model_id' => $this->faker->integer,
->>>>>>> e73574f (up)
-=======
-            // 'model_id' => $this->faker->integer,
->>>>>>> 4a1a664 (up)
-=======
-            // 'model_id' => $this->faker->integer,
->>>>>>> fe06862 (.)
-=======
-            // 'model_id' => $this->faker->randomNumber(5, false),
->>>>>>> ed6f50e (up)
-=======
-            'model_id' => $this->faker->integer,
->>>>>>> 3d1ec9b (up)
-=======
-            // 'model_id' => $this->faker->integer,
->>>>>>> 6eab953 (up)
-=======
-            // 'model_id' => $this->faker->integer,
->>>>>>> a758bd5 (.)
-=======
-            // 'model_id' => $this->faker->randomNumber(5, false),
->>>>>>> 02abad3 (up)
             'model_type' => $this->faker->word,
             'contact_type' => $this->faker->word,
             'value' => $this->faker->word,
@@ -65,39 +33,7 @@ class ContactFactory extends Factory
             'created_at' => $this->faker->dateTime,
             'updated_by' => $this->faker->word,
             'created_by' => $this->faker->word,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             // 'user_id' => $this->faker->randomNumber(5, false),
-=======
-            'user_id' => $this->faker->integer,
->>>>>>> e73574f (up)
-=======
-            // 'user_id' => $this->faker->integer,
->>>>>>> 4a1a664 (up)
-=======
-            // 'user_id' => $this->faker->integer,
->>>>>>> fe06862 (.)
-=======
-            // 'user_id' => $this->faker->randomNumber(5, false),
->>>>>>> ed6f50e (up)
-=======
-            'user_id' => $this->faker->integer,
->>>>>>> 3d1ec9b (up)
-=======
-            // 'user_id' => $this->faker->integer,
->>>>>>> 6eab953 (up)
-=======
-            // 'user_id' => $this->faker->integer,
->>>>>>> a758bd5 (.)
-=======
-            // 'user_id' => $this->faker->randomNumber(5, false),
->>>>>>> 02abad3 (up)
             'token' => $this->faker->word,
         ];
     }

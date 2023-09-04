@@ -4,31 +4,7 @@
 /source/assets/build/
 .env
 npm-debug.log
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b5ea747 (.)
-=======
->>>>>>> 0ce2fce (.)
 *.cache
 *.phar
 *.lock
 package-lock.json
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 404660b (up)
-=======
->>>>>>> fe06862 (.)
-=======
->>>>>>> b5ea747 (.)
-=======
->>>>>>> becf1dc (up)
-=======
->>>>>>> a758bd5 (.)
-=======
->>>>>>> 0ce2fce (.)

@@ -8,23 +8,5 @@ section: content
 # Funzione getNotificationData
 
 Ogni modello che potrà essere un destinatario, **dovrà avere la funzione getNotificationData**.  
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 Questa funzione indica qual'è il campo che corrisponde al numero di telefono/email da utilizzare,  
 ed è utilizzata dentro la classe ThemeNotification.
-=======
-Questa funzione indica qual'è il campo che corrisponde al numero di telefono/email da utilizzare.
->>>>>>> 6b5f0de (.)
-=======
-Questa funzione indica qual'è il campo che corrisponde al numero di telefono/email da utilizzare,  
-ed è utilizzata dentro la classe ThemeNotification.
->>>>>>> 7532aa7 (.)
-=======
-Questa funzione indica qual'è il campo che corrisponde al numero di telefono/email da utilizzare.
->>>>>>> 29e016e (.)
-=======
-Questa funzione indica qual'è il campo che corrisponde al numero di telefono/email da utilizzare,  
-ed è utilizzata dentro la classe ThemeNotification.
->>>>>>> f4711f7 (.)
