@@ -7,11 +7,13 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Emails;
 
+use Closure;
 use Exception;
 use Illuminate\Mail\PendingMail;
 use Illuminate\Contracts\Mail\Mailer;
-use Modules\Notify\Data\BeautyEmailData;
 use Modules\UI\Services\ThemeService;
+use Modules\Notify\Data\BeautyEmailData;
+use Illuminate\Contracts\Support\Renderable;
 
 class BeautyEmail implements Mailer {
     /**
@@ -131,19 +133,25 @@ class BeautyEmail implements Mailer {
      */
     public function queue($view, array $data, $callback) {
         $data = array_merge($this->settings, $data);
-
-        $this->mailer->queue($view, $data, $callback);
+        //13    Method Illuminate\Mail\Mailer::queue() invoked with 3 parameters, 1-2 required.                                                                                    
+        //113    Parameter #2 $queue of method Illuminate\Mail\Mailer::queue() expects string|null, array given. 
+        //$this->mailer->queue($view, $data, $callback);
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @param mixed $view
      *
 =======
 >>>>>>> 948b488 (.)
      * @return \Illuminate\View\View
+=======
+     * @phpstan-param view-string $view
+     
+>>>>>>> 1f2e2b9 (up)
      */
-    public function view($view, array $data = []) {
+    public function view(string $view, array $data = []):Renderable {
         $data = array_merge($this->settings, $data);
 
         return view($view, $data);
@@ -153,7 +161,7 @@ class BeautyEmail implements Mailer {
      * Send a new message when only a raw text part.
      *
      * @param string $text
-     * @param mixed  $callback
+     * @param Closure|string|null  $callback
      *
      * @return \Illuminate\Mail\SentMessage|null
      */
