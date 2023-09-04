@@ -3,11 +3,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8f4c37e (.)
 declare(strict_types=1);
 
 return [
@@ -45,8 +40,6 @@ return [
             'Link utili' => 'docs/duocircle/links',
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
 declare(strict_types=1);
@@ -58,14 +51,6 @@ declare(strict_types=1);
 
 return [
 >>>>>>> fe06862 (.)
-=======
-return [
->>>>>>> becf1dc (up)
-=======
-declare(strict_types=1);
-
-return [
->>>>>>> a758bd5 (.)
     'Getting Started' => [
         'url' => 'docs/getting-started',
         'children' => [
@@ -76,9 +61,6 @@ return [
         ],
     ],
     'Jigsaw Docs' => 'https://jigsaw.tighten.co/docs/installation',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 404660b (up)
@@ -110,26 +92,7 @@ return [
 >>>>>>> fe06862 (.)
 =======
 
-=======
->>>>>>> 0cbb44c (.)
 
 
 >>>>>>> cac1c0d (.)
-=======
->>>>>>> b735fbf (.)
-=======
->>>>>>> becf1dc (up)
-=======
-=======
->>>>>>> a758bd5 (.)
-    'Funzione del Modulo' => [
-        'url' => 'docs/module_notify',
-        'children' => [
-            'TrySendMailAction' => 'docs/try_send_mail_action',
-        ],
-    ],
-<<<<<<< HEAD
->>>>>>> 8f4c37e (.)
-=======
->>>>>>> a758bd5 (.)
 ];
