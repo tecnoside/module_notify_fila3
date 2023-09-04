@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -125,6 +126,8 @@ class NotifyServiceProvider extends ServiceProvider {
     }
 }
 =======
+=======
+>>>>>>> 3a0e0a5 (up)
 <?php
 
 declare(strict_types=1);
@@ -231,4 +234,7 @@ class NotifyServiceProvider extends ServiceProvider {
         return $paths;
     }
 }
+<<<<<<< HEAD
 >>>>>>> 9349baf (.)
+=======
+>>>>>>> 3a0e0a5 (up)
