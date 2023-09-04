@@ -11,6 +11,7 @@ Classe, utilizzata all'interno di ThemeNotification,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 726df26 (.)
 che si occupa di costruire la notifica ed aggiungere eventuali allegati.  
@@ -32,3 +33,6 @@ che si occupa di recuperare la notifica richiamata tramite parametro.
 =======
 I valori del parametro array $view_params devono essere tutti tipo stringa, altrimenti non verranno presi in considerazione in caso di replace delle variabili.
 >>>>>>> 726df26 (.)
+=======
+che si occupa di richiamare la mail richiamata tramite parametro.
+>>>>>>> 9b35d99 (.)
