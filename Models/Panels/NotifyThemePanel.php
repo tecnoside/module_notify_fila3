@@ -111,10 +111,14 @@ class NotifyThemePanel extends XotBasePanel {
                     'it' => 'it',
                     'fr' => 'fr',
 <<<<<<< HEAD
+<<<<<<< HEAD
                     'en' => 'en',
                     'de' => 'de',
 =======
 >>>>>>> f873c11 (up)
+=======
+                    'en' => 'en',
+>>>>>>> 40831fd (up)
                 ],
             ],
 
