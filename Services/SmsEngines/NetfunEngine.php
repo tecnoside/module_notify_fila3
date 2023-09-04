@@ -397,7 +397,7 @@ class NetfunEngine {
         return $this;
     }
 
-    public function getVars():array {
+    public function getVars(): array {
         return $this->vars;
     }
 
