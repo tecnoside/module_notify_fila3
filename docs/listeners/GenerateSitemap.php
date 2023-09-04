@@ -94,6 +94,7 @@ class GenerateSitemap {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             })->each(
                 function ($path) use ($baseUrl, $sitemap) {
                     $sitemap->addItem(rtrim($baseUrl, '/') . $path, time(), Sitemap::DAILY);
@@ -111,6 +112,10 @@ class GenerateSitemap {
             })->each(
 function ($path) use ($baseUrl, $sitemap) {
 >>>>>>> 2156399 (up)
+=======
+            })->each(
+function ($path) use ($baseUrl, $sitemap) {
+>>>>>>> cf0777d (up)
                 $sitemap->addItem(rtrim($baseUrl, '/').$path, time(), Sitemap::DAILY);
             });
 >>>>>>> 6de787a (up)
