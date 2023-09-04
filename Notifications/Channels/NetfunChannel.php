@@ -19,6 +19,7 @@ namespace Modules\Notify\Notifications\Channels;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Notify\Actions\NetfunSendAction;
 use Modules\Notify\Notifications\ThemeNotification;
 use Modules\Xot\Contracts\ModelContactContract;
@@ -94,9 +95,11 @@ use Illuminate\Notifications\Notification;
 =======
 
 >>>>>>> 7645b1d (up)
+=======
+>>>>>>> 8d9a96b (up)
 use Modules\Notify\Actions\NetfunSendAction;
-use Modules\Xot\Contracts\ModelContactContract;
 use Modules\Notify\Notifications\RowAttributeNotification;
+use Modules\Xot\Contracts\ModelContactContract;
 
 class NetfunChannel {
 <<<<<<< HEAD

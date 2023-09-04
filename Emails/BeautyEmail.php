@@ -9,11 +9,11 @@ namespace Modules\Notify\Emails;
 
 use Closure;
 use Exception;
-use Illuminate\Mail\PendingMail;
 use Illuminate\Contracts\Mail\Mailer;
-use Modules\UI\Services\ThemeService;
-use Modules\Notify\Data\BeautyEmailData;
 use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Mail\PendingMail;
+use Modules\Notify\Data\BeautyEmailData;
+use Modules\UI\Services\ThemeService;
 
 class BeautyEmail implements Mailer {
     /**
@@ -23,7 +23,6 @@ class BeautyEmail implements Mailer {
 
     /**
      * The mailer contract depended upon.
-     *
      */
     private Mailer $mailer;
 
@@ -145,6 +144,7 @@ class BeautyEmail implements Mailer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param mixed $view
      *
 =======
@@ -163,9 +163,12 @@ class BeautyEmail implements Mailer {
      * @param array $data
      * @return Renderable
 >>>>>>> 7645b1d (up)
+=======
+     * Summary of view.
+>>>>>>> 8d9a96b (up)
      */
     public function view(string $view, array $data = []): Renderable {
-        $data = array_merge($this->settings, $data, ['view'=>$view]);
+        $data = array_merge($this->settings, $data, ['view' => $view]);
 
         return view()->make($view, $data);
     }
