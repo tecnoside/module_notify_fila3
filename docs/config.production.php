@@ -13,6 +13,7 @@ return [
     'baseUrl' => 'https://laraxot.github.io/module_notify/',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 declare(strict_types=1);
@@ -33,6 +34,8 @@ return [
 return [
     'baseUrl' => 'https://jigsaw-docs-template.tighten.co',
 >>>>>>> becf1dc (up)
+=======
+>>>>>>> 6cba79e (.)
     'production' => true,
 
     // DocSearch credentials
