@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 return [
     'baseUrl' => 'https://laraxot.github.io/module_notify/',
+<<<<<<< HEAD
 =======
 =======
 declare(strict_types=1);
@@ -14,6 +15,8 @@ declare(strict_types=1);
 return [
     'baseUrl' => 'https://jigsaw-docs-template.tighten.co',
 >>>>>>> 404660b (up)
+=======
+>>>>>>> c08c05e (.)
     'production' => true,
 
     // DocSearch credentials

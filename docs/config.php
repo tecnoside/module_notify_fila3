@@ -39,7 +39,7 @@ declare(strict_types=1);
 use Illuminate\Support\Str;
 
 return [
-    'baseUrl' => '',
+    'baseUrl' => 'https://laraxot.github.io/module_notify/',
     'production' => false,
     'siteName' => 'Modulo Notify',
     'siteDescription' => 'Beautiful docs powered by Jigsaw',
