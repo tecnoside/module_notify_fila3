@@ -65,6 +65,7 @@ class Get
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ], ['view_params' => []]);
 
         $module_name_low = Str::lower($xot->main_module);
@@ -133,6 +134,9 @@ class Get
 =======
         ]);
 >>>>>>> 1b3ba1c (up)
+=======
+        ], ['view_params' => []]);
+>>>>>>> 52f2d60 (up)
 
         $module_name_low = Str::lower($xot->main_module);
 
@@ -219,7 +223,11 @@ class Get
 
             $theme->update(['body_html' => $html]);
         }
-        $view_params = array_merge($theme->toArray(), $view_params);
+
+        $theme_array = $theme->toArray();
+        unset($theme_array['view_params']);
+
+        $view_params = array_merge($theme_array, $view_params);
 
         $body_html = strval($theme->body_html);
         $subject = strval($theme->subject);

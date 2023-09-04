@@ -162,7 +162,6 @@ class BuildMailMessageAction
             ->view($view_html, $theme->view_params);
 >>>>>>> 891974c (up)
 
-        // TO-DO: va messo qua il ciclo degli attachments?
         if (! empty($attachments)) {
             foreach ($attachments as $attachment) {
                 $email = $email->attach($attachment->path, ['as' => $attachment->as, 'mime' => $attachment->mime]);
