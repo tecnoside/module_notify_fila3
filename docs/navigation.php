@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -53,6 +54,9 @@ declare(strict_types=1);
 
 return [
 >>>>>>> fe06862 (.)
+=======
+return [
+>>>>>>> becf1dc (up)
     'Getting Started' => [
         'url' => 'docs/getting-started',
         'children' => [
@@ -63,6 +67,7 @@ return [
         ],
     ],
     'Jigsaw Docs' => 'https://jigsaw.tighten.co/docs/installation',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 404660b (up)
@@ -101,4 +106,6 @@ return [
 >>>>>>> cac1c0d (.)
 =======
 >>>>>>> b735fbf (.)
+=======
+>>>>>>> becf1dc (up)
 ];

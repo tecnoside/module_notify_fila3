@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
 =======
@@ -89,6 +90,15 @@ return [
         ],
     ],
 >>>>>>> dd3d1c2 (up)
+=======
+use Illuminate\Support\Str;
+
+return [
+    'baseUrl' => '',
+    'production' => false,
+    'siteName' => 'Docs Starter Template',
+    'siteDescription' => 'Beautiful docs powered by Jigsaw',
+>>>>>>> becf1dc (up)
 
     // Algolia DocSearch credentials
     'docsearchApiKey' => env('DOCSEARCH_KEY'),
@@ -104,6 +114,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'isItemActive' => function ($page, $item) {
         return Str::endsWith(trimPath($page->getPath()), trimPath($item->getPath()));
     },
@@ -116,12 +127,15 @@ return [
         return Str::endsWith(trimPath($page->getPath()), trimPath($item->getPath()));
     },
 >>>>>>> fbeb824 (up)
+=======
+>>>>>>> becf1dc (up)
     'isActiveParent' => function ($page, $menuItem) {
         if (is_object($menuItem) && $menuItem->children) {
             return $menuItem->children->contains(function ($child) use ($page) {
                 return trimPath($page->getPath()) == trimPath($child);
             });
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -191,3 +205,10 @@ return [
 =======
 ];
 >>>>>>> b735fbf (.)
+=======
+    },
+    'url' => function ($page, $path) {
+        return Str::startsWith($path, 'http') ? $path : '/' . trimPath($path);
+    },
+];
+>>>>>>> becf1dc (up)
