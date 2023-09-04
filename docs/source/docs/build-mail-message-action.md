@@ -13,8 +13,11 @@ Classe, utilizzata all'interno di ThemeNotification,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 726df26 (.)
+=======
+>>>>>>> 12a54ec (.)
 che si occupa di costruire la notifica ed aggiungere eventuali allegati.  
 
 Al suo interno utilizza la classe **Notify\Actions\NotifyTheme\Get**.  
@@ -23,6 +26,7 @@ Al suo interno utilizza la classe **Notify\Actions\NotifyTheme\Get**.
 
 Classe se si occupa della creazione del body_html, tramite i suoi parametri.  
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 I valori del parametro array $view_params devono essere tutti tipo stringa, altrimenti non verranno presi in considerazione in caso di replace delle variabili.
 =======
@@ -40,3 +44,6 @@ che si occupa di richiamare la mail richiamata tramite parametro.
 =======
 che si occupa di recuperare la notifica richiamata tramite parametro.
 >>>>>>> c134fe2 (.)
+=======
+I valori del parametro array $view_params devono essere tutti tipo stringa, altrimenti non verranno presi in considerazione in caso di replace delle variabili.
+>>>>>>> 12a54ec (.)
