@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "name": "laraxot/module_notify_fila",
     "description": "notify module dedicated to managing notifications",
@@ -84,3 +85,28 @@
     "minimum-stability": "dev",
     "prefer-stable": true
 }
+=======
+{
+    "name": "nwidart/notify",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Notify\\": ""
+        }
+    }
+}
+>>>>>>> 9349baf (.)
