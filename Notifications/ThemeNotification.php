@@ -24,19 +24,22 @@ use Illuminate\Notifications\Notification;
 use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Notifications\Channels\EsendexChannel;
 
-
-
-class ThemeNotification extends Notification implements ShouldQueue {
+class ThemeNotification extends Notification implements ShouldQueue
+{
     use Queueable;
     public array $data;
+<<<<<<< HEAD
     
 >>>>>>> 0cbdb01 (up)
+=======
+>>>>>>> e73574f (up)
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function __construct(string $name, array $view_params)
     {
@@ -86,24 +89,31 @@ class ThemeNotification extends Notification implements ShouldQueue {
 =======
     public function __construct(array $data) {
         $this->data=$data;
+=======
+    public function __construct(array $data)
+    {
+        $this->data = $data;
+>>>>>>> e73574f (up)
     }
 
-    /*
+    /**
      * Get the notification's delivery channels.
      *
      * @param mixed $notifiable
      *
      * @return array
      */
-    public function via($notifiable) {
-        //$via=[$this->data['driver']];
-        //return $via;
-        //return EsendexChannel::class;
+    public function via($notifiable)
+    {
+        // $via=[$this->data['driver']];
+        // return $via;
+        // return EsendexChannel::class;
         $channels = [];
         $channels[] = 'essendex';
+
         return $channels;
     }
-        
+
     /**
      * Get the mail representation of the notification.
      *
@@ -111,8 +121,10 @@ class ThemeNotification extends Notification implements ShouldQueue {
      *
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function toMail($notifiable) {
+    public function toMail($notifiable)
+    {
         dddx('oo');
+
         return (new MailMessage())
             ->from($this->from)
             ->subject($this->subject)
@@ -120,7 +132,8 @@ class ThemeNotification extends Notification implements ShouldQueue {
             ->view('notify::notifications.html', ['html' => $this->html]);
     }
 
-    public function toEssendex($notifiable) {
+    public function toEssendex($notifiable)
+    {
         dddx($notifiable);
     }
 >>>>>>> 0cbdb01 (up)
@@ -143,9 +156,14 @@ class ThemeNotification extends Notification implements ShouldQueue {
      *
      * @return SmsData
      */
-    public function toSms($notifiable) {
+    public function toSms($notifiable)
+    {
         dddx('a');
+<<<<<<< HEAD
 >>>>>>> 0cbdb01 (up)
+=======
+
+>>>>>>> e73574f (up)
         return SmsData::from([
             'from' => $this->from,
             'to' => $notifiable->routeNotificationFor('mobile'),
@@ -177,7 +195,8 @@ class ThemeNotification extends Notification implements ShouldQueue {
      *
      * @return array
      */
-    public function toArray($notifiable) {
+    public function toArray($notifiable)
+    {
         dddx($notifiable);
 
         return [

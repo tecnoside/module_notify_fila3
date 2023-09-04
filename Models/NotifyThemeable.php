@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Models;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Modules\Notify\Models\NotifyThemeable.
  *
@@ -17,6 +18,19 @@ namespace Modules\Notify\Models;
  * @property string|null                     $updated_by
  * @property int|null                        $notify_theme_id
  *
+=======
+/**
+ * Modules\Notify\Models\NotifyThemeable
+ *
+ * @property int $id
+ * @property string|null $model_type
+ * @property int|null $model_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property string|null $created_by
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $updated_by
+ * @property int|null $notify_theme_id
+>>>>>>> e73574f (up)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyThemeable newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyThemeable newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyThemeable query()
@@ -28,6 +42,7 @@ namespace Modules\Notify\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyThemeable whereNotifyThemeId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyThemeable whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyThemeable whereUpdatedBy($value)
+<<<<<<< HEAD
  *
  * @mixin IdeHelperNotifyThemeable
  * @mixin \Eloquent
@@ -35,6 +50,10 @@ namespace Modules\Notify\Models;
 class NotifyThemeable extends BaseMorphPivot
 {
 =======
+=======
+ * @mixin \Eloquent
+ */
+>>>>>>> e73574f (up)
 class NotifyThemeable extends BaseMorphPivot {
 >>>>>>> 18a2c03 (up)
 }
