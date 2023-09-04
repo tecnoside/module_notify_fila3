@@ -36,6 +36,7 @@ Questi parametri dovranno essere utilizzati nel corpo della notifica, esempio:
 ```php
 Ciao [profile.first_name] [profile.last_name] come stai?
 <<<<<<< HEAD
+<<<<<<< HEAD
 ```
 
 Ciò significa che per utilizzare questa email, come parametro dovrà avere un array profile,  
@@ -49,3 +50,9 @@ Inserire nel campo body il corpo della notifica e ricopiarlo nel campo body_html
 =======
 ```
 >>>>>>> ea7e096 (.)
+=======
+```
+
+Ciò significa che per utilizzare questa email, come parametro dovrà avere un array profile,  
+con all'interno first_name e last_name.
+>>>>>>> 6fa2bb9 (.)
