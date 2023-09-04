@@ -14,6 +14,7 @@ use Modules\Xot\Traits\Updater;
 abstract class BasePivot extends Pivot
 {
     use Updater;
+<<<<<<< HEAD
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -22,6 +23,20 @@ abstract class BasePivot extends Pivot
      * @var bool
      */
     public static $snakeAttributes = true;
+=======
+/**
+ * Indicates whether attributes are snake cased on arrays.
+ *
+ * @see  https://laravel-news.com/6-eloquent-secrets
+* 
+ * @var bool
+ */
+// public static $snakeAttributes = true;
+
+protected $perPage = 30;
+
+    //use Searchable;
+>>>>>>> 9a6fed4 (up)
 
     /**
      * @var bool

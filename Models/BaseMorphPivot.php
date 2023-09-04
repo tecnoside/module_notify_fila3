@@ -13,6 +13,7 @@ use Modules\Xot\Traits\Updater;
 abstract class BaseMorphPivot extends MorphPivot
 {
     use Updater;
+<<<<<<< HEAD
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -33,6 +34,19 @@ abstract class BaseMorphPivot extends MorphPivot
     public $timestamps = true;
 
     protected $perPage = 30;
+=======
+/**
+ * Indicates whether attributes are snake cased on arrays.
+ *
+ * @see  https://laravel-news.com/6-eloquent-secrets
+* 
+ * @var bool
+ */
+// public static $snakeAttributes = true;
+
+protected $perPage = 30;
+
+>>>>>>> 9a6fed4 (up)
 
     protected $connection = 'notify';
 
