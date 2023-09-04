@@ -6,12 +6,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a9945fb (.)
 =======
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> 70ab021 (.)
+=======
+>>>>>>> a758bd5 (.)
     <section class="container max-w-6xl mx-auto px-6 py-10 md:py-12">
         <div class="flex flex-col-reverse mb-10 lg:flex-row lg:mb-24">
             <div class="mt-8">
@@ -19,8 +22,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> a758bd5 (.)
 
                 <h2 id="intro-powered-by-jigsaw" class="font-light mt-4">{{ $page->siteDescription }}</h2>
 
@@ -73,6 +79,7 @@
             </div>
         </div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -236,4 +243,6 @@
 =======
     </section>
 >>>>>>> 70ab021 (.)
+=======
+>>>>>>> a758bd5 (.)
 @endsection

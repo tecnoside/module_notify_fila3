@@ -4,16 +4,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> d27db1b (.)
+=======
+>>>>>>> a758bd5 (.)
 <?php
 
 declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,10 +39,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 <<<<<<< HEAD
 >>>>>>> 42aa20e (.)
 =======
+=======
+>>>>>>> a758bd5 (.)
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 // ---------- traits
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 // //use Laravel\Scout\Searchable;
+<<<<<<< HEAD
 >>>>>>> 3a62aee (up)
 =======
 >>>>>>> d27db1b (.)
@@ -48,6 +55,8 @@ use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 // //use Laravel\Scout\Searchable;
 >>>>>>> b1dceab (up)
+=======
+>>>>>>> a758bd5 (.)
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Services\FactoryService;
 use Modules\Xot\Traits\Updater;
@@ -55,6 +64,7 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseModel.
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -101,6 +111,15 @@ protected $perPage = 30;
     protected $connection = 'notify';
 
 >>>>>>> 5f3f456 (up)
+=======
+abstract class BaseModel extends Model
+{
+    // use Searchable;
+    // use Cachable;
+    use HasFactory;
+
+    use Updater;
+>>>>>>> a758bd5 (.)
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -108,6 +127,7 @@ protected $perPage = 30;
      *
      * @var bool
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public static $snakeAttributes = true;
 =======
@@ -275,6 +295,9 @@ abstract class BaseModel extends Model
      */
 <<<<<<< HEAD
      public static $snakeAttributes = true;
+=======
+    public static $snakeAttributes = true;
+>>>>>>> a758bd5 (.)
 
     protected $perPage = 30;
 
@@ -285,8 +308,11 @@ abstract class BaseModel extends Model
      */
     protected $casts = [
         // 'published_at' => 'datetime:Y-m-d', // da verificare
+<<<<<<< HEAD
 =======
 >>>>>>> b1dceab (up)
+=======
+>>>>>>> a758bd5 (.)
     ];
 
     protected $appends = [];
@@ -309,10 +335,13 @@ abstract class BaseModel extends Model
     protected $hidden = [
         // 'password'
     ];
+<<<<<<< HEAD
 =======
         //'password'
     ];
 >>>>>>> d27db1b (.)
+=======
+>>>>>>> a758bd5 (.)
     /**
      * @var bool
      */
@@ -323,6 +352,7 @@ abstract class BaseModel extends Model
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     protected static function newFactory() {
         return FactoryService::newFactory(get_called_class());
@@ -464,9 +494,14 @@ abstract class BaseModel extends Model {
 }
 >>>>>>> 2e16e99 (up)
 =======
+=======
+>>>>>>> a758bd5 (.)
     protected static function newFactory()
     {
         return FactoryService::newFactory(static::class);
     }
 }
+<<<<<<< HEAD
 >>>>>>> 27d29a3 (up)
+=======
+>>>>>>> a758bd5 (.)

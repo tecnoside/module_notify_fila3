@@ -5,12 +5,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 478e0e4 (.)
 =======
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> b3ff86f (.)
+=======
+>>>>>>> a758bd5 (.)
 <?php
 
 declare(strict_types=1);
@@ -20,6 +23,7 @@ namespace Modules\Notify\Services;
 use Illuminate\Support\Str;
 
 // ---------CSS------------
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,6 +215,8 @@ use Illuminate\Support\Str;
 >>>>>>> b3ff86f (.)
 =======
 >>>>>>> 0d776db (up)
+=======
+>>>>>>> a758bd5 (.)
 
 /**
  * Class SmsService.
@@ -256,14 +262,19 @@ class MailService {
      * ---.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function send() {
 =======
     public function send(): self {
 >>>>>>> 0d776db (up)
+=======
+    public function send(): self {
+>>>>>>> a758bd5 (.)
         $class = '\Modules\Notify\Services\MailEngines\\'.Str::studly($this->driver).'Engine';
         $class::make()
             ->setLocalVars($this->vars)
             ->send();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -278,19 +289,29 @@ class MailService {
 >>>>>>> 6d517f2 (.)
 =======
 >>>>>>> 518a428 (.)
+=======
+
+        return $this;
+    }
+>>>>>>> a758bd5 (.)
 
     /**
      * ---.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function try() {
 =======
     public function try(): self {
 >>>>>>> 0d776db (up)
+=======
+    public function try(): self {
+>>>>>>> a758bd5 (.)
         $class = '\Modules\Notify\Services\MailEngines\\'.Str::studly($this->driver).'Engine';
         $class::make()
             ->setLocalVars($this->vars)
             ->try();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -309,3 +330,9 @@ class MailService {
 =======
 }
 >>>>>>> b3ff86f (.)
+=======
+
+        return $this;
+    }
+}
+>>>>>>> a758bd5 (.)

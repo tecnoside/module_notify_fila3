@@ -30,6 +30,7 @@ class BeautyEmail implements Mailer {
      * Initialise the settings and mailer.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct(?array $settings = null) {
         if (null == $settings) {
             $settings = array_merge(
@@ -57,12 +58,20 @@ class BeautyEmail implements Mailer {
         $settings = array_merge($beauty->view,$settings);
 >>>>>>> d8faaba (up)
 =======
+=======
+    public function __construct(array $settings = []) {
+        $beauty = BeautyEmailData::from(config('beautymail'));
+
+>>>>>>> a758bd5 (.)
         // $default['css'] = ! is_null(config('beautymail.css')) && count(config('beautymail.css')) > 0 ? implode(' ', config('beautymail.css')) : '';
 
         $beauty->view['css'] = implode(' ', $beauty->css);
 
         $settings = array_merge($beauty->view, $settings);
+<<<<<<< HEAD
 >>>>>>> 06bf12b (up)
+=======
+>>>>>>> a758bd5 (.)
         $this->settings = $settings;
         $mailer = app()->make('Illuminate\Contracts\Mail\Mailer');
         if (! $mailer instanceof Mailer) {
@@ -145,6 +154,7 @@ class BeautyEmail implements Mailer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param mixed $view
      *
 =======
@@ -166,6 +176,9 @@ class BeautyEmail implements Mailer {
 =======
      * Summary of view.
 >>>>>>> 8d9a96b (up)
+=======
+     * Summary of view.
+>>>>>>> a758bd5 (.)
      */
     public function view(string $view, array $data = []): Renderable {
         $data = array_merge($this->settings, $data, ['view' => $view]);

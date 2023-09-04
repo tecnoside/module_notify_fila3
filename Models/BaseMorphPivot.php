@@ -4,8 +4,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> a758bd5 (.)
 <?php
 
 declare(strict_types=1);
@@ -18,6 +21,7 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseMorphPivot.
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 abstract class BaseMorphPivot extends MorphPivot {
     use Updater;
@@ -131,6 +135,8 @@ use Modules\Xot\Traits\Updater;
  */
 =======
 >>>>>>> b1dceab (up)
+=======
+>>>>>>> a758bd5 (.)
 abstract class BaseMorphPivot extends MorphPivot {
     use Updater;
     /**
@@ -140,6 +146,7 @@ abstract class BaseMorphPivot extends MorphPivot {
      *
      * @var bool
      */
+<<<<<<< HEAD
      public static $snakeAttributes = true;
 
     protected $perPage = 30;
@@ -244,6 +251,11 @@ abstract class BaseMorphPivot extends MorphPivot
     protected $perPage = 30;
 =======
 >>>>>>> d27db1b (.)
+=======
+    public static $snakeAttributes = true;
+
+    protected $perPage = 30;
+>>>>>>> a758bd5 (.)
 
     protected $connection = 'notify';
 
@@ -252,13 +264,17 @@ abstract class BaseMorphPivot extends MorphPivot
      */
     protected $appends = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> d27db1b (.)
+=======
+>>>>>>> a758bd5 (.)
     /**
      * @var string
      */
     protected $primaryKey = 'id';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     // protected $attributes = ['related_type' => 'cuisine_cat'];
@@ -273,6 +289,8 @@ abstract class BaseMorphPivot extends MorphPivot
     /**
      * @var array<string>
 =======
+=======
+>>>>>>> a758bd5 (.)
     /**
      * @var bool
      */
@@ -281,10 +299,16 @@ abstract class BaseMorphPivot extends MorphPivot
      * @var bool
      */
     public $timestamps = true;
+<<<<<<< HEAD
     //protected $attributes = ['related_type' => 'cuisine_cat'];
     /**
      * @var string[]
 >>>>>>> d27db1b (.)
+=======
+    // protected $attributes = ['related_type' => 'cuisine_cat'];
+    /**
+     * @var string[]
+>>>>>>> a758bd5 (.)
      */
     protected $dates = [
         'created_at',
@@ -293,6 +317,7 @@ abstract class BaseMorphPivot extends MorphPivot
         // 'published_at',
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /**
      * @var array<string>
@@ -300,6 +325,10 @@ abstract class BaseMorphPivot extends MorphPivot
     /**
      * @var string[]
 >>>>>>> d27db1b (.)
+=======
+    /**
+     * @var string[]
+>>>>>>> a758bd5 (.)
      */
     protected $fillable = [
         'id',
@@ -309,6 +338,7 @@ abstract class BaseMorphPivot extends MorphPivot
         'note',
     ];
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -326,3 +356,5 @@ abstract class BaseMorphPivot extends MorphPivot
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> d27db1b (.)
+=======
+>>>>>>> a758bd5 (.)

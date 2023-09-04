@@ -7,14 +7,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> b735fbf (.)
+=======
+>>>>>>> a758bd5 (.)
 declare(strict_types=1);
 
 use Illuminate\Support\Str;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 $moduleName = 'Notify';
 
@@ -98,12 +102,17 @@ declare(strict_types=1);
 >>>>>>> 8f4c37e (.)
 use Illuminate\Support\Str;
 
+=======
+>>>>>>> a758bd5 (.)
 return [
     'baseUrl' => 'https://laraxot.github.io/module_notify/',
     'production' => false,
     'siteName' => 'Modulo Notify',
     'siteDescription' => 'Beautiful docs powered by Jigsaw',
+<<<<<<< HEAD
 >>>>>>> becf1dc (up)
+=======
+>>>>>>> a758bd5 (.)
 
     // Algolia DocSearch credentials
     'docsearchApiKey' => env('DOCSEARCH_KEY'),
@@ -116,6 +125,7 @@ return [
     'isActive' => function ($page, $path) {
         return Str::endsWith(trimPath($page->getPath()), trimPath($path));
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -134,12 +144,15 @@ return [
 >>>>>>> fbeb824 (up)
 =======
 >>>>>>> becf1dc (up)
+=======
+>>>>>>> a758bd5 (.)
     'isActiveParent' => function ($page, $menuItem) {
         if (is_object($menuItem) && $menuItem->children) {
             return $menuItem->children->contains(function ($child) use ($page) {
                 return trimPath($page->getPath()) == trimPath($child);
             });
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,9 +224,14 @@ return [
 ];
 >>>>>>> b735fbf (.)
 =======
+=======
+>>>>>>> a758bd5 (.)
     },
     'url' => function ($page, $path) {
         return Str::startsWith($path, 'http') ? $path : '/'.trimPath($path);
     },
 ];
+<<<<<<< HEAD
 >>>>>>> becf1dc (up)
+=======
+>>>>>>> a758bd5 (.)

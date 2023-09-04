@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 {
     "name": "laraxot/module_notify_fila",
     "description": "notify module dedicated to managing notifications",
@@ -100,6 +101,8 @@
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> a758bd5 (.)
 {
     "name": "laraxot/module_notify",
     "description": "",
@@ -123,6 +126,7 @@
         "psr-4": {
             "Modules\\Notify\\": ""
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     }
@@ -199,6 +203,8 @@
         "thecodingmachine/phpstan-safe-rule": "*",
         "tightenco/duster": "^2.2"
 =======
+=======
+>>>>>>> a758bd5 (.)
     },
     "require": {
         "laraxot/module_xot": "dev-master",
@@ -223,7 +229,10 @@
         "spatie/pest-plugin-snapshots": "^1.1",
         "spatie/phpunit-snapshot-assertions": "^4.2",
         "spatie/test-time": "^1.2"
+<<<<<<< HEAD
 >>>>>>> fbb3e22 (.)
+=======
+>>>>>>> a758bd5 (.)
     },
     "scripts": {
         "post-autoload-dump": [
@@ -231,12 +240,18 @@
         ],
         "post-update-cmd": [
 <<<<<<< HEAD
+<<<<<<< HEAD
             "Illuminate\\Foundation\\ComposerScripts::postUpdate"
 =======
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "@php artisan ide-helper:generate",
             "@php artisan ide-helper:meta"
 >>>>>>> fbb3e22 (.)
+=======
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta"
+>>>>>>> a758bd5 (.)
         ],
         "analyse": "vendor/bin/phpstan analyse",
         "test": "./vendor/bin/pest --no-coverage",
@@ -253,13 +268,17 @@
     "minimum-stability": "dev",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fbb3e22 (.)
+=======
+>>>>>>> a758bd5 (.)
     "prefer-stable": true,
     "repositories": [{
         "type": "composer",
         "url": "https://wire-elements-pro.composer.sh"
     }]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -295,3 +314,6 @@
 =======
 }
 >>>>>>> fbb3e22 (.)
+=======
+}
+>>>>>>> a758bd5 (.)

@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 42aa20e (.)
 =======
@@ -93,6 +94,8 @@ class SmsService
 >>>>>>> 8be0eaa (up)
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> a758bd5 (.)
 <?php
 
 declare(strict_types=1);
@@ -102,6 +105,7 @@ namespace Modules\Notify\Services;
 use Illuminate\Support\Str;
 
 // ---------CSS------------
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -133,6 +137,8 @@ use Illuminate\Support\Str;
 >>>>>>> d27db1b (.)
 =======
 >>>>>>> 0d776db (up)
+=======
+>>>>>>> a758bd5 (.)
 
 /**
  * Class SmsService.
@@ -151,11 +157,15 @@ class SmsService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a758bd5 (.)
 
     public string $driver = 'netfun';
     public ?string $body;
 
     public array $vars = [];
+<<<<<<< HEAD
 =======
     public string $driver;
 =======
@@ -216,6 +226,8 @@ class SmsService {
 
     public array $vars = [];
 >>>>>>> a7caca4 (.)
+=======
+>>>>>>> a758bd5 (.)
 
     public static function getInstance(): self {
         if (null === self::$instance) {
@@ -233,6 +245,9 @@ class SmsService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a758bd5 (.)
     public function setLocalVars(array $vars): self {
         foreach ($vars as $k => $v) {
             $this->{$k} = $v;
@@ -261,6 +276,7 @@ class SmsService {
 
     public function getVars(): array {
         return $this->vars;
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 }
@@ -449,3 +465,7 @@ class SmsService
 >>>>>>> d27db1b (.)
 =======
 >>>>>>> a7caca4 (.)
+=======
+    }
+}
+>>>>>>> a758bd5 (.)

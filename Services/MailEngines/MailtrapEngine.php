@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Mail;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class MailtrapEngine
 {
     private static ?self $instance = null;
@@ -37,11 +38,16 @@ class MailtrapEngine
     private static ?self $instance = null;
 
 >>>>>>> b735fbf (.)
+=======
+class MailtrapEngine {
+    private static ?self $instance = null;
+>>>>>>> a758bd5 (.)
     public ?string $from;
     public string $to;
     public string $driver;
     public ?string $body;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,11 +81,20 @@ class MailtrapEngine
 =======
             self::$instance = new self;
 >>>>>>> b735fbf (.)
+=======
+    public function __construct() {
+    }
+
+    public static function getInstance(): self {
+        if (null === self::$instance) {
+            self::$instance = new self();
+>>>>>>> a758bd5 (.)
         }
 
         return self::$instance;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,11 +108,14 @@ class MailtrapEngine
 =======
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> a758bd5 (.)
     public static function make(): self {
         return static::getInstance();
     }
 
     public function setLocalVars(array $vars): self {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e8014ec (.)
 =======
@@ -111,6 +129,8 @@ class MailtrapEngine
     public function setLocalVars(array $vars): self
     {
 >>>>>>> b735fbf (.)
+=======
+>>>>>>> a758bd5 (.)
         foreach ($vars as $k => $v) {
             $this->{$k} = $v;
         }
@@ -121,6 +141,7 @@ class MailtrapEngine
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function send(): self
     {
 =======
@@ -133,6 +154,9 @@ class MailtrapEngine
     public function send(): self
     {
 >>>>>>> b735fbf (.)
+=======
+    public function send(): self {
+>>>>>>> a758bd5 (.)
         dddx('WIP');
 
         return $this;
@@ -141,6 +165,7 @@ class MailtrapEngine
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function try(): void
     {
 =======
@@ -153,10 +178,14 @@ class MailtrapEngine
     public function try(): void
     {
 >>>>>>> b735fbf (.)
+=======
+    public function try(): void {
+>>>>>>> a758bd5 (.)
         // dddx($this);
 
         // Mail::raw('Hello World!', function($msg) {$msg->to('vair81@gmail.com')->subject('Test Email'); });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -169,12 +198,15 @@ class MailtrapEngine
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> 06bf12b (up)
+=======
+>>>>>>> a758bd5 (.)
         // try {
         Mail::raw((string) $this->body, function ($msg) {
             $msg->to($this->to)->subject('Test Email');
         });
         // Dead catch - ErrorException is never thrown in the try block.
         // } catch (ErrorException $e) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -220,5 +252,9 @@ class MailtrapEngine
         //    throw new Exception('['.__LINE__.']['.__FILE__.']');
         // }
 >>>>>>> 06bf12b (up)
+=======
+        //    throw new Exception('['.__LINE__.']['.__FILE__.']');
+        // }
+>>>>>>> a758bd5 (.)
     }
 }

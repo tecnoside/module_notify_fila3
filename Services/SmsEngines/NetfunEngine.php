@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 /**
 <<<<<<< HEAD
@@ -413,20 +414,26 @@ class NetfunEngine {
 >>>>>>> 8be0eaa (up)
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> a758bd5 (.)
 <?php
 /**
  * @see https://smsvi-docs.web.app/docs/restful/send-batch/
  */
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 42aa20e (.)
 >>>>>>> d073338 (.)
+=======
+>>>>>>> a758bd5 (.)
 
 declare(strict_types=1);
 
 namespace Modules\Notify\Services\SmsEngines;
 
 use Exception;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -716,6 +723,8 @@ namespace Modules\Notify\Services\SmsEngines;
 
 =======
 >>>>>>> 0d776db (up)
+=======
+>>>>>>> a758bd5 (.)
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Str;
@@ -733,10 +742,15 @@ class NetfunEngine {
     public ?string $body;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     public array $vars = [];
 
 >>>>>>> 0d776db (up)
+=======
+    public array $vars = [];
+
+>>>>>>> a758bd5 (.)
     public string $send_method = 'batch';
 
     public function __construct() {
@@ -765,6 +779,7 @@ class NetfunEngine {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     public function getVars() {
 =======
@@ -777,6 +792,12 @@ class NetfunEngine {
     }
 
 >>>>>>> 0d776db (up)
+=======
+    public function getVars(): array {
+        return $this->vars;
+    }
+
+>>>>>>> a758bd5 (.)
     public function send(): self {
         switch ($this->send_method) {
             case 'batch': return $this->sendBatch();
@@ -839,6 +860,7 @@ class NetfunEngine {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             dddx($e);
         }
 =======
@@ -846,18 +868,29 @@ class NetfunEngine {
         }
         /*
 >>>>>>> 0d776db (up)
+=======
+            throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']');
+        }
+        /*
+>>>>>>> a758bd5 (.)
         echo '<hr/>';
         echo '<pre>to: '.$this->to.'</pre>';
         echo '<pre>body: '.$this->body.'</pre>';
         echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
         echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a758bd5 (.)
         */
 
         $this->vars['status_code'] = $response->getStatusCode();
         $this->vars['status_txt'] = $response->getBody()->getContents();
+<<<<<<< HEAD
 >>>>>>> 0d776db (up)
+=======
+>>>>>>> a758bd5 (.)
 
         return $this;
     }
@@ -881,10 +914,14 @@ class NetfunEngine {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             dddx($e);
 =======
             throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']');
 >>>>>>> 0d776db (up)
+=======
+            throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']');
+>>>>>>> a758bd5 (.)
         }
         echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
         echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
@@ -892,6 +929,7 @@ class NetfunEngine {
         return $this;
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1058,3 +1096,5 @@ class NetfunEngine {
 >>>>>>> 7fc5941 (.)
 =======
 >>>>>>> a7caca4 (.)
+=======
+>>>>>>> a758bd5 (.)

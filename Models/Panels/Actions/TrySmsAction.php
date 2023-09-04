@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Models\Panels\Actions;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // -------- services --------
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,6 +41,9 @@ use Modules\Notify\Notifications\SampleNotification;
 =======
 // -------- services --------
 >>>>>>> 0d776db (up)
+=======
+// -------- services --------
+>>>>>>> a758bd5 (.)
 
 use Modules\Cms\Actions\GetViewAction;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
@@ -53,15 +57,20 @@ use  Modules\Notify\Notifications\SampleNotification;
 use Modules\Notify\Datas\NotificationData;;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //-------- bases -----------
 =======
 // -------- bases -----------
 >>>>>>> 0d776db (up)
 >>>>>>> 5b257fb (up)
+=======
+// -------- bases -----------
+>>>>>>> a758bd5 (.)
 
 /**
  * Class TestAction.
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:Models/Panels/Actions/TestSmsAction.php
@@ -91,12 +100,16 @@ class TestSmsAction extends XotBasePanelAction {
 class TrySmsAction extends XotBasePanelAction {
 >>>>>>>> 5b257fb (up):Models/Panels/Actions/TrySmsAction.php
 >>>>>>> 5b257fb (up)
+=======
+class TrySmsAction extends XotBasePanelAction {
+>>>>>>> a758bd5 (.)
     public bool $onItem = true;
     public string $icon = '<i class="fas fa-vial"></i>SMS';
 
     /**
      * @return mixed
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function handle() {
 <<<<<<< HEAD
@@ -131,10 +144,17 @@ class TrySmsAction extends XotBasePanelAction {
 =======
             'esendex'=>'esendex',
 >>>>>>> 7f1bbca (up)
+=======
+    public function handle() {
+        $drivers = [
+            'netfun'=>'netfun',
+            'esendex'=>'esendex',
+>>>>>>> a758bd5 (.)
         ];
         $i = request('i');
 
         $driver = isset($drivers[$i]) ? $drivers[$i] : null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         $view = app(GetViewAction::class)->execute();
@@ -160,6 +180,9 @@ $view = $this->panel->getView();
 >>>>>>> 8229f91 (up)
         $view = app(GetViewAction::class)->execute();
 >>>>>>> ce6a32e (up)
+=======
+        $view = app(GetViewAction::class)->execute();
+>>>>>>> a758bd5 (.)
 
         $view_params = [
             'view' => $view,
@@ -167,6 +190,7 @@ $view = $this->panel->getView();
             'driver' => $driver,
         ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         return view($view, $view_params);
@@ -263,5 +287,16 @@ $view = $this->panel->getView();
 =======
         echo '<h3>+Done</h3>';
 >>>>>>> 8229f91 (up)
+=======
+        return view($view, $view_params);
+    }
+
+    public function postHandle() {
+        $data = request()->all();
+        $data['channels']=[$data['driver']];
+        $hows=NotificationData::from($data);
+        Notification::send([$hows], new SampleNotification($data));
+        echo '<h3>+Done</h3>';
+>>>>>>> a758bd5 (.)
     }
 }

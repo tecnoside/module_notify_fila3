@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:Services/MailEngines/DuocircleEngine.test
 =======
 >>>>>>> 1ebfe39 (up)
@@ -8,6 +9,8 @@
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> d8faaba (up)
+=======
+>>>>>>> a758bd5 (.)
 <?php
 /**
  * @see https://smsvi-docs.web.app/docs/restful/send-batch/
@@ -17,6 +20,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services\MailEngines;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,10 +39,13 @@ use GuzzleHttp\Client;
 //---------CSS------------
 =======
 >>>>>>> d8faaba (up)
+=======
+>>>>>>> a758bd5 (.)
 use Exception;
 use GuzzleHttp\Client;
 
 // ---------CSS------------
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -228,6 +235,8 @@ use GuzzleHttp\Client;
 =======
 >>>>>>> 0d776db (up)
 >>>>>>> d8faaba (up)
+=======
+>>>>>>> a758bd5 (.)
 
 /**
  * Class SmsService.
@@ -285,6 +294,7 @@ class DuocircleEngine {
 
         dddx($request);
         */
+<<<<<<< HEAD
 <<<<<<< HEAD
         /** @var \Webklex\PHPIMAP\Client $client */
         $client = \Webklex\IMAP\Facades\Client::account('default');
@@ -340,6 +350,8 @@ class DuocircleEngine {
 >>>>>>> 1ebfe39 (up)
 =======
 =======
+=======
+>>>>>>> a758bd5 (.)
         if (! class_exists(\Webklex\PHPIMAP\Client::class)) {
             throw new Exception('class [Webklex\\PHPIMAP\\Client] not exists ['.__LINE__.']['.class_basename(__CLASS__).']');
         }
@@ -371,13 +383,17 @@ class DuocircleEngine {
             $messages = $folder->messages()->all()->get();
 
             // / @var \Webklex\PHPIMAP\Message $message
+<<<<<<< HEAD
 >>>>>>> 0d776db (up)
 >>>>>>> d8faaba (up)
+=======
+>>>>>>> a758bd5 (.)
             foreach ($messages as $message) {
                 echo $message->getSubject().'<br />';
                 echo 'Attachments: '.$message->getAttachments()->count().'<br />';
                 echo $message->getHTMLBody();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 // Move the current Message to 'INBOX.read'
 <<<<<<< HEAD
@@ -407,6 +423,10 @@ class DuocircleEngine {
                 if (true === $message->move('INBOX.read')) {
 >>>>>>> b3b016d (up)
 >>>>>>> d8faaba (up)
+=======
+                // Move the current Message to 'INBOX.read'
+                if (true === $message->move('INBOX.read')) {
+>>>>>>> a758bd5 (.)
                     echo 'Message has ben moved';
                 } else {
                     echo 'Message could not be moved';
@@ -415,6 +435,7 @@ class DuocircleEngine {
         }
 
         return $this;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     }
@@ -435,3 +456,7 @@ class DuocircleEngine {
     }
 }
 >>>>>>> d8faaba (up)
+=======
+    }
+}
+>>>>>>> a758bd5 (.)

@@ -12,6 +12,7 @@ use Illuminate\Support\Str;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Notify\Datas\SmsData;
 =======
 use Modules\Notify\Data\SmsData;
@@ -28,6 +29,9 @@ use Modules\Notify\Data\SmsData;
 =======
 use Modules\Notify\Datas\SmsData;
 >>>>>>> 8229f91 (up)
+=======
+use Modules\Notify\Datas\SmsData;
+>>>>>>> a758bd5 (.)
 use Spatie\QueueableAction\QueueableAction;
 
 class NamirialSendAction {

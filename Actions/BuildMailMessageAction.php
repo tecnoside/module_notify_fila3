@@ -10,6 +10,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Notify\Datas\AttachmentData;
 use Spatie\LaravelData\DataCollection;
 use Spatie\QueueableAction\QueueableAction;
@@ -112,6 +113,8 @@ class BuildMailMessageAction
         return $email;
 >>>>>>> b068ab9 (up)
 =======
+=======
+>>>>>>> a758bd5 (.)
 use Illuminate\Support\Str;
 use Modules\Notify\Models\NotifyTheme;
 use Spatie\QueueableAction\QueueableAction;
@@ -185,6 +188,9 @@ class BuildMailMessageAction
             // ->from('barrett@example.com', 'Barrett Blair')
             ->subject($view_params['subject'] ?? $theme->subject)
             ->view($view_html, $view_params);
+<<<<<<< HEAD
 >>>>>>> 681ec81 (up)
+=======
+>>>>>>> a758bd5 (.)
     }
 }

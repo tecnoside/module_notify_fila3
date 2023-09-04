@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
 <<<<<<< HEAD
+<<<<<<< HEAD
 //----- models -----
 
 //----- bases ----
@@ -12,11 +13,17 @@ use Illuminate\Database\Schema\Blueprint;
 
 // ----- bases ----
 >>>>>>> b1dceab (up)
+=======
+// ----- models -----
+
+// ----- bases ----
+>>>>>>> a758bd5 (.)
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
  * Class CreateThemesTable.
  */
+<<<<<<< HEAD
 <<<<<<< HEAD:Database/Migrations/2020_01_01_000005_create_notify_themes_table.php
 class CreateNotifyThemesTable extends XotBaseMigration {
 <<<<<<< HEAD
@@ -28,12 +35,18 @@ class CreateNotifyThemesTable extends XotBaseMigration
 >>>>>>> 2e16e99 (up):Database/Migrations/2020_01_01_000006_create_notify_themes_table.php
     // use XotBaseMigrationTrait;
 >>>>>>> b1dceab (up)
+=======
+class CreateNotifyThemesTable extends XotBaseMigration
+{
+    // use XotBaseMigrationTrait;
+>>>>>>> a758bd5 (.)
 
     /**
      * Run the migrations.
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD:Database/Migrations/2020_01_01_000005_create_notify_themes_table.php
     public function up() {
 <<<<<<< HEAD
@@ -45,6 +58,11 @@ class CreateNotifyThemesTable extends XotBaseMigration
 >>>>>>> 2e16e99 (up):Database/Migrations/2020_01_01_000006_create_notify_themes_table.php
         // -- CREATE --
 >>>>>>> b1dceab (up)
+=======
+    public function up()
+    {
+        // -- CREATE --
+>>>>>>> a758bd5 (.)
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->increments('id');
@@ -55,6 +73,7 @@ class CreateNotifyThemesTable extends XotBaseMigration
             }
         );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         //-- UPDATE --
@@ -82,6 +101,8 @@ class CreateNotifyThemesTable extends XotBaseMigration
 
     //end function up
 =======
+=======
+>>>>>>> a758bd5 (.)
         // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
@@ -121,5 +142,8 @@ class CreateNotifyThemesTable extends XotBaseMigration
     }
 
     // end function up
+<<<<<<< HEAD
 >>>>>>> b1dceab (up)
+=======
+>>>>>>> a758bd5 (.)
 }

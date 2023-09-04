@@ -5,12 +5,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a758bd5 (.)
 <?php
 
 declare(strict_types=1);
 
 namespace Modules\Notify\Providers;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // --- bases ---
@@ -84,6 +88,8 @@ class RouteServiceProvider extends ServiceProvider {
     }
 >>>>>>> 5f3f456 (up)
 =======
+=======
+>>>>>>> a758bd5 (.)
 // --- bases ---
 use Modules\Xot\Providers\XotBaseRouteServiceProvider;
 
@@ -94,6 +100,7 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider {
     protected string $moduleNamespace = 'Modules\Notify\Http\Controllers';
     protected string $module_dir = __DIR__;
     protected string $module_ns = __NAMESPACE__;
+<<<<<<< HEAD
 >>>>>>> 478bb60 (up)
 }
 =======
@@ -285,3 +292,6 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> d27db1b (.)
+=======
+}
+>>>>>>> a758bd5 (.)
