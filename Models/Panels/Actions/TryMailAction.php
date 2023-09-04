@@ -26,6 +26,7 @@ use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 =======
 >>>>>>> 9f492fe (up)
 
+<<<<<<< HEAD
 /**
  
  */
@@ -41,6 +42,8 @@ class TestMailAction extends XotBasePanelAction
 class TestMailAction extends XotBasePanelAction {
 >>>>>>> 6d517f2 (.)
 =======
+=======
+>>>>>>> bc60653 (up)
 class TryMailAction extends XotBasePanelAction {
 >>>>>>> 64529a0 (up):Models/Panels/Actions/TryMailAction.php
     public bool $onItem = true;
