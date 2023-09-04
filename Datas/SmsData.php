@@ -9,6 +9,7 @@ use Spatie\LaravelData\Data;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class SmsData extends Data
 {
     public string $from;
@@ -17,10 +18,14 @@ class SmsData extends Data
 =======
 class SmsData extends Data {
 <<<<<<< HEAD
+=======
+class SmsData extends Data {
+>>>>>>> aa28fe1 (up)
     public string $email;
     // public string $mobile_phone;
     // public string $token;
     // public int $q;
+<<<<<<< HEAD
 >>>>>>> 24ac20c (up)
 =======
     public string $from;
@@ -37,4 +42,6 @@ class SmsData extends Data
     public string $to;
     public string $body;
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> aa28fe1 (up)
 }
