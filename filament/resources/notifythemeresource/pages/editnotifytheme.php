@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b735fbf (.)
 declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
@@ -11,10 +14,13 @@ use Modules\Notify\Filament\Resources\NotifyThemeResource;
 =======
 namespace Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
 
-use Modules\Notify\Filament\Resources\NotifyThemeResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\EditRecord;
+<<<<<<< HEAD
 >>>>>>> 911eb41 (up)
+=======
+use Modules\Notify\Filament\Resources\NotifyThemeResource;
+>>>>>>> 42f9249 (.)
 
 class EditNotifyTheme extends EditRecord
 {
