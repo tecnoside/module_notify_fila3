@@ -115,20 +115,27 @@ Homestead.json
 .phpunit.result.cache
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 23a7ddf (.)
 
 
 *.stackdump
 *.cache
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 89120cb (rebase)
 =======
 >>>>>>> 8be0eaa (up)
+=======
+>>>>>>> 6bb3972 (.)
 =======
 >>>>>>> 1b86d70 (Initial commit)
 =======
 *.cache
 >>>>>>> 6c92430 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 23a7ddf (.)
@@ -138,3 +145,7 @@ Homestead.json
 >>>>>>> 6be216c (Initial commit)
 =======
 >>>>>>> c0db99d (.)
+=======
+=======
+>>>>>>> 23a7ddf (.)
+>>>>>>> 6bb3972 (.)
