@@ -3,6 +3,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8f4c37e (.)
 declare(strict_types=1);
 
 return [
@@ -40,6 +44,8 @@ return [
             'Link utili' => 'docs/duocircle/links',
         ],
     ],
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 declare(strict_types=1);
@@ -51,6 +57,9 @@ declare(strict_types=1);
 
 return [
 >>>>>>> fe06862 (.)
+=======
+return [
+>>>>>>> becf1dc (up)
     'Getting Started' => [
         'url' => 'docs/getting-started',
         'children' => [
@@ -63,6 +72,8 @@ return [
     'Jigsaw Docs' => 'https://jigsaw.tighten.co/docs/installation',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 404660b (up)
 =======
 =======
@@ -72,15 +83,41 @@ return [
     'Funzione del Modulo' => [
         'url' => 'docs/module_notify',
         'children' => [
-            'Notifica ThemeNotification' => 'docs/theme-notification-class',
-            'Classe BuildMailMessageAction' => 'docs/build-mail-message-action',
+            'Creare una notifica' => 'docs/notify/create',
+            'Funzione getNotificationData' => 'docs/functions/get-notification-data',
+            // 'Classe BuildMailMessageAction' => 'docs/build-mail-message-action',
         ],
     ],
-    'TrySendMailAction' => [
-        'url' => 'docs/try_send_mail_action',
+
+    'Classi Importanti' => [
+        'children' => [
+            'Notifica ThemeNotification' => 'docs/theme-notification-class',
+            'Classe BuildMailMessageAction' => 'docs/build-mail-message-action',
+            'TrySendMailAction' => 'docs/try_send_mail_action',
+        ],
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 996ab99 (.)
 =======
 >>>>>>> fe06862 (.)
+=======
+
+=======
+>>>>>>> 0cbb44c (.)
+
+
+>>>>>>> cac1c0d (.)
+=======
+>>>>>>> b735fbf (.)
+=======
+>>>>>>> becf1dc (up)
+=======
+    'Funzione del Modulo' => [
+        'url' => 'docs/module_notify',
+        'children' => [
+            'TrySendMailAction' => 'docs/try_send_mail_action',
+        ],
+    ],
+>>>>>>> 8f4c37e (.)
 ];
