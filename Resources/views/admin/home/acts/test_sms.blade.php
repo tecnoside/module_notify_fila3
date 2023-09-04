@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 @extends('adm_theme::layouts.app')
 @section('content')
     <x-navbar>
@@ -34,6 +35,8 @@
     </x-col>
 @endsection
 =======
+=======
+>>>>>>> 3a0e0a5 (up)
 @extends('adm_theme::layouts.app')
 @section('content')
     <x-navbar>
@@ -68,4 +71,7 @@
        {{ $driver }}
     </x-col>
 @endsection
+<<<<<<< HEAD
 >>>>>>> 9349baf (.)
+=======
+>>>>>>> 3a0e0a5 (up)
