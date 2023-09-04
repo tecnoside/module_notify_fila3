@@ -38,7 +38,10 @@ Homestead.json
 *.stackdump
 *.cache
 *.lock
+<<<<<<< HEAD
 package-lock.json
+=======
+>>>>>>> 5b76a51 (up)
 *.log
 
 *.lock
