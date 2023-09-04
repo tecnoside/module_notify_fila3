@@ -59,7 +59,11 @@ class _ModulePanel extends XotBasePanel {
 >>>>>>> d27db1b (.)
 =======
             new Actions\TrySendMailAction(),
+<<<<<<< HEAD
 >>>>>>> b1dceab (up)
+=======
+            new Actions\TryAlertAction(),
+>>>>>>> ad42f9a (up)
         ];
     }
 }
