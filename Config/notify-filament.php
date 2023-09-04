@@ -132,8 +132,12 @@ return [
         'path' => base_path('Modules/'.$moduleName."/$contextPath/Widgets"),
         'register' => [
             Widgets\AccountWidget::class,
+<<<<<<< HEAD
             Widgets\FilamentInfoWidget::class,
 >>>>>>> 911eb41 (up)
+=======
+            //Widgets\FilamentInfoWidget::class,
+>>>>>>> 57c26cd (up)
         ],
     ],
 
