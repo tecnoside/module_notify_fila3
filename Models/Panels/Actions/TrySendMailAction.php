@@ -8,8 +8,6 @@ namespace Modules\Notify\Models\Panels\Actions;
 
 // -------- services --------
 
-use ErrorException;
-use Exception;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Notification;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
@@ -43,13 +41,13 @@ class TrySendMailAction extends XotBasePanelAction {
         ];
         $mail_mailers = config('mail.mailers');
         if (! is_array($mail_mailers)) {
-            throw new Exception('['.__LINE__.']['.__FILE__.']');
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
         $mailer_options = array_keys($mail_mailers);
         $mailer_options = array_combine($mailer_options, $mailer_options);
 
-        //$view = ThemeService::getView();
-$view = $this->panel->getView();
+        // $view = ThemeService::getView();
+        $view = $this->panel->getView();
 
         $view_params = [
             'view' => $view,
@@ -73,8 +71,8 @@ $view = $this->panel->getView();
             Mail::mailer($data['mailer'])->raw($data['body'], function ($msg) use ($data) {
                 $msg->to($data['to'])->subject($data['subject']);
             });
-        } catch (ErrorException $e) {
-            throw new Exception('['.__LINE__.']['.__FILE__.']');
+        } catch (\ErrorException $e) {
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
 
         return 'done';
