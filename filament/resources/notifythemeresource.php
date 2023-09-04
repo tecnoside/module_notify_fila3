@@ -8,15 +8,19 @@ namespace Modules\Notify\Filament\Resources;
 =======
 namespace Modules\Notify\Filament\Resources;
 
+<<<<<<< HEAD
 use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
 use Modules\Notify\Filament\Resources\NotifyThemeResource\RelationManagers;
 use Modules\Notify\Models\NotifyTheme;
 >>>>>>> 911eb41 (up)
+=======
+>>>>>>> 42f9249 (.)
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+<<<<<<< HEAD
 <<<<<<< HEAD
 use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
 use Modules\Notify\Models\NotifyTheme;
@@ -25,6 +29,10 @@ use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 >>>>>>> 911eb41 (up)
+=======
+use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
+use Modules\Notify\Models\NotifyTheme;
+>>>>>>> 42f9249 (.)
 use Savannabits\FilamentModules\Concerns\ContextualResource;
 
 class NotifyThemeResource extends Resource
@@ -71,6 +79,7 @@ class NotifyThemeResource extends Resource
                     ]
                 )
                     ->default('empty'),
+<<<<<<< HEAD
                 Forms\Components\Textarea::make('body')->columnSpanFull(),
                 // Forms\Components\RichEditor::make('body_html')->columnSpanFull(),
                 TinyEditor::make('body_html')->columnSpanFull(),
@@ -106,23 +115,32 @@ class NotifyThemeResource extends Resource
                 )
                 ->default('empty'),
 >>>>>>> e4aae54 (.)
+=======
+>>>>>>> 42f9249 (.)
                 Forms\Components\RichEditor::make('body')->columnSpanFull(),
                 Forms\Components\RichEditor::make('body_html')->columnSpanFull(),
             ]);
     }
 
-    public static function fieldOptions(string $field): array{
-        $options=NotifyTheme::select($field)
-            ->where($field,'!=',null)
+    public static function fieldOptions(string $field): array
+    {
+        return NotifyTheme::select($field)
+            ->where($field, '!=', null)
             ->distinct()
+<<<<<<< HEAD
                 ->pluck($field, $field)
                 ->toArray();
         return $options;
 >>>>>>> 911eb41 (up)
+=======
+            ->pluck($field, $field)
+            ->toArray();
+>>>>>>> 42f9249 (.)
     }
 
     public static function table(Table $table): Table
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         return $table
             ->columns([
@@ -135,6 +153,8 @@ class NotifyThemeResource extends Resource
 =======
         
         
+=======
+>>>>>>> 42f9249 (.)
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')->sortable(),
@@ -153,9 +173,13 @@ class NotifyThemeResource extends Resource
                 Tables\Filters\SelectFilter::make('type')
                     ->options(self::fieldOptions('type')),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 
 >>>>>>> 911eb41 (up)
+=======
+
+>>>>>>> 42f9249 (.)
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -164,6 +188,7 @@ class NotifyThemeResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     public static function getRelations(): array
@@ -175,14 +200,21 @@ class NotifyThemeResource extends Resource
 
 =======
     
+=======
+
+>>>>>>> 42f9249 (.)
     public static function getRelations(): array
     {
         return [
             //RelationManagers\LinkableRelationManager::class,
         ];
     }
+<<<<<<< HEAD
     
 >>>>>>> 911eb41 (up)
+=======
+
+>>>>>>> 42f9249 (.)
     public static function getPages(): array
     {
         return [
@@ -191,8 +223,12 @@ class NotifyThemeResource extends Resource
             'edit' => Pages\EditNotifyTheme::route('/{record}/edit'),
         ];
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 =======
     }    
 >>>>>>> 911eb41 (up)
+=======
+    }
+>>>>>>> 42f9249 (.)
 }

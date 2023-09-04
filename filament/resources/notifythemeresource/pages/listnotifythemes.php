@@ -11,10 +11,13 @@ use Modules\Notify\Filament\Resources\NotifyThemeResource;
 =======
 namespace Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
 
-use Modules\Notify\Filament\Resources\NotifyThemeResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\ListRecords;
+<<<<<<< HEAD
 >>>>>>> 911eb41 (up)
+=======
+use Modules\Notify\Filament\Resources\NotifyThemeResource;
+>>>>>>> 42f9249 (.)
 
 class ListNotifyThemes extends ListRecords
 {
