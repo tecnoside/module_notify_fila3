@@ -62,7 +62,10 @@
         "pestphp/pest-plugin-laravel": "*",
         "phpstan/extension-installer": "*",
         "phpunit/phpunit": "*",
+<<<<<<< HEAD
         "psalm/plugin-laravel": "^2.8",
+=======
+>>>>>>> d94ee79 (up)
         "spatie/laravel-typescript-transformer": "*",
         "spatie/pest-plugin-snapshots": "*",
         "spatie/phpunit-snapshot-assertions": "*",
@@ -91,6 +94,7 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true
+<<<<<<< HEAD
 }
 =======
 =======
@@ -352,3 +356,6 @@
 =======
 }
 >>>>>>> 05ff61e (up)
+=======
+}
+>>>>>>> d94ee79 (up)
