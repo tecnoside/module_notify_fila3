@@ -7,6 +7,7 @@ namespace Modules\Notify\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Modules\Notify\Models\NotifyThemeable.
  *
@@ -88,4 +89,7 @@ class NotifyThemeable extends BaseMorphPivot {
 class NotifyThemeable extends BaseMorphPivot
 {
 >>>>>>> b735fbf (.)
+=======
+class NotifyThemeable extends BaseMorphPivot {
+>>>>>>> 1e45fef (up)
 }
