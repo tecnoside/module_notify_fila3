@@ -23,10 +23,14 @@ use Modules\Cms\Models\Panels\XotBasePanel;
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0cb23b3 (up)
 class _ModulePanel extends XotBasePanel
 {
     public function actions(): array
     {
+<<<<<<< HEAD
         return [
             new Actions\TrySmsAction(),
             new Actions\TryMailAction(),
@@ -93,11 +97,14 @@ class _ModulePanel extends XotBasePanel {
 =======
 class _ModulePanel extends XotBasePanel {
     public function actions(): array {
+=======
+>>>>>>> 0cb23b3 (up)
         return [
             new Actions\TrySmsAction(),
             new Actions\TryMailAction(),
             new Actions\TrySendMailAction(),
             new Actions\TrySendNotificationAction(),
+            new Actions\TryThemeNotificationAction(),
             // new Actions\TryAlertAction(),
 >>>>>>> a758bd5 (.)
         ];
