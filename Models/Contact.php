@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
+<<<<<<< HEAD
 /**
  * Modules\Notify\Models\Contact.
  *
@@ -123,4 +124,8 @@ class Contact extends BaseModel
         'model_id' => 'string',
         'user_id' => 'string',
     ];
+=======
+class Contact extends BaseModel {
+    protected $fillable = ['model_id', 'model_type', 'contact_type', 'value', 'verified_at', 'updated_at', 'created_at', 'updated_by', 'created_by'];
+>>>>>>> bd28543 (up)
 }
