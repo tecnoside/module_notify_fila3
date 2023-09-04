@@ -25,6 +25,7 @@ class NotifyServiceProvider extends XotBaseServiceProvider
     {
         // BladeService::registerComponents($this->module_dir.'/../View/Components', 'Modules\\Media');
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Notification::extend('esendex', function ($app) {
         //    return new \Modules\Notify\Notifications\Channels\EsendexChannel;
         // });
@@ -508,8 +509,14 @@ class NotifyServiceProvider extends ServiceProvider {
 >>>>>>> fe06862 (.)
 =======
         //Notification::extend('esendex', function ($app) {
+=======
+        // Notification::extend('esendex', function ($app) {
+>>>>>>> 6df2b8a (Dusting)
         //    return new \Modules\Notify\Notifications\Channels\EsendexChannel;
-        //});
+        // });
     }
 }
+<<<<<<< HEAD
 >>>>>>> 5df40a5 (up)
+=======
+>>>>>>> 6df2b8a (Dusting)
