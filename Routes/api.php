@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
@@ -18,6 +19,10 @@ declare(strict_types=1);
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> d27db1b (.)
+=======
+declare(strict_types=1);
+
+>>>>>>> eb84abb (.)
 use Illuminate\Http\Request;
 
 /*
@@ -34,6 +39,7 @@ use Illuminate\Http\Request;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
 /*
@@ -63,3 +69,10 @@ Route::middleware('auth:api')->get('/notify', function (Request $request) {
     return $request->user();
 });
 >>>>>>> d27db1b (.)
+=======
+/*
+Route::middleware('auth:api')->get('/notify', function (Request $request) {
+    return $request->user();
+});
+*/
+>>>>>>> eb84abb (.)
