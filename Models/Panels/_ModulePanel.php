@@ -18,6 +18,7 @@ class _ModulePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 42aa20e (.)
 =======
@@ -28,6 +29,9 @@ class _ModulePanel extends XotBasePanel {
 =======
             //new Actions\TryAlertAction(),
 >>>>>>> a5593ab (.)
+=======
+            // new Actions\TryAlertAction(),
+>>>>>>> df8079b (up)
         ];
     }
 }

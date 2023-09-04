@@ -17,7 +17,7 @@ class Notify extends Notification implements ShouldQueue {
      */
     public $routes = [];
 
-    public function __construct(string $channel,string $route) {
+    public function __construct(string $channel, string $route) {
         $this->routes[$channel] = $route;
     }
 

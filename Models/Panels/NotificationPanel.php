@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models\Panels;
 
+use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
+use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Notify\Models\Notification;
 use Modules\Xot\Contracts\RowsContract;
-use Modules\Cms\Models\Panels\XotBasePanel;
-use Illuminate\Contracts\Support\Renderable;
 
 class NotificationPanel extends XotBasePanel {
     /**
@@ -27,7 +27,7 @@ class NotificationPanel extends XotBasePanel {
      * @param Notification $row
      */
     public function optionLabel($row): string {
-        return (string) '-no-set-';//$row->title;
+        return (string) '-no-set-'; // $row->title;
     }
 
     /**

@@ -107,10 +107,11 @@ class NetfunChannel {
         if ($notifiable instanceof ModelContactContract) {
 >>>>>>> 78bc45c (.)
             $data['sms_sent_at'] = now();
-            $data['sms_count'] = (int)$notifiable->sms_count + 1;
+            $data['sms_count'] = (int) $notifiable->sms_count + 1;
             $notifiable->update($data);
         }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -123,3 +124,6 @@ class NetfunChannel {
 =======
 }
 >>>>>>> 78bc45c (.)
+=======
+}
+>>>>>>> df8079b (up)
