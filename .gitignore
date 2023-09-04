@@ -75,11 +75,15 @@ Homestead.json
 .phpunit.result.cache
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 23a7ddf (.)
 
 *.stackdump
 *.cache
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 9349baf (.)
@@ -122,3 +126,5 @@ Homestead.json
 =======
 *.cache
 >>>>>>> 6c92430 (.)
+=======
+>>>>>>> 23a7ddf (.)
