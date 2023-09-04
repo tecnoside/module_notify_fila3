@@ -137,6 +137,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+
 /**
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -299,6 +301,14 @@ class NotifyTheme extends BaseModel {
             'width' => $this->logo_width ?? 50,
             'height' => $this->logo_height ?? 50,
         ];
+    }
+
+    /**
+     * Get the parent linkable model (user or post).
+     */
+    public function linkable(): MorphTo
+    {
+        return $this->morphTo('post');
     }
 }
 <<<<<<< HEAD

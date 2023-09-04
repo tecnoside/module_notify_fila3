@@ -43,10 +43,14 @@ class NotifyThemeResource extends Resource
                 Forms\Components\Select::make('type')->options(self::fieldOptions('type')),
                 Forms\Components\Select::make('post_type')->options(self::fieldOptions('post_type')),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9658d21 (up)
                 Forms\Components\TextInput::make('post_id'),
                 Forms\Components\TextInput::make('subject'),
                 Forms\Components\TextInput::make('from'),
                 Forms\Components\TextInput::make('from_email'),
+<<<<<<< HEAD
                 Forms\Components\SpatieMediaLibraryFileUpload::make('logo_src')
                     ->enableOpen()
                     ->enableDownload()
@@ -81,6 +85,13 @@ class NotifyThemeResource extends Resource
             ->pluck($field, $field)
             ->toArray();
 =======
+=======
+                Forms\Components\TextInput::make('logo_src'),
+                Forms\Components\TextInput::make('logo_width'),
+                Forms\Components\TextInput::make('logo_height'),
+                Forms\Components\TextInput::make('theme'),
+
+>>>>>>> 9658d21 (up)
                 Forms\Components\RichEditor::make('body')->columnSpanFull(),
                 Forms\Components\RichEditor::make('body_html')->columnSpanFull(),
             ]);
@@ -153,7 +164,7 @@ class NotifyThemeResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            //RelationManagers\LinkableRelationManager::class,
         ];
     }
     
