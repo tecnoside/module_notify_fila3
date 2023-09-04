@@ -89,6 +89,7 @@ class NotifyTheme extends BaseModel implements HasMedia
         'body',
         'body_html',
         'from',
+<<<<<<< HEAD
         'from_email',
         'post_type',
         'post_id',
@@ -269,6 +270,11 @@ class NotifyTheme extends BaseModel {
         'body_html',
 >>>>>>> 001896b (.)
         'from',
+=======
+        'post_type',
+        'post_id',
+        'theme',
+>>>>>>> 002b93b (up)
     ];
 }
 <<<<<<< HEAD
