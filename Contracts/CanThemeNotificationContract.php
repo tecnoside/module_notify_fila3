@@ -28,6 +28,9 @@ interface CanThemeNotificationContract
     public function getModel(): Model;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f9c94ed (up)
     /**
      * @return mixed|null
      */
