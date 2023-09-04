@@ -12,6 +12,7 @@ namespace Modules\Notify\Models;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 >>>>>>> 5f3f456 (up)
@@ -24,6 +25,12 @@ use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 ////use Laravel\Scout\Searchable;
 >>>>>>> 42aa20e (.)
+=======
+use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+// ---------- traits
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+// //use Laravel\Scout\Searchable;
+>>>>>>> 3a62aee (up)
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Services\FactoryService;
 use Modules\Xot\Traits\Updater;
@@ -31,6 +38,7 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseModel.
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 abstract class BaseModel extends Model
@@ -292,6 +300,8 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseModel.
  */
+=======
+>>>>>>> 3a62aee (up)
 abstract class BaseModel extends Model {
     use Updater;
 
@@ -348,6 +358,7 @@ abstract class BaseModel extends Model {
      */
     protected static function newFactory() {
         return FactoryService::newFactory(static::class);
+<<<<<<< HEAD
     }
 }
 <<<<<<< HEAD
@@ -362,6 +373,8 @@ abstract class BaseModel extends Model {
     protected static function newFactory()
     {
         return FactoryService::newFactory(get_called_class());
+=======
+>>>>>>> 3a62aee (up)
     }
 }
 >>>>>>> 42aa20e (.)

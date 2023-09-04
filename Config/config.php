@@ -10,6 +10,7 @@ declare(strict_types=1);
 return [
     'name' => 'Notify',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'icon' => 'heroicon-o-mail',
 =======
 >>>>>>> 5f3f456 (up)
@@ -47,5 +48,7 @@ return [
 
 return [
     'name' => 'Notify'
+=======
+>>>>>>> 3a62aee (up)
 ];
 >>>>>>> 42aa20e (.)
