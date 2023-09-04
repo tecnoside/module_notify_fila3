@@ -233,6 +233,12 @@ class Get
 
         $body_html = strval($theme->body_html);
         $subject = strval($theme->subject);
+        
+        // $view_params['logo'] = '<img class="mobile_only" border="0" src="'. $theme->logo['path'].'" width="'.$theme->logo['width'].' "height="'.$theme->logo['height'].'" />';
+
+        $view_params['logo'] = $theme->logo;
+
+        // dddx([$theme->logo, $view_params]); 
 
         foreach ($view_params as $k => $v) {
             if (is_string($v)) {
@@ -243,9 +249,13 @@ class Get
 
         $view_params['body_html'] = $body_html;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1b3ba1c (up)
 =======
 
+=======
+        // $view_params['logo'] = $theme->logo;
+>>>>>>> 2d62b50 (.)
         if (empty($theme->view_params)) {
             $theme->update(['view_params' => $view_params]);
         }
