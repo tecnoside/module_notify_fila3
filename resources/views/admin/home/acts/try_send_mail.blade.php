@@ -5,9 +5,6 @@
                 @csrf
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe06862 (.)
 
                 <x-input.group type="text" name="subject" value="mail test" />
 
@@ -22,7 +19,6 @@
                 <x-input.group type="select" name="template" :options="$template_options"/>
 
                 <x-input.group type="select" name="mailer" :options="$mailer_options"/>
-<<<<<<< HEAD
 =======
                 
                 <x-input.group type="text" name="subject" value="mail test" />
@@ -52,8 +48,6 @@
                 <x-input.group type="select" name="template" :options="$template_options"/>
 
                 <x-input.group type="select" name="mailer" :options="$mailer_options"/>
-=======
->>>>>>> fe06862 (.)
 
                 <button class="btn btn-primary" type="submit">go!</button>
 

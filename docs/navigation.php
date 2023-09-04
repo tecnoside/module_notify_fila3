@@ -2,7 +2,6 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -16,7 +15,6 @@ return [
     //     ],
     // ],
     // 'Jigsaw Docs' => 'https://jigsaw.tighten.co/docs/installation',
-<<<<<<< HEAD
     'Funzione del Modulo' => [
         'url' => 'docs/module_notify',
         'children' => [
@@ -40,18 +38,12 @@ return [
             'Link utili' => 'docs/duocircle/links',
         ],
     ],
-<<<<<<< HEAD
 =======
 =======
 declare(strict_types=1);
 
 >>>>>>> 996ab99 (.)
 return [
-=======
-declare(strict_types=1);
-
-return [
->>>>>>> fe06862 (.)
     'Getting Started' => [
         'url' => 'docs/getting-started',
         'children' => [
@@ -63,39 +55,13 @@ return [
     ],
     'Jigsaw Docs' => 'https://jigsaw.tighten.co/docs/installation',
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 404660b (up)
 =======
-=======
->>>>>>> fe06862 (.)
-=======
->>>>>>> ca8af38 (.)
     'Funzione del Modulo' => [
         'url' => 'docs/module_notify',
         'children' => [
-            'Creare una notifica' => 'docs/notify/create',
-            'Funzione getNotificationData' => 'docs/functions/get-notification-data',
-            // 'Classe BuildMailMessageAction' => 'docs/build-mail-message-action',
-        ],
-    ],
-
-    'Classi Importanti' => [
-        'children' => [
-            'Notifica ThemeNotification' => 'docs/theme-notification-class',
-            'Classe BuildMailMessageAction' => 'docs/build-mail-message-action',
             'TrySendMailAction' => 'docs/try_send_mail_action',
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 996ab99 (.)
-=======
->>>>>>> fe06862 (.)
-=======
-
-=======
->>>>>>> 0cbb44c (.)
-
-
->>>>>>> cac1c0d (.)
 ];
