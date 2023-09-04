@@ -36,6 +36,7 @@ interface CanThemeNotificationContract
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getNotificationData(string $name, array $view_params = []): NotificationData;
 
     public function getModel(): Model;
@@ -77,6 +78,9 @@ interface CanThemeNotificationContract
 >>>>>>> 48ca37e (up)
 =======
     public function getNotificationData(string $name): NotificationData;
+=======
+    public function getNotificationData(string $name, array $view_params = []): NotificationData;
+>>>>>>> 54e517d (up)
 
     public function getModel(): Model;
 >>>>>>> a758bd5 (.)
