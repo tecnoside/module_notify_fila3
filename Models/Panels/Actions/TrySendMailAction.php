@@ -71,7 +71,7 @@ class TrySendMailAction extends XotBasePanelAction {
         $view='notify::emails.samples.ark';
         $test=(object)['a'=>'b'];
         $users=[
-            new Notify('mail','marco.sottana@gmail.com'),
+            new Notify('mail',['marco.sottana@gmail.com','marco76tv@hotmail.com']),
         ];
 
         Notification::send($users, new TestNotification($test));
