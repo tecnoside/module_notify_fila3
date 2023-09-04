@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 use Illuminate\Support\Str;
@@ -31,12 +32,16 @@ return [
         ],
     ],
 =======
+=======
+declare(strict_types=1);
+
+>>>>>>> 996ab99 (.)
 use Illuminate\Support\Str;
 
 return [
     'baseUrl' => '',
     'production' => false,
-    'siteName' => 'Docs Starter Template',
+    'siteName' => 'Modulo Notify',
     'siteDescription' => 'Beautiful docs powered by Jigsaw',
 >>>>>>> 404660b (up)
 
@@ -84,7 +89,7 @@ return [
 =======
     },
     'url' => function ($page, $path) {
-        return Str::startsWith($path, 'http') ? $path : '/' . trimPath($path);
+        return Str::startsWith($path, 'http') ? $path : '/'.trimPath($path);
     },
 >>>>>>> 404660b (up)
 ];

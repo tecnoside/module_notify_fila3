@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -38,6 +39,10 @@ return [
         ],
     ],
 =======
+=======
+declare(strict_types=1);
+
+>>>>>>> 996ab99 (.)
 return [
     'Getting Started' => [
         'url' => 'docs/getting-started',
@@ -49,5 +54,14 @@ return [
         ],
     ],
     'Jigsaw Docs' => 'https://jigsaw.tighten.co/docs/installation',
+<<<<<<< HEAD
 >>>>>>> 404660b (up)
+=======
+    'Funzione del Modulo' => [
+        'url' => 'docs/module_notify',
+        'children' => [
+            'TrySendMailAction' => 'docs/try_send_mail_action',
+        ],
+    ],
+>>>>>>> 996ab99 (.)
 ];
