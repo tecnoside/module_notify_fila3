@@ -4,7 +4,15 @@
     <title>{{ isset($senderName) ? $senderName : '' }}.</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <style type="text/css">
+<<<<<<< HEAD
+<<<<<<< HEAD
         {{ cssInLine('notify::css/ark.css') }}
+=======
+        {{ $_theme->cssInLine('notify::css/ark.css') }}
+>>>>>>> b62f52c (up)
+=======
+        {{ $_theme->cssInLine('notify::css/ark.css') }}
+>>>>>>> fe06862 (.)
     </style>
     @if (isset($css))
         <style type="text/css">
@@ -32,6 +40,11 @@
                             </tr>
                             <tr class="mobile_only">
                                 <td class="w640" width="640" align="center">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 184193d (up)
                                     @if (is_array($logo))
                                         <img class="mobile_only" border="0"
                                             src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}"
@@ -39,6 +52,23 @@
                                             width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}"
                                             height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
                                     @endif
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> fe06862 (.)
+
+                                    <img class="mobile_only" border="0"
+                                        src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}"
+                                        alt="{{ isset($senderName) ? $senderName : '' }}"
+                                        width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}"
+                                        height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
+
+<<<<<<< HEAD
+>>>>>>> b62f52c (up)
+=======
+>>>>>>> fe06862 (.)
+=======
+>>>>>>> 184193d (up)
                                 </td>
                             </tr>
                             <tr class="mobile_only">
@@ -53,10 +83,16 @@
                             <tr>
                                 <td id="header" class="w640" align="center" bgcolor="#FFFFFF" width="640">
                                     <table class="w640" border="0" cellpadding="0" cellspacing="0" width="640">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 184193d (up)
                                         @if (is_array($logo))
                                             <tr>
                                                 <td class="w20" width="20"></td>
                                                 <td id="logo"
+<<<<<<< HEAD
                                                     width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}"
                                                     valign="top">
                                                     <img border="0"
@@ -68,6 +104,39 @@
                                                 <td class="w30" width="30"></td>
                                             </tr>
                                         @endif
+=======
+=======
+>>>>>>> fe06862 (.)
+                                        <tr>
+                                            <td class="w20" width="20"></td>
+                                            <td id="logo"
+                                                width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}"
+                                                valign="top">
+                                                <img border="0"
+                                                    src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}"
+                                                    alt="{{ isset($senderName) ? $senderName : '' }}"
+                                                    width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}"
+                                                    height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
+                                            </td>
+                                            <td class="w30" width="30"></td>
+                                        </tr>
+<<<<<<< HEAD
+>>>>>>> b62f52c (up)
+=======
+>>>>>>> fe06862 (.)
+=======
+                                                    width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}"
+                                                    valign="top">
+                                                    <img border="0"
+                                                        src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}"
+                                                        alt="{{ isset($senderName) ? $senderName : '' }}"
+                                                        width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}"
+                                                        height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
+                                                </td>
+                                                <td class="w30" width="30"></td>
+                                            </tr>
+                                        @endif
+>>>>>>> 184193d (up)
                                         <tr>
                                             <td colspan="3" height="20" class="large_only"></td>
                                         </tr>
