@@ -47,7 +47,7 @@ class RowAttributeNotification extends Notification {
             ->line('---')
             // non so se posso modificare questa riga senza creare errori in altre parti
             ->view('notify::emails.templates.ark.mail', ['html' => $this->row->mail_body]);
-      
+
         $this->row->sendEmailCallback();
 
         return $message;

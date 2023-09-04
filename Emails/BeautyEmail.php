@@ -9,17 +9,17 @@ namespace Modules\Notify\Emails;
 
 use Closure;
 use Exception;
-use Illuminate\Mail\PendingMail;
 use Illuminate\Contracts\Mail\Mailer;
-use Modules\UI\Services\ThemeService;
-use Modules\Notify\Data\BeautyEmailData;
 use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Mail\PendingMail;
+use Modules\Notify\Data\BeautyEmailData;
+use Modules\UI\Services\ThemeService;
 
 class BeautyEmail implements Mailer {
     /**
      * Contains settings for emails processed by Beautymail.
      */
-    private array $settings=[];
+    private array $settings = [];
 
     /**
      * The mailer contract depended upon.
@@ -53,53 +53,56 @@ class BeautyEmail implements Mailer {
         }
 =======
     public function __construct(array $settings = []) {
-        $beauty=BeautyEmailData::from(config('beautymail'));
-        
-        //$default['css'] = ! is_null(config('beautymail.css')) && count(config('beautymail.css')) > 0 ? implode(' ', config('beautymail.css')) : '';
-        
-        $beauty->view['css'] =  implode(' ', $beauty->css);
+        $beauty = BeautyEmailData::from(config('beautymail'));
 
+<<<<<<< HEAD
         $settings = array_merge($beauty->view,$settings);
 >>>>>>> d8faaba (up)
+=======
+        // $default['css'] = ! is_null(config('beautymail.css')) && count(config('beautymail.css')) > 0 ? implode(' ', config('beautymail.css')) : '';
+
+        $beauty->view['css'] = implode(' ', $beauty->css);
+
+        $settings = array_merge($beauty->view, $settings);
+>>>>>>> 06bf12b (up)
         $this->settings = $settings;
-        $mailer=app()->make('Illuminate\Contracts\Mail\Mailer');
-        if(!$mailer instanceof Mailer){
+        $mailer = app()->make('Illuminate\Contracts\Mail\Mailer');
+        if (! $mailer instanceof Mailer) {
             throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
         $this->mailer = $mailer;
         $this->setLogoPath();
     }
 
-    public function getSettings():array {
+    public function getSettings(): array {
         return $this->settings;
     }
 
     /**
      * @param mixed $users
      */
-    public function to($users):PendingMail {
+    public function to($users): PendingMail {
         return (new PendingMail($this))->to($users);
     }
 
     /**
      * @param mixed $users
      */
-    public function bcc($users):PendingMail {
+    public function bcc($users): PendingMail {
         return (new PendingMail($this))->bcc($users);
     }
 
     /**
      * @param mixed $users
      */
-    public function cc($users):PendingMail {
+    public function cc($users): PendingMail {
         return (new PendingMail($this))->cc($users);
     }
 
     /**
      * Retrieve the settings.
-     *
      */
-    public function getData():array {
+    public function getData(): array {
         return $this->settings;
     }
 
@@ -134,9 +137,9 @@ class BeautyEmail implements Mailer {
      */
     public function queue($view, array $data, $callback) {
         $data = array_merge($this->settings, $data);
-        //13    Method Illuminate\Mail\Mailer::queue() invoked with 3 parameters, 1-2 required.                                                                                    
-        //113    Parameter #2 $queue of method Illuminate\Mail\Mailer::queue() expects string|null, array given. 
-        //$this->mailer->queue($view, $data, $callback);
+        // 13    Method Illuminate\Mail\Mailer::queue() invoked with 3 parameters, 1-2 required.
+        // 113    Parameter #2 $queue of method Illuminate\Mail\Mailer::queue() expects string|null, array given.
+        // $this->mailer->queue($view, $data, $callback);
     }
 
     /**
@@ -149,10 +152,13 @@ class BeautyEmail implements Mailer {
      * @return \Illuminate\View\View
 =======
      * @phpstan-param view-string $view
+<<<<<<< HEAD
      
 >>>>>>> 1f2e2b9 (up)
+=======
+>>>>>>> 06bf12b (up)
      */
-    public function view(string $view, array $data = []):Renderable {
+    public function view(string $view, array $data = []): Renderable {
         $data = array_merge($this->settings, $data);
 
         return view($view, $data);
@@ -161,8 +167,8 @@ class BeautyEmail implements Mailer {
     /**
      * Send a new message when only a raw text part.
      *
-     * @param string $text
-     * @param Closure|string|null  $callback
+     * @param string              $text
+     * @param Closure|string|null $callback
      *
      * @return \Illuminate\Mail\SentMessage|null
      */
@@ -170,17 +176,15 @@ class BeautyEmail implements Mailer {
         return $this->mailer->send(['raw' => $text], [], $callback);
     }
 
-    
      /* Get the array of failed recipients.
      * Call to an undefined method Illuminate\Contracts\Mail\Mailer::failures()
      * @return array
-     * 
-     */    
+     *
+     */
     public function failures() {
         return $this->mailer->failures();
     }
-    
-    
+
     /**
      * @return mixed
      */

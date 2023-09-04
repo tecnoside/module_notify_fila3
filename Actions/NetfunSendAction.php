@@ -214,12 +214,16 @@ class NetfunSendAction {
         // Prepare the action for execution, leveraging constructor injection.
         $token = config('services.netfun.token');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 948b488 (.)
         if (null == $token) {
 =======
         if (!is_string($token)) {
 >>>>>>> d8faaba (up)
+=======
+        if (! is_string($token)) {
+>>>>>>> 06bf12b (up)
             throw new Exception('put [NETFUN_TOKEN] variable to your .env and config [services.netfun.token] ');
         }
         $this->token = $token;
