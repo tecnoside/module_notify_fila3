@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -44,6 +45,11 @@ declare(strict_types=1);
 
 >>>>>>> 996ab99 (.)
 return [
+=======
+declare(strict_types=1);
+
+return [
+>>>>>>> fe06862 (.)
     'Getting Started' => [
         'url' => 'docs/getting-started',
         'children' => [
@@ -55,13 +61,19 @@ return [
     ],
     'Jigsaw Docs' => 'https://jigsaw.tighten.co/docs/installation',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 404660b (up)
 =======
+=======
+>>>>>>> fe06862 (.)
     'Funzione del Modulo' => [
         'url' => 'docs/module_notify',
         'children' => [
             'TrySendMailAction' => 'docs/try_send_mail_action',
         ],
     ],
+<<<<<<< HEAD
 >>>>>>> 996ab99 (.)
+=======
+>>>>>>> fe06862 (.)
 ];
