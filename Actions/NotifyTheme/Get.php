@@ -139,6 +139,8 @@ class Get
 
         $view_params = array_merge($theme_array, $view_params);
 
+        $view_params['now'] = now()->format('d/m/Y');
+
         $body_html = strval($theme->body_html);
         $subject = strval($theme->subject);
 
