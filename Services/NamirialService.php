@@ -89,7 +89,7 @@ class NamirialService
         return $this;
     }
 
-    private function download(?string $filename = 'test.pdf'): self
+    private function download(string $filename = 'test.pdf'): self
     {
         $response = Http::withHeaders($this->headers)->{$this->http_method}($this->endpoint, $this->params);
         $contents = strval($response->getBody()->getContents());

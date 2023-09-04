@@ -60,7 +60,7 @@ class HtmlNotification extends Notification implements ShouldQueue
     /**
      * Undocumented function.
      *
-     * @param mixed $notifiable
+     * @param object $notifiable
      *
      * @return SmsData
      */
