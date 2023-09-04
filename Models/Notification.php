@@ -190,6 +190,7 @@ use Illuminate\Notifications\DatabaseNotification;
  * @method static \Illuminate\Database\Eloquent\Builder|Notification whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Notification whereUpdatedBy($value)
  * @mixin \Eloquent
+ * @mixin IdeHelperNotification
  */
 class Notification extends DatabaseNotification {
     
