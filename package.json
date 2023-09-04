@@ -46,8 +46,8 @@
     "production": "mix --production"
   },
   "devDependencies": {
-    "axios": "^0.21.4",
-    "dotenv": "^10.0.0",
+    "axios": "^1.4.0",
+    "dotenv": "^16.0.3",
 <<<<<<< HEAD
     "dotenv-expand": "^5.1.0",
     "laravel-mix": "^6.0.49",
