@@ -6,6 +6,7 @@ namespace Modules\Notify\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class NotifyThemeFactory extends Factory
 {
@@ -19,6 +20,8 @@ class NotifyThemeFactory extends Factory
 use Illuminate\Support\Str;
 
 use Modules\Notify\Models\NotifyTheme;
+=======
+>>>>>>> 780e17a (up)
 
 class NotifyThemeFactory extends Factory {
     /**
@@ -45,8 +48,6 @@ class NotifyThemeFactory extends Factory {
             'id' => $this->faker->randomNumber(5, false),
 =======
     public function definition() {
-       
-
         return [
 <<<<<<< HEAD
             'id' => $this->faker->randomNumber,
@@ -60,10 +61,14 @@ class NotifyThemeFactory extends Factory {
             'body' => $this->faker->text,
             'body_html' => $this->faker->text,
 <<<<<<< HEAD
+<<<<<<< HEAD
             'from' => $this->faker->word,
 =======
             'from' => $this->faker->word
 >>>>>>> 103a1c2 (.)
+=======
+            'from' => $this->faker->word,
+>>>>>>> 780e17a (up)
         ];
     }
 }

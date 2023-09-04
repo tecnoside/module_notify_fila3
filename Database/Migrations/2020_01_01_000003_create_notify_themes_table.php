@@ -50,7 +50,8 @@ class CreateNotifyThemesTable extends XotBaseMigration {
                 if (! $this->hasColumn('body_html')) {
                     $table->text('body_html')->nullable();
                 }
-            }); // end update
+            }
+        ); // end update
     }
 
     // end function up

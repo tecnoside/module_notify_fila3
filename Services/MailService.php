@@ -142,22 +142,24 @@ class MailService {
     /**
      * ---.
      */
-    public function send():self {
+    public function send(): self {
         $class = '\Modules\Notify\Services\MailEngines\\'.Str::studly($this->driver).'Engine';
         $class::make()
             ->setLocalVars($this->vars)
             ->send();
+
         return $this;
     }
 
     /**
      * ---.
      */
-    public function try():self {
+    public function try(): self {
         $class = '\Modules\Notify\Services\MailEngines\\'.Str::studly($this->driver).'Engine';
         $class::make()
             ->setLocalVars($this->vars)
             ->try();
+
         return $this;
     }
 }

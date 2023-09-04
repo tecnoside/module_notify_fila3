@@ -243,8 +243,11 @@ abstract class BaseMorphPivot extends MorphPivot {
         'note',
     ];
 }
+<<<<<<< HEAD
 >>>>>>> 89120cb (rebase)
 >>>>>>> 9349baf (.)
 =======
 }
 >>>>>>> 47d9a86 (.)
+=======
+>>>>>>> 780e17a (up)
