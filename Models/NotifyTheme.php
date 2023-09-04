@@ -234,13 +234,13 @@ class NotifyTheme extends BaseModel {
 >>>>>>> 42aa20e (.)
 =======
 /**
- * --
+ * --.
  */
-class NotifyTheme extends BaseModel{
-
+class NotifyTheme extends BaseModel {
     /**
      * @var array<string>
      */
+<<<<<<< HEAD
     protected $fillable=[
 >>>>>>> d27db1b (.)
         'id',
@@ -292,18 +292,17 @@ class NotifyTheme extends BaseModel {
     protected $fillable = [
 =======
 >>>>>>> fe06862 (.)
+=======
+    protected $fillable = [
+>>>>>>> a7caca4 (.)
         'id',
         'lang',
         'type',
         'subject',
         'body',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 468f0a0 (.)
         'body_html',
         'from',
+<<<<<<< HEAD
 <<<<<<< HEAD
         'from_email',
         'post_type',
@@ -372,3 +371,7 @@ class NotifyTheme extends BaseModel {
     ];
 }
 >>>>>>> d27db1b (.)
+=======
+    ];
+}
+>>>>>>> a7caca4 (.)
