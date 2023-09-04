@@ -3,8 +3,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b735fbf (.)
+=======
+>>>>>>> 7bcd34c (.)
 declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Resources;
@@ -285,6 +288,7 @@ class NotifyThemeResource extends Resource
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 
 >>>>>>> 911eb41 (up)
@@ -299,6 +303,8 @@ class NotifyThemeResource extends Resource
 =======
 
 >>>>>>> 34ed535 (.)
+=======
+>>>>>>> 7bcd34c (.)
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -317,6 +323,7 @@ class NotifyThemeResource extends Resource
         return [
             // RelationManagers\LinkableRelationManager::class,
 <<<<<<< HEAD
+<<<<<<< HEAD
         ];
     }
 
@@ -348,6 +355,8 @@ class NotifyThemeResource extends Resource
     {
         return [
             //RelationManagers\LinkableRelationManager::class,
+=======
+>>>>>>> 7bcd34c (.)
         ];
     }
 <<<<<<< HEAD

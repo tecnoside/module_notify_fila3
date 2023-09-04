@@ -143,8 +143,10 @@ use Illuminate\Support\Str;
 /**
  * Class SmsService.
  */
-class SmsService {
+class SmsService
+{
     private static ?self $instance = null;
+
     public ?string $from;
     public string $to;
 <<<<<<< HEAD
@@ -229,15 +231,17 @@ class SmsService {
 =======
 >>>>>>> a758bd5 (.)
 
-    public static function getInstance(): self {
+    public static function getInstance(): self
+    {
         if (null === self::$instance) {
-            self::$instance = new self();
+            self::$instance = new self;
         }
 
         return self::$instance;
     }
 
-    public static function make(): self {
+    public static function make(): self
+    {
         return static::getInstance();
     }
 
@@ -246,9 +250,14 @@ class SmsService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a758bd5 (.)
     public function setLocalVars(array $vars): self {
+=======
+    public function setLocalVars(array $vars): self
+    {
+>>>>>>> 7bcd34c (.)
         foreach ($vars as $k => $v) {
             $this->{$k} = $v;
         }
@@ -257,14 +266,16 @@ class SmsService {
         return $this;
     }
 
-    public function mergeVars(array $vars): self {
+    public function mergeVars(array $vars): self
+    {
         $this->vars = array_merge($this->vars, $vars);
 
         return $this;
     }
 
-    public function send(): self {
-        $class = '\Modules\Notify\Services\SmsEngines\\'.Str::studly($this->driver).'Engine';
+    public function send(): self
+    {
+        $class = '\Modules\Notify\Services\SmsEngines\\' . Str::studly($this->driver) . 'Engine';
         $instance = $class::make()
             ->setLocalVars($this->vars)
             ->send();
@@ -274,7 +285,8 @@ class SmsService {
         return $this;
     }
 
-    public function getVars(): array {
+    public function getVars(): array
+    {
         return $this->vars;
 <<<<<<< HEAD
 <<<<<<< HEAD

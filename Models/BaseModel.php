@@ -301,12 +301,17 @@ abstract class BaseModel extends Model
 =======
     public static $snakeAttributes = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a758bd5 (.)
 =======
+=======
+
+>>>>>>> 7bcd34c (.)
     /**
      * @var bool
      */
     public $incrementing = true;
+
     /**
      * @var bool
      */

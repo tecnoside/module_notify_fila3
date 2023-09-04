@@ -10,6 +10,7 @@ use Spatie\LaravelData\Data;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // use Modules\Notify\Datas\BeautyEmailViewData;
 =======
@@ -28,6 +29,10 @@ use Spatie\LaravelData\Data;
 =======
 //use Modules\Notify\Datas\BeautyEmailViewData;
 >>>>>>> a758bd5 (.)
+=======
+
+// use Modules\Notify\Datas\BeautyEmailViewData;
+>>>>>>> 7bcd34c (.)
 
 class BeautyEmailData extends Data
 {
@@ -37,6 +42,7 @@ class BeautyEmailData extends Data
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // css must not be accessed before its inizialization.
     // sulla config beautymail di localhost manca, quindi va gestito se è vuoto
 =======
@@ -59,6 +65,10 @@ class BeautyEmailData extends Data
     //css must not be accessed before its inizialization.
     //sulla config beautymail di localhost manca, quindi va gestito se è vuoto
 >>>>>>> a758bd5 (.)
+=======
+    // css must not be accessed before its inizialization.
+    // sulla config beautymail di localhost manca, quindi va gestito se è vuoto
+>>>>>>> 7bcd34c (.)
     public ?array $css = [];
     public array $colors;
 }
