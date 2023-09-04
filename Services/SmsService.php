@@ -151,6 +151,7 @@ class SmsService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public string $driver = 'netfun';
     public ?string $body;
@@ -164,10 +165,13 @@ class SmsService {
 =======
 =======
 >>>>>>> 8b12d20 (.)
+=======
+>>>>>>> 79bdce6 (.)
     public string $driver='netfun';
 =======
     public string $driver;
 >>>>>>> 42aa20e (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 5ae214b (.)
 =======
@@ -181,6 +185,11 @@ class SmsService {
     public string $driver;
 >>>>>>> 42aa20e (.)
 >>>>>>> d073338 (.)
+=======
+=======
+    public string $driver='netfun';
+>>>>>>> 8b046e1 (.)
+>>>>>>> 79bdce6 (.)
     public ?string $body;
 
     public array $vars=[];
@@ -408,12 +417,18 @@ class SmsService
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8b046e1 (.)
     public function mergeVars(array $vars):self{
         $this->vars=array_merge($this->vars,$vars);
         return $this;
     }
+<<<<<<< HEAD
 =======
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 8b046e1 (.)
 
     public function send(){
         $class='\Modules\Notify\Services\SmsEngines\\'.Str::studly($this->driver).'Engine';
