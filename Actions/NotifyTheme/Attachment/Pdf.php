@@ -4,10 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions\NotifyTheme\Attachment;
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Modules\Notify\Datas\AttachmentData;
 use Modules\Xot\Services\HtmlService;
+=======
+use Modules\Notify\Models\NotifyTheme;
+>>>>>>> 4a7ff36 (up)
 use Spatie\QueueableAction\QueueableAction;
 
 /**
@@ -17,6 +21,7 @@ class Pdf
 {
     use QueueableAction;
 
+<<<<<<< HEAD
     public function execute(string $post_type, array $view_params): AttachmentData
     {
         $notify_theme_data = app(\Modules\Notify\Actions\NotifyTheme\Get::class)->execute($post_type, 'pdf', $view_params);
@@ -34,6 +39,16 @@ class Pdf
             'path' => $file_path,
             'as' => $file_name,
             'mime' => 'application/pdf',
+=======
+    public function execute(string $post_type, array $view_params)
+    {
+        $lang = app()->getLocale();
+        $notify_theme = NotifyTheme::firstOrCreate([
+            'lang' => $lang,
+            'type' => 'pdf',
+            'post_type' => $post_type,
+            'post_id' => 0,
+>>>>>>> 4a7ff36 (up)
         ]);
     }
 }
