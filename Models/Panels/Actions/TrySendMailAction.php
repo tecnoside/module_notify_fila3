@@ -10,11 +10,11 @@ namespace Modules\Notify\Models\Panels\Actions;
 
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Notification;
+use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Notify\Emails\BeautyEmail;
 use Modules\Notify\Notifications\Notify;
 use Modules\Notify\Notifications\TestNotification;
 use Modules\Theme\Services\ThemeService;
-use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
 // -------- bases -----------
 

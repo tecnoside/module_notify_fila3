@@ -22,7 +22,7 @@ use Illuminate\Http\Request;
 =======
 >>>>>>> 9f492fe (up)
 
-use Modules\Xot\Models\Panels\XotBasePanel;
+use Modules\Cms\Models\Panels\XotBasePanel;
 
 class NotifyThemePanel extends XotBasePanel {
     /**
