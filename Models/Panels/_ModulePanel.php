@@ -34,6 +34,7 @@ class _ModulePanel extends XotBasePanel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 42aa20e (.)
 =======
@@ -48,6 +49,9 @@ class _ModulePanel extends XotBasePanel
 =======
             new Actions\TrySendNotificationAction(),
 >>>>>>> 0cbdb01 (up)
+=======
+            new Actions\TrySendNotificationAction(),
+>>>>>>> 745fe6e (up)
             // new Actions\TryAlertAction(),
 >>>>>>> df8079b (up)
 =======
