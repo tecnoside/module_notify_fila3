@@ -13,6 +13,7 @@ declare(strict_types=1);
 <?php
 
 declare(strict_types=1);
+<<<<<<< HEAD
 
 /*
 |--------------------------------------------------------------------------
@@ -57,3 +58,5 @@ Route::prefix('notify')->group(function() {
 >>>>>>> 89120cb (rebase)
 =======
 >>>>>>> 8be0eaa (up)
+=======
+>>>>>>> 3876d63 (.)
