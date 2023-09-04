@@ -13,6 +13,7 @@ return [
     'name' => 'Notify',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'icon' => 'heroicon-o-mail',
 =======
 >>>>>>> 5f3f456 (up)
@@ -59,6 +60,8 @@ return [
 <<<<<<< HEAD
 =======
 >>>>>>> 3a62aee (up)
+=======
+>>>>>>> b1dceab (up)
 ];
 >>>>>>> 42aa20e (.)
 =======

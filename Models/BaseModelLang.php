@@ -5,7 +5,11 @@ declare(strict_types=1);
 namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+<<<<<<< HEAD
 ////use Laravel\Scout\Searchable;
+=======
+// //use Laravel\Scout\Searchable;
+>>>>>>> b1dceab (up)
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Lang\Models\Traits\LinkedTrait;
@@ -13,6 +17,7 @@ use Modules\Xot\Traits\Updater;
 
 /**
  * Class BaseModelLang.
+<<<<<<< HEAD
  */
 abstract class BaseModelLang extends Model
 {
@@ -29,6 +34,35 @@ abstract class BaseModelLang extends Model
      */
     protected $casts = [
         //'published_at' => 'datetime:Y-m-d', // da verificare
+=======
+ *
+ * @property string|null $post_type
+ */
+abstract class BaseModelLang extends Model {
+    use Updater;
+
+    // use Searchable;
+    use LinkedTrait;
+    use HasFactory;
+    /**
+     * Indicates whether attributes are snake cased on arrays.
+     *
+     * @see  https://laravel-news.com/6-eloquent-secrets
+     *
+     * @var bool
+     */
+    public static $snakeAttributes = true;
+
+    protected $perPage = 30;
+
+    protected $connection = 'notify';
+
+    /**
+     * @var array<string, string>
+     */
+    protected $casts = [
+        // 'published_at' => 'datetime:Y-m-d', // da verificare
+>>>>>>> b1dceab (up)
     ];
 
     /**
@@ -47,10 +81,17 @@ abstract class BaseModelLang extends Model
     public $incrementing = true;
 
     /**
+<<<<<<< HEAD
      * @var array
      */
     protected $hidden = [
         //'password'
+=======
+     * @var array<int, string>
+     */
+    protected $hidden = [
+        // 'password'
+>>>>>>> b1dceab (up)
     ];
 
     /**
@@ -58,7 +99,11 @@ abstract class BaseModelLang extends Model
      */
     public $timestamps = true;
 
+<<<<<<< HEAD
     //-----------
+=======
+    // -----------
+>>>>>>> b1dceab (up)
     /*
     protected $id;
     protected $post;
