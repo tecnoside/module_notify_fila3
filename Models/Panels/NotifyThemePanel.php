@@ -362,6 +362,7 @@ class NotifyThemePanel extends XotBasePanel
 =======
 >>>>>>> dcc8748 (up)
                     'sms' => 'sms',
+                    'pdf' => 'pdf',
                 ],
 >>>>>>> 0d776db (up)
 =======
@@ -427,6 +428,14 @@ class NotifyThemePanel extends XotBasePanel
                 'fields' => $this->logoFields(),
                 'comment' => null,
             ],
+            // *
+            (object) [
+                'type' => 'ArrayStatic',
+                'name' => 'view_params',
+                'col_size' => 12,
+                'except' => ['index'],
+            ],
+            // */
         ];
     }
 
