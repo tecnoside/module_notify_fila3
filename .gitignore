@@ -113,11 +113,13 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+<<<<<<< HEAD
 
 
 *.stackdump
 *.cache
 
+<<<<<<< HEAD
 >>>>>>> 89120cb (rebase)
 =======
 >>>>>>> 8be0eaa (up)
@@ -128,3 +130,7 @@ Homestead.json
 >>>>>>> 6c92430 (.)
 =======
 >>>>>>> 23a7ddf (.)
+=======
+=======
+>>>>>>> 1b86d70 (Initial commit)
+>>>>>>> 6be216c (Initial commit)
