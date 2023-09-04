@@ -338,22 +338,31 @@ class NotifyThemePanel extends XotBasePanel {
      'type' => 'String',
      'name' => 'lang',
      'comment' => NULL,
+     'col_size' =>3
   ),
   
   (object) array(
      'type' => 'String',
      'name' => 'type',
      'comment' => NULL,
+     'col_size' =>3
   ),
+  (object) array(
+    'type' => 'String',
+    'name' => 'from',
+    'comment' => NULL,
+    'col_size' =>3
+ ),
   
   (object) array(
      'type' => 'String',
      'name' => 'subject',
      'comment' => NULL,
+     'col_size' =>12
   ),
   
   (object) array(
-     'type' => 'WysiwygSummerNote',
+     'type' => 'WysiwygSceditor',
      'name' => 'body',
      'comment' => NULL,
   ),
