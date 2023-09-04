@@ -10,6 +10,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
 use Illuminate\Notifications\Notification;
@@ -54,25 +55,33 @@ class ThemeNotification extends Notification implements ShouldQueue
 >>>>>>> b068ab9 (up)
 =======
 use Illuminate\Notifications\Messages\MailMessage;
+=======
+>>>>>>> 6eab953 (up)
 use Illuminate\Notifications\Notification;
+use Modules\LU\Actions\BuildUserMailMessageAction;
 use Modules\Notify\Datas\SmsData;
-use Modules\Notify\Notifications\Channels\EsendexChannel;
 
 class ThemeNotification extends Notification implements ShouldQueue
 {
     use Queueable;
+<<<<<<< HEAD
     public array $data;
 <<<<<<< HEAD
     
 >>>>>>> 745fe6e (up)
 =======
 >>>>>>> 3d1ec9b (up)
+=======
+    public array $view_params;
+    public string $name;
+>>>>>>> 6eab953 (up)
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -219,53 +228,57 @@ class ThemeNotification extends Notification implements ShouldQueue
     {
         $this->data = $data;
 >>>>>>> 3d1ec9b (up)
+=======
+    public function __construct(string $name, array $view_params)
+    {
+        $this->name = $name;
+        $this->view_params = $view_params;
+>>>>>>> 6eab953 (up)
     }
 
     /**
      * Get the notification's delivery channels.
      *
-     * @param mixed $notifiable
+     * @param CanThemeNotificationContract $notifiable
      *
      * @return array
      */
     public function via($notifiable)
     {
-        // $via=[$this->data['driver']];
-        // return $via;
-        // return EsendexChannel::class;
-        $channels = [];
-        $channels[] = 'essendex';
-
-        return $channels;
+        return $notifiable
+            ->getNotificationData($this->name)
+            ->channels;
     }
 
     /**
      * Get the mail representation of the notification.
      *
-     * @param mixed $notifiable
+     * @param CanThemeNotificationContract $notifiable
      *
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable)
     {
-        dddx('oo');
-
-        return (new MailMessage())
-            ->from($this->from)
-            ->subject($this->subject)
-            ->line('---')
-            ->view('notify::notifications.html', ['html' => $this->html]);
+        return app(BuildUserMailMessageAction::class)->execute($this->name, $this->view_params);
     }
 
+<<<<<<< HEAD
     public function toEssendex($notifiable)
     {
         dddx($notifiable);
     }
 >>>>>>> 745fe6e (up)
+=======
+    // public function toEssendex($notifiable)
+    // {
+    //    dddx($notifiable);
+    // }
+>>>>>>> 6eab953 (up)
 
     /**
      * Undocumented function.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -319,22 +332,33 @@ class ThemeNotification extends Notification implements ShouldQueue
 >>>>>>> fe06862 (.)
 =======
      * @param mixed $notifiable
+=======
+     * @param CanThemeNotificationContract $notifiable
+>>>>>>> 6eab953 (up)
      *
      * @return SmsData
      */
     public function toSms($notifiable)
     {
+<<<<<<< HEAD
         dddx('a');
 <<<<<<< HEAD
 >>>>>>> 745fe6e (up)
 =======
 
 >>>>>>> 3d1ec9b (up)
+=======
+        return $notifiable
+            ->getNotificationData($this->name)
+            ->getSmsData();
+        /*
+>>>>>>> 6eab953 (up)
         return SmsData::from([
             'from' => $this->from,
             'to' => $notifiable->routeNotificationFor('mobile'),
             'body' => $this->html,
         ]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -355,11 +379,15 @@ class ThemeNotification extends Notification implements ShouldQueue
 >>>>>>> e4aae54 (.)
 =======
 >>>>>>> 745fe6e (up)
+=======
+        */
+>>>>>>> 6eab953 (up)
     }
 
     /**
      * Get the array representation of the notification.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -404,6 +432,9 @@ class ThemeNotification extends Notification implements ShouldQueue
 >>>>>>> aedf4cb (up)
 =======
      * @param mixed $notifiable
+=======
+     * @param CanThemeNotificationContract $notifiable
+>>>>>>> 6eab953 (up)
      *
      * @return array
      */
