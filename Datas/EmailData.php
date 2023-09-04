@@ -9,6 +9,7 @@ use Spatie\LaravelData\Data;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class EmailData extends Data
 {
 =======
@@ -21,6 +22,9 @@ class EmailData extends Data {
 class EmailData extends Data
 {
 >>>>>>> 42f9249 (.)
+=======
+class EmailData extends Data {
+>>>>>>> aa28fe1 (up)
     public string $from;
     public string $from_email;
     public string $subject;
