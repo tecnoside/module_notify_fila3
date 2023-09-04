@@ -18,6 +18,7 @@ namespace Modules\Notify\Services;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Str;
 
 // ---------CSS------------
@@ -123,15 +124,9 @@ use Illuminate\Support\Str;
 //---------CSS------------
 >>>>>>> 42aa20e (.)
 =======
+=======
+>>>>>>> a7caca4 (.)
 use Illuminate\Support\Str;
-use Modules\Tenant\Services\TenantService;
-use Modules\Xot\Contracts\PanelContract;
-use Modules\Xot\Services\ArtisanService;
-use Modules\Xot\Services\FileService;
-use Modules\Xot\Services\PanelService;
-use Modules\Xot\Services\RouteService;
-use Modules\Xot\Services\StubService;
-use Modules\Xot\Traits\Getter;
 
 //---------CSS------------
 >>>>>>> d27db1b (.)
@@ -143,6 +138,7 @@ class SmsService {
     private static ?self $instance = null;
     public ?string $from;
     public string $to;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -210,6 +206,13 @@ class SmsService {
 
     public array $vars=[];
 >>>>>>> d27db1b (.)
+=======
+
+    public string $driver = 'netfun';
+    public ?string $body;
+
+    public array $vars = [];
+>>>>>>> a7caca4 (.)
 
     public static function getInstance(): self {
         if (null === self::$instance) {
@@ -223,6 +226,7 @@ class SmsService {
         return static::getInstance();
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -411,30 +415,31 @@ class SmsService
     public function setLocalVars(array $vars):self{
         foreach($vars as $k=>$v){
             $this->{$k}=$v;
+=======
+    public function setLocalVars(array $vars): self {
+        foreach ($vars as $k => $v) {
+            $this->{$k} = $v;
+>>>>>>> a7caca4 (.)
         }
-        $this->vars=array_merge($this->vars,$vars);
+        $this->vars = array_merge($this->vars, $vars);
+
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8b046e1 (.)
-    public function mergeVars(array $vars):self{
-        $this->vars=array_merge($this->vars,$vars);
+    public function mergeVars(array $vars): self {
+        $this->vars = array_merge($this->vars, $vars);
+
         return $this;
     }
-<<<<<<< HEAD
-=======
->>>>>>> 42aa20e (.)
-=======
->>>>>>> 8b046e1 (.)
 
-    public function send(){
-        $class='\Modules\Notify\Services\SmsEngines\\'.Str::studly($this->driver).'Engine';
+    public function send() {
+        $class = '\Modules\Notify\Services\SmsEngines\\'.Str::studly($this->driver).'Engine';
         $class::make()
             ->setLocalVars($this->vars)
             ->send();
     }
 }
+<<<<<<< HEAD
 >>>>>>> d27db1b (.)
+=======
+>>>>>>> a7caca4 (.)

@@ -87,6 +87,7 @@ Homestead.json
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 23a7ddf (.)
@@ -100,10 +101,14 @@ Homestead.json
 =======
 >>>>>>> 23a7ddf (.)
 >>>>>>> e375a73 (.)
+=======
+
+>>>>>>> a7caca4 (.)
 
 *.stackdump
 *.cache
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -227,3 +232,5 @@ package-lock.json
 =======
 >>>>>>> 23a7ddf (.)
 >>>>>>> e375a73 (.)
+=======
+>>>>>>> a7caca4 (.)
