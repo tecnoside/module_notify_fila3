@@ -51,6 +51,7 @@ class RowAttributeNotification extends Notification implements ShouldQueue
         // $theme = $this->row->notifyThemes->first()->theme ?? 'ark';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         // if (! property_exists($this->row, 'mail_from')) {
         //     throw new \Exception('['.__LINE__.']['.__FILE__.']');
@@ -60,6 +61,8 @@ class RowAttributeNotification extends Notification implements ShouldQueue
         // }
 
 >>>>>>> a514540 (up)
+=======
+>>>>>>> 7f10d5f (.)
         $message = (new MailMessage())
             ->from($this->row->mail_from_email, $this->row->mail_from)
             ->subject($this->row->mail_subject)
