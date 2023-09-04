@@ -1,10 +1,15 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
 >>>>>>> 42aa20e (.)
+=======
+declare(strict_types=1);
+
+>>>>>>> 188c25a (.)
 use Illuminate\Http\Request;
 
 /*
@@ -18,6 +23,7 @@ use Illuminate\Http\Request;
 |
 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
 Route::middleware('auth:api')->get('/notify', function (Request $request) {
     return $request->user();
@@ -29,3 +35,10 @@ Route::middleware('auth:api')->get('/notify', function (Request $request) {
     return $request->user();
 });
 >>>>>>> 42aa20e (.)
+=======
+/*
+Route::middleware('auth:api')->get('/notify', function (Request $request) {
+    return $request->user();
+});
+*/
+>>>>>>> 188c25a (.)
