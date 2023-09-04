@@ -125,6 +125,7 @@ Homestead.json
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 89120cb (rebase)
 =======
 >>>>>>> 8be0eaa (up)
@@ -151,3 +152,8 @@ Homestead.json
 >>>>>>> 6bb3972 (.)
 =======
 >>>>>>> 6d24e5b (.)
+=======
+*.lock
+*.lock
+*.lock
+>>>>>>> d8a2c68 (up)
