@@ -4,10 +4,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 478e0e4 (.)
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> b3ff86f (.)
 <?php
 
 declare(strict_types=1);
@@ -16,6 +19,7 @@ namespace Modules\Notify\Services;
 
 use Illuminate\Support\Str;
 
+<<<<<<< HEAD
 // ---------CSS------------
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -202,6 +206,9 @@ use Illuminate\Support\Str;
 =======
 //---------CSS------------
 >>>>>>> 478e0e4 (.)
+=======
+//---------CSS------------
+>>>>>>> b3ff86f (.)
 
 /**
  * Class SmsService.
@@ -254,6 +261,7 @@ class MailService {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 6d517f2 (.)
 
@@ -275,3 +283,6 @@ class MailService {
 >>>>>>> 478e0e4 (.)
 =======
 >>>>>>> fe06862 (.)
+=======
+}
+>>>>>>> b3ff86f (.)
