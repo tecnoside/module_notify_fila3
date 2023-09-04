@@ -13,12 +13,18 @@ vendor/
 node_modules/
 npm-debug.log
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0ce2fce (.)
 *.cache
 *.phar
 *.lock
 package-lock.json
+<<<<<<< HEAD
 =======
 >>>>>>> a758bd5 (.)
+=======
+>>>>>>> 0ce2fce (.)
 yarn-error.log
 
 # Laravel 4 specific
@@ -44,6 +50,7 @@ Homestead.json
 *.stackdump
 *.cache
 *.lock
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 package-lock.json
@@ -250,9 +257,18 @@ package-lock.json
 *.lock
 >>>>>>> 7fba3e2 (up)
 =======
+=======
+package-lock.json
+>>>>>>> 0ce2fce (.)
 *.log
 
 *.lock
+package-lock.json
 *.lock
+package-lock.json
 *.lock
+<<<<<<< HEAD
 >>>>>>> a758bd5 (.)
+=======
+package-lock.json
+>>>>>>> 0ce2fce (.)
