@@ -211,7 +211,6 @@ class NotificationData extends Data
     /** Get the notification routing information for the given driver.
      *
      * @param  string  $driver
-     * @return mixed
      */
     public function routeNotificationFor($driver, Notification $notification)
     {
@@ -233,6 +232,7 @@ class NotificationData extends Data
         ]);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> 745fe6e (up)
@@ -241,3 +241,6 @@ class NotificationData extends Data
 =======
 }
 >>>>>>> f846b34 (up)
+=======
+}
+>>>>>>> 7eece5f (Dusting)
