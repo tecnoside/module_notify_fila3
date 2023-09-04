@@ -48,6 +48,7 @@ class Get
             'post_type' => $name,
             'post_id' => $view_params['post_id'], // in questo caso il tipo come register type 3 in cui la pwd e' solo autogenerata
 <<<<<<< HEAD
+<<<<<<< HEAD
         ], ['view_params' => []]);
 
         $module_name_low = Str::lower($xot->main_module);
@@ -109,6 +110,9 @@ class Get
         ]);
 =======
         ]);
+=======
+        ], ['view_params' => []]);
+>>>>>>> 0c262f4 (up)
 
         $module_name_low = Str::lower($xot->main_module);
 
@@ -129,7 +133,11 @@ class Get
 
             $theme->update(['body_html' => $html]);
         }
-        $view_params = array_merge($theme->toArray(), $view_params);
+
+        $theme_array = $theme->toArray();
+        unset($theme_array['view_params']);
+
+        $view_params = array_merge($theme_array, $view_params);
 
         $body_html = strval($theme->body_html);
         $subject = strval($theme->subject);
