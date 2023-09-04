@@ -10,6 +10,7 @@
 declare(strict_types=1);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 3a0e0a5 (up)
@@ -24,6 +25,9 @@ declare(strict_types=1);
 <?php
 
 >>>>>>> 42aa20e (.)
+=======
+
+>>>>>>> eb84abb (.)
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,6 +38,7 @@ declare(strict_types=1);
 | contains the "web" middleware group. Now create something great!
 |
 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 /*
 Route::prefix('notify')->group(function() {
@@ -102,3 +107,10 @@ declare(strict_types=1);
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> d27db1b (.)
+=======
+/*
+Route::prefix('notify')->group(function() {
+    Route::get('/', 'NotifyController@index');
+});
+*/
+>>>>>>> eb84abb (.)
