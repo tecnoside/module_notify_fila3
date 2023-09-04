@@ -4,14 +4,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> d27db1b (.)
 <?php
 
 declare(strict_types=1);
 
 namespace Modules\Notify\Services;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 use Illuminate\Support\Str;
@@ -100,6 +104,8 @@ use Illuminate\Support\Str;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> d27db1b (.)
 use Exception;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Database\Eloquent\Model;
@@ -109,12 +115,26 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
+<<<<<<< HEAD
 =======
 >>>>>>> 6d24e5b (.)
 use Illuminate\Support\Str;
 
 //---------CSS------------
 >>>>>>> 42aa20e (.)
+=======
+use Illuminate\Support\Str;
+use Modules\Tenant\Services\TenantService;
+use Modules\Xot\Contracts\PanelContract;
+use Modules\Xot\Services\ArtisanService;
+use Modules\Xot\Services\FileService;
+use Modules\Xot\Services\PanelService;
+use Modules\Xot\Services\RouteService;
+use Modules\Xot\Services\StubService;
+use Modules\Xot\Traits\Getter;
+
+//---------CSS------------
+>>>>>>> d27db1b (.)
 
 /**
  * Class SmsService.
@@ -123,6 +143,7 @@ class SmsService {
     private static ?self $instance = null;
     public ?string $from;
     public string $to;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -163,6 +184,12 @@ class SmsService {
 
     public array $vars = [];
 >>>>>>> 6d24e5b (.)
+=======
+    public string $driver;
+    public ?string $body;
+
+    public array $vars=[];
+>>>>>>> d27db1b (.)
 
     public static function getInstance(): self {
         if (null === self::$instance) {
@@ -176,6 +203,7 @@ class SmsService {
         return static::getInstance();
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function setLocalVars(array $vars): self {
@@ -359,3 +387,21 @@ class SmsService
     }
 }
 >>>>>>> fe06862 (.)
+=======
+    public function setLocalVars(array $vars):self{
+        foreach($vars as $k=>$v){
+            $this->{$k}=$v;
+        }
+        $this->vars=array_merge($this->vars,$vars);
+        return $this;
+    }
+
+
+    public function send(){
+        $class='\Modules\Notify\Services\SmsEngines\\'.Str::studly($this->driver).'Engine';
+        $class::make()
+            ->setLocalVars($this->vars)
+            ->send();
+    }
+}
+>>>>>>> d27db1b (.)

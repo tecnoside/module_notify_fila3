@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 <<<<<<< HEAD
@@ -102,6 +103,8 @@ use Illuminate\Support\Facades\Route;
 class RouteServiceProvider extends ServiceProvider {
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> d27db1b (.)
 <?php
 
 namespace Modules\Notify\Providers;
@@ -111,9 +114,12 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 
 class RouteServiceProvider extends ServiceProvider
 {
+<<<<<<< HEAD
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 9f492fe (up)
+=======
+>>>>>>> d27db1b (.)
     /**
      * The module namespace to assume when generating URLs to actions.
      *
@@ -128,6 +134,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
+<<<<<<< HEAD
     public function boot() {
 <<<<<<< HEAD
 =======
@@ -136,6 +143,10 @@ class RouteServiceProvider extends ServiceProvider
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 9f492fe (up)
+=======
+    public function boot()
+    {
+>>>>>>> d27db1b (.)
         parent::boot();
     }
 
@@ -144,6 +155,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
+<<<<<<< HEAD
     public function map() {
 <<<<<<< HEAD
 =======
@@ -152,6 +164,10 @@ class RouteServiceProvider extends ServiceProvider
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 9f492fe (up)
+=======
+    public function map()
+    {
+>>>>>>> d27db1b (.)
         $this->mapApiRoutes();
 
         $this->mapWebRoutes();
@@ -164,6 +180,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
+<<<<<<< HEAD
     protected function mapWebRoutes() {
 <<<<<<< HEAD
 =======
@@ -172,6 +189,10 @@ class RouteServiceProvider extends ServiceProvider
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 9f492fe (up)
+=======
+    protected function mapWebRoutes()
+    {
+>>>>>>> d27db1b (.)
         Route::middleware('web')
             ->namespace($this->moduleNamespace)
             ->group(module_path('Notify', '/Routes/web.php'));
@@ -184,6 +205,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
+<<<<<<< HEAD
     protected function mapApiRoutes() {
 <<<<<<< HEAD
 =======
@@ -192,12 +214,17 @@ class RouteServiceProvider extends ServiceProvider
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 9f492fe (up)
+=======
+    protected function mapApiRoutes()
+    {
+>>>>>>> d27db1b (.)
         Route::prefix('api')
             ->middleware('api')
             ->namespace($this->moduleNamespace)
             ->group(module_path('Notify', '/Routes/api.php'));
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -233,3 +260,5 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> d27db1b (.)

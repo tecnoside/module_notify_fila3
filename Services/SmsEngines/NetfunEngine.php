@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 /**
 <<<<<<< HEAD
@@ -33,11 +34,15 @@
  * @see https://smsvi-docs.web.app/docs/restful/send-batch/
  */
 >>>>>>> 6d24e5b (.)
+=======
+<?php
+>>>>>>> d27db1b (.)
 
 declare(strict_types=1);
 
 namespace Modules\Notify\Services\SmsEngines;
 
+<<<<<<< HEAD
 use GuzzleHttp\Client;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,6 +53,10 @@ use Illuminate\Support\Str;
 
 // ---------CSS------------
 =======
+=======
+use Exception;
+use GuzzleHttp\Client;
+>>>>>>> d27db1b (.)
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Modules\Xot\Traits\Getter;
@@ -63,6 +72,7 @@ use Modules\Xot\Services\RouteService;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Contracts\PanelContract;
 use Modules\Xot\Services\ArtisanService;
+<<<<<<< HEAD
 =======
 >>>>>>> 6c92430 (.)
 =======
@@ -75,10 +85,18 @@ use Illuminate\Support\Str;
 
 //---------CSS------------
 >>>>>>> 42aa20e (.)
+=======
+use GuzzleHttp\Exception\ClientException;
+use Modules\Tenant\Services\TenantService;
+use Illuminate\Contracts\Support\Renderable;
+
+//---------CSS------------
+>>>>>>> d27db1b (.)
 
 /**
  * Class SmsService.
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 class NetfunEngine
 {
@@ -88,11 +106,16 @@ class NetfunEngine
 class NetfunEngine {
     private static ?self $instance = null;
 >>>>>>> 42aa20e (.)
+=======
+class NetfunEngine {
+    private static ?self $instance = null;
+>>>>>>> d27db1b (.)
     public ?string $from;
     public string $to;
     public string $driver;
     public ?string $body;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,17 +146,27 @@ class NetfunEngine {
 >>>>>>> 6c92430 (.)
 
     public function __construct() {
+=======
+    public string $send_method='batch';
+
+    public function __construct(){
+        
+>>>>>>> d27db1b (.)
     }
 
     public static function getInstance(): self {
         if (null === self::$instance) {
             self::$instance = new self();
+<<<<<<< HEAD
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> d27db1b (.)
         }
 
         return self::$instance;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public static function make(): self
     {
@@ -254,10 +287,13 @@ class NetfunEngine {
         } catch (ClientException $e) {
             throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']');
 =======
+=======
+>>>>>>> d27db1b (.)
     public static function make(): self {
         return static::getInstance();
     }
 
+<<<<<<< HEAD
     public function setLocalVars(array $vars): self {
         foreach ($vars as $k => $v) {
             $this->{$k} = $v;
@@ -510,12 +546,70 @@ class NetfunEngine
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
             throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']');
+=======
+    public function setLocalVars(array $vars):self{
+        foreach($vars as $k=>$v){
+            $this->{$k}=$v;
+        }
+        return $this;
+    }
+
+    public function send():self{
+        switch($this->send_method){
+            case 'batch': return $this->sendBatch();
+        }
+        
+        return $this->sendNormal();
+    }
+
+    public function sendBatch():self{
+        $endpoint='https://v2.smsviainternet.it/api/rest/v1/sms-batch.json';
+        $headers=[
+            'Cache-Control' => 'no-cache',
+            'Content-Type' => 'application/json'
+        ];
+        $token=env('NETFUN_TOKEN');
+        $body=[
+            'api_token'=> $token,
+            //"gateway"=> 99,
+            "sender"=> "PamAnderson",
+            'text_template'=> "Prova",
+            'delivery_callback'=> "https://www.google.com?code={{code}}",
+            "default_placeholders"=> [
+                "code"=> "0000"
+            ],
+            "async"=> true, 
+            "max_sms_length"=> 1,
+            "utf8_enabled"=> false,
+            "destinations"=> [
+                [
+                  "number"=> "+393475896127",
+                  //"number"=> "+393283597515",
+                  "placeholders"=> [
+                    "fullName"=> "Santi",
+                    "body"=> "Ciao, hai vinto il premio",
+                    "code"=> "1234"
+                  ],
+                ],
+            ],
+               
+        ];
+
+       
+
+        $client = new Client($headers);
+        try{
+        $response = $client->post($endpoint,['json' => $body]);
+        }catch(ClientException $e){
+            dddx($e);
+>>>>>>> d27db1b (.)
         }
         echo '<pre>' . var_export($response->getStatusCode(), true) . '</pre>';
         echo '<pre>' . var_export($response->getBody()->getContents(), true) . '</pre>';
 
         return $this;
     }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -711,10 +805,14 @@ class NetfunEngine {
 >>>>>>> 6c92430 (.)
 =======
 =======
+=======
+
+>>>>>>> d27db1b (.)
 
     public function sendNormal():self{
         $endpoint='https://v2.smsviainternet.it/api/rest/v1/sms.json';
         $headers=[
+<<<<<<< HEAD
 =======
     public function sendNormal(): self {
         $endpoint = 'https://v2.smsviainternet.it/api/rest/v1/sms.json';
@@ -755,3 +853,29 @@ class NetfunEngine {
 >>>>>>> 6d24e5b (.)
 =======
 >>>>>>> fe06862 (.)
+=======
+            'Cache-Control' => 'no-cache',
+            'Content-Type' => 'application/json'
+        ];
+        $token=env('NETFUN_TOKEN');
+        
+        $body=[
+            'api_token'=> $token,
+            "text"=>'ciao da pam',
+            "numbers"=>'+393475896127',
+        ];
+
+       
+
+        $client = new Client($headers);
+        try{
+            $response = $client->post($endpoint,['json' => $body]);
+        }catch(ClientException $e){
+            dddx($e);
+        }
+        echo '<pre>' . var_export($response->getStatusCode(), true) . '</pre>';
+        echo '<pre>' . var_export($response->getBody()->getContents(), true) . '</pre>';
+        return $this;
+    }
+}
+>>>>>>> d27db1b (.)

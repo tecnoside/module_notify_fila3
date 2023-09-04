@@ -3,8 +3,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> d27db1b (.)
 <?php
 
 declare(strict_types=1);
@@ -12,6 +15,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
+<<<<<<< HEAD
 // //use Laravel\Scout\Searchable;
 <<<<<<< HEAD
 =======
@@ -19,11 +23,15 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+////use Laravel\Scout\Searchable;
+>>>>>>> d27db1b (.)
 use Modules\Xot\Traits\Updater;
 
 /**
  * Class BasePivot.
  */
+<<<<<<< HEAD
 abstract class BasePivot extends Pivot {
     use Updater;
 <<<<<<< HEAD
@@ -130,13 +138,18 @@ abstract class BasePivot extends Pivot {
     // use Searchable;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> d27db1b (.)
 abstract class BasePivot extends Pivot
 {
     use Updater;
     //use Searchable;
+<<<<<<< HEAD
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+>>>>>>> d27db1b (.)
 
     /**
      * @var string
@@ -147,7 +160,11 @@ abstract class BasePivot extends Pivot
      */
     protected $appends = [];
     /**
+<<<<<<< HEAD
      * @var array<string, string>
+=======
+     * @var array
+>>>>>>> d27db1b (.)
      */
     protected $casts = [];
     /**
@@ -164,6 +181,7 @@ abstract class BasePivot extends Pivot
      * @var bool
      */
     public $incrementing = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -252,3 +270,6 @@ abstract class BasePivot extends Pivot
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> fe06862 (.)
+=======
+}
+>>>>>>> d27db1b (.)

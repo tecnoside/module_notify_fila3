@@ -4,12 +4,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d27db1b (.)
 <?php
 
 declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
+<<<<<<< HEAD
 use Eloquent;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Spatie\MediaLibrary\HasMedia;
@@ -228,11 +232,23 @@ class NotifyTheme extends BaseModel {
 <<<<<<< HEAD
     protected $fillable=[
 >>>>>>> 42aa20e (.)
+=======
+/**
+ * --
+ */
+class NotifyTheme extends BaseModel{
+
+    /**
+     * @var array<string>
+     */
+    protected $fillable=[
+>>>>>>> d27db1b (.)
         'id',
         'lang',
         'type',
         'subject',
         'body',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -329,3 +345,7 @@ class NotifyTheme extends BaseModel {
 >>>>>>> 6d24e5b (.)
 =======
 >>>>>>> fe06862 (.)
+=======
+    ];
+}
+>>>>>>> d27db1b (.)

@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 declare(strict_types=1);
 
@@ -44,6 +45,8 @@ class _ModulePanelPolicy extends XotBasePanelPolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> d27db1b (.)
 namespace Modules\Notify\Models\Panels\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
@@ -57,6 +60,7 @@ class _ModulePanelPolicy extends XotBasePanelPolicy {
         return true;
     }
     public function testMail(UserContract $user,PanelContract $panel):bool{
+<<<<<<< HEAD
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 9f492fe (up)
@@ -90,6 +94,8 @@ class _ModulePanelPolicy extends XotBasePanelPolicy {
      */
     public function tryThemeNotification(UserContract $user, PanelContract $panel): bool
     {
+=======
+>>>>>>> d27db1b (.)
         return true;
     }
 }

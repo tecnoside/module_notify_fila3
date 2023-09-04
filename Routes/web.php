@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -51,6 +52,10 @@ declare(strict_types=1);
 =======
 >>>>>>> 188c25a (.)
 
+=======
+<?php
+
+>>>>>>> d27db1b (.)
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -61,6 +66,7 @@ declare(strict_types=1);
 | contains the "web" middleware group. Now create something great!
 |
 */
+<<<<<<< HEAD
 /*
 <<<<<<< HEAD
 Route::prefix('notify')->group(function() {
@@ -73,10 +79,13 @@ Route::prefix('notify')->group(function() {
 =======
 >>>>>>> 3876d63 (.)
 =======
+=======
+>>>>>>> d27db1b (.)
 
 Route::prefix('notify')->group(function() {
     Route::get('/', 'NotifyController@index');
 });
+<<<<<<< HEAD
 >>>>>>> 42aa20e (.)
 =======
 Route::prefix('notify')->group(function() {
@@ -91,3 +100,5 @@ Route::prefix('notify')->group(function() {
 
 declare(strict_types=1);
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> d27db1b (.)
