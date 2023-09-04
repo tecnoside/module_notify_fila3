@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models\Panels\Actions;
 
+<<<<<<< HEAD
 // -------- services --------
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,10 +34,28 @@ use Modules\Notify\Notifications\SampleNotification;
 >>>>>>> 9f492fe (up)
 =======
 >>>>>>> fe06862 (.)
+=======
+<<<<<<< HEAD
+//-------- services --------
+=======
+// -------- services --------
+>>>>>>> 0d776db (up)
+
+use Modules\Notify\Services\SmsService;
+use Modules\Theme\Services\ThemeService;
+use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
+
+<<<<<<< HEAD
+//-------- bases -----------
+=======
+// -------- bases -----------
+>>>>>>> 0d776db (up)
+>>>>>>> 5b257fb (up)
 
 /**
  * Class TestAction.
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:Models/Panels/Actions/TestSmsAction.php
 class TestSmsAction extends XotBasePanelAction {
@@ -53,12 +72,25 @@ class TrySmsAction extends XotBasePanelAction {
 =======
 class TrySmsAction extends XotBasePanelAction {
 >>>>>>> fe06862 (.)
+=======
+<<<<<<<< HEAD:Models/Panels/Actions/TestSmsAction.php
+<<<<<<< HEAD
+class TestSmsAction extends XotBasePanelAction
+{
+=======
+class TestSmsAction extends XotBasePanelAction {
+>>>>>>> 0d776db (up)
+========
+class TrySmsAction extends XotBasePanelAction {
+>>>>>>>> 5b257fb (up):Models/Panels/Actions/TrySmsAction.php
+>>>>>>> 5b257fb (up)
     public bool $onItem = true;
     public string $icon = '<i class="fas fa-vial"></i>SMS';
 
     /**
      * @return mixed
      */
+<<<<<<< HEAD
     public function handle() {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,11 +105,26 @@ class TrySmsAction extends XotBasePanelAction {
         $drivers = [
             'netfun' => 'netfun',
             'esendex' => 'esendex',
+=======
+<<<<<<< HEAD
+    public function handle()
+    {
+=======
+    public function handle() {
+>>>>>>> 0d776db (up)
+        $drivers = [
+            'netfun',
+>>>>>>> 5b257fb (up)
         ];
         $i = request('i');
 
         $driver = isset($drivers[$i]) ? $drivers[$i] : null;
+<<<<<<< HEAD
         $view = app(GetViewAction::class)->execute();
+=======
+
+        $view = ThemeService::getView();
+>>>>>>> 5b257fb (up)
 
         $view_params = [
             'view' => $view,
@@ -85,6 +132,7 @@ class TrySmsAction extends XotBasePanelAction {
             'driver' => $driver,
         ];
 
+<<<<<<< HEAD
         return view($view, $view_params);
     }
 
@@ -102,6 +150,9 @@ class TrySmsAction extends XotBasePanelAction {
         SmsService::make()->setLocalVars($vars)->send();
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> 5b257fb (up)
         
         return view()->make($view, $view_params);
         
@@ -111,6 +162,7 @@ class TrySmsAction extends XotBasePanelAction {
        $data=request()->all();
        $vars=collect($data)->only(['driver','from','to','body'])->all();
        SmsService::make()->setLocalVars($vars)->send();
+<<<<<<< HEAD
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 9f492fe (up)
@@ -141,5 +193,16 @@ class TrySmsAction extends XotBasePanelAction {
         Notification::send([$hows], new SampleNotification($data));
         echo '<h3>+Done</h3>';
 >>>>>>> fe06862 (.)
+=======
+=======
+        return view()->make($view, $view_params);
+    }
+
+    public function postHandle() {
+        $data = request()->all();
+        $vars = collect($data)->only(['driver', 'from', 'to', 'body'])->all();
+        SmsService::make()->setLocalVars($vars)->send();
+>>>>>>> 0d776db (up)
+>>>>>>> 5b257fb (up)
     }
 }

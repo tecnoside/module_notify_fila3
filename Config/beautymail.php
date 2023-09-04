@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -26,6 +27,10 @@ declare(strict_types=1);
 
 return [
 >>>>>>> fe06862 (.)
+=======
+return [
+
+>>>>>>> 5b257fb (up)
     // These CSS rules will be applied after the regular template CSS
 
     /*
@@ -39,6 +44,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 602db11 (up)
         'highlight' => '#004ca3',
@@ -99,4 +105,29 @@ return [
 >>>>>>> 602db11 (up)
 =======
 >>>>>>> fe06862 (.)
+=======
+
+        'highlight' => '#004ca3',
+        'button'    => '#004cad',
+
+    ],
+
+    'view' => [
+        'senderName'  => null,
+        'reminder'    => null,
+        'unsubscribe' => null,
+        'address'     => null,
+
+        'logo'        => [
+            'path'   => '%PUBLIC%/vendor/beautymail/assets/images/sunny/logo.png',
+            'width'  => '',
+            'height' => '',
+        ],
+
+        'twitter'  => null,
+        'facebook' => null,
+        'flickr'   => null,
+    ],
+
+>>>>>>> 5b257fb (up)
 ];

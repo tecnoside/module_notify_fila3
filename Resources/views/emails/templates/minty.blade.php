@@ -134,10 +134,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title></title>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<style type="text/css">{!! $_theme->cssInLine('notify::css/minty.css') !!}</style>
 =======
 	<style type="text/css">{{ file_get_contents(app_path() . '/../vendor/snowfire/beautymail/src/styles/css/minty.css') }}</style>
 >>>>>>> 83df11d (up)
+=======
+	<style type="text/css">{!! $_theme->cssInLine('notify::css/minty.css') !!}</style>
+>>>>>>> 5b257fb (up)
 	@if($css)
 	<style type="text/css">
 		{{ $css }}
