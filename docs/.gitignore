@@ -9,12 +9,16 @@ npm-debug.log
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b5ea747 (.)
+=======
+>>>>>>> 0ce2fce (.)
 *.cache
 *.phar
 *.lock
 package-lock.json
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 404660b (up)
@@ -26,3 +30,5 @@ package-lock.json
 >>>>>>> becf1dc (up)
 =======
 >>>>>>> a758bd5 (.)
+=======
+>>>>>>> 0ce2fce (.)
