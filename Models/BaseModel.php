@@ -251,11 +251,16 @@ use Modules\Xot\Traits\Updater;
  * Class BaseModel.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 abstract class BaseModel extends Model
 {
 =======
 abstract class BaseModel extends Model {
 >>>>>>> b3b016d (up)
+=======
+abstract class BaseModel extends Model
+{
+>>>>>>> 27d29a3 (up)
     // use Searchable;
     // //use Cachable;
     use HasFactory;
@@ -289,7 +294,7 @@ abstract class BaseModel extends Model {
     /**
      * @var string[]
      */
-    protected $dates = ['published_at', 'created_at', 'updated_at'];
+    protected $dates = ['published_at', 'created_at', 'updated_at', 'verified_at'];
     /**
      * @var string
      */
@@ -318,6 +323,7 @@ abstract class BaseModel extends Model {
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
+<<<<<<< HEAD
     protected static function newFactory() {
         return FactoryService::newFactory(get_called_class());
     }
@@ -457,3 +463,10 @@ abstract class BaseModel extends Model {
 =======
 }
 >>>>>>> 2e16e99 (up)
+=======
+    protected static function newFactory()
+    {
+        return FactoryService::newFactory(static::class);
+    }
+}
+>>>>>>> 27d29a3 (up)
