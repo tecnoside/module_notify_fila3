@@ -79,8 +79,11 @@ class NamirialService
         if (200 != $prepareResponse->status()) {
             throw new \Exception('Invalid Request. Response for file '.$this->params['FileName'].' is status '.$prepareResponse->status().' ['.__LINE__.']['.__FILE__.']');
         }
-
-        $this->response = $prepareResponse->json();
+        $json = $prepareResponse->json();
+        if (! is_array($json)) {
+            throw new Exception('['.__LINE__.']['.__FILE__.']');
+        }
+        $this->response = $json;
 
         // Debugbar::info('uploadRequest Response', $this->response['FileId']);
 
