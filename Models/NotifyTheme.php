@@ -19,6 +19,7 @@ namespace Modules\Notify\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Eloquent;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Spatie\MediaLibrary\HasMedia;
@@ -28,6 +29,10 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 >>>>>>> b1dceab (up)
 =======
 >>>>>>> a758bd5 (.)
+=======
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+
+>>>>>>> bc733de (up)
 /**
  * Modules\Notify\Models\NotifyTheme.
  *
@@ -446,6 +451,14 @@ class NotifyTheme extends BaseModel {
             'width' => $this->logo_width ?? 50,
             'height' => $this->logo_height ?? 50,
         ];
+    }
+
+    /**
+     * Get the parent linkable model (user or post).
+     */
+    public function linkable(): MorphTo
+    {
+        return $this->morphTo('post');
     }
 }
 <<<<<<< HEAD

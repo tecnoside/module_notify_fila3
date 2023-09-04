@@ -74,12 +74,16 @@ class NotifyThemeResource extends Resource
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 9658d21 (up)
+=======
+>>>>>>> bc733de (up)
                 Forms\Components\TextInput::make('post_id'),
                 Forms\Components\TextInput::make('subject'),
                 Forms\Components\TextInput::make('from'),
                 Forms\Components\TextInput::make('from_email'),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -147,6 +151,13 @@ class NotifyThemeResource extends Resource
 >>>>>>> 42f9249 (.)
 =======
 >>>>>>> 01564cc (up)
+=======
+                Forms\Components\TextInput::make('logo_src'),
+                Forms\Components\TextInput::make('logo_width'),
+                Forms\Components\TextInput::make('logo_height'),
+                Forms\Components\TextInput::make('theme'),
+
+>>>>>>> bc733de (up)
                 Forms\Components\RichEditor::make('body')->columnSpanFull(),
                 Forms\Components\RichEditor::make('body_html')->columnSpanFull(),
             ]);
@@ -290,7 +301,7 @@ class NotifyThemeResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            //RelationManagers\LinkableRelationManager::class,
         ];
     }
     
