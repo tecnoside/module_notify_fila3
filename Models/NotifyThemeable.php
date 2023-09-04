@@ -81,6 +81,7 @@ namespace Modules\Notify\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @mixin IdeHelperNotifyThemeable
  * @mixin \Eloquent
@@ -104,7 +105,10 @@ class NotifyThemeable extends BaseMorphPivot {
 >>>>>>> 67021f6 (up)
  * @mixin IdeHelperNotifyThemeable
  * @mixin \Eloquent
+=======
+>>>>>>> c4da9a3 (up)
  * @mixin IdeHelperNotifyThemeable
+ * @mixin \Eloquent
  */
 class NotifyThemeable extends BaseMorphPivot {
 >>>>>>> fe06862 (.)
