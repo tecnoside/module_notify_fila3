@@ -7,10 +7,14 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services\MailEngines;
 
+<<<<<<< HEAD
 use Exception;
 use GuzzleHttp\Client;
 
 // ---------CSS------------
+=======
+//---------CSS------------
+>>>>>>> 478e0e4 (.)
 
 /**
  * Class SmsService.
@@ -46,6 +50,7 @@ class DuocircleEngine {
     }
 
     public function send(): self {
+<<<<<<< HEAD
         dddx('WIP');
 
         return $this;
@@ -108,5 +113,7 @@ class DuocircleEngine {
         }
 
         return $this;
+=======
+>>>>>>> 478e0e4 (.)
     }
 }

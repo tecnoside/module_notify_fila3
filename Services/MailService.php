@@ -2,6 +2,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 478e0e4 (.)
 <?php
 
 declare(strict_types=1);
@@ -10,6 +13,7 @@ namespace Modules\Notify\Services;
 
 use Illuminate\Support\Str;
 
+<<<<<<< HEAD
 // ---------CSS------------
 
 /**
@@ -178,6 +182,9 @@ namespace Modules\Notify\Services;
 use Illuminate\Support\Str;
 
 // ---------CSS------------
+=======
+//---------CSS------------
+>>>>>>> 478e0e4 (.)
 
 /**
  * Class SmsService.
@@ -228,6 +235,7 @@ class MailService {
             ->setLocalVars($this->vars)
             ->send();
     }
+<<<<<<< HEAD
 
     /**
      * ---.
@@ -242,3 +250,6 @@ class MailService {
 >>>>>>> 89120cb (rebase)
 =======
 >>>>>>> 8be0eaa (up)
+=======
+}
+>>>>>>> 478e0e4 (.)
