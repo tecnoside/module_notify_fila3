@@ -29,6 +29,7 @@ class ThemeNotification extends Notification
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public array $attachments;
 =======
 use Illuminate\Notifications\Messages\MailMessage;
@@ -81,12 +82,16 @@ class ThemeNotification extends Notification implements ShouldQueue
 >>>>>>> 6eab953 (up)
 =======
 >>>>>>> a758bd5 (.)
+=======
+    public array $attachments;
+>>>>>>> 802179c (up)
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -246,6 +251,13 @@ class ThemeNotification extends Notification implements ShouldQueue
 >>>>>>> 6eab953 (up)
 =======
 >>>>>>> a758bd5 (.)
+=======
+    public function __construct(string $name, array $view_params, ?array $attachments = [])
+    {
+        $this->name = $name;
+        $this->view_params = $view_params;
+        $this->attachments = $attachments;
+>>>>>>> 802179c (up)
     }
 
     /**
@@ -274,7 +286,7 @@ class ThemeNotification extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         $mail_message = app(BuildMailMessageAction::class)
-             ->execute($this->name, $notifiable->getModel(), $this->view_params);
+             ->execute($this->name, $notifiable->getModel(), $this->view_params, $this->attachments);
 
         return $mail_message;
     }
