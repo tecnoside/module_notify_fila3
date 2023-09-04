@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -122,6 +123,8 @@ class NotifyTheme extends BaseModel implements HasMedia
 =======
 =======
 >>>>>>> 3a0e0a5 (up)
+=======
+>>>>>>> 8be0eaa (up)
 <?php
 
 declare(strict_types=1);
@@ -145,6 +148,7 @@ class NotifyTheme extends BaseModel {
         'from',
     ];
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 9349baf (.)
 =======
@@ -174,3 +178,5 @@ class NotifyTheme extends BaseModel {
     ];
 }
 >>>>>>> 89120cb (rebase)
+=======
+>>>>>>> 8be0eaa (up)
