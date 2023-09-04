@@ -104,6 +104,7 @@ class NotifyThemeable extends BaseMorphPivot {
 >>>>>>> 67021f6 (up)
  * @mixin IdeHelperNotifyThemeable
  * @mixin \Eloquent
+ * @mixin IdeHelperNotifyThemeable
  */
 class NotifyThemeable extends BaseMorphPivot {
 >>>>>>> fe06862 (.)
