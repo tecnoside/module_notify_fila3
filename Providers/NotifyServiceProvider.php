@@ -24,6 +24,7 @@ class NotifyServiceProvider extends XotBaseServiceProvider
     public function bootCallback(): void
     {
         // BladeService::registerComponents($this->module_dir.'/../View/Components', 'Modules\\Media');
+<<<<<<< HEAD
         // Notification::extend('esendex', function ($app) {
         //    return new \Modules\Notify\Notifications\Channels\EsendexChannel;
         // });
@@ -505,3 +506,10 @@ class NotifyServiceProvider extends ServiceProvider {
 =======
 }
 >>>>>>> fe06862 (.)
+=======
+        //Notification::extend('esendex', function ($app) {
+        //    return new \Modules\Notify\Notifications\Channels\EsendexChannel;
+        //});
+    }
+}
+>>>>>>> 5df40a5 (up)
