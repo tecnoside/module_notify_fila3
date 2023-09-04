@@ -15,8 +15,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services\SmsEngines;
 
-use Exception;
 use GuzzleHttp\Client;
+<<<<<<< HEAD
 <<<<<<< HEAD
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Str;
@@ -38,9 +38,9 @@ use Modules\Xot\Services\RouteService;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Contracts\PanelContract;
 use Modules\Xot\Services\ArtisanService;
+=======
+>>>>>>> 6c92430 (.)
 use GuzzleHttp\Exception\ClientException;
-use Modules\Tenant\Services\TenantService;
-use Illuminate\Contracts\Support\Renderable;
 
 //---------CSS------------
 >>>>>>> 42aa20e (.)
@@ -63,6 +63,7 @@ class NetfunEngine {
     public ?string $body;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public array $vars = [];
 
     public string $send_method = 'batch';
@@ -77,9 +78,11 @@ class NetfunEngine {
             self::$instance = new self;
 =======
     public string $send_method='batch';
+=======
+    public string $send_method = 'batch';
+>>>>>>> 6c92430 (.)
 
-    public function __construct(){
-        
+    public function __construct() {
     }
 
     public static function getInstance(): self {
@@ -215,66 +218,68 @@ class NetfunEngine {
         return static::getInstance();
     }
 
-    public function setLocalVars(array $vars):self{
-        foreach($vars as $k=>$v){
-            $this->{$k}=$v;
+    public function setLocalVars(array $vars): self {
+        foreach ($vars as $k => $v) {
+            $this->{$k} = $v;
         }
+
         return $this;
     }
 
-    public function send():self{
-        switch($this->send_method){
+    public function send(): self {
+        switch ($this->send_method) {
             case 'batch': return $this->sendBatch();
         }
-        
+
         return $this->sendNormal();
     }
 
-    public function sendBatch():self{
-        $endpoint='https://v2.smsviainternet.it/api/rest/v1/sms-batch.json';
-        $headers=[
+    public function sendBatch(): self {
+        $endpoint = 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json';
+        $headers = [
             'Cache-Control' => 'no-cache',
-            'Content-Type' => 'application/json'
+            'Content-Type' => 'application/json',
         ];
-        $token=env('NETFUN_TOKEN');
-        $body=[
-            'api_token'=> $token,
+        $token = env('NETFUN_TOKEN');
+
+        //dddx([ord($this->body[0]), $this->body]);
+
+        $body = [
+            'api_token' => $token,
             //"gateway"=> 99,
-            "sender"=> $this->from,
-            'text_template'=> $this->body,
-            'delivery_callback'=> "https://www.google.com?code={{code}}",
-            "default_placeholders"=> [
-                "code"=> "0000"
+            'sender' => $this->from,
+            'text_template' => $this->body,
+            'delivery_callback' => 'https://www.google.com?code={{code}}',
+            'default_placeholders' => [
+                'code' => '0000',
             ],
-            "async"=> true, 
-            "max_sms_length"=> 1,
-            "utf8_enabled"=> false,
-            "destinations"=> [
+            'async' => true,
+            'max_sms_length' => 1,
+            'utf8_enabled' => false,
+            'destinations' => [
                 [
-                  //"number"=> "+393475896127",
-                  "number"=> $this->to,
-                  
-                  "placeholders"=> [
-                    "fullName"=> "Santi",
-                    "body"=> "Ciao, hai vinto il premio",
-                    "code"=> "1234"
-                  ],
+                    'number' => $this->to,
+
+                    'placeholders' => [
+                        'fullName' => 'Santi',
+                        'body' => 'Ciao, hai vinto il premio',
+                        'code' => '1234',
+                    ],
                 ],
             ],
-               
         ];
 
-       //dddx($body);
+        //dddx($body);
 
         $client = new Client($headers);
-        try{
-        $response = $client->post($endpoint,['json' => $body]);
-        }catch(ClientException $e){
+        try {
+            $response = $client->post($endpoint, ['json' => $body]);
+        } catch (ClientException $e) {
             dddx($e);
 >>>>>>> 42aa20e (.)
         }
-        echo '<pre>' . var_export($response->getStatusCode(), true) . '</pre>';
-        echo '<pre>' . var_export($response->getBody()->getContents(), true) . '</pre>';
+        echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
+        echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
 
         return $this;
     }
@@ -604,32 +609,33 @@ class NetfunEngine {
 >>>>>>> 8be0eaa (up)
 =======
 
-
-    public function sendNormal():self{
-        $endpoint='https://v2.smsviainternet.it/api/rest/v1/sms.json';
-        $headers=[
+    public function sendNormal(): self {
+        $endpoint = 'https://v2.smsviainternet.it/api/rest/v1/sms.json';
+        $headers = [
             'Cache-Control' => 'no-cache',
-            'Content-Type' => 'application/json'
+            'Content-Type' => 'application/json',
         ];
-        $token=env('NETFUN_TOKEN');
-        
-        $body=[
-            'api_token'=> $token,
-            "text"=>'ciao da pam',
-            "numbers"=>'+393475896127',
-        ];
+        $token = env('NETFUN_TOKEN');
 
-       
+        $body = [
+            'api_token' => $token,
+            'text' => $this->body,
+            'numbers' => $this->to,
+        ];
 
         $client = new Client($headers);
-        try{
-            $response = $client->post($endpoint,['json' => $body]);
-        }catch(ClientException $e){
+        try {
+            $response = $client->post($endpoint, ['json' => $body]);
+        } catch (ClientException $e) {
             dddx($e);
         }
-        echo '<pre>' . var_export($response->getStatusCode(), true) . '</pre>';
-        echo '<pre>' . var_export($response->getBody()->getContents(), true) . '</pre>';
+        echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
+        echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
+
         return $this;
     }
 }
+<<<<<<< HEAD
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 6c92430 (.)
