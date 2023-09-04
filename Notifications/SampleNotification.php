@@ -34,26 +34,27 @@ class SampleNotification extends Notification
      */
     public function via($notifiable): array
     {
-        return $notifiable->channels;
-        // $channels = [];
+        // return $notifiable->channels;
+        $channels = ['database'];
         // $channels[]=EsendexChannel::class;
         // $channels[]='esendex'; //Driver [esendex] not supported.
         // $channels[]='array'; //Driver [array] not supported.
         // $channels[]='database'; //Driver [array] not supported.
-        // return $channels;
+        return $channels;
     }
 
-    /**
+    /* --WIP --
      * Get the mail representation of the notification.
      *
      * @param mixed $notifiable
      *
      * @return \Illuminate\Notifications\Messages\MailMessage
-     */
+
     public function toEsendex($notifiable)
     {
         dddx($notifiable);
     }
+    */
 
     /**
      * Undocumented function.
@@ -82,11 +83,13 @@ class SampleNotification extends Notification
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable)
-    {
+    {   /*
         $view_params = $notifiable->toArray();
         if (isset($view_params['body']) && ! isset($view_params['body_html'])) {
             $view_params['body_html'] = $view_params['body'];
         }
+        */
+        $view_params = [];
 
         return app(BuildMailMessageAction::class)->execute('test', app(NotificationModel::class), $view_params);
     }
@@ -115,6 +118,6 @@ class SampleNotification extends Notification
      */
     public function toDatabase($notifiable)
     {
-        return $notifiable->toArray();
+        return []; // $notifiable->toArray();
     }
 }

@@ -309,6 +309,9 @@ class EsendexSendAction
     {
 >>>>>>> 3d1ec9b (up)
         $auth = $this->login();
+        if (! is_array($auth)) {
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
+        }
 
         $data = [
             'message' => $sms->body,
@@ -358,7 +361,7 @@ class EsendexSendAction
      * Authenticates the user given it's username and password.
      * Returns the pair user_key, Session_key.
      */
-    public function login(): array
+    public function login(): ?array
     {
         $ch = curl_init();
 
@@ -375,6 +378,6 @@ class EsendexSendAction
             return null;
         }
 
-        return explode(';', $response);
+        return explode(';', strval($response));
     }
 }
