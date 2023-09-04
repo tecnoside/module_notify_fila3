@@ -126,6 +126,7 @@ use function Safe\curl_setopt;
 use function Safe\curl_exec;
 use function Safe\curl_getinfo;
 use function Safe\json_decode;
+use function Safe\json_encode;
 
 /**
  * @property string $base_endpoint
