@@ -20,8 +20,11 @@ class ApplyModelAttrsToThemeAction
     /**
      * Execute the action.
      */
-    public function execute(Model $model, string $name, array $extra = [], ?Collection $options): NotifyTheme
+    public function execute(Model $model, string $name, array $extra, ?Collection $options): NotifyTheme
     {
+        if(empty($extra)){
+            $extra=[];
+        }
 
         $theme = NotifyTheme::firstOrCreate(
             [

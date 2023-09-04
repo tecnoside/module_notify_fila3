@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 <<<<<<< HEAD
@@ -7,12 +8,20 @@ declare(strict_types=1);
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+<<<<<<< HEAD
+=======
+declare(strict_types=1);
+
+>>>>>>> b1dceab (up)
+>>>>>>> e2733fc (.)
 namespace Modules\Notify\Http\Controllers;
 
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
+<<<<<<< HEAD
 class NotifyController extends Controller {
     /**
      * Display a listing of the resource.
@@ -23,6 +32,9 @@ class NotifyController extends Controller {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> e2733fc (.)
 class NotifyController extends Controller
 {
     /**
@@ -31,9 +43,22 @@ class NotifyController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+=======
+class NotifyController extends Controller {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Renderable
+     */
+    public function index() {
+<<<<<<< HEAD
+>>>>>>> b1dceab (up)
+>>>>>>> e2733fc (.)
         return view('notify::index');
 =======
         /**
@@ -45,15 +70,29 @@ class NotifyController extends Controller
         ];
 
         return view($view, $view_params);
+<<<<<<< HEAD
 >>>>>>> b41d534 (up)
+=======
+>>>>>>> 7e94996 (up)
+>>>>>>> e2733fc (.)
     }
 
     /**
      * Show the form for creating a new resource.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @return Renderable
+     */
+    public function create()
+    {
+=======
+>>>>>>> e2733fc (.)
      *
      * @return Renderable
      */
     public function create() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -64,6 +103,9 @@ class NotifyController extends Controller
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+>>>>>>> b1dceab (up)
+>>>>>>> e2733fc (.)
         return view('notify::create');
 =======
         /**
@@ -75,11 +117,16 @@ class NotifyController extends Controller
         ];
 
         return view($view, $view_params);
+<<<<<<< HEAD
 >>>>>>> b41d534 (up)
+=======
+>>>>>>> 7e94996 (up)
+>>>>>>> e2733fc (.)
     }
 
     /**
      * Store a newly created resource in storage.
+<<<<<<< HEAD
      *
      * @return Renderable
      */
@@ -87,28 +134,55 @@ class NotifyController extends Controller
     public function store(Request $request) {
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> e2733fc (.)
      * @param Request $request
      * @return Renderable
      */
     public function store(Request $request)
     {
         //
+<<<<<<< HEAD
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 3a62aee (up)
 =======
     public function store(Request $request):Renderable {
 >>>>>>> a5593ab (.):Http/Controllers/NotifyController.old2
+=======
+=======
+     *
+     * @return Renderable
+     */
+<<<<<<<< HEAD:Http/Controllers/NotifyController.php
+    public function store(Request $request) {
+>>>>>>> b1dceab (up)
+========
+    public function store(Request $request):Renderable {
+>>>>>>>> e2733fc (.):Http/Controllers/NotifyController.old2
+>>>>>>> e2733fc (.)
     }
 
     /**
      * Show the specified resource.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @param int $id
+     * @return Renderable
+     */
+    public function show($id)
+    {
+=======
+>>>>>>> e2733fc (.)
      *
      * @param int $id
      *
      * @return Renderable
      */
     public function show($id) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -120,6 +194,9 @@ class NotifyController extends Controller
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+>>>>>>> b1dceab (up)
+>>>>>>> e2733fc (.)
         return view('notify::show');
 =======
         /**
@@ -131,17 +208,32 @@ class NotifyController extends Controller
         ];
 
         return view($view, $view_params);
+<<<<<<< HEAD
 >>>>>>> b41d534 (up)
+=======
+>>>>>>> 7e94996 (up)
+>>>>>>> e2733fc (.)
     }
 
     /**
      * Show the form for editing the specified resource.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @param int $id
+     * @return Renderable
+     */
+    public function edit($id)
+    {
+=======
+>>>>>>> e2733fc (.)
      *
      * @param int $id
      *
      * @return Renderable
      */
     public function edit($id) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -153,6 +245,9 @@ class NotifyController extends Controller
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+>>>>>>> b1dceab (up)
+>>>>>>> e2733fc (.)
         return view('notify::edit');
 =======
         /**
@@ -164,11 +259,16 @@ class NotifyController extends Controller
         ];
 
         return view($view, $view_params);
+<<<<<<< HEAD
 >>>>>>> b41d534 (up)
+=======
+>>>>>>> 7e94996 (up)
+>>>>>>> e2733fc (.)
     }
 
     /**
      * Update the specified resource in storage.
+<<<<<<< HEAD
      *
      * @param int $id
      *
@@ -177,6 +277,9 @@ class NotifyController extends Controller
     public function update(Request $request, $id) {
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> e2733fc (.)
      * @param Request $request
      * @param int $id
      * @return Renderable
@@ -184,6 +287,7 @@ class NotifyController extends Controller
     public function update(Request $request, $id)
     {
         //
+<<<<<<< HEAD
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 3a62aee (up)
@@ -191,22 +295,46 @@ class NotifyController extends Controller
 
     /**
      * Remove the specified resource from storage.
+=======
+=======
+>>>>>>> e2733fc (.)
      *
      * @param int $id
      *
      * @return Renderable
      */
+<<<<<<< HEAD
     public function destroy($id) {
 <<<<<<< HEAD
 =======
+=======
+    public function update(Request $request, $id) {
+>>>>>>> b1dceab (up)
+    }
+
+    /**
+     * Remove the specified resource from storage.
+<<<<<<< HEAD
+>>>>>>> e2733fc (.)
      * @param int $id
      * @return Renderable
      */
     public function destroy($id)
     {
         //
+<<<<<<< HEAD
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+=======
+     *
+     * @param int $id
+     *
+     * @return Renderable
+     */
+    public function destroy($id) {
+>>>>>>> b1dceab (up)
+>>>>>>> e2733fc (.)
     }
 }
