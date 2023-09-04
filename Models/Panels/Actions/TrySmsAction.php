@@ -41,6 +41,7 @@ use Modules\Notify\Notifications\SampleNotification;
 // -------- services --------
 >>>>>>> 0d776db (up)
 
+use Modules\Cms\Actions\GetViewAction;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Notify\Services\SmsService;
 use Modules\UI\Services\ThemeService;
@@ -124,12 +125,18 @@ class TrySmsAction extends XotBasePanelAction {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $view = ThemeService::getView();
 >>>>>>> 5b257fb (up)
 =======
         //$view = ThemeService::getView();
 $view = $this->panel->getView();
 >>>>>>> 7455be1 (up)
+=======
+        // $view = ThemeService::getView();
+        $view = $this->panel->getView();
+        // $view = app(GetViewAction::class)->execute();
+>>>>>>> 31eec80 (up)
 
         $view_params = [
             'view' => $view,
