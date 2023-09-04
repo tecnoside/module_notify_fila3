@@ -7,6 +7,7 @@ section: content
 
 # Notifica ThemeNotification
 
+<<<<<<< HEAD
 Classe che si occupa di recuperare il template della notifica che si vuole utilizzare,  
 già precedentemente creata nella tabella notify_themes.  
 Esempo:
@@ -25,3 +26,6 @@ Notification::send($recipients, $template);
 
 Il primo parametro $recipients è una collezione di destinatari a cui verrà mandata la notifica,  
 il secondo parametro $template è quello appena recuperato dalla tabella notify_themes
+=======
+Classe notifica utilizzata per inviare email/sms/ecc.
+>>>>>>> b0b881b (.)
