@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Models\Panels\Policies;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Cms\Contracts\PanelContract;
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 =======
@@ -15,6 +16,10 @@ use Modules\Xot\Contracts\PanelContract;
 =======
 use Modules\Cms\Contracts\PanelContract;
 >>>>>>> 1d687b9 (up)
+=======
+use Modules\Cms\Contracts\PanelContract;
+use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
+>>>>>>> ef053df (up)
 use Modules\Xot\Contracts\UserContract;
 
 class _ModulePanelPolicy extends XotBasePanelPolicy
