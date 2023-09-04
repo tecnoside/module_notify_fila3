@@ -269,6 +269,10 @@ class Contact extends BaseModel
 >>>>>>> fe06862 (.)
 =======
 class Contact extends BaseModel {
+<<<<<<< HEAD
     protected $fillable = ['model_id', 'model_type', 'contact_type', 'value', 'verified_at', 'updated_at', 'created_at', 'updated_by', 'created_by'];
 >>>>>>> 202f1e7 (up)
+=======
+    protected $fillable = ['model_id', 'model_type', 'contact_type', 'value', 'verified_at', 'updated_at', 'created_at', 'updated_by', 'created_by', 'user_id', 'token'];
+>>>>>>> dacc817 (.)
 }
