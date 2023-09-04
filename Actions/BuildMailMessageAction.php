@@ -55,7 +55,7 @@ class BuildMailMessageAction
 {
     use QueueableAction;
 
-    public function execute(string $name, Model $model, array $view_params = []): MailMessage
+    public function execute(string $name, Model $model, array $view_params = [], ?array $attachments = []): MailMessage
     {
         $view_params = array_merge($view_params, $model->toArray());
         $type = 'email';
@@ -112,9 +112,9 @@ class BuildMailMessageAction
 
         $view_html = 'notify::email';
 
-        return (new MailMessage())
-            // ->from('barrett@example.com', 'Barrett Blair')
+        $email = (new MailMessage())
             ->subject($view_params['subject'] ?? $theme->subject)
+<<<<<<< HEAD
 <<<<<<< HEAD
             ->view($view_html, $view_params);
 <<<<<<< HEAD
@@ -126,5 +126,17 @@ class BuildMailMessageAction
             // TO-DO: va messo qua il ciclo degli attachments?
         ;
 >>>>>>> aedf4cb (up)
+=======
+            ->view($view_html, $view_params);
+
+        // TO-DO: va messo qua il ciclo degli attachments?
+        if (! empty($attachments)) {
+            foreach ($attachments as $attachment) {
+                $email = $email->attach($attachment['file_path'], ['as' => $attachment['as'], 'mime' => $attachment['mime']]);
+            }
+        }
+
+        return $email;
+>>>>>>> b068ab9 (up)
     }
 }
