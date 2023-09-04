@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 namespace Modules\Notify\Providers;
@@ -29,6 +30,19 @@ class FilamentServiceProvider extends XotBaseContextServiceProvider
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+namespace Modules\Notify\Providers;
+
+use Filament\Facades\Filament;
+use Filament\Navigation\NavigationItem;
+use Savannabits\FilamentModules\ContextServiceProvider;
+
+class FilamentServiceProvider extends ContextServiceProvider
+{
+    public static string $name = 'notify-filament';
+    public static string $module = 'Notify';
+
+>>>>>>> 01564cc (up)
     public function packageRegistered(): void
     {
         $this->app->booting(function () {
@@ -50,11 +64,15 @@ class FilamentServiceProvider extends XotBaseContextServiceProvider
         Filament::serving(function () {
             Filament::forContext('filament', function (){
                 Filament::registerNavigationItems([
+<<<<<<< HEAD
                     NavigationItem::make(static::$module)
                         ->label(static::$module.' ')
                         ->url(route(static::$name.'.pages.dashboard'))
                         ->icon('heroicon-o-bookmark')
                         ->group('Modules')
+=======
+                    NavigationItem::make(static::$module)->label(static::$module.' Module')->url(route(static::$name.'.pages.dashboard'))->icon('heroicon-o-bookmark')->group('Modules')
+>>>>>>> 01564cc (up)
                 ]);
             });
             Filament::forContext(static::$name, function (){
@@ -62,10 +80,13 @@ class FilamentServiceProvider extends XotBaseContextServiceProvider
             });
         });
     }
+<<<<<<< HEAD
 >>>>>>> 911eb41 (up)
 =======
     
 >>>>>>> 812a135 (up)
 =======
 >>>>>>> b735fbf (.)
+=======
+>>>>>>> 01564cc (up)
 }

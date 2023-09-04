@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b735fbf (.)
 declare(strict_types=1);
@@ -26,6 +27,19 @@ class FilamentMiddleware extends XotBaseFilamentMiddleware
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+namespace Modules\Notify\Http\Middleware;
+
+use Filament\Models\Contracts\FilamentUser;
+use Illuminate\Auth\Middleware\Authenticate as Middleware;
+use Nwidart\Modules\Laravel\Module;
+
+class FilamentMiddleware extends Middleware
+{
+    public static string $module = 'Notify';
+    public static string $context = 'filament';
+
+>>>>>>> 01564cc (up)
     private function getModule(): Module {
         return app('modules')->findOrFail(static::$module);
     }
@@ -70,10 +84,13 @@ class FilamentMiddleware extends XotBaseFilamentMiddleware
         $context = $this->getContextName();
         return route("$context.auth.login");
     }
+<<<<<<< HEAD
 >>>>>>> 911eb41 (up)
 =======
    
 >>>>>>> ca17928 (up)
 =======
 >>>>>>> 42f9249 (.)
+=======
+>>>>>>> 01564cc (up)
 }
