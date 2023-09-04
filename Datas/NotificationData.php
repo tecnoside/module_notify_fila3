@@ -20,12 +20,18 @@ use Modules\Notify\Models\Notification as NotificationModel;
 >>>>>>> ace9eb3 (up)
 use Spatie\LaravelData\Data;
 
+<<<<<<< HEAD
 class NotificationData extends Data {
 >>>>>>> 0cbdb01 (up)
+=======
+class NotificationData extends Data
+{
+>>>>>>> 4a1a664 (up)
     // public string $mobile_phone;
     // public string $token;
     // public int $q;
     public string $from;
+<<<<<<< HEAD
 <<<<<<< HEAD
     public ?string $from_email = null;
     public string $to;
@@ -66,29 +72,43 @@ class NotificationData extends Data {
     }
 =======
     public ?string $from_email=null;
+=======
+    public ?string $from_email = null;
+>>>>>>> 4a1a664 (up)
     public string $to;
-    public ?string $subject=null;
-    public ?string $body_html=null;
+    public ?string $subject = null;
+    public ?string $body_html = null;
     public string $body;
-    public array $channels=[];
+    public array $channels = [];
 
-
-
-
-     /** Get the notification routing information for the given driver.
+    /** Get the notification routing information for the given driver.
      *
      * @param string $driver
      *
      * @return mixed
      */
-    public function routeNotificationFor($driver,Notification $notification) {
-        //dddx(['driver'=>$driver,'a'=>$a]);
-        //return $this->routes[$driver] ?? null;
-        if($driver=='database'){
+    public function routeNotificationFor($driver, Notification $notification)
+    {
+        // dddx(['driver'=>$driver,'a'=>$a]);
+        // return $this->routes[$driver] ?? null;
+        if ('database' == $driver) {
             return app(NotificationModel::class);
         }
+
         return $this->to;
     }
+<<<<<<< HEAD
     
 >>>>>>> 0cbdb01 (up)
+=======
+
+    public function getSmsData(): SmsData
+    {
+        return SmsData::from([
+            'from' => $this->from,
+            'to' => $this->to,
+            'body' => $this->body,
+        ]);
+    }
+>>>>>>> 4a1a664 (up)
 }
