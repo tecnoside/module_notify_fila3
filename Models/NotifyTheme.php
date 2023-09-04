@@ -41,6 +41,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property string|null                     $theme
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property string|null                     $from_email
  * @property string|null                     $logo_src
  * @property int|null                        $logo_width
@@ -51,6 +52,9 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  *
  * @method static \Modules\Notify\Database\Factories\NotifyThemeFactory factory($count = null, $state = [])
 =======
+=======
+ *
+>>>>>>> da86307 (up)
  * @method static \Modules\Notify\Database\Factories\NotifyThemeFactory factory(...$parameters)
 >>>>>>> 3d1ec9b (up)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     newModelQuery()
@@ -75,22 +79,28 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereUpdatedBy($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @mixin IdeHelperNotifyTheme
  *
  * @property \Illuminate\Database\Eloquent\Model|Eloquent $linkable
  *
 =======
+=======
+ *
+>>>>>>> da86307 (up)
  * @property string|null $from_email
  * @property string|null $logo_src
- * @property int|null $logo_width
- * @property int|null $logo_height
- * @property-read array $logo
+ * @property int|null    $logo_width
+ * @property int|null    $logo_height
+ * @property array       $logo
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereFromEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereLogoHeight($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereLogoSrc($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereLogoWidth($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereTheme($value)
+<<<<<<< HEAD
 >>>>>>> 3d1ec9b (up)
  * @mixin \Eloquent
  */
@@ -107,6 +117,13 @@ class NotifyTheme extends BaseModel
 =======
 class NotifyTheme extends BaseModel {
 >>>>>>> abf6fd4 (up)
+=======
+ *
+ * @mixin \Eloquent
+ */
+class NotifyTheme extends BaseModel
+{
+>>>>>>> da86307 (up)
     /**
      * @var array<string>
      */
@@ -321,11 +338,12 @@ class NotifyTheme extends BaseModel {
         'logo',
     ];
 
-    public function getLogoAttribute(?array $value): array {
+    public function getLogoAttribute(?array $value): array
+    {
         return [
-            'path' => asset($this->logo_src),
-            'width' => $this->logo_width,
-            'height' => $this->logo_height,
+            'path' => asset(strval($this->logo_src)),
+            'width' => $this->logo_width ?? 50,
+            'height' => $this->logo_height ?? 50,
         ];
     }
 }

@@ -4,20 +4,23 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Notifications\Channels;
 
-//use Illuminate\Support\Facades\Notification;
+// use Illuminate\Support\Facades\Notification;
+use Illuminate\Notifications\Notification;
 use Modules\Notify\Actions\EsendexSendAction;
 use Modules\Notify\Notifications\SmsNotification;
-use Illuminate\Notifications\Notification;
 use Modules\Xot\Contracts\ModelContactContract;
 
-class EsendexChannel {
-    public function __construct() {
+class EsendexChannel
+{
+    public function __construct()
+    {
     }
 
-    //public function send($notifiable, SmsNotification $notification) {
-    public function send(object $notifiable, Notification $notification): void  {
-        
+    // public function send($notifiable, SmsNotification $notification) {
+    public function send(object $notifiable, Notification $notification): void
+    {
         // Send notification to the $notifiable instance...
+        // Call to an undefined method Illuminate\Notifications\Notification::toSms().
         $message = $notification->toSms($notifiable);
         // Send notification to the $notifiable instance...
         $data = app(EsendexSendAction::class)->execute($message);
