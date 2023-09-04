@@ -9,10 +9,14 @@ namespace Modules\Notify\Services\MailEngines;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9f492fe (up)
 use Exception;
 use GuzzleHttp\Client;
 
 // ---------CSS------------
+<<<<<<< HEAD
 =======
 =======
 use GuzzleHttp\Client;
@@ -20,6 +24,8 @@ use GuzzleHttp\Client;
 >>>>>>> 6d517f2 (.)
 //---------CSS------------
 >>>>>>> 478e0e4 (.)
+=======
+>>>>>>> 9f492fe (up)
 
 /**
  * Class SmsService.
@@ -81,7 +87,6 @@ class DuocircleEngine {
 
         dddx($request);
         */
-<<<<<<< HEAD
         if (! class_exists(\Webklex\PHPIMAP\Client::class)) {
             throw new Exception('class [Webklex\\PHPIMAP\\Client] not exists ['.__LINE__.']['.class_basename(__CLASS__).']');
         }
@@ -107,6 +112,7 @@ class DuocircleEngine {
             $messages = $folder->messages()->all()->get();
 
             // / @var \Webklex\PHPIMAP\Message $message
+<<<<<<< HEAD
 =======
         /** @var \Webklex\PHPIMAP\Client $client */
         $client = \Webklex\IMAP\Facades\Client::account('default');
@@ -127,16 +133,20 @@ class DuocircleEngine {
 
             /** @var \Webklex\PHPIMAP\Message $message */
 >>>>>>> 6d517f2 (.)
+=======
+>>>>>>> 9f492fe (up)
             foreach ($messages as $message) {
                 echo $message->getSubject().'<br />';
                 echo 'Attachments: '.$message->getAttachments()->count().'<br />';
                 echo $message->getHTMLBody();
 
-<<<<<<< HEAD
                 // Move the current Message to 'INBOX.read'
+<<<<<<< HEAD
 =======
                 //Move the current Message to 'INBOX.read'
 >>>>>>> 6d517f2 (.)
+=======
+>>>>>>> 9f492fe (up)
                 if (true == $message->move('INBOX.read')) {
                     echo 'Message has ben moved';
                 } else {

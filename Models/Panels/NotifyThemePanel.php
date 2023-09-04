@@ -8,6 +8,7 @@ namespace Modules\Notify\Models\Panels;
 
 use Illuminate\Http\Request;
 // --- Services --
+<<<<<<< HEAD
 =======
 =======
 declare(strict_types=1);
@@ -18,6 +19,8 @@ namespace Modules\Notify\Models\Panels;
 use Illuminate\Http\Request;
 //--- Services --
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 9f492fe (up)
 
 use Modules\Xot\Models\Panels\XotBasePanel;
 
@@ -25,16 +28,22 @@ class NotifyThemePanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @var string
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 9f492fe (up)
      */
     public static string $model = 'Modules\Notify\Models\NotifyTheme';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9f492fe (up)
      */
     public static string $title = 'title';
 
@@ -197,11 +206,14 @@ class NotifyThemePanel extends XotBasePanel {
     /**
      * Get the tabs available.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public function tabs(): array {
 =======
      *
      * @return array
+=======
+>>>>>>> 9f492fe (up)
      */
 <<<<<<< HEAD
     public function tabs():array {
@@ -217,11 +229,14 @@ class NotifyThemePanel extends XotBasePanel {
     /**
      * Get the cards available for the request.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public function cards(Request $request): array {
 =======
      *
      * @return array
+=======
+>>>>>>> 9f492fe (up)
      */
 <<<<<<< HEAD
     public function cards(Request $request):array {
@@ -237,11 +252,14 @@ class NotifyThemePanel extends XotBasePanel {
      *
      * @param \Illuminate\Http\Request $request
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public function filters(Request $request = null): array {
 =======
      *
      * @return array
+=======
+>>>>>>> 9f492fe (up)
      */
 <<<<<<< HEAD
     public function filters(Request $request = null):array {
@@ -255,11 +273,14 @@ class NotifyThemePanel extends XotBasePanel {
     /**
      * Get the lenses available for the resource.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public function lenses(Request $request): array {
 =======
      *
      * @return array
+=======
+>>>>>>> 9f492fe (up)
      */
 <<<<<<< HEAD
     public function lenses(Request $request):array {
@@ -273,11 +294,14 @@ class NotifyThemePanel extends XotBasePanel {
     /**
      * Get the actions available for the resource.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public function actions(): array {
 =======
      *
      * @return array
+=======
+>>>>>>> 9f492fe (up)
      */
 <<<<<<< HEAD
     public function actions():array {

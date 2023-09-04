@@ -94,6 +94,7 @@ namespace Modules\Notify\Services;
 use Illuminate\Support\Str;
 
 // ---------CSS------------
+<<<<<<< HEAD
 =======
 use Exception;
 use Illuminate\Contracts\Support\Renderable;
@@ -218,6 +219,8 @@ namespace Modules\Notify\Services;
 use Illuminate\Support\Str;
 
 // ---------CSS------------
+=======
+>>>>>>> 9f492fe (up)
 
 /**
  * Class SmsService.
@@ -259,7 +262,11 @@ class SmsService {
         return $this;
     }
 
+<<<<<<< HEAD
     public function send() {
+=======
+    public function send(): self {
+>>>>>>> 9f492fe (up)
         $class = '\Modules\Notify\Services\SmsEngines\\'.Str::studly($this->driver).'Engine';
 =======
     public function setLocalVars(array $vars):self{
@@ -276,6 +283,7 @@ class SmsService {
         return $this;
     }
 
+<<<<<<< HEAD
     public function mergeVars(array $vars): self {
         $this->vars = array_merge($this->vars, $vars);
 
@@ -293,6 +301,10 @@ class SmsService {
         $class::make()
             ->setLocalVars($this->vars)
             ->send();
+=======
+    public function getVars() {
+        return $this->vars;
+>>>>>>> 9f492fe (up)
     }
 <<<<<<< HEAD
 <<<<<<< HEAD

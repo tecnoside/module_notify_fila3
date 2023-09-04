@@ -13,8 +13,8 @@ namespace Modules\Notify\Services;
 
 use Illuminate\Support\Str;
 
-<<<<<<< HEAD
 // ---------CSS------------
+<<<<<<< HEAD
 
 /**
  * Class SmsService.
@@ -102,6 +102,8 @@ namespace Modules\Notify\Services;
 use Illuminate\Support\Str;
 
 // ---------CSS------------
+=======
+>>>>>>> 9f492fe (up)
 
 /**
  * Class SmsService.
