@@ -166,9 +166,10 @@
 >>>>>>> fe06862 (.)
     },
     "require": {
-        "laraxot/module_xot": "dev-master",
+        "filament/filament": "*",
         "illuminate/contracts": "*",
         "illuminate/support": "*",
+        "laraxot/module_xot": "dev-master",
         "phpdocumentor/type-resolver": "*"
     },
     "require-dev": {
@@ -183,6 +184,7 @@
         "pestphp/pest-plugin-laravel": "*",
         "phpstan/extension-installer": "*",
         "phpunit/phpunit": "*",
+        "psalm/plugin-laravel": "*",
         "spatie/laravel-typescript-transformer": "*",
         "spatie/pest-plugin-snapshots": "*",
         "spatie/phpunit-snapshot-assertions": "*",
@@ -232,6 +234,7 @@
 =======
     "prefer-stable": true
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> de1fcaf (up)
@@ -240,3 +243,6 @@
 =======
 }
 >>>>>>> 722799f (up)
+=======
+}
+>>>>>>> ce7efbd (.)
