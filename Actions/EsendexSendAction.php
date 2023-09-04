@@ -258,7 +258,7 @@ class EsendexSendAction
         $info = curl_getinfo($ch);
 
         curl_close($ch);
-
+        Assert::isArray($info);
         if (200 != $info['http_code']) {
             return null;
         }
