@@ -6,15 +6,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
-=======
->>>>>>> b3b016d (up)
-=======
->>>>>>> a758bd5 (.)
 
                 <x-input.group type="text" name="subject" value="mail test" />
 
@@ -29,8 +22,6 @@
                 <x-input.group type="select" name="template" :options="$template_options"/>
 
                 <x-input.group type="select" name="mailer" :options="$mailer_options"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 
@@ -54,31 +45,15 @@
                 <x-input.group type="text" name="to" value="marco.sottana@gmail.com" />
 >>>>>>> 7616aad (up)
 
-=======
-                
-                <x-input.group type="text" name="subject" value="mail test" />
-
-                <x-input.group type="text" name="from" value="staff@example.com" />
-                
-                <x-input.group type="text" name="to" value="marco.sottana@gmail.com" />
-
->>>>>>> 478bb60 (up)
                 <x-input.group type="text" name="body" value="invio mail di test" />
                 {{--
                 <x-input.group type="select" name="engine" :options="$options"/>
                 --}}
                 <x-input.group type="select" name="template" :options="$template_options"/>
-<<<<<<< HEAD
 
                 <x-input.group type="select" name="mailer" :options="$mailer_options"/>
 =======
 >>>>>>> fe06862 (.)
-=======
->>>>>>> 478bb60 (up)
-=======
->>>>>>> 8072a08 (up)
-=======
->>>>>>> a758bd5 (.)
 
                 <button class="btn btn-primary" type="submit">go!</button>
 
