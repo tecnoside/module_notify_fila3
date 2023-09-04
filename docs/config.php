@@ -248,13 +248,17 @@ return [
         return url('/'.trimPath($path));
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 >>>>>>> dd3d1c2 (up)
 =======
+=======
+>>>>>>> 8126475 (up)
 
     'children' => function ($page, $docs) {
         return $docs->where('parent_id', $page->id);
     },
+<<<<<<< HEAD
 ];
 >>>>>>> 78056fb (up)
 =======
@@ -287,3 +291,6 @@ return [
     },
 ];
 >>>>>>> 55575a7 (up)
+=======
+];
+>>>>>>> 8126475 (up)
