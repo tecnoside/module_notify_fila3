@@ -48,9 +48,16 @@ class RowAttributeNotification extends Notification
     {
 
         $theme = $this->row->notifyThemes->first()->theme ?? 'ark';
-
+        // dddx([
+        //     'row' => $this->row,
+        //     'from_email' => $this->row->mail_from,
+        //     'from' => $this->row->mail_from_email,
+        //     'subject' => $this->row->mail_subject,
+        //     'row email' => $this->row->email,
+        //     'body' => $this->row->mail_body,
+        // ]);
         $message = (new MailMessage())
-            ->from($this->row->mail_from)
+            ->from($this->row->mail_from, $this->row->mail_from_email)
             ->subject($this->row->mail_subject)
             ->line('---')
             // non so se posso modificare questa riga senza creare errori in altre parti

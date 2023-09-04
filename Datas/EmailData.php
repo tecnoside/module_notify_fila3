@@ -6,8 +6,12 @@ namespace Modules\Notify\Datas;
 
 use Spatie\LaravelData\Data;
 
+<<<<<<< HEAD
 class EmailData extends Data
 {
+=======
+class EmailData extends Data {
+>>>>>>> 24ac20c (up)
     public string $from;
     public string $from_email;
     public string $subject;
