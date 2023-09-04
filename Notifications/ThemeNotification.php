@@ -299,6 +299,9 @@ class ThemeNotification extends Notification implements ShouldQueue
         $mail_message = app(BuildMailMessageAction::class)
              ->execute($this->name, $notifiable->getModel(), $this->view_params, $attachments);
 
+
+        $notifiable->sendEmailCallback();
+
         return $mail_message;
     }
 
@@ -427,6 +430,7 @@ class ThemeNotification extends Notification implements ShouldQueue
 
         // $notifiable->sendSmsCallback()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0cbdb01 (up)
 =======
@@ -445,6 +449,8 @@ class ThemeNotification extends Notification implements ShouldQueue
 =======
         */
 >>>>>>> a758bd5 (.)
+=======
+>>>>>>> 5bd4f40 (.)
     }
 
     /**
