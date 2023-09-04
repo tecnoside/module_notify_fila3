@@ -3,7 +3,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 @extends('adm_theme::layouts.app')
 @section('content')
     <x-navbar>
@@ -45,8 +44,6 @@
 >>>>>>> 8be0eaa (up)
 =======
 >>>>>>> 42aa20e (.)
-=======
->>>>>>> fe06862 (.)
 @extends('adm_theme::layouts.app')
 @section('content')
     <x-navbar>
@@ -81,7 +78,6 @@
        {{ $driver }}
     </x-col>
 @endsection
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -128,5 +124,3 @@
 >>>>>>> 8be0eaa (up)
 =======
 >>>>>>> 42aa20e (.)
-=======
->>>>>>> fe06862 (.)
