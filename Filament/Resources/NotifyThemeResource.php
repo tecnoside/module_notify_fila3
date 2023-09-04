@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b735fbf (.)
 declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Resources;
@@ -174,12 +177,15 @@ class NotifyThemeResource extends Resource
                     ->options(self::fieldOptions('type')),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 
 >>>>>>> 911eb41 (up)
 =======
 
 >>>>>>> 42f9249 (.)
+=======
+>>>>>>> b735fbf (.)
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -195,6 +201,7 @@ class NotifyThemeResource extends Resource
     {
         return [
             // RelationManagers\LinkableRelationManager::class,
+<<<<<<< HEAD
         ];
     }
 
@@ -207,6 +214,8 @@ class NotifyThemeResource extends Resource
     {
         return [
             //RelationManagers\LinkableRelationManager::class,
+=======
+>>>>>>> b735fbf (.)
         ];
     }
 <<<<<<< HEAD

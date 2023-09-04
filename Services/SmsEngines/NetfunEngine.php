@@ -366,8 +366,10 @@ use Illuminate\Support\Str;
 /**
  * Class SmsService.
  */
-class NetfunEngine {
+class NetfunEngine
+{
     private static ?self $instance = null;
+
     public ?string $from;
     public string $to;
     public string $driver;
@@ -377,22 +379,26 @@ class NetfunEngine {
 
     public string $send_method = 'batch';
 
-    public function __construct() {
+    public function __construct()
+    {
     }
 
-    public static function getInstance(): self {
+    public static function getInstance(): self
+    {
         if (null === self::$instance) {
-            self::$instance = new self();
+            self::$instance = new self;
         }
 
         return self::$instance;
     }
 
-    public static function make(): self {
+    public static function make(): self
+    {
         return static::getInstance();
     }
 
-    public function setLocalVars(array $vars): self {
+    public function setLocalVars(array $vars): self
+    {
         foreach ($vars as $k => $v) {
             $this->{$k} = $v;
         }
@@ -400,11 +406,13 @@ class NetfunEngine {
         return $this;
     }
 
-    public function getVars(): array {
+    public function getVars(): array
+    {
         return $this->vars;
     }
 
-    public function send(): self {
+    public function send(): self
+    {
         switch ($this->send_method) {
             case 'batch': return $this->sendBatch();
         }
@@ -412,7 +420,8 @@ class NetfunEngine {
         return $this->sendNormal();
     }
 
-    public function sendBatch(): self {
+    public function sendBatch(): self
+    {
         $endpoint = 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json';
         $headers = [
             'Cache-Control' => 'no-cache',
@@ -422,20 +431,20 @@ class NetfunEngine {
 
         // dddx([ord($this->body[0]), $this->body]);
 
-        $this->to = $this->to.'';
+        $this->to = $this->to . '';
         if (Str::startsWith($this->to, '00')) {
-            $this->to = '+39'.substr($this->to, 2);
+            $this->to = '+39' . substr($this->to, 2);
         }
 
         if (! Str::startsWith($this->to, '+')) {
-            $this->to = '+39'.$this->to;
+            $this->to = '+39' . $this->to;
         }
 
         $body = [
             'api_token' => $token,
             // "gateway"=> 99,
             'sender' => $this->from,
-            'text_template' => $this->body.'  '.rand(1, 100),
+            'text_template' => $this->body . '  ' . rand(1, 100),
             /*
             'delivery_callback' => 'https://www.google.com?code={{code}}',
             'default_placeholders' => [
@@ -465,7 +474,7 @@ class NetfunEngine {
         try {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
-            throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']');
+            throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']');
         }
         /*
         echo '<hr/>';
@@ -481,7 +490,8 @@ class NetfunEngine {
         return $this;
     }
 
-    public function sendNormal(): self {
+    public function sendNormal(): self
+    {
         $endpoint = 'https://v2.smsviainternet.it/api/rest/v1/sms.json';
         $headers = [
             'Cache-Control' => 'no-cache',
@@ -499,10 +509,10 @@ class NetfunEngine {
         try {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
-            throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']');
+            throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']');
         }
-        echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
-        echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
+        echo '<pre>' . var_export($response->getStatusCode(), true) . '</pre>';
+        echo '<pre>' . var_export($response->getBody()->getContents(), true) . '</pre>';
 
         return $this;
     }

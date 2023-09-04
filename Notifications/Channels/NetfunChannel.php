@@ -82,15 +82,20 @@ class NetfunChannel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Modules\Notify\Contracts\CanThemeNotificationContract  $notifiable
 =======
      * @param \Modules\Notify\Contracts\CanThemeNotificationContract $notifiable
      *
 >>>>>>> c156f22 (.)
+=======
+     * @param  \Modules\Notify\Contracts\CanThemeNotificationContract  $notifiable
+>>>>>>> b735fbf (.)
      * @return void
      */
     public function send($notifiable, ThemeNotification $notification)
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -119,6 +124,8 @@ class NetfunChannel
 
 
 >>>>>>> c156f22 (.)
+=======
+>>>>>>> b735fbf (.)
         $message = $notification->toSms($notifiable);
         // Send notification to the $notifiable instance...
         $data = app(NetfunSendAction::class)->execute($message);
@@ -128,10 +135,14 @@ class NetfunChannel
         if ($notifiable instanceof ModelContactContract) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             $notifiable->increase('sms', $data);
 =======
             $notifiable->increase('sms',$data);
 >>>>>>> 3d98802 (up)
+=======
+            $notifiable->increase('sms', $data);
+>>>>>>> b735fbf (.)
             /*
             $data['sms_sent_at'] = now();
             $data['sms_count'] = (int) $notifiable->sms_count + 1;

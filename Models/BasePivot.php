@@ -195,6 +195,7 @@ abstract class BasePivot extends Pivot
      * @var bool
      */
     public static $snakeAttributes = true;
+
     /**
      * @var bool
      */
@@ -203,15 +204,16 @@ abstract class BasePivot extends Pivot
     protected $perPage = 30;
 
     // use Searchable;
-
     /**
      * @var string
      */
-    protected $connection = 'notify'; // this will use the specified database connection
+    protected $connection = 'notify';
+    // this will use the specified database connection
     /**
      * @var array
      */
     protected $appends = [];
+
     /**
      * @var array<string, string>
      */
@@ -223,10 +225,12 @@ abstract class BasePivot extends Pivot
 =======
 >>>>>>> fe06862 (.)
     protected $casts = [];
+
     /**
      * @var array<string>
      */
     protected $dates = ['created_at', 'updated_at'];
+
     /**
      * Undocumented variable.
      *

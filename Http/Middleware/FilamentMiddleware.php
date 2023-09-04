@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b735fbf (.)
 declare(strict_types=1);
 
 namespace Modules\Notify\Http\Middleware;

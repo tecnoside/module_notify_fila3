@@ -1,10 +1,15 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
 >>>>>>> 9658d21 (up)
+=======
+declare(strict_types=1);
+
+>>>>>>> b735fbf (.)
 namespace Modules\Notify\Filament\Resources\NotifyThemeResource\RelationManagers;
 
 use Filament\Forms;
@@ -46,12 +51,15 @@ class LinkableRelationManager extends RelationManager
             ->filters([
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 //
 >>>>>>> 9658d21 (up)
 =======
 
 >>>>>>> 42f9249 (.)
+=======
+>>>>>>> b735fbf (.)
             ])
             ->headerActions([
                 Tables\Actions\CreateAction::make(),

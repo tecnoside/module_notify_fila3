@@ -29,8 +29,6 @@ class SampleNotification extends Notification
 
     /**
      * Get the notification's delivery channels.
-     *
-     * @param mixed $notifiable
      */
     public function via($notifiable): array
     {
@@ -59,8 +57,6 @@ class SampleNotification extends Notification
     /**
      * Undocumented function.
      *
-     * @param mixed $notifiable
-     *
      * @return SmsData
      */
     public function toSms($notifiable)
@@ -77,8 +73,6 @@ class SampleNotification extends Notification
 
     /**
      * Get the mail representation of the notification.
-     *
-     * @param mixed $notifiable
      *
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
@@ -97,8 +91,6 @@ class SampleNotification extends Notification
     /**
      * Get the array representation of the notification.
      *
-     * @param mixed $notifiable
-     *
      * @return array
      */
     public function toArray($notifiable)
@@ -111,8 +103,6 @@ class SampleNotification extends Notification
 
     /**
      * Get the array representation of the notification.
-     *
-     * @param mixed $notifiable
      *
      * @return array
      */
