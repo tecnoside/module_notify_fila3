@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 42aa20e (.)
 <?php
 
 declare(strict_types=1);
@@ -13,6 +16,7 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseMorphPivot.
  */
+<<<<<<< HEAD
 abstract class BaseMorphPivot extends MorphPivot {
     use Updater;
 <<<<<<< HEAD
@@ -135,6 +139,11 @@ abstract class BaseMorphPivot extends MorphPivot {
      public static $snakeAttributes = true;
 
     protected $perPage = 30;
+=======
+abstract class BaseMorphPivot extends MorphPivot
+{
+    use Updater;
+>>>>>>> 42aa20e (.)
 
     protected $connection = 'notify';
 
@@ -154,6 +163,7 @@ abstract class BaseMorphPivot extends MorphPivot {
      * @var bool
      */
     public $timestamps = true;
+<<<<<<< HEAD
     // protected $attributes = ['related_type' => 'cuisine_cat'];
     /**
      * @var string[]
@@ -223,6 +233,9 @@ abstract class BaseMorphPivot extends MorphPivot {
      */
     public $timestamps = true;
     // protected $attributes = ['related_type' => 'cuisine_cat'];
+=======
+    //protected $attributes = ['related_type' => 'cuisine_cat'];
+>>>>>>> 42aa20e (.)
     /**
      * @var string[]
      */
@@ -244,6 +257,7 @@ abstract class BaseMorphPivot extends MorphPivot {
     ];
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 89120cb (rebase)
 >>>>>>> 9349baf (.)
 =======
@@ -251,3 +265,5 @@ abstract class BaseMorphPivot extends MorphPivot {
 >>>>>>> 47d9a86 (.)
 =======
 >>>>>>> 780e17a (up)
+=======
+>>>>>>> 42aa20e (.)

@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 42aa20e (.)
 <?php
 
 declare(strict_types=1);
@@ -8,12 +11,17 @@ declare(strict_types=1);
 namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
+<<<<<<< HEAD
 // //use Laravel\Scout\Searchable;
+=======
+////use Laravel\Scout\Searchable;
+>>>>>>> 42aa20e (.)
 use Modules\Xot\Traits\Updater;
 
 /**
  * Class BasePivot.
  */
+<<<<<<< HEAD
 abstract class BasePivot extends Pivot {
     use Updater;
 <<<<<<< HEAD
@@ -118,6 +126,12 @@ abstract class BasePivot extends Pivot {
     protected $perPage = 30;
 
     // use Searchable;
+=======
+abstract class BasePivot extends Pivot
+{
+    use Updater;
+    //use Searchable;
+>>>>>>> 42aa20e (.)
 
     /**
      * @var string
@@ -128,6 +142,7 @@ abstract class BasePivot extends Pivot {
      */
     protected $appends = [];
     /**
+<<<<<<< HEAD
      * @var array<string, string>
      */
     protected $casts = [];
@@ -189,6 +204,10 @@ abstract class BasePivot extends Pivot {
     /**
      * @var array<string, string>
      */
+=======
+     * @var array
+     */
+>>>>>>> 42aa20e (.)
     protected $casts = [];
     /**
      * @var string[]
@@ -206,6 +225,7 @@ abstract class BasePivot extends Pivot {
     public $incrementing = true;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 89120cb (rebase)
 >>>>>>> 9349baf (.)
 =======
@@ -213,3 +233,5 @@ abstract class BasePivot extends Pivot {
 >>>>>>> 47d9a86 (.)
 =======
 >>>>>>> 780e17a (up)
+=======
+>>>>>>> 42aa20e (.)

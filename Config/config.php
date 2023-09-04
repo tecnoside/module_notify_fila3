@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -41,3 +42,10 @@ return [
 >>>>>>> 89120cb (rebase)
 =======
 >>>>>>> 8be0eaa (up)
+=======
+<?php
+
+return [
+    'name' => 'Notify'
+];
+>>>>>>> 42aa20e (.)

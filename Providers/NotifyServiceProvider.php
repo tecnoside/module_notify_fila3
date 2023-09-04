@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -45,6 +46,34 @@ class NotifyServiceProvider extends ServiceProvider {
      * @return void
      */
     public function boot() {
+=======
+<?php
+
+namespace Modules\Notify\Providers;
+
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Database\Eloquent\Factory;
+
+class NotifyServiceProvider extends ServiceProvider
+{
+    /**
+     * @var string $moduleName
+     */
+    protected $moduleName = 'Notify';
+
+    /**
+     * @var string $moduleNameLower
+     */
+    protected $moduleNameLower = 'notify';
+
+    /**
+     * Boot the application events.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+>>>>>>> 42aa20e (.)
         $this->registerTranslations();
         $this->registerConfig();
         $this->registerViews();
@@ -56,7 +85,12 @@ class NotifyServiceProvider extends ServiceProvider {
      *
      * @return void
      */
+<<<<<<< HEAD
     public function register() {
+=======
+    public function register()
+    {
+>>>>>>> 42aa20e (.)
         $this->app->register(RouteServiceProvider::class);
     }
 
@@ -65,9 +99,16 @@ class NotifyServiceProvider extends ServiceProvider {
      *
      * @return void
      */
+<<<<<<< HEAD
     protected function registerConfig() {
         $this->publishes([
             module_path($this->moduleName, 'Config/config.php') => config_path($this->moduleNameLower.'.php'),
+=======
+    protected function registerConfig()
+    {
+        $this->publishes([
+            module_path($this->moduleName, 'Config/config.php') => config_path($this->moduleNameLower . '.php'),
+>>>>>>> 42aa20e (.)
         ], 'config');
         $this->mergeConfigFrom(
             module_path($this->moduleName, 'Config/config.php'), $this->moduleNameLower
@@ -79,14 +120,25 @@ class NotifyServiceProvider extends ServiceProvider {
      *
      * @return void
      */
+<<<<<<< HEAD
     public function registerViews() {
         $viewPath = resource_path('views/modules/'.$this->moduleNameLower);
+=======
+    public function registerViews()
+    {
+        $viewPath = resource_path('views/modules/' . $this->moduleNameLower);
+>>>>>>> 42aa20e (.)
 
         $sourcePath = module_path($this->moduleName, 'Resources/views');
 
         $this->publishes([
+<<<<<<< HEAD
             $sourcePath => $viewPath,
         ], ['views', $this->moduleNameLower.'-module-views']);
+=======
+            $sourcePath => $viewPath
+        ], ['views', $this->moduleNameLower . '-module-views']);
+>>>>>>> 42aa20e (.)
 
         $this->loadViewsFrom(array_merge($this->getPublishableViewPaths(), [$sourcePath]), $this->moduleNameLower);
     }
@@ -96,8 +148,14 @@ class NotifyServiceProvider extends ServiceProvider {
      *
      * @return void
      */
+<<<<<<< HEAD
     public function registerTranslations() {
         $langPath = resource_path('lang/modules/'.$this->moduleNameLower);
+=======
+    public function registerTranslations()
+    {
+        $langPath = resource_path('lang/modules/' . $this->moduleNameLower);
+>>>>>>> 42aa20e (.)
 
         if (is_dir($langPath)) {
             $this->loadTranslationsFrom($langPath, $this->moduleNameLower);
@@ -111,6 +169,7 @@ class NotifyServiceProvider extends ServiceProvider {
      *
      * @return array
      */
+<<<<<<< HEAD
     public function provides() {
         return [];
     }
@@ -361,3 +420,21 @@ class NotifyServiceProvider extends ServiceProvider {
 >>>>>>> 89120cb (rebase)
 =======
 >>>>>>> 8be0eaa (up)
+=======
+    public function provides()
+    {
+        return [];
+    }
+
+    private function getPublishableViewPaths(): array
+    {
+        $paths = [];
+        foreach (\Config::get('view.paths') as $path) {
+            if (is_dir($path . '/modules/' . $this->moduleNameLower)) {
+                $paths[] = $path . '/modules/' . $this->moduleNameLower;
+            }
+        }
+        return $paths;
+    }
+}
+>>>>>>> 42aa20e (.)

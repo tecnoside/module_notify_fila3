@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models\Panels\Actions;
 
+<<<<<<< HEAD
 // -------- services --------
 
 use Modules\Notify\Services\MailService;
@@ -13,21 +14,41 @@ use Modules\Theme\Services\ThemeService;
 use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
 // -------- bases -----------
+=======
+//-------- services --------
+
+use Modules\Theme\Services\ThemeService;
+use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
+
+//-------- bases -----------
+>>>>>>> 42aa20e (.)
 
 /**
  * Class TestAction.
  */
+<<<<<<< HEAD
 class TestMailAction extends XotBasePanelAction {
+=======
+class TestMailAction extends XotBasePanelAction
+{
+>>>>>>> 42aa20e (.)
     public bool $onItem = true;
     public string $icon = '<i class="fas fa-vial"></i>Mail';
 
     /**
      * @return mixed
      */
+<<<<<<< HEAD
     public function handle() {
         $drivers = [
             'duocircle',
             'mailtrap',
+=======
+    public function handle()
+    {
+        $drivers = [
+            'netfun',
+>>>>>>> 42aa20e (.)
         ];
         $i = request('i');
 
@@ -41,6 +62,7 @@ class TestMailAction extends XotBasePanelAction {
             'driver' => $driver,
         ];
 
+<<<<<<< HEAD
         // return view()->make($view, $view_params);
         // Parameter #1 $view of function view expects view-string|null, mixed given.
         // The custom 'view-string' type class. It's a subset of the string type. Every string that passes the
@@ -62,5 +84,17 @@ class TestMailAction extends XotBasePanelAction {
         MailService::make()
             ->setLocalVars($vars)
             ->try();
+=======
+        //return view()->make($view, $view_params);
+        //Parameter #1 $view of function view expects view-string|null, mixed given.
+        //The custom 'view-string' type class. It's a subset of the string type. Every string that passes the
+        //view()->exists($string) test is a valid view-string type.
+
+        //if (view()->exists($view)) {
+        return view()->make($view, $view_params);
+        //}
+
+        //return 'not exists ['.$view.']';
+>>>>>>> 42aa20e (.)
     }
 }
