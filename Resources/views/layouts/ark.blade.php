@@ -6,6 +6,7 @@
     <style type="text/css">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         {{ cssInLine('notify::css/ark.css') }}
 =======
         {{ $_theme->cssInLine('notify::css/ark.css') }}
@@ -13,6 +14,9 @@
 =======
         {{ $_theme->cssInLine('notify::css/ark.css') }}
 >>>>>>> fe06862 (.)
+=======
+        {{ cssInLine('notify::css/ark.css') }}
+>>>>>>> c32f3bb (.)
     </style>
     @if (isset($css))
         <style type="text/css">

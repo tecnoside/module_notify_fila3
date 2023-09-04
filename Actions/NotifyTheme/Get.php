@@ -144,11 +144,14 @@ class Get
         $body_html = strval($theme->body_html);
         $subject = strval($theme->subject);
         
-        // $view_params['logo'] = '<img class="mobile_only" border="0" src="'. $theme->logo['path'].'" width="'.$theme->logo['width'].' "height="'.$theme->logo['height'].'" />';
 
-        $view_params['logo'] = $theme->logo;
+        if($theme->theme != 'empty'){
+            $view_params['logo'] = $theme->logo;
+        }else{
+            $view_params['logo'] = '<img src="'. $theme->logo['path'].'" width="'.$theme->logo['width'].' "height="'.$theme->logo['height'].'" />';
+        }
 
-        // dddx([$theme->logo, $view_params]); 
+        // dddx([$theme, $view_params]); 
 
         foreach ($view_params as $k => $v) {
             if (is_string($v)) {
