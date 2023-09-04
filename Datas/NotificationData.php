@@ -70,6 +70,7 @@ class NotificationData extends Data {
     public ?string $subject=null;
     public ?string $body_html=null;
     public string $body;
+    public array $channels=[];
 
 
 

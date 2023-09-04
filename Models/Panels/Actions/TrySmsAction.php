@@ -64,7 +64,7 @@ class TrySmsAction extends XotBasePanelAction {
 >>>>>>> 9f492fe (up)
         $drivers = [
             'netfun'=>'netfun',
-            'essendex'=>'essendex',
+            'esendex'=>'esendex',
         ];
         $i = request('i');
 
@@ -82,6 +82,7 @@ class TrySmsAction extends XotBasePanelAction {
 
     public function postHandle() {
         $data = request()->all();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         $vars = collect($data)->only(['driver', 'from', 'to', 'body'])->all();
@@ -105,6 +106,9 @@ class TrySmsAction extends XotBasePanelAction {
         //$hows=NotificationData::collection([$data]);
 =======
 >>>>>>> ace9eb3 (up)
+=======
+        $data['channels']=[$data['driver']];
+>>>>>>> f0164c0 (up)
         $hows=NotificationData::from($data);
         Notification::send([$hows], new SampleNotification($data));
 <<<<<<< HEAD
