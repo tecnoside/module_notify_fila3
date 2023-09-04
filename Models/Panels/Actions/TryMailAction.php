@@ -129,10 +129,15 @@ class TryMailAction extends XotBasePanelAction {
         $driver = isset($drivers[$i]) ? $drivers[$i] : null;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $view = app(GetViewAction::class)->execute();
 =======
         $view = ThemeService::getView();
 >>>>>>> 5b257fb (up)
+=======
+        //$view = ThemeService::getView();
+$view = $this->panel->getView();
+>>>>>>> 7455be1 (up)
 
         $view_params = [
             'view' => $view,

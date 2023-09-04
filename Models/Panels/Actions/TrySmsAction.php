@@ -123,8 +123,13 @@ class TrySmsAction extends XotBasePanelAction {
         $view = app(GetViewAction::class)->execute();
 =======
 
+<<<<<<< HEAD
         $view = ThemeService::getView();
 >>>>>>> 5b257fb (up)
+=======
+        //$view = ThemeService::getView();
+$view = $this->panel->getView();
+>>>>>>> 7455be1 (up)
 
         $view_params = [
             'view' => $view,
