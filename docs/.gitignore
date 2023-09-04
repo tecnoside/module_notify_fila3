@@ -5,9 +5,12 @@
 .env
 npm-debug.log
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.cache
 *.phar
 *.lock
 package-lock.json
 =======
 >>>>>>> 404660b (up)
+=======
+>>>>>>> fe06862 (.)

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /vendor/
 vendor/
 node_modules/
@@ -90,6 +91,8 @@ Homestead.json
 =======
 >>>>>>> 3a0e0a5 (up)
 =======
+=======
+>>>>>>> fe06862 (.)
 /vendor/
 vendor/
 node_modules/
@@ -116,12 +119,16 @@ Homestead.json
 .phpunit.result.cache
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe06862 (.)
 *.stackdump
 *.cache
 *.lock
 *.log
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -157,3 +164,8 @@ Homestead.json
 *.lock
 *.lock
 >>>>>>> d8a2c68 (up)
+=======
+*.lock
+*.lock
+*.lock
+>>>>>>> fe06862 (.)

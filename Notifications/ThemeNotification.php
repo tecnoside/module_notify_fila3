@@ -8,6 +8,9 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe06862 (.)
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Actions\BuildMailMessageAction;
 use Modules\Notify\Contracts\CanThemeNotificationContract;
@@ -18,6 +21,7 @@ class ThemeNotification extends Notification implements ShouldQueue
     use Queueable;
     public array $view_params;
     public string $name;
+<<<<<<< HEAD
     public array $attachments;
 =======
 use Illuminate\Notifications\Messages\MailMessage;
@@ -41,6 +45,8 @@ class ThemeNotification extends Notification implements ShouldQueue
     public array $view_params;
     public string $name;
 >>>>>>> 4a1a664 (up)
+=======
+>>>>>>> fe06862 (.)
 
     /**
      * Create a new notification instance.
@@ -50,6 +56,9 @@ class ThemeNotification extends Notification implements ShouldQueue
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe06862 (.)
     public function __construct(string $name, array $view_params)
     {
         $this->name = $name;
@@ -59,6 +68,7 @@ class ThemeNotification extends Notification implements ShouldQueue
     /**
      * Get the notification's delivery channels.
      *
+<<<<<<< HEAD
      * @param  CanThemeNotificationContract  $notifiable
      * @return array
      */
@@ -114,6 +124,8 @@ class ThemeNotification extends Notification implements ShouldQueue
     /**
      * Get the notification's delivery channels.
      *
+=======
+>>>>>>> fe06862 (.)
      * @param CanThemeNotificationContract $notifiable
      *
      * @return array
@@ -139,21 +151,28 @@ class ThemeNotification extends Notification implements ShouldQueue
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function toEssendex($notifiable)
     {
         dddx($notifiable);
     }
 >>>>>>> 0cbdb01 (up)
 =======
+=======
+>>>>>>> fe06862 (.)
     // public function toEssendex($notifiable)
     // {
     //    dddx($notifiable);
     // }
+<<<<<<< HEAD
 >>>>>>> 4a1a664 (up)
+=======
+>>>>>>> fe06862 (.)
 
     /**
      * Undocumented function.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
      * @param  CanThemeNotificationContract  $notifiable
@@ -170,11 +189,15 @@ class ThemeNotification extends Notification implements ShouldQueue
 =======
      * @param CanThemeNotificationContract $notifiable
 >>>>>>> 4a1a664 (up)
+=======
+     * @param CanThemeNotificationContract $notifiable
+>>>>>>> fe06862 (.)
      *
      * @return SmsData
      */
     public function toSms($notifiable)
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         dddx('a');
 <<<<<<< HEAD
@@ -183,16 +206,22 @@ class ThemeNotification extends Notification implements ShouldQueue
 
 >>>>>>> e73574f (up)
 =======
+=======
+>>>>>>> fe06862 (.)
         return $notifiable
             ->getNotificationData($this->name)
             ->getSmsData();
         /*
+<<<<<<< HEAD
 >>>>>>> 4a1a664 (up)
+=======
+>>>>>>> fe06862 (.)
         return SmsData::from([
             'from' => $this->from,
             'to' => $notifiable->routeNotificationFor('mobile'),
             'body' => $this->html,
         ]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         */
@@ -203,11 +232,15 @@ class ThemeNotification extends Notification implements ShouldQueue
 =======
         */
 >>>>>>> 4a1a664 (up)
+=======
+        */
+>>>>>>> fe06862 (.)
     }
 
     /**
      * Get the array representation of the notification.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
      * @param  CanThemeNotificationContract  $notifiable
@@ -224,6 +257,9 @@ class ThemeNotification extends Notification implements ShouldQueue
 =======
      * @param CanThemeNotificationContract $notifiable
 >>>>>>> 4a1a664 (up)
+=======
+     * @param CanThemeNotificationContract $notifiable
+>>>>>>> fe06862 (.)
      *
      * @return array
      */
@@ -233,6 +269,9 @@ class ThemeNotification extends Notification implements ShouldQueue
 
         return [
         ];
+<<<<<<< HEAD
 >>>>>>> 0cbdb01 (up)
+=======
+>>>>>>> fe06862 (.)
     }
 }

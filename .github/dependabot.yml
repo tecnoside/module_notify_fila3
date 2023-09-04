@@ -6,8 +6,11 @@ updates:
       interval: "daily"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c0a5fb1 (up)
+=======
+>>>>>>> fe06862 (.)
 
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -24,7 +27,10 @@ updates:
       - "npm"
       - "dependencies"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 95a4930 (.)
 =======
 >>>>>>> c0a5fb1 (up)
+=======
+>>>>>>> fe06862 (.)

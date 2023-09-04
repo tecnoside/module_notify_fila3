@@ -9,6 +9,7 @@ use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Str;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Notify\Datas\SmsData;
 =======
 use Modules\Notify\Data\SmsData;
@@ -16,6 +17,9 @@ use Modules\Notify\Data\SmsData;
 =======
 use Modules\Notify\Datas\SmsData;
 >>>>>>> ace9eb3 (up)
+=======
+use Modules\Notify\Datas\SmsData;
+>>>>>>> fe06862 (.)
 use Spatie\QueueableAction\QueueableAction;
 
 class NamirialSendAction {

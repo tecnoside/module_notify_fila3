@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 04f969b (.)
+=======
+>>>>>>> fe06862 (.)
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -17,6 +20,9 @@
         </style>
     @endif
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe06862 (.)
 </head>
 
 <body>
@@ -118,6 +124,7 @@
 
     @section('content')
     @show
+<<<<<<< HEAD
 =======
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -238,14 +245,19 @@
     @section('content')
     @show
 >>>>>>> 04f969b (.)
+=======
+>>>>>>> fe06862 (.)
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 04f969b (.)
+=======
+>>>>>>> fe06862 (.)
     <div class="block">
         <!-- Start of preheader -->
         <table width="100%" bgcolor="#f6f4f5" cellpadding="0" cellspacing="0" border="0" id="backgroundTable"
@@ -284,10 +296,14 @@
         <!-- End of preheader -->
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe06862 (.)
 
 </body>
 
 </html>
+<<<<<<< HEAD
 =======
 <div class="block">
 	<!-- Start of preheader -->
@@ -331,3 +347,5 @@
 
 </html>
 >>>>>>> 04f969b (.)
+=======
+>>>>>>> fe06862 (.)

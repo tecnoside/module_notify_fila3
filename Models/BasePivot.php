@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 42aa20e (.)
 <?php
@@ -168,6 +169,8 @@ abstract class BasePivot extends Pivot
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> fe06862 (.)
 <?php
 
 declare(strict_types=1);
@@ -207,10 +210,13 @@ abstract class BasePivot extends Pivot {
     /**
      * @var array<string, string>
      */
+<<<<<<< HEAD
 =======
      * @var array
      */
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> fe06862 (.)
     protected $casts = [];
     /**
      * @var string[]
@@ -229,6 +235,7 @@ abstract class BasePivot extends Pivot {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 89120cb (rebase)
 >>>>>>> 9349baf (.)
 =======
@@ -238,3 +245,5 @@ abstract class BasePivot extends Pivot {
 >>>>>>> 780e17a (up)
 =======
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> fe06862 (.)

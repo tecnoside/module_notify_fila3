@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 42aa20e (.)
 <?php
@@ -191,6 +192,8 @@ abstract class BaseMorphPivot extends MorphPivot
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> fe06862 (.)
 <?php
 
 declare(strict_types=1);
@@ -235,11 +238,14 @@ abstract class BaseMorphPivot extends MorphPivot {
      */
     public $timestamps = true;
     // protected $attributes = ['related_type' => 'cuisine_cat'];
+<<<<<<< HEAD
 =======
     //protected $attributes = ['related_type' => 'cuisine_cat'];
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+>>>>>>> fe06862 (.)
     /**
      * @var string[]
      */
@@ -262,6 +268,7 @@ abstract class BaseMorphPivot extends MorphPivot {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 89120cb (rebase)
 >>>>>>> 9349baf (.)
 =======
@@ -271,3 +278,5 @@ abstract class BaseMorphPivot extends MorphPivot {
 >>>>>>> 780e17a (up)
 =======
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> fe06862 (.)

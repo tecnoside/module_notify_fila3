@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,6 +63,8 @@ class CreateNotifyThemesTable extends XotBaseMigration {
 =======
 >>>>>>> 8b046e1 (.)
 >>>>>>> 468f0a0 (.)
+=======
+>>>>>>> fe06862 (.)
 <?php
 
 declare(strict_types=1);
@@ -71,6 +74,7 @@ use Illuminate\Database\Schema\Blueprint;
 
 // ----- bases ----
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 //----- models -----
 
@@ -78,6 +82,8 @@ use Illuminate\Database\Schema\Blueprint;
 >>>>>>> 468f0a0 (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+>>>>>>> fe06862 (.)
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
@@ -87,11 +93,14 @@ class CreateNotifyThemesTable extends XotBaseMigration
 {
     // use XotBaseMigrationTrait;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     //use XotBaseMigrationTrait;
 >>>>>>> 468f0a0 (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+>>>>>>> fe06862 (.)
 
     /**
      * Run the migrations.
@@ -102,11 +111,14 @@ class CreateNotifyThemesTable extends XotBaseMigration
     {
         // -- CREATE --
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         //-- CREATE --
 >>>>>>> 468f0a0 (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+>>>>>>> fe06862 (.)
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->increments('id');
@@ -157,6 +169,7 @@ class CreateNotifyThemesTable extends XotBaseMigration
 
     // end function up
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 
@@ -192,3 +205,6 @@ class CreateNotifyThemesTable extends XotBaseMigration
 =======
 >>>>>>> 8b046e1 (.)
 >>>>>>> 468f0a0 (.)
+=======
+}
+>>>>>>> fe06862 (.)

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 42aa20e (.)
 <?php
@@ -85,6 +86,8 @@ class SmsService
 >>>>>>> 3a0e0a5 (up)
 =======
 >>>>>>> 8be0eaa (up)
+=======
+>>>>>>> fe06862 (.)
 <?php
 
 declare(strict_types=1);
@@ -94,6 +97,7 @@ namespace Modules\Notify\Services;
 use Illuminate\Support\Str;
 
 // ---------CSS------------
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 use Exception;
@@ -221,6 +225,8 @@ use Illuminate\Support\Str;
 // ---------CSS------------
 =======
 >>>>>>> 9f492fe (up)
+=======
+>>>>>>> fe06862 (.)
 
 /**
  * Class SmsService.
@@ -262,6 +268,7 @@ class SmsService {
         return $this;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function send() {
 =======
@@ -322,3 +329,20 @@ class SmsService {
 =======
 }
 >>>>>>> 6d24e5b (.)
+=======
+    public function send(): self {
+        $class = '\Modules\Notify\Services\SmsEngines\\'.Str::studly($this->driver).'Engine';
+        $instance = $class::make()
+            ->setLocalVars($this->vars)
+            ->send();
+
+        $this->mergeVars($instance->getVars());
+
+        return $this;
+    }
+
+    public function getVars(): array {
+        return $this->vars;
+    }
+}
+>>>>>>> fe06862 (.)

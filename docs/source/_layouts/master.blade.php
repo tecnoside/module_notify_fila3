@@ -2,6 +2,7 @@
 <html lang="en">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <head>
     <meta charset="utf-8">
@@ -99,6 +100,8 @@
         <meta name="description" content="{{ $page->description ?? $page->siteDescription }}">
 =======
 >>>>>>> a9945fb (.)
+=======
+>>>>>>> fe06862 (.)
 
 <head>
     <meta charset="utf-8">
@@ -190,6 +193,7 @@
 </body>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <li>
                     Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
                     and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
@@ -200,4 +204,6 @@
 >>>>>>> 404660b (up)
 =======
 >>>>>>> a9945fb (.)
+=======
+>>>>>>> fe06862 (.)
 </html>

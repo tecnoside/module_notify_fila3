@@ -6,22 +6,30 @@ use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class CreateNotifyThemeablesTable extends XotBaseMigration
 {
 =======
 class CreateNotifyThemeablesTable extends XotBaseMigration {
 >>>>>>> 18a2c03 (up)
+=======
+class CreateNotifyThemeablesTable extends XotBaseMigration {
+>>>>>>> fe06862 (.)
     /**
      * Run the migrations.
      *
      * @return void
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function up()
     {
 =======
     public function up() {
 >>>>>>> 18a2c03 (up)
+=======
+    public function up() {
+>>>>>>> fe06862 (.)
         // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {

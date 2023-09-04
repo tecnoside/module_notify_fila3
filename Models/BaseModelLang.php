@@ -7,11 +7,14 @@ namespace Modules\Notify\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 // //use Laravel\Scout\Searchable;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ////use Laravel\Scout\Searchable;
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+>>>>>>> fe06862 (.)
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Lang\Models\Traits\LinkedTrait;
@@ -35,7 +38,11 @@ abstract class BaseModelLang extends Model {
      *
      * @var bool
      */
+<<<<<<< HEAD
      public static $snakeAttributes = true;
+=======
+    public static $snakeAttributes = true;
+>>>>>>> fe06862 (.)
 
     protected $perPage = 30;
 
@@ -46,6 +53,7 @@ abstract class BaseModelLang extends Model {
      */
     protected $casts = [
         // 'published_at' => 'datetime:Y-m-d', // da verificare
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
  */
@@ -67,6 +75,8 @@ abstract class BaseModelLang extends Model
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+>>>>>>> fe06862 (.)
     ];
 
     /**
@@ -90,6 +100,7 @@ abstract class BaseModelLang extends Model
     protected $hidden = [
         // 'password'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      * @var array
      */
@@ -98,6 +109,8 @@ abstract class BaseModelLang extends Model
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+>>>>>>> fe06862 (.)
     ];
 
     /**
@@ -107,11 +120,14 @@ abstract class BaseModelLang extends Model
 
     // -----------
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     //-----------
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+>>>>>>> fe06862 (.)
     /*
     protected $id;
     protected $post;

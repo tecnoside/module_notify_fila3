@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 {
     "name": "laraxot/module_notify_fila",
     "description": "notify module dedicated to managing notifications",
@@ -96,6 +97,8 @@
 >>>>>>> 8be0eaa (up)
 =======
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> fe06862 (.)
 {
     "name": "laraxot/module_notify",
     "description": "",
@@ -119,6 +122,7 @@
         "psr-4": {
             "Modules\\Notify\\": ""
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 }
@@ -158,6 +162,8 @@
 =======
 >>>>>>> 42aa20e (.)
 =======
+=======
+>>>>>>> fe06862 (.)
     },
     "require": {
         "laraxot/module_xot": "dev-master",
@@ -210,5 +216,9 @@
         "type": "composer",
         "url": "https://wire-elements-pro.composer.sh"
     }]
+<<<<<<< HEAD
 }
 >>>>>>> 842d9e1 (.)
+=======
+}
+>>>>>>> fe06862 (.)

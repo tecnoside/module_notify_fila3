@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:Services/MailEngines/DuocircleEngine.test
 =======
 >>>>>>> 1ebfe39 (up)
+=======
+>>>>>>> fe06862 (.)
 <?php
 /**
  * @see https://smsvi-docs.web.app/docs/restful/send-batch/
@@ -12,6 +15,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Services\MailEngines;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,10 +23,13 @@ namespace Modules\Notify\Services\MailEngines;
 =======
 >>>>>>> 9f492fe (up)
 >>>>>>> 1ebfe39 (up)
+=======
+>>>>>>> fe06862 (.)
 use Exception;
 use GuzzleHttp\Client;
 
 // ---------CSS------------
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -36,6 +43,8 @@ use GuzzleHttp\Client;
 =======
 >>>>>>> 9f492fe (up)
 >>>>>>> 1ebfe39 (up)
+=======
+>>>>>>> fe06862 (.)
 
 /**
  * Class SmsService.
@@ -72,12 +81,15 @@ class DuocircleEngine {
 
     public function send(): self {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 6d517f2 (.)
 >>>>>>> 1ebfe39 (up)
+=======
+>>>>>>> fe06862 (.)
         dddx('WIP');
 
         return $this;
@@ -114,14 +126,18 @@ class DuocircleEngine {
         $client->connect();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:Services/MailEngines/DuocircleEngine.test
 =======
 >>>>>>> 1ebfe39 (up)
+=======
+>>>>>>> fe06862 (.)
         /**
          * Get all Mailboxes.
          *
          * @var \Webklex\PHPIMAP\Support\FolderCollection $folders
          */
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         // Get all Mailboxes
@@ -129,25 +145,33 @@ class DuocircleEngine {
 >>>>>>> 5f3f456 (up):Services/MailEngines/DuocircleEngine.php
 =======
 >>>>>>> 1ebfe39 (up)
+=======
+>>>>>>> fe06862 (.)
         $folders = $client->getFolders();
 
         // Loop through every Mailbox
         /** @var \Webklex\PHPIMAP\Folder $folder */
         foreach ($folders as $folder) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:Services/MailEngines/DuocircleEngine.test
 =======
 >>>>>>> 1ebfe39 (up)
+=======
+>>>>>>> fe06862 (.)
             /**
              * Get all Messages of the current Mailbox $folder.
              *
              * @var \Webklex\PHPIMAP\Support\MessageCollection $messages
              */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             // Get all Messages of the current Mailbox $folder
             /** @var \Webklex\PHPIMAP\Support\MessageCollection $messages */
 >>>>>>> 5f3f456 (up):Services/MailEngines/DuocircleEngine.php
+=======
+>>>>>>> fe06862 (.)
             $messages = $folder->messages()->all()->get();
 
             // / @var \Webklex\PHPIMAP\Message $message
@@ -157,11 +181,15 @@ class DuocircleEngine {
                 echo $message->getHTMLBody();
 
                 // Move the current Message to 'INBOX.read'
+<<<<<<< HEAD
 <<<<<<< HEAD:Services/MailEngines/DuocircleEngine.test
                 if (true === $message->move('INBOX.read')) {
 =======
                 if (true == $message->move('INBOX.read')) {
 >>>>>>> 5f3f456 (up):Services/MailEngines/DuocircleEngine.php
+=======
+                if (true === $message->move('INBOX.read')) {
+>>>>>>> fe06862 (.)
                     echo 'Message has ben moved';
                 } else {
                     echo 'Message could not be moved';
@@ -172,6 +200,7 @@ class DuocircleEngine {
         return $this;
     }
 }
+<<<<<<< HEAD
 =======
 <?php
 /**
@@ -329,3 +358,5 @@ class DuocircleEngine {
     }
 }
 >>>>>>> 1ebfe39 (up)
+=======
+>>>>>>> fe06862 (.)

@@ -3,10 +3,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe06862 (.)
 declare(strict_types=1);
 
 namespace Modules\Notify\Notifications\Channels;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,11 +41,14 @@ use Illuminate\Notifications\Notification;
 >>>>>>> 39a76ff (up)
 =======
 >>>>>>> 6520304 (up)
+=======
+>>>>>>> fe06862 (.)
 use Modules\Notify\Actions\NetfunSendAction;
 use Modules\Notify\Notifications\RowAttributeNotification;
 use Modules\Xot\Contracts\ModelContactContract;
 
 class NetfunChannel {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -54,11 +61,15 @@ class NetfunChannel {
 =======
     public function __construct() {
 >>>>>>> 602db11 (up)
+=======
+    public function __construct() {
+>>>>>>> fe06862 (.)
     }
 
     /**
      * Send the given notification.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,10 +79,13 @@ class NetfunChannel {
     public function send($notifiable, ThemeNotification $notification)
     {
 =======
+=======
+>>>>>>> fe06862 (.)
      * @param mixed $notifiable
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function send($notifiable, Notification $notification) {
 <<<<<<< HEAD
@@ -79,10 +93,14 @@ class NetfunChannel {
 =======
     public function send($notifiable, RowAttributeNotification $notification) {
 >>>>>>> 39a76ff (up)
+=======
+    public function send($notifiable, RowAttributeNotification $notification) {
+>>>>>>> fe06862 (.)
         $message = $notification->toSms($notifiable);
         // Send notification to the $notifiable instance...
         $data = app(NetfunSendAction::class)->execute($message);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         if ($notifiable instanceof ModelContactContract) {
             $notifiable->increase('sms', $data);
@@ -118,11 +136,15 @@ class NetfunChannel {
 =======
         if ($notifiable instanceof ModelContactContract) {
 >>>>>>> 78bc45c (.)
+=======
+        if ($notifiable instanceof ModelContactContract) {
+>>>>>>> fe06862 (.)
             $data['sms_sent_at'] = now();
             $data['sms_count'] = (int) $notifiable->sms_count + 1;
             $notifiable->update($data);
         }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -139,3 +161,6 @@ class NetfunChannel {
 =======
 }
 >>>>>>> df8079b (up)
+=======
+}
+>>>>>>> fe06862 (.)
