@@ -81,11 +81,17 @@ class NetfunChannel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  \Modules\Notify\Contracts\CanThemeNotificationContract  $notifiable
+=======
+     * @param \Modules\Notify\Contracts\CanThemeNotificationContract $notifiable
+     *
+>>>>>>> c156f22 (.)
      * @return void
      */
     public function send($notifiable, ThemeNotification $notification)
     {
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> fe06862 (.)
@@ -109,6 +115,10 @@ class NetfunChannel
     public function send($notifiable, ThemeNotification $notification)
     {
 >>>>>>> 3f0bbc4 (.)
+=======
+
+
+>>>>>>> c156f22 (.)
         $message = $notification->toSms($notifiable);
         // Send notification to the $notifiable instance...
         $data = app(NetfunSendAction::class)->execute($message);

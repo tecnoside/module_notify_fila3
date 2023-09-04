@@ -27,6 +27,7 @@ interface CanThemeNotificationContract
 
     public function getModel(): Model;
 
+<<<<<<< HEAD
     /**
      * @return mixed|null
      */
@@ -47,4 +48,7 @@ interface CanThemeNotificationContract
 
     public function getModel(): Model;
 >>>>>>> fe06862 (.)
+=======
+    public function sendEmailCallback();
+>>>>>>> c156f22 (.)
 }
