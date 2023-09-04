@@ -2,7 +2,6 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 >>>>>>> b735fbf (.)
 declare(strict_types=1);
@@ -19,19 +18,11 @@ use Modules\Notify\Models\NotifyTheme;
 >>>>>>> 911eb41 (up)
 =======
 >>>>>>> 42f9249 (.)
-=======
-namespace Modules\Notify\Filament\Resources;
-
-use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
-use Modules\Notify\Filament\Resources\NotifyThemeResource\RelationManagers;
-use Modules\Notify\Models\NotifyTheme;
->>>>>>> 01564cc (up)
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
@@ -50,10 +41,6 @@ use Savannabits\FilamentModules\Concerns\ContextualResource;
 =======
 >>>>>>> 03e1d62 (Dusting)
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
-=======
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
->>>>>>> 01564cc (up)
 use Savannabits\FilamentModules\Concerns\ContextualResource;
 
 class NotifyThemeResource extends Resource
@@ -71,7 +58,6 @@ class NotifyThemeResource extends Resource
                 Forms\Components\Select::make('lang')->options(self::fieldOptions('lang')),
                 Forms\Components\Select::make('type')->options(self::fieldOptions('type')),
                 Forms\Components\Select::make('post_type')->options(self::fieldOptions('post_type')),
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -145,14 +131,11 @@ class NotifyThemeResource extends Resource
 >>>>>>> e4aae54 (.)
 =======
 >>>>>>> 42f9249 (.)
-=======
->>>>>>> 01564cc (up)
                 Forms\Components\RichEditor::make('body')->columnSpanFull(),
                 Forms\Components\RichEditor::make('body_html')->columnSpanFull(),
             ]);
     }
 
-<<<<<<< HEAD
     public static function fieldOptions(string $field): array
     {
         return NotifyTheme::select($field)
@@ -167,20 +150,10 @@ class NotifyThemeResource extends Resource
             ->pluck($field, $field)
             ->toArray();
 >>>>>>> 42f9249 (.)
-=======
-    public static function fieldOptions(string $field): array{
-        $options=NotifyTheme::select($field)
-            ->where($field,'!=',null)
-            ->distinct()
-                ->pluck($field, $field)
-                ->toArray();
-        return $options;
->>>>>>> 01564cc (up)
     }
 
     public static function table(Table $table): Table
     {
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         return $table
@@ -199,19 +172,12 @@ class NotifyThemeResource extends Resource
         return $table
             ->columns([
 <<<<<<< HEAD
-=======
-        
-        
-        return $table
-            ->columns([
->>>>>>> 01564cc (up)
                 Tables\Columns\TextColumn::make('id')->sortable(),
                 Tables\Columns\TextColumn::make('lang')->sortable(),
                 Tables\Columns\TextColumn::make('type')->sortable(),
                 Tables\Columns\TextColumn::make('post_id')->sortable(),
                 Tables\Columns\TextColumn::make('post_type')->sortable(),
                 Tables\Columns\TextColumn::make('logo_src')->sortable(),
-<<<<<<< HEAD
 >>>>>>> 911eb41 (up)
 =======
                 'id' => Tables\Columns\TextColumn::make('id')->sortable(),
@@ -221,8 +187,6 @@ class NotifyThemeResource extends Resource
                 'post_type' => Tables\Columns\TextColumn::make('post_type')->sortable(),
                 'logo_src' => Tables\Columns\TextColumn::make('logo_src')->sortable(),
 >>>>>>> f401a20 (up)
-=======
->>>>>>> 01564cc (up)
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('lang')
@@ -234,7 +198,6 @@ class NotifyThemeResource extends Resource
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
                 
 >>>>>>> 911eb41 (up)
@@ -243,9 +206,6 @@ class NotifyThemeResource extends Resource
 >>>>>>> 42f9249 (.)
 =======
 >>>>>>> b735fbf (.)
-=======
-                
->>>>>>> 01564cc (up)
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -254,7 +214,6 @@ class NotifyThemeResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -285,16 +244,6 @@ class NotifyThemeResource extends Resource
 =======
 
 >>>>>>> 42f9249 (.)
-=======
-    
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
-    
->>>>>>> 01564cc (up)
     public static function getPages(): array
     {
         return [
@@ -304,7 +253,6 @@ class NotifyThemeResource extends Resource
         ];
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     }
 =======
     }    
@@ -312,7 +260,4 @@ class NotifyThemeResource extends Resource
 =======
     }
 >>>>>>> 42f9249 (.)
-=======
-    }    
->>>>>>> 01564cc (up)
 }

@@ -2,7 +2,6 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 >>>>>>> b735fbf (.)
 declare(strict_types=1);
@@ -22,13 +21,6 @@ use Filament\Resources\Pages\EditRecord;
 =======
 use Modules\Notify\Filament\Resources\NotifyThemeResource;
 >>>>>>> 42f9249 (.)
-=======
-namespace Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
-
-use Modules\Notify\Filament\Resources\NotifyThemeResource;
-use Filament\Pages\Actions;
-use Filament\Resources\Pages\EditRecord;
->>>>>>> 01564cc (up)
 
 class EditNotifyTheme extends EditRecord
 {
