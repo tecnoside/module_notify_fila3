@@ -128,14 +128,26 @@ return [
     'Funzione del Modulo' => [
         'url' => 'docs/module_notify',
         'children' => [
-            'Notifica ThemeNotification' => 'docs/theme-notification',
+            'Creare una notifica' => 'docs/notify/create',
+            // 'Classe BuildMailMessageAction' => 'docs/build-mail-message-action',
         ],
     ],
-    'TrySendMailAction' => [
-        'url' => 'docs/try_send_mail_action',
+
+    'Classi Importanti' => [
+        'children' => [
+            'Notifica ThemeNotification' => 'docs/theme-notification-class',
+            'Classe BuildMailMessageAction' => 'docs/build-mail-message-action',
+            'TrySendMailAction' => 'docs/try_send_mail_action',
+        ],
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 8f4c37e (.)
 =======
 >>>>>>> a758bd5 (.)
+=======
+
+
+
+>>>>>>> b349bf0 (.)
 ];
