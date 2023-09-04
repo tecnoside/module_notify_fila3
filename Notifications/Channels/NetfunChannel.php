@@ -230,6 +230,7 @@ class NetfunChannel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             $notifiable->increase('sms', $data);
 =======
             $notifiable->increase('sms',$data);
@@ -237,6 +238,9 @@ class NetfunChannel
 =======
             $notifiable->increase('sms', $data);
 >>>>>>> b735fbf (.)
+=======
+            $notifiable->increase('sms',$data);
+>>>>>>> d17f486 (up)
             /*
             $data['sms_sent_at'] = now();
             $data['sms_count'] = (int) $notifiable->sms_count + 1;
