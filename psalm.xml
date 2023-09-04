@@ -2,11 +2,14 @@
 <psalm
     errorLevel="6"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     errorLevel="4"
 >>>>>>> a7d28a5 (.)
 =======
 >>>>>>> 70ced26 (.)
+=======
+>>>>>>> 8348375 (.)
     resolveFromConfigFile="true"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="https://getpsalm.org/schema/config"
@@ -26,6 +29,7 @@
         <pluginClass class="Psalm\LaravelPlugin\Plugin"/>
     </plugins>
 </psalm>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         <file name="Actions/DB/DownloadAction.php"/>
@@ -65,3 +69,5 @@
 >>>>>>> a7d28a5 (.)
 =======
 >>>>>>> 70ced26 (.)
+=======
+>>>>>>> 8348375 (.)

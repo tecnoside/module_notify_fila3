@@ -199,6 +199,7 @@
         "pestphp/pest-plugin-laravel": "*",
         "phpstan/extension-installer": "*",
         "phpunit/phpunit": "*",
+<<<<<<< HEAD
         "psalm/plugin-laravel": "^2.8",
         "spatie/laravel-typescript-transformer": "*",
         "spatie/pest-plugin-snapshots": "*",
@@ -245,6 +246,9 @@
         "phpstan/extension-installer": "*",
         "phpunit/phpunit": "*",
         "spatie/invade": "*",
+=======
+        "psalm/plugin-laravel": "*",
+>>>>>>> 8348375 (.)
         "spatie/laravel-typescript-transformer": "*",
         "spatie/pest-plugin-snapshots": "*",
         "spatie/phpunit-snapshot-assertions": "*",
@@ -324,6 +328,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> de1fcaf (up)
@@ -359,3 +364,6 @@
 =======
 }
 >>>>>>> d94ee79 (up)
+=======
+}
+>>>>>>> 8348375 (.)
