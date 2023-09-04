@@ -150,6 +150,7 @@ class NetfunSendAction {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! is_string($token)) {
 =======
         if (null === $token) {
@@ -212,6 +213,8 @@ class NetfunSendAction {
     public function __construct() {
         // Prepare the action for execution, leveraging constructor injection.
         $token = config('services.netfun.token');
+=======
+>>>>>>> 948b488 (.)
         if (null == $token) {
             throw new Exception('put [NETFUN_TOKEN] variable to your .env and config [services.netfun.token] ');
         }
