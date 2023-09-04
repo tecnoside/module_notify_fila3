@@ -53,11 +53,16 @@ class _ModulePanel extends XotBasePanel
 class _ModulePanel extends XotBasePanel {
     public function actions(): array {
         return [
+<<<<<<< HEAD
             new Actions\TestSmsAction(),
             new Actions\TestMailAction(),
 <<<<<<< HEAD
 >>>>>>> d27db1b (.)
 =======
+=======
+            new Actions\TrySmsAction(),
+            new Actions\TryMailAction(),
+>>>>>>> 5b257fb (up)
             new Actions\TrySendMailAction(),
 <<<<<<< HEAD
 >>>>>>> b1dceab (up)

@@ -5,8 +5,9 @@
 
 namespace Modules\Notify\Emails;
 
-use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Mail\PendingMail;
+use Illuminate\Contracts\Mail\Mailer;
+use Modules\Theme\Services\ThemeService;
 
 class BeautyEmail implements Mailer {
     /**
@@ -151,11 +152,12 @@ class BeautyEmail implements Mailer {
      * @return mixed
      */
     private function setLogoPath()
-    {
+    {   /*
         $this->settings['logo']['path'] = str_replace(
             '%PUBLIC%',
             \Request::getSchemeAndHttpHost(),
             $this->settings['logo']['path']
-        );
+        );*/
+        $this->settings['logo']['path'] = url(ThemeService::asset($this->settings['logo']['path']));
     }
 }

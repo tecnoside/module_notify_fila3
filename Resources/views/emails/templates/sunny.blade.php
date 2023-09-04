@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<style type="text/css">{!! $_theme->cssInLine('notify::css/sunny.css') !!}</style>
 		@if (isset($css))
 =======
@@ -25,6 +26,9 @@
 >>>>>>> b735fbf (.)
 =======
 		<style type="text/css">{{ file_get_contents(app_path() . '/../vendor/snowfire/beautymail/src/styles/css/sunny.css') }}</style>
+=======
+		<style type="text/css">{!! $_theme->cssInLine('notify::css/sunny.css') !!}</style>
+>>>>>>> 5b257fb (up)
 		@if(isset($css))
 >>>>>>> 83df11d (up)
 		<style type="text/css">

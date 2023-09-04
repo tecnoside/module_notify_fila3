@@ -22,6 +22,9 @@ class _ModulePanelPolicy extends XotBasePanelPolicy
     {
         return true;
     }
+    public function trySms(UserContract $user, PanelContract $panel): bool {
+        return true;
+    }
 
     /**
      * --.
@@ -33,6 +36,9 @@ class _ModulePanelPolicy extends XotBasePanelPolicy
 
     public function tryMail(UserContract $user, PanelContract $panel): bool
     {
+        return true;
+    }
+    public function tryMail(UserContract $user, PanelContract $panel): bool {
         return true;
     }
 
