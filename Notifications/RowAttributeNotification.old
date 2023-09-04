@@ -81,6 +81,7 @@ class RowAttributeNotification extends Notification implements ShouldQueue
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->view('notify::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
 =======
             ->view('quaeris::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
@@ -91,6 +92,9 @@ class RowAttributeNotification extends Notification implements ShouldQueue
 =======
             ->view('quaeris::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
 >>>>>>> 6f575c4 (up)
+=======
+            ->view('notify::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
+>>>>>>> 056cb24 (..)
 
         $this->row->sendEmailCallback();
 
