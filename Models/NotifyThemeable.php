@@ -8,6 +8,7 @@ namespace Modules\Notify\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Modules\Notify\Models\NotifyThemeable.
  *
@@ -44,6 +45,19 @@ namespace Modules\Notify\Models;
  * @property int|null                        $notify_theme_id
  *
 >>>>>>> b735fbf (.)
+=======
+/**
+ * Modules\Notify\Models\NotifyThemeable
+ *
+ * @property int $id
+ * @property string|null $model_type
+ * @property int|null $model_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property string|null $created_by
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $updated_by
+ * @property int|null $notify_theme_id
+>>>>>>> 3d1ec9b (up)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyThemeable newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyThemeable newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyThemeable query()
@@ -59,6 +73,7 @@ namespace Modules\Notify\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @mixin IdeHelperNotifyThemeable
  * @mixin \Eloquent
@@ -70,6 +85,10 @@ class NotifyThemeable extends BaseMorphPivot
  * @mixin \Eloquent
  */
 >>>>>>> e73574f (up)
+=======
+ * @mixin \Eloquent
+ */
+>>>>>>> 3d1ec9b (up)
 class NotifyThemeable extends BaseMorphPivot {
 >>>>>>> 18a2c03 (up)
 =======
