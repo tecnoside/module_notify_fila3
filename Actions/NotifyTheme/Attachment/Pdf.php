@@ -6,6 +6,7 @@ namespace Modules\Notify\Actions\NotifyTheme\Attachment;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 6eafc0a (up)
 use Illuminate\Support\Facades\Storage;
@@ -18,6 +19,9 @@ use Modules\Notify\Models\NotifyTheme;
 >>>>>>> 4a7ff36 (up)
 =======
 >>>>>>> 6eafc0a (up)
+=======
+use Modules\Notify\Models\NotifyTheme;
+>>>>>>> b1b92c2 (up)
 use Spatie\QueueableAction\QueueableAction;
 
 /**
@@ -27,6 +31,7 @@ class Pdf
 {
     use QueueableAction;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function execute(string $post_type, array $view_params): AttachmentData
@@ -47,6 +52,8 @@ class Pdf
             'as' => $file_name,
             'mime' => 'application/pdf',
 =======
+=======
+>>>>>>> b1b92c2 (up)
     public function execute(string $post_type, array $view_params)
     {
         $lang = app()->getLocale();
@@ -55,6 +62,7 @@ class Pdf
             'type' => 'pdf',
             'post_type' => $post_type,
             'post_id' => 0,
+<<<<<<< HEAD
 >>>>>>> 4a7ff36 (up)
 =======
     public function execute(string $post_type, array $view_params): AttachmentData
@@ -75,6 +83,8 @@ class Pdf
             'as' => $file_name,
             'mime' => 'application/pdf',
 >>>>>>> 6eafc0a (up)
+=======
+>>>>>>> b1b92c2 (up)
         ]);
     }
 }
