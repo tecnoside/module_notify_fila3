@@ -7,6 +7,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services\MailEngines;
 
+use Exception;
 use GuzzleHttp\Client;
 
 // ---------CSS------------
@@ -67,24 +68,31 @@ class DuocircleEngine {
 
         dddx($request);
         */
-        /** @var \Webklex\PHPIMAP\Client $client */
+        if(!class_exists(\Webklex\PHPIMAP\Client::class)){
+            throw new Exception('class [Webklex\\PHPIMAP\\Client] not exists ['.__LINE__.']['.class_basename(__CLASS__).']');
+        }
+        if(!class_exists(\Webklex\IMAP\Facades\Client::class)){
+            throw new Exception('class [Webklex\IMAP\Facades\\Client] not exists ['.__LINE__.']['.class_basename(__CLASS__).']');
+        }
+
+        // @var \Webklex\PHPIMAP\Client $client
         $client = \Webklex\IMAP\Facades\Client::account('default');
 
         // Connect to the IMAP Server
         $client->connect();
 
         // Get all Mailboxes
-        /** @var \Webklex\PHPIMAP\Support\FolderCollection $folders */
+        // @var \Webklex\PHPIMAP\Support\FolderCollection $folders
         $folders = $client->getFolders();
 
         // Loop through every Mailbox
-        /** @var \Webklex\PHPIMAP\Folder $folder */
+        // @var \Webklex\PHPIMAP\Folder $folder
         foreach ($folders as $folder) {
             // Get all Messages of the current Mailbox $folder
-            /** @var \Webklex\PHPIMAP\Support\MessageCollection $messages */
+            // @var \Webklex\PHPIMAP\Support\MessageCollection $messages
             $messages = $folder->messages()->all()->get();
 
-            /** @var \Webklex\PHPIMAP\Message $message */
+            /// @var \Webklex\PHPIMAP\Message $message
             foreach ($messages as $message) {
                 echo $message->getSubject().'<br />';
                 echo 'Attachments: '.$message->getAttachments()->count().'<br />';

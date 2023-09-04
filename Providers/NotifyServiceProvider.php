@@ -138,6 +138,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Providers;
 
+use Exception;
 use Illuminate\Support\ServiceProvider;
 
 class NotifyServiceProvider extends ServiceProvider {
@@ -229,7 +230,13 @@ class NotifyServiceProvider extends ServiceProvider {
 
     private function getPublishableViewPaths(): array {
         $paths = [];
-        foreach (\Config::get('view.paths') as $path) {
+        //$view_paths=\Config::get('view.paths');
+        $view_paths=config('view.paths');
+        
+        if(!is_iterable($view_paths)){
+            throw new Exception('['.__LINE__.']['.class_basename(__CLASS__).']');
+        }
+        foreach ($view_paths as $path) {
             if (is_dir($path.'/modules/'.$this->moduleNameLower)) {
                 $paths[] = $path.'/modules/'.$this->moduleNameLower;
             }
