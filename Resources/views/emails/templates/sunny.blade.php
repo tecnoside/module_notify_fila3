@@ -16,8 +16,12 @@
 >>>>>>> 83f2b60 (up)
 =======
 		<style type="text/css">{!! $_theme->cssInLine('notify::css/sunny.css') !!}</style>
+<<<<<<< HEAD
 		@if(isset($css))
 >>>>>>> fe06862 (.)
+=======
+		@if (isset($css))
+>>>>>>> b735fbf (.)
 		<style type="text/css">
 			{{ $css }}
 		</style>
@@ -66,6 +70,7 @@
 									<td id="logo" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" valign="top" align="center">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 										<img border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : '' }}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
 =======
 										<img border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : ''}}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
@@ -73,6 +78,9 @@
 =======
 										<img border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : ''}}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
 >>>>>>> fe06862 (.)
+=======
+										<img border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : '' }}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
+>>>>>>> b735fbf (.)
 									</td>
 									<td class="w30" width="30"></td>
 								</tr>

@@ -236,8 +236,12 @@
 												<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="1" height="8"><br>
 
 												@if (isset($reminder))
+<<<<<<< HEAD
 													<p style="color:#a6a6a6;font-size:12px;font-family:Helvetica,Arial,sans-serif;margin-top:0;margin-bottom:15px;padding-top:0;padding-bottom:0;line-height:18px;" class="reminder">{!! $reminder  !!}</p>
 >>>>>>> fe06862 (.)
+=======
+													<p style="color:#a6a6a6;font-size:12px;font-family:Helvetica,Arial,sans-serif;margin-top:0;margin-bottom:15px;padding-top:0;padding-bottom:0;line-height:18px;" class="reminder">{!! $reminder !!}</p>
+>>>>>>> b735fbf (.)
 												@endif
 
 												@if (isset($unsubscribe))

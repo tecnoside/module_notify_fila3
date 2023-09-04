@@ -187,15 +187,19 @@ class NetfunSendAction
 
         $sms->to .= '';
         if (Str::startsWith($sms->to, '00')) {
-            $sms->to = '+39'.substr($sms->to, 2);
+            $sms->to = '+39' . substr($sms->to, 2);
         }
 
         if (! Str::startsWith($sms->to, '+')) {
+<<<<<<< HEAD
             $sms->to = '+39'.$sms->to;
 <<<<<<< HEAD
 >>>>>>> 48d3f55 (up)
 =======
 >>>>>>> fe06862 (.)
+=======
+            $sms->to = '+39' . $sms->to;
+>>>>>>> b735fbf (.)
         }
 
         $body = [
@@ -250,6 +254,7 @@ class NetfunSendAction
         } catch (ClientException $e) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']');
 =======
             throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']');
@@ -257,6 +262,9 @@ class NetfunSendAction
 =======
             throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']');
 >>>>>>> fe06862 (.)
+=======
+            throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']');
+>>>>>>> b735fbf (.)
         }
         /*
         echo '<hr/>';

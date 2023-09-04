@@ -4,8 +4,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> b735fbf (.)
 declare(strict_types=1);
 
 use Illuminate\Support\Str;
@@ -18,6 +21,7 @@ return [
     'production' => false,
     'siteName' => 'Modulo ' . $moduleName,
     'siteDescription' => 'Modulo ' . $moduleName,
+<<<<<<< HEAD
     'lang' => 'it',
 
     'collections' => [
@@ -64,21 +68,23 @@ return [
 =======
     'siteName' => 'Modulo '.$moduleName,
     'siteDescription' => 'Modulo '.$moduleName,
+=======
+>>>>>>> b735fbf (.)
     'lang' => 'it',
 
     'collections' => [
         'posts' => [
             'path' => function ($page) {
-                //return $page->lang.'/posts/'.Str::slug($page->getFilename());
-                //return 'posts/' . ($page->featured ? 'featured/' : '') . Str::slug($page->getFilename());
+                // return $page->lang.'/posts/'.Str::slug($page->getFilename());
+                // return 'posts/' . ($page->featured ? 'featured/' : '') . Str::slug($page->getFilename());
 
-                return 'posts/'.Str::slug($page->getFilename());
+                return 'posts/' . Str::slug($page->getFilename());
             },
         ],
         'docs' => [
             'path' => function ($page) {
-                //return $page->lang.'/docs/'.Str::slug($page->getFilename());
-                return 'docs/'.Str::slug($page->getFilename());
+                // return $page->lang.'/docs/'.Str::slug($page->getFilename());
+                return 'docs/' . Str::slug($page->getFilename());
             },
         ],
     ],
@@ -119,6 +125,9 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b735fbf (.)
     }, /*
     'url' => function ($page, $path) {
         return Str::startsWith($path, 'http') ? $path : '/' . trimPath($path);
@@ -128,7 +137,10 @@ return [
         if (Str::startsWith($path, 'http')) {
             return $path;
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> b735fbf (.)
         // return url('/'.$page->lang.'/'.trimPath($path));
         return url('/' . trimPath($path));
     },
@@ -136,6 +148,7 @@ return [
     'children' => function ($page, $docs) {
         return $docs->where('parent_id', $page->id);
     },
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> fe06862 (.)
@@ -171,3 +184,6 @@ return [
     },
 ];
 >>>>>>> 78056fb (up)
+=======
+];
+>>>>>>> b735fbf (.)
