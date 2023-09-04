@@ -1,12 +1,17 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Http\Middleware\MirrorConfigToSubpackages;
 use Filament\Pages;
 =======
+=======
+declare(strict_types=1);
+
+>>>>>>> b36983f (up)
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Http\Middleware\MirrorConfigToSubpackages;
@@ -26,12 +31,17 @@ $moduleNs = 'Modules\Notify';
 $contextNs = 'Modules\\Notify\\Filament';
 $contextPath = 'Filament';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 return [
 =======
 return [
 
 >>>>>>> 911eb41 (up)
+=======
+
+return [
+>>>>>>> b36983f (up)
     /*
     |--------------------------------------------------------------------------
     | Filament Path
@@ -161,10 +171,14 @@ return [
         'guard' => env('FILAMENT_AUTH_GUARD', 'web'),
         'pages' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'login' => Modules\Notify\Http\Livewire\Auth\FilamentLogin::class,
 =======
             'login' => Modules\Quaeris\Http\Livewire\Auth\FilamentLogin::class,
 >>>>>>> 911eb41 (up)
+=======
+            'login' => Modules\Notify\Http\Livewire\Auth\FilamentLogin::class,
+>>>>>>> b36983f (up)
         ],
     ],
 
@@ -181,12 +195,17 @@ return [
     'middleware' => [
         'auth' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
             //  Authenticate::class,
             Modules\Notify\Http\Middleware\FilamentMiddleware::class,
 =======
         //  Authenticate::class,
             Modules\Quaeris\Http\Middleware\FilamentMiddleware::class
 >>>>>>> 911eb41 (up)
+=======
+            //  Authenticate::class,
+            Modules\Notify\Http\Middleware\FilamentMiddleware::class,
+>>>>>>> b36983f (up)
         ],
         'base' => [
             EncryptCookies::class,
