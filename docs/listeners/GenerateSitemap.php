@@ -34,7 +34,8 @@ use Illuminate\Support\Str;
 use samdark\sitemap\Sitemap;
 use TightenCo\Jigsaw\Jigsaw;
 
-class GenerateSitemap {
+class GenerateSitemap
+{
     protected $exclude = [
         '/assets/*',
         '*/favicon.ico',
@@ -65,7 +66,8 @@ class GenerateSitemap {
 >>>>>>> a758bd5 (.)
     ];
 
-    public function handle(Jigsaw $jigsaw) {
+    public function handle(Jigsaw $jigsaw)
+    {
         $baseUrl = $jigsaw->getConfig('baseUrl');
 
         if (! $baseUrl) {
@@ -160,15 +162,23 @@ function ($path) use ($baseUrl, $sitemap) {
 >>>>>>> 56255db (up)
 =======
             })->each(
+<<<<<<< HEAD
 function ($path) use ($baseUrl, $sitemap) {
                 $sitemap->addItem(rtrim($baseUrl, '/').$path, time(), Sitemap::DAILY);
             });
 >>>>>>> a758bd5 (.)
+=======
+                function ($path) use ($baseUrl, $sitemap) {
+                    $sitemap->addItem(rtrim($baseUrl, '/').$path, time(), Sitemap::DAILY);
+                }
+            );
+>>>>>>> 34ed535 (.)
 
         $sitemap->write();
     }
 
-    public function isExcluded($path) {
+    public function isExcluded($path)
+    {
         return Str::is($this->exclude, $path);
     }
 }

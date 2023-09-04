@@ -10,6 +10,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class CreateNotifyThemeablesTable extends XotBaseMigration
 {
 =======
@@ -28,6 +29,10 @@ class CreateNotifyThemeablesTable extends XotBaseMigration {
 =======
 class CreateNotifyThemeablesTable extends XotBaseMigration {
 >>>>>>> a758bd5 (.)
+=======
+class CreateNotifyThemeablesTable extends XotBaseMigration
+{
+>>>>>>> 34ed535 (.)
     /**
      * Run the migrations.
      *
@@ -38,6 +43,7 @@ class CreateNotifyThemeablesTable extends XotBaseMigration {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function up()
     {
 =======
@@ -56,6 +62,10 @@ class CreateNotifyThemeablesTable extends XotBaseMigration {
 =======
     public function up() {
 >>>>>>> a758bd5 (.)
+=======
+    public function up()
+    {
+>>>>>>> 34ed535 (.)
         // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {

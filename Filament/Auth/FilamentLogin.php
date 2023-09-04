@@ -11,6 +11,7 @@ use Savannabits\FilamentModules\Http\Livewire\Auth\BaseLogin;
 class FilamentLogin extends BaseLogin
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 35b9476 (up)
@@ -44,6 +45,8 @@ class FilamentLogin extends BaseLogin {
 >>>>>>> 42f9249 (.)
 =======
 >>>>>>> 35b9476 (up)
+=======
+>>>>>>> 34ed535 (.)
     public static string $context = 'filament';
     public static string $module = 'Notify';
 }

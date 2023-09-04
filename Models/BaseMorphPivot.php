@@ -23,6 +23,7 @@ use Modules\Xot\Traits\Updater;
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 abstract class BaseMorphPivot extends MorphPivot {
     use Updater;
 <<<<<<< HEAD
@@ -138,6 +139,10 @@ use Modules\Xot\Traits\Updater;
 =======
 >>>>>>> a758bd5 (.)
 abstract class BaseMorphPivot extends MorphPivot {
+=======
+abstract class BaseMorphPivot extends MorphPivot
+{
+>>>>>>> 34ed535 (.)
     use Updater;
     /**
      * Indicates whether attributes are snake cased on arrays.
@@ -147,7 +152,19 @@ abstract class BaseMorphPivot extends MorphPivot {
      * @var bool
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
      public static $snakeAttributes = true;
+=======
+    public static $snakeAttributes = true;
+    /**
+     * @var bool
+     */
+    public $incrementing = true;
+    /**
+     * @var bool
+     */
+    public $timestamps = true;
+>>>>>>> 34ed535 (.)
 
     protected $perPage = 30;
 <<<<<<< HEAD
@@ -172,21 +189,13 @@ abstract class BaseMorphPivot extends MorphPivot
      * @var string
      */
     protected $primaryKey = 'id';
-    /**
-     * @var bool
-     */
-    public $incrementing = true;
-    /**
-     * @var bool
-     */
-    public $timestamps = true;
     // protected $attributes = ['related_type' => 'cuisine_cat'];
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> b1dceab (up)
     /**
-     * @var string[]
+     * @var array<string>
      */
     protected $dates = [
         'created_at',
@@ -195,7 +204,7 @@ abstract class BaseMorphPivot extends MorphPivot
         // 'published_at',
     ];
     /**
-     * @var string[]
+     * @var array<string>
      */
     protected $fillable = [
         'id',

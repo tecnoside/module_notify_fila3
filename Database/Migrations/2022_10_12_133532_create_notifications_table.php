@@ -71,6 +71,7 @@ declare(strict_types=1);
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
+<<<<<<< HEAD
 class CreateNotificationsTable extends XotBaseMigration {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -88,11 +89,16 @@ class CreateNotificationsTable extends XotBaseMigration {
 >>>>>>> b3b016d (up)
 =======
 >>>>>>> a758bd5 (.)
+=======
+class CreateNotificationsTable extends XotBaseMigration
+{
+>>>>>>> 34ed535 (.)
     /**
      * Run the migrations.
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -119,6 +125,10 @@ class CreateNotificationsTable extends XotBaseMigration {
 >>>>>>> bc60653 (up)
 =======
     public function up() {
+=======
+    public function up()
+    {
+>>>>>>> 34ed535 (.)
         // -- CREATE --
 >>>>>>> 602db11 (up)
 =======

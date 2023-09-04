@@ -16,6 +16,7 @@ declare(strict_types=1);
 use Illuminate\Database\Schema\Blueprint;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // ----- bases ----
 =======
 //----- models -----
@@ -29,6 +30,8 @@ use Illuminate\Database\Schema\Blueprint;
 =======
 // ----- models -----
 
+=======
+>>>>>>> 34ed535 (.)
 // ----- bases ----
 >>>>>>> b1dceab (up)
 =======

@@ -23,10 +23,12 @@ use Modules\Notify\Filament\Resources\NotifyThemeResource;
 =======
 namespace Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
 
-use Modules\Notify\Filament\Resources\NotifyThemeResource;
-use Filament\Pages\Actions;
 use Filament\Resources\Pages\CreateRecord;
+<<<<<<< HEAD
 >>>>>>> 01564cc (up)
+=======
+use Modules\Notify\Filament\Resources\NotifyThemeResource;
+>>>>>>> 34ed535 (.)
 
 class CreateNotifyTheme extends CreateRecord
 {

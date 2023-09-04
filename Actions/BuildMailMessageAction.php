@@ -136,8 +136,11 @@ class BuildMailMessageAction
      * @param DataCollection<AttachmentData> $attachments
      */
     public function execute(
-        string $name, Model $model, array $view_params = [], ?DataCollection $attachments = null): MailMessage
-    {
+        string $name,
+        Model $model,
+        array $view_params = [],
+        ?DataCollection $attachments = null
+    ): MailMessage {
         $view_params = array_merge($model->toArray(), $view_params);
 
         $type = 'email';

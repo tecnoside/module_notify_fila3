@@ -14,8 +14,13 @@ class NotifyThemeFactory extends Factory
 {
 =======
 
+<<<<<<< HEAD
 class NotifyThemeFactory extends Factory {
 >>>>>>> a758bd5 (.)
+=======
+class NotifyThemeFactory extends Factory
+{
+>>>>>>> 34ed535 (.)
     /**
      * The name of the factory's corresponding model.
      *
@@ -61,6 +66,7 @@ class NotifyThemeFactory extends Factory
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function definition()
     {
         return [
@@ -85,6 +91,10 @@ class NotifyThemeFactory extends Factory
 >>>>>>> fe06862 (.)
 =======
     public function definition() {
+=======
+    public function definition()
+    {
+>>>>>>> 34ed535 (.)
         return [
             'id' => $this->faker->randomNumber(5, false),
 >>>>>>> a758bd5 (.)

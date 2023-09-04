@@ -23,6 +23,7 @@ namespace Modules\Notify\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 >>>>>>> 5f3f456 (up)
@@ -260,6 +261,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
+=======
+>>>>>>> 34ed535 (.)
 // ---------- traits
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 // //use Laravel\Scout\Searchable;
@@ -297,7 +300,18 @@ abstract class BaseModel extends Model
      public static $snakeAttributes = true;
 =======
     public static $snakeAttributes = true;
+<<<<<<< HEAD
 >>>>>>> a758bd5 (.)
+=======
+    /**
+     * @var bool
+     */
+    public $incrementing = true;
+    /**
+     * @var bool
+     */
+    public $timestamps = true;
+>>>>>>> 34ed535 (.)
 
     protected $perPage = 30;
 
@@ -318,7 +332,7 @@ abstract class BaseModel extends Model
     protected $appends = [];
 
     /**
-     * @var string[]
+     * @var array<string>
      */
     protected $dates = ['published_at', 'created_at', 'updated_at', 'verified_at'];
     /**
@@ -326,15 +340,12 @@ abstract class BaseModel extends Model
      */
     protected $primaryKey = 'id';
     /**
-     * @var bool
-     */
-    public $incrementing = true;
-    /**
      * @var array<int, string>
      */
     protected $hidden = [
         // 'password'
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         //'password'
@@ -346,6 +357,8 @@ abstract class BaseModel extends Model
      * @var bool
      */
     public $timestamps = true;
+=======
+>>>>>>> 34ed535 (.)
 
     /**
      * Create a new factory instance for the model.
