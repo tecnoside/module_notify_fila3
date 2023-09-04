@@ -1,7 +1,11 @@
 includes:
     - phpstan-baseline.neon
+<<<<<<< HEAD
     - ./vendor/nunomaduro/larastan/extension.neon
     
+=======
+
+>>>>>>> 842d9e1 (.)
 parameters:
     level: 1
     paths:
