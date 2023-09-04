@@ -16,6 +16,7 @@ return [
     //     ],
     // ],
     // 'Jigsaw Docs' => 'https://jigsaw.tighten.co/docs/installation',
+<<<<<<< HEAD
     'Funzione del Modulo' => [
         'url' => 'docs/module_notify',
         'children' => [
@@ -66,11 +67,17 @@ return [
 =======
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> ca8af38 (.)
     'Funzione del Modulo' => [
         'url' => 'docs/module_notify',
         'children' => [
-            'TrySendMailAction' => 'docs/try_send_mail_action',
+            'Notifica ThemeNotification' => 'docs/theme-notification-class',
+            'Classe BuildMailMessageAction' => 'docs/build-mail-message-action',
         ],
+    ],
+    'TrySendMailAction' => [
+        'url' => 'docs/try_send_mail_action',
     ],
 <<<<<<< HEAD
 >>>>>>> 996ab99 (.)
