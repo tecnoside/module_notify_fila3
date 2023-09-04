@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 <<<<<<< HEAD
@@ -13,17 +14,22 @@ use Filament\Pages;
 declare(strict_types=1);
 
 >>>>>>> b36983f (up)
+=======
+>>>>>>> 01564cc (up)
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Http\Middleware\MirrorConfigToSubpackages;
 use Filament\Pages;
 use Filament\Widgets;
+<<<<<<< HEAD
 >>>>>>> 911eb41 (up)
 =======
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Http\Middleware\MirrorConfigToSubpackages;
 use Filament\Pages;
 >>>>>>> 42f9249 (.)
+=======
+>>>>>>> 01564cc (up)
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -38,6 +44,7 @@ $contextNs = 'Modules\\Notify\\Filament';
 $contextPath = 'Filament';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 return [
 =======
@@ -48,6 +55,10 @@ return [
 
 return [
 >>>>>>> b36983f (up)
+=======
+return [
+
+>>>>>>> 01564cc (up)
     /*
     |--------------------------------------------------------------------------
     | Filament Path
@@ -85,6 +96,7 @@ return [
     'pages' => [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         'namespace' => $contextNs . '\\Pages',
         'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Pages"),
 =======
@@ -99,6 +111,10 @@ return [
         'namespace' => $contextNs . '\\Pages',
         'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Pages"),
 >>>>>>> b735fbf (.)
+=======
+        'namespace' => $contextNs.'\\Pages',
+        'path' => base_path('Modules/'.$moduleName."/$contextPath/Pages"),
+>>>>>>> 01564cc (up)
         'register' => [
             Pages\Dashboard::class,
         ],
@@ -117,6 +133,7 @@ return [
     'resources' => [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         'namespace' => $contextNs . '\\Resources',
         'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Resources"),
 =======
@@ -131,6 +148,10 @@ return [
         'namespace' => $contextNs . '\\Resources',
         'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Resources"),
 >>>>>>> b735fbf (.)
+=======
+        'namespace' => $contextNs.'\\Resources',
+        'path' => base_path('Modules/'.$moduleName."/$contextPath/Resources"),
+>>>>>>> 01564cc (up)
         'register' => [],
     ],
 
@@ -145,6 +166,7 @@ return [
     */
 
     'widgets' => [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         'namespace' => $contextNs . '\\Widgets',
@@ -174,6 +196,13 @@ return [
             // Widgets\AccountWidget::class,
             // Widgets\FilamentInfoWidget::class,
 >>>>>>> b735fbf (.)
+=======
+        'namespace' => $contextNs.'\\Widgets',
+        'path' => base_path('Modules/'.$moduleName."/$contextPath/Widgets"),
+        'register' => [
+            Widgets\AccountWidget::class,
+            Widgets\FilamentInfoWidget::class,
+>>>>>>> 01564cc (up)
         ],
     ],
 
@@ -190,6 +219,7 @@ return [
     'livewire' => [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         'namespace' => $moduleNs . '\\Http\\Livewire',
         'path' => base_path('Modules/' . $moduleName . '/Http/Livewire'),
 =======
@@ -200,6 +230,10 @@ return [
         'namespace' => $moduleNs . '\\Http\\Livewire',
         'path' => base_path('Modules/' . $moduleName . '/Http/Livewire'),
 >>>>>>> b735fbf (.)
+=======
+        'namespace' => $moduleNs.'\\Http\\Livewire',
+        'path' => base_path('Modules/'.$moduleName.'/Http/Livewire'),
+>>>>>>> 01564cc (up)
     ],
 
     /*
@@ -217,6 +251,7 @@ return [
         'pages' => [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             'login' => Modules\Notify\Http\Livewire\Auth\FilamentLogin::class,
 =======
             'login' => Modules\Quaeris\Http\Livewire\Auth\FilamentLogin::class,
@@ -224,6 +259,9 @@ return [
 =======
             'login' => Modules\Notify\Http\Livewire\Auth\FilamentLogin::class,
 >>>>>>> b36983f (up)
+=======
+            'login' => Modules\Quaeris\Http\Livewire\Auth\FilamentLogin::class,
+>>>>>>> 01564cc (up)
         ],
     ],
 
@@ -241,6 +279,7 @@ return [
         'auth' => [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             //  Authenticate::class,
             Modules\Notify\Http\Middleware\FilamentMiddleware::class,
 =======
@@ -251,6 +290,10 @@ return [
             //  Authenticate::class,
             Modules\Notify\Http\Middleware\FilamentMiddleware::class,
 >>>>>>> b36983f (up)
+=======
+        //  Authenticate::class,
+            Modules\Quaeris\Http\Middleware\FilamentMiddleware::class
+>>>>>>> 01564cc (up)
         ],
         'base' => [
             EncryptCookies::class,
