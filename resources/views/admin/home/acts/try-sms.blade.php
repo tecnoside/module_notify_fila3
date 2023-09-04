@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     <x-col size="12">
 
@@ -31,6 +32,15 @@
 =======
 
 >>>>>>> b735fbf (.)
+=======
+    
+    <x-col size="12">
+        
+            <form action="{!! Request::fullUrlWithQuery([]) !!}" method="POST">
+                @csrf
+                <x-input.group type="select" name="driver" value="{{ $driver }}" :options="$drivers" />
+                
+>>>>>>> ce6a32e (up)
                 <x-input.group type="text" name="from" />
                 <x-input.group type="text" name="to" value="3475896127" />
 
@@ -40,6 +50,7 @@
                 <input type="submit" value="go!" class="btn btn-primary" />
 
             </form>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,5 +68,9 @@
 
 
 >>>>>>> b735fbf (.)
+=======
+        
+        
+>>>>>>> ce6a32e (up)
     </x-col>
 @endsection
