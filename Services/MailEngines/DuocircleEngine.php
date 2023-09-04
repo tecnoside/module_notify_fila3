@@ -7,6 +7,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services\MailEngines;
 
+use GuzzleHttp\Client;
+
 //---------CSS------------
 
 /**
@@ -43,5 +45,60 @@ class DuocircleEngine {
     }
 
     public function send(): self {
+        dddx('WIP');
+
+        return $this;
+    }
+
+    public function try(): self {
+        /*
+        $url = 'http://api.duocircle.com';
+        $url1 = '/v1/account';
+        //$headers=X-AUTH-TOKEN
+        $client = new Client();
+        $request = $client->request('GET', $url.$url1, [
+            'headers' => [
+                'X-AUTH-TOKEN' => 'Mail.2020',
+            ],
+        ]);
+        //$request->addHeader('X-Authorization', 'OAuth realm=<OAUTH STUFF HERE>');
+        //$request->addHeader('X-AUTH-TOKEN', 'Mail.2020');
+        //$resp = $client->send($request);
+
+        dddx($request);
+        */
+        /** @var \Webklex\PHPIMAP\Client $client */
+        $client = \Webklex\IMAP\Facades\Client::account('default');
+
+        //Connect to the IMAP Server
+        $client->connect();
+
+        //Get all Mailboxes
+        /** @var \Webklex\PHPIMAP\Support\FolderCollection $folders */
+        $folders = $client->getFolders();
+
+        //Loop through every Mailbox
+        /** @var \Webklex\PHPIMAP\Folder $folder */
+        foreach ($folders as $folder) {
+            //Get all Messages of the current Mailbox $folder
+            /** @var \Webklex\PHPIMAP\Support\MessageCollection $messages */
+            $messages = $folder->messages()->all()->get();
+
+            /** @var \Webklex\PHPIMAP\Message $message */
+            foreach ($messages as $message) {
+                echo $message->getSubject().'<br />';
+                echo 'Attachments: '.$message->getAttachments()->count().'<br />';
+                echo $message->getHTMLBody();
+
+                //Move the current Message to 'INBOX.read'
+                if (true == $message->move('INBOX.read')) {
+                    echo 'Message has ben moved';
+                } else {
+                    echo 'Message could not be moved';
+                }
+            }
+        }
+
+        return $this;
     }
 }
