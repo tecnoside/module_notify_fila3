@@ -19,11 +19,18 @@ class CreateContactsTable extends XotBaseMigration {
                 $table->morphs('model');
                 $table->string('contact_type')->nullable();
                 $table->string('value')->nullable();
+                $table->integer('user_id')->nullable();
                 $table->timestamp('verified_at')->nullable();
                 $table->timestamps();
-                $table->string('updated_by')->nullable()->after('updated_at');
-                $table->string('created_by')->nullable()->after('created_at');
+                $table->string('updated_by')->nullable();
+                $table->string('created_by')->nullable();
             }
         );
+        $this->tableUpdate(
+            function (Blueprint $table) {
+                if (! $this->hasColumn('token')) {
+                    $table->string('token')->nullable();
+                }
+            });
     }
 }
