@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
 =======
@@ -91,12 +92,16 @@ return [
     ],
 >>>>>>> dd3d1c2 (up)
 =======
+=======
+declare(strict_types=1);
+
+>>>>>>> 8f4c37e (.)
 use Illuminate\Support\Str;
 
 return [
     'baseUrl' => '',
     'production' => false,
-    'siteName' => 'Docs Starter Template',
+    'siteName' => 'Modulo Notify',
     'siteDescription' => 'Beautiful docs powered by Jigsaw',
 >>>>>>> becf1dc (up)
 
@@ -208,7 +213,7 @@ return [
 =======
     },
     'url' => function ($page, $path) {
-        return Str::startsWith($path, 'http') ? $path : '/' . trimPath($path);
+        return Str::startsWith($path, 'http') ? $path : '/'.trimPath($path);
     },
 ];
 >>>>>>> becf1dc (up)
