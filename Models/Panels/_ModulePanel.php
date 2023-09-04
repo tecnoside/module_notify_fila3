@@ -4,11 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models\Panels;
 
+<<<<<<< HEAD
 use Modules\Cms\Models\Panels\XotBasePanel;
+=======
+use Modules\Xot\Models\Panels\XotBasePanel;
+>>>>>>> d27db1b (.)
 
 /**
  * Class _ModulePanel.
  */
+<<<<<<< HEAD
 class _ModulePanel extends XotBasePanel
 {
     public function actions(): array
@@ -44,6 +49,13 @@ class _ModulePanel extends XotBasePanel
             // new Actions\TryThemeNotificationAction(),
             // new Actions\TryAlertAction(),
 >>>>>>> fe06862 (.)
+=======
+class _ModulePanel extends XotBasePanel {
+    public function actions(): array {
+        return [
+            new Actions\TestSmsAction(),
+            new Actions\TestMailAction(),
+>>>>>>> d27db1b (.)
         ];
     }
 }

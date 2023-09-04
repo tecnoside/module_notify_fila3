@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -49,13 +50,19 @@ return [
 =======
 >>>>>>> 8be0eaa (up)
 =======
+=======
+>>>>>>> d27db1b (.)
 <?php
 
 return [
     'name' => 'Notify'
+<<<<<<< HEAD
 =======
 >>>>>>> 3a62aee (up)
 ];
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> fe06862 (.)
+=======
+];
+>>>>>>> d27db1b (.)

@@ -3,14 +3,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> d27db1b (.)
 <?php
 
 declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21,10 +25,13 @@ use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 // //use Laravel\Scout\Searchable;
 =======
+=======
+>>>>>>> d27db1b (.)
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 //---------- traits
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 ////use Laravel\Scout\Searchable;
+<<<<<<< HEAD
 >>>>>>> 42aa20e (.)
 =======
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
@@ -32,6 +39,8 @@ use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 // //use Laravel\Scout\Searchable;
 >>>>>>> 3a62aee (up)
+=======
+>>>>>>> d27db1b (.)
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Services\FactoryService;
 use Modules\Xot\Traits\Updater;
@@ -39,6 +48,7 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseModel.
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,6 +114,8 @@ protected $perPage = 30;
 
 =======
 =======
+=======
+>>>>>>> d27db1b (.)
 abstract class BaseModel extends Model
 {
     use Updater;
@@ -133,11 +145,15 @@ abstract class BaseModel extends Model
      * @var bool
      */
     public $incrementing = true;
+<<<<<<< HEAD
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> d27db1b (.)
     /**
      * @var array
      */
     protected $hidden = [
+<<<<<<< HEAD
 <<<<<<< HEAD
         // 'password'
     ];
@@ -269,6 +285,10 @@ abstract class BaseModel extends Model
     protected $hidden = [
         // 'password'
     ];
+=======
+        //'password'
+    ];
+>>>>>>> d27db1b (.)
     /**
      * @var bool
      */
@@ -279,6 +299,7 @@ abstract class BaseModel extends Model
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
+<<<<<<< HEAD
     protected static function newFactory() {
         return FactoryService::newFactory(get_called_class());
     }
@@ -404,3 +425,10 @@ abstract class BaseModel extends Model {
     }
 }
 >>>>>>> fe06862 (.)
+=======
+    protected static function newFactory()
+    {
+        return FactoryService::newFactory(get_called_class());
+    }
+}
+>>>>>>> d27db1b (.)

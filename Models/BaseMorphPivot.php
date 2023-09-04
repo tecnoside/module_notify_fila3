@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 42aa20e (.)
 <?php
@@ -194,6 +195,8 @@ abstract class BaseMorphPivot extends MorphPivot
 =======
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> d27db1b (.)
 <?php
 
 declare(strict_types=1);
@@ -209,6 +212,7 @@ use Modules\Xot\Traits\Updater;
 abstract class BaseMorphPivot extends MorphPivot
 {
     use Updater;
+<<<<<<< HEAD
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -229,6 +233,8 @@ abstract class BaseMorphPivot extends MorphPivot
     public $timestamps = true;
 
     protected $perPage = 30;
+=======
+>>>>>>> d27db1b (.)
 
     protected $connection = 'notify';
 
@@ -236,11 +242,15 @@ abstract class BaseMorphPivot extends MorphPivot
      * @var array
      */
     protected $appends = [];
+<<<<<<< HEAD
 
+=======
+>>>>>>> d27db1b (.)
     /**
      * @var string
      */
     protected $primaryKey = 'id';
+<<<<<<< HEAD
 
     // protected $attributes = ['related_type' => 'cuisine_cat'];
 <<<<<<< HEAD
@@ -253,6 +263,19 @@ abstract class BaseMorphPivot extends MorphPivot
 >>>>>>> fe06862 (.)
     /**
      * @var array<string>
+=======
+    /**
+     * @var bool
+     */
+    public $incrementing = true;
+    /**
+     * @var bool
+     */
+    public $timestamps = true;
+    //protected $attributes = ['related_type' => 'cuisine_cat'];
+    /**
+     * @var string[]
+>>>>>>> d27db1b (.)
      */
     protected $dates = [
         'created_at',
@@ -260,9 +283,14 @@ abstract class BaseMorphPivot extends MorphPivot
         'deleted_at',
         // 'published_at',
     ];
+<<<<<<< HEAD
 
     /**
      * @var array<string>
+=======
+    /**
+     * @var string[]
+>>>>>>> d27db1b (.)
      */
     protected $fillable = [
         'id',
@@ -272,6 +300,7 @@ abstract class BaseMorphPivot extends MorphPivot
         'note',
     ];
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -286,3 +315,5 @@ abstract class BaseMorphPivot extends MorphPivot
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> d27db1b (.)
