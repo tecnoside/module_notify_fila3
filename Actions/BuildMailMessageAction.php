@@ -16,7 +16,8 @@ use Modules\Notify\Datas\AttachmentData;
 use Spatie\LaravelData\DataCollection;
 use Spatie\QueueableAction\QueueableAction;
 
-class BuildMailMessageAction {
+class BuildMailMessageAction
+{
     use QueueableAction;
 
 <<<<<<< HEAD
@@ -132,10 +133,11 @@ class BuildMailMessageAction
 =======
 >>>>>>> 28dc197 (up)
     /**
-     * @param DataCollection<AttachmentData>
+     * @param DataCollection<AttachmentData> $attachments
      */
     public function execute(
-        string $name, Model $model, array $view_params = [], ?DataCollection $attachments = null): MailMessage {
+        string $name, Model $model, array $view_params = [], ?DataCollection $attachments = null): MailMessage
+    {
         $view_params = array_merge($model->toArray(), $view_params);
 
         $type = 'email';
