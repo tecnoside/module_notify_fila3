@@ -44,6 +44,7 @@ use Filament\Tables;
 use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
 use Modules\Notify\Models\NotifyTheme;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 =======
 use Illuminate\Database\Eloquent\Builder;
@@ -66,7 +67,10 @@ use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
 use Modules\Notify\Models\NotifyTheme;
 >>>>>>> 34ed535 (.)
 use Savannabits\FilamentModules\Concerns\ContextualResource;
+=======
+>>>>>>> cb3e08b (Dusting)
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
+use Savannabits\FilamentModules\Concerns\ContextualResource;
 
 class NotifyThemeResource extends Resource
 {
