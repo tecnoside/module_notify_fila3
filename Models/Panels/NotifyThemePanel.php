@@ -30,8 +30,7 @@ use Illuminate\Http\Request;
 
 use Modules\Cms\Models\Panels\XotBasePanel;
 
-class NotifyThemePanel extends XotBasePanel
-{
+class NotifyThemePanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
 <<<<<<< HEAD
@@ -64,8 +63,7 @@ class NotifyThemePanel extends XotBasePanel
      * Get the fields displayed by the resource.
         'value'=>'..',
      */
-    public function fields(): array
-    {
+    public function fields(): array {
         return [
             (object) [
                 'type' => 'Id',
@@ -170,8 +168,7 @@ class NotifyThemePanel extends XotBasePanel
         ];
     }
 
-    public function logoFields(): array
-    {
+    public function logoFields(): array {
         return [
             (object) [
                 'type' => 'Select',
@@ -341,9 +338,13 @@ class NotifyThemePanel extends XotBasePanel
 >>>>>>> c7c0159 (up)
 =======
      */
+<<<<<<< HEAD
     public function tabs(): array
     {
 >>>>>>> fe06862 (.)
+=======
+    public function tabs(): array {
+>>>>>>> 7fcfa48 (up)
         $tabs_name = [];
 
         return $tabs_name;
@@ -384,9 +385,13 @@ class NotifyThemePanel extends XotBasePanel
 >>>>>>> c7c0159 (up)
 =======
      */
+<<<<<<< HEAD
     public function cards(Request $request): array
     {
 >>>>>>> fe06862 (.)
+=======
+    public function cards(Request $request): array {
+>>>>>>> 7fcfa48 (up)
         return [];
     }
 
@@ -427,9 +432,13 @@ class NotifyThemePanel extends XotBasePanel
 >>>>>>> c7c0159 (up)
 =======
      */
+<<<<<<< HEAD
     public function filters(Request $request = null): array
     {
 >>>>>>> fe06862 (.)
+=======
+    public function filters(Request $request = null): array {
+>>>>>>> 7fcfa48 (up)
         return [];
     }
 
@@ -468,9 +477,13 @@ class NotifyThemePanel extends XotBasePanel
 >>>>>>> c7c0159 (up)
 =======
      */
+<<<<<<< HEAD
     public function lenses(Request $request): array
     {
 >>>>>>> fe06862 (.)
+=======
+    public function lenses(Request $request): array {
+>>>>>>> 7fcfa48 (up)
         return [];
     }
 
@@ -509,9 +522,13 @@ class NotifyThemePanel extends XotBasePanel
 >>>>>>> c7c0159 (up)
 =======
      */
+<<<<<<< HEAD
     public function actions(): array
     {
 >>>>>>> fe06862 (.)
+=======
+    public function actions(): array {
+>>>>>>> 7fcfa48 (up)
         return [];
     }
 }
