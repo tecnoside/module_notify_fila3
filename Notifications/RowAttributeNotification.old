@@ -70,10 +70,14 @@ class RowAttributeNotification extends Notification implements ShouldQueue
             // // non so se posso modificare questa riga senza creare errori in altre parti
             // ->view('notify::emails.templates.' . $theme . '.mail', ['html' => $this->row->mail_body, 'logo' => []]);
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->view('notify::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
 =======
             ->view('quaeris::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
 >>>>>>> a514540 (up)
+=======
+            ->view('notify::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
+>>>>>>> 248c405 (..)
 
         $this->row->sendEmailCallback();
 
