@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<title>{{ isset($senderName) ? $senderName : '' }}.</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<style type="text/css">{{ $_theme->cssInLine('notify::css/ark.css') }}</style>
@@ -36,11 +37,16 @@
 =======
 >>>>>>> 83df11d (up)
 =======
+=======
+>>>>>>> a758bd5 (.)
 		<title>{{ isset($senderName) ? $senderName : '' }}.</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<style type="text/css">{{ $_theme->cssInLine('notify::css/ark.css') }}</style>
 		@if(isset($css))
+<<<<<<< HEAD
 >>>>>>> 478bb60 (up)
+=======
+>>>>>>> a758bd5 (.)
 		<style type="text/css">
 			{{ $css }}
 		</style>
@@ -54,16 +60,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 64529a0 (up)
 =======
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> 5b257fb (up)
+=======
+>>>>>>> a758bd5 (.)
 	{{--
 	[{{ $_theme->cssInLine('notify::css/ark.css') }}]
 	<pre>{{ print_r($logo) }}</pre>
 	--}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,6 +93,8 @@
 >>>>>>> 478bb60 (up)
 =======
 >>>>>>> 5b257fb (up)
+=======
+>>>>>>> a758bd5 (.)
 	<table id="background-table" border="0" cellpadding="0" cellspacing="0" width="100%">
 		<tbody>
 		<tr>
@@ -97,6 +109,7 @@
 					</tr>
 					<tr class="mobile_only">
 						<td class="w640" width="640" align="center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -138,6 +151,11 @@
 							<img class="mobile_only" border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : '' }}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
 
 >>>>>>> b3b016d (up)
+=======
+
+							<img class="mobile_only" border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : '' }}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
+
+>>>>>>> a758bd5 (.)
 						</td>
 					</tr>
 					<tr class="mobile_only">
@@ -159,6 +177,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 										<img border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : '' }}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
 =======
 										<img border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : ''}}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
@@ -172,6 +191,9 @@
 =======
 										<img border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : ''}}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
 >>>>>>> 83df11d (up)
+=======
+										<img border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : ''}}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
+>>>>>>> a758bd5 (.)
 									</td>
 									<td class="w30" width="30"></td>
 								</tr>

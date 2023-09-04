@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         {{ cssInLine('notify::css/ark.css') }}
 =======
         {{ $_theme->cssInLine('notify::css/ark.css') }}
@@ -21,6 +22,9 @@
 =======
         {{ $_theme->cssInLine('notify::css/ark.css') }}
 >>>>>>> 2e16e99 (up)
+=======
+        {{ $_theme->cssInLine('notify::css/ark.css') }}
+>>>>>>> a758bd5 (.)
     </style>
     @if (isset($css))
         <style type="text/css">
@@ -52,6 +56,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 184193d (up)
                                     @if (is_array($logo))
@@ -67,6 +72,8 @@
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> 2e16e99 (up)
+=======
+>>>>>>> a758bd5 (.)
 
                                     <img class="mobile_only" border="0"
                                         src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}"
@@ -76,6 +83,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b62f52c (up)
 =======
 >>>>>>> fe06862 (.)
@@ -83,6 +91,8 @@
 >>>>>>> 184193d (up)
 =======
 >>>>>>> 2e16e99 (up)
+=======
+>>>>>>> a758bd5 (.)
                                 </td>
                             </tr>
                             <tr class="mobile_only">
@@ -97,6 +107,7 @@
                             <tr>
                                 <td id="header" class="w640" align="center" bgcolor="#FFFFFF" width="640">
                                     <table class="w640" border="0" cellpadding="0" cellspacing="0" width="640">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -124,6 +135,8 @@
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> 2e16e99 (up)
+=======
+>>>>>>> a758bd5 (.)
                                         <tr>
                                             <td class="w20" width="20"></td>
                                             <td id="logo"
@@ -137,6 +150,7 @@
                                             </td>
                                             <td class="w30" width="30"></td>
                                         </tr>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b62f52c (up)
@@ -157,6 +171,8 @@
 >>>>>>> 184193d (up)
 =======
 >>>>>>> 2e16e99 (up)
+=======
+>>>>>>> a758bd5 (.)
                                         <tr>
                                             <td colspan="3" height="20" class="large_only"></td>
                                         </tr>

@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8f4c37e (.)
 declare(strict_types=1);
@@ -60,6 +61,11 @@ return [
 =======
 return [
 >>>>>>> becf1dc (up)
+=======
+declare(strict_types=1);
+
+return [
+>>>>>>> a758bd5 (.)
     'Getting Started' => [
         'url' => 'docs/getting-started',
         'children' => [
@@ -70,6 +76,7 @@ return [
         ],
     ],
     'Jigsaw Docs' => 'https://jigsaw.tighten.co/docs/installation',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -113,11 +120,16 @@ return [
 =======
 >>>>>>> becf1dc (up)
 =======
+=======
+>>>>>>> a758bd5 (.)
     'Funzione del Modulo' => [
         'url' => 'docs/module_notify',
         'children' => [
             'TrySendMailAction' => 'docs/try_send_mail_action',
         ],
     ],
+<<<<<<< HEAD
 >>>>>>> 8f4c37e (.)
+=======
+>>>>>>> a758bd5 (.)
 ];
