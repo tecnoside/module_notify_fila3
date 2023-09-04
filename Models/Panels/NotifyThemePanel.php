@@ -24,8 +24,7 @@ use Illuminate\Http\Request;
 
 use Modules\Cms\Models\Panels\XotBasePanel;
 
-class NotifyThemePanel extends XotBasePanel
-{
+class NotifyThemePanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
 <<<<<<< HEAD
@@ -52,8 +51,7 @@ class NotifyThemePanel extends XotBasePanel
      * Get the fields displayed by the resource.
         'value'=>'..',
      */
-    public function fields(): array
-    {
+    public function fields(): array {
         return [
             (object) [
                 'type' => 'Id',
@@ -84,6 +82,7 @@ class NotifyThemePanel extends XotBasePanel
                 'col_size' => 3,
                 'options' => [
                     'mail' => 'mail',
+                    'email' => 'email',
                     'sms' => 'sms',
                 ],
             ],
@@ -148,8 +147,7 @@ class NotifyThemePanel extends XotBasePanel
         ];
     }
 
-    public function logoFields()
-    {
+    public function logoFields() {
         return [
             (object) [
                 'type' => 'Select',
@@ -287,6 +285,7 @@ class NotifyThemePanel extends XotBasePanel
 <<<<<<< HEAD
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function tabs(): array {
 =======
      *
@@ -304,6 +303,9 @@ class NotifyThemePanel extends XotBasePanel
     public function tabs(): array
     {
 >>>>>>> b62f52c (up)
+=======
+    public function tabs(): array {
+>>>>>>> 9c75c21 (up)
         $tabs_name = [];
 
         return $tabs_name;
@@ -314,6 +316,7 @@ class NotifyThemePanel extends XotBasePanel
 <<<<<<< HEAD
 <<<<<<< HEAD
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function cards(Request $request): array {
 =======
@@ -332,6 +335,9 @@ class NotifyThemePanel extends XotBasePanel
     public function cards(Request $request): array
     {
 >>>>>>> b62f52c (up)
+=======
+    public function cards(Request $request): array {
+>>>>>>> 9c75c21 (up)
         return [];
     }
 
@@ -342,6 +348,7 @@ class NotifyThemePanel extends XotBasePanel
 <<<<<<< HEAD
 <<<<<<< HEAD
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function filters(Request $request = null): array {
 =======
@@ -360,6 +367,9 @@ class NotifyThemePanel extends XotBasePanel
     public function filters(Request $request = null): array
     {
 >>>>>>> b62f52c (up)
+=======
+    public function filters(Request $request = null): array {
+>>>>>>> 9c75c21 (up)
         return [];
     }
 
@@ -368,6 +378,7 @@ class NotifyThemePanel extends XotBasePanel
 <<<<<<< HEAD
 <<<<<<< HEAD
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function lenses(Request $request): array {
 =======
@@ -386,6 +397,9 @@ class NotifyThemePanel extends XotBasePanel
     public function lenses(Request $request): array
     {
 >>>>>>> b62f52c (up)
+=======
+    public function lenses(Request $request): array {
+>>>>>>> 9c75c21 (up)
         return [];
     }
 
@@ -394,6 +408,7 @@ class NotifyThemePanel extends XotBasePanel
 <<<<<<< HEAD
 <<<<<<< HEAD
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function actions(): array {
 =======
@@ -412,6 +427,9 @@ class NotifyThemePanel extends XotBasePanel
     public function actions(): array
     {
 >>>>>>> b62f52c (up)
+=======
+    public function actions(): array {
+>>>>>>> 9c75c21 (up)
         return [];
     }
 }
