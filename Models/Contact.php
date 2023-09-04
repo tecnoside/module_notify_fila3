@@ -8,6 +8,7 @@ namespace Modules\Notify\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Modules\Notify\Models\Contact.
  *
@@ -242,11 +243,20 @@ class Contact extends BaseModel
      *
      * @var array<string>
      */
+=======
+/**
+ * @property string $token
+ * @property string $model_type
+ * @property int    $model_id
+ */
+class Contact extends BaseModel {
+>>>>>>> 0799e3a (up)
     protected $fillable = [
         'model_id', 'model_type', 'contact_type', 'value',
         'verified_at', 'updated_at', 'created_at',
         'updated_by', 'created_by', 'user_id', 'token',
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 91728dd (up)
@@ -275,4 +285,6 @@ class Contact extends BaseModel {
 =======
     protected $fillable = ['model_id', 'model_type', 'contact_type', 'value', 'verified_at', 'updated_at', 'created_at', 'updated_by', 'created_by', 'user_id', 'token'];
 >>>>>>> dacc817 (.)
+=======
+>>>>>>> 0799e3a (up)
 }
