@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -108,6 +109,8 @@ protected $perPage = 30;
 =======
 =======
 >>>>>>> 89120cb (rebase)
+=======
+>>>>>>> 47d9a86 (.)
 <?php
 
 declare(strict_types=1);
@@ -171,6 +174,7 @@ abstract class BaseMorphPivot extends MorphPivot {
         'user_id',
         'note',
     ];
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -241,3 +245,6 @@ abstract class BaseMorphPivot extends MorphPivot {
 }
 >>>>>>> 89120cb (rebase)
 >>>>>>> 9349baf (.)
+=======
+}
+>>>>>>> 47d9a86 (.)

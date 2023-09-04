@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -142,6 +143,8 @@ protected $perPage = 30;
 =======
 =======
 >>>>>>> 89120cb (rebase)
+=======
+>>>>>>> 47d9a86 (.)
 <?php
 
 declare(strict_types=1);
@@ -216,6 +219,7 @@ abstract class BaseModel extends Model {
     protected static function newFactory() {
         return FactoryService::newFactory(get_called_class());
     }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -297,3 +301,6 @@ abstract class BaseModel extends Model {
 }
 >>>>>>> 89120cb (rebase)
 >>>>>>> 9349baf (.)
+=======
+}
+>>>>>>> 47d9a86 (.)
