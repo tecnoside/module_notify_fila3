@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
+<<<<<<< HEAD
 /**
  * Modules\Notify\Models\NotifyThemeable.
  *
@@ -33,4 +34,7 @@ namespace Modules\Notify\Models;
  */
 class NotifyThemeable extends BaseMorphPivot
 {
+=======
+class NotifyThemeable extends BaseMorphPivot {
+>>>>>>> 18a2c03 (up)
 }
