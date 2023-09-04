@@ -13,6 +13,7 @@ namespace Modules\Notify\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Eloquent;
 use Illuminate\Notifications\DatabaseNotification;
 
@@ -151,4 +152,10 @@ class Notification extends BaseModel {
 class Notification extends BaseModel {
     protected $fillable = [''];
 >>>>>>> b3b016d (up)
+=======
+use Illuminate\Notifications\DatabaseNotification;
+
+class Notification extends DatabaseNotification {
+    
+>>>>>>> 8229f91 (up)
 }

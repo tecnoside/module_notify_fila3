@@ -18,6 +18,7 @@ class SmsData extends Data
 =======
 class SmsData extends Data {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class SmsData extends Data {
 >>>>>>> aa28fe1 (up)
@@ -44,4 +45,9 @@ class SmsData extends Data
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> aa28fe1 (up)
+=======
+    public string $from;
+    public string $to;
+    public string $body;
+>>>>>>> 8229f91 (up)
 }
