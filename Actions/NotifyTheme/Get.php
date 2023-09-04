@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Notify\Datas\NotifyThemeData;
 =======
 >>>>>>> adb42fb (up)
@@ -16,6 +17,9 @@ use Modules\Notify\Datas\NotifyThemeData;
 >>>>>>> 6eafc0a (up)
 =======
 >>>>>>> 1b3ba1c (up)
+=======
+use Modules\Notify\Datas\NotifyThemeData;
+>>>>>>> 891974c (up)
 use Modules\Notify\Models\NotifyTheme;
 use Modules\Xot\Datas\XotData;
 use Spatie\QueueableAction\QueueableAction;
@@ -30,6 +34,7 @@ class Get
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function execute(string $name, string $type, array $view_params): NotifyThemeData
 =======
     public function execute(string $name, string $type, array $view_params)
@@ -40,6 +45,9 @@ class Get
 =======
     public function execute(string $name, string $type, array $view_params)
 >>>>>>> 1b3ba1c (up)
+=======
+    public function execute(string $name, string $type, array $view_params): NotifyThemeData
+>>>>>>> 891974c (up)
     {
         $xot = XotData::make();
         if (! isset($view_params['post_id'])) {
@@ -218,13 +226,24 @@ class Get
         $view_params = array_merge($theme->toArray(), $view_params);
 
         $body_html = strval($theme->body_html);
+        $subject = strval($theme->subject);
 
         foreach ($view_params as $k => $v) {
             if (is_string($v)) {
                 $body_html = Str::replace('##'.$k.'##', $v, $body_html);
+                $subject = Str::replace('##'.$k.'##', $v, $subject);
             }
         }
         $view_params['body_html'] = $body_html;
+<<<<<<< HEAD
 >>>>>>> 1b3ba1c (up)
+=======
+
+        return NotifyThemeData::from([
+            'subject' => $subject,
+            'body_html' => $body_html,
+            'view_params' => $view_params,
+        ]);
+>>>>>>> 891974c (up)
     }
 }
