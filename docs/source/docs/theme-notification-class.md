@@ -9,6 +9,7 @@ section: content
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Classe che si occupa di recuperare il template della notifica che si vuole utilizzare,  
 già precedentemente creata nella tabella notify_themes.  
 Esempo:
@@ -33,3 +34,10 @@ Classe notifica utilizzata per inviare email/sms/ecc.
 =======
 Classe notifica utilizzata per gestire le notifiche (email/sms/ecc).
 >>>>>>> cac1c0d (.)
+=======
+Classe notifica utilizzata per gestire le notifiche (email/sms/ecc).
+
+```php
+Notification::send($company->reporter, new ThemeNotification('accepted_company', $company->toArray()));
+```
+>>>>>>> 4741bb3 (.)
