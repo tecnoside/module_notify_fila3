@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
+<<<<<<< HEAD
 use Eloquent;
 use Illuminate\Notifications\DatabaseNotification;
 
@@ -51,4 +52,9 @@ use Illuminate\Notifications\DatabaseNotification;
  */
 class Notification extends DatabaseNotification
 {
+=======
+
+class Notification extends BaseModel {
+    
+>>>>>>> 40ebae8 (up)
 }
