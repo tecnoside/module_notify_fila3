@@ -14,7 +14,11 @@ class Dashboard extends Page
 
     protected static string $view = 'notify::filament.pages.dashboard';
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 9ed774d (up)
+=======
+}
+>>>>>>> db3939e (Dusting)
