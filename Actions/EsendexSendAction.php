@@ -11,6 +11,7 @@ namespace Modules\Notify\Actions;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b735fbf (.)
 use Exception;
@@ -273,6 +274,9 @@ class EsendexSendAction
         return explode(';', strval($response));
 =======
 use Modules\Notify\Data\SmsData;
+=======
+use Modules\Notify\Datas\SmsData;
+>>>>>>> 8229f91 (up)
 use Spatie\QueueableAction\QueueableAction;
 
 /**

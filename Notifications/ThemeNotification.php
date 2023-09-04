@@ -55,7 +55,7 @@ class ThemeNotification extends Notification implements ShouldQueue
 =======
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
-use Modules\Notify\Data\SmsData;
+use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Notifications\Channels\EsendexChannel;
 
 

@@ -15,6 +15,7 @@ namespace Modules\Notify\Providers;
 <<<<<<< HEAD
 use Illuminate\Support\Facades\Notification;
 use Modules\Xot\Providers\XotBaseServiceProvider;
+use Illuminate\Support\Facades\Notification;
 
 class NotifyServiceProvider extends XotBaseServiceProvider
 {
@@ -423,6 +424,7 @@ class NotifyServiceProvider extends XotBaseServiceProvider {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7616aad (up)
 =======
 =======
@@ -445,6 +447,15 @@ class NotifyServiceProvider extends XotBaseServiceProvider
     }
 <<<<<<< HEAD
 >>>>>>> ace9eb3 (up)
+=======
+
+    public function bootCallback(): void {
+        // BladeService::registerComponents($this->module_dir.'/../View/Components', 'Modules\\Media');
+        Notification::extend('esendex', function ($app) {
+            return new \Modules\Notify\Notifications\Channels\EsendexChannel();
+        });
+    }
+>>>>>>> 8229f91 (up)
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
