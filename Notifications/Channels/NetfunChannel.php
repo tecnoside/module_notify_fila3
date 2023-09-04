@@ -44,9 +44,11 @@ use Illuminate\Notifications\Notification;
 =======
 >>>>>>> fe06862 (.)
 use Modules\Notify\Actions\NetfunSendAction;
-use Modules\Notify\Notifications\RowAttributeNotification;
 use Modules\Xot\Contracts\ModelContactContract;
+use Modules\Notify\Notifications\ThemeNotification;
+use Modules\Notify\Notifications\RowAttributeNotification;
 
+<<<<<<< HEAD
 class NetfunChannel {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -64,6 +66,12 @@ class NetfunChannel {
 =======
     public function __construct() {
 >>>>>>> fe06862 (.)
+=======
+class NetfunChannel
+{
+    public function __construct()
+    {
+>>>>>>> 3f0bbc4 (.)
     }
 
     /**
@@ -87,6 +95,7 @@ class NetfunChannel {
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function send($notifiable, Notification $notification) {
 <<<<<<< HEAD
 >>>>>>> 602db11 (up)
@@ -96,6 +105,10 @@ class NetfunChannel {
 =======
     public function send($notifiable, RowAttributeNotification $notification) {
 >>>>>>> fe06862 (.)
+=======
+    public function send($notifiable, ThemeNotification $notification)
+    {
+>>>>>>> 3f0bbc4 (.)
         $message = $notification->toSms($notifiable);
         // Send notification to the $notifiable instance...
         $data = app(NetfunSendAction::class)->execute($message);
