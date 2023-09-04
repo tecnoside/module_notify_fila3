@@ -6,9 +6,13 @@ namespace Modules\Notify\Actions\NotifyTheme;
 
 use Illuminate\Support\Str;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Notify\Datas\NotifyThemeData;
 =======
 >>>>>>> adb42fb (up)
+=======
+use Modules\Notify\Datas\NotifyThemeData;
+>>>>>>> 6eafc0a (up)
 use Modules\Notify\Models\NotifyTheme;
 use Modules\Xot\Datas\XotData;
 use Spatie\QueueableAction\QueueableAction;
@@ -21,10 +25,14 @@ class Get
     use QueueableAction;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function execute(string $name, string $type, array $view_params): NotifyThemeData
 =======
     public function execute(string $name, string $type, array $view_params)
 >>>>>>> adb42fb (up)
+=======
+    public function execute(string $name, string $type, array $view_params): NotifyThemeData
+>>>>>>> 6eafc0a (up)
     {
         $xot = XotData::make();
         if (! isset($view_params['post_id'])) {
@@ -128,13 +136,24 @@ class Get
         $view_params = array_merge($theme->toArray(), $view_params);
 
         $body_html = strval($theme->body_html);
+        $subject = strval($theme->subject);
 
         foreach ($view_params as $k => $v) {
             if (is_string($v)) {
                 $body_html = Str::replace('##'.$k.'##', $v, $body_html);
+                $subject = Str::replace('##'.$k.'##', $v, $subject);
             }
         }
         $view_params['body_html'] = $body_html;
+<<<<<<< HEAD
 >>>>>>> adb42fb (up)
+=======
+
+        return NotifyThemeData::from([
+            'subject' => $subject,
+            'body_html' => $body_html,
+            'view_params' => $view_params,
+        ]);
+>>>>>>> 6eafc0a (up)
     }
 }
