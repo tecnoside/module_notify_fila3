@@ -45,6 +45,12 @@ use Modules\Cms\Actions\GetViewAction;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Notify\Services\SmsService;
 use Modules\UI\Services\ThemeService;
+use Illuminate\Broadcasting\Channel;
+use Illuminate\Support\Facades\Notification;
+
+use  Modules\Notify\Notifications\ThemeNotification;
+use  Modules\Notify\Notifications\SampleNotification;
+use Modules\Notify\Datas\NotificationData;;
 
 <<<<<<< HEAD
 //-------- bases -----------
@@ -226,9 +232,24 @@ $view = $this->panel->getView();
 
     public function postHandle() {
         $data = request()->all();
+<<<<<<< HEAD
         $vars = collect($data)->only(['driver', 'from', 'to', 'body'])->all();
         SmsService::make()->setLocalVars($vars)->send();
 >>>>>>> 0d776db (up)
 >>>>>>> 5b257fb (up)
+=======
+        
+        //$hows=NotificationData::collection([$data]);
+        $hows=NotificationData::from($data);
+        
+        //$vars = collect($data)->only(['driver', 'from', 'to', 'body'])->all();
+        //SmsService::make()->setLocalVars($vars)->send();
+        //Notification::route($data['driver'], $data['to'])
+        //Notification::route($data['driver'], $data['to'])
+        //    ->notify(new SampleNotification($data));
+        Notification::send([$hows], new SampleNotification($data));
+        //Call to a member function routeNotificationFor() on string
+        dddx('fine');
+>>>>>>> 745fe6e (up)
     }
 }

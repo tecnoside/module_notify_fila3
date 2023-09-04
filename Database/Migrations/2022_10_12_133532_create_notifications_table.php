@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,6 +59,9 @@ class CreateNotificationsTable extends XotBaseMigration
 >>>>>>> 42f9249 (.)
 =======
 
+=======
+//https://blog.quickadminpanel.com/laravel-notifications-with-database-driver-internal-messages/
+>>>>>>> 745fe6e (up)
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
