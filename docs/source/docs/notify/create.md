@@ -46,6 +46,7 @@ Ciao [profile.first_name] [profile.last_name] come stai?
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ```
 
 Ciò significa che per utilizzare questa email, come parametro dovrà avere un array profile,  
@@ -74,3 +75,9 @@ Inserire nel campo body il corpo della notifica e ricopiarlo nel campo body_html
 =======
 ```
 >>>>>>> 9ef66f5 (.)
+=======
+```
+
+Ciò significa che per utilizzare questa email, come parametro dovrà avere un array profile,  
+con all'interno first_name e last_name.
+>>>>>>> f52f1de (.)
