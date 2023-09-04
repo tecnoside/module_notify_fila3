@@ -1,23 +1,7 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 declare(strict_types=1);
 
-=======
->>>>>>> 9658d21 (up)
-=======
-declare(strict_types=1);
-
->>>>>>> b735fbf (.)
-=======
->>>>>>> bc733de (up)
-=======
-declare(strict_types=1);
-
->>>>>>> 7bcd34c (.)
 namespace Modules\Notify\Filament\Resources\NotifyThemeResource\RelationManagers;
 
 use Filament\Forms;
@@ -25,22 +9,6 @@ use Filament\Resources\Form;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Resources\Table;
 use Filament\Tables;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
->>>>>>> 9658d21 (up)
-=======
->>>>>>> 42f9249 (.)
-=======
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
->>>>>>> bc733de (up)
-=======
->>>>>>> 34ed535 (.)
 
 class LinkableRelationManager extends RelationManager
 {
@@ -65,28 +33,6 @@ class LinkableRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('id'),
             ])
             ->filters([
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                //
->>>>>>> 9658d21 (up)
-=======
-
->>>>>>> 42f9249 (.)
-=======
->>>>>>> b735fbf (.)
-=======
-                //
->>>>>>> bc733de (up)
-=======
-
->>>>>>> 34ed535 (.)
-=======
->>>>>>> 7bcd34c (.)
             ])
             ->headerActions([
                 Tables\Actions\CreateAction::make(),
@@ -98,21 +44,5 @@ class LinkableRelationManager extends RelationManager
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
-=======
-    }    
->>>>>>> 9658d21 (up)
-=======
-    }
->>>>>>> 42f9249 (.)
-=======
-    }    
->>>>>>> bc733de (up)
-=======
-    }
->>>>>>> 34ed535 (.)
 }

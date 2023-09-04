@@ -1,46 +1,10 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 declare(strict_types=1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Http\Middleware\MirrorConfigToSubpackages;
 use Filament\Pages;
-=======
-=======
-declare(strict_types=1);
-
->>>>>>> b36983f (up)
-=======
->>>>>>> 01564cc (up)
-=======
-declare(strict_types=1);
-
->>>>>>> 35b9476 (up)
-use Filament\Http\Middleware\Authenticate;
-use Filament\Http\Middleware\DispatchServingFilamentEvent;
-use Filament\Http\Middleware\MirrorConfigToSubpackages;
-use Filament\Pages;
-use Filament\Widgets;
-<<<<<<< HEAD
->>>>>>> 911eb41 (up)
-=======
-use Filament\Http\Middleware\DispatchServingFilamentEvent;
-use Filament\Http\Middleware\MirrorConfigToSubpackages;
-use Filament\Pages;
->>>>>>> 42f9249 (.)
-=======
->>>>>>> 01564cc (up)
-=======
-use Filament\Http\Middleware\DispatchServingFilamentEvent;
-use Filament\Http\Middleware\MirrorConfigToSubpackages;
-use Filament\Pages;
->>>>>>> 34ed535 (.)
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -53,28 +17,8 @@ $moduleName = 'Notify';
 $moduleNs = 'Modules\Notify';
 $contextNs = 'Modules\\Notify\\Filament';
 $contextPath = 'Filament';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 return [
-=======
-return [
-
->>>>>>> 911eb41 (up)
-=======
-
-return [
->>>>>>> b36983f (up)
-=======
-return [
-
->>>>>>> 01564cc (up)
-=======
-
-return [
->>>>>>> 35b9476 (up)
     /*
     |--------------------------------------------------------------------------
     | Filament Path
@@ -110,36 +54,8 @@ return [
     */
 
     'pages' => [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         'namespace' => $contextNs . '\\Pages',
         'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Pages"),
-=======
-        'namespace' => $contextNs.'\\Pages',
-<<<<<<< HEAD
-        'path' => base_path('Modules/'.$moduleName."/$contextPath/Pages"),
->>>>>>> 911eb41 (up)
-=======
-        'path' => base_path('Modules/'.$moduleName."/{$contextPath}/Pages"),
->>>>>>> 42f9249 (.)
-=======
-        'namespace' => $contextNs . '\\Pages',
-        'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Pages"),
->>>>>>> b735fbf (.)
-=======
-        'namespace' => $contextNs.'\\Pages',
-<<<<<<< HEAD
-        'path' => base_path('Modules/'.$moduleName."/$contextPath/Pages"),
->>>>>>> 01564cc (up)
-=======
-        'path' => base_path('Modules/'.$moduleName."/{$contextPath}/Pages"),
->>>>>>> 34ed535 (.)
-=======
-        'namespace' => $contextNs . '\\Pages',
-        'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Pages"),
->>>>>>> 7bcd34c (.)
         'register' => [
             Pages\Dashboard::class,
         ],
@@ -156,36 +72,8 @@ return [
     */
 
     'resources' => [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         'namespace' => $contextNs . '\\Resources',
         'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Resources"),
-=======
-        'namespace' => $contextNs.'\\Resources',
-<<<<<<< HEAD
-        'path' => base_path('Modules/'.$moduleName."/$contextPath/Resources"),
->>>>>>> 911eb41 (up)
-=======
-        'path' => base_path('Modules/'.$moduleName."/{$contextPath}/Resources"),
->>>>>>> 42f9249 (.)
-=======
-        'namespace' => $contextNs . '\\Resources',
-        'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Resources"),
->>>>>>> b735fbf (.)
-=======
-        'namespace' => $contextNs.'\\Resources',
-<<<<<<< HEAD
-        'path' => base_path('Modules/'.$moduleName."/$contextPath/Resources"),
->>>>>>> 01564cc (up)
-=======
-        'path' => base_path('Modules/'.$moduleName."/{$contextPath}/Resources"),
->>>>>>> 34ed535 (.)
-=======
-        'namespace' => $contextNs . '\\Resources',
-        'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Resources"),
->>>>>>> 7bcd34c (.)
         'register' => [],
     ],
 
@@ -200,59 +88,11 @@ return [
     */
 
     'widgets' => [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         'namespace' => $contextNs . '\\Widgets',
         'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Widgets"),
         'register' => [
             // Widgets\AccountWidget::class,
             // Widgets\FilamentInfoWidget::class,
-=======
-        'namespace' => $contextNs.'\\Widgets',
-        'path' => base_path('Modules/'.$moduleName."/{$contextPath}/Widgets"),
-        'register' => [
-<<<<<<< HEAD
-            Widgets\AccountWidget::class,
-<<<<<<< HEAD
-            Widgets\FilamentInfoWidget::class,
->>>>>>> 911eb41 (up)
-=======
-=======
-            //Widgets\AccountWidget::class,
->>>>>>> 40e4418 (.)
-            //Widgets\FilamentInfoWidget::class,
->>>>>>> 57c26cd (up)
-=======
-        'namespace' => $contextNs . '\\Widgets',
-        'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Widgets"),
-        'register' => [
-            // Widgets\AccountWidget::class,
-            // Widgets\FilamentInfoWidget::class,
->>>>>>> b735fbf (.)
-=======
-        'namespace' => $contextNs.'\\Widgets',
-        'path' => base_path('Modules/'.$moduleName."/{$contextPath}/Widgets"),
-        'register' => [
-<<<<<<< HEAD
-            Widgets\AccountWidget::class,
-<<<<<<< HEAD
-            Widgets\FilamentInfoWidget::class,
->>>>>>> 01564cc (up)
-=======
-=======
-            //Widgets\AccountWidget::class,
->>>>>>> 37525d3 (.)
-            //Widgets\FilamentInfoWidget::class,
->>>>>>> 7fdff6c (up)
-=======
-        'namespace' => $contextNs . '\\Widgets',
-        'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Widgets"),
-        'register' => [
-            // Widgets\AccountWidget::class,
-            // Widgets\FilamentInfoWidget::class,
->>>>>>> 7bcd34c (.)
         ],
     ],
 
@@ -267,28 +107,8 @@ return [
     */
 
     'livewire' => [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         'namespace' => $moduleNs . '\\Http\\Livewire',
         'path' => base_path('Modules/' . $moduleName . '/Http/Livewire'),
-=======
-        'namespace' => $moduleNs.'\\Http\\Livewire',
-        'path' => base_path('Modules/'.$moduleName.'/Http/Livewire'),
->>>>>>> 911eb41 (up)
-=======
-        'namespace' => $moduleNs . '\\Http\\Livewire',
-        'path' => base_path('Modules/' . $moduleName . '/Http/Livewire'),
->>>>>>> b735fbf (.)
-=======
-        'namespace' => $moduleNs.'\\Http\\Livewire',
-        'path' => base_path('Modules/'.$moduleName.'/Http/Livewire'),
->>>>>>> 01564cc (up)
-=======
-        'namespace' => $moduleNs . '\\Http\\Livewire',
-        'path' => base_path('Modules/' . $moduleName . '/Http/Livewire'),
->>>>>>> 7bcd34c (.)
     ],
 
     /*
@@ -304,23 +124,7 @@ return [
     'auth' => [
         'guard' => env('FILAMENT_AUTH_GUARD', 'web'),
         'pages' => [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             'login' => Modules\Notify\Http\Livewire\Auth\FilamentLogin::class,
-=======
-            'login' => Modules\Quaeris\Http\Livewire\Auth\FilamentLogin::class,
->>>>>>> 911eb41 (up)
-=======
-            'login' => Modules\Notify\Http\Livewire\Auth\FilamentLogin::class,
->>>>>>> b36983f (up)
-=======
-            'login' => Modules\Quaeris\Http\Livewire\Auth\FilamentLogin::class,
->>>>>>> 01564cc (up)
-=======
-            'login' => Modules\Notify\Http\Livewire\Auth\FilamentLogin::class,
->>>>>>> 35b9476 (up)
         ],
     ],
 
@@ -336,28 +140,8 @@ return [
 
     'middleware' => [
         'auth' => [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             //  Authenticate::class,
             Modules\Notify\Http\Middleware\FilamentMiddleware::class,
-=======
-        //  Authenticate::class,
-            Modules\Quaeris\Http\Middleware\FilamentMiddleware::class
->>>>>>> 911eb41 (up)
-=======
-            //  Authenticate::class,
-            Modules\Notify\Http\Middleware\FilamentMiddleware::class,
->>>>>>> b36983f (up)
-=======
-        //  Authenticate::class,
-            Modules\Quaeris\Http\Middleware\FilamentMiddleware::class
->>>>>>> 01564cc (up)
-=======
-            //  Authenticate::class,
-            Modules\Notify\Http\Middleware\FilamentMiddleware::class,
->>>>>>> 35b9476 (up)
         ],
         'base' => [
             EncryptCookies::class,

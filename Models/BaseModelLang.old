@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:Models/BaseModelLang.old
-=======
->>>>>>> 0d49044 (up)
-=======
->>>>>>> 1efaa51 (up)
 <?php
 
 declare(strict_types=1);
@@ -12,31 +5,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-<<<<<<< HEAD
 // //use Laravel\Scout\Searchable;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-////use Laravel\Scout\Searchable;
->>>>>>> 42aa20e (.)
-=======
->>>>>>> 3a62aee (up)
-=======
->>>>>>> fe06862 (.)
->>>>>>> 0d49044 (up)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-////use Laravel\Scout\Searchable;
-=======
-// //use Laravel\Scout\Searchable;
->>>>>>> b1dceab (up)
-=======
-// //use Laravel\Scout\Searchable;
->>>>>>> a758bd5 (.)
->>>>>>> 1efaa51 (up)
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Lang\Models\Traits\LinkedTrait;
@@ -44,40 +13,11 @@ use Modules\Xot\Traits\Updater;
 
 /**
  * Class BaseModelLang.
-<<<<<<< HEAD
  *
  * @property string|null $post_type
  */
-<<<<<<< HEAD
-<<<<<<< HEAD:Models/BaseModelLang.old
-<<<<<<< HEAD:Models/BaseModelLang.old
-abstract class BaseModelLang extends Model {
-=======
-abstract class BaseModelLang extends Model
-{
-=======
-abstract class BaseModelLang extends Model {
->>>>>>> 5f3f456 (up):Models/BaseModelLang.php
-    use Updater;
-
-    // use Searchable;
-    use LinkedTrait;
->>>>>>> 9a6fed4 (up):Models/BaseModelLang.php
-    use HasFactory;
-    /**
-     * Indicates whether attributes are snake cased on arrays.
-     *
-     * @see  https://laravel-news.com/6-eloquent-secrets
-     *
-     * @var bool
-     */
-    // public static $snakeAttributes = true;
-
-    protected $perPage = 30;
-=======
 abstract class BaseModelLang extends Model {
     use HasFactory;
->>>>>>> 0d49044 (up)
 
     // use Searchable;
     use LinkedTrait;
@@ -89,15 +29,7 @@ abstract class BaseModelLang extends Model {
      *
      * @var bool
      */
-<<<<<<< HEAD
     public static $snakeAttributes = true;
-=======
-<<<<<<< HEAD
-     public static $snakeAttributes = true;
-=======
-    public static $snakeAttributes = true;
->>>>>>> fe06862 (.)
->>>>>>> 0d49044 (up)
 
     protected $perPage = 30;
 
@@ -108,38 +40,6 @@ abstract class BaseModelLang extends Model {
      */
     protected $casts = [
         // 'published_at' => 'datetime:Y-m-d', // da verificare
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 1efaa51 (up)
- */
-abstract class BaseModelLang extends Model
-{
-    use Updater;
-    //use Searchable;
-    use LinkedTrait;
-    use HasFactory;
-
-    protected $connection = 'notify';
-
-
-    /**
-     * @var array
-     */
-    protected $casts = [
-        //'published_at' => 'datetime:Y-m-d', // da verificare
-<<<<<<< HEAD
->>>>>>> 42aa20e (.)
-=======
->>>>>>> 3a62aee (up)
-=======
->>>>>>> fe06862 (.)
->>>>>>> 0d49044 (up)
     ];
 
     /**
@@ -162,7 +62,6 @@ abstract class BaseModelLang extends Model
      */
     protected $hidden = [
         // 'password'
-<<<<<<< HEAD
     ];
 
     /**
@@ -177,173 +76,3 @@ abstract class BaseModelLang extends Model
     protected $lang;
     */
 }
-=======
-<?php
-
-declare(strict_types=1);
-
-namespace Modules\Notify\Models;
-
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-// //use Laravel\Scout\Searchable;
-
-use Illuminate\Database\Eloquent\Model;
-use Modules\Lang\Models\Traits\LinkedTrait;
-use Modules\Xot\Traits\Updater;
-
-/**
- * Class BaseModelLang.
- */
-abstract class BaseModelLang extends Model {
-    use Updater;
-
-    // use Searchable;
-    use LinkedTrait;
-    use HasFactory;
-=======
-=======
-=======
->>>>>>> a758bd5 (.)
- *
- * @property string|null $post_type
- */
-abstract class BaseModelLang extends Model {
-    use HasFactory;
-
-    // use Searchable;
-    use LinkedTrait;
-    use Updater;
->>>>>>> 1efaa51 (up)
-    /**
-     * Indicates whether attributes are snake cased on arrays.
-     *
-     * @see  https://laravel-news.com/6-eloquent-secrets
-     *
-     * @var bool
-     */
-<<<<<<< HEAD
-    // public static $snakeAttributes = true;
-=======
-    public static $snakeAttributes = true;
->>>>>>> 1efaa51 (up)
-
-    protected $perPage = 30;
-
-    protected $connection = 'notify';
-
-    /**
-<<<<<<< HEAD
-     * @var array
-     */
-    protected $casts = [
-        // 'published_at' => 'datetime:Y-m-d', // da verificare
-=======
-     * @var array<string, string>
-     */
-    protected $casts = [
-        // 'published_at' => 'datetime:Y-m-d', // da verificare
-<<<<<<< HEAD
->>>>>>> b1dceab (up)
-=======
->>>>>>> a758bd5 (.)
->>>>>>> 1efaa51 (up)
-    ];
-
-    /**
-     * @var string[]
-     */
-    protected $dates = ['published_at', 'created_at', 'updated_at'];
-
-    /**
-     * @var string
-     */
-    protected $primaryKey = 'id';
-
-    /**
-     * @var bool
-     */
-    public $incrementing = true;
-
-    /**
-<<<<<<< HEAD
-     * @var array
-     */
-    protected $hidden = [
-        // 'password'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 1efaa51 (up)
-     * @var array
-     */
-    protected $hidden = [
-        //'password'
-<<<<<<< HEAD
->>>>>>> 42aa20e (.)
-=======
->>>>>>> 3a62aee (up)
-=======
->>>>>>> fe06862 (.)
->>>>>>> 0d49044 (up)
-=======
-=======
-=======
->>>>>>> a758bd5 (.)
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        // 'password'
-<<<<<<< HEAD
->>>>>>> b1dceab (up)
-=======
->>>>>>> a758bd5 (.)
->>>>>>> 1efaa51 (up)
-    ];
-
-    /**
-     * @var bool
-     */
-    public $timestamps = true;
-
-<<<<<<< HEAD
-    // -----------
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    //-----------
->>>>>>> 42aa20e (.)
-=======
->>>>>>> 3a62aee (up)
-=======
->>>>>>> fe06862 (.)
->>>>>>> 0d49044 (up)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    //-----------
-=======
-    // -----------
->>>>>>> b1dceab (up)
-=======
-    // -----------
->>>>>>> a758bd5 (.)
->>>>>>> 1efaa51 (up)
-    /*
-    protected $id;
-    protected $post;
-    protected $lang;
-    */
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 9349baf (.):Models/BaseModelLang.php
-=======
->>>>>>> 0d49044 (up)
-=======
->>>>>>> 1efaa51 (up)

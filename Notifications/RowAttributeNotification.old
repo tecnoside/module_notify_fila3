@@ -50,51 +50,13 @@ class RowAttributeNotification extends Notification implements ShouldQueue
         // Access to an undefined property Modules\Xot\Contracts\ModelContactContract::$notifyThemes.
         // $theme = $this->row->notifyThemes->first()->theme ?? 'ark';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6f575c4 (up)
-        // if (! property_exists($this->row, 'mail_from')) {
-        //     throw new \Exception('['.__LINE__.']['.__FILE__.']');
-        // }
-        // if (! property_exists($this->row, 'mail_from_email')) {
-        //     throw new \Exception('['.__LINE__.']['.__FILE__.']');
-        // }
-
-<<<<<<< HEAD
->>>>>>> a514540 (up)
-=======
->>>>>>> 7f10d5f (.)
-=======
->>>>>>> 6f575c4 (up)
-=======
->>>>>>> ab90165 (.)
         $message = (new MailMessage())
             ->from($this->row->mail_from_email, $this->row->mail_from)
             ->subject($this->row->mail_subject)
             // ->line('---')
             // // non so se posso modificare questa riga senza creare errori in altre parti
             // ->view('notify::emails.templates.' . $theme . '.mail', ['html' => $this->row->mail_body, 'logo' => []]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             ->view('notify::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
-=======
-            ->view('quaeris::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
->>>>>>> a514540 (up)
-=======
-            ->view('notify::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
->>>>>>> 248c405 (..)
-=======
-            ->view('quaeris::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
->>>>>>> 6f575c4 (up)
-=======
-            ->view('notify::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
->>>>>>> 056cb24 (..)
 
         $this->row->sendEmailCallback();
 
