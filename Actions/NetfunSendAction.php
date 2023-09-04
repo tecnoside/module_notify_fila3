@@ -89,6 +89,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class NetfunSendAction {
 >>>>>>> fe06862 (.)
 =======
@@ -110,6 +111,10 @@ class NetfunSendAction {
 =======
 class NetfunSendAction {
 >>>>>>> a758bd5 (.)
+=======
+class NetfunSendAction
+{
+>>>>>>> 34ed535 (.)
     use QueueableAction;
 
     public string $token;
@@ -164,6 +169,7 @@ class NetfunSendAction {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __construct()
     {
         // Prepare the action for execution, leveraging constructor injection.
@@ -202,6 +208,10 @@ class NetfunSendAction {
     public function __construct()
     {
 >>>>>>> 42f9249 (.)
+=======
+    public function __construct()
+    {
+>>>>>>> 34ed535 (.)
         // Prepare the action for execution, leveraging constructor injection.
         $token = config('services.netfun.token');
         if (! is_string($token)) {
@@ -224,6 +234,7 @@ class NetfunSendAction {
 >>>>>>> b3b016d (up)
      * Execute the action.
      */
+<<<<<<< HEAD
     public function execute(SmsData $sms): array {
 >>>>>>> fe06862 (.)
 =======
@@ -264,6 +275,10 @@ class NetfunSendAction {
 >>>>>>> 01282f2 (up)
 =======
 >>>>>>> a758bd5 (.)
+=======
+    public function execute(SmsData $sms): array
+    {
+>>>>>>> 34ed535 (.)
         $endpoint = 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json';
         $headers = [
             'Cache-Control' => 'no-cache',
@@ -324,7 +339,7 @@ class NetfunSendAction {
 
         // dddx([ord($this->body[0]), $this->body]);
 
-        $sms->to = $sms->to.'';
+        $sms->to .= '';
         if (Str::startsWith($sms->to, '00')) {
             $sms->to = '+39'.substr($sms->to, 2);
         }

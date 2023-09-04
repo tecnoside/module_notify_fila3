@@ -208,16 +208,16 @@ class Get
 >>>>>>> 6eafc0a (up)
 =======
 
-        if (null == $theme->subject) {
+        if ($theme->subject === null) {
             $subject = trans($trad_mod.'.subject');
             $theme->update(['subject' => $subject]);
         }
-        if (null == $theme->theme) {
+        if ($theme->theme === null) {
             $theme->update(['theme' => 'ark']);
         }
-        if (null == $theme->body_html) {
+        if ($theme->body_html === null) {
             $html = trans($trad_mod.'.body_html');
-            if (isset($view_params['body_html']) && $html == $trad_mod.'.body_html') {
+            if (isset($view_params['body_html']) && $html === $trad_mod.'.body_html') {
                 $html = '##body_html##';
             }
 
@@ -233,15 +233,14 @@ class Get
 
         $body_html = strval($theme->body_html);
         $subject = strval($theme->subject);
-        
 
-        if($theme->theme != 'empty'){
+        if ($theme->theme !== 'empty') {
             $view_params['logo'] = $theme->logo;
-        }else{
+        } else {
             $view_params['logo'] = '<img src="'. $theme->logo['path'].'" width="'.$theme->logo['width'].' "height="'.$theme->logo['height'].'" />';
         }
 
-        // dddx([$theme, $view_params]); 
+        // dddx([$theme, $view_params]);
 
         foreach ($view_params as $k => $v) {
             if (is_string($v)) {
