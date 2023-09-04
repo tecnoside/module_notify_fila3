@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Datas;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Models\Notification as NotificationModel;
 use Spatie\LaravelData\Data;
@@ -13,6 +14,10 @@ use Spatie\LaravelData\DataCollection;
 class NotificationData extends Data
 {
 =======
+=======
+use Illuminate\Notifications\Notification;
+use Modules\Notify\Models\Notification as NotificationModel;
+>>>>>>> ace9eb3 (up)
 use Spatie\LaravelData\Data;
 
 class NotificationData extends Data {
@@ -75,9 +80,13 @@ class NotificationData extends Data {
      *
      * @return mixed
      */
-    public function routeNotificationFor($driver) {
-        dddx($driver);
+    public function routeNotificationFor($driver,Notification $notification) {
+        //dddx(['driver'=>$driver,'a'=>$a]);
         //return $this->routes[$driver] ?? null;
+        if($driver=='database'){
+            return app(NotificationModel::class);
+        }
+        return $this->to;
     }
     
 >>>>>>> 0cbdb01 (up)

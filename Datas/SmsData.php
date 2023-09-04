@@ -14,9 +14,15 @@ class SmsData extends Data
     public string $body;
 =======
 class SmsData extends Data {
+<<<<<<< HEAD
     public string $email;
     // public string $mobile_phone;
     // public string $token;
     // public int $q;
 >>>>>>> 24ac20c (up)
+=======
+    public string $from;
+    public string $to;
+    public string $body;
+>>>>>>> ace9eb3 (up)
 }

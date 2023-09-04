@@ -12,7 +12,7 @@ use Exception;
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Mail\PendingMail;
-use Modules\Notify\Data\BeautyEmailData;
+use Modules\Notify\Datas\BeautyEmailData;
 use Modules\UI\Services\ThemeService;
 
 class BeautyEmail implements Mailer {

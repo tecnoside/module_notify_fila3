@@ -69,9 +69,6 @@ class TrySmsAction extends XotBasePanelAction {
         $i = request('i');
 
         $driver = isset($drivers[$i]) ? $drivers[$i] : null;
-
-        // $view = ThemeService::getView();
-        // $view = $this->panel->getView();
         $view = app(GetViewAction::class)->execute();
 
         $view_params = [
@@ -85,6 +82,7 @@ class TrySmsAction extends XotBasePanelAction {
 
     public function postHandle() {
         $data = request()->all();
+<<<<<<< HEAD
 <<<<<<< HEAD
         $vars = collect($data)->only(['driver', 'from', 'to', 'body'])->all();
         SmsService::make()->setLocalVars($vars)->send();
@@ -105,16 +103,16 @@ class TrySmsAction extends XotBasePanelAction {
 =======
         
         //$hows=NotificationData::collection([$data]);
+=======
+>>>>>>> ace9eb3 (up)
         $hows=NotificationData::from($data);
-        
-        //$vars = collect($data)->only(['driver', 'from', 'to', 'body'])->all();
-        //SmsService::make()->setLocalVars($vars)->send();
-        //Notification::route($data['driver'], $data['to'])
-        //Notification::route($data['driver'], $data['to'])
-        //    ->notify(new SampleNotification($data));
         Notification::send([$hows], new SampleNotification($data));
+<<<<<<< HEAD
         //Call to a member function routeNotificationFor() on string
         dddx('fine');
 >>>>>>> 0cbdb01 (up)
+=======
+        echo '<h3>+Done</h3>';
+>>>>>>> ace9eb3 (up)
     }
 }

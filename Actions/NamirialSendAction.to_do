@@ -8,10 +8,14 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Str;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Notify\Datas\SmsData;
 =======
 use Modules\Notify\Data\SmsData;
 >>>>>>> 64b524c (up)
+=======
+use Modules\Notify\Datas\SmsData;
+>>>>>>> ace9eb3 (up)
 use Spatie\QueueableAction\QueueableAction;
 
 class NamirialSendAction {
