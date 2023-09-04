@@ -14,6 +14,7 @@ namespace Modules\Notify\Models\Panels\Actions;
 =======
 >>>>>>> 9f492fe (up)
 
+use Modules\Cms\Actions\GetViewAction;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Notify\Services\SmsService;
 use Modules\UI\Services\ThemeService;
@@ -62,8 +63,9 @@ class TrySmsAction extends XotBasePanelAction {
 
         $driver = isset($drivers[$i]) ? $drivers[$i] : null;
 
-        //$view = ThemeService::getView();
-$view = $this->panel->getView();
+        // $view = ThemeService::getView();
+        $view = $this->panel->getView();
+        // $view = app(GetViewAction::class)->execute();
 
         $view_params = [
             'view' => $view,
