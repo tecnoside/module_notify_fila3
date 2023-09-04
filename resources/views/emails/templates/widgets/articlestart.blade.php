@@ -5,7 +5,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 		<td bgcolor="{{ isset($color) ? $color : '#ef3101' }}" nowrap>
 			<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="5" height="1">
 		</td>
@@ -30,11 +29,6 @@
 			<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="5" height="1">
 		</td>
 >>>>>>> 478bb60 (up)
-=======
-		<td bgcolor="{{ isset($color) ? $color : '#ef3101' }}" nowrap>
-			<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/img/spacer.gif" width="5" height="1">
-		</td>
->>>>>>> a758bd5 (.)
 		<td width="100%" bgcolor="#ffffff">
 
 			<table width="100%" cellpadding="20" cellspacing="0" border="0">
@@ -44,7 +38,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 					<td bgcolor="#ffffff" class="contentblock">
 =======
 					<td bgcolor="#ffffff" class="contentblock">
@@ -61,6 +54,3 @@
 =======
 					<td bgcolor="#ffffff" class="contentblock">
 >>>>>>> 478bb60 (up)
-=======
-					<td bgcolor="#ffffff" class="contentblock">
->>>>>>> a758bd5 (.)

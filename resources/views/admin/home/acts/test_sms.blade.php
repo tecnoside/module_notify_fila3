@@ -5,7 +5,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 @extends('adm_theme::layouts.app')
 @section('content')
     <x-navbar>
@@ -93,8 +92,6 @@
 =======
 =======
 >>>>>>> d27db1b (.)
-=======
->>>>>>> a758bd5 (.)
 @extends('adm_theme::layouts.app')
 @section('content')
     <x-navbar>
@@ -130,7 +127,6 @@
     </x-col>
 @endsection
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 89120cb (rebase)
 =======
 >>>>>>> 8be0eaa (up)
@@ -140,5 +136,3 @@
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> d27db1b (.)
-=======
->>>>>>> a758bd5 (.)
