@@ -210,6 +210,7 @@
         }
     },
     "minimum-stability": "dev",
+<<<<<<< HEAD
     "prefer-stable": true,
     "repositories": [{
         "type": "composer",
@@ -229,3 +230,7 @@
 =======
 }
 >>>>>>> 826c9ea (.)
+=======
+    "prefer-stable": true
+}
+>>>>>>> de1fcaf (up)
