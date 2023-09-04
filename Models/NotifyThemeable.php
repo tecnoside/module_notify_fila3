@@ -50,6 +50,7 @@ namespace Modules\Notify\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyThemeable whereUpdatedBy($value)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @mixin IdeHelperNotifyThemeable
  * @mixin \Eloquent
@@ -65,7 +66,10 @@ class NotifyThemeable extends BaseMorphPivot {
 >>>>>>> 18a2c03 (up)
 =======
  * @mixin \Eloquent
+=======
+>>>>>>> 67021f6 (up)
  * @mixin IdeHelperNotifyThemeable
+ * @mixin \Eloquent
  */
 class NotifyThemeable extends BaseMorphPivot {
 >>>>>>> fe06862 (.)
