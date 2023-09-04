@@ -8,4 +8,8 @@ return [
         'create' => 'Aggiungi',
         'edit' => 'Modifica',
     ],
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> d46c1fd (.)
