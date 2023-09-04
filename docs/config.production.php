@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
 declare(strict_types=1);
@@ -23,6 +24,10 @@ return [
 >>>>>>> c08c05e (.)
 =======
 >>>>>>> fe06862 (.)
+=======
+return [
+    'baseUrl' => 'https://jigsaw-docs-template.tighten.co',
+>>>>>>> becf1dc (up)
     'production' => true,
 
     // DocSearch credentials

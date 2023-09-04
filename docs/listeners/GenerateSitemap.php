@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
@@ -15,6 +16,8 @@ declare(strict_types=1);
 declare(strict_types=1);
 
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> becf1dc (up)
 namespace App\Listeners;
 
 use Illuminate\Support\Str;
@@ -29,6 +32,7 @@ class GenerateSitemap
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         '*/404',
 =======
         '*/404'
@@ -39,6 +43,9 @@ class GenerateSitemap
 =======
         '*/404',
 >>>>>>> fe06862 (.)
+=======
+        '*/404'
+>>>>>>> becf1dc (up)
     ];
 
     public function handle(Jigsaw $jigsaw)
@@ -46,6 +53,7 @@ class GenerateSitemap
         $baseUrl = $jigsaw->getConfig('baseUrl');
 
         if (! $baseUrl) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,6 +67,9 @@ class GenerateSitemap
 =======
             echo "\nTo generate a sitemap.xml file, please specify a 'baseUrl' in config.php.\n\n";
 >>>>>>> fe06862 (.)
+=======
+            echo("\nTo generate a sitemap.xml file, please specify a 'baseUrl' in config.php.\n\n");
+>>>>>>> becf1dc (up)
 
             return;
         }
@@ -68,6 +79,7 @@ class GenerateSitemap
         collect($jigsaw->getOutputPaths())
             ->reject(function ($path) {
                 return $this->isExcluded($path);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +118,11 @@ function ($path) use ($baseUrl, $sitemap) {
                 }
             );
 >>>>>>> 42f9249 (.)
+=======
+            })->each(function ($path) use ($baseUrl, $sitemap) {
+                $sitemap->addItem(rtrim($baseUrl, '/') . $path, time(), Sitemap::DAILY);
+        });
+>>>>>>> becf1dc (up)
 
         $sitemap->write();
     }
