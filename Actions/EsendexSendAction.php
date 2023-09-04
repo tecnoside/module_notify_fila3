@@ -10,6 +10,7 @@ namespace Modules\Notify\Actions;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b735fbf (.)
 use Exception;
@@ -270,5 +271,21 @@ class EsendexSendAction
         }
 
         return explode(';', strval($response));
+=======
+use Modules\Notify\Data\SmsData;
+use Spatie\QueueableAction\QueueableAction;
+
+class EsendexSendAction {
+    use QueueableAction;
+
+    public function __construct() {
+    }
+
+    /**
+     * Execute the action.
+     */
+    public function execute(SmsData $sms): array {
+        return [];
+>>>>>>> 657fe4e (up)
     }
 }
