@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -71,3 +72,62 @@ class SmsService
         return $this->vars;
     }
 }
+=======
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Notify\Services;
+
+use Illuminate\Support\Str;
+
+// ---------CSS------------
+
+/**
+ * Class SmsService.
+ */
+class SmsService {
+    private static ?self $instance = null;
+    public ?string $from;
+    public string $to;
+
+    public string $driver = 'netfun';
+    public ?string $body;
+
+    public array $vars = [];
+
+    public static function getInstance(): self {
+        if (null === self::$instance) {
+            self::$instance = new self();
+        }
+
+        return self::$instance;
+    }
+
+    public static function make(): self {
+        return static::getInstance();
+    }
+
+    public function setLocalVars(array $vars): self {
+        foreach ($vars as $k => $v) {
+            $this->{$k} = $v;
+        }
+        $this->vars = array_merge($this->vars, $vars);
+
+        return $this;
+    }
+
+    public function mergeVars(array $vars): self {
+        $this->vars = array_merge($this->vars, $vars);
+
+        return $this;
+    }
+
+    public function send() {
+        $class = '\Modules\Notify\Services\SmsEngines\\'.Str::studly($this->driver).'Engine';
+        $class::make()
+            ->setLocalVars($this->vars)
+            ->send();
+    }
+}
+>>>>>>> 9349baf (.)

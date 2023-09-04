@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -116,3 +117,28 @@ class NotifyTheme extends BaseModel implements HasMedia
         return $this->morphTo('post');
     }
 }
+=======
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Notify\Models;
+
+/**
+ * --.
+ */
+class NotifyTheme extends BaseModel {
+    /**
+     * @var array<string>
+     */
+    protected $fillable = [
+        'id',
+        'lang',
+        'type',
+        'subject',
+        'body',
+        'body_html',
+        'from',
+    ];
+}
+>>>>>>> 9349baf (.)
