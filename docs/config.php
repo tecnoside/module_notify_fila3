@@ -124,7 +124,7 @@ return [
 =======
     'siteName' => 'Modulo '.$moduleName,
     'siteDescription' => 'Modulo '.$moduleName,
-    //'lang' => 'it',
+    'lang' => 'it',
 
     'collections' => [
         'posts' => [
@@ -160,6 +160,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'isItemActive' => function ($page, $item) {
         return Str::endsWith(trimPath($page->getPath()), trimPath($item->getPath()));
     },
@@ -176,6 +177,11 @@ return [
 >>>>>>> becf1dc (up)
 =======
 >>>>>>> a758bd5 (.)
+=======
+    'isItemActive' => function ($page, $item) {
+        return Str::endsWith(trimPath($page->getPath()), trimPath($item->getPath()));
+    },
+>>>>>>> c9e699e (up)
     'isActiveParent' => function ($page, $menuItem) {
         if (is_object($menuItem) && $menuItem->children) {
             return $menuItem->children->contains(function ($child) use ($page) {
