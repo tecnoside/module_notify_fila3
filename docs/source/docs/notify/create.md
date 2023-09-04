@@ -9,6 +9,7 @@ section: content
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 68cb834 (.)
 Per creare una notifica, andare nella dashboard nel modulo Notify.
@@ -56,3 +57,6 @@ Inserire nel campo body il corpo della notifica e ricopiarlo nel campo body_html
 Ciò significa che per utilizzare questa email, come parametro dovrà avere un array profile,  
 con all'interno first_name e last_name.
 >>>>>>> 6fa2bb9 (.)
+=======
+aaaa
+>>>>>>> b349bf0 (.)
