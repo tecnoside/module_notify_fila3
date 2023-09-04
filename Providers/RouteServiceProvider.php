@@ -7,7 +7,6 @@
 <<<<<<< HEAD
 <?php
 
-<<<<<<< HEAD
 declare(strict_types=1);
 
 namespace Modules\Notify\Providers;
@@ -102,6 +101,7 @@ use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d27db1b (.)
@@ -120,6 +120,8 @@ class RouteServiceProvider extends ServiceProvider
 >>>>>>> 9f492fe (up)
 =======
 >>>>>>> d27db1b (.)
+=======
+>>>>>>> 0d776db (up)
     /**
      * The module namespace to assume when generating URLs to actions.
      *
@@ -134,8 +136,8 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-<<<<<<< HEAD
     public function boot() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     public function boot()
@@ -147,6 +149,8 @@ class RouteServiceProvider extends ServiceProvider
     public function boot()
     {
 >>>>>>> d27db1b (.)
+=======
+>>>>>>> 0d776db (up)
         parent::boot();
     }
 
@@ -155,8 +159,8 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-<<<<<<< HEAD
     public function map() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     public function map()
@@ -168,6 +172,8 @@ class RouteServiceProvider extends ServiceProvider
     public function map()
     {
 >>>>>>> d27db1b (.)
+=======
+>>>>>>> 0d776db (up)
         $this->mapApiRoutes();
 
         $this->mapWebRoutes();
@@ -180,8 +186,8 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-<<<<<<< HEAD
     protected function mapWebRoutes() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     protected function mapWebRoutes()
@@ -193,6 +199,8 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapWebRoutes()
     {
 >>>>>>> d27db1b (.)
+=======
+>>>>>>> 0d776db (up)
         Route::middleware('web')
             ->namespace($this->moduleNamespace)
             ->group(module_path('Notify', '/Routes/web.php'));
@@ -205,8 +213,8 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-<<<<<<< HEAD
     protected function mapApiRoutes() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     protected function mapApiRoutes()
@@ -218,6 +226,8 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapApiRoutes()
     {
 >>>>>>> d27db1b (.)
+=======
+>>>>>>> 0d776db (up)
         Route::prefix('api')
             ->middleware('api')
             ->namespace($this->moduleNamespace)
