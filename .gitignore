@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /vendor/
 vendor/
 node_modules/
@@ -52,6 +53,8 @@ package-lock.json
 >>>>>>> 8be0eaa (up)
 =======
 >>>>>>> 1b86d70 (Initial commit)
+=======
+>>>>>>> 81505b8 (Initial commit)
 /vendor/
 node_modules/
 npm-debug.log
@@ -75,6 +78,7 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -184,3 +188,5 @@ package-lock.json
 =======
 /docs/package-lock.json
 >>>>>>> fefee90 (.)
+=======
+>>>>>>> 81505b8 (Initial commit)
