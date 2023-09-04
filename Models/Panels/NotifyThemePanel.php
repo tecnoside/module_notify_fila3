@@ -44,8 +44,12 @@ use Illuminate\Http\Request;
 =======
 >>>>>>> 0d776db (up)
 
+<<<<<<< HEAD
 use Modules\Xot\Models\Panels\XotBasePanel;
 >>>>>>> d27db1b (.)
+=======
+use Modules\Cms\Models\Panels\XotBasePanel;
+>>>>>>> 56255db (up)
 
 class NotifyThemePanel extends XotBasePanel {
     /**

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
 declare(strict_types=1);
@@ -17,6 +18,10 @@ return [
 declare(strict_types=1);
 
 >>>>>>> 6de787a (up)
+=======
+declare(strict_types=1);
+
+>>>>>>> 56255db (up)
 return [
     'baseUrl' => 'https://jigsaw-docs-template.tighten.co',
 >>>>>>> 404660b (up)

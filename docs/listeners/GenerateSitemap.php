@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
@@ -18,14 +19,17 @@ declare(strict_types=1);
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> becf1dc (up)
+=======
+declare(strict_types=1);
+
+>>>>>>> 56255db (up)
 namespace App\Listeners;
 
 use Illuminate\Support\Str;
 use samdark\sitemap\Sitemap;
 use TightenCo\Jigsaw\Jigsaw;
 
-class GenerateSitemap
-{
+class GenerateSitemap {
     protected $exclude = [
         '/assets/*',
         '*/favicon.ico',
@@ -33,6 +37,7 @@ class GenerateSitemap
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         '*/404',
 =======
         '*/404'
@@ -46,10 +51,12 @@ class GenerateSitemap
 =======
         '*/404'
 >>>>>>> becf1dc (up)
+=======
+        '*/404',
+>>>>>>> 56255db (up)
     ];
 
-    public function handle(Jigsaw $jigsaw)
-    {
+    public function handle(Jigsaw $jigsaw) {
         $baseUrl = $jigsaw->getConfig('baseUrl');
 
         if (! $baseUrl) {
@@ -57,6 +64,7 @@ class GenerateSitemap
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             echo "\nTo generate a sitemap.xml file, please specify a 'baseUrl' in config.php.\n\n";
 =======
             echo("\nTo generate a sitemap.xml file, please specify a 'baseUrl' in config.php.\n\n");
@@ -70,11 +78,14 @@ class GenerateSitemap
 =======
             echo("\nTo generate a sitemap.xml file, please specify a 'baseUrl' in config.php.\n\n");
 >>>>>>> becf1dc (up)
+=======
+            echo "\nTo generate a sitemap.xml file, please specify a 'baseUrl' in config.php.\n\n";
+>>>>>>> 56255db (up)
 
             return;
         }
 
-        $sitemap = new Sitemap($jigsaw->getDestinationPath() . '/sitemap.xml');
+        $sitemap = new Sitemap($jigsaw->getDestinationPath().'/sitemap.xml');
 
         collect($jigsaw->getOutputPaths())
             ->reject(function ($path) {
@@ -120,15 +131,19 @@ function ($path) use ($baseUrl, $sitemap) {
 >>>>>>> 42f9249 (.)
 =======
             })->each(function ($path) use ($baseUrl, $sitemap) {
+<<<<<<< HEAD
                 $sitemap->addItem(rtrim($baseUrl, '/') . $path, time(), Sitemap::DAILY);
         });
 >>>>>>> becf1dc (up)
+=======
+                $sitemap->addItem(rtrim($baseUrl, '/').$path, time(), Sitemap::DAILY);
+            });
+>>>>>>> 56255db (up)
 
         $sitemap->write();
     }
 
-    public function isExcluded($path)
-    {
+    public function isExcluded($path) {
         return Str::is($this->exclude, $path);
     }
 }

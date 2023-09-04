@@ -9,6 +9,7 @@ namespace Modules\Notify\Models\Panels\Actions;
 <<<<<<< HEAD
 // -------- services --------
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Notification;
 use Modules\Cms\Actions\GetViewAction;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
@@ -30,9 +31,11 @@ use Modules\Notify\Notifications\SampleNotification;
 >>>>>>> 0d776db (up)
 
 >>>>>>> 5b257fb (up)
+=======
+use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
+>>>>>>> 56255db (up)
 use Modules\Notify\Services\MailService;
 use Modules\Theme\Services\ThemeService;
-use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
 <<<<<<< HEAD
 //-------- bases -----------
