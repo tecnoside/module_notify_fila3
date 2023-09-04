@@ -1,6 +1,11 @@
 ---
+<<<<<<< HEAD
 title: About Notify
 description: About Notify
+=======
+title: Algolia DocSearch
+description: Configure Algolia DocSearch with the Jigsaw docs starter template
+>>>>>>> 6b7620e (up)
 extends: _layouts.documentation
 section: content
 ---
