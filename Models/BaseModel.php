@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
+<<<<<<< HEAD
+=======
+use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+>>>>>>> 5f3f456 (up)
 // ---------- traits
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 // //use Laravel\Scout\Searchable;
@@ -14,30 +18,29 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseModel.
  */
+<<<<<<< HEAD
 abstract class BaseModel extends Model
 {
 <<<<<<< HEAD
     // use Searchable;
     // //use Cachable;
 =======
+=======
+abstract class BaseModel extends Model {
+>>>>>>> 5f3f456 (up)
     use Updater;
-/**
- * Indicates whether attributes are snake cased on arrays.
- *
- * @see  https://laravel-news.com/6-eloquent-secrets
-* 
- * @var bool
- */
-// public static $snakeAttributes = true;
 
+<<<<<<< HEAD
 protected $perPage = 30;
 
     //use Searchable;
     //use Cachable;
 >>>>>>> 9a6fed4 (up)
+=======
+    // use Searchable;
+    // use Cachable;
+>>>>>>> 5f3f456 (up)
     use HasFactory;
-
-    use Updater;
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -45,13 +48,45 @@ protected $perPage = 30;
      *
      * @var bool
      */
+    // public static $snakeAttributes = true;
+
+    protected $perPage = 30;
+
+<<<<<<< HEAD
+    use Updater;
+=======
+    protected $connection = 'notify';
+
+>>>>>>> 5f3f456 (up)
+    /**
+     * Indicates whether attributes are snake cased on arrays.
+     *
+     * @see  https://laravel-news.com/6-eloquent-secrets
+     *
+     * @var bool
+     */
+<<<<<<< HEAD
     public static $snakeAttributes = true;
+=======
+    protected $casts = [
+        // 'published_at' => 'datetime:Y-m-d', // da verificare
+    ];
+>>>>>>> 5f3f456 (up)
 
     /**
      * @var bool
      */
     public $incrementing = true;
+<<<<<<< HEAD
 
+=======
+    /**
+     * @var array
+     */
+    protected $hidden = [
+        // 'password'
+    ];
+>>>>>>> 5f3f456 (up)
     /**
      * @var bool
      */
@@ -92,8 +127,13 @@ protected $perPage = 30;
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
+<<<<<<< HEAD
     protected static function newFactory()
     {
         return FactoryService::newFactory(static::class);
+=======
+    protected static function newFactory() {
+        return FactoryService::newFactory(get_called_class());
+>>>>>>> 5f3f456 (up)
     }
 }
