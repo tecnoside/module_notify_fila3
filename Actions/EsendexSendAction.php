@@ -13,6 +13,7 @@ namespace Modules\Notify\Actions;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b735fbf (.)
 use Exception;
@@ -286,10 +287,18 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\curl_init;
 use function Safe\curl_setopt;
+=======
+>>>>>>> e231e03 (up)
 use function Safe\curl_exec;
-use function Safe\curl_getinfo;
+use function Safe\curl_init;
+
+use Webmozart\Assert\Assert;
+use function Safe\curl_setopt;
 use function Safe\json_decode;
 use function Safe\json_encode;
+use function Safe\curl_getinfo;
+use Modules\Notify\Datas\SmsData;
+use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @property string $base_endpoint
@@ -356,7 +365,7 @@ class EsendexSendAction
         $response = curl_exec($ch);
         $info = curl_getinfo($ch);
         curl_close($ch);
-
+        Assert::isArray($info);
         if (201 != $info['http_code']) {
             return [];
         }
