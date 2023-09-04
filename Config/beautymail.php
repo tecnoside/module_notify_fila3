@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -31,6 +32,11 @@ return [
 return [
 
 >>>>>>> 5b257fb (up)
+=======
+declare(strict_types=1);
+
+return [
+>>>>>>> c3e3fc0 (up)
     // These CSS rules will be applied after the regular template CSS
 
     /*
@@ -45,6 +51,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 602db11 (up)
         'highlight' => '#004ca3',
@@ -107,27 +114,31 @@ return [
 >>>>>>> fe06862 (.)
 =======
 
+=======
+>>>>>>> c3e3fc0 (up)
         'highlight' => '#004ca3',
-        'button'    => '#004cad',
-
+        'button' => '#004cad',
     ],
 
     'view' => [
-        'senderName'  => null,
-        'reminder'    => null,
+        'senderName' => null,
+        'reminder' => null,
         'unsubscribe' => null,
-        'address'     => null,
+        'address' => null,
 
-        'logo'        => [
-            'path'   => '%PUBLIC%/vendor/beautymail/assets/images/sunny/logo.png',
-            'width'  => '',
+        'logo' => [
+            'path' => '%PUBLIC%/vendor/beautymail/assets/images/sunny/logo.png',
+            'width' => '',
             'height' => '',
         ],
 
-        'twitter'  => null,
+        'twitter' => null,
         'facebook' => null,
-        'flickr'   => null,
+        'flickr' => null,
     ],
+<<<<<<< HEAD
 
 >>>>>>> 5b257fb (up)
+=======
+>>>>>>> c3e3fc0 (up)
 ];

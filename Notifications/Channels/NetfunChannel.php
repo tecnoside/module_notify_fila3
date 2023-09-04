@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
 declare(strict_types=1);
@@ -74,24 +75,31 @@ class NetfunChannel
     {
 >>>>>>> 3f0bbc4 (.)
 =======
+=======
+declare(strict_types=1);
+>>>>>>> c3e3fc0 (up)
 
 namespace Modules\Notify\Notifications\Channels;
 
-use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Actions\NetfunSendAction;
 
 class NetfunChannel {
+<<<<<<< HEAD
 
     public function __construct(){
        
 >>>>>>> 01282f2 (up)
+=======
+    public function __construct() {
+>>>>>>> c3e3fc0 (up)
     }
 
     /**
      * Send the given notification.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -227,20 +235,25 @@ class NetfunChannel {
 =======
      * @param  mixed  $notifiable
      * @param  \Illuminate\Notifications\Notification  $notification
+=======
+     * @param mixed $notifiable
+     *
+>>>>>>> c3e3fc0 (up)
      * @return void
      */
-    public function send($notifiable, Notification $notification)    {
-        
+    public function send($notifiable, Notification $notification) {
         $message = $notification->toSms($notifiable);
         // Send notification to the $notifiable instance...
-        $data=app(NetfunSendAction::class)->execute($message);
-        
-        if($notifiable instanceof Model){
-            $data['sms_sent_at']=now();
-            $data['sms_count']=$notifiable->sms_count +1;
+        $data = app(NetfunSendAction::class)->execute($message);
+
+        if ($notifiable instanceof Model) {
+            $data['sms_sent_at'] = now();
+            $data['sms_count'] = $notifiable->sms_count + 1;
             $notifiable->update($data);
         }
-        
     }
 }
+<<<<<<< HEAD
 >>>>>>> 01282f2 (up)
+=======
+>>>>>>> c3e3fc0 (up)

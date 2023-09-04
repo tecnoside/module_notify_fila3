@@ -73,9 +73,6 @@ class TryMailAction extends XotBasePanelAction {
 // -------- bases -----------
 >>>>>>> 0d776db (up)
 
-/**
- 
- */
 class TryMailAction extends XotBasePanelAction {
 >>>>>>> 5b257fb (up)
     public bool $onItem = true;
