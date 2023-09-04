@@ -45,13 +45,24 @@ class RowAttributeNotification extends Notification {
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable) {
-        dddx($notifiable);
-        /*
-        return (new MailMessage())
-            ->subject($this->subject)
+        
+        
+        $message= (new MailMessage())
+            ->subject($this->row->mail_subject)
             ->line('---')
-            ->view('notify::notifications.html', ['html' => $this->html]);
+            ->view('notify::emails.templates.ark.mail', ['html' => $this->row->mail_body]);
+        /*
+        $up=[
+            'mail_sent_at' => now(),
+            'mail_count' => (int) $this->row->email_count + 1,
+        ];
+
+        $this->row->update($up);
         */
+        $this->row->sendEmailCallback();
+
+        return $message;
+        
     }
 
     /**
