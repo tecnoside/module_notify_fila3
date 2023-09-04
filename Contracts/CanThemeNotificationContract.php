@@ -43,6 +43,7 @@ interface CanThemeNotificationContract
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f9c94ed (up)
     /**
@@ -84,4 +85,7 @@ interface CanThemeNotificationContract
 
     public function getModel(): Model;
 >>>>>>> a758bd5 (.)
+=======
+    public function sendEmailCallback();
+>>>>>>> 6018711 (.)
 }
