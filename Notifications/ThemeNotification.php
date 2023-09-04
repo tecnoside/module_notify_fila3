@@ -16,8 +16,8 @@ use Modules\Notify\Actions\BuildMailMessageAction;
 use Modules\Notify\Contracts\CanThemeNotificationContract;
 use Modules\Notify\Datas\SmsData;
 
-class ThemeNotification extends Notification implements ShouldQueue
-{
+class ThemeNotification extends Notification
+{ /* -- implements ShouldQueue -- */
     use Queueable;
     public array $view_params;
     public string $name;
@@ -132,9 +132,11 @@ class ThemeNotification extends Notification implements ShouldQueue
      */
     public function via($notifiable)
     {
-        return $notifiable
+        $channels = $notifiable
             ->getNotificationData($this->name)
             ->channels;
+
+        return $channels;
     }
 
     /**
@@ -146,8 +148,10 @@ class ThemeNotification extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
-        return app(BuildMailMessageAction::class)
-            ->execute($this->name, $notifiable->getModel(), $this->view_params);
+        $mail_message = app(BuildMailMessageAction::class)
+             ->execute($this->name, $notifiable->getModel(), $this->view_params);
+
+        return $mail_message;
     }
 
 <<<<<<< HEAD
@@ -265,13 +269,18 @@ class ThemeNotification extends Notification implements ShouldQueue
      */
     public function toArray($notifiable)
     {
-        dddx($notifiable);
+        $res = $this->view_params;
+        $res['_name'] = $this->name;
 
+<<<<<<< HEAD
         return [
         ];
 <<<<<<< HEAD
 >>>>>>> 0cbdb01 (up)
 =======
 >>>>>>> fe06862 (.)
+=======
+        return $res;
+>>>>>>> aedf4cb (up)
     }
 }
