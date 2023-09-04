@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6,32 +7,91 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 1c1596b (up)
+=======
+>>>>>>> 52b4ada (up)
 <?php
 
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
 <<<<<<< HEAD
+<<<<<<< HEAD
 // ----- bases ----
 =======
 //----- models -----
 
 //----- bases ----
+=======
+<<<<<<< HEAD
+//----- models -----
+
+//----- bases ----
+=======
+// ----- models -----
+
+// ----- bases ----
+>>>>>>> b1dceab (up)
+=======
+// ----- models -----
+
+// ----- bases ----
+>>>>>>> a758bd5 (.)
+>>>>>>> 52b4ada (up)
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
  * Class CreateThemesTable.
  */
+<<<<<<< HEAD
 class CreateNotifyThemesTable extends XotBaseMigration {
     //use XotBaseMigrationTrait;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:Database/Migrations/2020_01_01_000005_create_notify_themes_table.php
+class CreateNotifyThemesTable extends XotBaseMigration {
+<<<<<<< HEAD
+    //use XotBaseMigrationTrait;
+=======
+=======
+class CreateNotifyThemesTable extends XotBaseMigration
+{
+>>>>>>> 2e16e99 (up):Database/Migrations/2020_01_01_000006_create_notify_themes_table.php
+    // use XotBaseMigrationTrait;
+>>>>>>> b1dceab (up)
+=======
+class CreateNotifyThemesTable extends XotBaseMigration
+{
+    // use XotBaseMigrationTrait;
+>>>>>>> a758bd5 (.)
+>>>>>>> 52b4ada (up)
 
     /**
      * Run the migrations.
      *
      * @return void
      */
+<<<<<<< HEAD
     public function up() {
         //-- CREATE --
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:Database/Migrations/2020_01_01_000005_create_notify_themes_table.php
+    public function up() {
+<<<<<<< HEAD
+        //-- CREATE --
+=======
+=======
+    public function up()
+    {
+>>>>>>> 2e16e99 (up):Database/Migrations/2020_01_01_000006_create_notify_themes_table.php
+        // -- CREATE --
+>>>>>>> b1dceab (up)
+=======
+    public function up()
+    {
+        // -- CREATE --
+>>>>>>> a758bd5 (.)
+>>>>>>> 52b4ada (up)
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->increments('id');
@@ -42,6 +102,11 @@ class CreateNotifyThemesTable extends XotBaseMigration {
             }
         );
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 52b4ada (up)
 
         //-- UPDATE --
         $this->tableUpdate(
@@ -59,11 +124,18 @@ class CreateNotifyThemesTable extends XotBaseMigration {
             if (! $this->hasColumn('post_type')) {
                 $table->nullableMorphs('post');
             }
+<<<<<<< HEAD
+=======
+            if (! $this->hasColumn('body_html')) {
+                $table->text('body_html')->nullable();
+            }
+>>>>>>> 52b4ada (up)
 
         }); //end update
     }
 
     //end function up
+<<<<<<< HEAD
 }
 =======
 =======
@@ -140,6 +212,11 @@ class CreateNotifyThemesTable extends XotBaseMigration
             }
         );
 
+=======
+=======
+=======
+>>>>>>> a758bd5 (.)
+>>>>>>> 52b4ada (up)
         // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
@@ -184,6 +261,7 @@ class CreateNotifyThemesTable extends XotBaseMigration
 
     // end function up
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -227,3 +305,9 @@ class CreateNotifyThemesTable extends XotBaseMigration
 }
 >>>>>>> fe06862 (.)
 >>>>>>> 1c1596b (up)
+=======
+>>>>>>> b1dceab (up)
+=======
+>>>>>>> a758bd5 (.)
+}
+>>>>>>> 52b4ada (up)

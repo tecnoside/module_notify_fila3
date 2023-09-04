@@ -29,17 +29,18 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 =======
 >>>>>>> a758bd5 (.)
 /**
- * Modules\Notify\Models\NotifyTheme
+ * Modules\Notify\Models\NotifyTheme.
  *
- * @property int $id
- * @property string|null $lang
- * @property string|null $type
- * @property string|null $subject
- * @property string|null $body
- * @property string|null $from
+ * @property int                             $id
+ * @property string|null                     $lang
+ * @property string|null                     $type
+ * @property string|null                     $subject
+ * @property string|null                     $body
+ * @property string|null                     $from
  * @property \Illuminate\Support\Carbon|null $created_at
- * @property string|null $created_by
+ * @property string|null                     $created_by
  * @property \Illuminate\Support\Carbon|null $updated_at
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
  * @property string|null                     $updated_by
@@ -50,11 +51,19 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+ * @property string|null                     $updated_by
+ * @property string|null                     $post_type
+ * @property int|null                        $post_id
+ * @property string|null                     $body_html
+ * @property string|null                     $theme
+>>>>>>> 52b4ada (up)
  * @property string|null                     $from_email
  * @property string|null                     $logo_src
  * @property int|null                        $logo_width
  * @property int|null                        $logo_height
  * @property array                           $logo
+<<<<<<< HEAD
 =======
 >>>>>>> 10ed461 (up)
  *
@@ -164,6 +173,32 @@ class NotifyTheme extends BaseModel {
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereUpdatedBy($value)
 >>>>>>> a758bd5 (.)
+=======
+ *
+ * @method static \Modules\Notify\Database\Factories\NotifyThemeFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     query()
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereBody($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereBodyHtml($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereFrom($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereFromEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereLang($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereLogoHeight($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereLogoSrc($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereLogoWidth($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     wherePostId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     wherePostType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereSubject($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereTheme($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     whereUpdatedBy($value)
+ *
+>>>>>>> 52b4ada (up)
  * @mixin \Eloquent
  */
 class NotifyTheme extends BaseModel
@@ -201,6 +236,7 @@ class NotifyTheme extends BaseModel
 <<<<<<< HEAD
         'logo_height',
         'view_params',
+<<<<<<< HEAD
     ];
 
     protected $appends = [
@@ -387,10 +423,20 @@ class NotifyTheme extends BaseModel {
 =======
         'logo_height',
 >>>>>>> a758bd5 (.)
+=======
+>>>>>>> 52b4ada (up)
     ];
 
     protected $appends = [
         'logo',
+    ];
+
+    /**
+     * @var array<string, string>
+     */
+    protected $casts = [
+        // 'published_at' => 'datetime:Y-m-d', // da verificare
+        'view_params' => 'array',
     ];
 
     public function getLogoAttribute(?array $value): array
