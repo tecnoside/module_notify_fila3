@@ -9,6 +9,7 @@
 /**
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @see https://smsvi-docs.web.app/docs/restful/send-batch/
  */
 =======
@@ -37,6 +38,10 @@
 =======
 <?php
 >>>>>>> d27db1b (.)
+=======
+ * @link https://smsvi-docs.web.app/docs/restful/send-batch/
+ */
+>>>>>>> 001896b (.)
 
 declare(strict_types=1);
 
@@ -45,6 +50,7 @@ namespace Modules\Notify\Services\SmsEngines;
 <<<<<<< HEAD
 <<<<<<< HEAD
 use GuzzleHttp\Client;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,6 +96,9 @@ use Illuminate\Support\Str;
 =======
 use GuzzleHttp\Client;
 >>>>>>> 830dc60 (.)
+=======
+use Illuminate\Support\Str;
+>>>>>>> 001896b (.)
 use GuzzleHttp\Exception\ClientException;
 
 //---------CSS------------
@@ -329,6 +338,7 @@ class NetfunEngine {
 
         //dddx([ord($this->body[0]), $this->body]);
 
+<<<<<<< HEAD
         $this->to = $this->to.'';
         if (Str::startsWith($this->to, '00')) {
             $this->to = '+39'.substr($this->to, 2);
@@ -587,11 +597,22 @@ class NetfunEngine
 
         //dddx([ord($this->body[0]), $this->body]);
 
+=======
+        $this->to=$this->to.'';
+        if(Str::startsWith($this->to,'00')){
+            $this->to='+39'.substr($this->to,2);
+        }
+
+        if(!Str::startsWith($this->to,'+')){
+            $this->to='+39'.$this->to;
+        }
+
+>>>>>>> 001896b (.)
         $body = [
             'api_token' => $token,
             //"gateway"=> 99,
             'sender' => $this->from,
-            'text_template' => $this->body,
+            'text_template' => $this->body.'  '.rand(1,100),
             /*
             'delivery_callback' => 'https://www.google.com?code={{code}}',
             'default_placeholders' => [
@@ -599,8 +620,8 @@ class NetfunEngine
             ],
             */
             'async' => true,
-            'max_sms_length' => 1,
-            'utf8_enabled' => false,
+            //'max_sms_length' => 1,
+            'utf8_enabled' => true,
             'destinations' => [
                 [
                     'number' => $this->to,
@@ -625,8 +646,8 @@ class NetfunEngine
 >>>>>>> d27db1b (.)
         }
         echo '<hr/>';
-        echo '<pre>'.$this->to.'</pre>';
-        echo '<pre>'.$this->body.'</pre>';
+        echo '<pre>to: '.$this->to.'</pre>';
+        echo '<pre>body: '.$this->body.'</pre>';
         echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
         echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
 

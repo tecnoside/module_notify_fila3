@@ -48,6 +48,9 @@ class CreateNotifyThemesTable extends XotBaseMigration {
             if (! $this->hasColumn('post_type')) {
                 $table->nullableMorphs('post');
             }
+            if (! $this->hasColumn('body_html')) {
+                $table->text('body_html')->nullable();
+            }
 
         }); //end update
     }
