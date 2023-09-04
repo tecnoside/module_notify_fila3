@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -14,6 +15,11 @@ declare(strict_types=1);
 
 return [
 >>>>>>> bc60653 (up)
+=======
+declare(strict_types=1);
+
+return [
+>>>>>>> 602db11 (up)
     // These CSS rules will be applied after the regular template CSS
 
     /*
@@ -25,6 +31,9 @@ return [
     'colors' => [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 602db11 (up)
         'highlight' => '#004ca3',
         'button' => '#004cad',
     ],
@@ -44,6 +53,7 @@ return [
         'twitter' => null,
         'facebook' => null,
         'flickr' => null,
+<<<<<<< HEAD
     ],
 =======
 
@@ -74,4 +84,7 @@ return [
 >>>>>>> 64529a0 (up)
 =======
 >>>>>>> bc60653 (up)
+=======
+    ],
+>>>>>>> 602db11 (up)
 ];

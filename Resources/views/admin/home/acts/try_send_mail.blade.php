@@ -4,6 +4,7 @@
             <form action="{!! Request::fullUrlWithQuery([]) !!}" method="POST">
                 @csrf
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <x-input.group type="text" name="subject" value="mail test" />
 
@@ -30,6 +31,13 @@
                 <x-input.group type="wysiwyg" name="body" />
 >>>>>>> e3e9786 (.)
 =======
+=======
+
+                <x-input.group type="text" name="subject" value="mail test" />
+
+                <x-input.group type="text" name="from" value="staff@example.com" />
+
+>>>>>>> 602db11 (up)
                 <x-input.group type="text" name="to" value="marco.sottana@gmail.com" />
 >>>>>>> 7616aad (up)
 

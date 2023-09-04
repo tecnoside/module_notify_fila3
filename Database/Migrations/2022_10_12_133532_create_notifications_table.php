@@ -2,12 +2,16 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // https://blog.quickadminpanel.com/laravel-notifications-with-database-driver-internal-messages/
+=======
+>>>>>>> 602db11 (up)
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
+<<<<<<< HEAD
 class CreateNotificationsTable extends XotBaseMigration
 {
 =======
@@ -25,11 +29,15 @@ class CreateNotificationsTable extends XotBaseMigration {
 >>>>>>> 40ebae8 (up)
 =======
 >>>>>>> bc60653 (up)
+=======
+class CreateNotificationsTable extends XotBaseMigration {
+>>>>>>> 602db11 (up)
     /**
      * Run the migrations.
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function up()
@@ -43,6 +51,10 @@ class CreateNotificationsTable extends XotBaseMigration {
     public function up() {
         // -- CREATE --
 >>>>>>> bc60653 (up)
+=======
+    public function up() {
+        // -- CREATE --
+>>>>>>> 602db11 (up)
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->uuid('id')->primary();
@@ -55,6 +67,7 @@ class CreateNotificationsTable extends XotBaseMigration {
         );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // -- UPDATE --
 =======
          // -- UPDATE --
@@ -62,6 +75,9 @@ class CreateNotificationsTable extends XotBaseMigration {
 =======
         // -- UPDATE --
 >>>>>>> bc60653 (up)
+=======
+        // -- UPDATE --
+>>>>>>> 602db11 (up)
         $this->tableUpdate(
             function (Blueprint $table) {
                 if (! $this->hasColumn('updated_at')) {
@@ -76,6 +92,7 @@ class CreateNotificationsTable extends XotBaseMigration {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 
@@ -85,3 +102,6 @@ class CreateNotificationsTable extends XotBaseMigration {
 =======
 }
 >>>>>>> bc60653 (up)
+=======
+}
+>>>>>>> 602db11 (up)

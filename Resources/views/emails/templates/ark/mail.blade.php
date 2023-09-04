@@ -28,9 +28,13 @@
     @include('notify::emails.templates.ark.contentEnd')
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 3405de3 (up)
+=======
+
+>>>>>>> 602db11 (up)
 
 @stop

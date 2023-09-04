@@ -20,7 +20,7 @@
 >>>>>>> 7616aad (up)
 		<style type="text/css">
 			{{ $css }}
-		</style> 
+		</style>
 		@endif
 	</head>
 	<body>
@@ -57,6 +57,7 @@
 						<td class="w640" width="640" align="center">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 							<img class="mobile_only" border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : '' }}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
 
@@ -68,6 +69,11 @@
 							<img class="mobile_only" border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : '' }}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
 							
 >>>>>>> 7616aad (up)
+=======
+
+							<img class="mobile_only" border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : '' }}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
+
+>>>>>>> 602db11 (up)
 						</td>
 					</tr>
 					<tr class="mobile_only">
