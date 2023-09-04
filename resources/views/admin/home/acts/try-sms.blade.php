@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     <x-col size="12">
 
@@ -33,6 +34,8 @@
 
 >>>>>>> b735fbf (.)
 =======
+=======
+>>>>>>> a758bd5 (.)
     
     <x-col size="12">
         
@@ -40,7 +43,10 @@
                 @csrf
                 <x-input.group type="select" name="driver" value="{{ $driver }}" :options="$drivers" />
                 
+<<<<<<< HEAD
 >>>>>>> ce6a32e (up)
+=======
+>>>>>>> a758bd5 (.)
                 <x-input.group type="text" name="from" />
                 <x-input.group type="text" name="to" value="3475896127" />
 
@@ -54,6 +60,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -72,5 +79,9 @@
         
         
 >>>>>>> ce6a32e (up)
+=======
+        
+        
+>>>>>>> a758bd5 (.)
     </x-col>
 @endsection

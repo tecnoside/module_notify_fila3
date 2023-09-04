@@ -8,10 +8,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> b3b016d (up)
+=======
+>>>>>>> a758bd5 (.)
 
                 <x-input.group type="text" name="subject" value="mail test" />
 
@@ -26,6 +29,7 @@
                 <x-input.group type="select" name="template" :options="$template_options"/>
 
                 <x-input.group type="select" name="mailer" :options="$mailer_options"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -73,6 +77,8 @@
 >>>>>>> 478bb60 (up)
 =======
 >>>>>>> 8072a08 (up)
+=======
+>>>>>>> a758bd5 (.)
 
                 <button class="btn btn-primary" type="submit">go!</button>
 
