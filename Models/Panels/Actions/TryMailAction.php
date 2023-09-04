@@ -8,9 +8,9 @@ namespace Modules\Notify\Models\Panels\Actions;
 
 // -------- services --------
 
+use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Notify\Services\MailService;
 use Modules\Theme\Services\ThemeService;
-use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
 // -------- bases -----------
 <<<<<<< HEAD
