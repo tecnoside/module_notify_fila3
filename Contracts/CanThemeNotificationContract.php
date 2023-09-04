@@ -44,8 +44,11 @@ interface CanThemeNotificationContract
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f9c94ed (up)
+=======
+>>>>>>> 82ead9f (up)
     /**
      * @return mixed|null
      */
