@@ -18,6 +18,7 @@ namespace Modules\Notify\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 >>>>>>> 5f3f456 (up)
@@ -41,6 +42,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 >>>>>>> 3a62aee (up)
 =======
 >>>>>>> d27db1b (.)
+=======
+use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+// ---------- traits
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+// //use Laravel\Scout\Searchable;
+>>>>>>> b1dceab (up)
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Services\FactoryService;
 use Modules\Xot\Traits\Updater;
@@ -52,6 +59,7 @@ use Modules\Xot\Traits\Updater;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 abstract class BaseModel extends Model
 {
 <<<<<<< HEAD
@@ -59,6 +67,8 @@ abstract class BaseModel extends Model
     // //use Cachable;
 =======
 =======
+=======
+>>>>>>> b1dceab (up)
 abstract class BaseModel extends Model {
 >>>>>>> 5f3f456 (up)
     use Updater;
@@ -103,6 +113,7 @@ protected $perPage = 30;
 =======
     protected $casts = [
         // 'published_at' => 'datetime:Y-m-d', // da verificare
+<<<<<<< HEAD
     ];
 >>>>>>> 5f3f456 (up)
 
@@ -265,6 +276,8 @@ abstract class BaseModel extends Model
      */
     protected $casts = [
         // 'published_at' => 'datetime:Y-m-d', // da verificare
+=======
+>>>>>>> b1dceab (up)
     ];
 
     /**
@@ -299,7 +312,6 @@ abstract class BaseModel extends Model
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
-<<<<<<< HEAD
     protected static function newFactory() {
         return FactoryService::newFactory(get_called_class());
     }
@@ -394,6 +406,7 @@ abstract class BaseModel extends Model {
         return FactoryService::newFactory(static::class);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -412,6 +425,8 @@ abstract class BaseModel extends Model {
         return FactoryService::newFactory(get_called_class());
 =======
 >>>>>>> 3a62aee (up)
+=======
+>>>>>>> b1dceab (up)
     }
 }
 >>>>>>> 42aa20e (.)

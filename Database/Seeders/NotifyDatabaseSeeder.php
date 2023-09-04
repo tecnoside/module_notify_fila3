@@ -1,6 +1,5 @@
 <?php
 
-<<<<<<< HEAD
 declare(strict_types=1);
 
 namespace Modules\Notify\Database\Seeders;
@@ -10,6 +9,7 @@ use Illuminate\Database\Seeder;
 
 <<<<<<< HEAD
 class NotifyDatabaseSeeder extends Seeder {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -34,11 +34,14 @@ class NotifyDatabaseSeeder extends Seeder
 >>>>>>> 42f9249 (.)
 =======
 >>>>>>> d27db1b (.)
+=======
+>>>>>>> b1dceab (up)
     /**
      * Run the database seeds.
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function run() {
@@ -60,6 +63,9 @@ class NotifyDatabaseSeeder extends Seeder
     public function run()
     {
 >>>>>>> d27db1b (.)
+=======
+    public function run() {
+>>>>>>> b1dceab (up)
         Model::unguard();
 
         // $this->call("OthersTableSeeder");

@@ -18,6 +18,7 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseMorphPivot.
  */
+<<<<<<< HEAD
 abstract class BaseMorphPivot extends MorphPivot {
     use Updater;
 <<<<<<< HEAD
@@ -128,6 +129,8 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseMorphPivot.
  */
+=======
+>>>>>>> b1dceab (up)
 abstract class BaseMorphPivot extends MorphPivot {
     use Updater;
     /**
@@ -141,6 +144,7 @@ abstract class BaseMorphPivot extends MorphPivot {
 
     protected $perPage = 30;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 abstract class BaseMorphPivot extends MorphPivot
 {
@@ -148,6 +152,8 @@ abstract class BaseMorphPivot extends MorphPivot
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 3a62aee (up)
+=======
+>>>>>>> b1dceab (up)
 
     protected $connection = 'notify';
 
@@ -169,6 +175,9 @@ abstract class BaseMorphPivot extends MorphPivot
     public $timestamps = true;
     // protected $attributes = ['related_type' => 'cuisine_cat'];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b1dceab (up)
     /**
      * @var string[]
      */
