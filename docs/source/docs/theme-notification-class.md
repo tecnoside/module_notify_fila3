@@ -39,5 +39,9 @@ Classe notifica utilizzata per gestire le notifiche (email/sms/ecc).
 
 ```php
 Notification::send($company->reporter, new ThemeNotification('accepted_company', $company->toArray()));
+<<<<<<< HEAD
 ```
 >>>>>>> 4741bb3 (.)
+=======
+```
+>>>>>>> ea7e096 (.)
