@@ -37,6 +37,7 @@ use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
 use Modules\Notify\Models\NotifyTheme;
 >>>>>>> 42f9249 (.)
 use Savannabits\FilamentModules\Concerns\ContextualResource;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class NotifyThemeResource extends Resource
 {
@@ -62,6 +63,9 @@ class NotifyThemeResource extends Resource
                 Forms\Components\TextInput::make('from'),
                 Forms\Components\TextInput::make('from_email'),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f401a20 (up)
                 Forms\Components\SpatieMediaLibraryFileUpload::make('logo_src')
                     ->enableOpen()
                     ->enableDownload()
@@ -83,6 +87,9 @@ class NotifyThemeResource extends Resource
                 )
                     ->default('empty'),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f401a20 (up)
                 Forms\Components\Textarea::make('body')->columnSpanFull(),
                 // Forms\Components\RichEditor::make('body_html')->columnSpanFull(),
                 TinyEditor::make('body_html')->columnSpanFull(),
@@ -160,6 +167,7 @@ class NotifyThemeResource extends Resource
 >>>>>>> 42f9249 (.)
         return $table
             ->columns([
+<<<<<<< HEAD
                 Tables\Columns\TextColumn::make('id')->sortable(),
                 Tables\Columns\TextColumn::make('lang')->sortable(),
                 Tables\Columns\TextColumn::make('type')->sortable(),
@@ -167,6 +175,14 @@ class NotifyThemeResource extends Resource
                 Tables\Columns\TextColumn::make('post_type')->sortable(),
                 Tables\Columns\TextColumn::make('logo_src')->sortable(),
 >>>>>>> 911eb41 (up)
+=======
+                'id' => Tables\Columns\TextColumn::make('id')->sortable(),
+                'lang' => Tables\Columns\TextColumn::make('lang')->sortable(),
+                'type' => Tables\Columns\TextColumn::make('type')->sortable(),
+                'post_id' => Tables\Columns\TextColumn::make('post_id')->sortable(),
+                'post_type' => Tables\Columns\TextColumn::make('post_type')->sortable(),
+                'logo_src' => Tables\Columns\TextColumn::make('logo_src')->sortable(),
+>>>>>>> f401a20 (up)
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('lang')
