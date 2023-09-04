@@ -7,12 +7,15 @@ namespace Modules\Notify\Actions\NotifyTheme;
 use Illuminate\Support\Str;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Notify\Datas\NotifyThemeData;
 =======
 >>>>>>> adb42fb (up)
 =======
 use Modules\Notify\Datas\NotifyThemeData;
 >>>>>>> 6eafc0a (up)
+=======
+>>>>>>> 1b3ba1c (up)
 use Modules\Notify\Models\NotifyTheme;
 use Modules\Xot\Datas\XotData;
 use Spatie\QueueableAction\QueueableAction;
@@ -26,6 +29,7 @@ class Get
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function execute(string $name, string $type, array $view_params): NotifyThemeData
 =======
     public function execute(string $name, string $type, array $view_params)
@@ -33,6 +37,9 @@ class Get
 =======
     public function execute(string $name, string $type, array $view_params): NotifyThemeData
 >>>>>>> 6eafc0a (up)
+=======
+    public function execute(string $name, string $type, array $view_params)
+>>>>>>> 1b3ba1c (up)
     {
         $xot = XotData::make();
         if (! isset($view_params['post_id'])) {
@@ -47,6 +54,7 @@ class Get
             'type' => $type, // email,sms,whatsapp,piccione
             'post_type' => $name,
             'post_id' => $view_params['post_id'], // in questo caso il tipo come register type 3 in cui la pwd e' solo autogenerata
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         ], ['view_params' => []]);
@@ -114,10 +122,14 @@ class Get
 =======
         ], ['view_params' => []]);
 >>>>>>> 0c262f4 (up)
+=======
+        ]);
+>>>>>>> 1b3ba1c (up)
 
         $module_name_low = Str::lower($xot->main_module);
 
         $trad_mod = $module_name_low.'::'.$type.'.'.$name;
+<<<<<<< HEAD
 =======
 >>>>>>> b735fbf (.)
 
@@ -182,5 +194,37 @@ class Get
             'view_params' => $view_params,
         ]);
 >>>>>>> 6eafc0a (up)
+=======
+
+        if (null == $theme->subject) {
+            $subject = trans($trad_mod.'.subject');
+            $theme->update(['subject' => $subject]);
+        }
+        if (null == $theme->theme) {
+            $theme->update(['theme' => 'ark']);
+        }
+        if (null == $theme->body_html) {
+            $html = trans($trad_mod.'.body_html');
+            if (isset($view_params['body_html']) && $html == $trad_mod.'.body_html') {
+                $html = '##body_html##';
+            }
+
+            // if ('verify-email' == $name && 3 == $view_params['post_id']) {
+            //    $html .= '<br/>When you\'ll re-login this will be your password: ##password##';
+            // }
+
+            $theme->update(['body_html' => $html]);
+        }
+        $view_params = array_merge($theme->toArray(), $view_params);
+
+        $body_html = strval($theme->body_html);
+
+        foreach ($view_params as $k => $v) {
+            if (is_string($v)) {
+                $body_html = Str::replace('##'.$k.'##', $v, $body_html);
+            }
+        }
+        $view_params['body_html'] = $body_html;
+>>>>>>> 1b3ba1c (up)
     }
 }
