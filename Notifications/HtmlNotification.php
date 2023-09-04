@@ -10,9 +10,8 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Datas\SmsData;
 
-class HtmlNotification extends Notification implements ShouldQueue
-{
-    use Queueable;
+class HtmlNotification extends Notification { /* implements ShouldQueue */
+    // use Queueable;
     public string $subject;
     public string $html;
     public string $from;
@@ -22,8 +21,7 @@ class HtmlNotification extends Notification implements ShouldQueue
      *
      * @return void
      */
-    public function __construct(string $from, string $subject, string $html)
-    {
+    public function __construct(string $from, string $subject, string $html) {
         $this->from = $from;
         $this->subject = $subject;
         $this->html = $html;
@@ -36,8 +34,7 @@ class HtmlNotification extends Notification implements ShouldQueue
      *
      * @return array
      */
-    public function via($notifiable)
-    {
+    public function via($notifiable) {
         return ['mail'];
     }
 
@@ -48,8 +45,7 @@ class HtmlNotification extends Notification implements ShouldQueue
      *
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function toMail($notifiable)
-    {
+    public function toMail($notifiable) {
         return (new MailMessage())
             ->from($this->from)
             ->subject($this->subject)
@@ -64,8 +60,7 @@ class HtmlNotification extends Notification implements ShouldQueue
      *
      * @return SmsData
      */
-    public function toSms($notifiable)
-    {
+    public function toSms($notifiable) {
         if (! method_exists($notifiable, 'routeNotificationFor')) {
             throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
@@ -84,8 +79,7 @@ class HtmlNotification extends Notification implements ShouldQueue
      *
      * @return array
      */
-    public function toArray($notifiable)
-    {
+    public function toArray($notifiable) {
         return [
         ];
     }
