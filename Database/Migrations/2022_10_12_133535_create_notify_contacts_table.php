@@ -8,6 +8,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class CreateNotifyContactsTable extends XotBaseMigration
 {
 =======
@@ -16,6 +17,10 @@ class CreateNotifyContactsTable extends XotBaseMigration {
 =======
 class CreateNotifyContactsTable extends XotBaseMigration {
 >>>>>>> fe06862 (.)
+=======
+class CreateNotifyContactsTable extends XotBaseMigration
+{
+>>>>>>> 42f9249 (.)
     protected ?string $model_class = Contact::class;
 
     /**
@@ -23,6 +28,7 @@ class CreateNotifyContactsTable extends XotBaseMigration {
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function up()
@@ -33,6 +39,10 @@ class CreateNotifyContactsTable extends XotBaseMigration {
 =======
     public function up() {
 >>>>>>> fe06862 (.)
+=======
+    public function up()
+    {
+>>>>>>> 42f9249 (.)
         // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
@@ -54,6 +64,7 @@ class CreateNotifyContactsTable extends XotBaseMigration {
                 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             }
         );
 =======
@@ -62,5 +73,9 @@ class CreateNotifyContactsTable extends XotBaseMigration {
 =======
             });
 >>>>>>> fe06862 (.)
+=======
+            }
+        );
+>>>>>>> 42f9249 (.)
     }
 }

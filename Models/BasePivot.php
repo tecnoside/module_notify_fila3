@@ -195,6 +195,10 @@ abstract class BasePivot extends Pivot
      * @var bool
      */
     public static $snakeAttributes = true;
+    /**
+     * @var bool
+     */
+    public $incrementing = true;
 
     protected $perPage = 30;
 
@@ -220,7 +224,7 @@ abstract class BasePivot extends Pivot
 >>>>>>> fe06862 (.)
     protected $casts = [];
     /**
-     * @var string[]
+     * @var array<string>
      */
     protected $dates = ['created_at', 'updated_at'];
     /**
@@ -229,10 +233,6 @@ abstract class BasePivot extends Pivot
      * @var string
      */
     protected $primaryKey = 'id';
-    /**
-     * @var bool
-     */
-    public $incrementing = true;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD

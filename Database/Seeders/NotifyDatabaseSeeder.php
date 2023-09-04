@@ -7,6 +7,7 @@ namespace Modules\Notify\Database\Seeders;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
 
+<<<<<<< HEAD
 class NotifyDatabaseSeeder extends Seeder {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,11 +24,16 @@ class NotifyDatabaseSeeder extends Seeder
 >>>>>>> 3a62aee (up)
 =======
 >>>>>>> fe06862 (.)
+=======
+class NotifyDatabaseSeeder extends Seeder
+{
+>>>>>>> 42f9249 (.)
     /**
      * Run the database seeds.
      *
      * @return void
      */
+<<<<<<< HEAD
     public function run() {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,6 +45,10 @@ class NotifyDatabaseSeeder extends Seeder
 >>>>>>> 3a62aee (up)
 =======
 >>>>>>> fe06862 (.)
+=======
+    public function run()
+    {
+>>>>>>> 42f9249 (.)
         Model::unguard();
 
         // $this->call("OthersTableSeeder");

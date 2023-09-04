@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 declare(strict_types=1);
 
+<<<<<<< HEAD
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Http\Middleware\MirrorConfigToSubpackages;
 use Filament\Pages;
@@ -18,6 +19,11 @@ use Filament\Http\Middleware\MirrorConfigToSubpackages;
 use Filament\Pages;
 use Filament\Widgets;
 >>>>>>> 911eb41 (up)
+=======
+use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Http\Middleware\MirrorConfigToSubpackages;
+use Filament\Pages;
+>>>>>>> 42f9249 (.)
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -82,8 +88,12 @@ return [
         'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Pages"),
 =======
         'namespace' => $contextNs.'\\Pages',
+<<<<<<< HEAD
         'path' => base_path('Modules/'.$moduleName."/$contextPath/Pages"),
 >>>>>>> 911eb41 (up)
+=======
+        'path' => base_path('Modules/'.$moduleName."/{$contextPath}/Pages"),
+>>>>>>> 42f9249 (.)
         'register' => [
             Pages\Dashboard::class,
         ],
@@ -105,8 +115,12 @@ return [
         'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Resources"),
 =======
         'namespace' => $contextNs.'\\Resources',
+<<<<<<< HEAD
         'path' => base_path('Modules/'.$moduleName."/$contextPath/Resources"),
 >>>>>>> 911eb41 (up)
+=======
+        'path' => base_path('Modules/'.$moduleName."/{$contextPath}/Resources"),
+>>>>>>> 42f9249 (.)
         'register' => [],
     ],
 
@@ -129,7 +143,7 @@ return [
             // Widgets\FilamentInfoWidget::class,
 =======
         'namespace' => $contextNs.'\\Widgets',
-        'path' => base_path('Modules/'.$moduleName."/$contextPath/Widgets"),
+        'path' => base_path('Modules/'.$moduleName."/{$contextPath}/Widgets"),
         'register' => [
 <<<<<<< HEAD
             Widgets\AccountWidget::class,

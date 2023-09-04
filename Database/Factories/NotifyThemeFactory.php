@@ -26,7 +26,8 @@ use Modules\Notify\Models\NotifyTheme;
 =======
 >>>>>>> fe06862 (.)
 
-class NotifyThemeFactory extends Factory {
+class NotifyThemeFactory extends Factory
+{
     /**
      * The name of the factory's corresponding model.
      *
@@ -50,6 +51,7 @@ class NotifyThemeFactory extends Factory {
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function definition()
     {
         return [
@@ -65,6 +67,10 @@ class NotifyThemeFactory extends Factory {
 >>>>>>> 7d0cb15 (.)
 =======
     public function definition() {
+=======
+    public function definition()
+    {
+>>>>>>> 42f9249 (.)
         return [
             'id' => $this->faker->randomNumber(5, false),
 >>>>>>> fe06862 (.)
