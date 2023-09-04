@@ -86,6 +86,7 @@ Homestead.json
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 23a7ddf (.)
@@ -95,10 +96,15 @@ Homestead.json
 >>>>>>> e65f668 (Initial commit)
 =======
 >>>>>>> 7fc5941 (.)
+=======
+=======
+>>>>>>> 23a7ddf (.)
+>>>>>>> e375a73 (.)
 
 *.stackdump
 *.cache
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -161,10 +167,13 @@ package-lock.json
 =======
 >>>>>>> 6bb3972 (.)
 =======
+>>>>>>> e375a73 (.)
+=======
 >>>>>>> 1b86d70 (Initial commit)
 =======
 *.cache
 >>>>>>> 6c92430 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -214,3 +223,7 @@ package-lock.json
 >>>>>>> e65f668 (Initial commit)
 =======
 >>>>>>> 7fc5941 (.)
+=======
+=======
+>>>>>>> 23a7ddf (.)
+>>>>>>> e375a73 (.)
