@@ -6,11 +6,10 @@ namespace Modules\Notify\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Data\SmsData;
 
-class HtmlNotification extends Notification implements ShouldQueue {
+class SmsNotification extends Notification implements ShouldQueue {
     use Queueable;
     public string $subject;
     public string $html;
@@ -35,22 +34,7 @@ class HtmlNotification extends Notification implements ShouldQueue {
      * @return array
      */
     public function via($notifiable) {
-        return ['mail'];
-    }
-
-    /**
-     * Get the mail representation of the notification.
-     *
-     * @param mixed $notifiable
-     *
-     * @return \Illuminate\Notifications\Messages\MailMessage
-     */
-    public function toMail($notifiable) {
-        return (new MailMessage())
-            ->from($this->from)
-            ->subject($this->subject)
-            ->line('---')
-            ->view('notify::notifications.html', ['html' => $this->html]);
+        return ['esendex'];
     }
 
     /**
@@ -63,7 +47,7 @@ class HtmlNotification extends Notification implements ShouldQueue {
     public function toSms($notifiable) {
         return SmsData::from([
             'from' => $this->from,
-            'to' => $notifiable->routeNotificationFor('mobile'),
+            'to' => $notifiable->routeNotificationFor('sms'),
             'body' => $this->html,
         ]);
     }
