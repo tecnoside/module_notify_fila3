@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: About Notify
 description: About Notify
 =======
@@ -16,6 +17,10 @@ description: About Notify
 title: About Notify
 description: About Notify
 >>>>>>> fe06862 (.)
+=======
+title: Algolia DocSearch
+description: Configure Algolia DocSearch with the Jigsaw docs starter template
+>>>>>>> ff9873c (up)
 extends: _layouts.documentation
 section: content
 ---
