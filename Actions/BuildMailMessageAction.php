@@ -119,26 +119,29 @@ use Spatie\QueueableAction\QueueableAction;
 class BuildMailMessageAction {
     use QueueableAction;
 
-    public function execute(string $name, Model $model, array $view_params): MailMessage {
+    public function execute(string $name, Model $model, array $view_params = []): MailMessage {
         $view_params = array_merge($view_params, $model->toArray());
-        $type='email';
+        $type = 'email';
 
-        if(!isset($view_params['post_id'])){
-            $view_params['post_id']=0;
+        if (! isset($view_params['post_id'])) {
+            $view_params['post_id'] = 0;
+        }
+        if (! isset($view_params['lang'])) {
+            $view_params['lang'] = app()->getLocale();
         }
 
         $theme = NotifyTheme::firstOrCreate([
-            'lang' => $view_params['lang'] ?? app()->getLocale(),
+            'lang' => $view_params['lang'],
             'type' => $type, // email,sms,whatsapp,piccione
             'post_type' => $name,
-            'post_id' => $view_params['post_id'], //in questo caso il tipo come register type 3 in cui la pwd e' solo autogenerata
+            'post_id' => $view_params['post_id'], // in questo caso il tipo come register type 3 in cui la pwd e' solo autogenerata
         ]);
 
         $model_class = get_class($model);
-        $module_name = Str::between($class, 'Modules\\', '\Http\\');
+        $module_name = Str::between($model_class, 'Modules\\', '\Models\\');
         $module_name_low = Str::lower($module_name);
 
-        $trad_mod=$module_name_low.'::'.$type.'.'.$name;
+        $trad_mod = $module_name_low.'::'.$type.'.'.$name;
 
         if (null == $theme->subject) {
             $subject = trans($trad_mod.'.subject');
@@ -149,6 +152,9 @@ class BuildMailMessageAction {
         }
         if (null == $theme->body_html) {
             $html = trans($trad_mod.'.body_html');
+            if (isset($view_params['body_html']) && $html == $trad_mod.'.body_html') {
+                $html = '##body_html##';
+            }
 
             if ('verify-email' == $name && 3 == $view_params['post_id']) {
                 $html .= '<br/>When you\'ll re-login this will be your password: ##password##';
@@ -156,7 +162,7 @@ class BuildMailMessageAction {
 
             $theme->update(['body_html' => $html]);
         }
-        $view_params = array_merge($view_params, $theme->toArray());
+        $view_params = array_merge($theme->toArray(), $view_params);
 
         $body_html = $theme->body_html;
         foreach ($view_params as $k => $v) {
@@ -167,7 +173,7 @@ class BuildMailMessageAction {
 
         $view_params['body_html'] = $body_html;
 
-        $view_html = 'notify::html';
+        $view_html = 'notify::email';
 
         // $out = view($view_html, $this->view_params);
         // dddx($this->view_params);
@@ -175,7 +181,7 @@ class BuildMailMessageAction {
 
         return (new MailMessage())
             // ->from('barrett@example.com', 'Barrett Blair')
-            ->subject($theme->subject)
+            ->subject($view_params['subject'] ?? $theme->subject)
             ->view($view_html, $view_params);
 >>>>>>> 681ec81 (up)
     }
