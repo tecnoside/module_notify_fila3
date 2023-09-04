@@ -24,6 +24,7 @@
 
                 <x-input.group type="select" name="mailer" :options="$mailer_options"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 
                 <x-input.group type="text" name="subject" value="mail test" />
@@ -67,6 +68,8 @@
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> 478bb60 (up)
+=======
+>>>>>>> 8072a08 (up)
 
                 <button class="btn btn-primary" type="submit">go!</button>
 
