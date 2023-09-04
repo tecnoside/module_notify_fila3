@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -88,6 +89,8 @@ abstract class BasePivot extends Pivot {
 =======
 =======
 >>>>>>> 89120cb (rebase)
+=======
+>>>>>>> 47d9a86 (.)
 <?php
 
 declare(strict_types=1);
@@ -142,6 +145,7 @@ abstract class BasePivot extends Pivot {
      * @var bool
      */
     public $incrementing = true;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -203,3 +207,6 @@ abstract class BasePivot extends Pivot {
 }
 >>>>>>> 89120cb (rebase)
 >>>>>>> 9349baf (.)
+=======
+}
+>>>>>>> 47d9a86 (.)
