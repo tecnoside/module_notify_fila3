@@ -297,8 +297,10 @@ class NotifyTheme extends BaseModel {
         'type',
         'subject',
         'body',
+<<<<<<< HEAD
         'body_html',
         'from',
+<<<<<<< HEAD
         'from_email',
         'post_type',
         'post_id',
@@ -307,6 +309,10 @@ class NotifyTheme extends BaseModel {
         'logo_width',
         'logo_height',
         'view_params',
+=======
+=======
+>>>>>>> 42aa20e (.)
+>>>>>>> d073338 (.)
     ];
 
     protected $appends = [

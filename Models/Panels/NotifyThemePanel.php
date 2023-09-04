@@ -338,13 +338,17 @@ class NotifyThemePanel extends XotBasePanel {
      'type' => 'String',
      'name' => 'lang',
      'comment' => NULL,
+<<<<<<< HEAD
      'col_size' =>3
+=======
+>>>>>>> 42aa20e (.)
   ),
   
   (object) array(
      'type' => 'String',
      'name' => 'type',
      'comment' => NULL,
+<<<<<<< HEAD
      'col_size' =>3
   ),
   (object) array(
@@ -353,11 +357,15 @@ class NotifyThemePanel extends XotBasePanel {
     'comment' => NULL,
     'col_size' =>3
  ),
+=======
+  ),
+>>>>>>> 42aa20e (.)
   
   (object) array(
      'type' => 'String',
      'name' => 'subject',
      'comment' => NULL,
+<<<<<<< HEAD
      'col_size' =>12
   ),
 
@@ -373,6 +381,14 @@ class NotifyThemePanel extends XotBasePanel {
      'name' => 'body_html',
      'comment' => NULL,
      'except'=>['index'],
+=======
+  ),
+  
+  (object) array(
+     'type' => 'Wysiwyg',
+     'name' => 'body',
+     'comment' => NULL,
+>>>>>>> 42aa20e (.)
   ),
 );
 >>>>>>> d27db1b (.)
