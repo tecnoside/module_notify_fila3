@@ -17,6 +17,7 @@ use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 =======
 //-------- services --------
 
+<<<<<<< HEAD
 use Modules\Notify\Services\MailService;
 use Modules\Theme\Services\ThemeService;
 use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
@@ -44,6 +45,8 @@ class TestMailAction extends XotBasePanelAction {
 =======
 =======
 >>>>>>> bc60653 (up)
+=======
+>>>>>>> 602db11 (up)
 class TryMailAction extends XotBasePanelAction {
 >>>>>>> 64529a0 (up):Models/Panels/Actions/TryMailAction.php
     public bool $onItem = true;
