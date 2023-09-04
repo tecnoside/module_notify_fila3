@@ -39,11 +39,11 @@ abstract class BaseModelLang extends Model
  * @property string|null $post_type
  */
 abstract class BaseModelLang extends Model {
-    use Updater;
+    use HasFactory;
 
     // use Searchable;
     use LinkedTrait;
-    use HasFactory;
+    use Updater;
     /**
      * Indicates whether attributes are snake cased on arrays.
      *

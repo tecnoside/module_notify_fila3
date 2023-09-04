@@ -250,8 +250,12 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseModel.
  */
+<<<<<<< HEAD
 abstract class BaseModel extends Model
 {
+=======
+abstract class BaseModel extends Model {
+>>>>>>> b3b016d (up)
     // use Searchable;
     // //use Cachable;
     use HasFactory;

@@ -7,8 +7,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> b3b016d (up)
 
                 <x-input.group type="text" name="subject" value="mail test" />
 

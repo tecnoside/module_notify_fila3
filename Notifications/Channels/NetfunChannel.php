@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
 declare(strict_types=1);
@@ -78,6 +79,9 @@ class NetfunChannel
 =======
 declare(strict_types=1);
 >>>>>>> c3e3fc0 (up)
+=======
+declare(strict_types=1);
+>>>>>>> b3b016d (up)
 
 namespace Modules\Notify\Notifications\Channels;
 
@@ -87,6 +91,7 @@ use Modules\Notify\Actions\NetfunSendAction;
 
 class NetfunChannel {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public function __construct(){
        
@@ -94,11 +99,15 @@ class NetfunChannel {
 =======
     public function __construct() {
 >>>>>>> c3e3fc0 (up)
+=======
+    public function __construct() {
+>>>>>>> b3b016d (up)
     }
 
     /**
      * Send the given notification.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -150,10 +159,18 @@ class NetfunChannel {
 >>>>>>> c156f22 (.)
 =======
 >>>>>>> b735fbf (.)
+=======
+     * @param mixed $notifiable
+     *
+     * @return void
+     */
+    public function send($notifiable, Notification $notification) {
+>>>>>>> b3b016d (up)
         $message = $notification->toSms($notifiable);
         // Send notification to the $notifiable instance...
         $data = app(NetfunSendAction::class)->execute($message);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         if ($notifiable instanceof ModelContactContract) {
@@ -246,6 +263,8 @@ class NetfunChannel {
         // Send notification to the $notifiable instance...
         $data = app(NetfunSendAction::class)->execute($message);
 
+=======
+>>>>>>> b3b016d (up)
         if ($notifiable instanceof Model) {
             $data['sms_sent_at'] = now();
             $data['sms_count'] = $notifiable->sms_count + 1;
@@ -254,6 +273,9 @@ class NetfunChannel {
     }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 01282f2 (up)
 =======
 >>>>>>> c3e3fc0 (up)
+=======
+>>>>>>> b3b016d (up)
