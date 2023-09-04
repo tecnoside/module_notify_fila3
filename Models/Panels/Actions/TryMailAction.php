@@ -27,8 +27,9 @@ use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 >>>>>>> 9f492fe (up)
 
 /**
- * Class TestAction.
+ 
  */
+<<<<<<< HEAD:Models/Panels/Actions/TestMailAction.php
 <<<<<<< HEAD
 <<<<<<< HEAD
 class TestMailAction extends XotBasePanelAction {
@@ -39,6 +40,9 @@ class TestMailAction extends XotBasePanelAction
 =======
 class TestMailAction extends XotBasePanelAction {
 >>>>>>> 6d517f2 (.)
+=======
+class TryMailAction extends XotBasePanelAction {
+>>>>>>> 64529a0 (up):Models/Panels/Actions/TryMailAction.php
     public bool $onItem = true;
     public string $icon = '<i class="fas fa-vial"></i>Mail';
 

@@ -3,10 +3,14 @@
 		<title>{{ isset($senderName) ? $senderName : '' }}</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<style type="text/css">{!! $_theme->cssInLine('notify::css/sunny.css') !!}</style>
 		@if (isset($css))
 =======
 		<style type="text/css">{{ file_get_contents(app_path() . '/../vendor/snowfire/beautymail/src/styles/css/sunny.css') }}</style>
+=======
+		<style type="text/css">{!! $_theme->cssInLine('notify::css/sunny.css') !!}</style>
+>>>>>>> 64529a0 (up)
 		@if(isset($css))
 >>>>>>> 83f2b60 (up)
 		<style type="text/css">

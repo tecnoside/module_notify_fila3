@@ -12,8 +12,8 @@ use Modules\Xot\Models\Panels\XotBasePanel;
 class _ModulePanel extends XotBasePanel {
     public function actions(): array {
         return [
-            new Actions\TestSmsAction(),
-            new Actions\TestMailAction(),
+            new Actions\TrySmsAction(),
+            new Actions\TryMailAction(),
             new Actions\TrySendMailAction(),
 <<<<<<< HEAD
 <<<<<<< HEAD

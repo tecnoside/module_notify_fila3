@@ -15,7 +15,7 @@
 =======
 		<title>{{ isset($senderName) ? $senderName : '' }}.</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<style type="text/css">{{ Theme::viewpath('notify::css/ark.css') }}</style>
+		<style type="text/css">{{ $_theme->cssInLine('notify::css/ark.css') }}</style>
 		@if(isset($css))
 >>>>>>> 7616aad (up)
 		<style type="text/css">
@@ -26,15 +26,21 @@
 	<body>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64529a0 (up)
 	{{--
 	[{{ $_theme->cssInLine('notify::css/ark.css') }}]
 	<pre>{{ print_r($logo) }}</pre>
 	--}}
+<<<<<<< HEAD
 =======
 >>>>>>> 83f2b60 (up)
 =======
 	[{{ (\Modules\Xot\Services\FileService::assetPath('notify::css/ark.css')) }}]
 >>>>>>> 7616aad (up)
+=======
+>>>>>>> 64529a0 (up)
 	<table id="background-table" border="0" cellpadding="0" cellspacing="0" width="100%">
 		<tbody>
 		<tr>
