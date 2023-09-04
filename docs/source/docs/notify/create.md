@@ -10,8 +10,11 @@ section: content
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 68cb834 (.)
+=======
+>>>>>>> bca128c (.)
 Per creare una notifica, andare nella dashboard nel modulo Notify.
 Cliccare sul tasto Create in alto a destra.  
 
@@ -20,6 +23,7 @@ Inserire il tipo di notifica (esempio email o sms).
 Inserire il mittente che verrà visualizzato.  
 In caso si stia creando una email, inserire l'indirizzo mittente se diverso da quello di default.  
 Inserire il soggetto della notifica.  
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -60,3 +64,6 @@ con all'interno first_name e last_name.
 =======
 aaaa
 >>>>>>> b349bf0 (.)
+=======
+Inserire nel campo body il corpo della notifica e ricopiarlo nel campo body_html (utilizzato per le email).  
+>>>>>>> bca128c (.)
