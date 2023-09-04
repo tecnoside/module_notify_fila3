@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models\Panels;
 
-use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
-use Modules\Cms\Models\Panels\XotBasePanel;
+use Modules\Notify\Models\Notification;
 use Modules\Xot\Contracts\RowsContract;
+use Modules\Cms\Models\Panels\XotBasePanel;
+use Illuminate\Contracts\Support\Renderable;
 
 class NotificationPanel extends XotBasePanel {
     /**
@@ -21,45 +22,12 @@ class NotificationPanel extends XotBasePanel {
     public static string $title = 'title';
 
     /**
-     * The columns that should be searched.
-     *
-     * @var array
-     */
-    public static $search = [
-    ];
-
-    /**
-     * The relationships that should be eager loaded on index queries.
-     */
-    public function with(): array {
-        return [];
-    }
-
-    public function search(): array {
-        return [];
-    }
-
-    /**
-     * on select the option id.
-     *
-     * quando aggiungi un campo select, è il numero della chiave
-     * che viene messo come valore su value="id"
-     *
-     * @param \Modules\Notify\Models\Notification $row
-     *
-     * @return int|string|null
-     */
-    public function optionId($row) {
-        return $row->getKey();
-    }
-
-    /**
      * on select the option label.
      *
-     * @param mixed $row
+     * @param Notification $row
      */
     public function optionLabel($row): string {
-        return (string) $row->title;
+        return (string) '-no-set-';//$row->title;
     }
 
     /**

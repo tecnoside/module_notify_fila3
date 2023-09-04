@@ -763,8 +763,12 @@ class NetfunEngine {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     public function getVars() {
+=======
+    public function getVars():array {
+>>>>>>> d8faaba (up)
         return $this->vars;
     }
 
