@@ -146,11 +146,19 @@ class NotifyThemePanel extends XotBasePanel {
      'comment' => NULL,
      'col_size' =>12
   ),
-  
+
+  (object) array(
+    'type' => 'Textarea',
+    'name' => 'body',
+    'comment' => NULL,
+    'except'=>['index'],
+ ),
+
   (object) array(
      'type' => 'WysiwygSceditor',
-     'name' => 'body',
+     'name' => 'body_html',
      'comment' => NULL,
+     'except'=>['index'],
   ),
 );
 >>>>>>> 42aa20e (.)

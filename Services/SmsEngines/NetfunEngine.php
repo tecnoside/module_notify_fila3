@@ -5,17 +5,23 @@
 <<<<<<< HEAD
 <?php
 /**
+<<<<<<< HEAD
  * @see https://smsvi-docs.web.app/docs/restful/send-batch/
  */
 =======
 <?php
 >>>>>>> 42aa20e (.)
+=======
+ * @link https://smsvi-docs.web.app/docs/restful/send-batch/
+ */
+>>>>>>> 468f0a0 (.)
 
 declare(strict_types=1);
 
 namespace Modules\Notify\Services\SmsEngines;
 
 use GuzzleHttp\Client;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 use GuzzleHttp\Exception\ClientException;
@@ -40,6 +46,9 @@ use Modules\Xot\Contracts\PanelContract;
 use Modules\Xot\Services\ArtisanService;
 =======
 >>>>>>> 6c92430 (.)
+=======
+use Illuminate\Support\Str;
+>>>>>>> 468f0a0 (.)
 use GuzzleHttp\Exception\ClientException;
 
 //---------CSS------------
@@ -244,11 +253,20 @@ class NetfunEngine {
 
         //dddx([ord($this->body[0]), $this->body]);
 
+        $this->to=$this->to.'';
+        if(Str::startsWith($this->to,'00')){
+            $this->to='+39'.substr($this->to,2);
+        }
+
+        if(!Str::startsWith($this->to,'+')){
+            $this->to='+39'.$this->to;
+        }
+
         $body = [
             'api_token' => $token,
             //"gateway"=> 99,
             'sender' => $this->from,
-            'text_template' => $this->body,
+            'text_template' => $this->body.'  '.rand(1,100),
             /*
             'delivery_callback' => 'https://www.google.com?code={{code}}',
             'default_placeholders' => [
@@ -256,8 +274,8 @@ class NetfunEngine {
             ],
             */
             'async' => true,
-            'max_sms_length' => 1,
-            'utf8_enabled' => false,
+            //'max_sms_length' => 1,
+            'utf8_enabled' => true,
             'destinations' => [
                 [
                     'number' => $this->to,
@@ -282,8 +300,8 @@ class NetfunEngine {
 >>>>>>> 42aa20e (.)
         }
         echo '<hr/>';
-        echo '<pre>'.$this->to.'</pre>';
-        echo '<pre>'.$this->body.'</pre>';
+        echo '<pre>to: '.$this->to.'</pre>';
+        echo '<pre>body: '.$this->body.'</pre>';
         echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
         echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
 
