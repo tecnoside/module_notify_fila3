@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,11 +55,23 @@ class CreateNotificationsTable extends XotBaseMigration {
 class CreateNotificationsTable extends XotBaseMigration
 {
 >>>>>>> 42f9249 (.)
+=======
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+use Modules\Xot\Database\Migrations\XotBaseMigration;
+
+
+class CreateNotificationsTable extends XotBaseMigration {
+
+>>>>>>> 82d1f8c (up)
     /**
      * Run the migrations.
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -87,6 +100,10 @@ class CreateNotificationsTable extends XotBaseMigration
     public function up() {
         // -- CREATE --
 >>>>>>> fe06862 (.)
+=======
+    public function up(){
+         // -- CREATE --
+>>>>>>> 82d1f8c (up)
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->uuid('id')->primary();
@@ -97,6 +114,7 @@ class CreateNotificationsTable extends XotBaseMigration
                 $table->timestamps();
             }
         );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -114,6 +132,9 @@ class CreateNotificationsTable extends XotBaseMigration
 =======
         // -- UPDATE --
 >>>>>>> fe06862 (.)
+=======
+         // -- UPDATE --
+>>>>>>> 82d1f8c (up)
         $this->tableUpdate(
             function (Blueprint $table) {
                 if (! $this->hasColumn('updated_at')) {
@@ -126,6 +147,7 @@ class CreateNotificationsTable extends XotBaseMigration
             }
         );
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,3 +167,8 @@ class CreateNotificationsTable extends XotBaseMigration
 =======
 }
 >>>>>>> fe06862 (.)
+=======
+
+    
+};
+>>>>>>> 82d1f8c (up)

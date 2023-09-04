@@ -10,6 +10,7 @@ namespace Modules\Notify\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Eloquent;
 use Illuminate\Notifications\DatabaseNotification;
 
@@ -133,4 +134,9 @@ class Notification extends DatabaseNotification {
 class Notification extends DatabaseNotification
 {
 >>>>>>> b735fbf (.)
+=======
+
+class Notification extends BaseModel {
+    
+>>>>>>> 82d1f8c (up)
 }
