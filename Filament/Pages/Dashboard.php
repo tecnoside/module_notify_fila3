@@ -16,6 +16,7 @@ class Dashboard extends Page
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -26,3 +27,6 @@ class Dashboard extends Page
 =======
 }
 >>>>>>> 4bbb7c7 (up)
+=======
+}
+>>>>>>> 470ddc5 (Dusting)
