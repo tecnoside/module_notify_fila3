@@ -5,6 +5,9 @@ updates:
     schedule:
       interval: "daily"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c0a5fb1 (up)
 
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -20,5 +23,8 @@ updates:
     labels:
       - "npm"
       - "dependencies"
+<<<<<<< HEAD
 =======
 >>>>>>> 95a4930 (.)
+=======
+>>>>>>> c0a5fb1 (up)
