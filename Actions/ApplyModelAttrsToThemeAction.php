@@ -27,7 +27,7 @@ class ApplyModelAttrsToThemeAction {
                 'subject' => '---',
             ]
         );
-        if ('' == $theme->body_html) {
+        if ('' === $theme->body_html) {
             $theme->body_html = '<div class="row">
                 <div class="col">##title##</div>
                 <div class="col">##url##</div>
@@ -39,7 +39,7 @@ class ApplyModelAttrsToThemeAction {
         $data = array_merge($data, $extra);
         $html = $theme->body_html;
         foreach ($data as $k => $v) {
-            if (is_string($v)) {
+            if (\is_string($v)) {
                 $html = str_replace('##'.$k.'##', $v, $html);
             }
         }

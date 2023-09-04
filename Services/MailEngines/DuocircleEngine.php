@@ -101,21 +101,27 @@ class DuocircleEngine {
             throw new Exception('class [Webklex\IMAP\Facades\\Client] not exists ['.__LINE__.']['.class_basename(__CLASS__).']');
         }
 
-        // @var \Webklex\PHPIMAP\Client $client
+        /** @var \Webklex\PHPIMAP\Client $client */
         $client = \Webklex\IMAP\Facades\Client::account('default');
 
         // Connect to the IMAP Server
         $client->connect();
 
-        // Get all Mailboxes
-        // @var \Webklex\PHPIMAP\Support\FolderCollection $folders
+        /**
+         * Get all Mailboxes.
+         *
+         * @var \Webklex\PHPIMAP\Support\FolderCollection $folders
+         */
         $folders = $client->getFolders();
 
         // Loop through every Mailbox
-        // @var \Webklex\PHPIMAP\Folder $folder
+        /** @var \Webklex\PHPIMAP\Folder $folder */
         foreach ($folders as $folder) {
-            // Get all Messages of the current Mailbox $folder
-            // @var \Webklex\PHPIMAP\Support\MessageCollection $messages
+            /**
+             * Get all Messages of the current Mailbox $folder.
+             *
+             * @var \Webklex\PHPIMAP\Support\MessageCollection $messages
+             */
             $messages = $folder->messages()->all()->get();
 
             // / @var \Webklex\PHPIMAP\Message $message
@@ -129,8 +135,12 @@ class DuocircleEngine {
                 //Move the current Message to 'INBOX.read'
 =======
                 // Move the current Message to 'INBOX.read'
+<<<<<<< HEAD
 >>>>>>> 0d776db (up)
                 if (true == $message->move('INBOX.read')) {
+=======
+                if (true === $message->move('INBOX.read')) {
+>>>>>>> b3b016d (up)
                     echo 'Message has ben moved';
                 } else {
                     echo 'Message could not be moved';

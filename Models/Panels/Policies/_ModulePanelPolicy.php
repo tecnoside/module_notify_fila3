@@ -18,11 +18,14 @@ class _ModulePanelPolicy extends XotBasePanelPolicy
         return true;
     }
 
+<<<<<<< HEAD
     public function trySms(UserContract $user, PanelContract $panel): bool
     {
         return true;
     }
 
+=======
+>>>>>>> b3b016d (up)
     public function trySms(UserContract $user, PanelContract $panel): bool {
         return true;
     }
@@ -35,11 +38,14 @@ class _ModulePanelPolicy extends XotBasePanelPolicy
         return true;
     }
 
+<<<<<<< HEAD
     public function tryMail(UserContract $user, PanelContract $panel): bool
     {
         return true;
     }
 
+=======
+>>>>>>> b3b016d (up)
     public function tryMail(UserContract $user, PanelContract $panel): bool {
         return true;
     }

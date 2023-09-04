@@ -41,6 +41,7 @@ use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 >>>>>>> 9f492fe (up)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  
  */
@@ -60,6 +61,8 @@ class TestMailAction extends XotBasePanelAction {
 >>>>>>> bc60653 (up)
 =======
 >>>>>>> 602db11 (up)
+=======
+>>>>>>> b3b016d (up)
 class TryMailAction extends XotBasePanelAction {
 >>>>>>> 64529a0 (up):Models/Panels/Actions/TryMailAction.php
 =======
