@@ -50,13 +50,27 @@ class RowAttributeNotification extends Notification implements ShouldQueue
         // Access to an undefined property Modules\Xot\Contracts\ModelContactContract::$notifyThemes.
         // $theme = $this->row->notifyThemes->first()->theme ?? 'ark';
 
+<<<<<<< HEAD
+=======
+        // if (! property_exists($this->row, 'mail_from')) {
+        //     throw new \Exception('['.__LINE__.']['.__FILE__.']');
+        // }
+        // if (! property_exists($this->row, 'mail_from_email')) {
+        //     throw new \Exception('['.__LINE__.']['.__FILE__.']');
+        // }
+
+>>>>>>> a514540 (up)
         $message = (new MailMessage())
             ->from($this->row->mail_from_email, $this->row->mail_from)
             ->subject($this->row->mail_subject)
             // ->line('---')
             // // non so se posso modificare questa riga senza creare errori in altre parti
             // ->view('notify::emails.templates.' . $theme . '.mail', ['html' => $this->row->mail_body, 'logo' => []]);
+<<<<<<< HEAD
             ->view('notify::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
+=======
+            ->view('quaeris::emails.invite', ['html' => $this->row->mail_body, 'logo' => []]);
+>>>>>>> a514540 (up)
 
         $this->row->sendEmailCallback();
 
