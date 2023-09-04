@@ -293,7 +293,7 @@ class EsendexSendAction
 
     public function __construct()
     {
-        $this->base_endpoint = 'https://app.esendex.it/API/v1.0/REST/';
+        $this->base_endpoint = 'https://app.messaggissima.it/API/v1.0/REST/';
     }
 
     /**
@@ -319,6 +319,7 @@ class EsendexSendAction
     {
 >>>>>>> a758bd5 (.)
         $auth = $this->login();
+
         if (! is_array($auth)) {
             throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
@@ -332,6 +333,7 @@ class EsendexSendAction
         ];
 
         $ch = curl_init();
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_URL, $this->base_endpoint.'sms');
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
             'Content-type: application/json',
@@ -359,10 +361,15 @@ class EsendexSendAction
         $res = json_decode($response, true);
 =======
         $res = json_decode(strval($response), true);
+<<<<<<< HEAD
 >>>>>>> 6eab953 (up)
 =======
         $res = json_decode(strval($response), true);
 >>>>>>> a758bd5 (.)
+=======
+
+        dddx($res);
+>>>>>>> 818ca81 (up)
         if (! is_array($res)) {
             throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
@@ -381,12 +388,18 @@ class EsendexSendAction
     public function login(): ?array
     {
         $ch = curl_init();
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
-        curl_setopt($ch, CURLOPT_URL, $this->base_endpoint.'login?username='.config('esendex.username').'&password='.config('esendex.password'));
+        $login_string = $this->base_endpoint.'login?username='.config('esendex.username').'&password='.config('esendex.password');
+
+        curl_setopt($ch, CURLOPT_URL, $login_string);
 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         $response = curl_exec($ch);
+
+        // dddx(['login_string' => $login_string, 'response' => $response]);
+
         $info = curl_getinfo($ch);
 
         curl_close($ch);
