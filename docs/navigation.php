@@ -4,6 +4,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8f4c37e (.)
 declare(strict_types=1);
 
 return [
@@ -70,6 +73,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 404660b (up)
 =======
 =======
@@ -108,4 +112,12 @@ return [
 >>>>>>> b735fbf (.)
 =======
 >>>>>>> becf1dc (up)
+=======
+    'Funzione del Modulo' => [
+        'url' => 'docs/module_notify',
+        'children' => [
+            'TrySendMailAction' => 'docs/try_send_mail_action',
+        ],
+    ],
+>>>>>>> 8f4c37e (.)
 ];
