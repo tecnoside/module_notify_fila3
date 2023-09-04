@@ -13,4 +13,8 @@ class Dashboard extends Page
     protected static ?string $navigationIcon = 'heroicon-o-home';
 
     protected static string $view = 'notify::filament.pages.dashboard';
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9ed774d (up)
