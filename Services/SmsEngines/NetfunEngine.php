@@ -764,11 +764,15 @@ class NetfunEngine {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     public function getVars() {
 =======
     public function getVars():array {
 >>>>>>> d8faaba (up)
+=======
+    public function getVars(): array {
+>>>>>>> 06bf12b (up)
         return $this->vars;
     }
 

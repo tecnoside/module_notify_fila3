@@ -7,7 +7,6 @@ namespace Modules\Notify\Models\Panels;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Modules\Cms\Models\Panels\XotBasePanel;
-use Modules\Notify\Models\NotifyThemeable;
 use Modules\Xot\Contracts\RowsContract;
 
 class NotifyThemeablePanel extends XotBasePanel {
@@ -25,7 +24,6 @@ class NotifyThemeablePanel extends XotBasePanel {
      * on select the option label.
      *
      * @param \Modules\Notify\Models\NotifyThemeable $row
-     * 
      */
     public function optionLabel($row): string {
         return '';

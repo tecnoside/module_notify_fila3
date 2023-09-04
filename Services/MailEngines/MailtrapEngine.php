@@ -162,16 +162,20 @@ class MailtrapEngine
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> df8079b (up)
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> 06bf12b (up)
         // try {
         Mail::raw((string) $this->body, function ($msg) {
             $msg->to($this->to)->subject('Test Email');
         });
         // Dead catch - ErrorException is never thrown in the try block.
         // } catch (ErrorException $e) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         //    throw new Exception('['.__LINE__.']['.__FILE__.']');
@@ -212,5 +216,9 @@ class MailtrapEngine
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> d8faaba (up)
+=======
+        //    throw new Exception('['.__LINE__.']['.__FILE__.']');
+        // }
+>>>>>>> 06bf12b (up)
     }
 }
