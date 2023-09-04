@@ -97,6 +97,10 @@ Homestead.json
 vendor/
 node_modules/
 npm-debug.log
+*.cache
+*.phar
+*.lock
+package-lock.json
 yarn-error.log
 
 # Laravel 4 specific
@@ -126,6 +130,7 @@ Homestead.json
 *.stackdump
 *.cache
 *.lock
+package-lock.json
 *.log
 
 <<<<<<< HEAD
@@ -161,11 +166,17 @@ Homestead.json
 >>>>>>> 6d24e5b (.)
 =======
 *.lock
+package-lock.json
 *.lock
+package-lock.json
 *.lock
+<<<<<<< HEAD
 >>>>>>> d8a2c68 (up)
 =======
 *.lock
 *.lock
 *.lock
 >>>>>>> fe06862 (.)
+=======
+package-lock.json
+>>>>>>> b5ea747 (.)
