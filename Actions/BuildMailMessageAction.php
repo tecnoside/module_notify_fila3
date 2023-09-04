@@ -66,7 +66,8 @@ class BuildMailMessageAction
      */
     public function execute(string $name, Model $model, array $view_params = [], ?DataCollection $attachments = null): MailMessage
     {
-        $view_params = array_merge($view_params, $model->toArray());
+        $view_params = array_merge($model->toArray(), $view_params);
+
         $type = 'email';
 
         $theme = app(\Modules\Notify\Actions\NotifyTheme\Get::class)->execute($name, $type, $view_params);
