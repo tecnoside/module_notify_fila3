@@ -1,14 +1,20 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
 >>>>>>> 48d3f55 (up)
+=======
+declare(strict_types=1);
+
+>>>>>>> bc60653 (up)
 namespace Modules\Notify\Actions;
 
 use Exception;
 use GuzzleHttp\Client;
+<<<<<<< HEAD
 <<<<<<< HEAD
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Str;
@@ -18,9 +24,11 @@ use Spatie\QueueableAction\QueueableAction;
 class NetfunSendAction
 {
 =======
+=======
+use GuzzleHttp\Exception\ClientException;
+>>>>>>> bc60653 (up)
 use Illuminate\Support\Str;
 use Modules\Notify\Data\SmsData;
-use GuzzleHttp\Exception\ClientException;
 use Spatie\QueueableAction\QueueableAction;
 
 class NetfunSendAction {
@@ -30,11 +38,16 @@ class NetfunSendAction {
     public string $token;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public array $vars = [];
 
 =======
     public array $vars=[];
 >>>>>>> 48d3f55 (up)
+=======
+    public array $vars = [];
+
+>>>>>>> bc60653 (up)
     /**
      * Create a new action instance.
      *
@@ -59,14 +72,14 @@ class NetfunSendAction {
 =======
     public function __construct() {
         // Prepare the action for execution, leveraging constructor injection.
-        $token=config('services.netfun.token');
-        if($token==null){
+        $token = config('services.netfun.token');
+        if (null == $token) {
             throw new Exception('put [NETFUN_TOKEN] variable to your .env and config [services.netfun.token] ');
         }
-        $this->token=$token;
+        $this->token = $token;
     }
 
-       /**
+    /**
      * Execute the action.
      */
     public function execute(SmsData $sms): array {
@@ -76,6 +89,7 @@ class NetfunSendAction {
             'Cache-Control' => 'no-cache',
             'Content-Type' => 'application/json',
         ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         // dddx([ord($this->body[0]), $this->body]);
@@ -89,6 +103,8 @@ class NetfunSendAction {
             $sms->to = '+39' . $sms->to;
 =======
         
+=======
+>>>>>>> bc60653 (up)
 
         // dddx([ord($this->body[0]), $this->body]);
 
@@ -107,10 +123,14 @@ class NetfunSendAction {
             // "gateway"=> 99,
             'sender' => $sms->from,
 <<<<<<< HEAD
+<<<<<<< HEAD
             'text_template' => $sms->body, // .'  '.rand(1, 100),
 =======
             'text_template' => $sms->body,//.'  '.rand(1, 100),
 >>>>>>> 48d3f55 (up)
+=======
+            'text_template' => $sms->body, // .'  '.rand(1, 100),
+>>>>>>> bc60653 (up)
             /*
             'delivery_callback' => 'https://www.google.com?code={{code}}',
             'default_placeholders' => [
@@ -157,12 +177,18 @@ class NetfunSendAction {
         $this->vars['status_code'] = $response->getStatusCode();
         $this->vars['status_txt'] = $response->getBody()->getContents();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bc60653 (up)
 
         return $this->vars;
     }
 }
+<<<<<<< HEAD
 =======
         return $this->vars;
     }
 }
 >>>>>>> 48d3f55 (up)
+=======
+>>>>>>> bc60653 (up)
