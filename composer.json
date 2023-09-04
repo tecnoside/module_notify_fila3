@@ -183,7 +183,6 @@
         "pestphp/pest-plugin-laravel": "*",
         "phpstan/extension-installer": "*",
         "phpunit/phpunit": "*",
-        "spatie/invade": "*",
         "spatie/laravel-typescript-transformer": "*",
         "spatie/pest-plugin-snapshots": "*",
         "spatie/phpunit-snapshot-assertions": "*",
@@ -232,8 +231,12 @@
 >>>>>>> 826c9ea (.)
 =======
     "prefer-stable": true
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> de1fcaf (up)
 =======
 >>>>>>> 11eadb3 (up)
+=======
+}
+>>>>>>> 722799f (up)
