@@ -10,11 +10,15 @@ namespace Modules\Notify\Models\Panels\Actions;
 // -------- services --------
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7f1bbca (up)
 use Illuminate\Support\Facades\Notification;
 use Modules\Cms\Actions\GetViewAction;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Notify\Datas\NotificationData;
 use Modules\Notify\Notifications\SampleNotification;
+<<<<<<< HEAD
 
 // -------- bases -----------
 <<<<<<< HEAD
@@ -36,6 +40,8 @@ use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 >>>>>>> 56255db (up)
 use Modules\Notify\Services\MailService;
 use Modules\UI\Services\ThemeService;
+=======
+>>>>>>> 7f1bbca (up)
 
 <<<<<<< HEAD
 //-------- bases -----------
@@ -130,6 +136,7 @@ class TryMailAction extends XotBasePanelAction {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $view = app(GetViewAction::class)->execute();
 =======
         $view = ThemeService::getView();
@@ -138,6 +145,9 @@ class TryMailAction extends XotBasePanelAction {
         //$view = ThemeService::getView();
 $view = $this->panel->getView();
 >>>>>>> 7455be1 (up)
+=======
+        $view = app(GetViewAction::class)->execute();
+>>>>>>> 7f1bbca (up)
 
         $view_params = [
             'view' => $view,
@@ -145,6 +155,7 @@ $view = $this->panel->getView();
             'driver' => $driver,
         ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         return view($view, $view_params);
@@ -182,6 +193,9 @@ $view = $this->panel->getView();
         // return 'not exists ['.$view.']';
 >>>>>>> 0d776db (up)
 >>>>>>> 5b257fb (up)
+=======
+        return view($view, $view_params);
+>>>>>>> 7f1bbca (up)
     }
 
     /**
@@ -189,6 +203,7 @@ $view = $this->panel->getView();
      */
     public function postHandle() {
         $data = request()->all();
+<<<<<<< HEAD
         $vars = collect($data)->only(['driver', 'from', 'to', 'body'])->all();
         MailService::make()
             ->setLocalVars($vars)
@@ -219,12 +234,17 @@ $view = $this->panel->getView();
      */
     public function postHandle() {
         $data = request()->all();
+=======
+>>>>>>> 7f1bbca (up)
         // $data['channels']=[$data['driver']];
         $data['channels'] = ['mail'];
         $hows = NotificationData::from($data);
         Notification::send([$hows], new SampleNotification($data));
         echo '<h3>+Done</h3>';
+<<<<<<< HEAD
 =======
 >>>>>>> 5b257fb (up)
+=======
+>>>>>>> 7f1bbca (up)
     }
 }

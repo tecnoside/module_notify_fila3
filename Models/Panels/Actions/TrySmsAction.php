@@ -125,8 +125,12 @@ class TrySmsAction extends XotBasePanelAction {
 >>>>>>> 5b257fb (up)
 =======
             'netfun'=>'netfun',
+<<<<<<< HEAD
             'essendex'=>'essendex',
 >>>>>>> ce6a32e (up)
+=======
+            'esendex'=>'esendex',
+>>>>>>> 7f1bbca (up)
         ];
         $i = request('i');
 
@@ -237,6 +241,7 @@ $view = $this->panel->getView();
         $data = request()->all();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $vars = collect($data)->only(['driver', 'from', 'to', 'body'])->all();
         SmsService::make()->setLocalVars($vars)->send();
 >>>>>>> 0d776db (up)
@@ -246,6 +251,9 @@ $view = $this->panel->getView();
         //$hows=NotificationData::collection([$data]);
 =======
 >>>>>>> 8229f91 (up)
+=======
+        $data['channels']=[$data['driver']];
+>>>>>>> 7f1bbca (up)
         $hows=NotificationData::from($data);
         Notification::send([$hows], new SampleNotification($data));
 <<<<<<< HEAD
