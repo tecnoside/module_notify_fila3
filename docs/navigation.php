@@ -16,6 +16,7 @@ return [
     //     ],
     // ],
     // 'Jigsaw Docs' => 'https://jigsaw.tighten.co/docs/installation',
+<<<<<<< HEAD
     'Funzione del Modulo' => [
         'url' => 'docs/module_notify',
         'children' => [
@@ -66,6 +67,8 @@ return [
 =======
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> ca8af38 (.)
     'Funzione del Modulo' => [
         'url' => 'docs/module_notify',
         'children' => [
