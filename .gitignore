@@ -45,6 +45,7 @@ package-lock.json
 *.log
 
 *.lock
+<<<<<<< HEAD
 package-lock.json
 
 <<<<<<< HEAD
@@ -237,3 +238,7 @@ package-lock.json
 >>>>>>> e375a73 (.)
 =======
 >>>>>>> a7caca4 (.)
+=======
+*.lock
+*.lock
+>>>>>>> 7fba3e2 (up)
