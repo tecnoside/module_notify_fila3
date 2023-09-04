@@ -26,8 +26,11 @@ Inserire il soggetto della notifica.
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ea7e096 (.)
+=======
+>>>>>>> 9ef66f5 (.)
 Inserire nel campo body il corpo della notifica e ricopiarlo nel campo body_html (utilizzato per le email).  
 
 ## Il body
@@ -40,6 +43,7 @@ In questo caso la notifica dovrà utilizzata dovrà avere dei parametri nella su
 Questi parametri dovranno essere utilizzati nel corpo della notifica, esempio:  
 ```php
 Ciao [profile.first_name] [profile.last_name] come stai?
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ```
@@ -67,3 +71,6 @@ aaaa
 =======
 Inserire nel campo body il corpo della notifica e ricopiarlo nel campo body_html (utilizzato per le email).  
 >>>>>>> bca128c (.)
+=======
+```
+>>>>>>> 9ef66f5 (.)
