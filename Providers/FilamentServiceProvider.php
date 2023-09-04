@@ -65,14 +65,20 @@ class FilamentServiceProvider extends ContextServiceProvider
             Filament::forContext('filament', function (){
                 Filament::registerNavigationItems([
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e032987 (up)
                     NavigationItem::make(static::$module)
                         ->label(static::$module.' ')
                         ->url(route(static::$name.'.pages.dashboard'))
                         ->icon('heroicon-o-bookmark')
                         ->group('Modules')
+<<<<<<< HEAD
 =======
                     NavigationItem::make(static::$module)->label(static::$module.' Module')->url(route(static::$name.'.pages.dashboard'))->icon('heroicon-o-bookmark')->group('Modules')
 >>>>>>> 01564cc (up)
+=======
+>>>>>>> e032987 (up)
                 ]);
             });
             Filament::forContext(static::$name, function (){
