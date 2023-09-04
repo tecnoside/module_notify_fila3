@@ -54,6 +54,7 @@ class GenerateSitemap {
             ->reject(function ($path) {
                 return $this->isExcluded($path);
 <<<<<<< HEAD
+<<<<<<< HEAD
             })->each(
                 function ($path) use ($baseUrl, $sitemap) {
                     $sitemap->addItem(rtrim($baseUrl, '/') . $path, time(), Sitemap::DAILY);
@@ -66,6 +67,10 @@ class GenerateSitemap {
         });
 >>>>>>> 404660b (up)
 =======
+=======
+            })->each(
+function ($path) use ($baseUrl, $sitemap) {
+>>>>>>> 2156399 (up)
                 $sitemap->addItem(rtrim($baseUrl, '/').$path, time(), Sitemap::DAILY);
             });
 >>>>>>> 6de787a (up)
