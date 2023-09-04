@@ -19,8 +19,8 @@ namespace Modules\Notify\Services;
 
 use Illuminate\Support\Str;
 
-<<<<<<< HEAD
 // ---------CSS------------
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -209,6 +209,8 @@ use Illuminate\Support\Str;
 =======
 //---------CSS------------
 >>>>>>> b3ff86f (.)
+=======
+>>>>>>> 0d776db (up)
 
 /**
  * Class SmsService.
@@ -253,11 +255,20 @@ class MailService {
     /**
      * ---.
      */
+<<<<<<< HEAD
     public function send() {
+=======
+    public function send(): self {
+>>>>>>> 0d776db (up)
         $class = '\Modules\Notify\Services\MailEngines\\'.Str::studly($this->driver).'Engine';
         $class::make()
             ->setLocalVars($this->vars)
             ->send();
+<<<<<<< HEAD
+=======
+
+        return $this;
+>>>>>>> 0d776db (up)
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -271,11 +282,20 @@ class MailService {
     /**
      * ---.
      */
+<<<<<<< HEAD
     public function try() {
+=======
+    public function try(): self {
+>>>>>>> 0d776db (up)
         $class = '\Modules\Notify\Services\MailEngines\\'.Str::studly($this->driver).'Engine';
         $class::make()
             ->setLocalVars($this->vars)
             ->try();
+<<<<<<< HEAD
+=======
+
+        return $this;
+>>>>>>> 0d776db (up)
     }
 }
 >>>>>>> 89120cb (rebase)

@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 
 declare(strict_types=1);
 
@@ -42,6 +41,7 @@ class _ModulePanelPolicy extends XotBasePanelPolicy
      */
 <<<<<<< HEAD
     public function trySendMail(UserContract $user, PanelContract $panel): bool {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -96,6 +96,8 @@ class _ModulePanelPolicy extends XotBasePanelPolicy {
     {
 =======
 >>>>>>> d27db1b (.)
+=======
+>>>>>>> 0d776db (up)
         return true;
     }
 }

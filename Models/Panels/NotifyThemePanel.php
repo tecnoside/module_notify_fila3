@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 // --- Services --
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 declare(strict_types=1);
@@ -40,6 +41,8 @@ namespace Modules\Notify\Models\Panels;
 
 use Illuminate\Http\Request;
 //--- Services --
+=======
+>>>>>>> 0d776db (up)
 
 use Modules\Xot\Models\Panels\XotBasePanel;
 >>>>>>> d27db1b (.)
@@ -47,6 +50,7 @@ use Modules\Xot\Models\Panels\XotBasePanel;
 class NotifyThemePanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,6 +67,8 @@ class NotifyThemePanel extends XotBasePanel {
      *
      * @var string
 >>>>>>> d27db1b (.)
+=======
+>>>>>>> 0d776db (up)
      */
     public static string $model = 'Modules\Notify\Models\NotifyTheme';
 
@@ -72,10 +78,13 @@ class NotifyThemePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 9f492fe (up)
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> 0d776db (up)
      */
     public static string $title = 'title';
 
@@ -272,6 +281,7 @@ class NotifyThemePanel extends XotBasePanel {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   (object) array(
      'type' => 'WysiwygSceditor',
      'name' => 'body_html',
@@ -303,6 +313,18 @@ class NotifyThemePanel extends XotBasePanel {
                 'name' => 'type',
                 'comment' => null,
                 'col_size' => 3,
+=======
+            (object) [
+                // 'type' => 'String',
+                'type' => 'Select',
+                'name' => 'type',
+                'comment' => null,
+                'col_size' => 3,
+                'options' => [
+                    'mail' => 'mail',
+                    'sms' => 'sms',
+                ],
+>>>>>>> 0d776db (up)
             ],
             (object) [
                 'type' => 'String',
@@ -472,6 +494,7 @@ class NotifyThemePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -482,6 +505,8 @@ class NotifyThemePanel extends XotBasePanel {
      * @return array
 =======
 >>>>>>> 9f492fe (up)
+=======
+>>>>>>> 0d776db (up)
      */
 <<<<<<< HEAD
     public function tabs():array {
@@ -530,6 +555,7 @@ class NotifyThemePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -540,6 +566,8 @@ class NotifyThemePanel extends XotBasePanel {
      * @return array
 =======
 >>>>>>> 9f492fe (up)
+=======
+>>>>>>> 0d776db (up)
      */
 <<<<<<< HEAD
     public function cards(Request $request):array {
@@ -588,6 +616,7 @@ class NotifyThemePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -598,6 +627,8 @@ class NotifyThemePanel extends XotBasePanel {
      * @return array
 =======
 >>>>>>> 9f492fe (up)
+=======
+>>>>>>> 0d776db (up)
      */
 <<<<<<< HEAD
     public function filters(Request $request = null):array {
@@ -644,6 +675,7 @@ class NotifyThemePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -654,6 +686,8 @@ class NotifyThemePanel extends XotBasePanel {
      * @return array
 =======
 >>>>>>> 9f492fe (up)
+=======
+>>>>>>> 0d776db (up)
      */
 <<<<<<< HEAD
     public function lenses(Request $request):array {
@@ -700,6 +734,7 @@ class NotifyThemePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -710,6 +745,8 @@ class NotifyThemePanel extends XotBasePanel {
      * @return array
 =======
 >>>>>>> 9f492fe (up)
+=======
+>>>>>>> 0d776db (up)
      */
 <<<<<<< HEAD
     public function actions():array {

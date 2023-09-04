@@ -426,8 +426,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services\SmsEngines;
 
-<<<<<<< HEAD
 use Exception;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d073338 (.)
@@ -714,6 +714,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services\SmsEngines;
 
+=======
+>>>>>>> 0d776db (up)
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Str;
@@ -730,6 +732,11 @@ class NetfunEngine {
     public string $driver;
     public ?string $body;
 
+<<<<<<< HEAD
+=======
+    public array $vars = [];
+
+>>>>>>> 0d776db (up)
     public string $send_method = 'batch';
 
     public function __construct() {
@@ -755,6 +762,13 @@ class NetfunEngine {
         return $this;
     }
 
+<<<<<<< HEAD
+=======
+    public function getVars() {
+        return $this->vars;
+    }
+
+>>>>>>> 0d776db (up)
     public function send(): self {
         switch ($this->send_method) {
             case 'batch': return $this->sendBatch();
@@ -816,13 +830,26 @@ class NetfunEngine {
         try {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
+<<<<<<< HEAD
             dddx($e);
         }
+=======
+            throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']');
+        }
+        /*
+>>>>>>> 0d776db (up)
         echo '<hr/>';
         echo '<pre>to: '.$this->to.'</pre>';
         echo '<pre>body: '.$this->body.'</pre>';
         echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
         echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
+<<<<<<< HEAD
+=======
+        */
+
+        $this->vars['status_code'] = $response->getStatusCode();
+        $this->vars['status_txt'] = $response->getBody()->getContents();
+>>>>>>> 0d776db (up)
 
         return $this;
     }
@@ -845,7 +872,11 @@ class NetfunEngine {
         try {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
+<<<<<<< HEAD
             dddx($e);
+=======
+            throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']');
+>>>>>>> 0d776db (up)
         }
         echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
         echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';

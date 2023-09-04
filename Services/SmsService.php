@@ -104,6 +104,7 @@ use Illuminate\Support\Str;
 // ---------CSS------------
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d27db1b (.)
@@ -130,6 +131,8 @@ use Illuminate\Support\Str;
 
 //---------CSS------------
 >>>>>>> d27db1b (.)
+=======
+>>>>>>> 0d776db (up)
 
 /**
  * Class SmsService.
@@ -258,6 +261,7 @@ class SmsService {
 
     public function getVars() {
         return $this->vars;
+<<<<<<< HEAD
     }
 }
 <<<<<<< HEAD
@@ -437,6 +441,8 @@ class SmsService
         $class::make()
             ->setLocalVars($this->vars)
             ->send();
+=======
+>>>>>>> 0d776db (up)
     }
 }
 <<<<<<< HEAD
