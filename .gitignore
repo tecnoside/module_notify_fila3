@@ -84,15 +84,19 @@ Homestead.json
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 23a7ddf (.)
 =======
 >>>>>>> eb84240 (.)
+=======
+>>>>>>> e65f668 (Initial commit)
 
 *.stackdump
 *.cache
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -200,3 +204,7 @@ package-lock.json
 >>>>>>> 830dc60 (.)
 =======
 >>>>>>> eb84240 (.)
+=======
+=======
+>>>>>>> 1b86d70 (Initial commit)
+>>>>>>> e65f668 (Initial commit)
