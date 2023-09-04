@@ -57,15 +57,16 @@ class TrySmsAction extends XotBasePanelAction {
 =======
 >>>>>>> 9f492fe (up)
         $drivers = [
-            'netfun',
+            'netfun'=>'netfun',
+            'essendex'=>'essendex',
         ];
         $i = request('i');
 
         $driver = isset($drivers[$i]) ? $drivers[$i] : null;
 
         // $view = ThemeService::getView();
-        $view = $this->panel->getView();
-        // $view = app(GetViewAction::class)->execute();
+        // $view = $this->panel->getView();
+        $view = app(GetViewAction::class)->execute();
 
         $view_params = [
             'view' => $view,
