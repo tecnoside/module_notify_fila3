@@ -252,8 +252,12 @@ abstract class BasePivot extends Pivot
     /**
      * @var string
      */
+<<<<<<< HEAD
     protected $connection = 'notify';
     // this will use the specified database connection
+=======
+    protected $connection = 'notify'; // this will use the specified database connection
+>>>>>>> 86dc9c6 (.)
     /**
      * @var array
      */
