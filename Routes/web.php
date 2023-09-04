@@ -6,6 +6,7 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 3a0e0a5 (up)
@@ -45,6 +46,8 @@ Route::prefix('notify')->group(function() {
 <?php
 
 declare(strict_types=1);
+=======
+>>>>>>> 188c25a (.)
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +60,7 @@ declare(strict_types=1);
 |
 */
 /*
+<<<<<<< HEAD
 Route::prefix('notify')->group(function() {
     Route::get('/', 'NotifyController@index');
 });
@@ -72,3 +76,9 @@ Route::prefix('notify')->group(function() {
     Route::get('/', 'NotifyController@index');
 });
 >>>>>>> 42aa20e (.)
+=======
+Route::prefix('notify')->group(function() {
+    Route::get('/', 'NotifyController@index');
+});
+*/
+>>>>>>> 188c25a (.)
