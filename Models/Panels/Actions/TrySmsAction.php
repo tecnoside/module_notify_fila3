@@ -29,6 +29,7 @@ use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 /**
  * Class TestAction.
  */
+<<<<<<< HEAD:Models/Panels/Actions/TestSmsAction.php
 class TestSmsAction extends XotBasePanelAction {
 <<<<<<< HEAD
 =======
@@ -37,6 +38,9 @@ class TestSmsAction extends XotBasePanelAction
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 9f492fe (up)
+=======
+class TrySmsAction extends XotBasePanelAction {
+>>>>>>> 64529a0 (up):Models/Panels/Actions/TrySmsAction.php
     public bool $onItem = true;
     public string $icon = '<i class="fas fa-vial"></i>SMS';
 
