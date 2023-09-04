@@ -63,9 +63,13 @@
         "phpstan/extension-installer": "*",
         "phpunit/phpunit": "*",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "psalm/plugin-laravel": "^2.8",
 =======
 >>>>>>> d94ee79 (up)
+=======
+        "psalm/plugin-laravel": "^2.8",
+>>>>>>> 7bcd34c (.)
         "spatie/laravel-typescript-transformer": "*",
         "spatie/pest-plugin-snapshots": "*",
         "spatie/phpunit-snapshot-assertions": "*",

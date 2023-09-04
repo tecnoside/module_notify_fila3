@@ -9,12 +9,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> b735fbf (.)
 =======
 >>>>>>> a758bd5 (.)
+=======
+>>>>>>> 7bcd34c (.)
 declare(strict_types=1);
 
 use Illuminate\Support\Str;
@@ -28,6 +31,7 @@ return [
     'production' => false,
     'siteName' => 'Modulo ' . $moduleName,
     'siteDescription' => 'Modulo ' . $moduleName,
+<<<<<<< HEAD
 <<<<<<< HEAD
     'lang' => 'it',
 
@@ -124,21 +128,23 @@ return [
 =======
     'siteName' => 'Modulo '.$moduleName,
     'siteDescription' => 'Modulo '.$moduleName,
+=======
+>>>>>>> 7bcd34c (.)
     'lang' => 'it',
 
     'collections' => [
         'posts' => [
             'path' => function ($page) {
-                //return $page->lang.'/posts/'.Str::slug($page->getFilename());
-                //return 'posts/' . ($page->featured ? 'featured/' : '') . Str::slug($page->getFilename());
+                // return $page->lang.'/posts/'.Str::slug($page->getFilename());
+                // return 'posts/' . ($page->featured ? 'featured/' : '') . Str::slug($page->getFilename());
 
-                return 'posts/'.Str::slug($page->getFilename());
+                return 'posts/' . Str::slug($page->getFilename());
             },
         ],
         'docs' => [
             'path' => function ($page) {
-                //return $page->lang.'/docs/'.Str::slug($page->getFilename());
-                return 'docs/'.Str::slug($page->getFilename());
+                // return $page->lang.'/docs/'.Str::slug($page->getFilename());
+                return 'docs/' . Str::slug($page->getFilename());
             },
         ],
     ],
@@ -195,8 +201,11 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b735fbf (.)
+=======
+>>>>>>> 7bcd34c (.)
     }, /*
     'url' => function ($page, $path) {
         return Str::startsWith($path, 'http') ? $path : '/' . trimPath($path);
@@ -208,12 +217,15 @@ return [
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b735fbf (.)
 =======
 
 >>>>>>> 68cf2d6 (Dusting)
+=======
+>>>>>>> 7bcd34c (.)
         // return url('/'.$page->lang.'/'.trimPath($path));
         return url('/' . trimPath($path));
     },
@@ -221,6 +233,7 @@ return [
     'children' => function ($page, $docs) {
         return $docs->where('parent_id', $page->id);
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -294,3 +307,6 @@ return [
 =======
 ];
 >>>>>>> 8126475 (up)
+=======
+];
+>>>>>>> 7bcd34c (.)

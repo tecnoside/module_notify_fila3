@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 namespace Modules\Notify\Providers;
@@ -32,7 +33,11 @@ class FilamentServiceProvider extends XotBaseContextServiceProvider
 <<<<<<< HEAD
 =======
 namespace Modules\Notify\Providers;
+=======
+declare(strict_types=1);
+>>>>>>> 7bcd34c (.)
 
+namespace Modules\Notify\Providers;
 
 use Modules\Xot\Providers\XotBaseContextServiceProvider;
 
@@ -40,6 +45,7 @@ class FilamentServiceProvider extends XotBaseContextServiceProvider
 {
     public static string $name = 'notify-filament';
     public static string $module = 'Notify';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 01564cc (up)
@@ -98,4 +104,6 @@ class FilamentServiceProvider extends XotBaseContextServiceProvider
 =======
     
 >>>>>>> 17b8a60 (up)
+=======
+>>>>>>> 7bcd34c (.)
 }

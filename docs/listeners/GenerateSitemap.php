@@ -100,7 +100,7 @@ class GenerateSitemap
             return;
         }
 
-        $sitemap = new Sitemap($jigsaw->getDestinationPath().'/sitemap.xml');
+        $sitemap = new Sitemap($jigsaw->getDestinationPath() . '/sitemap.xml');
 
         collect($jigsaw->getOutputPaths())
             ->reject(function ($path) {
@@ -114,6 +114,7 @@ class GenerateSitemap
             })->each(
                 function ($path) use ($baseUrl, $sitemap) {
                     $sitemap->addItem(rtrim($baseUrl, '/') . $path, time(), Sitemap::DAILY);
+<<<<<<< HEAD
 <<<<<<< HEAD
                 }
             );
@@ -170,6 +171,8 @@ function ($path) use ($baseUrl, $sitemap) {
 =======
                 function ($path) use ($baseUrl, $sitemap) {
                     $sitemap->addItem(rtrim($baseUrl, '/').$path, time(), Sitemap::DAILY);
+=======
+>>>>>>> 7bcd34c (.)
                 }
             );
 >>>>>>> 34ed535 (.)

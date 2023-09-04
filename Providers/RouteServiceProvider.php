@@ -93,7 +93,8 @@ class RouteServiceProvider extends ServiceProvider {
 // --- bases ---
 use Modules\Xot\Providers\XotBaseRouteServiceProvider;
 
-class RouteServiceProvider extends XotBaseRouteServiceProvider {
+class RouteServiceProvider extends XotBaseRouteServiceProvider
+{
     /**
      * The module namespace to assume when generating URLs to actions.
      */

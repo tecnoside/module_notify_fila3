@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
@@ -13,6 +14,10 @@ declare(strict_types=1);
 >>>>>>> b735fbf (.)
 =======
 >>>>>>> bc733de (up)
+=======
+declare(strict_types=1);
+
+>>>>>>> 7bcd34c (.)
 namespace Modules\Notify\Filament\Resources\NotifyThemeResource\RelationManagers;
 
 use Filament\Forms;
@@ -65,6 +70,7 @@ class LinkableRelationManager extends RelationManager
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 //
 >>>>>>> 9658d21 (up)
@@ -79,6 +85,8 @@ class LinkableRelationManager extends RelationManager
 =======
 
 >>>>>>> 34ed535 (.)
+=======
+>>>>>>> 7bcd34c (.)
             ])
             ->headerActions([
                 Tables\Actions\CreateAction::make(),

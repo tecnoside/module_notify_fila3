@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     @foreach ($rows as $row)
 =======
     @foreach($rows as $row)
@@ -23,6 +24,9 @@
 =======
     @foreach($rows as $row)
 >>>>>>> a758bd5 (.)
+=======
+    @foreach ($rows as $row)
+>>>>>>> 7bcd34c (.)
         <tr>
             <td>{{ $row->id }}</td>
 

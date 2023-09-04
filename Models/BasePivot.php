@@ -240,6 +240,7 @@ abstract class BasePivot extends Pivot
      * @var bool
      */
     public static $snakeAttributes = true;
+
     /**
      * @var bool
      */
@@ -257,11 +258,16 @@ abstract class BasePivot extends Pivot
      * @var string
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected $connection = 'notify';
     // this will use the specified database connection
 =======
     protected $connection = 'notify'; // this will use the specified database connection
 >>>>>>> 86dc9c6 (.)
+=======
+    protected $connection = 'notify';
+    // this will use the specified database connection
+>>>>>>> 7bcd34c (.)
     /**
      * @var array
      */

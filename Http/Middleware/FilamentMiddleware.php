@@ -3,8 +3,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b735fbf (.)
+=======
+>>>>>>> 7bcd34c (.)
 declare(strict_types=1);
 
 namespace Modules\Notify\Http\Middleware;

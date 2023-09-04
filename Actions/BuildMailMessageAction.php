@@ -133,13 +133,13 @@ class BuildMailMessageAction
 =======
 >>>>>>> 28dc197 (up)
     /**
-     * @param DataCollection<AttachmentData> $attachments
+     * @param  DataCollection<AttachmentData>  $attachments
      */
     public function execute(
         string $name,
         Model $model,
         array $view_params = [],
-        ?DataCollection $attachments = null
+        DataCollection $attachments = null
     ): MailMessage {
         $view_params = array_merge($model->toArray(), $view_params);
 
@@ -148,7 +148,7 @@ class BuildMailMessageAction
         $theme = app(\Modules\Notify\Actions\NotifyTheme\Get::class)->execute($name, $type, $view_params);
         $view_html = 'notify::email';
         // dddx([$theme, $view_params]);
-        $email = (new MailMessage())
+        $email = (new MailMessage)
             ->from($theme->view_params['from_email'], $theme->view_params['from'])
             ->subject($view_params['subject'] ?? $theme->subject)
 <<<<<<< HEAD

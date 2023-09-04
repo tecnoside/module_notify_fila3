@@ -266,6 +266,7 @@ class Contact extends BaseModel
  * @property string|null                     $updated_by
  * @property string|null                     $created_by
  * @property string|null                     $token
+ *
  * @method static \Modules\Notify\Database\Factories\ContactFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Contact     newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Contact     newQuery()
@@ -282,7 +283,9 @@ class Contact extends BaseModel
  * @method static \Illuminate\Database\Eloquent\Builder|Contact     whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact     whereValue($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact     whereVerifiedAt($value)
+ *
  * @mixin IdeHelperContact
+ *
  * @property string|null $email
  * @property string|null $mobile_phone
  * @property string|null $survey_pdf_id
@@ -293,9 +296,9 @@ class Contact extends BaseModel
  * @property string|null $first_name
  * @property string|null $last_name
  * @property string|null $sms_sent_at
- * @property int|null $sms_count
+ * @property int|null    $sms_count
  * @property string|null $mail_sent_at
- * @property int|null $mail_count
+ * @property int|null    $mail_count
  * @property string|null $attribute_5
  * @property string|null $attribute_6
  * @property string|null $attribute_7
@@ -310,8 +313,9 @@ class Contact extends BaseModel
  * @property string|null $usesleft
  * @property string|null $sms_status_code
  * @property string|null $sms_status_txt
- * @property int|null $duplicate_count
- * @property int|null $order_column
+ * @property int|null    $duplicate_count
+ * @property int|null    $order_column
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Contact whereAttribute1($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact whereAttribute10($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact whereAttribute11($value)
@@ -341,6 +345,7 @@ class Contact extends BaseModel
  * @method static \Illuminate\Database\Eloquent\Builder|Contact whereSmsStatusTxt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact whereSurveyPdfId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact whereUsesleft($value)
+ *
  * @mixin \Eloquent
  */
 <<<<<<< HEAD

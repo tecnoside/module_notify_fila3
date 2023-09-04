@@ -113,6 +113,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         'namespace' => $contextNs . '\\Pages',
         'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Pages"),
 =======
@@ -135,6 +136,10 @@ return [
 =======
         'path' => base_path('Modules/'.$moduleName."/{$contextPath}/Pages"),
 >>>>>>> 34ed535 (.)
+=======
+        'namespace' => $contextNs . '\\Pages',
+        'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Pages"),
+>>>>>>> 7bcd34c (.)
         'register' => [
             Pages\Dashboard::class,
         ],
@@ -154,6 +159,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         'namespace' => $contextNs . '\\Resources',
         'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Resources"),
 =======
@@ -176,6 +182,10 @@ return [
 =======
         'path' => base_path('Modules/'.$moduleName."/{$contextPath}/Resources"),
 >>>>>>> 34ed535 (.)
+=======
+        'namespace' => $contextNs . '\\Resources',
+        'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Resources"),
+>>>>>>> 7bcd34c (.)
         'register' => [],
     ],
 
@@ -190,6 +200,7 @@ return [
     */
 
     'widgets' => [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -235,6 +246,13 @@ return [
 >>>>>>> 37525d3 (.)
             //Widgets\FilamentInfoWidget::class,
 >>>>>>> 7fdff6c (up)
+=======
+        'namespace' => $contextNs . '\\Widgets',
+        'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Widgets"),
+        'register' => [
+            // Widgets\AccountWidget::class,
+            // Widgets\FilamentInfoWidget::class,
+>>>>>>> 7bcd34c (.)
         ],
     ],
 
@@ -252,6 +270,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         'namespace' => $moduleNs . '\\Http\\Livewire',
         'path' => base_path('Modules/' . $moduleName . '/Http/Livewire'),
 =======
@@ -266,6 +285,10 @@ return [
         'namespace' => $moduleNs.'\\Http\\Livewire',
         'path' => base_path('Modules/'.$moduleName.'/Http/Livewire'),
 >>>>>>> 01564cc (up)
+=======
+        'namespace' => $moduleNs . '\\Http\\Livewire',
+        'path' => base_path('Modules/' . $moduleName . '/Http/Livewire'),
+>>>>>>> 7bcd34c (.)
     ],
 
     /*

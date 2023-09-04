@@ -49,6 +49,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 declare(strict_types=1);
@@ -154,4 +155,6 @@ return [
 
 
 >>>>>>> b349bf0 (.)
+=======
+>>>>>>> 7bcd34c (.)
 ];
