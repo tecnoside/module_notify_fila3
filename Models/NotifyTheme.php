@@ -298,6 +298,7 @@ class NotifyTheme extends BaseModel {
         'subject',
         'body',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'body_html',
         'from',
 <<<<<<< HEAD
@@ -312,7 +313,13 @@ class NotifyTheme extends BaseModel {
 =======
 =======
 >>>>>>> 42aa20e (.)
+<<<<<<< HEAD
 >>>>>>> d073338 (.)
+=======
+=======
+        'from',
+>>>>>>> 8b046e1 (.)
+>>>>>>> 79bdce6 (.)
     ];
 
     protected $appends = [
