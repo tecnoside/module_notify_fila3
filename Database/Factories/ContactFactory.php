@@ -24,7 +24,11 @@ class ContactFactory extends Factory
     public function definition()
     {
         return [
+<<<<<<< HEAD
             // 'model_id' => $this->faker->randomNumber(5, false),
+=======
+            'model_id' => $this->faker->integer,
+>>>>>>> e73574f (up)
             'model_type' => $this->faker->word,
             'contact_type' => $this->faker->word,
             'value' => $this->faker->word,
@@ -33,7 +37,11 @@ class ContactFactory extends Factory
             'created_at' => $this->faker->dateTime,
             'updated_by' => $this->faker->word,
             'created_by' => $this->faker->word,
+<<<<<<< HEAD
             // 'user_id' => $this->faker->randomNumber(5, false),
+=======
+            'user_id' => $this->faker->integer,
+>>>>>>> e73574f (up)
             'token' => $this->faker->word,
         ];
     }
