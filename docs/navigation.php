@@ -40,6 +40,7 @@ return [
             'Link utili' => 'docs/duocircle/links',
         ],
     ],
+<<<<<<< HEAD
 =======
 =======
 declare(strict_types=1);
@@ -92,6 +93,8 @@ return [
 >>>>>>> fe06862 (.)
 =======
 
+=======
+>>>>>>> 0cbb44c (.)
 
 
 >>>>>>> cac1c0d (.)
