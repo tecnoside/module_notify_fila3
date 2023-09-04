@@ -11,10 +11,12 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BasePivot.
  */
-abstract class BasePivot extends Pivot
-{
+abstract class BasePivot extends Pivot {
     use Updater;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5f3f456 (up)
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -22,6 +24,7 @@ abstract class BasePivot extends Pivot
      *
      * @var bool
      */
+<<<<<<< HEAD
     public static $snakeAttributes = true;
 =======
 /**
@@ -32,11 +35,18 @@ abstract class BasePivot extends Pivot
  * @var bool
  */
 // public static $snakeAttributes = true;
+=======
+    // public static $snakeAttributes = true;
+>>>>>>> 5f3f456 (up)
 
-protected $perPage = 30;
+    protected $perPage = 30;
 
+<<<<<<< HEAD
     //use Searchable;
 >>>>>>> 9a6fed4 (up)
+=======
+    // use Searchable;
+>>>>>>> 5f3f456 (up)
 
     /**
      * @var bool
