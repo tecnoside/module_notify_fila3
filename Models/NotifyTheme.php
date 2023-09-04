@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -148,3 +149,28 @@ class NotifyTheme extends BaseModel {
 >>>>>>> 9349baf (.)
 =======
 >>>>>>> 3a0e0a5 (up)
+=======
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Notify\Models;
+
+/**
+ * --.
+ */
+class NotifyTheme extends BaseModel {
+    /**
+     * @var array<string>
+     */
+    protected $fillable = [
+        'id',
+        'lang',
+        'type',
+        'subject',
+        'body',
+        'body_html',
+        'from',
+    ];
+}
+>>>>>>> 89120cb (rebase)

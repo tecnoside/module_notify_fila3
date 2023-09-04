@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -25,3 +26,12 @@ return [
 >>>>>>> 9349baf (.)
 =======
 >>>>>>> 3a0e0a5 (up)
+=======
+<?php
+
+declare(strict_types=1);
+
+return [
+    'name' => 'Notify',
+];
+>>>>>>> 89120cb (rebase)
