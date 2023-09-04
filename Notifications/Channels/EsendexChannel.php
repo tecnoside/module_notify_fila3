@@ -4,15 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Notifications\Channels;
 
+use Illuminate\Support\Facades\Notification;
 use Modules\Notify\Actions\EsendexSendAction;
-use Modules\Notify\Notifications\RowAttributeNotification;
+use Modules\Notify\Notifications\SmsNotification;
 use Modules\Xot\Contracts\ModelContactContract;
 
 class EsendexChannel {
     public function __construct() {
     }
 
-    public function send($notifiable, RowAttributeNotification $notification) {
+    public function send($notifiable, SmsNotification $notification) {
         // Send notification to the $notifiable instance...
         $message = $notification->toSms($notifiable);
         // Send notification to the $notifiable instance...
