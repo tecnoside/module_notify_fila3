@@ -264,6 +264,7 @@ package-lock.json
 
 *.lock
 package-lock.json
+<<<<<<< HEAD
 *.lock
 package-lock.json
 *.lock
@@ -272,3 +273,7 @@ package-lock.json
 =======
 package-lock.json
 >>>>>>> 0ce2fce (.)
+=======
+
+/docs/package-lock.json
+>>>>>>> c9fe379 (.)
