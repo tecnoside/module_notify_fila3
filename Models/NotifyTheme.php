@@ -137,6 +137,9 @@ namespace Modules\Notify\Models;
 /**
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a62aee (up)
  * Modules\Notify\Models\NotifyTheme.
  *
  * @property int                             $id

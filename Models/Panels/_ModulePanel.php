@@ -14,10 +14,12 @@ class _ModulePanel extends XotBasePanel {
         return [
             new Actions\TestSmsAction(),
             new Actions\TestMailAction(),
-<<<<<<< HEAD
             new Actions\TrySendMailAction(),
+<<<<<<< HEAD
 =======
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 3a62aee (up)
         ];
     }
 }

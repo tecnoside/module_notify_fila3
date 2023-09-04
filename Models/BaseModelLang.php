@@ -5,11 +5,13 @@ declare(strict_types=1);
 namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-<<<<<<< HEAD
 // //use Laravel\Scout\Searchable;
+<<<<<<< HEAD
 =======
 ////use Laravel\Scout\Searchable;
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 3a62aee (up)
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Lang\Models\Traits\LinkedTrait;
@@ -17,7 +19,6 @@ use Modules\Xot\Traits\Updater;
 
 /**
  * Class BaseModelLang.
-<<<<<<< HEAD
  *
  * @property string|null $post_type
  */
@@ -45,6 +46,7 @@ abstract class BaseModelLang extends Model {
      */
     protected $casts = [
         // 'published_at' => 'datetime:Y-m-d', // da verificare
+<<<<<<< HEAD
 =======
  */
 abstract class BaseModelLang extends Model
@@ -63,6 +65,8 @@ abstract class BaseModelLang extends Model
     protected $casts = [
         //'published_at' => 'datetime:Y-m-d', // da verificare
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 3a62aee (up)
     ];
 
     /**
@@ -81,17 +85,19 @@ abstract class BaseModelLang extends Model
     public $incrementing = true;
 
     /**
-<<<<<<< HEAD
      * @var array<int, string>
      */
     protected $hidden = [
         // 'password'
+<<<<<<< HEAD
 =======
      * @var array
      */
     protected $hidden = [
         //'password'
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 3a62aee (up)
     ];
 
     /**
@@ -99,11 +105,13 @@ abstract class BaseModelLang extends Model
      */
     public $timestamps = true;
 
-<<<<<<< HEAD
     // -----------
+<<<<<<< HEAD
 =======
     //-----------
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 3a62aee (up)
     /*
     protected $id;
     protected $post;
