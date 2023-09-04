@@ -161,5 +161,13 @@ return [
          //return url('/'.$page->lang.'/'.trimPath($path));
         return url('/'.trimPath($path));
     },
+<<<<<<< HEAD
 ];
 >>>>>>> dd3d1c2 (up)
+=======
+
+    'children' => function ($page, $docs) {
+        return $docs->where('parent_id', $page->id);
+    },
+];
+>>>>>>> 78056fb (up)
