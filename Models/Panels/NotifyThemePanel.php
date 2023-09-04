@@ -51,7 +51,8 @@ use Modules\Xot\Models\Panels\XotBasePanel;
 use Modules\Cms\Models\Panels\XotBasePanel;
 >>>>>>> 56255db (up)
 
-class NotifyThemePanel extends XotBasePanel {
+class NotifyThemePanel extends XotBasePanel
+{
     /**
      * The model the resource corresponds to.
 <<<<<<< HEAD
@@ -96,7 +97,8 @@ class NotifyThemePanel extends XotBasePanel {
      * Get the fields displayed by the resource.
         'value'=>'..',
      */
-    public function fields(): array {
+    public function fields(): array
+    {
         return [
             (object) [
                 'type' => 'Id',
@@ -378,6 +380,32 @@ class NotifyThemePanel extends XotBasePanel {
                 'except' => ['index'],
                 'col_size' => 12,
             ],
+
+            (object) [
+                'type' => 'String',
+                'name' => 'post_type',
+                'col_size' => 3,
+                'comment' => null,
+            ],
+            (object) [
+                'type' => 'String',
+                'name' => 'post_id',
+                'col_size' => 3,
+                'comment' => null,
+            ],
+            (object) [
+                'type' => 'Cell',
+                'name' => 'theme/logo',
+                'col_size' => 3,
+                'fields' => $this->logoFields(),
+                'comment' => null,
+            ],
+        ];
+    }
+
+    public function logoFields()
+    {
+        return [
             (object) [
                 'type' => 'Select',
                 'name' => 'theme',
@@ -391,9 +419,22 @@ class NotifyThemePanel extends XotBasePanel {
                     'widgets' => 'widgets',
                 ],
             ],
+
             (object) [
                 'type' => 'String',
-                'name' => 'post_type',
+                'name' => 'logo_path',
+                'col_size' => 3,
+                'comment' => null,
+            ],
+            (object) [
+                'type' => 'String',
+                'name' => 'logo_width',
+                'col_size' => 3,
+                'comment' => null,
+            ],
+            (object) [
+                'type' => 'String',
+                'name' => 'logo_height',
                 'col_size' => 3,
                 'comment' => null,
             ],
@@ -542,6 +583,7 @@ class NotifyThemePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function tabs(): array {
 =======
      *
@@ -587,6 +629,10 @@ class NotifyThemePanel extends XotBasePanel {
 =======
     public function tabs(): array {
 >>>>>>> a7caca4 (.)
+=======
+    public function tabs(): array
+    {
+>>>>>>> 2e16e99 (up)
         $tabs_name = [];
 
         return $tabs_name;
@@ -603,6 +649,7 @@ class NotifyThemePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function cards(Request $request): array {
 =======
      *
@@ -648,6 +695,10 @@ class NotifyThemePanel extends XotBasePanel {
 =======
     public function cards(Request $request): array {
 >>>>>>> a7caca4 (.)
+=======
+    public function cards(Request $request): array
+    {
+>>>>>>> 2e16e99 (up)
         return [];
     }
 
@@ -664,6 +715,7 @@ class NotifyThemePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function filters(Request $request = null): array {
 =======
      *
@@ -709,6 +761,10 @@ class NotifyThemePanel extends XotBasePanel {
 =======
     public function filters(Request $request = null): array {
 >>>>>>> a7caca4 (.)
+=======
+    public function filters(Request $request = null): array
+    {
+>>>>>>> 2e16e99 (up)
         return [];
     }
 
@@ -723,6 +779,7 @@ class NotifyThemePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function lenses(Request $request): array {
 =======
      *
@@ -768,6 +825,10 @@ class NotifyThemePanel extends XotBasePanel {
 =======
     public function lenses(Request $request): array {
 >>>>>>> a7caca4 (.)
+=======
+    public function lenses(Request $request): array
+    {
+>>>>>>> 2e16e99 (up)
         return [];
     }
 
@@ -782,6 +843,7 @@ class NotifyThemePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function actions(): array {
 =======
      *
@@ -827,6 +889,10 @@ class NotifyThemePanel extends XotBasePanel {
 =======
     public function actions(): array {
 >>>>>>> a7caca4 (.)
+=======
+    public function actions(): array
+    {
+>>>>>>> 2e16e99 (up)
         return [];
     }
 }

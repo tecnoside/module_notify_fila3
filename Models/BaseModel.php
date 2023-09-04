@@ -284,6 +284,8 @@ abstract class BaseModel extends Model {
 >>>>>>> b1dceab (up)
     ];
 
+    protected $appends = [];
+
     /**
      * @var string[]
      */
@@ -432,6 +434,7 @@ abstract class BaseModel extends Model {
 =======
 >>>>>>> b1dceab (up)
     }
+<<<<<<< HEAD
 }
 >>>>>>> 42aa20e (.)
 =======
@@ -451,3 +454,6 @@ abstract class BaseModel extends Model {
     }
 }
 >>>>>>> d27db1b (.)
+=======
+}
+>>>>>>> 2e16e99 (up)
