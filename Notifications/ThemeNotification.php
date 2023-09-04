@@ -62,16 +62,19 @@ class ThemeNotification extends Notification implements ShouldQueue
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
     public function __construct(string $name, array $view_params)
 =======
     public function __construct(string $name, array $view_params, ?array $attachments = [])
 >>>>>>> b068ab9 (up)
+=======
+    public function __construct(string $name, array $view_params)
+>>>>>>> dfee631 (up)
     {
         $this->name = $name;
         $this->view_params = $view_params;
-        $this->attachments = $attachments;
     }
 
     /**
@@ -157,8 +160,12 @@ class ThemeNotification extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
+        $attachments = $notifiable
+            ->getNotificationData($this->name)
+            ->attachments;
+
         $mail_message = app(BuildMailMessageAction::class)
-             ->execute($this->name, $notifiable->getModel(), $this->view_params, $this->attachments);
+             ->execute($this->name, $notifiable->getModel(), $this->view_params, $attachments);
 
         return $mail_message;
     }
