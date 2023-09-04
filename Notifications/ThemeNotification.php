@@ -259,7 +259,8 @@ class ThemeNotification extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
-        return app(BuildUserMailMessageAction::class)->execute($this->name, $this->view_params);
+        return app(BuildMailMessageAction::class)
+            ->execute($this->name, $notifiable->getModel(), $this->view_params);
     }
 
 <<<<<<< HEAD
