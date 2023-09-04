@@ -8,10 +8,13 @@ updates:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c0a5fb1 (up)
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> eaef4d8 (up)
 
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -29,6 +32,7 @@ updates:
       - "dependencies"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 95a4930 (.)
 =======
@@ -37,3 +41,5 @@ updates:
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> 4a63f54 (.)
+=======
+>>>>>>> eaef4d8 (up)
