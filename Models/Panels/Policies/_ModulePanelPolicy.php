@@ -9,8 +9,12 @@ use Modules\Cms\Contracts\PanelContract;
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 =======
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
+<<<<<<< HEAD
 use Modules\Xot\Contracts\PanelContract;
 >>>>>>> 56255db (up)
+=======
+use Modules\Cms\Contracts\PanelContract;
+>>>>>>> 1d687b9 (up)
 use Modules\Xot\Contracts\UserContract;
 
 class _ModulePanelPolicy extends XotBasePanelPolicy
