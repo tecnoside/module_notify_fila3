@@ -9,8 +9,10 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class _ModulePanel.
  */
-class _ModulePanel extends XotBasePanel {
-    public function actions(): array {
+class _ModulePanel extends XotBasePanel
+{
+    public function actions(): array
+    {
         return [
             new Actions\TrySmsAction(),
             new Actions\TryMailAction(),
@@ -39,6 +41,7 @@ class _ModulePanel extends XotBasePanel {
 >>>>>>> df8079b (up)
 =======
             new Actions\TrySendNotificationAction(),
+            new Actions\TryThemeNotificationAction(),
             // new Actions\TryAlertAction(),
 >>>>>>> fe06862 (.)
         ];
