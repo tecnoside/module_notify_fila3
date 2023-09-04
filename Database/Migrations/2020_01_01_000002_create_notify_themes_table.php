@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -56,6 +57,8 @@ class CreateNotifyThemesTable extends XotBaseMigration {
     //end function up
 }
 =======
+=======
+>>>>>>> 8b046e1 (.)
 <?php
 
 declare(strict_types=1);
@@ -112,4 +115,7 @@ class CreateNotifyThemesTable extends XotBaseMigration {
 
     //end function up
 }
+<<<<<<< HEAD
 >>>>>>> 89120cb (rebase)
+=======
+>>>>>>> 8b046e1 (.)
