@@ -1,6 +1,7 @@
 <html>
 	<head>
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<title>{{ isset($senderName) ? $senderName : '' }}.</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<style type="text/css">{{ $_theme->cssInLine('notify::css/ark.css') }}</style>
@@ -11,12 +12,19 @@
 		<style type="text/css">{{ file_get_contents(app_path() . '/../vendor/snowfire/beautymail/src/styles/css/ark.css') }}</style>
 		@if($css)
 >>>>>>> 83f2b60 (up)
+=======
+		<title>{{ isset($senderName) ? $senderName : '' }}.</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style type="text/css">{{ Theme::viewpath('notify::css/ark.css') }}</style>
+		@if(isset($css))
+>>>>>>> 7616aad (up)
 		<style type="text/css">
 			{{ $css }}
-		</style>
+		</style> 
 		@endif
 	</head>
 	<body>
+<<<<<<< HEAD
 <<<<<<< HEAD
 	{{--
 	[{{ $_theme->cssInLine('notify::css/ark.css') }}]
@@ -24,6 +32,9 @@
 	--}}
 =======
 >>>>>>> 83f2b60 (up)
+=======
+	[{{ (\Modules\Xot\Services\FileService::assetPath('notify::css/ark.css')) }}]
+>>>>>>> 7616aad (up)
 	<table id="background-table" border="0" cellpadding="0" cellspacing="0" width="100%">
 		<tbody>
 		<tr>
@@ -39,12 +50,18 @@
 					<tr class="mobile_only">
 						<td class="w640" width="640" align="center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 							<img class="mobile_only" border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : '' }}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
 
 =======
 							<img class="mobile_only" border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : '' }}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
 >>>>>>> 83f2b60 (up)
+=======
+							
+							<img class="mobile_only" border="0" src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}" alt="{{ isset($senderName) ? $senderName : '' }}" width="{{ array_key_exists('width', $logo) ? $logo['width'] : '' }}" height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
+							
+>>>>>>> 7616aad (up)
 						</td>
 					</tr>
 					<tr class="mobile_only">

@@ -221,9 +221,9 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Providers;
 
-use Exception;
-use Illuminate\Support\ServiceProvider;
+use Modules\Xot\Providers\XotBaseServiceProvider;
 
+<<<<<<< HEAD
 class NotifyServiceProvider extends ServiceProvider {
     /**
      * @var string
@@ -329,6 +329,12 @@ class NotifyServiceProvider extends ServiceProvider {
 <<<<<<< HEAD
         return $paths;
     }
+=======
+class NotifyServiceProvider extends XotBaseServiceProvider {
+    protected string $module_dir = __DIR__;
+    protected string $module_ns = __NAMESPACE__;
+    public string $module_name = 'notify';
+>>>>>>> 7616aad (up)
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
