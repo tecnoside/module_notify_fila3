@@ -47,4 +47,11 @@ class _ModulePanelPolicy extends XotBasePanelPolicy {
 >>>>>>> 9f492fe (up)
         return true;
     }
+
+    /**
+     * --.
+     */
+    public function TryAlert(UserContract $user, PanelContract $panel): bool {
+        return true;
+    }
 }
