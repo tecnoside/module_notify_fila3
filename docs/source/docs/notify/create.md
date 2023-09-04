@@ -20,6 +20,9 @@ Inserire il mittente che verrà visualizzato.
 In caso si stia creando una email, inserire l'indirizzo mittente se diverso da quello di default.  
 Inserire il soggetto della notifica.  
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea7e096 (.)
 Inserire nel campo body il corpo della notifica e ricopiarlo nel campo body_html (utilizzato per le email).  
 
 ## Il body
@@ -32,6 +35,7 @@ In questo caso la notifica dovrà utilizzata dovrà avere dei parametri nella su
 Questi parametri dovranno essere utilizzati nel corpo della notifica, esempio:  
 ```php
 Ciao [profile.first_name] [profile.last_name] come stai?
+<<<<<<< HEAD
 ```
 
 Ciò significa che per utilizzare questa email, come parametro dovrà avere un array profile,  
@@ -42,3 +46,6 @@ aaaa
 =======
 Inserire nel campo body il corpo della notifica e ricopiarlo nel campo body_html (utilizzato per le email).  
 >>>>>>> 68cb834 (.)
+=======
+```
+>>>>>>> ea7e096 (.)
