@@ -20,6 +20,7 @@ namespace Modules\Notify\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Eloquent;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Spatie\MediaLibrary\HasMedia;
@@ -296,6 +297,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
+=======
+>>>>>>> 2d62b50 (.)
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
@@ -454,7 +457,8 @@ class NotifyTheme extends BaseModel {
     public function getLogoAttribute(?array $value): array
     {
         return [
-            'path' => asset(strval($this->logo_src)),
+            // 'path' => asset(strval($this->logo_src)),
+            'path' => url($this->getFirstMediaUrl()),
             'width' => $this->logo_width ?? 50,
             'height' => $this->logo_height ?? 50,
         ];
