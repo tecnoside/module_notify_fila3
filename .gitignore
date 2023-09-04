@@ -83,13 +83,17 @@ Homestead.json
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 23a7ddf (.)
+=======
+>>>>>>> eb84240 (.)
 
 *.stackdump
 *.cache
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -194,3 +198,5 @@ package-lock.json
 =======
 *.cache
 >>>>>>> 830dc60 (.)
+=======
+>>>>>>> eb84240 (.)
