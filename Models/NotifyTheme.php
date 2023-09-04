@@ -39,11 +39,14 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property int|null                        $post_id
  * @property string|null                     $body_html
  * @property string|null                     $theme
+<<<<<<< HEAD
  * @property string|null                     $from_email
  * @property string|null                     $logo_src
  * @property int|null                        $logo_width
  * @property int|null                        $logo_height
  * @property array                           $logo
+=======
+>>>>>>> 10ed461 (up)
  *
  * @method static \Modules\Notify\Database\Factories\NotifyThemeFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme     newModelQuery()
