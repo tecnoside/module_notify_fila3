@@ -284,6 +284,7 @@ class SmsService {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function mergeVars(array $vars): self {
         $this->vars = array_merge($this->vars, $vars);
 
@@ -303,6 +304,9 @@ class SmsService {
             ->send();
 =======
     public function getVars() {
+=======
+    public function getVars(): array {
+>>>>>>> 1ebfe39 (up)
         return $this->vars;
 >>>>>>> 9f492fe (up)
     }

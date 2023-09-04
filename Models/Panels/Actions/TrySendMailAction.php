@@ -41,7 +41,11 @@ class TrySendMailAction extends XotBasePanelAction {
             'minty' => 'minty',
             'sunny' => 'sunny',
         ];
-        $mailer_options = array_keys(config('mail.mailers'));
+        $mail_mailers=config('mail.mailers');
+        if(!is_array($mail_mailers)){
+            throw new Exception('['.__LINE__.']['.__FILE__.']');
+        }
+        $mailer_options = array_keys($mail_mailers);
         $mailer_options = array_combine($mailer_options, $mailer_options);
 
         $view = ThemeService::getView();
@@ -75,6 +79,7 @@ class TrySendMailAction extends XotBasePanelAction {
         return 'done';
         // */
         // $view='notify::emails.welcome';
+        /*
         $view = 'notify::emails.samples.ark';
         $test = (object) ['a' => 'b'];
         $users = [
@@ -83,6 +88,7 @@ class TrySendMailAction extends XotBasePanelAction {
         ];
 
         Notification::send($users, new TestNotification($test));
+        */
         /*
         $beautymail = app()->make(BeautyEmail::class);
         $view_params=$beautymail->getSettings();

@@ -65,6 +65,7 @@ class NetfunChannel {
      * @return void
      */
     public function send($notifiable, Notification $notification) {
+<<<<<<< HEAD
 >>>>>>> 602db11 (up)
         $message = $notification->toSms($notifiable);
         // Send notification to the $notifiable instance...
@@ -91,6 +92,9 @@ class NetfunChannel {
      * @return void
      */
     public function send($notifiable, Notification $notification) {
+=======
+        // Call to an undefined method Illuminate\Notifications\Notification::toSms().
+>>>>>>> 1ebfe39 (up)
         $message = $notification->toSms($notifiable);
         // Send notification to the $notifiable instance...
         $data = app(NetfunSendAction::class)->execute($message);
@@ -103,7 +107,7 @@ class NetfunChannel {
         if ($notifiable instanceof ModelContactContract) {
 >>>>>>> 78bc45c (.)
             $data['sms_sent_at'] = now();
-            $data['sms_count'] = $notifiable->sms_count + 1;
+            $data['sms_count'] = (int)$notifiable->sms_count + 1;
             $notifiable->update($data);
         }
     }

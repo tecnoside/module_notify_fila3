@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions;
 
-use Illuminate\Database\Eloquent\Model;
+use Str;
 use Illuminate\Support\Collection;
 use Modules\Notify\Models\NotifyTheme;
+use Illuminate\Database\Eloquent\Model;
 use Spatie\QueueableAction\QueueableAction;
 
 class ApplyModelAttrsToThemeAction
@@ -45,7 +46,7 @@ class ApplyModelAttrsToThemeAction
         }
 
         if (!empty($options)) {
-            $string_to_replace = \Str::between($theme->body_html, '##foreach##', '##endforeach##');
+            $string_to_replace = Str::between((string)$theme->body_html, '##foreach##', '##endforeach##');
             $items='';
             foreach ($options as $option) {
                 $extra = [
