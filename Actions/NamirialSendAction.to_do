@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Notify\Datas\SmsData;
 =======
 use Modules\Notify\Data\SmsData;
@@ -20,6 +21,9 @@ use Modules\Notify\Datas\SmsData;
 =======
 use Modules\Notify\Datas\SmsData;
 >>>>>>> fe06862 (.)
+=======
+use Modules\Notify\Data\SmsData;
+>>>>>>> 6eb7546 (up)
 use Spatie\QueueableAction\QueueableAction;
 
 class NamirialSendAction {
