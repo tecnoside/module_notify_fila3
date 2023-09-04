@@ -4,6 +4,8 @@
     <table class="table table-bordered">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     @foreach ($rows as $row)
 =======
     @foreach($rows as $row)
@@ -11,6 +13,12 @@
 =======
     @foreach($rows as $row)
 >>>>>>> fe06862 (.)
+=======
+    @foreach ($rows as $row)
+>>>>>>> b735fbf (.)
+=======
+    @foreach($rows as $row)
+>>>>>>> ea9d4ca (up)
         <tr>
             <td>{{ $row->id }}</td>
 

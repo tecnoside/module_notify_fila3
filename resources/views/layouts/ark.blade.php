@@ -6,6 +6,8 @@
     <style type="text/css">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
         {{ cssInLine('notify::css/ark.css') }}
 =======
         {{ $_theme->cssInLine('notify::css/ark.css') }}
@@ -13,6 +15,12 @@
 =======
         {{ $_theme->cssInLine('notify::css/ark.css') }}
 >>>>>>> fe06862 (.)
+=======
+        {{ cssInLine('notify::css/ark.css') }}
+>>>>>>> c32f3bb (.)
+=======
+        {{ $_theme->cssInLine('notify::css/ark.css') }}
+>>>>>>> 2e16e99 (up)
     </style>
     @if (isset($css))
         <style type="text/css">
@@ -43,6 +51,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 184193d (up)
                                     @if (is_array($logo))
@@ -56,6 +65,8 @@
 =======
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> 2e16e99 (up)
 
                                     <img class="mobile_only" border="0"
                                         src="{{ array_key_exists('path', $logo) ? $logo['path'] : '' }}"
@@ -64,11 +75,14 @@
                                         height="{{ array_key_exists('height', $logo) ? $logo['height'] : '' }}" />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b62f52c (up)
 =======
 >>>>>>> fe06862 (.)
 =======
 >>>>>>> 184193d (up)
+=======
+>>>>>>> 2e16e99 (up)
                                 </td>
                             </tr>
                             <tr class="mobile_only">
@@ -83,6 +97,7 @@
                             <tr>
                                 <td id="header" class="w640" align="center" bgcolor="#FFFFFF" width="640">
                                     <table class="w640" border="0" cellpadding="0" cellspacing="0" width="640">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -107,6 +122,8 @@
 =======
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> 2e16e99 (up)
                                         <tr>
                                             <td class="w20" width="20"></td>
                                             <td id="logo"
@@ -120,6 +137,7 @@
                                             </td>
                                             <td class="w30" width="30"></td>
                                         </tr>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b62f52c (up)
 =======
@@ -137,6 +155,8 @@
                                             </tr>
                                         @endif
 >>>>>>> 184193d (up)
+=======
+>>>>>>> 2e16e99 (up)
                                         <tr>
                                             <td colspan="3" height="20" class="large_only"></td>
                                         </tr>
