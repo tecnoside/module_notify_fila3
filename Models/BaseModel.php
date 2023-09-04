@@ -328,6 +328,8 @@ abstract class BaseModel extends Model {
         // 'published_at' => 'datetime:Y-m-d', // da verificare
     ];
 
+    protected $appends = [];
+
     /**
      * @var string[]
      */
@@ -360,6 +362,7 @@ abstract class BaseModel extends Model {
         return FactoryService::newFactory(static::class);
 <<<<<<< HEAD
     }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> 89120cb (rebase)
@@ -378,3 +381,6 @@ abstract class BaseModel extends Model {
     }
 }
 >>>>>>> 42aa20e (.)
+=======
+}
+>>>>>>> b62f52c (up)
