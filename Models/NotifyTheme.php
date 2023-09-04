@@ -93,6 +93,9 @@ class NotifyTheme extends BaseModel implements HasMedia
         'body_html',
         'from',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6be7b8e (.)
         'from_email',
         'post_type',
         'post_id',
