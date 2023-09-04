@@ -5,15 +5,23 @@ declare(strict_types=1);
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
+<<<<<<< HEAD
 class CreateNotifyThemeablesTable extends XotBaseMigration
 {
+=======
+class CreateNotifyThemeablesTable extends XotBaseMigration {
+>>>>>>> 18a2c03 (up)
     /**
      * Run the migrations.
      *
      * @return void
      */
+<<<<<<< HEAD
     public function up()
     {
+=======
+    public function up() {
+>>>>>>> 18a2c03 (up)
         // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
