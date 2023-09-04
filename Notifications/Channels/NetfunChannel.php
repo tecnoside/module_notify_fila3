@@ -127,7 +127,11 @@ class NetfunChannel
 <<<<<<< HEAD
         if ($notifiable instanceof ModelContactContract) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $notifiable->increase('sms', $data);
+=======
+            $notifiable->increase('sms',$data);
+>>>>>>> 3d98802 (up)
             /*
             $data['sms_sent_at'] = now();
             $data['sms_count'] = (int) $notifiable->sms_count + 1;
