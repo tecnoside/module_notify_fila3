@@ -64,7 +64,7 @@ return [
 =======
     'siteName' => 'Modulo '.$moduleName,
     'siteDescription' => 'Modulo '.$moduleName,
-    //'lang' => 'it',
+    'lang' => 'it',
 
     'collections' => [
         'posts' => [
@@ -97,6 +97,7 @@ return [
     },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'isItemActive' => function ($page, $item) {
         return Str::endsWith(trimPath($page->getPath()), trimPath($item->getPath()));
     },
@@ -104,6 +105,11 @@ return [
 >>>>>>> 404660b (up)
 =======
 >>>>>>> fe06862 (.)
+=======
+    'isItemActive' => function ($page, $item) {
+        return Str::endsWith(trimPath($page->getPath()), trimPath($item->getPath()));
+    },
+>>>>>>> fbeb824 (up)
     'isActiveParent' => function ($page, $menuItem) {
         if (is_object($menuItem) && $menuItem->children) {
             return $menuItem->children->contains(function ($child) use ($page) {
