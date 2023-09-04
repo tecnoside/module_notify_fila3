@@ -290,9 +290,13 @@ class EsendexSendAction {
      */
     public function execute(SmsData $sms): array {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return [];
 >>>>>>> 657fe4e (up)
 =======
+=======
+        
+>>>>>>> ce6a32e (up)
         $auth = $this->login();
 
         $data = [
