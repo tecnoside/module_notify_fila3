@@ -14,15 +14,17 @@ class FilamentMiddleware extends XotBaseFilamentMiddleware
 =======
 namespace Modules\Notify\Http\Middleware;
 
+use Nwidart\Modules\Laravel\Module;
 use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
-use Nwidart\Modules\Laravel\Module;
+use Modules\Xot\Http\Middleware\XotBaseFilamentMiddleware;
 
-class FilamentMiddleware extends Middleware
+class FilamentMiddleware extends XotBaseFilamentMiddleware
 {
     public static string $module = 'Notify';
     public static string $context = 'filament';
 
+<<<<<<< HEAD
     private function getModule(): Module {
         return app('modules')->findOrFail(static::$module);
     }
@@ -68,4 +70,7 @@ class FilamentMiddleware extends Middleware
         return route("$context.auth.login");
     }
 >>>>>>> 911eb41 (up)
+=======
+   
+>>>>>>> ca17928 (up)
 }
