@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -20,6 +21,11 @@ declare(strict_types=1);
 
 return [
 >>>>>>> 602db11 (up)
+=======
+declare(strict_types=1);
+
+return [
+>>>>>>> fe06862 (.)
     // These CSS rules will be applied after the regular template CSS
 
     /*
@@ -32,6 +38,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 602db11 (up)
         'highlight' => '#004ca3',
@@ -59,6 +66,8 @@ return [
 
 =======
 >>>>>>> bc60653 (up)
+=======
+>>>>>>> fe06862 (.)
         'highlight' => '#004ca3',
         'button' => '#004cad',
     ],
@@ -79,6 +88,7 @@ return [
         'facebook' => null,
         'flickr' => null,
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 64529a0 (up)
@@ -87,4 +97,6 @@ return [
 =======
     ],
 >>>>>>> 602db11 (up)
+=======
+>>>>>>> fe06862 (.)
 ];

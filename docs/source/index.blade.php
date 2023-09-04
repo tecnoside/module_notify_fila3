@@ -3,13 +3,19 @@
 @section('body')
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a9945fb (.)
+=======
+>>>>>>> fe06862 (.)
     <section class="container max-w-6xl mx-auto px-6 py-10 md:py-12">
         <div class="flex flex-col-reverse mb-10 lg:flex-row lg:mb-24">
             <div class="mt-8">
                 <h1 id="intro-docs-template">{{ $page->siteName }}</h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe06862 (.)
 
                 <h2 id="intro-powered-by-jigsaw" class="font-light mt-4">{{ $page->siteDescription }}</h2>
 
@@ -62,6 +68,7 @@
             </div>
         </div>
     </section>
+<<<<<<< HEAD
 =======
 <section class="container max-w-6xl mx-auto px-6 py-10 md:py-12">
     <div class="flex flex-col-reverse mb-10 lg:flex-row lg:mb-24">
@@ -157,4 +164,6 @@
 =======
     </section>
 >>>>>>> a9945fb (.)
+=======
+>>>>>>> fe06862 (.)
 @endsection

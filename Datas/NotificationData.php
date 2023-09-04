@@ -6,6 +6,7 @@ namespace Modules\Notify\Datas;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Models\Notification as NotificationModel;
 use Spatie\LaravelData\Data;
@@ -27,12 +28,23 @@ class NotificationData extends Data {
 class NotificationData extends Data
 {
 >>>>>>> 4a1a664 (up)
+=======
+use Illuminate\Notifications\Notification;
+use Modules\Notify\Models\Notification as NotificationModel;
+use Spatie\LaravelData\Data;
+
+class NotificationData extends Data
+{
+>>>>>>> fe06862 (.)
     // public string $mobile_phone;
     // public string $token;
     // public int $q;
     public string $from;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe06862 (.)
     public ?string $from_email = null;
     public string $to;
     public ?string $subject = null;
@@ -40,6 +52,7 @@ class NotificationData extends Data
     public string $body;
     public array $channels = [];
 
+<<<<<<< HEAD
     /**
      * @var DataCollection<AttachmentData>
      */
@@ -81,6 +94,8 @@ class NotificationData extends Data
     public string $body;
     public array $channels = [];
 
+=======
+>>>>>>> fe06862 (.)
     /** Get the notification routing information for the given driver.
      *
      * @param string $driver
@@ -98,9 +113,12 @@ class NotificationData extends Data
         return $this->to;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 >>>>>>> 0cbdb01 (up)
 =======
+=======
+>>>>>>> fe06862 (.)
 
     public function getSmsData(): SmsData
     {
@@ -110,5 +128,8 @@ class NotificationData extends Data
             'body' => $this->body,
         ]);
     }
+<<<<<<< HEAD
 >>>>>>> 4a1a664 (up)
+=======
+>>>>>>> fe06862 (.)
 }

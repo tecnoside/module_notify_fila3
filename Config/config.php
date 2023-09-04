@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -20,6 +21,8 @@ return [
 >>>>>>> 3a0e0a5 (up)
 =======
 >>>>>>> 8be0eaa (up)
+=======
+>>>>>>> fe06862 (.)
 <?php
 
 declare(strict_types=1);
@@ -27,6 +30,7 @@ declare(strict_types=1);
 return [
     'name' => 'Notify',
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 9349baf (.)
@@ -52,3 +56,5 @@ return [
 >>>>>>> 3a62aee (up)
 ];
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> fe06862 (.)

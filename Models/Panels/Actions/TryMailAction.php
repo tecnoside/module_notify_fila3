@@ -16,6 +16,7 @@ use Modules\Notify\Notifications\SampleNotification;
 
 // -------- bases -----------
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 //-------- services --------
 
@@ -51,6 +52,10 @@ class TestMailAction extends XotBasePanelAction {
 >>>>>>> 602db11 (up)
 class TryMailAction extends XotBasePanelAction {
 >>>>>>> 64529a0 (up):Models/Panels/Actions/TryMailAction.php
+=======
+
+class TryMailAction extends XotBasePanelAction {
+>>>>>>> fe06862 (.)
     public bool $onItem = true;
     public string $icon = '<i class="fas fa-vial"></i>Mail';
 
@@ -59,10 +64,14 @@ class TryMailAction extends XotBasePanelAction {
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe06862 (.)
     public function handle() {
         $drivers = [
             'duocircle',
             'mailtrap',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     public function handle()
@@ -77,6 +86,8 @@ class TryMailAction extends XotBasePanelAction {
 >>>>>>> 6d517f2 (.)
 =======
 >>>>>>> 9f492fe (up)
+=======
+>>>>>>> fe06862 (.)
         ];
         $i = request('i');
 
@@ -91,6 +102,7 @@ class TryMailAction extends XotBasePanelAction {
         ];
 
         return view($view, $view_params);
+<<<<<<< HEAD
 <<<<<<< HEAD
         // }
 
@@ -123,6 +135,8 @@ class TryMailAction extends XotBasePanelAction {
 >>>>>>> 9f492fe (up)
 =======
 >>>>>>> f0164c0 (up)
+=======
+>>>>>>> fe06862 (.)
     }
 
     /**

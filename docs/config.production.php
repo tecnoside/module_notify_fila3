@@ -2,10 +2,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe06862 (.)
 declare(strict_types=1);
 
 return [
     'baseUrl' => 'https://laraxot.github.io/module_notify/',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -17,6 +21,8 @@ return [
 >>>>>>> 404660b (up)
 =======
 >>>>>>> c08c05e (.)
+=======
+>>>>>>> fe06862 (.)
     'production' => true,
 
     // DocSearch credentials

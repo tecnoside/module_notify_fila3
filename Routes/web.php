@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -85,3 +86,8 @@ Route::prefix('notify')->group(function() {
 >>>>>>> 188c25a (.)
 =======
 >>>>>>> 9f492fe (up)
+=======
+<?php
+
+declare(strict_types=1);
+>>>>>>> fe06862 (.)

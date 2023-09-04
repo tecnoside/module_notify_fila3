@@ -36,6 +36,7 @@ class _ModulePanelPolicy extends XotBasePanelPolicy {
      */
     public function trySendMail(UserContract $user, PanelContract $panel): bool {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 namespace Modules\Notify\Models\Panels\Policies;
 
@@ -53,6 +54,8 @@ class _ModulePanelPolicy extends XotBasePanelPolicy {
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 9f492fe (up)
+=======
+>>>>>>> fe06862 (.)
         return true;
     }
 

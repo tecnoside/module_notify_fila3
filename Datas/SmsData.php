@@ -7,6 +7,7 @@ namespace Modules\Notify\Datas;
 use Spatie\LaravelData\Data;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class SmsData extends Data
 {
     public string $from;
@@ -25,4 +26,10 @@ class SmsData extends Data {
     public string $to;
     public string $body;
 >>>>>>> ace9eb3 (up)
+=======
+class SmsData extends Data {
+    public string $from;
+    public string $to;
+    public string $body;
+>>>>>>> fe06862 (.)
 }

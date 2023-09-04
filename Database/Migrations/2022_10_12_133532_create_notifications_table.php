@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,11 +11,15 @@
 =======
 //https://blog.quickadminpanel.com/laravel-notifications-with-database-driver-internal-messages/
 >>>>>>> 0cbdb01 (up)
+=======
+//https://blog.quickadminpanel.com/laravel-notifications-with-database-driver-internal-messages/
+>>>>>>> fe06862 (.)
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 class CreateNotificationsTable extends XotBaseMigration
 {
@@ -36,11 +41,15 @@ class CreateNotificationsTable extends XotBaseMigration {
 =======
 class CreateNotificationsTable extends XotBaseMigration {
 >>>>>>> 602db11 (up)
+=======
+class CreateNotificationsTable extends XotBaseMigration {
+>>>>>>> fe06862 (.)
     /**
      * Run the migrations.
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,6 +68,10 @@ class CreateNotificationsTable extends XotBaseMigration {
     public function up() {
         // -- CREATE --
 >>>>>>> 602db11 (up)
+=======
+    public function up() {
+        // -- CREATE --
+>>>>>>> fe06862 (.)
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->uuid('id')->primary();
@@ -72,6 +85,7 @@ class CreateNotificationsTable extends XotBaseMigration {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // -- UPDATE --
 =======
          // -- UPDATE --
@@ -82,6 +96,9 @@ class CreateNotificationsTable extends XotBaseMigration {
 =======
         // -- UPDATE --
 >>>>>>> 602db11 (up)
+=======
+        // -- UPDATE --
+>>>>>>> fe06862 (.)
         $this->tableUpdate(
             function (Blueprint $table) {
                 if (! $this->hasColumn('updated_at')) {
@@ -97,6 +114,7 @@ class CreateNotificationsTable extends XotBaseMigration {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 
@@ -109,3 +127,6 @@ class CreateNotificationsTable extends XotBaseMigration {
 =======
 }
 >>>>>>> 602db11 (up)
+=======
+}
+>>>>>>> fe06862 (.)

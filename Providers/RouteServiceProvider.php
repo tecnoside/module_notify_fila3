@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 <<<<<<< HEAD
@@ -204,6 +205,8 @@ class RouteServiceProvider extends ServiceProvider
 =======
 >>>>>>> 3a0e0a5 (up)
 =======
+=======
+>>>>>>> fe06862 (.)
 <?php
 
 declare(strict_types=1);
@@ -221,8 +224,11 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider {
     protected string $module_dir = __DIR__;
     protected string $module_ns = __NAMESPACE__;
 }
+<<<<<<< HEAD
 >>>>>>> 89120cb (rebase)
 =======
 >>>>>>> 8be0eaa (up)
 =======
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> fe06862 (.)

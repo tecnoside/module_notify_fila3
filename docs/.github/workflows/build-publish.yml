@@ -12,10 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - uses: actions/checkout@v3
 =======
     - uses: actions/checkout@v2
 >>>>>>> 5cf61b8 (up)
+=======
+    - uses: actions/checkout@v2
+>>>>>>> fe06862 (.)
     - name: Install Composer Dependencies
       run: composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
     - name: Install NPM Dependencies

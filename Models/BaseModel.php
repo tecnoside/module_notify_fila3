@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 42aa20e (.)
 <?php
@@ -204,6 +205,8 @@ abstract class BaseModel extends Model
 >>>>>>> 89120cb (rebase)
 =======
 >>>>>>> 47d9a86 (.)
+=======
+>>>>>>> fe06862 (.)
 <?php
 
 declare(strict_types=1);
@@ -235,6 +238,7 @@ abstract class BaseModel extends Model
      *
      * @var bool
      */
+<<<<<<< HEAD
      public static $snakeAttributes = true;
 
     protected $perPage = 30;
@@ -316,6 +320,8 @@ abstract class BaseModel extends Model {
      *
      * @var bool
      */
+=======
+>>>>>>> fe06862 (.)
     public static $snakeAttributes = true;
 
     protected $perPage = 30;
@@ -363,6 +369,7 @@ abstract class BaseModel extends Model {
     {
         return FactoryService::newFactory(static::class);
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -390,3 +397,7 @@ abstract class BaseModel extends Model {
 =======
 }
 >>>>>>> b5251e5 (up)
+=======
+    }
+}
+>>>>>>> fe06862 (.)

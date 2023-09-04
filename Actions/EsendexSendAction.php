@@ -6,6 +6,7 @@ namespace Modules\Notify\Actions;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Exception;
 use Modules\Notify\Datas\SmsData;
 use Spatie\QueueableAction\QueueableAction;
@@ -115,6 +116,10 @@ use Modules\Notify\Data\SmsData;
 use Modules\Notify\Datas\SmsData;
 >>>>>>> ace9eb3 (up)
 use Spatie\QueueableAction\QueueableAction;
+=======
+use Modules\Notify\Datas\SmsData;
+use Spatie\QueueableAction\QueueableAction;
+>>>>>>> fe06862 (.)
 
 /**
  * @property string $base_endpoint
@@ -132,6 +137,7 @@ class EsendexSendAction
      * Sends an SMS message.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function execute(SmsData $sms): array {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,6 +151,10 @@ class EsendexSendAction
     public function execute(SmsData $sms): array
     {
 >>>>>>> e73574f (up)
+=======
+    public function execute(SmsData $sms): array
+    {
+>>>>>>> fe06862 (.)
         $auth = $this->login();
         if (! is_array($auth)) {
             throw new \Exception('['.__LINE__.']['.__FILE__.']');
@@ -179,6 +189,7 @@ class EsendexSendAction
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return json_decode($response, true);
 >>>>>>> 7f83000 (up)
 =======
@@ -186,12 +197,18 @@ class EsendexSendAction
 =======
         $res = json_decode(strval($response), true);
 >>>>>>> 4a1a664 (up)
+=======
+        $res = json_decode(strval($response), true);
+>>>>>>> fe06862 (.)
         if (! is_array($res)) {
             throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
 
         return $res;
+<<<<<<< HEAD
 >>>>>>> e73574f (up)
+=======
+>>>>>>> fe06862 (.)
     }
 
     /**

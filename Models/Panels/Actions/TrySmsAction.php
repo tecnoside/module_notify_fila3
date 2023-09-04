@@ -8,11 +8,14 @@ namespace Modules\Notify\Models\Panels\Actions;
 
 // -------- services --------
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 //-------- services --------
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 9f492fe (up)
+=======
+>>>>>>> fe06862 (.)
 
 use Modules\Cms\Actions\GetViewAction;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
@@ -27,15 +30,19 @@ use Modules\Notify\Datas\NotificationData;;
 
 // -------- bases -----------
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 //-------- bases -----------
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 9f492fe (up)
+=======
+>>>>>>> fe06862 (.)
 
 /**
  * Class TestAction.
  */
+<<<<<<< HEAD
 <<<<<<< HEAD:Models/Panels/Actions/TestSmsAction.php
 class TestSmsAction extends XotBasePanelAction {
 <<<<<<< HEAD
@@ -48,6 +55,9 @@ class TestSmsAction extends XotBasePanelAction
 =======
 class TrySmsAction extends XotBasePanelAction {
 >>>>>>> 64529a0 (up):Models/Panels/Actions/TrySmsAction.php
+=======
+class TrySmsAction extends XotBasePanelAction {
+>>>>>>> fe06862 (.)
     public bool $onItem = true;
     public string $icon = '<i class="fas fa-vial"></i>SMS';
 
@@ -56,12 +66,15 @@ class TrySmsAction extends XotBasePanelAction {
      */
     public function handle() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     public function handle()
     {
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 9f492fe (up)
+=======
+>>>>>>> fe06862 (.)
         $drivers = [
             'netfun'=>'netfun',
             'esendex'=>'esendex',
@@ -82,6 +95,7 @@ class TrySmsAction extends XotBasePanelAction {
 
     public function postHandle() {
         $data = request()->all();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -118,5 +132,11 @@ class TrySmsAction extends XotBasePanelAction {
 =======
         echo '<h3>+Done</h3>';
 >>>>>>> ace9eb3 (up)
+=======
+        $data['channels']=[$data['driver']];
+        $hows=NotificationData::from($data);
+        Notification::send([$hows], new SampleNotification($data));
+        echo '<h3>+Done</h3>';
+>>>>>>> fe06862 (.)
     }
 }

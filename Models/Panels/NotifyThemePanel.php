@@ -2,12 +2,16 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe06862 (.)
 declare(strict_types=1);
 
 namespace Modules\Notify\Models\Panels;
 
 use Illuminate\Http\Request;
 // --- Services --
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -21,6 +25,8 @@ use Illuminate\Http\Request;
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 9f492fe (up)
+=======
+>>>>>>> fe06862 (.)
 
 use Modules\Cms\Models\Panels\XotBasePanel;
 
@@ -30,12 +36,15 @@ class NotifyThemePanel extends XotBasePanel
      * The model the resource corresponds to.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @var string
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> 9f492fe (up)
+=======
+>>>>>>> fe06862 (.)
      */
     public static string $model = 'Modules\Notify\Models\NotifyTheme';
 
@@ -43,8 +52,11 @@ class NotifyThemePanel extends XotBasePanel
      * The single value that should be used to represent the resource when being displayed.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 9f492fe (up)
+=======
+>>>>>>> fe06862 (.)
      */
     public static string $title = 'title';
 
@@ -185,6 +197,7 @@ class NotifyThemePanel extends XotBasePanel
                 'comment' => null,
             ],
         ];
+<<<<<<< HEAD
 =======
      *
      * @var string
@@ -280,10 +293,13 @@ class NotifyThemePanel extends XotBasePanel
             ],
         ];
 >>>>>>> 6d24e5b (.)
+=======
+>>>>>>> fe06862 (.)
     }
 
     /**
      * Get the tabs available.
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
      */
@@ -314,6 +330,11 @@ class NotifyThemePanel extends XotBasePanel
     public function tabs(): array
     {
 >>>>>>> c7c0159 (up)
+=======
+     */
+    public function tabs(): array
+    {
+>>>>>>> fe06862 (.)
         $tabs_name = [];
 
         return $tabs_name;
@@ -321,6 +342,7 @@ class NotifyThemePanel extends XotBasePanel
 
     /**
      * Get the cards available for the request.
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
      */
@@ -351,6 +373,11 @@ class NotifyThemePanel extends XotBasePanel
     public function cards(Request $request): array
     {
 >>>>>>> c7c0159 (up)
+=======
+     */
+    public function cards(Request $request): array
+    {
+>>>>>>> fe06862 (.)
         return [];
     }
 
@@ -358,6 +385,7 @@ class NotifyThemePanel extends XotBasePanel
      * Get the filters available for the resource.
      *
      * @param \Illuminate\Http\Request $request
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
      */
@@ -388,11 +416,17 @@ class NotifyThemePanel extends XotBasePanel
     public function filters(Request $request = null): array
     {
 >>>>>>> c7c0159 (up)
+=======
+     */
+    public function filters(Request $request = null): array
+    {
+>>>>>>> fe06862 (.)
         return [];
     }
 
     /**
      * Get the lenses available for the resource.
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
      */
@@ -423,11 +457,17 @@ class NotifyThemePanel extends XotBasePanel
     public function lenses(Request $request): array
     {
 >>>>>>> c7c0159 (up)
+=======
+     */
+    public function lenses(Request $request): array
+    {
+>>>>>>> fe06862 (.)
         return [];
     }
 
     /**
      * Get the actions available for the resource.
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
      */
@@ -458,6 +498,11 @@ class NotifyThemePanel extends XotBasePanel
     public function actions(): array
     {
 >>>>>>> c7c0159 (up)
+=======
+     */
+    public function actions(): array
+    {
+>>>>>>> fe06862 (.)
         return [];
     }
 }
