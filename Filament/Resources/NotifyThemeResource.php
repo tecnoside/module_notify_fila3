@@ -66,6 +66,7 @@ use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
 use Modules\Notify\Models\NotifyTheme;
 >>>>>>> 34ed535 (.)
 use Savannabits\FilamentModules\Concerns\ContextualResource;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class NotifyThemeResource extends Resource
 {
@@ -97,8 +98,11 @@ class NotifyThemeResource extends Resource
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f401a20 (up)
+=======
+>>>>>>> c3b067c (up)
                 Forms\Components\SpatieMediaLibraryFileUpload::make('logo_src')
                     ->enableOpen()
                     ->enableDownload()
@@ -122,8 +126,11 @@ class NotifyThemeResource extends Resource
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f401a20 (up)
+=======
+>>>>>>> c3b067c (up)
                 Forms\Components\Textarea::make('body')->columnSpanFull(),
                 // Forms\Components\RichEditor::make('body_html')->columnSpanFull(),
                 TinyEditor::make('body_html')->columnSpanFull(),
@@ -241,6 +248,7 @@ class NotifyThemeResource extends Resource
                 'post_id' => Tables\Columns\TextColumn::make('post_id')->sortable(),
                 'post_type' => Tables\Columns\TextColumn::make('post_type')->sortable(),
                 'logo_src' => Tables\Columns\TextColumn::make('logo_src')->sortable(),
+<<<<<<< HEAD
 =======
         
         
@@ -275,6 +283,8 @@ class NotifyThemeResource extends Resource
 >>>>>>> f401a20 (up)
 =======
 >>>>>>> 01564cc (up)
+=======
+>>>>>>> c3b067c (up)
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('lang')
