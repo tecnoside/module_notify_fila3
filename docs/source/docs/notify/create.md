@@ -7,6 +7,7 @@ section: content
 
 # Creare Notifica
 
+<<<<<<< HEAD
 Per creare una notifica, andare nella dashboard nel modulo Notify.
 Cliccare sul tasto Create in alto a destra.  
 
@@ -31,3 +32,6 @@ Ciao [profile.first_name] [profile.last_name] come stai?
 
 Ciò significa che per utilizzare questa email, come parametro dovrà avere un array profile,  
 con all'interno first_name e last_name.
+=======
+aaaa
+>>>>>>> cac1c0d (.)

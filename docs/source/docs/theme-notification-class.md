@@ -8,6 +8,7 @@ section: content
 # Notifica ThemeNotification
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Classe che si occupa di recuperare il template della notifica che si vuole utilizzare,  
 già precedentemente creata nella tabella notify_themes.  
 Esempo:
@@ -29,3 +30,6 @@ il secondo parametro $template è quello appena recuperato dalla tabella notify_
 =======
 Classe notifica utilizzata per inviare email/sms/ecc.
 >>>>>>> b0b881b (.)
+=======
+Classe notifica utilizzata per gestire le notifiche (email/sms/ecc).
+>>>>>>> cac1c0d (.)
