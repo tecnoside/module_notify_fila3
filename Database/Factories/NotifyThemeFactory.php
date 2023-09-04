@@ -26,8 +26,12 @@ class NotifyThemeFactory extends Factory {
      *
      * @var class-string<\Illuminate\Database\Eloquent\Model>
      */
+<<<<<<< HEAD
     protected $model = Modules\Notify\Models\NotifyTheme::class;
 >>>>>>> 103a1c2 (.)
+=======
+    protected $model = \Modules\Notify\Models\NotifyTheme::class;
+>>>>>>> 7d0cb15 (.)
 
     /**
      * Define the model's default state.
@@ -44,8 +48,12 @@ class NotifyThemeFactory extends Factory {
        
 
         return [
+<<<<<<< HEAD
             'id' => $this->faker->randomNumber,
 >>>>>>> 103a1c2 (.)
+=======
+            'id' => $this->faker->randomNumber(5, false),
+>>>>>>> 7d0cb15 (.)
             'lang' => $this->faker->word,
             'type' => $this->faker->word,
             'subject' => $this->faker->word,
