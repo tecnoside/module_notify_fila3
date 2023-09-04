@@ -21,6 +21,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class CreateNotificationsTable extends XotBaseMigration
 {
 =======
@@ -44,11 +45,16 @@ class CreateNotificationsTable extends XotBaseMigration {
 =======
 class CreateNotificationsTable extends XotBaseMigration {
 >>>>>>> fe06862 (.)
+=======
+class CreateNotificationsTable extends XotBaseMigration
+{
+>>>>>>> 42f9249 (.)
     /**
      * Run the migrations.
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,6 +68,10 @@ class CreateNotificationsTable extends XotBaseMigration {
 >>>>>>> 40ebae8 (up)
 =======
     public function up() {
+=======
+    public function up()
+    {
+>>>>>>> 42f9249 (.)
         // -- CREATE --
 >>>>>>> bc60653 (up)
 =======

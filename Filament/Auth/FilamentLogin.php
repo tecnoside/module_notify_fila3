@@ -9,6 +9,7 @@ use Savannabits\FilamentModules\Http\Livewire\Auth\BaseLogin;
 
 class FilamentLogin extends BaseLogin
 {
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:Http/Livewire/Auth/FilamentLogin.old
 <<<<<<< HEAD
@@ -27,6 +28,8 @@ use Savannabits\FilamentModules\Http\Livewire\Auth\BaseLogin;
 
 class FilamentLogin extends BaseLogin {
 >>>>>>> b36983f (up)
+=======
+>>>>>>> 42f9249 (.)
     public static string $context = 'filament';
     public static string $module = 'Notify';
 }
