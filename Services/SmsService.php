@@ -259,7 +259,7 @@ class SmsService {
         return $this;
     }
 
-    public function getVars() {
+    public function getVars(): array {
         return $this->vars;
 <<<<<<< HEAD
     }
