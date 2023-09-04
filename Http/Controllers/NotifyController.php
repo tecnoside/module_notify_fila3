@@ -21,6 +21,7 @@ class NotifyController extends Controller {
      */
     public function index() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class NotifyController extends Controller
 {
@@ -34,6 +35,17 @@ class NotifyController extends Controller
 =======
 >>>>>>> 3a62aee (up)
         return view('notify::index');
+=======
+        /**
+         * @phpstan-var view-string
+         */
+        $view = 'notify::index';
+        $view_params = [
+            'view' => $view,
+        ];
+
+        return view($view, $view_params);
+>>>>>>> b41d534 (up)
     }
 
     /**
@@ -42,6 +54,7 @@ class NotifyController extends Controller
      * @return Renderable
      */
     public function create() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
      * @return Renderable
@@ -52,6 +65,17 @@ class NotifyController extends Controller
 =======
 >>>>>>> 3a62aee (up)
         return view('notify::create');
+=======
+        /**
+         * @phpstan-var view-string
+         */
+        $view = 'notify::create';
+        $view_params = [
+            'view' => $view,
+        ];
+
+        return view($view, $view_params);
+>>>>>>> b41d534 (up)
     }
 
     /**
@@ -82,6 +106,7 @@ class NotifyController extends Controller
      */
     public function show($id) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      * @param int $id
      * @return Renderable
@@ -92,6 +117,17 @@ class NotifyController extends Controller
 =======
 >>>>>>> 3a62aee (up)
         return view('notify::show');
+=======
+        /**
+         * @phpstan-var view-string
+         */
+        $view = 'notify::show';
+        $view_params = [
+            'view' => $view,
+        ];
+
+        return view($view, $view_params);
+>>>>>>> b41d534 (up)
     }
 
     /**
@@ -103,6 +139,7 @@ class NotifyController extends Controller
      */
     public function edit($id) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      * @param int $id
      * @return Renderable
@@ -113,6 +150,17 @@ class NotifyController extends Controller
 =======
 >>>>>>> 3a62aee (up)
         return view('notify::edit');
+=======
+        /**
+         * @phpstan-var view-string
+         */
+        $view = 'notify::edit';
+        $view_params = [
+            'view' => $view,
+        ];
+
+        return view($view, $view_params);
+>>>>>>> b41d534 (up)
     }
 
     /**
