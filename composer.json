@@ -241,6 +241,7 @@
         "post-update-cmd": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             "Illuminate\\Foundation\\ComposerScripts::postUpdate"
 =======
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
@@ -252,6 +253,9 @@
             "@php artisan ide-helper:generate",
             "@php artisan ide-helper:meta"
 >>>>>>> a758bd5 (.)
+=======
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
+>>>>>>> 288cfcf (.)
         ],
         "analyse": "vendor/bin/phpstan analyse",
         "test": "./vendor/bin/pest --no-coverage",
