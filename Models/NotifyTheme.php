@@ -78,6 +78,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @mixin \Eloquent
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 class NotifyTheme extends BaseModel implements HasMedia
 {
     use InteractsWithMedia;
@@ -86,6 +87,9 @@ class NotifyTheme extends BaseModel implements HasMedia
 class NotifyTheme extends BaseModel
 {
 >>>>>>> 2e16e99 (up)
+=======
+class NotifyTheme extends BaseModel {
+>>>>>>> abf6fd4 (up)
     /**
      * @var array<string>
      */
@@ -107,6 +111,7 @@ class NotifyTheme extends BaseModel
         'theme',
         'logo_src',
         'logo_width',
+<<<<<<< HEAD
 <<<<<<< HEAD
         'logo_height',
         'view_params',
@@ -290,17 +295,18 @@ class NotifyTheme extends BaseModel {
 =======
         'logo_height'
 >>>>>>> 2e16e99 (up)
+=======
+        'logo_height',
+>>>>>>> abf6fd4 (up)
     ];
 
     protected $appends = [
-        'logo'
+        'logo',
     ];
 
-
-    public function getLogoAttribute(?array $value): array
-    {
+    public function getLogoAttribute(?array $value): array {
         return [
-            'path' => $this->logo_src,
+            'path' => asset($this->logo_src),
             'width' => $this->logo_width,
             'height' => $this->logo_height,
         ];
