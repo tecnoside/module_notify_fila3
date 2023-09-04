@@ -35,6 +35,7 @@ jobs:
     - name: gh-pages
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       uses: JamesIves/github-pages-deploy-action@v4.4.2
 =======
       uses: JamesIves/github-pages-deploy-action@v4.4.1
@@ -42,6 +43,9 @@ jobs:
 =======
       uses: JamesIves/github-pages-deploy-action@v4.4.1
 >>>>>>> fe06862 (.)
+=======
+      uses: JamesIves/github-pages-deploy-action@v4.4.2
+>>>>>>> 7e3ab8e (up)
       with:
         branch: gh-pages
         folder: build_production
