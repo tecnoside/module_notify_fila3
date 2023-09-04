@@ -299,6 +299,9 @@ class NotifyTheme extends BaseModel {
         'body',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 468f0a0 (.)
         'body_html',
         'from',
 <<<<<<< HEAD
