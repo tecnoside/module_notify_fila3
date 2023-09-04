@@ -146,6 +146,7 @@ $view = $this->panel->getView();
         ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return view($view, $view_params);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,12 +168,15 @@ $view = $this->panel->getView();
         //return 'not exists ['.$view.']';
 =======
         // return view()->make($view, $view_params);
+=======
+        // return view($view, $view_params);
+>>>>>>> 04cb283 (up)
         // Parameter #1 $view of function view expects view-string|null, mixed given.
         // The custom 'view-string' type class. It's a subset of the string type. Every string that passes the
         // view()->exists($string) test is a valid view-string type.
 
         // if (view()->exists($view)) {
-        return view()->make($view, $view_params);
+        return view($view, $view_params);
         // }
 
         // return 'not exists ['.$view.']';

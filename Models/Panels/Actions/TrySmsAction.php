@@ -145,6 +145,7 @@ $view = $this->panel->getView();
         ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return view($view, $view_params);
     }
 
@@ -208,6 +209,9 @@ $view = $this->panel->getView();
 =======
 =======
         return view()->make($view, $view_params);
+=======
+        return view($view, $view_params);
+>>>>>>> 04cb283 (up)
     }
 
     public function postHandle() {
