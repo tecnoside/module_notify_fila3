@@ -14,7 +14,6 @@ use Illuminate\Contracts\Mail\Mailer;
 use Modules\UI\Services\ThemeService;
 use Modules\Notify\Data\BeautyEmailData;
 use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Support\Testing\Fakes\MailFake;
 
 class BeautyEmail implements Mailer {
     /**
@@ -26,7 +25,7 @@ class BeautyEmail implements Mailer {
      * The mailer contract depended upon.
      *
      */
-    private Mailer $mailer;
+    private $mailer;
 
     /**
      * Initialise the settings and mailer.
@@ -145,6 +144,7 @@ class BeautyEmail implements Mailer {
     /**
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param mixed $view
      *
 =======
@@ -157,6 +157,12 @@ class BeautyEmail implements Mailer {
 >>>>>>> 1f2e2b9 (up)
 =======
 >>>>>>> 06bf12b (up)
+=======
+     * Summary of view
+     * @param string $view
+     * @param array $data
+     * @return Renderable
+>>>>>>> 7645b1d (up)
      */
     public function view(string $view, array $data = []): Renderable {
         $data = array_merge($this->settings, $data);

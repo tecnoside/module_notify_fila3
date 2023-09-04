@@ -18,6 +18,7 @@ namespace Modules\Notify\Notifications\Channels;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Notify\Actions\NetfunSendAction;
 use Modules\Notify\Notifications\ThemeNotification;
 use Modules\Xot\Contracts\ModelContactContract;
@@ -90,8 +91,12 @@ use Illuminate\Database\Eloquent\Model;
 =======
 >>>>>>> e7bd73e (.)
 use Illuminate\Notifications\Notification;
+=======
+
+>>>>>>> 7645b1d (up)
 use Modules\Notify\Actions\NetfunSendAction;
 use Modules\Xot\Contracts\ModelContactContract;
+use Modules\Notify\Notifications\RowAttributeNotification;
 
 class NetfunChannel {
 <<<<<<< HEAD
@@ -141,6 +146,7 @@ class NetfunChannel {
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -264,6 +270,9 @@ class NetfunChannel {
      */
     public function send($notifiable, Notification $notification) {
         // Call to an undefined method Illuminate\Notifications\Notification::toSms().
+=======
+    public function send($notifiable, RowAttributeNotification $notification) {
+>>>>>>> 7645b1d (up)
         $message = $notification->toSms($notifiable);
         // Send notification to the $notifiable instance...
         $data = app(NetfunSendAction::class)->execute($message);
