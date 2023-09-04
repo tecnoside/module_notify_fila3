@@ -4,6 +4,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 @extends('adm_theme::layouts.app')
 @section('content')
     <x-navbar>
@@ -64,11 +66,11 @@
     @endphp
 
     <x-col size="12">
-       @if($driver)
+       @if ($driver)
         <form action="{!! Request::fullUrlWithQuery([]) !!}" method="POST">
 
             @csrf
-            <input type="text" name="driver" value="{{$driver}}" />
+            <input type="text" name="driver" value="{{ $driver }}" />
             from: <input type="text" name="from" />
             to:<input type="text" name="to" value="3475896127" />
 
@@ -89,6 +91,10 @@
 =======
 >>>>>>> 3a0e0a5 (up)
 =======
+=======
+>>>>>>> d27db1b (.)
+=======
+>>>>>>> a758bd5 (.)
 @extends('adm_theme::layouts.app')
 @section('content')
     <x-navbar>
@@ -108,21 +114,23 @@
     <x-col size="12">
        @if($driver)
         <form action="{!! Request::fullUrlWithQuery([]) !!}" method="POST">
-           
+
             @csrf
             <input type="text" name="driver" value="{{$driver}}" />
             from: <input type="text" name="from" />
             to:<input type="text" name="to" value="3475896127" />
-           
+
             txt:<textarea name="body" ></textarea>
-            
+
             <input type="submit" value="go!" />
-            
+
         </form>
        @endif
        {{ $driver }}
     </x-col>
 @endsection
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 89120cb (rebase)
 =======
 >>>>>>> 8be0eaa (up)
@@ -130,3 +138,7 @@
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> d27db1b (.)
+=======
+>>>>>>> a758bd5 (.)
