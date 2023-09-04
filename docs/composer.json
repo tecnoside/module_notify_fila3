@@ -1,7 +1,10 @@
 {
+<<<<<<< HEAD
     "name": "laraxot/module_notify",
     "description": "live user management",
     "license": "MIT",
+=======
+>>>>>>> 404660b (up)
     "require": {
         "tightenco/jigsaw": "^1.6",
         "tightenco/jigsaw-docs-template": "^1.1",
