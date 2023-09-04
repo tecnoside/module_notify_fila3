@@ -357,6 +357,23 @@ class NotifyThemePanel extends XotBasePanel {
                 'except' => ['index'],
                 'col_size' => 12,
             ],
+            (object) [
+                'type' => 'Select',
+                'name' => 'theme',
+                'comment' => null,
+                'col_size' => 3,
+                'options' => [
+                    'ark' => 'ark',
+                    'minty' => 'minty',
+                    'sunny' => 'sunny',
+                ],
+            ],
+            (object) [
+                'type' => 'String',
+                'name' => 'post_type',
+                'col_size' => 3,
+                'comment' => null,
+            ],
         ];
 >>>>>>> 6d24e5b (.)
 =======
