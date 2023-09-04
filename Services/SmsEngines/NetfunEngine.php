@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 /**
  * @see https://smsvi-docs.web.app/docs/restful/send-batch/
@@ -174,6 +175,8 @@ class NetfunEngine
 =======
 =======
 >>>>>>> 3a0e0a5 (up)
+=======
+>>>>>>> 8be0eaa (up)
 <?php
 /**
  * @see https://smsvi-docs.web.app/docs/restful/send-batch/
@@ -322,6 +325,7 @@ class NetfunEngine {
         return $this;
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 9349baf (.)
 =======
@@ -476,3 +480,5 @@ class NetfunEngine {
     }
 }
 >>>>>>> 89120cb (rebase)
+=======
+>>>>>>> 8be0eaa (up)

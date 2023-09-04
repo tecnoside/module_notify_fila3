@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 {
     "name": "laraxot/module_notify_fila",
     "description": "notify module dedicated to managing notifications",
@@ -90,6 +91,8 @@
 =======
 =======
 >>>>>>> 3a0e0a5 (up)
+=======
+>>>>>>> 8be0eaa (up)
 {
     "name": "nwidart/notify",
     "description": "",
@@ -113,6 +116,7 @@
         }
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 9349baf (.)
 =======
@@ -142,3 +146,5 @@
     }
 }
 >>>>>>> 89120cb (rebase)
+=======
+>>>>>>> 8be0eaa (up)

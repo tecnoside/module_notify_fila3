@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /vendor/
 vendor/
 node_modules/
@@ -44,6 +45,8 @@ package-lock.json
 =======
 =======
 >>>>>>> 3a0e0a5 (up)
+=======
+>>>>>>> 8be0eaa (up)
 /vendor/
 node_modules/
 npm-debug.log
@@ -72,6 +75,7 @@ Homestead.json
 *.stackdump
 *.cache
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 9349baf (.)
 =======
@@ -106,3 +110,5 @@ Homestead.json
 *.cache
 
 >>>>>>> 89120cb (rebase)
+=======
+>>>>>>> 8be0eaa (up)

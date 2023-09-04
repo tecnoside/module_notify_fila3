@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -77,6 +78,8 @@ class SmsService
 =======
 =======
 >>>>>>> 3a0e0a5 (up)
+=======
+>>>>>>> 8be0eaa (up)
 <?php
 
 declare(strict_types=1);
@@ -134,6 +137,7 @@ class SmsService {
             ->send();
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 9349baf (.)
 =======
@@ -197,3 +201,5 @@ class SmsService {
     }
 }
 >>>>>>> 89120cb (rebase)
+=======
+>>>>>>> 8be0eaa (up)

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -82,6 +83,8 @@ class RouteServiceProvider extends ServiceProvider {
 =======
 =======
 >>>>>>> 3a0e0a5 (up)
+=======
+>>>>>>> 8be0eaa (up)
 <?php
 
 declare(strict_types=1);
@@ -148,6 +151,7 @@ class RouteServiceProvider extends ServiceProvider {
             ->group(module_path('Notify', '/Routes/api.php'));
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 9349baf (.)
 =======
@@ -220,3 +224,5 @@ class RouteServiceProvider extends ServiceProvider {
     }
 }
 >>>>>>> 89120cb (rebase)
+=======
+>>>>>>> 8be0eaa (up)

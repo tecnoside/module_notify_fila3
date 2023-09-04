@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 =======
 =======
 >>>>>>> 3a0e0a5 (up)
+=======
+>>>>>>> 8be0eaa (up)
 <?php
 
 declare(strict_types=1);
@@ -26,6 +29,7 @@ Route::prefix('notify')->group(function() {
     Route::get('/', 'NotifyController@index');
 });
 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 9349baf (.)
 =======
@@ -51,3 +55,5 @@ Route::prefix('notify')->group(function() {
 });
 */
 >>>>>>> 89120cb (rebase)
+=======
+>>>>>>> 8be0eaa (up)
