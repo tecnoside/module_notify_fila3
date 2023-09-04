@@ -136,6 +136,7 @@ namespace Modules\Notify\Models;
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * Modules\Notify\Models\NotifyTheme.
  *
  * @property int                             $id
@@ -179,12 +180,15 @@ class NotifyTheme extends BaseModel {
     protected $fillable = [
 =======
  * --
+=======
+ * --.
+>>>>>>> 6d24e5b (.)
  */
-class NotifyTheme extends BaseModel{
-
+class NotifyTheme extends BaseModel {
     /**
      * @var array<string>
      */
+<<<<<<< HEAD
     protected $fillable=[
 >>>>>>> 42aa20e (.)
         'id',
@@ -223,26 +227,19 @@ class NotifyTheme extends BaseModel {
     /**
      * @var array<string>
      */
+=======
+>>>>>>> 6d24e5b (.)
     protected $fillable = [
         'id',
         'lang',
         'type',
         'subject',
         'body',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 468f0a0 (.)
         'body_html',
         'from',
-=======
->>>>>>> 42aa20e (.)
-=======
-        'from',
->>>>>>> 8b046e1 (.)
     ];
 }
+<<<<<<< HEAD
 >>>>>>> 89120cb (rebase)
 =======
 >>>>>>> 8be0eaa (up)
@@ -250,3 +247,5 @@ class NotifyTheme extends BaseModel {
     ];
 }
 >>>>>>> 42aa20e (.)
+=======
+>>>>>>> 6d24e5b (.)
