@@ -228,7 +228,7 @@
     <title>{{ $page->siteName }}{{ $page->title ? ' | ' . $page->title : '' }}</title>
 
     <link rel="home" href="{{ $page->baseUrl }}">
-    <link rel="icon" href="{{ url('/favicon.ico') }}">
+    <link rel="icon" href="/favicon.ico">
 
     @stack('meta')
 
@@ -238,8 +238,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i"
         rel="stylesheet">
-    <link rel="stylesheet" href="{{ url(mix('css/main.css', 'assets/build')) }}">
-
+    <link rel="stylesheet" href="{{ url('assets/build/css/main.css') }}">
 
 
 
@@ -275,7 +274,7 @@
         @yield('body')
     </main>
 
-    <script src="{{ url(mix('js/main.js', 'assets/build')) }}"></script>
+    <script src="{{ url('assets/build/js/main.js') }}"></script>
 
     @stack('scripts')
 

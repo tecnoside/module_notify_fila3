@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
 =======
@@ -104,15 +105,44 @@ use Illuminate\Support\Str;
 
 =======
 >>>>>>> a758bd5 (.)
+=======
+use Illuminate\Support\Str;
+
+$moduleName = 'Notify';
+
+>>>>>>> 55575a7 (up)
 return [
-    'baseUrl' => 'https://laraxot.github.io/module_notify/',
+    'baseUrl' => '',
     'production' => false,
+<<<<<<< HEAD
     'siteName' => 'Modulo Notify',
     'siteDescription' => 'Beautiful docs powered by Jigsaw',
 <<<<<<< HEAD
 >>>>>>> becf1dc (up)
 =======
 >>>>>>> a758bd5 (.)
+=======
+    'siteName' => 'Modulo '.$moduleName,
+    'siteDescription' => 'Modulo '.$moduleName,
+    //'lang' => 'it',
+
+    'collections' => [
+        'posts' => [
+            'path' => function ($page) {
+                //return $page->lang.'/posts/'.Str::slug($page->getFilename());
+                //return 'posts/' . ($page->featured ? 'featured/' : '') . Str::slug($page->getFilename());
+
+                return 'posts/'.Str::slug($page->getFilename());
+            },
+        ],
+        'docs' => [
+            'path' => function ($page) {
+                //return $page->lang.'/docs/'.Str::slug($page->getFilename());
+                return 'docs/'.Str::slug($page->getFilename());
+            },
+        ],
+    ],
+>>>>>>> 55575a7 (up)
 
     // Algolia DocSearch credentials
     'docsearchApiKey' => env('DOCSEARCH_KEY'),
@@ -152,6 +182,7 @@ return [
                 return trimPath($page->getPath()) == trimPath($child);
             });
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -227,11 +258,26 @@ return [
 =======
 >>>>>>> a758bd5 (.)
     },
+=======
+    },/*
+>>>>>>> 55575a7 (up)
     'url' => function ($page, $path) {
-        return Str::startsWith($path, 'http') ? $path : '/'.trimPath($path);
+        return Str::startsWith($path, 'http') ? $path : '/' . trimPath($path);
     },
+<<<<<<< HEAD
 ];
 <<<<<<< HEAD
 >>>>>>> becf1dc (up)
 =======
 >>>>>>> a758bd5 (.)
+=======
+    */
+    'url' => function ($page, $path) {
+        if (Str::startsWith($path, 'http')) {
+            return $path;
+        }
+         //return url('/'.$page->lang.'/'.trimPath($path));
+        return url('/'.trimPath($path));
+    },
+];
+>>>>>>> 55575a7 (up)
