@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> 42aa20e (.)
 use Illuminate\Http\Request;
 
 /*
@@ -14,8 +17,15 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+<<<<<<< HEAD
 /*
 Route::middleware('auth:api')->get('/notify', function (Request $request) {
     return $request->user();
 });
 */
+=======
+
+Route::middleware('auth:api')->get('/notify', function (Request $request) {
+    return $request->user();
+});
+>>>>>>> 42aa20e (.)

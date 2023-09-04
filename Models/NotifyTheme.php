@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -125,6 +126,8 @@ class NotifyTheme extends BaseModel implements HasMedia
 >>>>>>> 3a0e0a5 (up)
 =======
 >>>>>>> 8be0eaa (up)
+=======
+>>>>>>> 42aa20e (.)
 <?php
 
 declare(strict_types=1);
@@ -132,6 +135,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Models;
 
 /**
+<<<<<<< HEAD
  * Modules\Notify\Models\NotifyTheme.
  *
  * @property int                             $id
@@ -173,11 +177,22 @@ class NotifyTheme extends BaseModel {
      * @var array<string>
      */
     protected $fillable = [
+=======
+ * --
+ */
+class NotifyTheme extends BaseModel{
+
+    /**
+     * @var array<string>
+     */
+    protected $fillable=[
+>>>>>>> 42aa20e (.)
         'id',
         'lang',
         'type',
         'subject',
         'body',
+<<<<<<< HEAD
         'body_html',
         'from',
     ];
@@ -214,3 +229,7 @@ class NotifyTheme extends BaseModel {
 >>>>>>> 89120cb (rebase)
 =======
 >>>>>>> 8be0eaa (up)
+=======
+    ];
+}
+>>>>>>> 42aa20e (.)

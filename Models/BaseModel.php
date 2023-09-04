@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 42aa20e (.)
 <?php
 
 declare(strict_types=1);
@@ -8,12 +11,19 @@ declare(strict_types=1);
 namespace Modules\Notify\Models;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 >>>>>>> 5f3f456 (up)
 // ---------- traits
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 // //use Laravel\Scout\Searchable;
+=======
+use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+//---------- traits
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+////use Laravel\Scout\Searchable;
+>>>>>>> 42aa20e (.)
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Services\FactoryService;
 use Modules\Xot\Traits\Updater;
@@ -21,6 +31,7 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseModel.
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 abstract class BaseModel extends Model
 {
@@ -83,18 +94,55 @@ protected $perPage = 30;
 <<<<<<< HEAD
 
 =======
+=======
+abstract class BaseModel extends Model
+{
+    use Updater;
+    //use Searchable;
+    //use Cachable;
+    use HasFactory;
+
+    protected $connection = 'notify';
+
+
+    /**
+     * @var array
+     */
+    protected $casts = [
+        //'published_at' => 'datetime:Y-m-d', // da verificare
+    ];
+
+    /**
+     * @var string[]
+     */
+    protected $dates = ['published_at', 'created_at', 'updated_at'];
+    /**
+     * @var string
+     */
+    protected $primaryKey = 'id';
+    /**
+     * @var bool
+     */
+    public $incrementing = true;
+>>>>>>> 42aa20e (.)
     /**
      * @var array
      */
     protected $hidden = [
+<<<<<<< HEAD
         // 'password'
     ];
 >>>>>>> 5f3f456 (up)
+=======
+        //'password'
+    ];
+>>>>>>> 42aa20e (.)
     /**
      * @var bool
      */
     public $timestamps = true;
 
+<<<<<<< HEAD
     protected $perPage = 30;
 
     protected $connection = 'notify';
@@ -125,11 +173,14 @@ protected $perPage = 30;
         // 'password'
     ];
 
+=======
+>>>>>>> 42aa20e (.)
     /**
      * Create a new factory instance for the model.
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     protected static function newFactory()
     {
@@ -307,3 +358,10 @@ abstract class BaseModel extends Model {
 >>>>>>> 47d9a86 (.)
 =======
 >>>>>>> 780e17a (up)
+=======
+    protected static function newFactory()
+    {
+        return FactoryService::newFactory(get_called_class());
+    }
+}
+>>>>>>> 42aa20e (.)

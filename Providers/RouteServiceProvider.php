@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -95,6 +96,17 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider {
+=======
+<?php
+
+namespace Modules\Notify\Providers;
+
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+
+class RouteServiceProvider extends ServiceProvider
+{
+>>>>>>> 42aa20e (.)
     /**
      * The module namespace to assume when generating URLs to actions.
      *
@@ -109,7 +121,12 @@ class RouteServiceProvider extends ServiceProvider {
      *
      * @return void
      */
+<<<<<<< HEAD
     public function boot() {
+=======
+    public function boot()
+    {
+>>>>>>> 42aa20e (.)
         parent::boot();
     }
 
@@ -118,7 +135,12 @@ class RouteServiceProvider extends ServiceProvider {
      *
      * @return void
      */
+<<<<<<< HEAD
     public function map() {
+=======
+    public function map()
+    {
+>>>>>>> 42aa20e (.)
         $this->mapApiRoutes();
 
         $this->mapWebRoutes();
@@ -131,7 +153,12 @@ class RouteServiceProvider extends ServiceProvider {
      *
      * @return void
      */
+<<<<<<< HEAD
     protected function mapWebRoutes() {
+=======
+    protected function mapWebRoutes()
+    {
+>>>>>>> 42aa20e (.)
         Route::middleware('web')
             ->namespace($this->moduleNamespace)
             ->group(module_path('Notify', '/Routes/web.php'));
@@ -144,13 +171,19 @@ class RouteServiceProvider extends ServiceProvider {
      *
      * @return void
      */
+<<<<<<< HEAD
     protected function mapApiRoutes() {
+=======
+    protected function mapApiRoutes()
+    {
+>>>>>>> 42aa20e (.)
         Route::prefix('api')
             ->middleware('api')
             ->namespace($this->moduleNamespace)
             ->group(module_path('Notify', '/Routes/api.php'));
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 9349baf (.)
@@ -226,3 +259,5 @@ class RouteServiceProvider extends ServiceProvider {
 >>>>>>> 89120cb (rebase)
 =======
 >>>>>>> 8be0eaa (up)
+=======
+>>>>>>> 42aa20e (.)
