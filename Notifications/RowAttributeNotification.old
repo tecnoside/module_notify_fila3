@@ -53,6 +53,7 @@ class RowAttributeNotification extends Notification implements ShouldQueue
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 6f575c4 (up)
@@ -69,6 +70,8 @@ class RowAttributeNotification extends Notification implements ShouldQueue
 >>>>>>> 7f10d5f (.)
 =======
 >>>>>>> 6f575c4 (up)
+=======
+>>>>>>> ab90165 (.)
         $message = (new MailMessage())
             ->from($this->row->mail_from_email, $this->row->mail_from)
             ->subject($this->row->mail_subject)
