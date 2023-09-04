@@ -9,17 +9,18 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Modules\Notify\Data\SmsData;
+use Modules\Xot\Contracts\ModelContactContract;
 
 class RowAttributeNotification extends Notification {
     use Queueable;
-    public Model $row;
+    public ModelContactContract $row;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct(Model $row) {
+    public function __construct(ModelContactContract $row) {
         $this->row = $row;
     }
 
