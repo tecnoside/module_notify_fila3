@@ -1,10 +1,18 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Http\Middleware\MirrorConfigToSubpackages;
 use Filament\Pages;
+=======
+use Filament\Http\Middleware\Authenticate;
+use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Http\Middleware\MirrorConfigToSubpackages;
+use Filament\Pages;
+use Filament\Widgets;
+>>>>>>> 911eb41 (up)
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -17,8 +25,13 @@ $moduleName = 'Notify';
 $moduleNs = 'Modules\Notify';
 $contextNs = 'Modules\\Notify\\Filament';
 $contextPath = 'Filament';
+<<<<<<< HEAD
 
 return [
+=======
+return [
+
+>>>>>>> 911eb41 (up)
     /*
     |--------------------------------------------------------------------------
     | Filament Path
@@ -54,8 +67,13 @@ return [
     */
 
     'pages' => [
+<<<<<<< HEAD
         'namespace' => $contextNs . '\\Pages',
         'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Pages"),
+=======
+        'namespace' => $contextNs.'\\Pages',
+        'path' => base_path('Modules/'.$moduleName."/$contextPath/Pages"),
+>>>>>>> 911eb41 (up)
         'register' => [
             Pages\Dashboard::class,
         ],
@@ -72,8 +90,13 @@ return [
     */
 
     'resources' => [
+<<<<<<< HEAD
         'namespace' => $contextNs . '\\Resources',
         'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Resources"),
+=======
+        'namespace' => $contextNs.'\\Resources',
+        'path' => base_path('Modules/'.$moduleName."/$contextPath/Resources"),
+>>>>>>> 911eb41 (up)
         'register' => [],
     ],
 
@@ -88,11 +111,19 @@ return [
     */
 
     'widgets' => [
+<<<<<<< HEAD
         'namespace' => $contextNs . '\\Widgets',
         'path' => base_path('Modules/' . $moduleName . "/{$contextPath}/Widgets"),
         'register' => [
             // Widgets\AccountWidget::class,
             // Widgets\FilamentInfoWidget::class,
+=======
+        'namespace' => $contextNs.'\\Widgets',
+        'path' => base_path('Modules/'.$moduleName."/$contextPath/Widgets"),
+        'register' => [
+            Widgets\AccountWidget::class,
+            Widgets\FilamentInfoWidget::class,
+>>>>>>> 911eb41 (up)
         ],
     ],
 
@@ -107,8 +138,13 @@ return [
     */
 
     'livewire' => [
+<<<<<<< HEAD
         'namespace' => $moduleNs . '\\Http\\Livewire',
         'path' => base_path('Modules/' . $moduleName . '/Http/Livewire'),
+=======
+        'namespace' => $moduleNs.'\\Http\\Livewire',
+        'path' => base_path('Modules/'.$moduleName.'/Http/Livewire'),
+>>>>>>> 911eb41 (up)
     ],
 
     /*
@@ -124,7 +160,11 @@ return [
     'auth' => [
         'guard' => env('FILAMENT_AUTH_GUARD', 'web'),
         'pages' => [
+<<<<<<< HEAD
             'login' => Modules\Notify\Http\Livewire\Auth\FilamentLogin::class,
+=======
+            'login' => Modules\Quaeris\Http\Livewire\Auth\FilamentLogin::class,
+>>>>>>> 911eb41 (up)
         ],
     ],
 
@@ -140,8 +180,13 @@ return [
 
     'middleware' => [
         'auth' => [
+<<<<<<< HEAD
             //  Authenticate::class,
             Modules\Notify\Http\Middleware\FilamentMiddleware::class,
+=======
+        //  Authenticate::class,
+            Modules\Quaeris\Http\Middleware\FilamentMiddleware::class
+>>>>>>> 911eb41 (up)
         ],
         'base' => [
             EncryptCookies::class,
