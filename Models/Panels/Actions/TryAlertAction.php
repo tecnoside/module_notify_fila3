@@ -8,10 +8,10 @@ namespace Modules\Notify\Models\Panels\Actions;
 
 // -------- services --------
 
+use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\LU\Models\User;
 use Modules\Notify\Notifications\Alert;
 use Modules\Theme\Services\ThemeService;
-use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
 // -------- bases -----------
 

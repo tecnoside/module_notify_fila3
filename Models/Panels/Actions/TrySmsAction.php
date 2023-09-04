@@ -41,9 +41,9 @@ use Modules\Notify\Notifications\SampleNotification;
 // -------- services --------
 >>>>>>> 0d776db (up)
 
+use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Notify\Services\SmsService;
 use Modules\Theme\Services\ThemeService;
-use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
 <<<<<<< HEAD
 //-------- bases -----------

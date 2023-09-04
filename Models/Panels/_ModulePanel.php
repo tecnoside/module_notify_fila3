@@ -5,10 +5,14 @@ declare(strict_types=1);
 namespace Modules\Notify\Models\Panels;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Cms\Models\Panels\XotBasePanel;
 =======
 use Modules\Xot\Models\Panels\XotBasePanel;
 >>>>>>> d27db1b (.)
+=======
+use Modules\Cms\Models\Panels\XotBasePanel;
+>>>>>>> 56255db (up)
 
 /**
  * Class _ModulePanel.

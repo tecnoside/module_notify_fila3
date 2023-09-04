@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models\Panels\Policies;
 
+<<<<<<< HEAD
 use Modules\Cms\Contracts\PanelContract;
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
+=======
+use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
+use Modules\Xot\Contracts\PanelContract;
+>>>>>>> 56255db (up)
 use Modules\Xot\Contracts\UserContract;
 
 class _ModulePanelPolicy extends XotBasePanelPolicy

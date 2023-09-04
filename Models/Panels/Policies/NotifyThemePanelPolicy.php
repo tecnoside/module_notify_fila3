@@ -8,6 +8,7 @@ namespace Modules\Notify\Models\Panels\Policies;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d27db1b (.)
@@ -33,6 +34,9 @@ use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 =======
 use Modules\Xot\Models\Panels\Policies\XotBasePanelPolicy;
 >>>>>>> d27db1b (.)
+=======
+use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
+>>>>>>> 56255db (up)
 
 class NotifyThemePanelPolicy extends XotBasePanelPolicy {
 }
