@@ -5,14 +5,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a758bd5 (.)
 /vendor/
 vendor/
 node_modules/
 npm-debug.log
+<<<<<<< HEAD
 *.cache
 *.phar
 *.lock
 package-lock.json
+=======
+>>>>>>> a758bd5 (.)
 yarn-error.log
 
 # Laravel 4 specific
@@ -38,6 +44,7 @@ Homestead.json
 *.stackdump
 *.cache
 *.lock
+<<<<<<< HEAD
 <<<<<<< HEAD
 package-lock.json
 =======
@@ -242,3 +249,10 @@ package-lock.json
 *.lock
 *.lock
 >>>>>>> 7fba3e2 (up)
+=======
+*.log
+
+*.lock
+*.lock
+*.lock
+>>>>>>> a758bd5 (.)

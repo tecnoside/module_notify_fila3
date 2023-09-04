@@ -4,6 +4,7 @@ includes:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - ./vendor/nunomaduro/larastan/extension.neon
     
 =======
@@ -19,6 +20,9 @@ includes:
 =======
 
 >>>>>>> fbb3e22 (.)
+=======
+
+>>>>>>> a758bd5 (.)
 parameters:
     level: 1
     paths:

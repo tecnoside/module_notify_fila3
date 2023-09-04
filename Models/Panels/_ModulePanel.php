@@ -6,6 +6,7 @@ namespace Modules\Notify\Models\Panels;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Cms\Models\Panels\XotBasePanel;
 =======
 use Modules\Xot\Models\Panels\XotBasePanel;
@@ -13,10 +14,14 @@ use Modules\Xot\Models\Panels\XotBasePanel;
 =======
 use Modules\Cms\Models\Panels\XotBasePanel;
 >>>>>>> 56255db (up)
+=======
+use Modules\Cms\Models\Panels\XotBasePanel;
+>>>>>>> a758bd5 (.)
 
 /**
  * Class _ModulePanel.
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 class _ModulePanel extends XotBasePanel
 {
@@ -85,6 +90,16 @@ class _ModulePanel extends XotBasePanel {
 =======
             // new Actions\TryAlertAction(),
 >>>>>>> 06bf12b (up)
+=======
+class _ModulePanel extends XotBasePanel {
+    public function actions(): array {
+        return [
+            new Actions\TrySmsAction(),
+            new Actions\TryMailAction(),
+            new Actions\TrySendMailAction(),
+            new Actions\TrySendNotificationAction(),
+            // new Actions\TryAlertAction(),
+>>>>>>> a758bd5 (.)
         ];
     }
 }

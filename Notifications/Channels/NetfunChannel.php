@@ -7,12 +7,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> a758bd5 (.)
 declare(strict_types=1);
 
 namespace Modules\Notify\Notifications\Channels;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -97,11 +101,14 @@ use Illuminate\Notifications\Notification;
 >>>>>>> 7645b1d (up)
 =======
 >>>>>>> 8d9a96b (up)
+=======
+>>>>>>> a758bd5 (.)
 use Modules\Notify\Actions\NetfunSendAction;
 use Modules\Notify\Notifications\RowAttributeNotification;
 use Modules\Xot\Contracts\ModelContactContract;
 
 class NetfunChannel {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -114,11 +121,15 @@ class NetfunChannel {
 =======
     public function __construct() {
 >>>>>>> b3b016d (up)
+=======
+    public function __construct() {
+>>>>>>> a758bd5 (.)
     }
 
     /**
      * Send the given notification.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,10 +156,13 @@ class NetfunChannel {
 =======
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> a758bd5 (.)
      * @param mixed $notifiable
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -179,10 +193,14 @@ class NetfunChannel {
      */
     public function send($notifiable, Notification $notification) {
 >>>>>>> b3b016d (up)
+=======
+    public function send($notifiable, RowAttributeNotification $notification) {
+>>>>>>> a758bd5 (.)
         $message = $notification->toSms($notifiable);
         // Send notification to the $notifiable instance...
         $data = app(NetfunSendAction::class)->execute($message);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -287,11 +305,15 @@ class NetfunChannel {
 =======
         if ($notifiable instanceof ModelContactContract) {
 >>>>>>> e7bd73e (.)
+=======
+        if ($notifiable instanceof ModelContactContract) {
+>>>>>>> a758bd5 (.)
             $data['sms_sent_at'] = now();
             $data['sms_count'] = (int) $notifiable->sms_count + 1;
             $notifiable->update($data);
         }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -308,3 +330,6 @@ class NetfunChannel {
 =======
 }
 >>>>>>> 06bf12b (up)
+=======
+}
+>>>>>>> a758bd5 (.)

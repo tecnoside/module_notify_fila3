@@ -6,6 +6,7 @@ namespace Modules\Notify\Models\Panels\Policies;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Cms\Contracts\PanelContract;
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 =======
@@ -40,6 +41,20 @@ class _ModulePanelPolicy extends XotBasePanelPolicy
 
 =======
 >>>>>>> b3b016d (up)
+=======
+use Modules\Cms\Contracts\PanelContract;
+use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
+use Modules\Xot\Contracts\UserContract;
+
+class _ModulePanelPolicy extends XotBasePanelPolicy {
+    /**
+     * ---.
+     */
+    public function testSms(UserContract $user, PanelContract $panel): bool {
+        return true;
+    }
+
+>>>>>>> a758bd5 (.)
     public function trySms(UserContract $user, PanelContract $panel): bool {
         return true;
     }
@@ -47,6 +62,7 @@ class _ModulePanelPolicy extends XotBasePanelPolicy
     /**
      * --.
      */
+<<<<<<< HEAD
     public function testMail(UserContract $user, PanelContract $panel): bool
     {
         return true;
@@ -60,6 +76,12 @@ class _ModulePanelPolicy extends XotBasePanelPolicy
 
 =======
 >>>>>>> b3b016d (up)
+=======
+    public function testMail(UserContract $user, PanelContract $panel): bool {
+        return true;
+    }
+
+>>>>>>> a758bd5 (.)
     public function tryMail(UserContract $user, PanelContract $panel): bool {
         return true;
     }
@@ -67,6 +89,7 @@ class _ModulePanelPolicy extends XotBasePanelPolicy
     /**
      * --.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function trySendMail(UserContract $user, PanelContract $panel): bool {
 <<<<<<< HEAD
@@ -126,6 +149,9 @@ class _ModulePanelPolicy extends XotBasePanelPolicy {
 >>>>>>> d27db1b (.)
 =======
 >>>>>>> 0d776db (up)
+=======
+    public function trySendMail(UserContract $user, PanelContract $panel): bool {
+>>>>>>> a758bd5 (.)
         return true;
     }
 

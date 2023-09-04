@@ -5,14 +5,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d27db1b (.)
+=======
+>>>>>>> a758bd5 (.)
 <?php
 
 declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 use Eloquent;
@@ -22,6 +26,8 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 
 =======
 >>>>>>> b1dceab (up)
+=======
+>>>>>>> a758bd5 (.)
 /**
  * Modules\Notify\Models\NotifyTheme
  *
@@ -34,6 +40,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property string|null $created_by
  * @property \Illuminate\Support\Carbon|null $updated_at
+<<<<<<< HEAD
 <<<<<<< HEAD
  * @property string|null                     $updated_by
  * @property string|null                     $post_type
@@ -91,12 +98,17 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  *
 >>>>>>> da86307 (up)
 =======
+=======
+>>>>>>> a758bd5 (.)
  * @property string|null $updated_by
  * @property string|null $post_type
  * @property int|null $post_id
  * @property string|null $body_html
  * @property string|null $theme
+<<<<<<< HEAD
 >>>>>>> 27d29a3 (up)
+=======
+>>>>>>> a758bd5 (.)
  * @property string|null $from_email
  * @property string|null $logo_src
  * @property int|null $logo_width
@@ -123,6 +135,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereTheme($value)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3d1ec9b (up)
  * @mixin \Eloquent
  */
@@ -146,11 +159,19 @@ class NotifyTheme extends BaseModel {
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereUpdatedBy($value)
 >>>>>>> 27d29a3 (up)
+=======
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|NotifyTheme whereUpdatedBy($value)
+>>>>>>> a758bd5 (.)
  * @mixin \Eloquent
  */
 class NotifyTheme extends BaseModel
 {
+<<<<<<< HEAD
 >>>>>>> da86307 (up)
+=======
+>>>>>>> a758bd5 (.)
     /**
      * @var array<string>
      */
@@ -164,14 +185,18 @@ class NotifyTheme extends BaseModel
         'from',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 6be7b8e (.)
+=======
+>>>>>>> a758bd5 (.)
         'from_email',
         'post_type',
         'post_id',
         'theme',
         'logo_src',
         'logo_width',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         'logo_height',
@@ -359,6 +384,9 @@ class NotifyTheme extends BaseModel {
 =======
         'logo_height',
 >>>>>>> abf6fd4 (up)
+=======
+        'logo_height',
+>>>>>>> a758bd5 (.)
     ];
 
     protected $appends = [
@@ -374,6 +402,7 @@ class NotifyTheme extends BaseModel {
         ];
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 9349baf (.)
@@ -481,3 +510,5 @@ class NotifyTheme extends BaseModel {
     ];
 }
 >>>>>>> a7caca4 (.)
+=======
+>>>>>>> a758bd5 (.)

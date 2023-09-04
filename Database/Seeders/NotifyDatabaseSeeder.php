@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class NotifyDatabaseSeeder extends Seeder {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,11 +37,15 @@ class NotifyDatabaseSeeder extends Seeder
 >>>>>>> d27db1b (.)
 =======
 >>>>>>> b1dceab (up)
+=======
+class NotifyDatabaseSeeder extends Seeder {
+>>>>>>> a758bd5 (.)
     /**
      * Run the database seeds.
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,6 +71,9 @@ class NotifyDatabaseSeeder extends Seeder
 =======
     public function run() {
 >>>>>>> b1dceab (up)
+=======
+    public function run() {
+>>>>>>> a758bd5 (.)
         Model::unguard();
 
         // $this->call("OthersTableSeeder");

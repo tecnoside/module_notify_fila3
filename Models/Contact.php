@@ -9,6 +9,9 @@ namespace Modules\Notify\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a758bd5 (.)
 /**
  * Modules\Notify\Models\Contact.
  *
@@ -42,6 +45,7 @@ namespace Modules\Notify\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Contact     whereValue($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact     whereVerifiedAt($value)
  *
+<<<<<<< HEAD
  * @mixin IdeHelperContact
  *
  * @property string|null $email
@@ -104,6 +108,8 @@ namespace Modules\Notify\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Contact whereSurveyPdfId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact whereUsesleft($value)
  *
+=======
+>>>>>>> a758bd5 (.)
  * @mixin \Eloquent
  */
 class Contact extends BaseModel
@@ -128,6 +134,7 @@ class Contact extends BaseModel
         'model_id' => 'string',
         'user_id' => 'string',
     ];
+<<<<<<< HEAD
 =======
 class Contact extends BaseModel {
 <<<<<<< HEAD
@@ -333,4 +340,6 @@ class Contact extends BaseModel {
 >>>>>>> 0799e3a (up)
 =======
 >>>>>>> 3d1ec9b (up)
+=======
+>>>>>>> a758bd5 (.)
 }

@@ -6,10 +6,14 @@ namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ////use Laravel\Scout\Searchable;
 =======
 // //use Laravel\Scout\Searchable;
 >>>>>>> b1dceab (up)
+=======
+// //use Laravel\Scout\Searchable;
+>>>>>>> a758bd5 (.)
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Lang\Models\Traits\LinkedTrait;
@@ -17,6 +21,7 @@ use Modules\Xot\Traits\Updater;
 
 /**
  * Class BaseModelLang.
+<<<<<<< HEAD
 <<<<<<< HEAD
  */
 abstract class BaseModelLang extends Model
@@ -35,6 +40,8 @@ abstract class BaseModelLang extends Model
     protected $casts = [
         //'published_at' => 'datetime:Y-m-d', // da verificare
 =======
+=======
+>>>>>>> a758bd5 (.)
  *
  * @property string|null $post_type
  */
@@ -62,7 +69,10 @@ abstract class BaseModelLang extends Model {
      */
     protected $casts = [
         // 'published_at' => 'datetime:Y-m-d', // da verificare
+<<<<<<< HEAD
 >>>>>>> b1dceab (up)
+=======
+>>>>>>> a758bd5 (.)
     ];
 
     /**
@@ -82,16 +92,22 @@ abstract class BaseModelLang extends Model {
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @var array
      */
     protected $hidden = [
         //'password'
 =======
+=======
+>>>>>>> a758bd5 (.)
      * @var array<int, string>
      */
     protected $hidden = [
         // 'password'
+<<<<<<< HEAD
 >>>>>>> b1dceab (up)
+=======
+>>>>>>> a758bd5 (.)
     ];
 
     /**
@@ -100,10 +116,14 @@ abstract class BaseModelLang extends Model {
     public $timestamps = true;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     //-----------
 =======
     // -----------
 >>>>>>> b1dceab (up)
+=======
+    // -----------
+>>>>>>> a758bd5 (.)
     /*
     protected $id;
     protected $post;

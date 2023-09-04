@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <head>
     <meta charset="utf-8">
@@ -201,6 +202,8 @@
 =======
 =======
 >>>>>>> 70ab021 (.)
+=======
+>>>>>>> a758bd5 (.)
 
 <head>
     <meta charset="utf-8">
@@ -292,6 +295,7 @@
 </body>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> becf1dc (up)
                 <li>
                     Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
@@ -310,4 +314,6 @@
 >>>>>>> becf1dc (up)
 =======
 >>>>>>> 70ab021 (.)
+=======
+>>>>>>> a758bd5 (.)
 </html>

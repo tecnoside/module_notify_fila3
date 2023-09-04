@@ -5,12 +5,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> a758bd5 (.)
 declare(strict_types=1);
 
 return [
     'baseUrl' => 'https://laraxot.github.io/module_notify/',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,6 +40,8 @@ return [
 >>>>>>> becf1dc (up)
 =======
 >>>>>>> 6cba79e (.)
+=======
+>>>>>>> a758bd5 (.)
     'production' => true,
 
     // DocSearch credentials

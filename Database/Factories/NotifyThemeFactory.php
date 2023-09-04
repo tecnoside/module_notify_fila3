@@ -8,15 +8,21 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class NotifyThemeFactory extends Factory
 {
+=======
+
+class NotifyThemeFactory extends Factory {
+>>>>>>> a758bd5 (.)
     /**
      * The name of the factory's corresponding model.
      *
      * @var class-string<\Illuminate\Database\Eloquent\Model>
      */
     protected $model = \Modules\Notify\Models\NotifyTheme::class;
+<<<<<<< HEAD
 =======
 use Illuminate\Support\Str;
 
@@ -43,12 +49,15 @@ class NotifyThemeFactory extends Factory
 =======
     protected $model = \Modules\Notify\Models\NotifyTheme::class;
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> a758bd5 (.)
 
     /**
      * Define the model's default state.
      *
      * @return array
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,11 +83,17 @@ class NotifyThemeFactory extends Factory
         return [
             'id' => $this->faker->randomNumber(5, false),
 >>>>>>> fe06862 (.)
+=======
+    public function definition() {
+        return [
+            'id' => $this->faker->randomNumber(5, false),
+>>>>>>> a758bd5 (.)
             'lang' => $this->faker->word,
             'type' => $this->faker->word,
             'subject' => $this->faker->word,
             'body' => $this->faker->text,
             'body_html' => $this->faker->text,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -92,6 +107,9 @@ class NotifyThemeFactory extends Factory
 =======
             'from' => $this->faker->word,
 >>>>>>> fe06862 (.)
+=======
+            'from' => $this->faker->word,
+>>>>>>> a758bd5 (.)
         ];
     }
 }

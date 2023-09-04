@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,12 +63,16 @@ class CreateNotificationsTable extends XotBaseMigration
 =======
 //https://blog.quickadminpanel.com/laravel-notifications-with-database-driver-internal-messages/
 >>>>>>> 745fe6e (up)
+=======
+//https://blog.quickadminpanel.com/laravel-notifications-with-database-driver-internal-messages/
+>>>>>>> a758bd5 (.)
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 class CreateNotificationsTable extends XotBaseMigration {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 82d1f8c (up)
@@ -81,11 +86,14 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 class CreateNotificationsTable extends XotBaseMigration {
 >>>>>>> b3b016d (up)
+=======
+>>>>>>> a758bd5 (.)
     /**
      * Run the migrations.
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -129,6 +137,10 @@ class CreateNotificationsTable extends XotBaseMigration {
     public function up() {
         // -- CREATE --
 >>>>>>> b3b016d (up)
+=======
+    public function up() {
+        // -- CREATE --
+>>>>>>> a758bd5 (.)
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->uuid('id')->primary();
@@ -139,6 +151,7 @@ class CreateNotificationsTable extends XotBaseMigration {
                 $table->timestamps();
             }
         );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -168,6 +181,9 @@ class CreateNotificationsTable extends XotBaseMigration {
 =======
         // -- UPDATE --
 >>>>>>> b3b016d (up)
+=======
+        // -- UPDATE --
+>>>>>>> a758bd5 (.)
         $this->tableUpdate(
             function (Blueprint $table) {
                 if (! $this->hasColumn('updated_at')) {
@@ -187,6 +203,7 @@ class CreateNotificationsTable extends XotBaseMigration {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 
@@ -213,3 +230,6 @@ class CreateNotificationsTable extends XotBaseMigration {
 =======
 }
 >>>>>>> b3b016d (up)
+=======
+}
+>>>>>>> a758bd5 (.)

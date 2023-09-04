@@ -7,17 +7,23 @@ declare(strict_types=1);
 namespace Modules\Notify\Models\Panels\Actions;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // -------- services --------
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 7f1bbca (up)
+=======
+// -------- services --------
+
+>>>>>>> a758bd5 (.)
 use Illuminate\Support\Facades\Notification;
 use Modules\Cms\Actions\GetViewAction;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Notify\Datas\NotificationData;
 use Modules\Notify\Notifications\SampleNotification;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 // -------- bases -----------
@@ -87,6 +93,12 @@ class TryMailAction extends XotBasePanelAction {
 
 class TryMailAction extends XotBasePanelAction {
 >>>>>>> 5b257fb (up)
+=======
+
+// -------- bases -----------
+
+class TryMailAction extends XotBasePanelAction {
+>>>>>>> a758bd5 (.)
     public bool $onItem = true;
     public string $icon = '<i class="fas fa-vial"></i>Mail';
 
@@ -97,12 +109,16 @@ class TryMailAction extends XotBasePanelAction {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fe06862 (.)
+=======
+>>>>>>> a758bd5 (.)
     public function handle() {
         $drivers = [
             'duocircle',
             'mailtrap',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -129,11 +145,14 @@ class TryMailAction extends XotBasePanelAction {
             'mailtrap',
 >>>>>>> 0d776db (up)
 >>>>>>> 5b257fb (up)
+=======
+>>>>>>> a758bd5 (.)
         ];
         $i = request('i');
 
         $driver = isset($drivers[$i]) ? $drivers[$i] : null;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -148,6 +167,9 @@ $view = $this->panel->getView();
 =======
         $view = app(GetViewAction::class)->execute();
 >>>>>>> 7f1bbca (up)
+=======
+        $view = app(GetViewAction::class)->execute();
+>>>>>>> a758bd5 (.)
 
         $view_params = [
             'view' => $view,
@@ -155,6 +177,7 @@ $view = $this->panel->getView();
             'driver' => $driver,
         ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -196,6 +219,9 @@ $view = $this->panel->getView();
 =======
         return view($view, $view_params);
 >>>>>>> 7f1bbca (up)
+=======
+        return view($view, $view_params);
+>>>>>>> a758bd5 (.)
     }
 
     /**
@@ -203,6 +229,7 @@ $view = $this->panel->getView();
      */
     public function postHandle() {
         $data = request()->all();
+<<<<<<< HEAD
 <<<<<<< HEAD
         $vars = collect($data)->only(['driver', 'from', 'to', 'body'])->all();
         MailService::make()
@@ -236,15 +263,20 @@ $view = $this->panel->getView();
         $data = request()->all();
 =======
 >>>>>>> 7f1bbca (up)
+=======
+>>>>>>> a758bd5 (.)
         // $data['channels']=[$data['driver']];
         $data['channels'] = ['mail'];
         $hows = NotificationData::from($data);
         Notification::send([$hows], new SampleNotification($data));
         echo '<h3>+Done</h3>';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5b257fb (up)
 =======
 >>>>>>> 7f1bbca (up)
+=======
+>>>>>>> a758bd5 (.)
     }
 }

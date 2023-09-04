@@ -4,10 +4,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 42aa20e (.)
 =======
 >>>>>>> d27db1b (.)
+=======
+>>>>>>> a758bd5 (.)
 <?php
 
 declare(strict_types=1);
@@ -16,6 +19,7 @@ namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
 // //use Laravel\Scout\Searchable;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -28,6 +32,8 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 >>>>>>> d27db1b (.)
 =======
 >>>>>>> b1dceab (up)
+=======
+>>>>>>> a758bd5 (.)
 use Modules\Xot\Traits\Updater;
 
 /**
@@ -37,8 +43,11 @@ abstract class BasePivot extends Pivot {
     use Updater;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5f3f456 (up)
+=======
+>>>>>>> a758bd5 (.)
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -46,6 +55,7 @@ abstract class BasePivot extends Pivot {
      *
      * @var bool
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public static $snakeAttributes = true;
 =======
@@ -74,10 +84,14 @@ abstract class BasePivot extends Pivot {
      * @var bool
      */
     public $incrementing = true;
+=======
+    public static $snakeAttributes = true;
+>>>>>>> a758bd5 (.)
 
     protected $perPage = 30;
 
     // use Searchable;
+<<<<<<< HEAD
     /**
      * @var string
      */
@@ -154,6 +168,8 @@ abstract class BasePivot extends Pivot
 >>>>>>> d27db1b (.)
 =======
 >>>>>>> b1dceab (up)
+=======
+>>>>>>> a758bd5 (.)
 
     /**
      * @var string
@@ -166,11 +182,14 @@ abstract class BasePivot extends Pivot
     /**
      * @var array<string, string>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      * @var array
 >>>>>>> d27db1b (.)
 =======
 >>>>>>> b1dceab (up)
+=======
+>>>>>>> a758bd5 (.)
      */
     protected $casts = [];
     /**
@@ -187,6 +206,7 @@ abstract class BasePivot extends Pivot
      * @var bool
      */
     public $incrementing = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -279,3 +299,6 @@ abstract class BasePivot extends Pivot
 =======
 }
 >>>>>>> d27db1b (.)
+=======
+}
+>>>>>>> a758bd5 (.)

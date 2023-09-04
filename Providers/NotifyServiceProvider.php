@@ -5,12 +5,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a758bd5 (.)
 <?php
 
 declare(strict_types=1);
 
 namespace Modules\Notify\Providers;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 use Illuminate\Support\Facades\Notification;
@@ -417,10 +421,16 @@ class NotifyServiceProvider extends ServiceProvider {
 use Modules\Xot\Providers\XotBaseServiceProvider;
 
 >>>>>>> 478bb60 (up)
+=======
+use Modules\Xot\Providers\XotBaseServiceProvider;
+use Illuminate\Support\Facades\Notification;
+
+>>>>>>> a758bd5 (.)
 class NotifyServiceProvider extends XotBaseServiceProvider {
     protected string $module_dir = __DIR__;
     protected string $module_ns = __NAMESPACE__;
     public string $module_name = 'notify';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -448,6 +458,8 @@ class NotifyServiceProvider extends XotBaseServiceProvider
 <<<<<<< HEAD
 >>>>>>> ace9eb3 (up)
 =======
+=======
+>>>>>>> a758bd5 (.)
 
     public function bootCallback(): void {
         // BladeService::registerComponents($this->module_dir.'/../View/Components', 'Modules\\Media');
@@ -455,6 +467,7 @@ class NotifyServiceProvider extends XotBaseServiceProvider
             return new \Modules\Notify\Notifications\Channels\EsendexChannel();
         });
     }
+<<<<<<< HEAD
 >>>>>>> 8229f91 (up)
 }
 <<<<<<< HEAD
@@ -620,3 +633,6 @@ class NotifyServiceProvider extends ServiceProvider {
     }
 }
 >>>>>>> d27db1b (.)
+=======
+}
+>>>>>>> a758bd5 (.)

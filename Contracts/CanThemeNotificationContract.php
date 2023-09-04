@@ -9,6 +9,7 @@ namespace Modules\Notify\Contracts;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
 =======
 >>>>>>> 4a1a664 (up)
@@ -23,10 +24,14 @@ use Illuminate\Database\Eloquent\Model;
 =======
 use Illuminate\Database\Eloquent\Model;
 >>>>>>> 48ca37e (up)
+=======
+use Illuminate\Database\Eloquent\Model;
+>>>>>>> a758bd5 (.)
 use Modules\Notify\Datas\NotificationData;
 
 interface CanThemeNotificationContract
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,4 +75,9 @@ interface CanThemeNotificationContract
 
     public function getModel(): Model;
 >>>>>>> 48ca37e (up)
+=======
+    public function getNotificationData(string $name): NotificationData;
+
+    public function getModel(): Model;
+>>>>>>> a758bd5 (.)
 }

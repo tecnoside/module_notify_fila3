@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     {{--
 =======
 >>>>>>> 3405de3 (up)
@@ -21,6 +22,9 @@
 =======
     {{--
 >>>>>>> 6365d48 (up)
+=======
+    {{--
+>>>>>>> a758bd5 (.)
     @include('notify::emails.templates.ark.heading', [
 		'heading' => $subject,
 		'level' => 'h1'
@@ -30,6 +34,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     --}}
 =======
 >>>>>>> 3405de3 (up)
@@ -44,11 +49,15 @@
 =======
     --}}
 >>>>>>> 6365d48 (up)
+=======
+    --}}
+>>>>>>> a758bd5 (.)
 
     @include('notify::emails.templates.ark.contentStart')
         {!! $html !!}
     @include('notify::emails.templates.ark.contentEnd')
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,5 +79,8 @@
 =======
 
 >>>>>>> b3b016d (up)
+=======
+
+>>>>>>> a758bd5 (.)
 
 @stop
