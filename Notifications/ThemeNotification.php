@@ -145,7 +145,7 @@ class ThemeNotification extends Notification implements ShouldQueue
     public function via($notifiable)
     {
         $channels = $notifiable
-            ->getNotificationData($this->name)
+            ->getNotificationData($this->name, $this->view_params)
             ->channels;
 
         return $channels;
@@ -202,6 +202,7 @@ class ThemeNotification extends Notification implements ShouldQueue
     {
         return $notifiable
             ->getNotificationData($this->name, $this->view_params)
+<<<<<<< HEAD
             ->getSmsData();
         /*
 =======
@@ -230,6 +231,8 @@ class ThemeNotification extends Notification implements ShouldQueue
 >>>>>>> fe06862 (.)
         return $notifiable
             ->getNotificationData($this->name)
+=======
+>>>>>>> c496ff4 (up)
             ->getSmsData();
         /*
 <<<<<<< HEAD
