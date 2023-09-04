@@ -14,15 +14,15 @@ class FilamentServiceProvider extends XotBaseContextServiceProvider
 =======
 namespace Modules\Notify\Providers;
 
-use Filament\Facades\Filament;
-use Filament\Navigation\NavigationItem;
-use Savannabits\FilamentModules\ContextServiceProvider;
 
-class FilamentServiceProvider extends ContextServiceProvider
+use Modules\Xot\Providers\XotBaseContextServiceProvider;
+
+class FilamentServiceProvider extends XotBaseContextServiceProvider
 {
     public static string $name = 'notify-filament';
     public static string $module = 'Notify';
 
+<<<<<<< HEAD
     public function packageRegistered(): void
     {
         $this->app->booting(function () {
@@ -57,4 +57,7 @@ class FilamentServiceProvider extends ContextServiceProvider
         });
     }
 >>>>>>> 911eb41 (up)
+=======
+    
+>>>>>>> 812a135 (up)
 }
