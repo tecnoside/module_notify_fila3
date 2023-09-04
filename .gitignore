@@ -114,6 +114,7 @@ Homestead.json
 /.vagrant
 .phpunit.result.cache
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 *.stackdump
@@ -128,9 +129,12 @@ Homestead.json
 =======
 *.cache
 >>>>>>> 6c92430 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 23a7ddf (.)
 =======
 =======
 >>>>>>> 1b86d70 (Initial commit)
 >>>>>>> 6be216c (Initial commit)
+=======
+>>>>>>> c0db99d (.)
