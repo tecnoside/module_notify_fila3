@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6,6 +7,9 @@
 // https://blog.quickadminpanel.com/laravel-notifications-with-database-driver-internal-messages/
 =======
 >>>>>>> 602db11 (up)
+=======
+//https://blog.quickadminpanel.com/laravel-notifications-with-database-driver-internal-messages/
+>>>>>>> 0cbdb01 (up)
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;

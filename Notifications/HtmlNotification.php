@@ -35,6 +35,7 @@ class HtmlNotification extends Notification implements ShouldQueue {
      * @return array
      */
     public function via($notifiable) {
+        
         return ['mail'];
     }
 
@@ -76,7 +77,7 @@ class HtmlNotification extends Notification implements ShouldQueue {
      * @return array
      */
     public function toArray($notifiable) {
-        dddx($notifiable);
+      
 
         return [
         ];
