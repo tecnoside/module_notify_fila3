@@ -5,9 +5,10 @@
     "keywords": [],
     "priority": 0,
     "providers": [
-        "Modules\\Notify\\Providers\\NotifyServiceProvider"
+        "Modules\\Notify\\Providers\\NotifyServiceProvider",
+        "Modules\\Notify\\Providers\\Filament\\AdminPanelProvider"
     ],
-    "aliases": {},
+    "aliases": [],
     "files": [],
     "requires": []
 }

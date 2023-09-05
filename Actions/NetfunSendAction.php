@@ -37,7 +37,7 @@ class NetfunSendAction
     /**
      * Execute the action.
      */
-    public function execute(SmsData $sms): array
+    public function execute(SmsData $smsData): array
     {
         $endpoint = 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json';
         $headers = [
@@ -47,20 +47,20 @@ class NetfunSendAction
 
         // dddx([ord($this->body[0]), $this->body]);
 
-        $sms->to .= '';
-        if (Str::startsWith($sms->to, '00')) {
-            $sms->to = '+39' . substr($sms->to, 2);
+        $smsData->to .= '';
+        if (Str::startsWith($smsData->to, '00')) {
+            $smsData->to = '+39' . substr($smsData->to, 2);
         }
 
-        if (! Str::startsWith($sms->to, '+')) {
-            $sms->to = '+39' . $sms->to;
+        if (! Str::startsWith($smsData->to, '+')) {
+            $smsData->to = '+39' . $smsData->to;
         }
 
         $body = [
             'api_token' => $this->token,
             // "gateway"=> 99,
-            'sender' => $sms->from,
-            'text_template' => $sms->body, // .'  '.rand(1, 100),
+            'sender' => $smsData->from,
+            'text_template' => $smsData->body, // .'  '.rand(1, 100),
             /*
             'delivery_callback' => 'https://www.google.com?code={{code}}',
             'default_placeholders' => [
@@ -72,7 +72,7 @@ class NetfunSendAction
             'utf8_enabled' => true,
             'destinations' => [
                 [
-                    'number' => $sms->to,
+                    'number' => $smsData->to,
                     /*
                     'placeholders' => [
                         'fullName' => 'Santi',
@@ -90,7 +90,7 @@ class NetfunSendAction
         try {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
-            throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']');
+            throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']', $e->getCode(), $e);
         }
         /*
         echo '<hr/>';
