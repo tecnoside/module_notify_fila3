@@ -15,13 +15,13 @@ class BuildMailMessageAction
     use QueueableAction;
 
     /**
-     * @param  DataCollection<AttachmentData>  $attachments
+     * @param DataCollection<AttachmentData> $dataCollection
      */
     public function execute(
         string $name,
         Model $model,
         array $view_params = [],
-        DataCollection $attachments = null
+        DataCollection $dataCollection = null
     ): MailMessage {
         $view_params = array_merge($model->toArray(), $view_params);
 
@@ -35,8 +35,8 @@ class BuildMailMessageAction
             ->subject($view_params['subject'] ?? $theme->subject)
             ->view($view_html, $theme->view_params);
 
-        if (! empty($attachments)) {
-            foreach ($attachments as $attachment) {
+        if ($dataCollection instanceof \Spatie\LaravelData\DataCollection) {
+            foreach ($dataCollection as $attachment) {
                 $email = $email->attach($attachment->path, ['as' => $attachment->as, 'mime' => $attachment->mime]);
             }
         }

@@ -15,17 +15,17 @@ class MailService
 {
     private static ?self $instance = null;
 
-    public ?string $from;
+    public ?string $from = null;
     public string $to;
 
     public string $driver = 'duocircle';
-    public ?string $body;
+    public ?string $body = null;
 
     public array $vars = [];
 
     public static function getInstance(): self
     {
-        if (null === self::$instance) {
+        if (!self::$instance instanceof \Modules\Notify\Services\MailService) {
             self::$instance = new self;
         }
 
