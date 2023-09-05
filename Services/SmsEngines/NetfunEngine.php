@@ -21,22 +21,18 @@ class NetfunEngine
 {
     private static ?self $instance = null;
 
-    public ?string $from;
+    public ?string $from = null;
     public string $to;
     public string $driver;
-    public ?string $body;
+    public ?string $body = null;
 
     public array $vars = [];
 
     public string $send_method = 'batch';
 
-    public function __construct()
-    {
-    }
-
     public static function getInstance(): self
     {
-        if (null === self::$instance) {
+        if (!self::$instance instanceof \Modules\Notify\Services\SmsEngines\NetfunEngine) {
             self::$instance = new self;
         }
 
@@ -64,11 +60,10 @@ class NetfunEngine
 
     public function send(): self
     {
-        switch ($this->send_method) {
-            case 'batch': return $this->sendBatch();
-        }
-
-        return $this->sendNormal();
+        return match ($this->send_method) {
+            'batch' => $this->sendBatch(),
+            default => $this->sendNormal(),
+        };
     }
 
     public function sendBatch(): self
@@ -82,7 +77,7 @@ class NetfunEngine
 
         // dddx([ord($this->body[0]), $this->body]);
 
-        $this->to = $this->to . '';
+        $this->to .= '';
         if (Str::startsWith($this->to, '00')) {
             $this->to = '+39' . substr($this->to, 2);
         }
@@ -95,7 +90,7 @@ class NetfunEngine
             'api_token' => $token,
             // "gateway"=> 99,
             'sender' => $this->from,
-            'text_template' => $this->body . '  ' . rand(1, 100),
+            'text_template' => $this->body . '  ' . random_int(1, 100),
             /*
             'delivery_callback' => 'https://www.google.com?code={{code}}',
             'default_placeholders' => [
@@ -125,7 +120,7 @@ class NetfunEngine
         try {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
-            throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']');
+            throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']', $e->getCode(), $e);
         }
         /*
         echo '<hr/>';
@@ -160,7 +155,7 @@ class NetfunEngine
         try {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
-            throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']');
+            throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']', $e->getCode(), $e);
         }
         echo '<pre>' . var_export($response->getStatusCode(), true) . '</pre>';
         echo '<pre>' . var_export($response->getBody()->getContents(), true) . '</pre>';
