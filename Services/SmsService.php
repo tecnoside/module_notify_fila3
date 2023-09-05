@@ -25,7 +25,7 @@ class SmsService
 
     public static function getInstance(): self
     {
-        if (!self::$instance instanceof \Modules\Notify\Services\SmsService) {
+        if (! self::$instance instanceof \Modules\Notify\Services\SmsService) {
             self::$instance = new self;
         }
 
