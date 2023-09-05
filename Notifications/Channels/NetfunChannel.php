@@ -10,21 +10,16 @@ use Modules\Xot\Contracts\ModelContactContract;
 
 class NetfunChannel
 {
-    public function __construct()
-    {
-    }
-
     /**
      * Send the given notification.
      *
      * @param  \Modules\Notify\Contracts\CanThemeNotificationContract  $notifiable
-     * @return void
      */
-    public function send($notifiable, ThemeNotification $notification)
+    public function send($notifiable, ThemeNotification $themeNotification): void
     {
-        $message = $notification->toSms($notifiable);
+        $smsData = $themeNotification->toSms($notifiable);
         // Send notification to the $notifiable instance...
-        $data = app(NetfunSendAction::class)->execute($message);
+        $data = app(NetfunSendAction::class)->execute($smsData);
 
         if ($notifiable instanceof ModelContactContract) {
             $notifiable->increase('sms', $data);

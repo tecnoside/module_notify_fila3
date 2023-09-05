@@ -23,17 +23,12 @@ class EsendexSendAction
 {
     use QueueableAction;
 
-    public string $base_endpoint;
-
-    public function __construct()
-    {
-        $this->base_endpoint = 'https://app.messaggissima.it/API/v1.0/REST/';
-    }
+    public string $base_endpoint = 'https://app.messaggissima.it/API/v1.0/REST/';
 
     /**
      * Sends an SMS message.
      */
-    public function execute(SmsData $sms): array
+    public function execute(SmsData $smsData): array
     {
         $auth = $this->login();
 
@@ -42,10 +37,10 @@ class EsendexSendAction
         }
 
         $data = [
-            'message' => $sms->body,
+            'message' => $smsData->body,
             'message_type' => 'N',
             'returnCredits' => false,
-            'recipient' => [$sms->to],
+            'recipient' => [$smsData->to],
             'sender' => config('esendex.sender'),
         ];
 
@@ -69,7 +64,7 @@ class EsendexSendAction
             return [];
         }
 
-        $res = json_decode(strval($response), true);
+        $res = json_decode((string) $response, true);
 
         dddx($res);
         if (! is_array($res)) {
@@ -85,27 +80,27 @@ class EsendexSendAction
      */
     public function login(): ?array
     {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        $curlHandle = curl_init();
+        curl_setopt($curlHandle, CURLOPT_SSL_VERIFYPEER, false);
 
         $login_string = $this->base_endpoint . 'login?username=' . config('esendex.username') . '&password=' . config('esendex.password');
 
-        curl_setopt($ch, CURLOPT_URL, $login_string);
+        curl_setopt($curlHandle, CURLOPT_URL, $login_string);
 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curlHandle, CURLOPT_RETURNTRANSFER, true);
 
-        $response = curl_exec($ch);
+        $response = curl_exec($curlHandle);
 
         // dddx(['login_string' => $login_string, 'response' => $response]);
 
-        $info = curl_getinfo($ch);
+        $info = curl_getinfo($curlHandle);
 
-        curl_close($ch);
+        curl_close($curlHandle);
         Assert::isArray($info);
         if (200 !== $info['http_code']) {
             return null;
         }
 
-        return explode(';', strval($response));
+        return explode(';', (string) $response);
     }
 }

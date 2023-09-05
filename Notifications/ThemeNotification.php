@@ -14,8 +14,6 @@ use Modules\Notify\Datas\SmsData;
 class ThemeNotification extends Notification implements ShouldQueue
 {
     use Queueable;
-    public array $view_params;
-    public string $name;
     public array $attachments;
 
     /**
@@ -23,25 +21,20 @@ class ThemeNotification extends Notification implements ShouldQueue
      *
      * @return void
      */
-    public function __construct(string $name, array $view_params)
+    public function __construct(public string $name, public array $view_params)
     {
-        $this->name = $name;
-        $this->view_params = $view_params;
     }
 
     /**
      * Get the notification's delivery channels.
      *
      * @param  CanThemeNotificationContract  $notifiable
-     * @return array
      */
-    public function via($notifiable)
+    public function via($notifiable): array
     {
-        $channels = $notifiable
+        return $notifiable
             ->getNotificationData($this->name, $this->view_params)
             ->channels;
-
-        return $channels;
     }
 
     /**
@@ -68,14 +61,12 @@ class ThemeNotification extends Notification implements ShouldQueue
     // {
     //    dddx($notifiable);
     // }
-
     /**
      * Undocumented function.
      *
      * @param  CanThemeNotificationContract  $notifiable
-     * @return SmsData
      */
-    public function toSms($notifiable)
+    public function toSms($notifiable): \Modules\Notify\Datas\SmsData
     {
         return $notifiable
             ->getNotificationData($this->name, $this->view_params)

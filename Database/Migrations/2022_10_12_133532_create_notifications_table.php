@@ -10,31 +10,29 @@ class CreateNotificationsTable extends XotBaseMigration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
         // -- CREATE --
         $this->tableCreate(
-            function (Blueprint $table) {
-                $table->uuid('id')->primary();
-                $table->string('type');
-                $table->morphs('notifiable');
-                $table->text('data');
-                $table->timestamp('read_at')->nullable();
-                $table->timestamps();
+            function (Blueprint $blueprint): void {
+                $blueprint->uuid('id')->primary();
+                $blueprint->string('type');
+                $blueprint->morphs('notifiable');
+                $blueprint->text('data');
+                $blueprint->timestamp('read_at')->nullable();
+                $blueprint->timestamps();
             }
         );
         // -- UPDATE --
         $this->tableUpdate(
-            function (Blueprint $table) {
+            function (Blueprint $blueprint): void {
                 if (! $this->hasColumn('updated_at')) {
-                    $table->timestamps();
+                    $blueprint->timestamps();
                 }
                 if (! $this->hasColumn('updated_by')) {
-                    $table->string('updated_by')->nullable()->after('updated_at');
-                    $table->string('created_by')->nullable()->after('created_at');
+                    $blueprint->string('updated_by')->nullable()->after('updated_at');
+                    $blueprint->string('created_by')->nullable()->after('created_at');
                 }
             }
         );

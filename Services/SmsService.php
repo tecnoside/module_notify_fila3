@@ -15,17 +15,17 @@ class SmsService
 {
     private static ?self $instance = null;
 
-    public ?string $from;
+    public ?string $from = null;
     public string $to;
 
     public string $driver = 'netfun';
-    public ?string $body;
+    public ?string $body = null;
 
     public array $vars = [];
 
     public static function getInstance(): self
     {
-        if (null === self::$instance) {
+        if (!self::$instance instanceof \Modules\Notify\Services\SmsService) {
             self::$instance = new self;
         }
 

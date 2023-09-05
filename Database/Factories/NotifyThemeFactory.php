@@ -17,10 +17,8 @@ class NotifyThemeFactory extends Factory
 
     /**
      * Define the model's default state.
-     *
-     * @return array
      */
-    public function definition()
+    public function definition(): array
     {
         return [
             'id' => $this->faker->randomNumber(5, false),

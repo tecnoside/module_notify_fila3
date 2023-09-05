@@ -20,18 +20,14 @@ class MailtrapEngine
 {
     private static ?self $instance = null;
 
-    public ?string $from;
+    public ?string $from = null;
     public string $to;
     public string $driver;
-    public ?string $body;
-
-    public function __construct()
-    {
-    }
+    public ?string $body = null;
 
     public static function getInstance(): self
     {
-        if (null === self::$instance) {
+        if (!self::$instance instanceof \Modules\Notify\Services\MailEngines\MailtrapEngine) {
             self::$instance = new self;
         }
 
@@ -66,7 +62,7 @@ class MailtrapEngine
         // Mail::raw('Hello World!', function($msg) {$msg->to('vair81@gmail.com')->subject('Test Email'); });
 
         // try {
-        Mail::raw((string) $this->body, function ($msg) {
+        Mail::raw((string) $this->body, function ($msg): void {
             $msg->to($this->to)->subject('Test Email');
         });
         // Dead catch - ErrorException is never thrown in the try block.

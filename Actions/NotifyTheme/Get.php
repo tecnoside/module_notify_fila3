@@ -19,7 +19,7 @@ class Get
 
     public function execute(string $name, string $type, array $view_params): NotifyThemeData
     {
-        $xot = XotData::make();
+        $xotData = XotData::make();
         if (! isset($view_params['post_id'])) {
             $view_params['post_id'] = 0;
         }
@@ -34,7 +34,7 @@ class Get
             'post_id' => $view_params['post_id'], // in questo caso il tipo come register type 3 in cui la pwd e' solo autogenerata
         ], ['view_params' => []]);
 
-        $module_name_low = Str::lower($xot->main_module);
+        $module_name_low = Str::lower($xotData->main_module);
 
         $trad_mod = $module_name_low . '::' . $type . '.' . $name;
 
@@ -61,8 +61,8 @@ class Get
 
         $view_params['now'] = now()->format('d/m/Y');
 
-        $body_html = strval($theme->body_html);
-        $subject = strval($theme->subject);
+        $body_html = (string) $theme->body_html;
+        $subject = (string) $theme->subject;
 
         if ('empty' !== $theme->theme) {
             $view_params['logo'] = $theme->logo;
