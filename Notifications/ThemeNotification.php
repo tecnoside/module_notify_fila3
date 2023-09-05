@@ -66,7 +66,7 @@ class ThemeNotification extends Notification implements ShouldQueue
      *
      * @param  CanThemeNotificationContract  $notifiable
      */
-    public function toSms($notifiable): \Modules\Notify\Datas\SmsData
+    public function toSms($notifiable): SmsData
     {
         return $notifiable
             ->getNotificationData($this->name, $this->view_params)
