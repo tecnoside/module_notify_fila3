@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Providers;
 
-use Illuminate\Support\Facades\Notification;
+// use Illuminate\Support\Facades\Notification;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 
 class NotifyServiceProvider extends XotBaseServiceProvider
