@@ -7,8 +7,8 @@ namespace Modules\Notify\Filament\Resources;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables\Table;
 use Filament\Tables;
+use Filament\Tables\Table;
 use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages;
 use Modules\Notify\Models\NotifyTheme;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
@@ -16,7 +16,7 @@ use Savannabits\FilamentModules\Concerns\ContextualResource;
 
 class NotifyThemeResource extends Resource
 {
-    ////use ContextualResource;
+    // //use ContextualResource;
 
     protected static ?string $model = NotifyTheme::class;
 

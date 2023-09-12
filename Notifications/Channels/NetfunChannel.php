@@ -13,7 +13,7 @@ class NetfunChannel
     /**
      * Send the given notification.
      *
-     * @param  \Modules\Notify\Contracts\CanThemeNotificationContract  $notifiable
+     * @param \Modules\Notify\Contracts\CanThemeNotificationContract $notifiable
      */
     public function send($notifiable, ThemeNotification $themeNotification): void
     {

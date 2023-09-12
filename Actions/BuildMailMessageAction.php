@@ -15,7 +15,7 @@ class BuildMailMessageAction
     use QueueableAction;
 
     /**
-     * @param  DataCollection<AttachmentData>  $dataCollection
+     * @param DataCollection<AttachmentData> $dataCollection
      */
     public function execute(
         string $name,
@@ -30,7 +30,7 @@ class BuildMailMessageAction
         $theme = app(\Modules\Notify\Actions\NotifyTheme\Get::class)->execute($name, $type, $view_params);
         $view_html = 'notify::email';
         // dddx([$theme, $view_params]);
-        $email = (new MailMessage)
+        $email = (new MailMessage())
             ->from($theme->view_params['from_email'], $theme->view_params['from'])
             ->subject($view_params['subject'] ?? $theme->subject)
             ->view($view_html, $theme->view_params);

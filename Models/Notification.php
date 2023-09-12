@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
-use Eloquent;
 use Illuminate\Notifications\DatabaseNotification;
 
 /**
@@ -20,7 +19,7 @@ use Illuminate\Notifications\DatabaseNotification;
  * @property string|null                                   $created_by
  * @property \Illuminate\Support\Carbon|null               $updated_at
  * @property string|null                                   $updated_by
- * @property \Illuminate\Database\Eloquent\Model|Eloquent $notifiable
+ * @property \Illuminate\Database\Eloquent\Model|\Eloquent $notifiable
  *
  * @method static \Illuminate\Notifications\DatabaseNotificationCollection<int, static> all($columns = ['*'])
  * @method static \Illuminate\Notifications\DatabaseNotificationCollection<int, static> get($columns = ['*'])

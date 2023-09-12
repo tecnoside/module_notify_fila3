@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
-use Eloquent;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -57,7 +56,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  *
  * @mixin IdeHelperNotifyTheme
  *
- * @property \Illuminate\Database\Eloquent\Model|Eloquent $linkable
+ * @property \Illuminate\Database\Eloquent\Model|\Eloquent $linkable
  *
  * @mixin \Eloquent
  */

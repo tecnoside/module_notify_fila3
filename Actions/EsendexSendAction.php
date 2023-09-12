@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions;
 
-use Exception;
 use Modules\Notify\Datas\SmsData;
-use Spatie\QueueableAction\QueueableAction;
-use Webmozart\Assert\Assert;
 
 use function Safe\curl_exec;
 use function Safe\curl_getinfo;
@@ -15,6 +12,9 @@ use function Safe\curl_init;
 use function Safe\curl_setopt;
 use function Safe\json_decode;
 use function Safe\json_encode;
+
+use Spatie\QueueableAction\QueueableAction;
+use Webmozart\Assert\Assert;
 
 /**
  * @property string $base_endpoint
@@ -33,7 +33,7 @@ class EsendexSendAction
         $auth = $this->login();
 
         if (! is_array($auth)) {
-            throw new Exception('[' . __LINE__ . '][' . __FILE__ . ']');
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
 
         $data = [
@@ -46,11 +46,11 @@ class EsendexSendAction
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_URL, $this->base_endpoint . 'sms');
+        curl_setopt($ch, CURLOPT_URL, $this->base_endpoint.'sms');
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
             'Content-type: application/json',
-            'user_key: ' . $auth[0],
-            'Session_key: ' . $auth[1],
+            'user_key: '.$auth[0],
+            'Session_key: '.$auth[1],
         ]);
 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -68,7 +68,7 @@ class EsendexSendAction
 
         dddx($res);
         if (! is_array($res)) {
-            throw new Exception('[' . __LINE__ . '][' . __FILE__ . ']');
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
 
         return $res;
@@ -83,7 +83,7 @@ class EsendexSendAction
         $curlHandle = curl_init();
         curl_setopt($curlHandle, CURLOPT_SSL_VERIFYPEER, false);
 
-        $login_string = $this->base_endpoint . 'login?username=' . config('esendex.username') . '&password=' . config('esendex.password');
+        $login_string = $this->base_endpoint.'login?username='.config('esendex.username').'&password='.config('esendex.password');
 
         curl_setopt($curlHandle, CURLOPT_URL, $login_string);
 
