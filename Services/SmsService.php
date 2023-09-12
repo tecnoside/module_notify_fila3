@@ -26,7 +26,7 @@ class SmsService
     public static function getInstance(): self
     {
         if (! self::$instance instanceof \Modules\Notify\Services\SmsService) {
-            self::$instance = new self;
+            self::$instance = new self();
         }
 
         return self::$instance;
@@ -56,7 +56,7 @@ class SmsService
 
     public function send(): self
     {
-        $class = '\Modules\Notify\Services\SmsEngines\\' . Str::studly($this->driver) . 'Engine';
+        $class = '\Modules\Notify\Services\SmsEngines\\'.Str::studly($this->driver).'Engine';
         $instance = $class::make()
             ->setLocalVars($this->vars)
             ->send();

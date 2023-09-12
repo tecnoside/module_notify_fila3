@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions;
 
-use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Str;
@@ -29,7 +28,7 @@ class NetfunSendAction
         // Prepare the action for execution, leveraging constructor injection.
         $token = config('services.netfun.token');
         if (! is_string($token)) {
-            throw new Exception('put [NETFUN_TOKEN] variable to your .env and config [services.netfun.token] ');
+            throw new \Exception('put [NETFUN_TOKEN] variable to your .env and config [services.netfun.token] ');
         }
         $this->token = $token;
     }
@@ -49,11 +48,11 @@ class NetfunSendAction
 
         $smsData->to .= '';
         if (Str::startsWith($smsData->to, '00')) {
-            $smsData->to = '+39' . substr($smsData->to, 2);
+            $smsData->to = '+39'.substr($smsData->to, 2);
         }
 
         if (! Str::startsWith($smsData->to, '+')) {
-            $smsData->to = '+39' . $smsData->to;
+            $smsData->to = '+39'.$smsData->to;
         }
 
         $body = [
@@ -90,7 +89,7 @@ class NetfunSendAction
         try {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
-            throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']', $e->getCode(), $e);
+            throw new \Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']', $e->getCode(), $e);
         }
         /*
         echo '<hr/>';

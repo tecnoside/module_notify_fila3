@@ -28,7 +28,7 @@ class ThemeNotification extends Notification implements ShouldQueue
     /**
      * Get the notification's delivery channels.
      *
-     * @param  CanThemeNotificationContract  $notifiable
+     * @param CanThemeNotificationContract $notifiable
      */
     public function via($notifiable): array
     {
@@ -40,7 +40,8 @@ class ThemeNotification extends Notification implements ShouldQueue
     /**
      * Get the mail representation of the notification.
      *
-     * @param  CanThemeNotificationContract  $notifiable
+     * @param CanThemeNotificationContract $notifiable
+     *
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable)
@@ -64,7 +65,7 @@ class ThemeNotification extends Notification implements ShouldQueue
     /**
      * Undocumented function.
      *
-     * @param  CanThemeNotificationContract  $notifiable
+     * @param CanThemeNotificationContract $notifiable
      */
     public function toSms($notifiable): SmsData
     {
@@ -85,7 +86,8 @@ class ThemeNotification extends Notification implements ShouldQueue
     /**
      * Get the array representation of the notification.
      *
-     * @param  CanThemeNotificationContract  $notifiable
+     * @param CanThemeNotificationContract $notifiable
+     *
      * @return array
      */
     public function toArray($notifiable)
