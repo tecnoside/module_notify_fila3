@@ -19,52 +19,52 @@ class CreateNotifyThemesTable extends XotBaseMigration
     {
         // -- CREATE --
         $this->tableCreate(
-            function (Blueprint $blueprint): void {
-                $blueprint->increments('id');
-                $blueprint->string('lang')->nullable();
-                $blueprint->string('type')->nullable();
-                $blueprint->string('subject')->nullable();
-                $blueprint->text('body')->nullable();
+            function (Blueprint $table): void {
+                $table->increments('id');
+                $table->string('lang')->nullable();
+                $table->string('type')->nullable();
+                $table->string('subject')->nullable();
+                $table->text('body')->nullable();
             }
         );
 
         // -- UPDATE --
         $this->tableUpdate(
-            function (Blueprint $blueprint): void {
+            function (Blueprint $table): void {
                 if (! $this->hasColumn('from')) {
-                    $blueprint->string('from')->nullable();
+                    $table->string('from')->nullable();
                 }
                 if (! $this->hasColumn('updated_at')) {
-                    $blueprint->timestamps();
+                    $table->timestamps();
                 }
                 if (! $this->hasColumn('updated_by')) {
-                    $blueprint->string('updated_by')->nullable()->after('updated_at');
-                    $blueprint->string('created_by')->nullable()->after('created_at');
+                    $table->string('updated_by')->nullable()->after('updated_at');
+                    $table->string('created_by')->nullable()->after('created_at');
                 }
                 if (! $this->hasColumn('post_type')) {
-                    $blueprint->nullableMorphs('post');
+                    $table->nullableMorphs('post');
                 }
                 if (! $this->hasColumn('body_html')) {
-                    $blueprint->text('body_html')->nullable();
+                    $table->text('body_html')->nullable();
                 }
                 if (! $this->hasColumn('theme')) {
-                    $blueprint->string('theme')->nullable();
+                    $table->string('theme')->nullable();
                 }
                 if (! $this->hasColumn('from_email')) {
-                    $blueprint->string('from_email')->nullable();
+                    $table->string('from_email')->nullable();
                 }
                 if (! $this->hasColumn('logo_src')) {
-                    $blueprint->string('logo_src')->nullable();
+                    $table->string('logo_src')->nullable();
                 }
                 if (! $this->hasColumn('logo_width')) {
-                    $blueprint->integer('logo_width')->nullable();
+                    $table->integer('logo_width')->nullable();
                 }
                 if (! $this->hasColumn('logo_height')) {
-                    $blueprint->integer('logo_height')->nullable();
+                    $table->integer('logo_height')->nullable();
                 }
 
                 if (! $this->hasColumn('view_params')) {
-                    $blueprint->json('view_params');
+                    $table->json('view_params');
                 }
             }
         ); // end update
