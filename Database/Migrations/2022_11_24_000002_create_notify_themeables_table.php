@@ -14,24 +14,24 @@ class CreateNotifyThemeablesTable extends XotBaseMigration
     {
         // -- CREATE --
         $this->tableCreate(
-            function (Blueprint $blueprint): void {
-                $blueprint->increments('id');
-                $blueprint->nullableMorphs('model');
-                $blueprint->timestamps();
+            function (Blueprint $table): void {
+                $table->increments('id');
+                $table->nullableMorphs('model');
+                $table->timestamps();
             }
         );
         // -- UPDATE --
         $this->tableUpdate(
-            function (Blueprint $blueprint): void {
+            function (Blueprint $table): void {
                 if (! $this->hasColumn('updated_at')) {
-                    $blueprint->timestamps();
+                    $table->timestamps();
                 }
                 if (! $this->hasColumn('updated_by')) {
-                    $blueprint->string('updated_by')->nullable()->after('updated_at');
-                    $blueprint->string('created_by')->nullable()->after('created_at');
+                    $table->string('updated_by')->nullable()->after('updated_at');
+                    $table->string('created_by')->nullable()->after('created_at');
                 }
                 if (! $this->hasColumn('notify_theme_id')) {
-                    $blueprint->integer('notify_theme_id')->nullable();
+                    $table->integer('notify_theme_id')->nullable();
                 }
             }
         );
