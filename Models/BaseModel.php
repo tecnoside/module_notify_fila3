@@ -17,7 +17,6 @@ use Modules\Xot\Traits\Updater;
 abstract class BaseModel extends Model
 {
     // use Searchable;
-    // //use Cachable;
     use HasFactory;
 
     use Updater;
@@ -40,6 +39,9 @@ abstract class BaseModel extends Model
      */
     public $timestamps = true;
 
+    /**
+     * @var int
+     */
     protected $perPage = 30;
 
     protected $connection = 'notify';
