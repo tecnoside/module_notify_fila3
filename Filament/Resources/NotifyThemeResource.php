@@ -91,6 +91,9 @@ class NotifyThemeResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
+            ])
+            ->headerActions([
+                Tables\Actions\CreateAction::make(),
             ]);
     }
 
