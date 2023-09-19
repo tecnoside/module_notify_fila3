@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions\NotifyTheme\Attachment;
 
+use Modules\Notify\Actions\NotifyTheme\Get;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Modules\Notify\Datas\AttachmentData;
@@ -19,7 +20,7 @@ class Pdf
 
     public function execute(string $post_type, array $view_params): AttachmentData
     {
-        $notify_theme_data = app(\Modules\Notify\Actions\NotifyTheme\Get::class)->execute($post_type, 'pdf', $view_params);
+        $notify_theme_data = app(Get::class)->execute($post_type, 'pdf', $view_params);
         $html = $notify_theme_data->body_html;
 
         $file_name = Str::slug($notify_theme_data->subject).'.pdf';

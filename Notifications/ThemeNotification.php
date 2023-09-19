@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Notifications;
 
+use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
@@ -42,7 +43,7 @@ class ThemeNotification extends Notification implements ShouldQueue
      *
      * @param CanThemeNotificationContract $notifiable
      *
-     * @return \Illuminate\Notifications\Messages\MailMessage
+     * @return MailMessage
      */
     public function toMail($notifiable)
     {

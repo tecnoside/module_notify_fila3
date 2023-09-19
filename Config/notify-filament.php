@@ -1,6 +1,9 @@
 <?php
 
 declare(strict_types=1);
+use Filament\Pages\Dashboard;
+use Modules\Notify\Http\Livewire\Auth\FilamentLogin;
+use Modules\Notify\Http\Middleware\FilamentMiddleware;
 
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Http\Middleware\MirrorConfigToSubpackages;
@@ -57,7 +60,7 @@ return [
         'namespace' => $contextNs.'\\Pages',
         'path' => base_path('Modules/'.$moduleName."/{$contextPath}/Pages"),
         'register' => [
-            Pages\Dashboard::class,
+            Dashboard::class,
         ],
     ],
 
@@ -124,7 +127,7 @@ return [
     'auth' => [
         'guard' => env('FILAMENT_AUTH_GUARD', 'web'),
         'pages' => [
-            'login' => Modules\Notify\Http\Livewire\Auth\FilamentLogin::class,
+            'login' => FilamentLogin::class,
         ],
     ],
 
@@ -141,7 +144,7 @@ return [
     'middleware' => [
         'auth' => [
             //  Authenticate::class,
-            Modules\Notify\Http\Middleware\FilamentMiddleware::class,
+            FilamentMiddleware::class,
         ],
         'base' => [
             EncryptCookies::class,

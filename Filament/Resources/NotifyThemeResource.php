@@ -4,6 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Resources;
 
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use Filament\Forms\Components\Textarea;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\DeleteBulkAction;
+use Filament\Tables\Actions\CreateAction;
+use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages\ListNotifyThemes;
+use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages\CreateNotifyTheme;
+use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages\EditNotifyTheme;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -25,24 +37,24 @@ class NotifyThemeResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('lang')->options(self::fieldOptions('lang')),
-                Forms\Components\Select::make('type')->options(self::fieldOptions('type')),
-                Forms\Components\Select::make('post_type')->options(self::fieldOptions('post_type')),
-                Forms\Components\TextInput::make('post_id'),
-                Forms\Components\TextInput::make('subject'),
-                Forms\Components\TextInput::make('from'),
-                Forms\Components\TextInput::make('from_email'),
-                Forms\Components\SpatieMediaLibraryFileUpload::make('logo_src')
+                Select::make('lang')->options(self::fieldOptions('lang')),
+                Select::make('type')->options(self::fieldOptions('type')),
+                Select::make('post_type')->options(self::fieldOptions('post_type')),
+                TextInput::make('post_id'),
+                TextInput::make('subject'),
+                TextInput::make('from'),
+                TextInput::make('from_email'),
+                SpatieMediaLibraryFileUpload::make('logo_src')
                     ->enableOpen()
                     ->enableDownload()
                     ->columnSpanFull()
                     ->disk('uploads')
                     ->directory('photos')
                     ->preserveFilenames(),
-                Forms\Components\TextInput::make('logo_width'),
-                Forms\Components\TextInput::make('logo_height'),
+                TextInput::make('logo_width'),
+                TextInput::make('logo_height'),
                 // Forms\Components\TextInput::make('theme'),
-                Forms\Components\Select::make('theme')->options(
+                Select::make('theme')->options(
                     [
                         'empty' => 'empty',
                         'ark' => 'ark',
@@ -52,7 +64,7 @@ class NotifyThemeResource extends Resource
                     ]
                 )
                     ->default('empty'),
-                Forms\Components\Textarea::make('body')->columnSpanFull(),
+                Textarea::make('body')->columnSpanFull(),
                 // Forms\Components\RichEditor::make('body_html')->columnSpanFull(),
                 TinyEditor::make('body_html')->columnSpanFull(),
             ]);
@@ -71,29 +83,29 @@ class NotifyThemeResource extends Resource
     {
         return $table
             ->columns([
-                'id' => Tables\Columns\TextColumn::make('id')->sortable(),
-                'lang' => Tables\Columns\TextColumn::make('lang')->sortable(),
-                'type' => Tables\Columns\TextColumn::make('type')->sortable(),
-                'post_id' => Tables\Columns\TextColumn::make('post_id')->sortable(),
-                'post_type' => Tables\Columns\TextColumn::make('post_type')->sortable(),
-                'logo_src' => Tables\Columns\TextColumn::make('logo_src')->sortable(),
+                'id' => TextColumn::make('id')->sortable(),
+                'lang' => TextColumn::make('lang')->sortable(),
+                'type' => TextColumn::make('type')->sortable(),
+                'post_id' => TextColumn::make('post_id')->sortable(),
+                'post_type' => TextColumn::make('post_type')->sortable(),
+                'logo_src' => TextColumn::make('logo_src')->sortable(),
             ])
             ->filters([
-                Tables\Filters\SelectFilter::make('lang')
+                SelectFilter::make('lang')
                     ->options(self::fieldOptions('lang')),
-                Tables\Filters\SelectFilter::make('post_type')
+                SelectFilter::make('post_type')
                     ->options(self::fieldOptions('post_type')),
-                Tables\Filters\SelectFilter::make('type')
+                SelectFilter::make('type')
                     ->options(self::fieldOptions('type')),
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+                DeleteBulkAction::make(),
             ])
             ->headerActions([
-                Tables\Actions\CreateAction::make(),
+                CreateAction::make(),
             ]);
     }
 
@@ -107,9 +119,9 @@ class NotifyThemeResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListNotifyThemes::route('/'),
-            'create' => Pages\CreateNotifyTheme::route('/create'),
-            'edit' => Pages\EditNotifyTheme::route('/{record}/edit'),
+            'index' => ListNotifyThemes::route('/'),
+            'create' => CreateNotifyTheme::route('/create'),
+            'edit' => EditNotifyTheme::route('/{record}/edit'),
         ];
     }
 }

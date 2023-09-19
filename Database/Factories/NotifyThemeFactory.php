@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Database\Factories;
 
+use Illuminate\Database\Eloquent\Model;
+use Modules\Notify\Models\NotifyTheme;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class NotifyThemeFactory extends Factory
@@ -11,9 +13,9 @@ class NotifyThemeFactory extends Factory
     /**
      * The name of the factory's corresponding model.
      *
-     * @var class-string<\Illuminate\Database\Eloquent\Model>
+     * @var class-string<Model>
      */
-    protected $model = \Modules\Notify\Models\NotifyTheme::class;
+    protected $model = NotifyTheme::class;
 
     /**
      * Define the model's default state.

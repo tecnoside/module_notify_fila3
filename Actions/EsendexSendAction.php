@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions;
 
+use Exception;
 use Modules\Notify\Datas\SmsData;
 
 use function Safe\curl_exec;
@@ -33,7 +34,7 @@ class EsendexSendAction
         $auth = $this->login();
 
         if (! is_array($auth)) {
-            throw new \Exception('['.__LINE__.']['.__FILE__.']');
+            throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
 
         $data = [
@@ -55,7 +56,7 @@ class EsendexSendAction
 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data, JSON_THROW_ON_ERROR));
         $response = curl_exec($ch);
         $info = curl_getinfo($ch);
         curl_close($ch);
@@ -64,11 +65,11 @@ class EsendexSendAction
             return [];
         }
 
-        $res = json_decode((string) $response, true);
+        $res = json_decode((string) $response, true, 512, JSON_THROW_ON_ERROR);
 
         dddx($res);
         if (! is_array($res)) {
-            throw new \Exception('['.__LINE__.']['.__FILE__.']');
+            throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
 
         return $res;
