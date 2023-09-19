@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions;
 
+use Modules\Notify\Actions\NotifyTheme\Get;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Messages\MailMessage;
 use Modules\Notify\Datas\AttachmentData;
@@ -27,7 +28,7 @@ class BuildMailMessageAction
 
         $type = 'email';
 
-        $theme = app(\Modules\Notify\Actions\NotifyTheme\Get::class)->execute($name, $type, $view_params);
+        $theme = app(Get::class)->execute($name, $type, $view_params);
         $view_html = 'notify::email';
         // dddx([$theme, $view_params]);
         $email = (new MailMessage())
@@ -35,7 +36,7 @@ class BuildMailMessageAction
             ->subject($view_params['subject'] ?? $theme->subject)
             ->view($view_html, $theme->view_params);
 
-        if ($dataCollection instanceof \Spatie\LaravelData\DataCollection) {
+        if ($dataCollection instanceof DataCollection) {
             foreach ($dataCollection as $attachment) {
                 $email = $email->attach($attachment->path, ['as' => $attachment->as, 'mime' => $attachment->mime]);
             }

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Notifications\Channels;
 
+use Modules\Notify\Contracts\CanThemeNotificationContract;
 use Modules\Notify\Actions\NetfunSendAction;
 use Modules\Notify\Notifications\ThemeNotification;
 use Modules\Xot\Contracts\ModelContactContract;
@@ -13,7 +14,7 @@ class NetfunChannel
     /**
      * Send the given notification.
      *
-     * @param \Modules\Notify\Contracts\CanThemeNotificationContract $notifiable
+     * @param CanThemeNotificationContract $notifiable
      */
     public function send($notifiable, ThemeNotification $themeNotification): void
     {

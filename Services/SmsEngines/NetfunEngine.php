@@ -7,6 +7,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services\SmsEngines;
 
+use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Str;
@@ -119,7 +120,7 @@ class NetfunEngine
         try {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
-            throw new \Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']', $e->getCode(), $e);
+            throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']', $e->getCode(), $e);
         }
         /*
         echo '<hr/>';
@@ -154,7 +155,7 @@ class NetfunEngine
         try {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
-            throw new \Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']', $e->getCode(), $e);
+            throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']', $e->getCode(), $e);
         }
         echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
         echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
