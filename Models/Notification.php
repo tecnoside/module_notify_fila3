@@ -54,4 +54,5 @@ use Illuminate\Notifications\DatabaseNotification;
  */
 class Notification extends DatabaseNotification
 {
+    protected $connection = 'notify';
 }
