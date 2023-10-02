@@ -31,9 +31,12 @@ class BuildMailMessageAction
         $theme = app(Get::class)->execute($name, $type, $view_params);
         $view_html = 'notify::email';
         // dddx([$theme, $view_params]);
+        $fromAddress=$theme->view_params['from_email'] ?? $theme->from_email;
+        $fromName=$theme->view_params['from'] ?? $theme->from;
+        $subject=$view_params['subject'] ?? $theme->subject;
         $email = (new MailMessage())
-            ->from($theme->view_params['from_email'], $theme->view_params['from'])
-            ->subject($view_params['subject'] ?? $theme->subject)
+            ->from($fromAddress, $fromName)
+            ->subject($subject)
             ->view($view_html, $theme->view_params);
 
         if ($dataCollection instanceof DataCollection) {
