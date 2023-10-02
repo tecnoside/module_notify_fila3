@@ -87,6 +87,8 @@ class Get
         }
 
         return NotifyThemeData::from([
+            'from_email'=>$theme->from_email,
+            'from'=>$theme->from,
             'subject' => $subject,
             'body_html' => $body_html,
             'view_params' => $view_params,
