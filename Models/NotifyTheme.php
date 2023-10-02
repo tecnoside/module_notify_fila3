@@ -5,38 +5,38 @@ declare(strict_types=1);
 namespace Modules\Notify\Models;
 
 use Eloquent;
-use Illuminate\Support\Carbon;
-use Modules\Notify\Database\Factories\NotifyThemeFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Support\Carbon;
+use Modules\Notify\Database\Factories\NotifyThemeFactory;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
 /**
  * Modules\Notify\Models\NotifyTheme.
  *
- * @property int                             $id
- * @property string|null                     $lang
- * @property string|null                     $type
- * @property string|null                     $subject
- * @property string|null                     $body
- * @property string|null                     $from
+ * @property int         $id
+ * @property string|null $lang
+ * @property string|null $type
+ * @property string|null $subject
+ * @property string|null $body
+ * @property string|null $from
  * @property Carbon|null $created_at
- * @property string|null                     $created_by
+ * @property string|null $created_by
  * @property Carbon|null $updated_at
- * @property string|null                     $updated_by
- * @property string|null                     $post_type
- * @property int|null                        $post_id
- * @property string|null                     $body_html
- * @property string|null                     $theme
- * @property string|null                     $from_email
- * @property string|null                     $logo_src
- * @property int|null                        $logo_width
- * @property int|null                        $logo_height
- * @property array                           $logo
+ * @property string|null $updated_by
+ * @property string|null $post_type
+ * @property int|null    $post_id
+ * @property string|null $body_html
+ * @property string|null $theme
+ * @property string|null $from_email
+ * @property string|null $logo_src
+ * @property int|null    $logo_width
+ * @property int|null    $logo_height
+ * @property array       $logo
  *
- * @method static NotifyThemeFactory factory($count = null, $state = [])
+ * @method static NotifyThemeFactory  factory($count = null, $state = [])
  * @method static Builder|NotifyTheme newModelQuery()
  * @method static Builder|NotifyTheme newQuery()
  * @method static Builder|NotifyTheme query()

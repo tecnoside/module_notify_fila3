@@ -28,7 +28,7 @@ class MailtrapEngine
     public static function getInstance(): self
     {
         if (! self::$instance instanceof \Modules\Notify\Services\MailEngines\MailtrapEngine) {
-            self::$instance = new self();
+            self::$instance = new self;
         }
 
         return self::$instance;
