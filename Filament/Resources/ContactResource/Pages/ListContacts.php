@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Filament\Resources\ContactResource\Pages;
 
-use Modules\Notify\Filament\Resources\ContactResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
+use Modules\Notify\Filament\Resources\ContactResource;
 
 class ListContacts extends ListRecords
 {
