@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Filament\Resources\NotificationResource\Pages;
 
-use Modules\Notify\Filament\Resources\NotificationResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
+use Modules\Notify\Filament\Resources\NotificationResource;
 
 class EditNotification extends EditRecord
 {

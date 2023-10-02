@@ -1,10 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Filament\Resources\NotificationResource\Pages;
 
-use Modules\Notify\Filament\Resources\NotificationResource;
-use Filament\Actions;
 use Filament\Resources\Pages\CreateRecord;
+use Modules\Notify\Filament\Resources\NotificationResource;
 
 class CreateNotification extends CreateRecord
 {

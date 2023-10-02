@@ -1,17 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Filament\Resources;
 
-use Modules\Notify\Filament\Resources\NotificationResource\Pages;
-//use Modules\Notify\Filament\Resources\NotificationResource\RelationManagers;
-use Modules\Notify\Models\Notification;
-//use Filament\Forms;
 use Filament\Forms\Form;
+// use Modules\Notify\Filament\Resources\NotificationResource\RelationManagers;
 use Filament\Resources\Resource;
+// use Filament\Forms;
 use Filament\Tables;
 use Filament\Tables\Table;
-//use Illuminate\Database\Eloquent\Builder;
-//use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Modules\Notify\Filament\Resources\NotificationResource\Pages;
+use Modules\Notify\Models\Notification;
+
+// use Illuminate\Database\Eloquent\Builder;
+// use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class NotificationResource extends Resource
 {
@@ -23,7 +26,6 @@ class NotificationResource extends Resource
     {
         return $form
             ->schema([
-                //
             ]);
     }
 
@@ -31,10 +33,8 @@ class NotificationResource extends Resource
     {
         return $table
             ->columns([
-                //
             ])
             ->filters([
-                //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -45,14 +45,14 @@ class NotificationResource extends Resource
                 ]),
             ])
             ->emptyStateActions([
-                //{{ tableEmptyStateActions }}
+                // {{ tableEmptyStateActions }}
             ]);
     }
 
     public static function getRelations(): array
     {
         return [
-            //RelationManagers
+            // RelationManagers
         ];
     }
 
