@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions\NotifyTheme\Attachment;
 
-use Modules\Notify\Actions\NotifyTheme\Get;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Modules\Notify\Actions\NotifyTheme\Get;
 use Modules\Notify\Datas\AttachmentData;
 use Modules\Xot\Services\HtmlService;
 use Spatie\QueueableAction\QueueableAction;
@@ -23,7 +23,7 @@ class Pdf
         $notify_theme_data = app(Get::class)->execute($post_type, 'pdf', $view_params);
         $html = $notify_theme_data->body_html;
 
-        $file_name = Str::slug($notify_theme_data->subject).'.pdf';
+        $file_name = Str::slug($notify_theme_data->subject) . '.pdf';
         if (isset($view_params[$file_name])) {
             $file_name = $view_params[$file_name];
         }

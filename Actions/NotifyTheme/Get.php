@@ -36,18 +36,18 @@ class Get
 
         $module_name_low = Str::lower($xotData->main_module);
 
-        $trad_mod = $module_name_low.'::'.$type.'.'.$name;
+        $trad_mod = $module_name_low . '::' . $type . '.' . $name;
 
         if (null === $theme->subject) {
-            $subject = trans($trad_mod.'.subject');
+            $subject = trans($trad_mod . '.subject');
             $theme->update(['subject' => $subject]);
         }
         if (null === $theme->theme) {
             $theme->update(['theme' => 'ark']);
         }
         if (null === $theme->body_html) {
-            $html = trans($trad_mod.'.body_html');
-            if (isset($view_params['body_html']) && $html === $trad_mod.'.body_html') {
+            $html = trans($trad_mod . '.body_html');
+            if (isset($view_params['body_html']) && $html === $trad_mod . '.body_html') {
                 $html = '##body_html##';
             }
 
@@ -67,7 +67,7 @@ class Get
         if ('empty' !== $theme->theme) {
             $view_params['logo'] = $theme->logo;
         } else {
-            $view_params['logo'] = '<img src="'.$theme->logo['path'].'" width="'.$theme->logo['width'].' "height="'.$theme->logo['height'].'" />';
+            $view_params['logo'] = '<img src="' . $theme->logo['path'] . '" width="' . $theme->logo['width'] . ' "height="' . $theme->logo['height'] . '" />';
             // $view_params['logo'] = '<img src="'.\Request::getSchemeAndHttpHost().'/uploads/6/logo_VERITAS_piccolo.png" width="' . $theme->logo['width'] . ' "height="' . $theme->logo['height'] . '" />';
         }
 
@@ -75,8 +75,8 @@ class Get
 
         foreach ($view_params as $k => $v) {
             if (is_string($v)) {
-                $body_html = Str::replace('##'.$k.'##', $v, $body_html);
-                $subject = Str::replace('##'.$k.'##', $v, $subject);
+                $body_html = Str::replace('##' . $k . '##', $v, $body_html);
+                $subject = Str::replace('##' . $k . '##', $v, $subject);
             }
         }
 
@@ -87,8 +87,8 @@ class Get
         }
 
         return NotifyThemeData::from([
-            'from_email'=>$theme->from_email,
-            'from'=>$theme->from,
+            'from_email' => $theme->from_email,
+            'from' => $theme->from,
             'subject' => $subject,
             'body_html' => $body_html,
             'view_params' => $view_params,

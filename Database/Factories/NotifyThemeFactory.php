@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Database\Factories;
 
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Notify\Models\NotifyTheme;
-use Illuminate\Database\Eloquent\Factories\Factory;
 
 class NotifyThemeFactory extends Factory
 {

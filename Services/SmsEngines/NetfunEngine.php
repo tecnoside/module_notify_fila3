@@ -33,7 +33,7 @@ class NetfunEngine
     public static function getInstance(): self
     {
         if (! self::$instance instanceof \Modules\Notify\Services\SmsEngines\NetfunEngine) {
-            self::$instance = new self();
+            self::$instance = new self;
         }
 
         return self::$instance;
@@ -79,18 +79,18 @@ class NetfunEngine
 
         $this->to .= '';
         if (Str::startsWith($this->to, '00')) {
-            $this->to = '+39'.substr($this->to, 2);
+            $this->to = '+39' . substr($this->to, 2);
         }
 
         if (! Str::startsWith($this->to, '+')) {
-            $this->to = '+39'.$this->to;
+            $this->to = '+39' . $this->to;
         }
 
         $body = [
             'api_token' => $token,
             // "gateway"=> 99,
             'sender' => $this->from,
-            'text_template' => $this->body.'  '.random_int(1, 100),
+            'text_template' => $this->body . '  ' . random_int(1, 100),
             /*
             'delivery_callback' => 'https://www.google.com?code={{code}}',
             'default_placeholders' => [
@@ -120,7 +120,7 @@ class NetfunEngine
         try {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
-            throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']', $e->getCode(), $e);
+            throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']', $e->getCode(), $e);
         }
         /*
         echo '<hr/>';
@@ -155,10 +155,10 @@ class NetfunEngine
         try {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $e) {
-            throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']', $e->getCode(), $e);
+            throw new Exception($e->getMessage() . '[' . __LINE__ . '][' . __FILE__ . ']', $e->getCode(), $e);
         }
-        echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
-        echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
+        echo '<pre>' . var_export($response->getStatusCode(), true) . '</pre>';
+        echo '<pre>' . var_export($response->getBody()->getContents(), true) . '</pre>';
 
         return $this;
     }
