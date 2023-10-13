@@ -19,11 +19,13 @@ class AdminPanelProvider extends XotBasePanelProvider
 
     public function panel(Panel $panel): Panel
     {
+        /*
         DatabaseNotifications::trigger('notify::livewire.database-notifications-trigger');
         FilamentView::registerRenderHook(
             'panels::user-menu.before',
             fn (): string => Blade::render('@livewire(\'database-notifications\')'),
         );
+        */
 
         return parent::panel($panel);
     }
