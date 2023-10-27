@@ -46,13 +46,14 @@
     "require-dev": {
         "barryvdh/laravel-ide-helper": "*",
         "driftingly/rector-laravel": "^0.26.2",
+        "enlightn/enlightn": "^2.5",
         "fakerphp/faker": "*",
         "friendsofphp/php-cs-fixer": "*",
         "laravel/pint": "^1.13",
         "nesbot/carbon": "*",
         "nette/php-generator": "*",
-        "nunomaduro/larastan": "*",
-        "nunomaduro/phpinsights": "*",
+        "nunomaduro/larastan": "^2.6",
+        "nunomaduro/phpinsights": "^2.9",
         "orchestra/testbench": "*",
         "pestphp/pest": "*",
         "pestphp/pest-plugin-laravel": "*",
@@ -66,8 +67,21 @@
         "spatie/test-time": "*",
         "symplify/phpstan-rules": "^12.4",
         "thecodingmachine/phpstan-safe-rule": "^1.2",
-        "tightenco/duster": "^2.2"
+        "tightenco/duster": "^2.2",
+        "vimeo/psalm": "^5.15"
     },
+    "repositories": [ {
+        "type": "path",
+        "url": "../module_xot_fila3"
+    },
+    {
+        "type": "path",
+        "url": "../module_tenant_fila3"
+    },
+    {
+        "type": "path",
+        "url": "../module_ui_fila3"
+    }],
     "scripts": {
         "post-autoload-dump": [
             "@php vendor/bin/testbench package:discover --ansi"
@@ -84,7 +98,8 @@
         "sort-packages": true,
         "allow-plugins": {
             "phpstan/extension-installer": true,
-            "pestphp/pest-plugin": true
+            "pestphp/pest-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
     "minimum-stability": "dev",
