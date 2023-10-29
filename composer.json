@@ -59,7 +59,7 @@
         "pestphp/pest-plugin-laravel": "*",
         "phpunit/phpunit": "*",
         "psalm/plugin-laravel": "^2.8",
-        "rector/phpstan-rules": "^0.7.1",
+        "rector/phpstan-rules": "*",
         "spatie/laravel-typescript-transformer": "*",
         "spatie/pest-plugin-snapshots": "*",
         "spatie/phpunit-snapshot-assertions": "*",
