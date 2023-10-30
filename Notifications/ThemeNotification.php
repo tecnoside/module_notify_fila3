@@ -15,6 +15,7 @@ use Modules\Notify\Datas\SmsData;
 class ThemeNotification extends Notification implements ShouldQueue
 {
     use Queueable;
+
     public array $attachments;
 
     /**

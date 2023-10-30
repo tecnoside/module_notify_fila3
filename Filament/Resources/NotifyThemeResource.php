@@ -63,7 +63,7 @@ class NotifyThemeResource extends Resource
                 )
                     ->default('empty'),
                 Textarea::make('body')->columnSpanFull(),
-                 Forms\Components\RichEditor::make('body_html')->columnSpanFull(),
+                Forms\Components\RichEditor::make('body_html')->columnSpanFull(),
                 //TinyEditor::make('body_html')->columnSpanFull(),
             ]);
     }

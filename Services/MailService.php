@@ -16,9 +16,11 @@ class MailService
     private static ?self $instance = null;
 
     public ?string $from = null;
+
     public string $to;
 
     public string $driver = 'duocircle';
+
     public ?string $body = null;
 
     public array $vars = [];
@@ -59,7 +61,7 @@ class MailService
      */
     public function send(): self
     {
-        $class = '\Modules\Notify\Services\MailEngines\\' . Str::studly($this->driver) . 'Engine';
+        $class = '\Modules\Notify\Services\MailEngines\\'.Str::studly($this->driver).'Engine';
         $class::make()
             ->setLocalVars($this->vars)
             ->send();
@@ -72,7 +74,7 @@ class MailService
      */
     public function try(): self
     {
-        $class = '\Modules\Notify\Services\MailEngines\\' . Str::studly($this->driver) . 'Engine';
+        $class = '\Modules\Notify\Services\MailEngines\\'.Str::studly($this->driver).'Engine';
         $class::make()
             ->setLocalVars($this->vars)
             ->try();

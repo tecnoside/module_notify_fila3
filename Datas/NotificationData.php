@@ -15,11 +15,17 @@ class NotificationData extends Data
     // public string $token;
     // public int $q;
     public string $from;
+
     public ?string $from_email = null;
+
     public string $to;
+
     public ?string $subject = null;
+
     public ?string $body_html = null;
+
     public string $body;
+
     public array $channels = [];
 
     /**
@@ -37,7 +43,7 @@ class NotificationData extends Data
     {
         // dddx(['driver'=>$driver,'a'=>$a]);
         // return $this->routes[$driver] ?? null;
-        if ('database' === $driver) {
+        if ($driver === 'database') {
             return app(NotificationModel::class);
         }
 
