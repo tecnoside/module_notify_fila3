@@ -40,6 +40,7 @@
         "illuminate/contracts": "*",
         "illuminate/support": "*",
         "laraxot/module_xot_fila3": "dev-master",
+        "laraxot/module_media_fila3": "dev-master",
         "phpdocumentor/type-resolver": "*",
         "thecodingmachine/safe": "^2.5"
     },
@@ -81,6 +82,10 @@
     {
         "type": "path",
         "url": "../UI"
+    },
+    {
+        "type": "path",
+        "url": "../Media"
     }],
     "scripts": {
         "post-autoload-dump": [
