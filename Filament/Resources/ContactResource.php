@@ -4,6 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Resources;
 
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use Modules\Notify\Filament\Resources\ContactResource\Pages\ListContacts;
+use Modules\Notify\Filament\Resources\ContactResource\Pages\CreateContact;
+use Modules\Notify\Filament\Resources\ContactResource\Pages\EditContact;
 use Filament\Forms\Form;
 // use Modules\Notify\Filament\Resources\ContactResource\RelationManagers;
 use Filament\Resources\Resource;
@@ -37,11 +43,11 @@ class ContactResource extends Resource
             ->filters([
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ])
             ->emptyStateActions([
@@ -59,9 +65,9 @@ class ContactResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListContacts::route('/'),
-            'create' => Pages\CreateContact::route('/create'),
-            'edit' => Pages\EditContact::route('/{record}/edit'),
+            'index' => ListContacts::route('/'),
+            'create' => CreateContact::route('/create'),
+            'edit' => EditContact::route('/{record}/edit'),
         ];
     }
 }
