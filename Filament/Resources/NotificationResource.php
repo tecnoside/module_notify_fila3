@@ -4,6 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Resources;
 
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use Modules\Notify\Filament\Resources\NotificationResource\Pages\ListNotifications;
+use Modules\Notify\Filament\Resources\NotificationResource\Pages\CreateNotification;
+use Modules\Notify\Filament\Resources\NotificationResource\Pages\EditNotification;
 use Filament\Forms\Form;
 // use Modules\Notify\Filament\Resources\NotificationResource\RelationManagers;
 use Filament\Resources\Resource;
@@ -37,11 +43,11 @@ class NotificationResource extends Resource
             ->filters([
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ])
             ->emptyStateActions([
@@ -59,9 +65,9 @@ class NotificationResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListNotifications::route('/'),
-            'create' => Pages\CreateNotification::route('/create'),
-            'edit' => Pages\EditNotification::route('/{record}/edit'),
+            'index' => ListNotifications::route('/'),
+            'create' => CreateNotification::route('/create'),
+            'edit' => EditNotification::route('/{record}/edit'),
         ];
     }
 }

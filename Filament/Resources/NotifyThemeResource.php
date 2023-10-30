@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Resources;
 
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
@@ -63,7 +64,7 @@ class NotifyThemeResource extends Resource
                 )
                     ->default('empty'),
                 Textarea::make('body')->columnSpanFull(),
-                Forms\Components\RichEditor::make('body_html')->columnSpanFull(),
+                RichEditor::make('body_html')->columnSpanFull(),
                 //TinyEditor::make('body_html')->columnSpanFull(),
             ]);
     }
