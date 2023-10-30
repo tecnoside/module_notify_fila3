@@ -39,8 +39,8 @@
         "filament/filament": "*",
         "illuminate/contracts": "*",
         "illuminate/support": "*",
-        "laraxot/module_xot_fila3": "dev-master",
         "laraxot/module_media_fila3": "dev-master",
+        "laraxot/module_xot_fila3": "dev-master",
         "phpdocumentor/type-resolver": "*",
         "thecodingmachine/safe": "^2.5"
     },
@@ -66,7 +66,7 @@
         "spatie/pest-plugin-snapshots": "*",
         "spatie/phpunit-snapshot-assertions": "*",
         "spatie/test-time": "*",
-        "symplify/phpstan-rules": "^12.4",
+        "symplify/phpstan-rules": "*",
         "thecodingmachine/phpstan-safe-rule": "^1.2",
         "tightenco/duster": "^2.2",
         "vimeo/psalm": "^5.15"
