@@ -9,6 +9,8 @@ use Spatie\LaravelData\Data;
 class AttachmentData extends Data
 {
     public string $path;
+
     public string $as;
+
     public string $mime;
 }

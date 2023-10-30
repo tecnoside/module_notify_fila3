@@ -33,7 +33,7 @@ class EsendexSendAction
         $auth = $this->login();
 
         if (! is_array($auth)) {
-            throw new Exception('[' . __LINE__ . '][' . __FILE__ . ']');
+            throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
 
         $data = [
@@ -46,11 +46,11 @@ class EsendexSendAction
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_URL, $this->base_endpoint . 'sms');
+        curl_setopt($ch, CURLOPT_URL, $this->base_endpoint.'sms');
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
             'Content-type: application/json',
-            'user_key: ' . $auth[0],
-            'Session_key: ' . $auth[1],
+            'user_key: '.$auth[0],
+            'Session_key: '.$auth[1],
         ]);
 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -60,7 +60,7 @@ class EsendexSendAction
         $info = curl_getinfo($ch);
         curl_close($ch);
         Assert::isArray($info);
-        if (201 !== $info['http_code']) {
+        if ($info['http_code'] !== 201) {
             return [];
         }
 
@@ -68,7 +68,7 @@ class EsendexSendAction
 
         dddx($res);
         if (! is_array($res)) {
-            throw new Exception('[' . __LINE__ . '][' . __FILE__ . ']');
+            throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
 
         return $res;
@@ -83,7 +83,7 @@ class EsendexSendAction
         $curlHandle = curl_init();
         curl_setopt($curlHandle, CURLOPT_SSL_VERIFYPEER, false);
 
-        $login_string = $this->base_endpoint . 'login?username=' . config('esendex.username') . '&password=' . config('esendex.password');
+        $login_string = $this->base_endpoint.'login?username='.config('esendex.username').'&password='.config('esendex.password');
 
         curl_setopt($curlHandle, CURLOPT_URL, $login_string);
 
@@ -97,7 +97,7 @@ class EsendexSendAction
 
         curl_close($curlHandle);
         Assert::isArray($info);
-        if (200 !== $info['http_code']) {
+        if ($info['http_code'] !== 200) {
             return null;
         }
 

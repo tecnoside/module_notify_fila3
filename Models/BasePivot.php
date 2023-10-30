@@ -14,6 +14,7 @@ use Modules\Xot\Traits\Updater;
 abstract class BasePivot extends Pivot
 {
     use Updater;
+
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -35,6 +36,7 @@ abstract class BasePivot extends Pivot
      * @var string
      */
     protected $connection = 'notify';
+
     // this will use the specified database connection
     /**
      * @var array
@@ -45,7 +47,7 @@ abstract class BasePivot extends Pivot
      * @var array<string, string>
      */
     protected $casts = ['created_at' => 'datetime', 'updated_at' => 'datetime',
-'deleted_at' => 'datetime'];
+        'deleted_at' => 'datetime'];
 
     /**
      * Undocumented variable.
