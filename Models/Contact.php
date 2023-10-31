@@ -111,7 +111,7 @@ class Contact extends BaseModel
     /**
      * Undocumented variable.
      *
-     * @var array<string>
+     * @var array<int, string>
      */
     protected $fillable = [
         'model_id', 'model_type', 'contact_type', 'value',
