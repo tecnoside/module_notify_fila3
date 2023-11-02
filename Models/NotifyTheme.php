@@ -35,7 +35,6 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property int|null    $logo_width
  * @property int|null    $logo_height
  * @property array       $logo
- *
  * @method static NotifyThemeFactory  factory($count = null, $state = [])
  * @method static Builder|NotifyTheme newModelQuery()
  * @method static Builder|NotifyTheme newQuery()
@@ -58,11 +57,12 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @method static Builder|NotifyTheme whereType($value)
  * @method static Builder|NotifyTheme whereUpdatedAt($value)
  * @method static Builder|NotifyTheme whereUpdatedBy($value)
- *
  * @mixin IdeHelperNotifyTheme
- *
  * @property Model|Eloquent $linkable
- *
+ * @property array $view_params
+ * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Spatie\MediaLibrary\MediaCollections\Models\Media> $media
+ * @property-read int|null $media_count
+ * @method static Builder|NotifyTheme whereViewParams($value)
  * @mixin Eloquent
  */
 class NotifyTheme extends BaseModel implements HasMedia

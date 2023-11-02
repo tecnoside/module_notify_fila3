@@ -24,7 +24,6 @@ use Modules\Notify\Database\Factories\ContactFactory;
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property string|null $token
- *
  * @method static ContactFactory  factory($count = null, $state = [])
  * @method static Builder|Contact newModelQuery()
  * @method static Builder|Contact newQuery()
@@ -41,9 +40,7 @@ use Modules\Notify\Database\Factories\ContactFactory;
  * @method static Builder|Contact whereUserId($value)
  * @method static Builder|Contact whereValue($value)
  * @method static Builder|Contact whereVerifiedAt($value)
- *
  * @mixin IdeHelperContact
- *
  * @property string|null $email
  * @property string|null $mobile_phone
  * @property string|null $survey_pdf_id
@@ -73,7 +70,6 @@ use Modules\Notify\Database\Factories\ContactFactory;
  * @property string|null $sms_status_txt
  * @property int|null    $duplicate_count
  * @property int|null    $order_column
- *
  * @method static Builder|Contact whereAttribute1($value)
  * @method static Builder|Contact whereAttribute10($value)
  * @method static Builder|Contact whereAttribute11($value)
@@ -103,7 +99,6 @@ use Modules\Notify\Database\Factories\ContactFactory;
  * @method static Builder|Contact whereSmsStatusTxt($value)
  * @method static Builder|Contact whereSurveyPdfId($value)
  * @method static Builder|Contact whereUsesleft($value)
- *
  * @mixin Eloquent
  */
 class Contact extends BaseModel
