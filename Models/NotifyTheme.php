@@ -16,7 +16,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 /**
  * Modules\Notify\Models\NotifyTheme.
  *
- * @property int         $id
+ * @property int $id
  * @property string|null $lang
  * @property string|null $type
  * @property string|null $subject
@@ -27,15 +27,19 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $post_type
- * @property int|null    $post_id
+ * @property int|null $post_id
  * @property string|null $body_html
  * @property string|null $theme
  * @property string|null $from_email
  * @property string|null $logo_src
- * @property int|null    $logo_width
- * @property int|null    $logo_height
- * @property array       $logo
- * @method static NotifyThemeFactory  factory($count = null, $state = [])
+ * @property int|null $logo_width
+ * @property int|null $logo_height
+ * @property array $view_params
+ * @property-read array $logo
+ * @property-read Model|\Eloquent $linkable
+ * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Spatie\MediaLibrary\MediaCollections\Models\Media> $media
+ * @property-read int|null $media_count
+ * @method static \Modules\Notify\Database\Factories\NotifyThemeFactory factory($count = null, $state = [])
  * @method static Builder|NotifyTheme newModelQuery()
  * @method static Builder|NotifyTheme newQuery()
  * @method static Builder|NotifyTheme query()
@@ -57,11 +61,6 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @method static Builder|NotifyTheme whereType($value)
  * @method static Builder|NotifyTheme whereUpdatedAt($value)
  * @method static Builder|NotifyTheme whereUpdatedBy($value)
- * @mixin IdeHelperNotifyTheme
- * @property Model|Eloquent $linkable
- * @property array $view_params
- * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Spatie\MediaLibrary\MediaCollections\Models\Media> $media
- * @property-read int|null $media_count
  * @method static Builder|NotifyTheme whereViewParams($value)
  * @mixin Eloquent
  */
