@@ -21,7 +21,7 @@ final class FirebaseCloudMessagingChannel
     public function __construct(
         private readonly Messaging $firebaseCloudMessaging,
     ) {
-        self::$logger = Log::driver('firebase');
+        self::$logger = Log::driver('firebase') ?? Log::getDefaultDriver();
     }
 
     public function send(Model|CanReceivePushNotifications $notifiable, MobilePushNotification $notification): void
