@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Carbon;
-use Modules\Notify\Database\Factories\NotifyThemeFactory;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
@@ -39,6 +38,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property-read Model|\Eloquent $linkable
  * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Spatie\MediaLibrary\MediaCollections\Models\Media> $media
  * @property-read int|null $media_count
+ *
  * @method static \Modules\Notify\Database\Factories\NotifyThemeFactory factory($count = null, $state = [])
  * @method static Builder|NotifyTheme newModelQuery()
  * @method static Builder|NotifyTheme newQuery()
@@ -62,6 +62,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @method static Builder|NotifyTheme whereUpdatedAt($value)
  * @method static Builder|NotifyTheme whereUpdatedBy($value)
  * @method static Builder|NotifyTheme whereViewParams($value)
+ *
  * @mixin Eloquent
  */
 class NotifyTheme extends BaseModel implements HasMedia
@@ -89,7 +90,7 @@ class NotifyTheme extends BaseModel implements HasMedia
         'view_params',
     ];
 
-     /**
+    /**
      * The accessors to append to the model's array form.
      *
      * @var array

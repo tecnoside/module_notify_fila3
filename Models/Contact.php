@@ -7,7 +7,6 @@ namespace Modules\Notify\Models;
 use Eloquent;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
-use Modules\Notify\Database\Factories\ContactFactory;
 
 /**
  * Modules\Notify\Models\Contact.
@@ -24,6 +23,7 @@ use Modules\Notify\Database\Factories\ContactFactory;
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property string|null $token
+ *
  * @method static \Modules\Notify\Database\Factories\ContactFactory factory($count = null, $state = [])
  * @method static Builder|Contact newModelQuery()
  * @method static Builder|Contact newQuery()
@@ -40,6 +40,7 @@ use Modules\Notify\Database\Factories\ContactFactory;
  * @method static Builder|Contact whereUserId($value)
  * @method static Builder|Contact whereValue($value)
  * @method static Builder|Contact whereVerifiedAt($value)
+ *
  * @mixin Eloquent
  */
 class Contact extends BaseModel

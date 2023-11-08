@@ -4,19 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Resources;
 
-use Filament\Tables\Actions\EditAction;
+use Filament\Forms\Form;
+use Filament\Resources\Resource;
 use Filament\Tables\Actions\BulkActionGroup;
 use Filament\Tables\Actions\DeleteBulkAction;
-use Modules\Notify\Filament\Resources\NotificationResource\Pages\ListNotifications;
-use Modules\Notify\Filament\Resources\NotificationResource\Pages\CreateNotification;
-use Modules\Notify\Filament\Resources\NotificationResource\Pages\EditNotification;
-use Filament\Forms\Form;
-// use Modules\Notify\Filament\Resources\NotificationResource\RelationManagers;
-use Filament\Resources\Resource;
-// use Filament\Forms;
-use Filament\Tables;
+use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Table;
-use Modules\Notify\Filament\Resources\NotificationResource\Pages;
+use Modules\Notify\Filament\Resources\NotificationResource\Pages\CreateNotification;
+// use Modules\Notify\Filament\Resources\NotificationResource\RelationManagers;
+use Modules\Notify\Filament\Resources\NotificationResource\Pages\EditNotification;
+// use Filament\Forms;
+use Modules\Notify\Filament\Resources\NotificationResource\Pages\ListNotifications;
 use Modules\Notify\Models\Notification;
 
 // use Illuminate\Database\Eloquent\Builder;

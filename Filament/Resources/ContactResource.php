@@ -4,19 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Resources;
 
-use Filament\Tables\Actions\EditAction;
+use Filament\Forms\Form;
+use Filament\Resources\Resource;
 use Filament\Tables\Actions\BulkActionGroup;
 use Filament\Tables\Actions\DeleteBulkAction;
-use Modules\Notify\Filament\Resources\ContactResource\Pages\ListContacts;
-use Modules\Notify\Filament\Resources\ContactResource\Pages\CreateContact;
-use Modules\Notify\Filament\Resources\ContactResource\Pages\EditContact;
-use Filament\Forms\Form;
-// use Modules\Notify\Filament\Resources\ContactResource\RelationManagers;
-use Filament\Resources\Resource;
-// use Filament\Forms;
-use Filament\Tables;
+use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Table;
-use Modules\Notify\Filament\Resources\ContactResource\Pages;
+use Modules\Notify\Filament\Resources\ContactResource\Pages\CreateContact;
+// use Modules\Notify\Filament\Resources\ContactResource\RelationManagers;
+use Modules\Notify\Filament\Resources\ContactResource\Pages\EditContact;
+// use Filament\Forms;
+use Modules\Notify\Filament\Resources\ContactResource\Pages\ListContacts;
 use Modules\Notify\Models\Contact;
 
 // use Illuminate\Database\Eloquent\Builder;

@@ -16,17 +16,16 @@ final class PushNotificationDebugData extends Data implements Arrayable
 {
     public function __construct(
         private readonly CanReceivePushNotifications $notifiable,
-        private readonly MobilePushNotification      $notification,
-        private readonly MulticastSendReport         $sendReport,
+        private readonly MobilePushNotification $notification,
+        private readonly MulticastSendReport $sendReport,
     ) {
     }
 
     public static function make(
         CanReceivePushNotifications $notifiable,
-        MobilePushNotification      $notification,
-        MulticastSendReport         $sendReport,
-    ): self
-    {
+        MobilePushNotification $notification,
+        MulticastSendReport $sendReport,
+    ): self {
         return new self(
             $notifiable,
             $notification,
