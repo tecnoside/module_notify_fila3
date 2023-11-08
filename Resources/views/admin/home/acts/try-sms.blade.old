@@ -5,10 +5,10 @@
 
             <form action="{!! Request::fullUrlWithQuery([]) !!}" method="POST">
                 @csrf
-                <x-input.group type="select" name="driver" value="{{ $driver }}" :options="$drivers" />
+                <x-filament::input type="select" name="driver" value="{{ $driver }}" :options="$drivers" />
 
-                <x-input.group type="text" name="from" />
-                <x-input.group type="text" name="to" value="3475896127" />
+                <x-filament::input type="text" name="from" />
+                <x-filament::input type="text" name="to" value="3475896127" />
 
                 txt:
                 <textarea name="body" class="form-control"></textarea>

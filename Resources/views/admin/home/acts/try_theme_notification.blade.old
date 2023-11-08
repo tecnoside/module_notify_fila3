@@ -4,7 +4,7 @@
     <x-col size="12">
         <form action="{!! Request::fullUrlWithQuery([]) !!}" method="POST">
             @csrf
-            <x-input.group type="text" name="email" />
+            <x-filament::input type="text" name="email" />
             <x-button type="submit">go!</x-button>
         </form>
     </x-col>
