@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Resources;
 
-use Filament\Forms\Components\RichEditor;
 use Filament\Forms;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\Textarea;
