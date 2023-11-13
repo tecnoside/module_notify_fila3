@@ -41,10 +41,6 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|Notification whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Notification whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Notification whereUpdatedBy($value)
- * @method static DatabaseNotificationCollection<int, static> all($columns = ['*'])
- * @method static DatabaseNotificationCollection<int, static> get($columns = ['*'])
- * @method static DatabaseNotificationCollection<int, static> all($columns = ['*'])
- * @method static DatabaseNotificationCollection<int, static> get($columns = ['*'])
  * @mixin Eloquent
  */
 class Notification extends DatabaseNotification
