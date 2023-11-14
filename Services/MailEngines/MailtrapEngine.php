@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @see https://smsvi-docs.web.app/docs/restful/send-batch/
  */
@@ -21,17 +22,13 @@ class MailtrapEngine
     private static ?self $instance = null;
 
     public ?string $from = null;
-
     public string $to;
-
     public string $driver;
-
     public ?string $body = null;
-
     public static function getInstance(): self
     {
         if (! self::$instance instanceof \Modules\Notify\Services\MailEngines\MailtrapEngine) {
-            self::$instance = new self;
+            self::$instance = new self();
         }
 
         return self::$instance;
@@ -54,7 +51,6 @@ class MailtrapEngine
     public function send(): self
     {
         dddx('WIP');
-
         return $this;
     }
 
@@ -66,6 +62,7 @@ class MailtrapEngine
 
         // try {
         Mail::raw((string) $this->body, function ($msg): void {
+
             $msg->to($this->to)->subject('Test Email');
         });
         // Dead catch - ErrorException is never thrown in the try block.
