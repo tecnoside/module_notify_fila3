@@ -21,6 +21,7 @@ use Illuminate\Support\Str;
 class NetfunEngine
 {
     private static ?self $instance = null;
+
     public ?string $from = null;
 <<<<<<< HEAD:Services/SmsEngines/NetfunEngine.old
     

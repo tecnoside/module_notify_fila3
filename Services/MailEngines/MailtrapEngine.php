@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Mail;
 class MailtrapEngine
 {
     private static ?self $instance = null;
+
     public ?string $from = null;
     public string $to;
     public string $driver;
