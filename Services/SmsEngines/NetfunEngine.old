@@ -21,8 +21,8 @@ use Illuminate\Support\Str;
 class NetfunEngine
 {
     private static ?self $instance = null;
-
     public ?string $from = null;
+<<<<<<< HEAD:Services/SmsEngines/NetfunEngine.old
     
     public string $to;
     
@@ -34,6 +34,13 @@ class NetfunEngine
     
     public string $send_method = 'batch';
     
+=======
+    public string $to;
+    public string $driver;
+    public ?string $body = null;
+    public array $vars = [];
+    public string $send_method = 'batch';
+>>>>>>> ea8c653 (up):Services/SmsEngines/NetfunEngine.php
     public static function getInstance(): self
     {
         if (! self::$instance instanceof \Modules\Notify\Services\SmsEngines\NetfunEngine) {
