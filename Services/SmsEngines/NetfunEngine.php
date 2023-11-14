@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @see https://smsvi-docs.web.app/docs/restful/send-batch/
  */
@@ -20,23 +21,16 @@ use Illuminate\Support\Str;
 class NetfunEngine
 {
     private static ?self $instance = null;
-
     public ?string $from = null;
-
     public string $to;
-
     public string $driver;
-
     public ?string $body = null;
-
     public array $vars = [];
-
     public string $send_method = 'batch';
-
     public static function getInstance(): self
     {
         if (! self::$instance instanceof \Modules\Notify\Services\SmsEngines\NetfunEngine) {
-            self::$instance = new self;
+            self::$instance = new self();
         }
 
         return self::$instance;
@@ -77,8 +71,7 @@ class NetfunEngine
             'Content-Type' => 'application/json',
         ];
         $token = env('NETFUN_TOKEN');
-
-        // dddx([ord($this->body[0]), $this->body]);
+// dddx([ord($this->body[0]), $this->body]);
 
         $this->to .= '';
         if (Str::startsWith($this->to, '00')) {
@@ -116,8 +109,7 @@ class NetfunEngine
                 ],
             ],
         ];
-
-        // dddx($body);
+// dddx($body);
 
         $client = new Client($headers);
         try {
@@ -135,7 +127,6 @@ class NetfunEngine
 
         $this->vars['status_code'] = $response->getStatusCode();
         $this->vars['status_txt'] = $response->getBody()->getContents();
-
         return $this;
     }
 
@@ -147,13 +138,11 @@ class NetfunEngine
             'Content-Type' => 'application/json',
         ];
         $token = env('NETFUN_TOKEN');
-
         $body = [
             'api_token' => $token,
             'text' => $this->body,
             'numbers' => $this->to,
         ];
-
         $client = new Client($headers);
         try {
             $response = $client->post($endpoint, ['json' => $body]);
@@ -162,7 +151,6 @@ class NetfunEngine
         }
         echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
         echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
-
         return $this;
     }
 }
