@@ -60,6 +60,7 @@ use Illuminate\Support\Carbon;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static DatabaseNotificationCollection<int, static>        all($columns = ['*'])
  * @method static DatabaseNotificationCollection<int, static>        get($columns = ['*'])
  *
@@ -75,6 +76,8 @@ use Illuminate\Support\Carbon;
  * @method static DatabaseNotificationCollection<int, static> all($columns = ['*'])
  * @method static DatabaseNotificationCollection<int, static> get($columns = ['*'])
 >>>>>>> 54bfe02 (.)
+=======
+>>>>>>> e268185 (up)
  * @mixin Eloquent
  *
  * @method static DatabaseNotificationCollection<int, static> all($columns = ['*'])
