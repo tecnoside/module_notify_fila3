@@ -12,40 +12,18 @@ use Illuminate\Support\Carbon;
  * Modules\Notify\Models\Contact.
  *
  * @property int $id
- * @property string $model_type
- * @property string $model_id
- * @property string|null $contact_type
- * @property string|null $value
- * @property string|null $user_id
- * @property string|null $verified_at
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property string|null $token
- * @method static \Modules\Notify\Database\Factories\ContactFactory factory($count = null, $state = [])
- * @method static Builder|Contact newModelQuery()
- * @method static Builder|Contact newQuery()
- * @method static Builder|Contact query()
- * @method static Builder|Contact whereContactType($value)
- * @method static Builder|Contact whereCreatedAt($value)
- * @method static Builder|Contact whereCreatedBy($value)
- * @method static Builder|Contact whereId($value)
- * @method static Builder|Contact whereModelId($value)
- * @method static Builder|Contact whereModelType($value)
- * @method static Builder|Contact whereToken($value)
- * @method static Builder|Contact whereUpdatedAt($value)
- * @method static Builder|Contact whereUpdatedBy($value)
- * @method static Builder|Contact whereUserId($value)
- * @method static Builder|Contact whereValue($value)
- * @method static Builder|Contact whereVerifiedAt($value)
  * @property string|null $email
  * @property string|null $mobile_phone
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string|null $created_by
+ * @property string|null $updated_by
  * @property string|null $survey_pdf_id
  * @property string|null $attribute_1
  * @property string|null $attribute_2
  * @property string|null $attribute_3
  * @property string|null $attribute_4
+ * @property string|null $token
  * @property string|null $first_name
  * @property string|null $last_name
  * @property string|null $sms_sent_at
@@ -68,6 +46,10 @@ use Illuminate\Support\Carbon;
  * @property string|null $sms_status_txt
  * @property int|null $duplicate_count
  * @property int|null $order_column
+ * @method static \Modules\Notify\Database\Factories\ContactFactory factory($count = null, $state = [])
+ * @method static Builder|Contact newModelQuery()
+ * @method static Builder|Contact newQuery()
+ * @method static Builder|Contact query()
  * @method static Builder|Contact whereAttribute1($value)
  * @method static Builder|Contact whereAttribute10($value)
  * @method static Builder|Contact whereAttribute11($value)
@@ -82,9 +64,12 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Contact whereAttribute7($value)
  * @method static Builder|Contact whereAttribute8($value)
  * @method static Builder|Contact whereAttribute9($value)
+ * @method static Builder|Contact whereCreatedAt($value)
+ * @method static Builder|Contact whereCreatedBy($value)
  * @method static Builder|Contact whereDuplicateCount($value)
  * @method static Builder|Contact whereEmail($value)
  * @method static Builder|Contact whereFirstName($value)
+ * @method static Builder|Contact whereId($value)
  * @method static Builder|Contact whereLanguage($value)
  * @method static Builder|Contact whereLastName($value)
  * @method static Builder|Contact whereMailCount($value)
@@ -96,6 +81,9 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Contact whereSmsStatusCode($value)
  * @method static Builder|Contact whereSmsStatusTxt($value)
  * @method static Builder|Contact whereSurveyPdfId($value)
+ * @method static Builder|Contact whereToken($value)
+ * @method static Builder|Contact whereUpdatedAt($value)
+ * @method static Builder|Contact whereUpdatedBy($value)
  * @method static Builder|Contact whereUsesleft($value)
  * @mixin Eloquent
  */
