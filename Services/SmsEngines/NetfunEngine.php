@@ -21,6 +21,7 @@ use Illuminate\Support\Str;
 class NetfunEngine
 {
     private static ?self $instance = null;
+
     public ?string $from = null;
     public string $to;
     public string $driver;
