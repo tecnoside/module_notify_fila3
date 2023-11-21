@@ -45,23 +45,23 @@ final class PushNotificationDebugData extends Data implements Arrayable
                 'successes' => $this->sendReport->successes()->count(),
                 'failures' => $this->sendReport->failures()->count(),
                 'successes_tokens' => $this->sendReport->successes()
-                    ->map(fn (SendReport $report) => [
+                    ->map(static fn(SendReport $report): array => [
                         'type' => $report->target()->type(),
                         'value' => $report->target()->value(),
                     ]),
                 'failure_tokens' => $this->sendReport->failures()
-                    ->map(fn (SendReport $report) => [
+                    ->map(static fn(SendReport $report): array => [
                         'type' => $report->target()->type(),
                         'value' => $report->target()->value(),
                     ]),
                 'unknown_tokens' => $this->sendReport
-                    ->filter(fn (SendReport $report) => $report->messageWasSentToUnknownToken())
-                    ->map(fn (SendReport $report) => [
+                    ->filter(static fn(SendReport $report): bool => $report->messageWasSentToUnknownToken())
+                    ->map(static fn(SendReport $report): array => [
                         'type' => $report->target()->type(),
                         'value' => $report->target()->value(),
                     ]),
                 'results' => $this->sendReport
-                    ->map(fn (SendReport $report) => [
+                    ->map(static fn(SendReport $report): array => [
                         'target' => $report->target()->value(),
                         'result' => $report->result(),
                     ]),

@@ -31,6 +31,7 @@ class NetfunSendAction
         if (! is_string($token)) {
             throw new Exception('put [NETFUN_TOKEN] variable to your .env and config [services.netfun.token] ');
         }
+        
         $this->token = $token;
     }
 
@@ -89,9 +90,10 @@ class NetfunSendAction
         $client = new Client($headers);
         try {
             $response = $client->post($endpoint, ['json' => $body]);
-        } catch (ClientException $e) {
-            throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']', $e->getCode(), $e);
+        } catch (ClientException $clientException) {
+            throw new Exception($clientException->getMessage().'['.__LINE__.']['.__FILE__.']', $clientException->getCode(), $clientException);
         }
+        
         /*
         echo '<hr/>';
         echo '<pre>to: '.$this->to.'</pre>';
