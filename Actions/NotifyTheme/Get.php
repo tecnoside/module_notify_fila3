@@ -23,7 +23,11 @@ class Get
         if (! isset($view_params['post_id'])) {
             $view_params['post_id'] = 0;
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> f4cdea5 (.)
         if (! isset($view_params['lang'])) {
             $view_params['lang'] = app()->getLocale();
         }
@@ -43,11 +47,19 @@ class Get
             $subject = trans($trad_mod.'.subject');
             $theme->update(['subject' => $subject]);
         }
+<<<<<<< HEAD
 
         if ($theme->theme === null) {
             $theme->update(['theme' => 'ark']);
         }
 
+=======
+        
+        if ($theme->theme === null) {
+            $theme->update(['theme' => 'ark']);
+        }
+        
+>>>>>>> f4cdea5 (.)
         if ($theme->body_html === null) {
             $html = trans($trad_mod.'.body_html');
             if (isset($view_params['body_html']) && $html === $trad_mod.'.body_html') {
