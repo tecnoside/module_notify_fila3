@@ -24,6 +24,7 @@ class NetfunEngine
 
     public ?string $from = null;
 <<<<<<< HEAD:Services/SmsEngines/NetfunEngine.old
+<<<<<<< HEAD:Services/SmsEngines/NetfunEngine.old
     
     public string $to;
     
@@ -36,12 +37,23 @@ class NetfunEngine
     public string $send_method = 'batch';
     
 =======
+=======
+    
+>>>>>>> f4cdea5 (.):Services/SmsEngines/NetfunEngine.php
     public string $to;
+    
     public string $driver;
+    
     public ?string $body = null;
+    
     public array $vars = [];
+    
     public string $send_method = 'batch';
+<<<<<<< HEAD:Services/SmsEngines/NetfunEngine.old
 >>>>>>> ea8c653 (up):Services/SmsEngines/NetfunEngine.php
+=======
+    
+>>>>>>> f4cdea5 (.):Services/SmsEngines/NetfunEngine.php
     public static function getInstance(): self
     {
         if (! self::$instance instanceof \Modules\Notify\Services\SmsEngines\NetfunEngine) {

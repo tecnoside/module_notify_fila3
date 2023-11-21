@@ -17,6 +17,7 @@ use Modules\Xot\Providers\Filament\XotBasePanelProvider;
 class AdminPanelProvider extends XotBasePanelProvider
 {
     protected string $module = 'Notify';
+    
     public function panel(Panel $panel): Panel
     {
         /*
