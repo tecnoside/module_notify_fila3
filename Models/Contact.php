@@ -24,7 +24,7 @@ use Illuminate\Support\Carbon;
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property string|null $token
- * @method static ContactFactory factory($count = null, $state = [])
+ * @method static \Modules\Notify\Database\Factories\ContactFactory factory($count = null, $state = [])
  * @method static Builder|Contact newModelQuery()
  * @method static Builder|Contact newQuery()
  * @method static Builder|Contact query()
