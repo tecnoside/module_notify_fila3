@@ -15,7 +15,7 @@ class CreateNotificationsTable extends XotBaseMigration
     {
         // -- CREATE --
         $this->tableCreate(
-            static function (Blueprint $table) : void {
+            function (Blueprint $table) : void {
                 $table->uuid('id')->primary();
                 $table->string('type');
                 $table->morphs('notifiable');
