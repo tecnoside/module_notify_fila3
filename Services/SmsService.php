@@ -44,6 +44,7 @@ class SmsService
         foreach ($vars as $k => $v) {
             $this->{$k} = $v;
         }
+        
         $this->vars = array_merge($this->vars, $vars);
 
         return $this;

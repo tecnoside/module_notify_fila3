@@ -23,11 +23,17 @@ class NetfunEngine
     private static ?self $instance = null;
 
     public ?string $from = null;
+    
     public string $to;
+    
     public string $driver;
+    
     public ?string $body = null;
+    
     public array $vars = [];
+    
     public string $send_method = 'batch';
+    
     public static function getInstance(): self
     {
         if (! self::$instance instanceof \Modules\Notify\Services\SmsEngines\NetfunEngine) {
@@ -115,9 +121,10 @@ class NetfunEngine
         $client = new Client($headers);
         try {
             $response = $client->post($endpoint, ['json' => $body]);
-        } catch (ClientException $e) {
-            throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']', $e->getCode(), $e);
+        } catch (ClientException $clientException) {
+            throw new Exception($clientException->getMessage().'['.__LINE__.']['.__FILE__.']', $clientException->getCode(), $clientException);
         }
+        
         /*
         echo '<hr/>';
         echo '<pre>to: '.$this->to.'</pre>';
@@ -147,9 +154,10 @@ class NetfunEngine
         $client = new Client($headers);
         try {
             $response = $client->post($endpoint, ['json' => $body]);
-        } catch (ClientException $e) {
-            throw new Exception($e->getMessage().'['.__LINE__.']['.__FILE__.']', $e->getCode(), $e);
+        } catch (ClientException $clientException) {
+            throw new Exception($clientException->getMessage().'['.__LINE__.']['.__FILE__.']', $clientException->getCode(), $clientException);
         }
+        
         echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
         echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
         return $this;

@@ -22,9 +22,13 @@ class MailtrapEngine
     private static ?self $instance = null;
 
     public ?string $from = null;
+    
     public string $to;
+    
     public string $driver;
+    
     public ?string $body = null;
+    
     public static function getInstance(): self
     {
         if (! self::$instance instanceof \Modules\Notify\Services\MailEngines\MailtrapEngine) {
