@@ -93,9 +93,9 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property array $view_params
  * @property-read array $logo
  * @property-read Model|\Eloquent $linkable
- * @property-read MediaCollection<int, Media> $media
+ * @property-read MediaCollection<int, \Modules\Media\Models\Media> $media
  * @property-read int|null $media_count
- * @method static NotifyThemeFactory factory($count = null, $state = [])
+ * @method static \Modules\Notify\Database\Factories\NotifyThemeFactory factory($count = null, $state = [])
  * @method static Builder|NotifyTheme newModelQuery()
  * @method static Builder|NotifyTheme newQuery()
  * @method static Builder|NotifyTheme query()
