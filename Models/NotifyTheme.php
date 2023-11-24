@@ -23,13 +23,13 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property string|null $type
  * @property string|null $subject
  * @property string|null $body
+ * @property string|null $from
  * @property Carbon|null $created_at
  * @property string|null $created_by
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $post_type
  * @property int|null $post_id
- * @property string|null $from
  * @property string|null $body_html
  * @property string|null $theme
  * @property string|null $from_email
@@ -39,7 +39,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property array $view_params
  * @property-read array $logo
  * @property-read Model|\Eloquent $linkable
- * @property-read MediaCollection<int, Media> $media
+ * @property-read MediaCollection<int, \Modules\Media\Models\Media> $media
  * @property-read int|null $media_count
  * @method static \Modules\Notify\Database\Factories\NotifyThemeFactory factory($count = null, $state = [])
  * @method static Builder|NotifyTheme newModelQuery()
