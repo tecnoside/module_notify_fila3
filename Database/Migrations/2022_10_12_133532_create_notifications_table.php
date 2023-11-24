@@ -30,11 +30,6 @@ class CreateNotificationsTable extends XotBaseMigration
                 if (! $this->hasColumn('updated_at')) {
                     $table->timestamps();
                 }
-<<<<<<< HEAD
-
-=======
-                
->>>>>>> f4cdea5 (.)
                 if (! $this->hasColumn('updated_by')) {
                     $table->string('updated_by')->nullable()->after('updated_at');
                     $table->string('created_by')->nullable()->after('created_at');

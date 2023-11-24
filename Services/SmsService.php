@@ -44,11 +44,6 @@ class SmsService
         foreach ($vars as $k => $v) {
             $this->{$k} = $v;
         }
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> f4cdea5 (.)
         $this->vars = array_merge($this->vars, $vars);
 
         return $this;

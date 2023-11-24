@@ -59,11 +59,7 @@ final class FirebaseCloudMessagingChannel
                         json_encode($notificationDebugData, JSON_PRETTY_PRINT),
                     ));
             }
-<<<<<<< HEAD
         } catch (\Exception $exception) {
-=======
-        } catch (Exception $exception) {
->>>>>>> f4cdea5 (.)
             self::$logger
                 ->error(sprintf(
                     "An exception has been thrown while trying to send FCM notifications.\n\tError message is: '%s' [%s]\n\tNotification data was: %s\n\tUser devices were: %s",
