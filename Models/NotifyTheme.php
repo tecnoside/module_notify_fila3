@@ -18,7 +18,6 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 /**
  * Modules\Notify\Models\NotifyTheme.
  *
-<<<<<<< HEAD
  * @property int $id
  * @property string|null $lang
  * @property string|null $type
@@ -38,8 +37,6 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property int|null $logo_width
  * @property int|null $logo_height
  * @property array $view_params
-=======
->>>>>>> bea252b (Add sms_sent_at, sms_count, mail_sent_at, mail_count, token, first_name, and last_name properties to the Contact model. Remove language property from the Contact model. Remove body, body_html, theme, from_email, logo_src, logo_width, logo_height, and view_params properties from the NotifyTheme model)
  * @property-read array $logo
  * @property-read Model|\Eloquent $linkable
  * @property-read MediaCollection<int, \Modules\Media\Models\Media> $media
