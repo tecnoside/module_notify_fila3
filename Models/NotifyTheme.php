@@ -18,6 +18,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 /**
  * Modules\Notify\Models\NotifyTheme.
  *
+<<<<<<< HEAD
  * @property int $id
  * @property string|null $lang
  * @property string|null $type
@@ -37,6 +38,8 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property int|null $logo_width
  * @property int|null $logo_height
  * @property array $view_params
+=======
+>>>>>>> bea252b (Add sms_sent_at, sms_count, mail_sent_at, mail_count, token, first_name, and last_name properties to the Contact model. Remove language property from the Contact model. Remove body, body_html, theme, from_email, logo_src, logo_width, logo_height, and view_params properties from the NotifyTheme model)
  * @property-read array $logo
  * @property-read Model|\Eloquent $linkable
  * @property-read MediaCollection<int, \Modules\Media\Models\Media> $media
@@ -45,25 +48,6 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @method static Builder|NotifyTheme newModelQuery()
  * @method static Builder|NotifyTheme newQuery()
  * @method static Builder|NotifyTheme query()
- * @method static Builder|NotifyTheme whereBody($value)
- * @method static Builder|NotifyTheme whereBodyHtml($value)
- * @method static Builder|NotifyTheme whereCreatedAt($value)
- * @method static Builder|NotifyTheme whereCreatedBy($value)
- * @method static Builder|NotifyTheme whereFrom($value)
- * @method static Builder|NotifyTheme whereFromEmail($value)
- * @method static Builder|NotifyTheme whereId($value)
- * @method static Builder|NotifyTheme whereLang($value)
- * @method static Builder|NotifyTheme whereLogoHeight($value)
- * @method static Builder|NotifyTheme whereLogoSrc($value)
- * @method static Builder|NotifyTheme whereLogoWidth($value)
- * @method static Builder|NotifyTheme wherePostId($value)
- * @method static Builder|NotifyTheme wherePostType($value)
- * @method static Builder|NotifyTheme whereSubject($value)
- * @method static Builder|NotifyTheme whereTheme($value)
- * @method static Builder|NotifyTheme whereType($value)
- * @method static Builder|NotifyTheme whereUpdatedAt($value)
- * @method static Builder|NotifyTheme whereUpdatedBy($value)
- * @method static Builder|NotifyTheme whereViewParams($value)
  * @mixin Eloquent
  */
 class NotifyTheme extends BaseModel implements HasMedia
