@@ -22,10 +22,8 @@ use Illuminate\Support\Carbon;
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
-<<<<<<< HEAD
  * @property string|null $created_by
  * @property string|null $token
-=======
  * @property string|null $sms_sent_at
  * @property int|null $sms_count
  * @property string|null $mail_sent_at
@@ -53,7 +51,6 @@ use Illuminate\Support\Carbon;
  * @property string|null $sms_status_txt
  * @property int|null $duplicate_count
  * @property int|null $order_column
->>>>>>> bea252b (Add sms_sent_at, sms_count, mail_sent_at, mail_count, token, first_name, and last_name properties to the Contact model. Remove language property from the Contact model. Remove body, body_html, theme, from_email, logo_src, logo_width, logo_height, and view_params properties from the NotifyTheme model)
  * @method static \Modules\Notify\Database\Factories\ContactFactory factory($count = null, $state = [])
  * @method static Builder|Contact newModelQuery()
  * @method static Builder|Contact newQuery()
@@ -62,10 +59,8 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Contact whereCreatedAt($value)
  * @method static Builder|Contact whereCreatedBy($value)
  * @method static Builder|Contact whereId($value)
-<<<<<<< HEAD
  * @method static Builder|Contact whereModelId($value)
  * @method static Builder|Contact whereModelType($value)
-=======
  * @method static Builder|Contact whereLastName($value)
  * @method static Builder|Contact whereMailCount($value)
  * @method static Builder|Contact whereMailSentAt($value)
@@ -76,7 +71,6 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Contact whereSmsStatusCode($value)
  * @method static Builder|Contact whereSmsStatusTxt($value)
  * @method static Builder|Contact whereSurveyPdfId($value)
->>>>>>> bea252b (Add sms_sent_at, sms_count, mail_sent_at, mail_count, token, first_name, and last_name properties to the Contact model. Remove language property from the Contact model. Remove body, body_html, theme, from_email, logo_src, logo_width, logo_height, and view_params properties from the NotifyTheme model)
  * @method static Builder|Contact whereToken($value)
  * @method static Builder|Contact whereUpdatedAt($value)
  * @method static Builder|Contact whereUpdatedBy($value)
