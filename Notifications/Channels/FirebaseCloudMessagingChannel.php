@@ -1,8 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Notifications\Channels;
 
-use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
@@ -56,7 +57,7 @@ final class FirebaseCloudMessagingChannel
                         json_encode($notificationDebugData, JSON_PRETTY_PRINT),
                     ));
             }
-        } catch (Exception $exception) {
+        } catch (\Exception $exception) {
             self::$logger
                 ->error(sprintf(
                     "An exception has been thrown while trying to send FCM notifications.\n\tError message is: '%s' [%s]\n\tNotification data was: %s\n\tUser devices were: %s",

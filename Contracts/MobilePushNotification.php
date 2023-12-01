@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Contracts;
 
 use Kreait\Firebase\Messaging\Message;
@@ -8,7 +10,7 @@ interface MobilePushNotification
 {
     /**
      * Retrieves the payload to be sent to FCM service,
-     * properly encapsulated as Message instance
+     * properly encapsulated as Message instance.
      */
     public function toCloudMessage(): Message;
 
