@@ -53,3 +53,4 @@ package-lock.json
 
 .git-blame-ignore-revs
 /build
+.php-cs-fixer.cache
