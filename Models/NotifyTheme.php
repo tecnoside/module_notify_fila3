@@ -40,6 +40,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property Model|\Eloquent                                   $linkable
  * @property MediaCollection<int, \Modules\Media\Models\Media> $media
  * @property int|null                                          $media_count
+ *
  * @method static \Modules\Notify\Database\Factories\NotifyThemeFactory factory($count = null, $state = [])
  * @method static Builder|NotifyTheme                                   newModelQuery()
  * @method static Builder|NotifyTheme                                   newQuery()
@@ -63,6 +64,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder|NotifyTheme                                   whereUpdatedAt($value)
  * @method static Builder|NotifyTheme                                   whereUpdatedBy($value)
  * @method static Builder|NotifyTheme                                   whereViewParams($value)
+ *
  * @mixin Eloquent
  * @mixin \Eloquent
  */
