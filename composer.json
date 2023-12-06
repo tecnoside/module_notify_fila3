@@ -54,7 +54,7 @@
         "laravel/pint": "^1.13",
         "nesbot/carbon": "*",
         "nette/php-generator": "*",
-        "nunomaduro/larastan": "^2.6",
+        "larastan/larastan": "^2.6",
         "nunomaduro/phpinsights": "^2.9",
         "orchestra/testbench": "*",
         "pestphp/pest": "*",
