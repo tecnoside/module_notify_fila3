@@ -28,7 +28,7 @@ class MailService
     public static function getInstance(): self
     {
         if (! self::$instance instanceof \Modules\Notify\Services\MailService) {
-            self::$instance = new self();
+            self::$instance = new self;
         }
 
         return self::$instance;
@@ -44,7 +44,7 @@ class MailService
         foreach ($vars as $k => $v) {
             $this->{$k} = $v;
         }
-        
+
         $this->vars = array_merge($this->vars, $vars);
 
         return $this;
