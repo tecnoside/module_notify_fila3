@@ -27,7 +27,7 @@ class Pdf
         if (isset($view_params[$file_name])) {
             $file_name = $view_params[$file_name];
         }
-        
+
         $file_path = Storage::disk('cache')->path($file_name);
 
         HtmlService::toPdf(['filename' => $file_path, 'html' => $html, 'out' => 'file', 'pdforientation' => 'P']);

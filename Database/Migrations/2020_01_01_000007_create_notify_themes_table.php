@@ -19,7 +19,7 @@ class CreateNotifyThemesTable extends XotBaseMigration
     {
         // -- CREATE --
         $this->tableCreate(
-            function (Blueprint $table) : void {
+            function (Blueprint $table): void {
                 $table->increments('id');
                 $table->string('lang')->nullable();
                 $table->string('type')->nullable();
@@ -34,40 +34,40 @@ class CreateNotifyThemesTable extends XotBaseMigration
                 if (! $this->hasColumn('from')) {
                     $table->string('from')->nullable();
                 }
-                
+
                 if (! $this->hasColumn('updated_at')) {
                     $table->timestamps();
                 }
-                
+
                 if (! $this->hasColumn('updated_by')) {
                     $table->string('updated_by')->nullable()->after('updated_at');
                     $table->string('created_by')->nullable()->after('created_at');
                 }
-                
+
                 if (! $this->hasColumn('post_type')) {
                     $table->nullableMorphs('post');
                 }
-                
+
                 if (! $this->hasColumn('body_html')) {
                     $table->text('body_html')->nullable();
                 }
-                
+
                 if (! $this->hasColumn('theme')) {
                     $table->string('theme')->nullable();
                 }
-                
+
                 if (! $this->hasColumn('from_email')) {
                     $table->string('from_email')->nullable();
                 }
-                
+
                 if (! $this->hasColumn('logo_src')) {
                     $table->string('logo_src')->nullable();
                 }
-                
+
                 if (! $this->hasColumn('logo_width')) {
                     $table->integer('logo_width')->nullable();
                 }
-                
+
                 if (! $this->hasColumn('logo_height')) {
                     $table->integer('logo_height')->nullable();
                 }
