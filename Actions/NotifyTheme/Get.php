@@ -23,6 +23,10 @@ class Get
         if (! isset($view_params['post_id'])) {
             $view_params['post_id'] = 0;
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 85f0c80 (Dusting)
         if (! isset($view_params['lang'])) {
             $view_params['lang'] = app()->getLocale();
         }

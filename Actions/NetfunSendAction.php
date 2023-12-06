@@ -30,6 +30,10 @@ class NetfunSendAction
         if (! is_string($token)) {
             throw new \Exception('put [NETFUN_TOKEN] variable to your .env and config [services.netfun.token] ');
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 85f0c80 (Dusting)
         $this->token = $token;
     }
 
