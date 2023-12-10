@@ -16,5 +16,5 @@ interface CanReceivePushNotifications
     /**
      * Get the value of the model's primary key.
      */
-    public function getKey();
+    public function getKey(): string|int;
 }
