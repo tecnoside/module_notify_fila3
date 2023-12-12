@@ -39,7 +39,11 @@
         "filament/filament": "*",
         "illuminate/contracts": "*",
         "illuminate/support": "*",
+<<<<<<< HEAD
         "kreait/laravel-firebase": "^5.3",
+=======
+		"kreait/laravel-firebase": "^5.3",
+>>>>>>> b82a5c5 (ADD Firebase cloud messaging SDK integration and custom notification channel instance)
         "laraxot/module_media_fila3": "dev-master",
         "laraxot/module_xot_fila3": "dev-master",
         "phpdocumentor/type-resolver": "*",
