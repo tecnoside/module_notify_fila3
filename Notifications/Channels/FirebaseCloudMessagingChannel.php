@@ -1,10 +1,7 @@
 <?php
 
-<<<<<<< HEAD
 declare(strict_types=1);
 
-=======
->>>>>>> b82a5c5 (ADD Firebase cloud messaging SDK integration and custom notification channel instance)
 namespace Modules\Notify\Notifications\Channels;
 
 use Illuminate\Database\Eloquent\Model;
@@ -18,13 +15,11 @@ use Modules\Notify\Contracts\CanReceivePushNotifications;
 use Modules\Notify\Contracts\MobilePushNotification;
 use Modules\Notify\Datas\PushNotificationDebugData;
 use Psr\Log\LoggerInterface;
+
 use function Safe\json_encode;
 
-<<<<<<< HEAD
 use function Safe\json_encode;
 
-=======
->>>>>>> b82a5c5 (ADD Firebase cloud messaging SDK integration and custom notification channel instance)
 final class FirebaseCloudMessagingChannel
 {
     private static LoggerInterface $logger;
@@ -32,15 +27,7 @@ final class FirebaseCloudMessagingChannel
     public function __construct(
         private readonly Messaging $firebaseCloudMessaging,
     ) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         self::$logger = Log::driver('firebase') ?? Log::getDefaultDriver();
-=======
-        self::$logger = Log::driver('firebase');
->>>>>>> b82a5c5 (ADD Firebase cloud messaging SDK integration and custom notification channel instance)
-=======
-        self::$logger = Log::driver('firebase') ?? Log::getDefaultDriver();
->>>>>>> 450462e (FIX default to primary logger if FCM-specific one is unavailable)
     }
 
     public function send(Model|CanReceivePushNotifications $notifiable, MobilePushNotification $notification): void
@@ -72,7 +59,6 @@ final class FirebaseCloudMessagingChannel
                         json_encode($notificationDebugData, JSON_PRETTY_PRINT),
                     ));
             }
-<<<<<<< HEAD
         } catch (\Exception $exception) {
             self::$logger
                 ->error(sprintf(
@@ -83,18 +69,6 @@ final class FirebaseCloudMessagingChannel
                     json_encode($userNotificationTokens->toArray(), JSON_THROW_ON_ERROR),
                 ));
             self::$logger->error(json_encode($exception->getTrace(), JSON_PRETTY_PRINT));
-=======
-        } catch (\Exception $e) {
-            self::$logger
-                ->error(sprintf(
-                    "An exception has been thrown while trying to send FCM notifications.\n\tError message is: '%s' [%s]\n\tNotification data was: %s\n\tUser devices were: %s",
-                    $e->getMessage(),
-                    $e->getCode(),
-                    json_encode($notification->toArray(null)),
-                    json_encode($userNotificationTokens->toArray()),
-                ));
-            self::$logger->error(json_encode($e->getTrace(), JSON_PRETTY_PRINT));
->>>>>>> b82a5c5 (ADD Firebase cloud messaging SDK integration and custom notification channel instance)
         }
     }
 

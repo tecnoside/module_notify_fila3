@@ -12,6 +12,7 @@ use Illuminate\Support\Carbon;
 /**
  * Modules\Notify\Models\Notification.
  *
+<<<<<<< HEAD
  * @property string          $id
  * @property string          $type
  * @property string          $notifiable_type
@@ -26,6 +27,22 @@ use Illuminate\Support\Carbon;
  *
  * @method static DatabaseNotificationCollection<int, static>        all($columns = ['*'])
  * @method static DatabaseNotificationCollection<int, static>        get($columns = ['*'])
+=======
+ * @property string $id
+ * @property string $type
+ * @property string $notifiable_type
+ * @property int $notifiable_id
+ * @property array $data
+ * @property Carbon|null $read_at
+ * @property Carbon|null $created_at
+ * @property string|null $created_by
+ * @property Carbon|null $updated_at
+ * @property string|null $updated_by
+ * @property-read Model|\Eloquent $notifiable
+ *
+ * @method static DatabaseNotificationCollection<int, static> all($columns = ['*'])
+ * @method static DatabaseNotificationCollection<int, static> get($columns = ['*'])
+>>>>>>> 46052c5 (up)
  * @method static \Illuminate\Database\Eloquent\Builder|Notification newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Notification newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Notification query()
@@ -41,8 +58,11 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|Notification whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Notification whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Notification whereUpdatedBy($value)
+<<<<<<< HEAD
  * @method static DatabaseNotificationCollection<int, static>        all($columns = ['*'])
  * @method static DatabaseNotificationCollection<int, static>        get($columns = ['*'])
+=======
+>>>>>>> 46052c5 (up)
  *
  * @mixin Eloquent
  *
