@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 #[submodule "docs"]
 #	path = docs
 #	url = git@github.com:laraxot/doc_notify.git
-=======
-[submodule "docs"]
-	path = docs
-	url = git@github.com:laraxot/doc_notify.git
->>>>>>> b521cc5 (UPDATE submodule configuration, switched to SSH)
-=======
-#[submodule "docs"]
-#	path = docs
-<<<<<<< HEAD
 #	url = https://github.com/laraxot/doc_notify.git
->>>>>>> d9fae5c (.)
-=======
-#	url = git@github.com:laraxot/doc_notify.git
->>>>>>> 403c16b (UPDATE submodule configuration, switched to SSH)
