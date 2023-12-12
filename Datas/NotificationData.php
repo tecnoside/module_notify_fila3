@@ -32,10 +32,6 @@ class NotificationData extends Data
      * @var DataCollection<AttachmentData>
      */
     public ?DataCollection $attachments = null;
-<<<<<<< HEAD
-=======
-
->>>>>>> 85f0c80 (Dusting)
     // public ?array $attachment_paths = [];
 
     /** Get the notification routing information for the given driver.

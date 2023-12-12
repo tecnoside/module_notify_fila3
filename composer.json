@@ -55,12 +55,7 @@
         "laravel/pint": "^1.13",
         "nesbot/carbon": "*",
         "nette/php-generator": "*",
-<<<<<<< HEAD
         "nunomaduro/phpinsights": "^2.11",
-=======
-        "larastan/larastan": "^2.6",
-        "nunomaduro/phpinsights": "^2.9",
->>>>>>> 399a8fc (Update notification and notify theme models and composer dependenciesThis commit updates the Notification and NotifyTheme models with new methods for retrieving all notifications and themes. It also updates the composer.json file to use the correct larastan package. The phpstan.neon.dist file is also updated to reflect this change)
         "orchestra/testbench": "*",
         "pestphp/pest": "*",
         "pestphp/pest-plugin-laravel": "*",

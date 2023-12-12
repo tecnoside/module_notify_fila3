@@ -26,18 +26,10 @@ class CreateNotifyThemeablesTable extends XotBaseMigration
                 if (! $this->hasColumn('updated_at')) {
                     $table->timestamps();
                 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 85f0c80 (Dusting)
                 if (! $this->hasColumn('updated_by')) {
                     $table->string('updated_by')->nullable()->after('updated_at');
                     $table->string('created_by')->nullable()->after('created_at');
                 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 85f0c80 (Dusting)
                 if (! $this->hasColumn('notify_theme_id')) {
                     $table->integer('notify_theme_id')->nullable();
                 }

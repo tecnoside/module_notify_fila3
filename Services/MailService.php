@@ -44,10 +44,6 @@ class MailService
         foreach ($vars as $k => $v) {
             $this->{$k} = $v;
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> 85f0c80 (Dusting)
         $this->vars = array_merge($this->vars, $vars);
 
         return $this;
