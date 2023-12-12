@@ -4,11 +4,15 @@
             <form action="{!! Request::fullUrlWithQuery([]) !!}" method="POST">
                 @csrf
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9647b43 (up)
                 <x-filament::input type="select" name="driver" value="{{ $driver }}" :options="$drivers"/>
                 <x-filament::input type="text" name="from" />
                 <x-filament::input type="text" name="to" value="3475896127" />
                 <x-filament::input type="text" name="subject" value="3475896127" />
                 <x-filament::input type="textarea" name="body" />
+<<<<<<< HEAD
 =======
                 <x-input.group type="select" name="driver" value="{{ $driver }}" :options="$drivers"/>
                 <x-input.group type="text" name="from" />
@@ -16,6 +20,8 @@
                 <x-input.group type="text" name="subject" value="3475896127" />
                 <x-input.group type="textarea" name="body" />
 >>>>>>> 0015ca6 (up)
+=======
+>>>>>>> 9647b43 (up)
                 <x-button type="submit">go!</x-button>
             </form>
     </x-col>
