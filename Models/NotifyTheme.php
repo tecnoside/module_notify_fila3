@@ -15,7 +15,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 /**
  * Modules\Notify\Models\NotifyTheme.
  *
-<<<<<<< HEAD
  * @property int                                               $id
  * @property string|null                                       $lang
  * @property string|null                                       $type
@@ -40,31 +39,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property MediaCollection<int, \Modules\Media\Models\Media> $media
  * @property int|null                                          $media_count
  *
-=======
- * @property int $id
- * @property string|null $lang
- * @property string|null $type
- * @property string|null $subject
- * @property string|null $body
- * @property Carbon|null $created_at
- * @property string|null $created_by
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $post_type
- * @property int|null $post_id
- * @property string|null $from
- * @property string|null $body_html
- * @property string|null $theme
- * @property string|null $from_email
- * @property string|null $logo_src
- * @property int|null $logo_width
- * @property int|null $logo_height
- * @property array $view_params
- * @property-read array $logo
- * @property-read Model|\Eloquent $linkable
- * @property-read MediaCollection<int, Media> $media
- * @property-read int|null $media_count
->>>>>>> c8a7bd7 (Refactor contact and notify theme modelsRefactors the Contact and NotifyTheme models by adding and removing properties)
  * @method static \Modules\Notify\Database\Factories\NotifyThemeFactory factory($count = null, $state = [])
  * @method static Builder|NotifyTheme                                   newModelQuery()
  * @method static Builder|NotifyTheme                                   newQuery()
