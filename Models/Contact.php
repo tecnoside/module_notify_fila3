@@ -22,7 +22,6 @@ use Illuminate\Support\Carbon;
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property string|null $token
-<<<<<<< HEAD
  * @property string|null $sms_sent_at
  * @property int|null    $sms_count
  * @property string|null $mail_sent_at
@@ -77,25 +76,6 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Contact                                   whereUserId($value)
  * @method static Builder|Contact                                   whereValue($value)
  * @method static Builder|Contact                                   whereVerifiedAt($value)
-=======
- *
- * @method static \Modules\Notify\Database\Factories\ContactFactory factory($count = null, $state = [])
- * @method static Builder|Contact newModelQuery()
- * @method static Builder|Contact newQuery()
- * @method static Builder|Contact query()
- * @method static Builder|Contact whereContactType($value)
- * @method static Builder|Contact whereCreatedAt($value)
- * @method static Builder|Contact whereCreatedBy($value)
- * @method static Builder|Contact whereId($value)
- * @method static Builder|Contact whereModelId($value)
- * @method static Builder|Contact whereModelType($value)
- * @method static Builder|Contact whereToken($value)
- * @method static Builder|Contact whereUpdatedAt($value)
- * @method static Builder|Contact whereUpdatedBy($value)
- * @method static Builder|Contact whereUserId($value)
- * @method static Builder|Contact whereValue($value)
- * @method static Builder|Contact whereVerifiedAt($value)
->>>>>>> 46052c5 (up)
  *
  * @mixin Eloquent
  *
