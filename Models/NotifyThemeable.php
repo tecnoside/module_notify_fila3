@@ -17,11 +17,7 @@ use Illuminate\Support\Carbon;
  * @property string|null $created_by
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
-<<<<<<< HEAD
  * @property int|null    $notify_theme_id
-=======
- * @property int|null $notify_theme_id
->>>>>>> 46052c5 (up)
  *
  * @method static Builder|NotifyThemeable newModelQuery()
  * @method static Builder|NotifyThemeable newQuery()
