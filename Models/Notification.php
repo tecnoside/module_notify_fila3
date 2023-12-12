@@ -58,6 +58,7 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|Notification whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Notification whereUpdatedBy($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static DatabaseNotificationCollection<int, static>        all($columns = ['*'])
  * @method static DatabaseNotificationCollection<int, static>        get($columns = ['*'])
  *
@@ -67,6 +68,8 @@ use Illuminate\Support\Carbon;
  * @method static DatabaseNotificationCollection<int, static> all($columns = ['*'])
  * @method static DatabaseNotificationCollection<int, static> get($columns = ['*'])
 >>>>>>> 8a0784c (up)
+=======
+>>>>>>> 3392c2a (up)
  * @mixin Eloquent
  *
  * @method static DatabaseNotificationCollection<int, static> all($columns = ['*'])
