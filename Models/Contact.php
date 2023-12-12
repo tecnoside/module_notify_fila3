@@ -7,8 +7,6 @@ namespace Modules\Notify\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
 
-<<<<<<< HEAD
-=======
 /**
  * Modules\Notify\Models\Contact.
  *
@@ -105,7 +103,6 @@ use Illuminate\Support\Carbon;
  *
  * @mixin \Eloquent
  */
->>>>>>> c094c2f (up)
 class Contact extends BaseModel
 {
     /**

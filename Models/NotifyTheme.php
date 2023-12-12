@@ -12,8 +12,6 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 
-<<<<<<< HEAD
-=======
 /**
  * Modules\Notify\Models\NotifyTheme.
  *
@@ -68,7 +66,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @mixin Eloquent
  * @mixin \Eloquent
  */
->>>>>>> c094c2f (up)
 class NotifyTheme extends BaseModel implements HasMedia
 {
     use InteractsWithMedia;

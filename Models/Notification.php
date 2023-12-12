@@ -9,8 +9,6 @@ use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Support\Carbon;
 
-<<<<<<< HEAD
-=======
 /**
  * Modules\Notify\Models\Notification.
  *
@@ -53,7 +51,6 @@ use Illuminate\Support\Carbon;
  *
  * @mixin \Eloquent
  */
->>>>>>> c094c2f (up)
 class Notification extends DatabaseNotification
 {
     protected $connection = 'notify';
