@@ -60,6 +60,7 @@ package-lock.json
 *.cache
 .git-blame-ignore-revs
 <<<<<<< HEAD
+<<<<<<< HEAD
 package-lock.json
 .php-cs-fixer.cache
 package-lock.json
@@ -71,3 +72,6 @@ package-lock.json
 >>>>>>> 6d2c2ce (up gitignore)
 =======
 >>>>>>> 29758d2 (add .git-blame-ignore-revs to .gitignore)
+=======
+package-lock.json
+>>>>>>> ceb8ac3 (package-lock.json >> .gitignore)
