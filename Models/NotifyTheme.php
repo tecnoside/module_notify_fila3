@@ -16,6 +16,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * Modules\Notify\Models\NotifyTheme.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property int                                               $id
  * @property string|null                                       $lang
  * @property string|null                                       $type
@@ -41,6 +42,8 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property int|null                                          $media_count
  *
 =======
+=======
+>>>>>>> 15657af (Add sms_sent_at, sms_count, mail_sent_at, mail_count, token, first_name, and last_name properties to the Contact model. Remove language property from the Contact model. Remove body, body_html, theme, from_email, logo_src, logo_width, logo_height, and view_params properties from the NotifyTheme model)
  * @property int $id
  * @property string|null $lang
  * @property string|null $type
@@ -60,12 +63,15 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property int|null $logo_width
  * @property int|null $logo_height
  * @property array $view_params
+=======
+>>>>>>> bea252b (Add sms_sent_at, sms_count, mail_sent_at, mail_count, token, first_name, and last_name properties to the Contact model. Remove language property from the Contact model. Remove body, body_html, theme, from_email, logo_src, logo_width, logo_height, and view_params properties from the NotifyTheme model)
  * @property-read array $logo
  * @property-read Model|\Eloquent $linkable
  * @property-read MediaCollection<int, \Modules\Media\Models\Media> $media
  * @property-read int|null $media_count
 >>>>>>> f59f9f2 (Refactor contact and notify theme modelsCo-authored-by: John Doe <johndoe@example.com>)
  * @method static \Modules\Notify\Database\Factories\NotifyThemeFactory factory($count = null, $state = [])
+<<<<<<< HEAD
  * @method static Builder|NotifyTheme                                   newModelQuery()
  * @method static Builder|NotifyTheme                                   newQuery()
  * @method static Builder|NotifyTheme                                   query()
@@ -89,6 +95,11 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder|NotifyTheme                                   whereUpdatedBy($value)
  * @method static Builder|NotifyTheme                                   whereViewParams($value)
  *
+=======
+ * @method static Builder|NotifyTheme newModelQuery()
+ * @method static Builder|NotifyTheme newQuery()
+ * @method static Builder|NotifyTheme query()
+>>>>>>> 15657af (Add sms_sent_at, sms_count, mail_sent_at, mail_count, token, first_name, and last_name properties to the Contact model. Remove language property from the Contact model. Remove body, body_html, theme, from_email, logo_src, logo_width, logo_height, and view_params properties from the NotifyTheme model)
  * @mixin Eloquent
  * @mixin \Eloquent
  */
