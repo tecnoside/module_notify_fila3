@@ -7,6 +7,42 @@ namespace Modules\Notify\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
 
+<<<<<<< HEAD
+=======
+/**
+ * Modules\Notify\Models\Contact.
+ *
+ * @property int $id
+ * @property string $model_type
+ * @property string $model_id
+ * @property string|null $contact_type
+ * @property string|null $value
+ * @property string|null $user_id
+ * @property string|null $verified_at
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ * @property string|null $token
+ * @method static \Modules\Notify\Database\Factories\ContactFactory factory($count = null, $state = [])
+ * @method static Builder|Contact newModelQuery()
+ * @method static Builder|Contact newQuery()
+ * @method static Builder|Contact query()
+ * @method static Builder|Contact whereContactType($value)
+ * @method static Builder|Contact whereCreatedAt($value)
+ * @method static Builder|Contact whereCreatedBy($value)
+ * @method static Builder|Contact whereId($value)
+ * @method static Builder|Contact whereModelId($value)
+ * @method static Builder|Contact whereModelType($value)
+ * @method static Builder|Contact whereToken($value)
+ * @method static Builder|Contact whereUpdatedAt($value)
+ * @method static Builder|Contact whereUpdatedBy($value)
+ * @method static Builder|Contact whereUserId($value)
+ * @method static Builder|Contact whereValue($value)
+ * @method static Builder|Contact whereVerifiedAt($value)
+ * @mixin Eloquent
+ */
+>>>>>>> f59f9f2 (Refactor contact and notify theme modelsCo-authored-by: John Doe <johndoe@example.com>)
 class Contact extends BaseModel
 {
     /**
