@@ -54,6 +54,7 @@ package-lock.json
 .git-blame-ignore-revs
 /build
 .php-cs-fixer.cache
+<<<<<<< HEAD
 *.phar
 *.cache
 .git-blame-ignore-revs
@@ -61,3 +62,5 @@ package-lock.json
 .php-cs-fixer.cache
 package-lock.json
 .git-rewrite/
+=======
+>>>>>>> 683ca6e (add phpstan.cache to ignore)
