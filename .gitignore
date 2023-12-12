@@ -50,21 +50,10 @@ package-lock.json
 *.cache
 /build
 *.phar
-<<<<<<< HEAD
 .git-rewrite/
-
-
-=======
 *.cache
 .git-blame-ignore-revs
 package-lock.json
 .php-cs-fixer.cache
-<<<<<<< HEAD
->>>>>>> fdebf87 (.php-cs-fixer.cache >> .gitignore)
-=======
 package-lock.json
-<<<<<<< HEAD
->>>>>>> b09c4ba (package-lock.json >> .gitignore)
-=======
 .git-rewrite/
->>>>>>> 54077a4 (.git-rewrite/ >> .gitignore)
