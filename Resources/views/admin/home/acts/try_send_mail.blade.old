@@ -4,8 +4,6 @@
             <form action="{!! Request::fullUrlWithQuery([]) !!}" method="POST">
                 @csrf
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <x-filament::input type="text" name="subject" value="mail test" />
 
                 <x-filament::input type="text" name="from" value="staff@example.com" />
@@ -19,12 +17,8 @@
                 <x-filament::input type="select" name="template" :options="$template_options"/>
 
                 <x-filament::input type="select" name="mailer" :options="$mailer_options"/>
-=======
                 <x-input.group type="text" name="subject" value="mail test" />
-=======
                 <x-filament::input type="text" name="subject" value="mail test" />
->>>>>>> 9647b43 (up)
-
                 <x-filament::input type="text" name="from" value="staff@example.com" />
 
                 <x-filament::input type="text" name="to" value="marco.sottana@gmail.com" />
@@ -35,23 +29,11 @@
                 --}}
                 <x-filament::input type="select" name="template" :options="$template_options"/>
 
-<<<<<<< HEAD
                 <x-input.group type="select" name="mailer" :options="$mailer_options"/>
->>>>>>> 0015ca6 (up)
-=======
                 <x-filament::input type="select" name="mailer" :options="$mailer_options"/>
->>>>>>> 9647b43 (up)
 
                 <button class="btn btn-primary" type="submit">go!</button>
 
             </form>
     </x-col>
-<<<<<<< HEAD
-<<<<<<< HEAD
 @endsection
-=======
-@endsection
->>>>>>> 0015ca6 (up)
-=======
-@endsection
->>>>>>> 9647b43 (up)
