@@ -32,10 +32,14 @@ final class FirebaseCloudMessagingChannel
         private readonly Messaging $firebaseCloudMessaging,
     ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         self::$logger = Log::driver('firebase') ?? Log::getDefaultDriver();
 =======
         self::$logger = Log::driver('firebase');
 >>>>>>> b82a5c5 (ADD Firebase cloud messaging SDK integration and custom notification channel instance)
+=======
+        self::$logger = Log::driver('firebase') ?? Log::getDefaultDriver();
+>>>>>>> 450462e (FIX default to primary logger if FCM-specific one is unavailable)
     }
 
     public function send(Model|CanReceivePushNotifications $notifiable, MobilePushNotification $notification): void
