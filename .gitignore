@@ -59,4 +59,8 @@ package-lock.json
 .git-blame-ignore-revs
 package-lock.json
 .php-cs-fixer.cache
+<<<<<<< HEAD
 >>>>>>> fdebf87 (.php-cs-fixer.cache >> .gitignore)
+=======
+package-lock.json
+>>>>>>> b09c4ba (package-lock.json >> .gitignore)
