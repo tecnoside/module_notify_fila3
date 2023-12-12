@@ -55,9 +55,12 @@ package-lock.json
 /build
 .php-cs-fixer.cache
 *.phar
+<<<<<<< HEAD
 *.cache
 .git-blame-ignore-revs
 package-lock.json
 .php-cs-fixer.cache
 package-lock.json
 .git-rewrite/
+=======
+>>>>>>> a33d065 (add *.phar to .gitignore)
