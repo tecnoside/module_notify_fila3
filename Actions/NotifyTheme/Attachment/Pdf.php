@@ -29,7 +29,7 @@ class Pdf
         }
         $file_path = Storage::disk('cache')->path($file_name);
 
-        HtmlService::toPdf(filename:$file_path, html:$html, out: 'file', pdforientation:'P');
+        HtmlService::toPdf(filename: $file_path, html: $html, out: 'file', pdforientation: 'P');
 
         return AttachmentData::from([
             'path' => $file_path,
