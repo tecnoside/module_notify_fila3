@@ -14,10 +14,12 @@ use Spatie\QueueableAction\QueueableAction;
 /**
  * -- buildmailmessage ha troppi pezzi simili ..
  */
-class Pdf {
+class Pdf
+{
     use QueueableAction;
 
-    public function execute(string $post_type, array $view_params): AttachmentData {
+    public function execute(string $post_type, array $view_params): AttachmentData
+    {
         $notify_theme_data = app(Get::class)->execute($post_type, 'pdf', $view_params);
         $html = $notify_theme_data->body_html;
 
