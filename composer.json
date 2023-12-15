@@ -1,5 +1,5 @@
 {
-    "name": "laraxot/module_notify_fila",
+    "name": "laraxot/module_notify_fila3",
     "description": "notify module dedicated to managing notifications",
     "keywords": [
         "laraxot",
@@ -13,7 +13,7 @@
         "Smss",
         "Whatsapp"
     ],
-    "homepage": "https://github.com/laraxot/module_notify_fila.git",
+    "homepage": "https://github.com/laraxot/module_notify_fila3.git",
     "license": "MIT",
     "authors": [{
         "name": "Marco Sottana",
