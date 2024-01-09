@@ -27,21 +27,7 @@ class MailService
 
     public static function getInstance(): self
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (! self::$instance instanceof \Modules\Notify\Services\MailService) {
-=======
-<<<<<<< HEAD
-=======
->>>>>>> dev
         if (! self::$instance instanceof MailService) {
-=======
-        if (! self::$instance instanceof \Modules\Notify\Services\MailService) {
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> dev
-=======
->>>>>>> dev
             self::$instance = new self;
         }
 
