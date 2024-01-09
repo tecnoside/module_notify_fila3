@@ -36,13 +36,19 @@ return [
 
     // navigation menu
 <<<<<<< HEAD
+<<<<<<< HEAD
     'navigation' => require_once('navigation.php'),
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> dev
     'navigation' => require_once ('navigation.php'),
 =======
     'navigation' => require_once('navigation.php'),
 >>>>>>> master
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
 
     // helpers
