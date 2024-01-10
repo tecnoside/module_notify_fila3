@@ -57,9 +57,6 @@ package-lock.json
 .php-cs-fixer.cache
 package-lock.json
 .git-rewrite/
-<<<<<<< HEAD
 .php-cs-fixer.cache
 /.git-blame-ignore-revs
-=======
->>>>>>> dev
 .git-blame-ignore-revs

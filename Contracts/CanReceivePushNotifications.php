@@ -15,10 +15,7 @@ interface CanReceivePushNotifications
 
     /**
      * Get the value of the model's primary key.
-<<<<<<< HEAD
      * //non si puo usare mixed che cs lo cancella.
-=======
->>>>>>> dev
      *
      * @return string|int|null
      */
