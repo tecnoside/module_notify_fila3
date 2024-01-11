@@ -23,10 +23,14 @@ class BuildMailMessageAction
         Model $model,
         array $view_params = [],
 <<<<<<< HEAD
+<<<<<<< HEAD
         ?DataCollection $dataCollection = null
 =======
         DataCollection $dataCollection = null
 >>>>>>> 25230a84 (first)
+=======
+        DataCollection $dataCollection = null
+>>>>>>> a7e20963 (first)
     ): MailMessage {
         $view_params = array_merge($model->toArray(), $view_params);
 
