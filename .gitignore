@@ -58,4 +58,8 @@ package-lock.json
 package-lock.json
 .git-rewrite/
 .php-cs-fixer.cache
+<<<<<<< HEAD
+.git-blame-ignore-revs
+=======
+>>>>>>> 25230a84 (first)
 .git-blame-ignore-revs
