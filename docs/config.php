@@ -44,6 +44,7 @@ return [
 
     // navigation menu
 <<<<<<< HEAD
+<<<<<<< HEAD
     'navigation' => require_once ('navigation.php'),
 
     // helpers
@@ -59,6 +60,9 @@ return [
                 return trimPath($page->getPath()) === trimPath($child);
 =======
     'navigation' => require_once('navigation.php'),
+=======
+    'navigation' => require_once ('navigation.php'),
+>>>>>>> 3ae9a71 (Dusting)
 
     // helpers
     'isActive' => function ($page, $path) {
