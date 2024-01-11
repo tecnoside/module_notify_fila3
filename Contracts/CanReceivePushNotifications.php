@@ -20,6 +20,7 @@ interface CanReceivePushNotifications
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * non si puo usare mixed che cs lo cancella.
 =======
      * //non si puo usare mixed che cs lo cancella.
@@ -42,6 +43,9 @@ interface CanReceivePushNotifications
      * non si puo usare mixed che cs lo cancella.
 >>>>>>> aaabbb5 (first)
 >>>>>>> 23d769a6 (.)
+=======
+     * //non si puo usare mixed che cs lo cancella.
+>>>>>>> 0d61e3f8 (rebase 1/1)
      *
      * @return string|int|null
      */
