@@ -33,6 +33,7 @@ class MailtrapEngine
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! self::$instance instanceof MailtrapEngine) {
 =======
         if (! self::$instance instanceof \Modules\Notify\Services\MailEngines\MailtrapEngine) {
@@ -40,6 +41,9 @@ class MailtrapEngine
 =======
         if (! self::$instance instanceof \Modules\Notify\Services\MailEngines\MailtrapEngine) {
 >>>>>>> 25230a8 (first)
+=======
+        if (! self::$instance instanceof \Modules\Notify\Services\MailEngines\MailtrapEngine) {
+>>>>>>> a7e2096 (first)
             self::$instance = new self;
         }
 

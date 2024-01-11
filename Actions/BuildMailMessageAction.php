@@ -17,15 +17,20 @@ class BuildMailMessageAction
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param DataCollection<AttachmentData> $dataCollection
 =======
      * @param  DataCollection<AttachmentData>  $dataCollection
 >>>>>>> 25230a8 (first)
+=======
+     * @param  DataCollection<AttachmentData>  $dataCollection
+>>>>>>> a7e2096 (first)
      */
     public function execute(
         string $name,
         Model $model,
         array $view_params = [],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,6 +48,9 @@ class BuildMailMessageAction
 =======
         DataCollection $dataCollection = null
 >>>>>>> 25230a8 (first)
+=======
+        DataCollection $dataCollection = null
+>>>>>>> a7e2096 (first)
     ): MailMessage {
         $view_params = array_merge($model->toArray(), $view_params);
 
@@ -55,10 +63,14 @@ class BuildMailMessageAction
         $fromName = $theme->view_params['from'] ?? $theme->from;
         $subject = $view_params['subject'] ?? $theme->subject;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $email = (new MailMessage())
 =======
         $email = (new MailMessage)
 >>>>>>> 25230a8 (first)
+=======
+        $email = (new MailMessage)
+>>>>>>> a7e2096 (first)
             ->from($fromAddress, $fromName)
             ->subject($subject)
             ->view($view_html, $theme->view_params);
