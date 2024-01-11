@@ -18,6 +18,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             'path' => static function ($page) {
 =======
             'path' => function ($page) {
@@ -28,6 +29,9 @@ return [
 =======
             'path' => function ($page) {
 >>>>>>> 25230a8 (first)
+=======
+            'path' => function ($page) {
+>>>>>>> a7e2096 (first)
                 // return $page->lang.'/posts/'.Str::slug($page->getFilename());
                 // return 'posts/' . ($page->featured ? 'featured/' : '') . Str::slug($page->getFilename());
 
@@ -38,6 +42,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             'path' => static function ($page) {
 =======
             'path' => function ($page) {
@@ -48,6 +53,9 @@ return [
 =======
             'path' => function ($page) {
 >>>>>>> 25230a8 (first)
+=======
+            'path' => function ($page) {
+>>>>>>> a7e2096 (first)
                 // return $page->lang.'/docs/'.Str::slug($page->getFilename());
                 return 'docs/'.Str::slug($page->getFilename());
             },
@@ -59,6 +67,7 @@ return [
     'docsearchIndexName' => env('DOCSEARCH_INDEX'),
 
     // navigation menu
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,6 +112,8 @@ return [
                 return trimPath($page->getPath()) === trimPath($child);
 >>>>>>> 05adcda (up)
 =======
+=======
+>>>>>>> a7e2096 (first)
     'navigation' => require_once('navigation.php'),
 
     // helpers
@@ -116,7 +127,10 @@ return [
         if (is_object($menuItem) && $menuItem->children) {
             return $menuItem->children->contains(function ($child) use ($page) {
                 return trimPath($page->getPath()) == trimPath($child);
+<<<<<<< HEAD
 >>>>>>> 25230a8 (first)
+=======
+>>>>>>> a7e2096 (first)
             });
         }
     }, /*
@@ -124,6 +138,7 @@ return [
         return Str::startsWith($path, 'http') ? $path : '/' . trimPath($path);
     },
     */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -137,6 +152,9 @@ return [
 =======
     'url' => function ($page, $path) {
 >>>>>>> 25230a8 (first)
+=======
+    'url' => function ($page, $path) {
+>>>>>>> a7e2096 (first)
         if (Str::startsWith($path, 'http')) {
             return $path;
         }
@@ -148,6 +166,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'children' => static function ($page, $docs) {
 =======
     'children' => function ($page, $docs) {
@@ -158,6 +177,9 @@ return [
 =======
     'children' => function ($page, $docs) {
 >>>>>>> 25230a8 (first)
+=======
+    'children' => function ($page, $docs) {
+>>>>>>> a7e2096 (first)
         return $docs->where('parent_id', $page->id);
     },
 ];
