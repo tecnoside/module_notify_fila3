@@ -29,6 +29,7 @@ class SmsService
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! self::$instance instanceof SmsService) {
 =======
         if (! self::$instance instanceof \Modules\Notify\Services\SmsService) {
@@ -36,6 +37,9 @@ class SmsService
 =======
         if (! self::$instance instanceof \Modules\Notify\Services\SmsService) {
 >>>>>>> a7e20963 (first)
+=======
+        if (! self::$instance instanceof \Modules\Notify\Services\SmsService) {
+>>>>>>> dev
             self::$instance = new self;
         }
 
