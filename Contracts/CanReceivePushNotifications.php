@@ -20,6 +20,7 @@ interface CanReceivePushNotifications
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -35,10 +36,15 @@ interface CanReceivePushNotifications
 >>>>>>> 23d769a (.)
 =======
 >>>>>>> 0d61e3f (rebase 1/1)
+=======
+>>>>>>> 05adcda (up)
      * //non si puo usare mixed che cs lo cancella.
      *
      * @return string|int|null
      */
     public function getKey();
+<<<<<<< HEAD
 >>>>>>> a7e2096 (first)
+=======
+>>>>>>> 05adcda (up)
 }
