@@ -35,6 +35,7 @@ class BuildMailMessageAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ?DataCollection $dataCollection = null
 =======
         DataCollection $dataCollection = null
@@ -51,6 +52,9 @@ class BuildMailMessageAction
 =======
         DataCollection $dataCollection = null
 >>>>>>> a7e2096 (first)
+=======
+        ?DataCollection $dataCollection = null
+>>>>>>> 3ae9a71 (Dusting)
     ): MailMessage {
         $view_params = array_merge($model->toArray(), $view_params);
 
