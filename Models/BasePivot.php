@@ -54,6 +54,7 @@ abstract class BasePivot extends Pivot
     protected $casts = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         'id' => 'string', // must be string else primary key of related model will be typed as int
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
@@ -65,11 +66,16 @@ abstract class BasePivot extends Pivot
         'deleted_at' => 'datetime'
 >>>>>>> a7e2096 (first)
 =======
+=======
+>>>>>>> 05adcda (up)
         'id' => 'string', // must be string else primary key of related model will be typed as int
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
         'deleted_at' => 'datetime',
+<<<<<<< HEAD
 >>>>>>> 3ae9a71 (Dusting)
+=======
+>>>>>>> 05adcda (up)
     ];
 
     /**
