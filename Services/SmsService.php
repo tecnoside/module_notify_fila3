@@ -27,20 +27,8 @@ class SmsService
 
     public static function getInstance(): self
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (! self::$instance instanceof SmsService) {
-=======
-        if (! self::$instance instanceof \Modules\Notify\Services\SmsService) {
->>>>>>> a7e2096 (first)
-=======
-        if (! self::$instance instanceof \Modules\Notify\Services\SmsService) {
->>>>>>> 25230a8 (first)
-=======
-        if (! self::$instance instanceof \Modules\Notify\Services\SmsService) {
->>>>>>> a7e2096 (first)
-            self::$instance = new self;
+            self::$instance = new self();
         }
 
         return self::$instance;

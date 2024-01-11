@@ -16,53 +16,13 @@ class BuildMailMessageAction
     use QueueableAction;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param DataCollection<AttachmentData> $dataCollection
-=======
-     * @param  DataCollection<AttachmentData>  $dataCollection
->>>>>>> 25230a8 (first)
-=======
-     * @param  DataCollection<AttachmentData>  $dataCollection
->>>>>>> a7e2096 (first)
-=======
-     * @param DataCollection<AttachmentData> $dataCollection
->>>>>>> 05adcda (up)
      */
     public function execute(
         string $name,
         Model $model,
         array $view_params = [],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        ?DataCollection $dataCollection = null
-=======
         DataCollection $dataCollection = null
->>>>>>> a7e2096 (first)
-=======
-        ?DataCollection $dataCollection = null
->>>>>>> 3ae9a71 (Dusting)
-=======
-        DataCollection $dataCollection = null
->>>>>>> 05adcda (up)
-=======
-        DataCollection $dataCollection = null
->>>>>>> 25230a8 (first)
-=======
-        DataCollection $dataCollection = null
->>>>>>> a7e2096 (first)
-=======
-        ?DataCollection $dataCollection = null
->>>>>>> 3ae9a71 (Dusting)
-=======
-        DataCollection $dataCollection = null
->>>>>>> 05adcda (up)
     ): MailMessage {
         $view_params = array_merge($model->toArray(), $view_params);
 
@@ -74,19 +34,7 @@ class BuildMailMessageAction
         $fromAddress = $theme->view_params['from_email'] ?? $theme->from_email;
         $fromName = $theme->view_params['from'] ?? $theme->from;
         $subject = $view_params['subject'] ?? $theme->subject;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         $email = (new MailMessage())
-=======
-        $email = (new MailMessage)
->>>>>>> 25230a8 (first)
-=======
-        $email = (new MailMessage)
->>>>>>> a7e2096 (first)
-=======
-        $email = (new MailMessage())
->>>>>>> 05adcda (up)
             ->from($fromAddress, $fromName)
             ->subject($subject)
             ->view($view_html, $theme->view_params);
