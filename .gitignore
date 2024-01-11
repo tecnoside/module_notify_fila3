@@ -59,6 +59,9 @@ package-lock.json
 .git-rewrite/
 .php-cs-fixer.cache
 <<<<<<< HEAD
+<<<<<<< HEAD
 .git-blame-ignore-revs
 =======
 >>>>>>> a7e2096 (first)
+=======
+>>>>>>> 25230a8 (first)
