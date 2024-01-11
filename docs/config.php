@@ -15,7 +15,11 @@ return [
 
     'collections' => [
         'posts' => [
+<<<<<<< HEAD
             'path' => static function ($page) {
+=======
+            'path' => function ($page) {
+>>>>>>> a7e2096 (first)
                 // return $page->lang.'/posts/'.Str::slug($page->getFilename());
                 // return 'posts/' . ($page->featured ? 'featured/' : '') . Str::slug($page->getFilename());
 
@@ -23,7 +27,11 @@ return [
             },
         ],
         'docs' => [
+<<<<<<< HEAD
             'path' => static function ($page) {
+=======
+            'path' => function ($page) {
+>>>>>>> a7e2096 (first)
                 // return $page->lang.'/docs/'.Str::slug($page->getFilename());
                 return 'docs/'.Str::slug($page->getFilename());
             },
@@ -35,6 +43,7 @@ return [
     'docsearchIndexName' => env('DOCSEARCH_INDEX'),
 
     // navigation menu
+<<<<<<< HEAD
     'navigation' => require_once ('navigation.php'),
 
     // helpers
@@ -48,6 +57,21 @@ return [
         if (is_object($menuItem) && $menuItem->children) {
             return $menuItem->children->contains(static function ($child) use ($page) {
                 return trimPath($page->getPath()) === trimPath($child);
+=======
+    'navigation' => require_once('navigation.php'),
+
+    // helpers
+    'isActive' => function ($page, $path) {
+        return Str::endsWith(trimPath($page->getPath()), trimPath($path));
+    },
+    'isItemActive' => function ($page, $item) {
+        return Str::endsWith(trimPath($page->getPath()), trimPath($item->getPath()));
+    },
+    'isActiveParent' => function ($page, $menuItem) {
+        if (is_object($menuItem) && $menuItem->children) {
+            return $menuItem->children->contains(function ($child) use ($page) {
+                return trimPath($page->getPath()) == trimPath($child);
+>>>>>>> a7e2096 (first)
             });
         }
     }, /*
@@ -55,7 +79,11 @@ return [
         return Str::startsWith($path, 'http') ? $path : '/' . trimPath($path);
     },
     */
+<<<<<<< HEAD
     'url' => static function ($page, $path) {
+=======
+    'url' => function ($page, $path) {
+>>>>>>> a7e2096 (first)
         if (Str::startsWith($path, 'http')) {
             return $path;
         }
@@ -64,7 +92,11 @@ return [
         return url('/'.trimPath($path));
     },
 
+<<<<<<< HEAD
     'children' => static function ($page, $docs) {
+=======
+    'children' => function ($page, $docs) {
+>>>>>>> a7e2096 (first)
         return $docs->where('parent_id', $page->id);
     },
 ];

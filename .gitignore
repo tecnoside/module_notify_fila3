@@ -58,4 +58,7 @@ package-lock.json
 package-lock.json
 .git-rewrite/
 .php-cs-fixer.cache
+<<<<<<< HEAD
 .git-blame-ignore-revs
+=======
+>>>>>>> a7e2096 (first)
