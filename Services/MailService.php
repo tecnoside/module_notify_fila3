@@ -27,7 +27,11 @@ class MailService
 
     public static function getInstance(): self
     {
+<<<<<<< HEAD
         if (! self::$instance instanceof MailService) {
+=======
+        if (! self::$instance instanceof \Modules\Notify\Services\MailService) {
+>>>>>>> a7e2096 (first)
             self::$instance = new self;
         }
 
