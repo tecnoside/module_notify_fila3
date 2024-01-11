@@ -17,6 +17,7 @@ return [
         'posts' => [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             'path' => static function ($page) {
 =======
             'path' => function ($page) {
@@ -24,6 +25,9 @@ return [
 =======
             'path' => static function ($page) {
 >>>>>>> 05adcda (up)
+=======
+            'path' => function ($page) {
+>>>>>>> 25230a8 (first)
                 // return $page->lang.'/posts/'.Str::slug($page->getFilename());
                 // return 'posts/' . ($page->featured ? 'featured/' : '') . Str::slug($page->getFilename());
 
@@ -33,6 +37,7 @@ return [
         'docs' => [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             'path' => static function ($page) {
 =======
             'path' => function ($page) {
@@ -40,6 +45,9 @@ return [
 =======
             'path' => static function ($page) {
 >>>>>>> 05adcda (up)
+=======
+            'path' => function ($page) {
+>>>>>>> 25230a8 (first)
                 // return $page->lang.'/docs/'.Str::slug($page->getFilename());
                 return 'docs/'.Str::slug($page->getFilename());
             },
@@ -51,6 +59,7 @@ return [
     'docsearchIndexName' => env('DOCSEARCH_INDEX'),
 
     // navigation menu
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,6 +102,21 @@ return [
             return $menuItem->children->contains(static function ($child) use ($page) {
                 return trimPath($page->getPath()) === trimPath($child);
 >>>>>>> 05adcda (up)
+=======
+    'navigation' => require_once('navigation.php'),
+
+    // helpers
+    'isActive' => function ($page, $path) {
+        return Str::endsWith(trimPath($page->getPath()), trimPath($path));
+    },
+    'isItemActive' => function ($page, $item) {
+        return Str::endsWith(trimPath($page->getPath()), trimPath($item->getPath()));
+    },
+    'isActiveParent' => function ($page, $menuItem) {
+        if (is_object($menuItem) && $menuItem->children) {
+            return $menuItem->children->contains(function ($child) use ($page) {
+                return trimPath($page->getPath()) == trimPath($child);
+>>>>>>> 25230a8 (first)
             });
         }
     }, /*
@@ -102,6 +126,7 @@ return [
     */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'url' => static function ($page, $path) {
 =======
     'url' => function ($page, $path) {
@@ -109,6 +134,9 @@ return [
 =======
     'url' => static function ($page, $path) {
 >>>>>>> 05adcda (up)
+=======
+    'url' => function ($page, $path) {
+>>>>>>> 25230a8 (first)
         if (Str::startsWith($path, 'http')) {
             return $path;
         }
@@ -119,6 +147,7 @@ return [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'children' => static function ($page, $docs) {
 =======
     'children' => function ($page, $docs) {
@@ -126,6 +155,9 @@ return [
 =======
     'children' => static function ($page, $docs) {
 >>>>>>> 05adcda (up)
+=======
+    'children' => function ($page, $docs) {
+>>>>>>> 25230a8 (first)
         return $docs->where('parent_id', $page->id);
     },
 ];

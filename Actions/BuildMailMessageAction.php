@@ -16,12 +16,17 @@ class BuildMailMessageAction
     use QueueableAction;
 
     /**
+<<<<<<< HEAD
      * @param DataCollection<AttachmentData> $dataCollection
+=======
+     * @param  DataCollection<AttachmentData>  $dataCollection
+>>>>>>> 25230a8 (first)
      */
     public function execute(
         string $name,
         Model $model,
         array $view_params = [],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,6 +40,9 @@ class BuildMailMessageAction
 =======
         DataCollection $dataCollection = null
 >>>>>>> 05adcda (up)
+=======
+        DataCollection $dataCollection = null
+>>>>>>> 25230a8 (first)
     ): MailMessage {
         $view_params = array_merge($model->toArray(), $view_params);
 
@@ -46,7 +54,11 @@ class BuildMailMessageAction
         $fromAddress = $theme->view_params['from_email'] ?? $theme->from_email;
         $fromName = $theme->view_params['from'] ?? $theme->from;
         $subject = $view_params['subject'] ?? $theme->subject;
+<<<<<<< HEAD
         $email = (new MailMessage())
+=======
+        $email = (new MailMessage)
+>>>>>>> 25230a8 (first)
             ->from($fromAddress, $fromName)
             ->subject($subject)
             ->view($view_html, $theme->view_params);

@@ -55,15 +55,19 @@ abstract class BasePivot extends Pivot
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         'id' => 'string', // must be string else primary key of related model will be typed as int
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
         'deleted_at' => 'datetime',
 =======
+=======
+>>>>>>> 25230a8 (first)
         'id'=>'string', //must be string else primary key of related model will be typed as int
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
         'deleted_at' => 'datetime'
+<<<<<<< HEAD
 >>>>>>> a7e2096 (first)
 =======
 =======
@@ -76,6 +80,8 @@ abstract class BasePivot extends Pivot
 >>>>>>> 3ae9a71 (Dusting)
 =======
 >>>>>>> 05adcda (up)
+=======
+>>>>>>> 25230a8 (first)
     ];
 
     /**
