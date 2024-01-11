@@ -18,6 +18,7 @@ interface CanReceivePushNotifications
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -29,7 +30,12 @@ interface CanReceivePushNotifications
      */
     public function getKey(): string|int;
 =======
+=======
+>>>>>>> 23d769a (.)
      * //non si puo usare mixed che cs lo cancella.
+=======
+     * non si puo usare mixed che cs lo cancella.
+>>>>>>> aaabbb5 (first)
      *
      * @return string|int|null
      */
