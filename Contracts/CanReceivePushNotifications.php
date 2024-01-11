@@ -22,6 +22,7 @@ interface CanReceivePushNotifications
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -41,7 +42,12 @@ interface CanReceivePushNotifications
 >>>>>>> 05adcda (up)
 =======
 >>>>>>> 25230a8 (first)
+=======
+>>>>>>> 6e9bc65 (.)
      * //non si puo usare mixed che cs lo cancella.
+=======
+     * non si puo usare mixed che cs lo cancella.
+>>>>>>> aaabbb5 (first)
      *
      * @return string|int|null
      */
