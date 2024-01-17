@@ -12,6 +12,7 @@ use Filament\Notifications\Livewire\DatabaseNotifications;
 use Filament\Panel;
 use Filament\Support\Facades\FilamentView;
 use Illuminate\Support\Facades\Blade;
+use Modules\Xot\Datas\XotData;
 use Modules\Xot\Providers\Filament\XotBasePanelProvider;
 
 class AdminPanelProvider extends XotBasePanelProvider
@@ -20,13 +21,15 @@ class AdminPanelProvider extends XotBasePanelProvider
 
     public function panel(Panel $panel): Panel
     {
-        /*
-        DatabaseNotifications::trigger('notify::livewire.database-notifications-trigger');
-        FilamentView::registerRenderHook(
-            'panels::user-menu.before',
-            fn (): string => Blade::render('@livewire(\'database-notifications\')'),
-        );
-        */
+        if (! XotData::make()->disable_database_notifications) {
+            DatabaseNotifications::trigger('notify::livewire.database-notifications-trigger');
+            // DatabaseNotifications::databaseNotificationsPollingInterval('30s');
+            DatabaseNotifications::pollingInterval('60s');
+            FilamentView::registerRenderHook(
+                'panels::user-menu.before',
+                fn (): string => Blade::render('@livewire(\'database-notifications\')'),
+            );
+        }
 
         return parent::panel($panel);
     }
