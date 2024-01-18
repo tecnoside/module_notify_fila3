@@ -1,9 +1,9 @@
 <x-filament::page>
-    
+
     <x-filament-panels::form wire:submit="sendEmail()">
         {{ $this->emailForm }}
 
-        <x-filament-panels::form.actions 
+        <x-filament-panels::form.actions
             :actions="$this->getEmailFormActions()"
         />
 
