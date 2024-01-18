@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Emails;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
@@ -12,16 +13,14 @@ use Modules\Notify\Datas\EmailData;
 
 class EmailDataEmail extends Mailable
 {
-    use Queueable, SerializesModels;
+    use Queueable;
+    use SerializesModels;
 
     public EmailData $email_data;
-    /**
-     * Create a new message instance.
-     */
+
     public function __construct(EmailData $email_data)
     {
-        //
-        $this->email_data=$email_data;
+        $this->email_data = $email_data;
     }
 
     /**
