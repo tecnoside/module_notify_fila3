@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Mail;
 use Modules\Notify\Datas\EmailData;
 use Modules\Notify\Emails\EmailDataEmail;
 
+/**
+ * @property ComponentContainer $emailForm
+ */
 class SendEmail extends Page implements HasForms
 {
     use InteractsWithForms;
