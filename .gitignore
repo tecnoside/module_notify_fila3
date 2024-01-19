@@ -59,4 +59,8 @@ package-lock.json
 package-lock.json
 .git-rewrite/
 .php-cs-fixer.cache
+<<<<<<< HEAD
 >>>>>>> f03a1bfb (🔥 chore(.gitignore): remove .git-blame-ignore-revs from the list of ignored files to include it in version control)
+=======
+.git-blame-ignore-revs
+>>>>>>> 3fce771e (📝 chore(.gitignore): add .git-blame-ignore-revs to the list of ignored files)
