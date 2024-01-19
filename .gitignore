@@ -63,4 +63,8 @@ package-lock.json
 >>>>>>> f03a1bfb (🔥 chore(.gitignore): remove .git-blame-ignore-revs from the list of ignored files to include it in version control)
 =======
 .git-blame-ignore-revs
+<<<<<<< HEAD
 >>>>>>> 3fce771e (📝 chore(.gitignore): add .git-blame-ignore-revs to the list of ignored files)
+=======
+.git-blame-ignore-revs
+>>>>>>> b40d1182 (🔧 chore(.gitignore): add .git-blame-ignore-revs to the list of ignored files to prevent it from being tracked by git)
