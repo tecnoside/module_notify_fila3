@@ -4,34 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Pages;
 
-<<<<<<< HEAD
-use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Pages\Page;
-use Filament\Actions\Action;
-use Filament\Facades\Filament;
-=======
 use Filament\Actions\Action;
 use Filament\Facades\Filament;
 use Filament\Forms;
-use Filament\Forms\Concerns\InteractsWithForms;
-use Filament\Forms\Contracts\HasForms;
-use Filament\Forms\Form;
-use Filament\Notifications\Notification;
-use Filament\Pages\Page;
-use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Mail;
->>>>>>> 49b719c1 (Dusting)
-use Modules\Notify\Datas\EmailData;
-use Illuminate\Support\Facades\Mail;
 use Filament\Forms\ComponentContainer;
-use Filament\Forms\Contracts\HasForms;
-use Illuminate\Database\Eloquent\Model;
-use Filament\Notifications\Notification;
-use Modules\Notify\Emails\EmailDataEmail;
-use Illuminate\Contracts\Auth\Authenticatable;
 use Filament\Forms\Concerns\InteractsWithForms;
+use Filament\Forms\Contracts\HasForms;
+use Filament\Forms\Form;
+use Filament\Notifications\Notification;
+use Filament\Pages\Page;
+use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Mail;
+use Modules\Notify\Datas\EmailData;
+use Modules\Notify\Emails\EmailDataEmail;
 
 /**
  * @property ComponentContainer $emailForm
