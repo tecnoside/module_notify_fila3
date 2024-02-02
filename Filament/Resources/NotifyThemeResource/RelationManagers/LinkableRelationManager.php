@@ -25,9 +25,9 @@ class LinkableRelationManager extends RelationManager
         return $form
             ->schema(
                 [
-                TextInput::make('id')
-                    ->required()
-                    ->maxLength(255),
+                    TextInput::make('id')
+                        ->required()
+                        ->maxLength(255),
                 ]
             );
     }
@@ -37,7 +37,7 @@ class LinkableRelationManager extends RelationManager
         return $table
             ->columns(
                 [
-                TextColumn::make('id'),
+                    TextColumn::make('id'),
                 ]
             )
             ->filters(
@@ -46,18 +46,18 @@ class LinkableRelationManager extends RelationManager
             )
             ->headerActions(
                 [
-                CreateAction::make(),
+                    CreateAction::make(),
                 ]
             )
             ->actions(
                 [
-                EditAction::make(),
-                DeleteAction::make(),
+                    EditAction::make(),
+                    DeleteAction::make(),
                 ]
             )
             ->bulkActions(
                 [
-                DeleteBulkAction::make(),
+                    DeleteBulkAction::make(),
                 ]
             );
     }

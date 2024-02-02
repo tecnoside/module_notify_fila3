@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Tests\Unit\Actions\NotifyTheme;
 
 use Modules\Notify\Actions\NotifyTheme\Get;
@@ -14,24 +16,18 @@ final class GetTest extends TestCase
 {
     private Get $get;
 
-    /**
-     * {@inheritdoc}
-     */
     protected function setUp(): void
     {
         parent::setUp();
 
-        /**
-* 
+        /*
          *
- * @todo Correctly instantiate tested object to use it. 
-*/
-        $this->get = new Get();
+         *
+         * @todo Correctly instantiate tested object to use it.
+         */
+        $this->get = new Get;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -41,11 +37,11 @@ final class GetTest extends TestCase
 
     public function testExecute(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 }

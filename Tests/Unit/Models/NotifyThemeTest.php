@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Unit\Modules\Notify\Models;
 
 use Modules\Notify\Models\NotifyTheme;
@@ -14,24 +16,18 @@ final class NotifyThemeTest extends TestCase
 {
     private NotifyTheme $notifyTheme;
 
-    /**
-     * {@inheritdoc}
-     */
     protected function setUp(): void
     {
         parent::setUp();
 
-        /**
-* 
+        /*
          *
- * @todo Correctly instantiate tested object to use it. 
-*/
-        $this->notifyTheme = new NotifyTheme();
+         *
+         * @todo Correctly instantiate tested object to use it.
+         */
+        $this->notifyTheme = new NotifyTheme;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -41,21 +37,21 @@ final class NotifyThemeTest extends TestCase
 
     public function testGetLogoAttribute(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 
     public function testLinkable(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Unit\Modules\Notify\Actions;
 
 use Modules\Notify\Actions\NetfunSendAction;
@@ -14,19 +16,13 @@ final class NetfunSendActionTest extends TestCase
 {
     private NetfunSendAction $netfunSendAction;
 
-    /**
-     * {@inheritdoc}
-     */
     protected function setUp(): void
     {
         parent::setUp();
 
-        $this->netfunSendAction = new NetfunSendAction();
+        $this->netfunSendAction = new NetfunSendAction;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -36,11 +32,11 @@ final class NetfunSendActionTest extends TestCase
 
     public function testExecute(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 }

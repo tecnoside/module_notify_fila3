@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Tests\Unit\Filament\Resources;
 
 use Modules\Notify\Filament\Resources\NotificationResource;
@@ -14,24 +16,18 @@ final class NotificationResourceTest extends TestCase
 {
     private NotificationResource $notificationResource;
 
-    /**
-     * {@inheritdoc}
-     */
     protected function setUp(): void
     {
         parent::setUp();
 
-        /**
-* 
+        /*
          *
- * @todo Correctly instantiate tested object to use it. 
-*/
-        $this->notificationResource = new NotificationResource();
+         *
+         * @todo Correctly instantiate tested object to use it.
+         */
+        $this->notificationResource = new NotificationResource;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -41,41 +37,41 @@ final class NotificationResourceTest extends TestCase
 
     public function testForm(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 
     public function testTable(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 
     public function testGetRelations(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 
     public function testGetPages(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 }
