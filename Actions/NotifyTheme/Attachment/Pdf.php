@@ -31,10 +31,12 @@ class Pdf
 
         HtmlService::toPdf(filename: $file_path, html: $html, out: 'file', pdforientation: 'P');
 
-        return AttachmentData::from([
+        return AttachmentData::from(
+            [
             'path' => $file_path,
             'as' => $file_name,
             'mime' => 'application/pdf',
-        ]);
+            ]
+        );
     }
 }

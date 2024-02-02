@@ -21,7 +21,11 @@ final class NetfunChannelTest extends TestCase
     {
         parent::setUp();
 
-        /** @todo Correctly instantiate tested object to use it. */
+        /**
+* 
+         *
+ * @todo Correctly instantiate tested object to use it. 
+*/
         $this->netfunChannel = new NetfunChannel();
     }
 
@@ -37,7 +41,11 @@ final class NetfunChannelTest extends TestCase
 
     public function testSend(): void
     {
-        /** @todo This test is incomplete. */
+        /**
+* 
+         *
+ * @todo This test is incomplete. 
+*/
         self::markTestIncomplete();
     }
 }

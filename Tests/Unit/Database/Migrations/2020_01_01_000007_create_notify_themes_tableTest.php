@@ -21,7 +21,11 @@ final class CreateNotifyThemesTableTest extends TestCase
     {
         parent::setUp();
 
-        /** @todo Correctly instantiate tested object to use it. */
+        /**
+* 
+         *
+ * @todo Correctly instantiate tested object to use it. 
+*/
         $this->createNotifyThemesTable = new CreateNotifyThemesTable();
     }
 
@@ -37,7 +41,11 @@ final class CreateNotifyThemesTableTest extends TestCase
 
     public function testUp(): void
     {
-        /** @todo This test is incomplete. */
+        /**
+* 
+         *
+ * @todo This test is incomplete. 
+*/
         self::markTestIncomplete();
     }
 }

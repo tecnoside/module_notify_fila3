@@ -16,7 +16,7 @@ class BuildMailMessageAction
     use QueueableAction;
 
     /**
-     * @param  DataCollection<AttachmentData>  $dataCollection
+     * @param DataCollection<AttachmentData> $dataCollection
      */
     public function execute(
         string $name,

@@ -27,12 +27,14 @@ class Get
             $view_params['lang'] = app()->getLocale();
         }
 
-        $theme = NotifyTheme::firstOrCreate([
+        $theme = NotifyTheme::firstOrCreate(
+            [
             'lang' => $view_params['lang'],
             'type' => $type, // email,sms,whatsapp,piccione
             'post_type' => $name,
             'post_id' => $view_params['post_id'], // in questo caso il tipo come register type 3 in cui la pwd e' solo autogenerata
-        ], ['view_params' => []]);
+            ], ['view_params' => []]
+        );
 
         $module_name_low = Str::lower($xotData->main_module);
 
@@ -88,12 +90,14 @@ class Get
             $theme->update(['view_params' => $view_params]);
         }
 
-        return NotifyThemeData::from([
+        return NotifyThemeData::from(
+            [
             'from_email' => $theme->from_email,
             'from' => $theme->from,
             'subject' => $subject,
             'body_html' => $body_html,
             'view_params' => $view_params,
-        ]);
+            ]
+        );
     }
 }

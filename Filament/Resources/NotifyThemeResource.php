@@ -35,7 +35,8 @@ class NotifyThemeResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
+            ->schema(
+                [
                 Select::make('lang')->options(self::fieldOptions('lang')),
                 Select::make('type')->options(self::fieldOptions('type')),
                 Select::make('post_type')->options(self::fieldOptions('post_type')),
@@ -66,7 +67,8 @@ class NotifyThemeResource extends Resource
                 Textarea::make('body')->columnSpanFull(),
                 RichEditor::make('body_html')->columnSpanFull(),
                 // TinyEditor::make('body_html')->columnSpanFull(),
-            ]);
+                ]
+            );
     }
 
     public static function fieldOptions(string $field): array
@@ -81,31 +83,41 @@ class NotifyThemeResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->columns([
+            ->columns(
+                [
                 'id' => TextColumn::make('id')->sortable(),
                 'lang' => TextColumn::make('lang')->sortable(),
                 'type' => TextColumn::make('type')->sortable(),
                 'post_id' => TextColumn::make('post_id')->sortable(),
                 'post_type' => TextColumn::make('post_type')->sortable(),
                 'logo_src' => TextColumn::make('logo_src')->sortable(),
-            ])
-            ->filters([
+                ]
+            )
+            ->filters(
+                [
                 SelectFilter::make('lang')
                     ->options(self::fieldOptions('lang')),
                 SelectFilter::make('post_type')
                     ->options(self::fieldOptions('post_type')),
                 SelectFilter::make('type')
                     ->options(self::fieldOptions('type')),
-            ])
-            ->actions([
+                ]
+            )
+            ->actions(
+                [
                 EditAction::make(),
-            ])
-            ->bulkActions([
+                ]
+            )
+            ->bulkActions(
+                [
                 DeleteBulkAction::make(),
-            ])
-            ->headerActions([
+                ]
+            )
+            ->headerActions(
+                [
                 CreateAction::make(),
-            ]);
+                ]
+            );
     }
 
     public static function getRelations(): array

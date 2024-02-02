@@ -14,7 +14,7 @@ class NetfunChannel
     /**
      * Send the given notification.
      *
-     * @param  CanThemeNotificationContract  $notifiable
+     * @param CanThemeNotificationContract $notifiable
      */
     public function send($notifiable, ThemeNotification $themeNotification): void
     {
