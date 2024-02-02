@@ -21,7 +21,11 @@ final class EsendexSendActionTest extends TestCase
     {
         parent::setUp();
 
-        /** @todo Correctly instantiate tested object to use it. */
+        /**
+* 
+         *
+ * @todo Correctly instantiate tested object to use it. 
+*/
         $this->esendexSendAction = new EsendexSendAction();
     }
 
@@ -37,13 +41,21 @@ final class EsendexSendActionTest extends TestCase
 
     public function testExecute(): void
     {
-        /** @todo This test is incomplete. */
+        /**
+* 
+         *
+ * @todo This test is incomplete. 
+*/
         self::markTestIncomplete();
     }
 
     public function testLogin(): void
     {
-        /** @todo This test is incomplete. */
+        /**
+* 
+         *
+ * @todo This test is incomplete. 
+*/
         self::markTestIncomplete();
     }
 }

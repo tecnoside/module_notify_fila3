@@ -48,10 +48,12 @@ class SendEmail extends Page implements HasForms
     public function emailForm(Form $form): Form
     {
         return $form
-            ->schema([
+            ->schema(
+                [
                 Forms\Components\Section::make()
                     // ->description('Update your account\'s profile information and email address.')
-                    ->schema([
+                    ->schema(
+                        [
                         Forms\Components\TextInput::make('email_to')
                             // ->unique(ignoreRecord: true)
                             ->email()
@@ -60,8 +62,10 @@ class SendEmail extends Page implements HasForms
                             ->required(),
                         Forms\Components\RichEditor::make('body')
                             ->required(),
-                    ]),
-            ])
+                        ]
+                    ),
+                ]
+            )
             ->model($this->getUser())
             ->statePath('emailData');
     }

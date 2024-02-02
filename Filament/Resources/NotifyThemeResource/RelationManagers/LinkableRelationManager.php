@@ -23,30 +23,42 @@ class LinkableRelationManager extends RelationManager
     public function form(Form $form): Form
     {
         return $form
-            ->schema([
+            ->schema(
+                [
                 TextInput::make('id')
                     ->required()
                     ->maxLength(255),
-            ]);
+                ]
+            );
     }
 
     public function table(Table $table): Table
     {
         return $table
-            ->columns([
+            ->columns(
+                [
                 TextColumn::make('id'),
-            ])
-            ->filters([
-            ])
-            ->headerActions([
+                ]
+            )
+            ->filters(
+                [
+                ]
+            )
+            ->headerActions(
+                [
                 CreateAction::make(),
-            ])
-            ->actions([
+                ]
+            )
+            ->actions(
+                [
                 EditAction::make(),
                 DeleteAction::make(),
-            ])
-            ->bulkActions([
+                ]
+            )
+            ->bulkActions(
+                [
                 DeleteBulkAction::make(),
-            ]);
+                ]
+            );
     }
 }

@@ -21,7 +21,11 @@ final class NotifyServiceProviderTest extends TestCase
     {
         parent::setUp();
 
-        /** @todo Correctly instantiate tested object to use it. */
+        /**
+* 
+         *
+ * @todo Correctly instantiate tested object to use it. 
+*/
         $this->notifyServiceProvider = new NotifyServiceProvider();
     }
 
@@ -37,7 +41,11 @@ final class NotifyServiceProviderTest extends TestCase
 
     public function testBootCallback(): void
     {
-        /** @todo This test is incomplete. */
+        /**
+* 
+         *
+ * @todo This test is incomplete. 
+*/
         self::markTestIncomplete();
     }
 }

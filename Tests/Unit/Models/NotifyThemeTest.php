@@ -21,7 +21,11 @@ final class NotifyThemeTest extends TestCase
     {
         parent::setUp();
 
-        /** @todo Correctly instantiate tested object to use it. */
+        /**
+* 
+         *
+ * @todo Correctly instantiate tested object to use it. 
+*/
         $this->notifyTheme = new NotifyTheme();
     }
 
@@ -37,13 +41,21 @@ final class NotifyThemeTest extends TestCase
 
     public function testGetLogoAttribute(): void
     {
-        /** @todo This test is incomplete. */
+        /**
+* 
+         *
+ * @todo This test is incomplete. 
+*/
         self::markTestIncomplete();
     }
 
     public function testLinkable(): void
     {
-        /** @todo This test is incomplete. */
+        /**
+* 
+         *
+ * @todo This test is incomplete. 
+*/
         self::markTestIncomplete();
     }
 }

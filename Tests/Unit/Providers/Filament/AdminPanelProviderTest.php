@@ -21,7 +21,11 @@ final class AdminPanelProviderTest extends TestCase
     {
         parent::setUp();
 
-        /** @todo Correctly instantiate tested object to use it. */
+        /**
+* 
+         *
+ * @todo Correctly instantiate tested object to use it. 
+*/
         $this->adminPanelProvider = new AdminPanelProvider();
     }
 
@@ -37,7 +41,11 @@ final class AdminPanelProviderTest extends TestCase
 
     public function testPanel(): void
     {
-        /** @todo This test is incomplete. */
+        /**
+* 
+         *
+ * @todo This test is incomplete. 
+*/
         self::markTestIncomplete();
     }
 }

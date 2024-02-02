@@ -52,20 +52,24 @@ final class FirebaseCloudMessagingChannel
                 )->toArray();
 
                 self::$logger
-                    ->debug(sprintf(
-                        "FCM notification debug:\n%s",
-                        json_encode($notificationDebugData, JSON_PRETTY_PRINT),
-                    ));
+                    ->debug(
+                        sprintf(
+                            "FCM notification debug:\n%s",
+                            json_encode($notificationDebugData, JSON_PRETTY_PRINT),
+                        )
+                    );
             }
         } catch (\Exception $exception) {
             self::$logger
-                ->error(sprintf(
-                    "An exception has been thrown while trying to send FCM notifications.\n\tError message is: '%s' [%s]\n\tNotification data was: %s\n\tUser devices were: %s",
-                    $exception->getMessage(),
-                    $exception->getCode(),
-                    json_encode($notification->toArray(null), JSON_THROW_ON_ERROR),
-                    json_encode($userNotificationTokens->toArray(), JSON_THROW_ON_ERROR),
-                ));
+                ->error(
+                    sprintf(
+                        "An exception has been thrown while trying to send FCM notifications.\n\tError message is: '%s' [%s]\n\tNotification data was: %s\n\tUser devices were: %s",
+                        $exception->getMessage(),
+                        $exception->getCode(),
+                        json_encode($notification->toArray(null), JSON_THROW_ON_ERROR),
+                        json_encode($userNotificationTokens->toArray(), JSON_THROW_ON_ERROR),
+                    )
+                );
             self::$logger->error(json_encode($exception->getTrace(), JSON_PRETTY_PRINT));
         }
     }

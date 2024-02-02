@@ -23,7 +23,11 @@ final class GenerateSitemapTest extends TestCase
     {
         parent::setUp();
 
-        /** @todo Correctly instantiate tested object to use it. */
+        /**
+* 
+         *
+ * @todo Correctly instantiate tested object to use it. 
+*/
         $this->generateSitemap = new GenerateSitemap();
     }
 
@@ -41,13 +45,21 @@ final class GenerateSitemapTest extends TestCase
     {
         $jigsaw = Mockery::mock(Jigsaw::class);
 
-        /** @todo This test is incomplete. */
+        /**
+* 
+         *
+ * @todo This test is incomplete. 
+*/
         $this->generateSitemap->handle($jigsaw);
     }
 
     public function testIsExcluded(): void
     {
-        /** @todo This test is incomplete. */
+        /**
+* 
+         *
+ * @todo This test is incomplete. 
+*/
         self::markTestIncomplete();
     }
 }
