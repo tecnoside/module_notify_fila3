@@ -1,11 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Tests\Unit\Services\MailEngines;
 
 use MailtrapEngine as MailtrapEngineAlias;
-use Mockery;
 use Modules\Notify\Services\MailEngines\MailtrapEngine;
-use ReflectionClass;
 use Tests\TestCase;
 
 /**
@@ -17,24 +17,18 @@ final class MailtrapEngineTest extends TestCase
 {
     private MailtrapEngine $mailtrapEngine;
 
-    /**
-     * {@inheritdoc}
-     */
     protected function setUp(): void
     {
         parent::setUp();
 
-        /**
-* 
+        /*
          *
- * @todo Correctly instantiate tested object to use it. 
-*/
-        $this->mailtrapEngine = new MailtrapEngine();
+         *
+         * @todo Correctly instantiate tested object to use it.
+         */
+        $this->mailtrapEngine = new MailtrapEngine;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -44,8 +38,8 @@ final class MailtrapEngineTest extends TestCase
 
     public function testGetInstance(): void
     {
-        $expected = Mockery::mock(MailtrapEngineAlias::class);
-        $property = (new ReflectionClass(MailtrapEngine::class))
+        $expected = \Mockery::mock(MailtrapEngineAlias::class);
+        $property = (new \ReflectionClass(MailtrapEngine::class))
             ->getProperty('instance');
         $property->setValue(null, $expected);
         self::assertSame($expected, MailtrapEngine::getInstance());
@@ -53,41 +47,41 @@ final class MailtrapEngineTest extends TestCase
 
     public function testMake(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 
     public function testSetLocalVars(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 
     public function testSend(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 
     public function testTry(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 }

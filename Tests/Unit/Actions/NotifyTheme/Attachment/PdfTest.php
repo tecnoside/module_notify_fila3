@@ -21,7 +21,7 @@ final class PdfTest extends TestCase
         parent::setUp();
 
         /* @todo Correctly instantiate tested object to use it. */
-        $this->pdf = new Pdf();
+        $this->pdf = new Pdf;
     }
 
     protected function tearDown(): void

@@ -1,8 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Unit;
 
-use CreateNotifyThemeablesTable;
 use Tests\TestCase;
 
 /**
@@ -12,26 +13,20 @@ use Tests\TestCase;
  */
 final class CreateNotifyThemeablesTableTest extends TestCase
 {
-    private CreateNotifyThemeablesTable $createNotifyThemeablesTable;
+    private \CreateNotifyThemeablesTable $createNotifyThemeablesTable;
 
-    /**
-     * {@inheritdoc}
-     */
     protected function setUp(): void
     {
         parent::setUp();
 
-        /**
-* 
+        /*
          *
- * @todo Correctly instantiate tested object to use it. 
-*/
-        $this->createNotifyThemeablesTable = new CreateNotifyThemeablesTable();
+         *
+         * @todo Correctly instantiate tested object to use it.
+         */
+        $this->createNotifyThemeablesTable = new \CreateNotifyThemeablesTable;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -41,11 +36,11 @@ final class CreateNotifyThemeablesTableTest extends TestCase
 
     public function testUp(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 }

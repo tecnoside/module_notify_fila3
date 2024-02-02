@@ -1,10 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Unit\Modules\Notify\Services;
 
-use Mockery;
 use Modules\Notify\Services\SmsService;
-use ReflectionClass;
 use SmsService as SmsServiceAlias;
 use Tests\TestCase;
 
@@ -17,24 +17,18 @@ final class SmsServiceTest extends TestCase
 {
     private SmsService $smsService;
 
-    /**
-     * {@inheritdoc}
-     */
     protected function setUp(): void
     {
         parent::setUp();
 
-        /**
-* 
+        /*
          *
- * @todo Correctly instantiate tested object to use it. 
-*/
-        $this->smsService = new SmsService();
+         *
+         * @todo Correctly instantiate tested object to use it.
+         */
+        $this->smsService = new SmsService;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -44,8 +38,8 @@ final class SmsServiceTest extends TestCase
 
     public function testGetInstance(): void
     {
-        $expected = Mockery::mock(SmsServiceAlias::class);
-        $property = (new ReflectionClass(SmsService::class))
+        $expected = \Mockery::mock(SmsServiceAlias::class);
+        $property = (new \ReflectionClass(SmsService::class))
             ->getProperty('instance');
         $property->setValue(null, $expected);
         self::assertSame($expected, SmsService::getInstance());
@@ -53,48 +47,48 @@ final class SmsServiceTest extends TestCase
 
     public function testMake(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 
     public function testSetLocalVars(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 
     public function testMergeVars(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 
     public function testSend(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 
     public function testGetVars(): void
     {
         $expected = [];
-        $property = (new ReflectionClass(SmsService::class))
+        $property = (new \ReflectionClass(SmsService::class))
             ->getProperty('vars');
         $property->setValue($this->smsService, $expected);
         self::assertSame($expected, $this->smsService->getVars());

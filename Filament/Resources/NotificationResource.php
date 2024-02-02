@@ -48,21 +48,21 @@ class NotificationResource extends Resource
             )
             ->actions(
                 [
-                EditAction::make(),
+                    EditAction::make(),
                 ]
             )
             ->bulkActions(
                 [
-                BulkActionGroup::make(
-                    [
-                    DeleteBulkAction::make(),
-                    ]
-                ),
+                    BulkActionGroup::make(
+                        [
+                            DeleteBulkAction::make(),
+                        ]
+                    ),
                 ]
             )
             ->emptyStateActions(
                 [
-                // {{ tableEmptyStateActions }}
+                    // {{ tableEmptyStateActions }}
                 ]
             );
     }

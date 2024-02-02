@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Unit\Modules\Notify\Notifications;
 
 use Modules\Notify\Notifications\ThemeNotification;
@@ -18,9 +20,6 @@ final class ThemeNotificationTest extends TestCase
 
     private array $view_params;
 
-    /**
-     * {@inheritdoc}
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -30,55 +29,50 @@ final class ThemeNotificationTest extends TestCase
         $this->themeNotification = new ThemeNotification($this->name, $this->view_params);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
 
-        unset($this->themeNotification);
-        unset($this->name);
-        unset($this->view_params);
+        unset($this->themeNotification, $this->name, $this->view_params);
     }
 
     public function testVia(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 
     public function testToMail(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 
     public function testToSms(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 
     public function testToArray(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 }

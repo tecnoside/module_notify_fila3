@@ -50,20 +50,20 @@ class SendEmail extends Page implements HasForms
         return $form
             ->schema(
                 [
-                Forms\Components\Section::make()
-                    // ->description('Update your account\'s profile information and email address.')
-                    ->schema(
-                        [
-                        Forms\Components\TextInput::make('email_to')
-                            // ->unique(ignoreRecord: true)
-                            ->email()
-                            ->required(),
-                        Forms\Components\TextInput::make('subject')
-                            ->required(),
-                        Forms\Components\RichEditor::make('body')
-                            ->required(),
-                        ]
-                    ),
+                    Forms\Components\Section::make()
+                        // ->description('Update your account\'s profile information and email address.')
+                        ->schema(
+                            [
+                                Forms\Components\TextInput::make('email_to')
+                                    // ->unique(ignoreRecord: true)
+                                    ->email()
+                                    ->required(),
+                                Forms\Components\TextInput::make('subject')
+                                    ->required(),
+                                Forms\Components\RichEditor::make('body')
+                                    ->required(),
+                            ]
+                        ),
                 ]
             )
             ->model($this->getUser())

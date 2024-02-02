@@ -29,10 +29,10 @@ class Get
 
         $theme = NotifyTheme::firstOrCreate(
             [
-            'lang' => $view_params['lang'],
-            'type' => $type, // email,sms,whatsapp,piccione
-            'post_type' => $name,
-            'post_id' => $view_params['post_id'], // in questo caso il tipo come register type 3 in cui la pwd e' solo autogenerata
+                'lang' => $view_params['lang'],
+                'type' => $type, // email,sms,whatsapp,piccione
+                'post_type' => $name,
+                'post_id' => $view_params['post_id'], // in questo caso il tipo come register type 3 in cui la pwd e' solo autogenerata
             ], ['view_params' => []]
         );
 
@@ -92,11 +92,11 @@ class Get
 
         return NotifyThemeData::from(
             [
-            'from_email' => $theme->from_email,
-            'from' => $theme->from,
-            'subject' => $subject,
-            'body_html' => $body_html,
-            'view_params' => $view_params,
+                'from_email' => $theme->from_email,
+                'from' => $theme->from,
+                'subject' => $subject,
+                'body_html' => $body_html,
+                'view_params' => $view_params,
             ]
         );
     }

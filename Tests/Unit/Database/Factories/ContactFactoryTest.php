@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Tests\Unit\Database\Factories;
 
 use Modules\Notify\Database\Factories\ContactFactory;
@@ -14,24 +16,18 @@ final class ContactFactoryTest extends TestCase
 {
     private ContactFactory $contactFactory;
 
-    /**
-     * {@inheritdoc}
-     */
     protected function setUp(): void
     {
         parent::setUp();
 
-        /**
-* 
+        /*
          *
- * @todo Correctly instantiate tested object to use it. 
-*/
-        $this->contactFactory = new ContactFactory();
+         *
+         * @todo Correctly instantiate tested object to use it.
+         */
+        $this->contactFactory = new ContactFactory;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -41,11 +37,11 @@ final class ContactFactoryTest extends TestCase
 
     public function testDefinition(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 }

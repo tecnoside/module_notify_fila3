@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Tests\Unit\Notifications\Channels;
 
 use Modules\Notify\Notifications\Channels\NetfunChannel;
@@ -14,24 +16,18 @@ final class NetfunChannelTest extends TestCase
 {
     private NetfunChannel $netfunChannel;
 
-    /**
-     * {@inheritdoc}
-     */
     protected function setUp(): void
     {
         parent::setUp();
 
-        /**
-* 
+        /*
          *
- * @todo Correctly instantiate tested object to use it. 
-*/
-        $this->netfunChannel = new NetfunChannel();
+         *
+         * @todo Correctly instantiate tested object to use it.
+         */
+        $this->netfunChannel = new NetfunChannel;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -41,11 +37,11 @@ final class NetfunChannelTest extends TestCase
 
     public function testSend(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 }

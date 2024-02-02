@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Tests\Unit\Filament\Pages;
 
 use Modules\Notify\Filament\Pages\Dashboard;
@@ -14,24 +16,18 @@ final class DashboardTest extends TestCase
 {
     private Dashboard $dashboard;
 
-    /**
-     * {@inheritdoc}
-     */
     protected function setUp(): void
     {
         parent::setUp();
 
-        /**
-* 
+        /*
          *
- * @todo Correctly instantiate tested object to use it. 
-*/
-        $this->dashboard = new Dashboard();
+         *
+         * @todo Correctly instantiate tested object to use it.
+         */
+        $this->dashboard = new Dashboard;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -41,11 +37,11 @@ final class DashboardTest extends TestCase
 
     public function testMount(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 }

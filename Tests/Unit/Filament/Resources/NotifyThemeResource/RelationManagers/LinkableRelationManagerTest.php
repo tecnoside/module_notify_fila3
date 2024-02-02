@@ -21,7 +21,7 @@ final class LinkableRelationManagerTest extends TestCase
         parent::setUp();
 
         /* @todo Correctly instantiate tested object to use it. */
-        $this->linkableRelationManager = new LinkableRelationManager();
+        $this->linkableRelationManager = new LinkableRelationManager;
     }
 
     protected function tearDown(): void

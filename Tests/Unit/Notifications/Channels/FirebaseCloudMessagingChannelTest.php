@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Tests\Unit\Notifications\Channels;
 
 use Kreait\Firebase\Contract\Messaging;
-use Mockery;
 use Mockery\Mock;
 use Modules\Notify\Notifications\Channels\FirebaseCloudMessagingChannel;
 use Tests\TestCase;
@@ -19,35 +20,28 @@ final class FirebaseCloudMessagingChannelTest extends TestCase
 
     private Messaging|Mock $firebaseCloudMessaging;
 
-    /**
-     * {@inheritdoc}
-     */
     protected function setUp(): void
     {
         parent::setUp();
 
-        $this->firebaseCloudMessaging = Mockery::mock(Messaging::class);
+        $this->firebaseCloudMessaging = \Mockery::mock(Messaging::class);
         $this->firebaseCloudMessagingChannel = new FirebaseCloudMessagingChannel($this->firebaseCloudMessaging);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
 
-        unset($this->firebaseCloudMessagingChannel);
-        unset($this->firebaseCloudMessaging);
+        unset($this->firebaseCloudMessagingChannel, $this->firebaseCloudMessaging);
     }
 
     public function testSend(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 }

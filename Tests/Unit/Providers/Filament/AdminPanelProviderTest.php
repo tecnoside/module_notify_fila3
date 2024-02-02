@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Tests\Unit\Providers\Filament;
 
 use Modules\Notify\Providers\Filament\AdminPanelProvider;
@@ -14,24 +16,18 @@ final class AdminPanelProviderTest extends TestCase
 {
     private AdminPanelProvider $adminPanelProvider;
 
-    /**
-     * {@inheritdoc}
-     */
     protected function setUp(): void
     {
         parent::setUp();
 
-        /**
-* 
+        /*
          *
- * @todo Correctly instantiate tested object to use it. 
-*/
-        $this->adminPanelProvider = new AdminPanelProvider();
+         *
+         * @todo Correctly instantiate tested object to use it.
+         */
+        $this->adminPanelProvider = new AdminPanelProvider;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -41,11 +37,11 @@ final class AdminPanelProviderTest extends TestCase
 
     public function testPanel(): void
     {
-        /**
-* 
+        /*
          *
- * @todo This test is incomplete. 
-*/
+         *
+         * @todo This test is incomplete.
+         */
         self::markTestIncomplete();
     }
 }
