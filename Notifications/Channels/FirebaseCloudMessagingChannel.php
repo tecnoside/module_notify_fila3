@@ -28,7 +28,7 @@ final class FirebaseCloudMessagingChannel
         self::$logger = Log::driver('firebase') ?? Log::getDefaultDriver();
     }
 
-    public function send(Model|CanReceivePushNotifications $notifiable, MobilePushNotification $notification): void
+    public function send(Model&CanReceivePushNotifications $notifiable, MobilePushNotification $notification): void
     {
         $userNotificationTokens = $notifiable->getMobileDeviceTokens();
 
