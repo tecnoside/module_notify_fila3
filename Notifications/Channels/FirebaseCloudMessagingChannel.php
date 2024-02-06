@@ -88,10 +88,15 @@ final class FirebaseCloudMessagingChannel
             $this->testFcmTokens($userDeviceTokens);
         }
 
+        /**
+         * @var array<int,\Kreait\Firebase\Messaging\RegistrationToken|non-empty-string>|\Kreait\Firebase\Messaging\RegistrationToken|\Kreait\Firebase\Messaging\RegistrationTokens|non-empty-string
+         */
+        $registrationTokens = $userDeviceTokens->toArray();
+
         return $this->firebaseCloudMessaging
             ->sendMulticast(
                 message: $notification->toCloudMessage(),
-                registrationTokens: $userDeviceTokens->toArray(),
+                registrationTokens: $registrationTokens,
             );
     }
 
@@ -101,7 +106,11 @@ final class FirebaseCloudMessagingChannel
      */
     private function testFcmTokens(Collection $tokens): void
     {
-        $validatedTokens = $this->firebaseCloudMessaging->validateRegistrationTokens($tokens->toArray());
+        /**
+         * @var array<int,\Kreait\Firebase\Messaging\RegistrationToken|non-empty-string>|\Kreait\Firebase\Messaging\RegistrationToken|\Kreait\Firebase\Messaging\RegistrationTokens|non-empty-string
+         */
+        $registrationTokenOrTokens = $tokens->toArray();
+        $validatedTokens = $this->firebaseCloudMessaging->validateRegistrationTokens($registrationTokenOrTokens);
         self::$logger->debug(json_encode($validatedTokens, JSON_PRETTY_PRINT));
     }
 }
