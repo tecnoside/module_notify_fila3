@@ -73,7 +73,7 @@ class NotifyTheme extends BaseModel implements HasMedia
     /**
      * @var array<int, string>
      */
-    protected $fillable = [
+    protected array $fillable = [
         'id',
         'lang',
         'type',
@@ -96,14 +96,14 @@ class NotifyTheme extends BaseModel implements HasMedia
      *
      * @var array<int, string>
      */
-    protected $appends = [
+    protected array $appends = [
         'logo',
     ];
 
     /**
      * @var array<string, string>
      */
-    protected $casts = [
+    protected array $casts = [
         // 'published_at' => 'datetime:Y-m-d', // da verificare
         'view_params' => 'array',
     ];

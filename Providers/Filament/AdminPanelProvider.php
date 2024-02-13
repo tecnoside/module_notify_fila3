@@ -27,7 +27,7 @@ class AdminPanelProvider extends XotBasePanelProvider
             DatabaseNotifications::pollingInterval('60s');
             FilamentView::registerRenderHook(
                 'panels::user-menu.before',
-                fn (): string => Blade::render('@livewire(\'database-notifications\')'),
+                static fn (): string => Blade::render('@livewire(\'database-notifications\')'),
             );
         }
 

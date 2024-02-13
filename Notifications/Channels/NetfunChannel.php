@@ -13,10 +13,8 @@ class NetfunChannel
 {
     /**
      * Send the given notification.
-     *
-     * @param  CanThemeNotificationContract  $notifiable
      */
-    public function send($notifiable, ThemeNotification $themeNotification): void
+    public function send(CanThemeNotificationContract $notifiable, ThemeNotification $themeNotification): void
     {
         $smsData = $themeNotification->toSms($notifiable);
         // Send notification to the $notifiable instance...
