@@ -36,11 +36,8 @@ class NotificationData extends Data
 
     /**
      * Get the notification routing information for the given driver.
-     *
-     * @param  string  $driver
-     * @return string|\Modules\Notify\Models\Notification
      */
-    public function routeNotificationFor($driver, Notification $notification)
+    public function routeNotificationFor(string $driver, Notification $notification): string|\Modules\Notify\Models\Notification
     {
         // dddx(['driver'=>$driver,'a'=>$a]);
         // return $this->routes[$driver] ?? null;

@@ -8,8 +8,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services\MailEngines;
 
-use ErrorException;
-use Exception;
 use Illuminate\Support\Facades\Mail;
 
 // ---------CSS------------
@@ -19,7 +17,6 @@ use Illuminate\Support\Facades\Mail;
  */
 class MailtrapEngine
 {
-    private static ?self $instance = null;
 
     public ?string $from = null;
 
@@ -28,11 +25,12 @@ class MailtrapEngine
     public string $driver;
 
     public ?string $body = null;
+    private static ?self $instance = null;
 
     public static function getInstance(): self
     {
         if (! self::$instance instanceof MailtrapEngine) {
-            self::$instance = new self;
+            self::$instance = new self();
         }
 
         return self::$instance;
@@ -67,7 +65,8 @@ class MailtrapEngine
 
         // try {
         Mail::raw(
-            (string) $this->body, function ($msg): void {
+            (string) $this->body,
+            function ($msg): void {
                 $msg->to($this->to)->subject('Test Email');
             }
         );
