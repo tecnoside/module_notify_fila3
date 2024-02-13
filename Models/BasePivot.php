@@ -30,9 +30,7 @@ abstract class BasePivot extends Pivot
     protected string $connection = 'notify';
 
     // this will use the specified database connection
-    /**
-     * @var array
-     */
+
     /**
      * The accessors to append to the model's array form.
      *

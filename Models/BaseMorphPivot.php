@@ -30,9 +30,6 @@ abstract class BaseMorphPivot extends MorphPivot
     protected $connection = 'notify';
 
     /**
-     * @var array
-     */
-    /**
      * The accessors to append to the model's array form.
      *
      * @var array<int, string>
