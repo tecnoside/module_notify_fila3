@@ -13,7 +13,6 @@ use Illuminate\Support\Str;
  */
 class MailService
 {
-
     public ?string $from = null;
 
     public string $to;
@@ -23,12 +22,13 @@ class MailService
     public ?string $body = null;
 
     public array $vars = [];
+
     private static ?self $instance = null;
 
     public static function getInstance(): self
     {
         if (! self::$instance instanceof MailService) {
-            self::$instance = new self();
+            self::$instance = new self;
         }
 
         return self::$instance;

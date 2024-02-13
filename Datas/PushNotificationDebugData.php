@@ -47,31 +47,31 @@ final class PushNotificationDebugData extends Data implements Arrayable
                 'successes_tokens' => $this->sendReport->successes()
                     ->map(
                         static fn (SendReport $report): array => [
-                                'type' => $report->target()->type(),
-                                'value' => $report->target()->value(),
-                            ]
+                            'type' => $report->target()->type(),
+                            'value' => $report->target()->value(),
+                        ]
                     ),
                 'failure_tokens' => $this->sendReport->failures()
                     ->map(
                         static fn (SendReport $report): array => [
-                                'type' => $report->target()->type(),
-                                'value' => $report->target()->value(),
-                            ]
+                            'type' => $report->target()->type(),
+                            'value' => $report->target()->value(),
+                        ]
                     ),
                 'unknown_tokens' => $this->sendReport
                     ->filter(static fn (SendReport $report): bool => $report->messageWasSentToUnknownToken())
                     ->map(
                         static fn (SendReport $report): array => [
-                                'type' => $report->target()->type(),
-                                'value' => $report->target()->value(),
-                            ]
+                            'type' => $report->target()->type(),
+                            'value' => $report->target()->value(),
+                        ]
                     ),
                 'results' => $this->sendReport
                     ->map(
                         static fn (SendReport $report): array => [
-                                'target' => $report->target()->value(),
-                                'result' => $report->result(),
-                            ]
+                            'target' => $report->target()->value(),
+                            'result' => $report->result(),
+                        ]
                     ),
             ],
         ];
