@@ -26,23 +26,16 @@ class SendEmail extends Page implements HasForms
 {
     use InteractsWithForms;
 
+    public ?array $emailData = [];
+
     // protected static ?string $navigationIcon = 'heroicon-o-envelope';
     protected static ?string $navigationIcon = 'heroicon-o-paper-airplane';
 
     protected static string $view = 'notify::filament.pages.send-email';
 
-    public ?array $emailData = [];
-
     public function mount(): void
     {
         $this->fillForms();
-    }
-
-    protected function getForms(): array
-    {
-        return [
-            'emailForm',
-        ];
     }
 
     public function emailForm(Form $form): Form
@@ -68,6 +61,29 @@ class SendEmail extends Page implements HasForms
             )
             ->model($this->getUser())
             ->statePath('emailData');
+    }
+
+    public function sendEmail(): void
+    {
+        $data = $this->emailForm->getState();
+        $email_data = EmailData::from($data);
+
+        Mail::to($data['email_to'])->send(
+            new EmailDataEmail($email_data)
+        );
+
+        Notification::make()
+            ->success()
+            // ->title(__('filament-panels::pages/auth/edit-profile.notifications.saved.title'))
+            ->title(__('check your email client'))
+            ->send();
+    }
+
+    protected function getForms(): array
+    {
+        return [
+            'emailForm',
+        ];
     }
 
     protected function getEmailFormActions(): array
@@ -97,21 +113,5 @@ class SendEmail extends Page implements HasForms
 
         // $this->editProfileForm->fill($data);
         $this->emailForm->fill();
-    }
-
-    public function sendEmail(): void
-    {
-        $data = $this->emailForm->getState();
-        $email_data = EmailData::from($data);
-
-        Mail::to($data['email_to'])->send(
-            new EmailDataEmail($email_data)
-        );
-
-        Notification::make()
-            ->success()
-            // ->title(__('filament-panels::pages/auth/edit-profile.notifications.saved.title'))
-            ->title(__('check your email client'))
-            ->send();
     }
 }

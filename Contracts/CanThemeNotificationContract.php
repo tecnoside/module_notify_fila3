@@ -13,8 +13,5 @@ interface CanThemeNotificationContract
 
     public function getModel(): Model;
 
-    /**
-     * @return mixed|null
-     */
-    public function sendEmailCallback();
+    public function sendEmailCallback(): mixed;
 }
