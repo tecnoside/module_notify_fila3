@@ -13,8 +13,6 @@ use Illuminate\Support\Str;
  */
 class SmsService
 {
-    private static ?self $instance = null;
-
     public ?string $from = null;
 
     public string $to;
@@ -24,6 +22,8 @@ class SmsService
     public ?string $body = null;
 
     public array $vars = [];
+
+    private static ?self $instance = null;
 
     public static function getInstance(): self
     {

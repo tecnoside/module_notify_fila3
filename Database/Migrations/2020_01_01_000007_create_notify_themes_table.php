@@ -19,7 +19,7 @@ class CreateNotifyThemesTable extends XotBaseMigration
     {
         // -- CREATE --
         $this->tableCreate(
-            function (Blueprint $table): void {
+            static function (Blueprint $table): void {
                 $table->increments('id');
                 $table->string('lang')->nullable();
                 $table->string('type')->nullable();

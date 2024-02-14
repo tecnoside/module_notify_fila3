@@ -33,7 +33,8 @@ class Get
                 'type' => $type, // email,sms,whatsapp,piccione
                 'post_type' => $name,
                 'post_id' => $view_params['post_id'], // in questo caso il tipo come register type 3 in cui la pwd e' solo autogenerata
-            ], ['view_params' => []]
+            ],
+            ['view_params' => []]
         );
 
         $module_name_low = Str::lower($xotData->main_module);

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Resources;
 
-use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
@@ -22,7 +21,6 @@ use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages\CreateNotifyThem
 use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages\EditNotifyTheme;
 use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages\ListNotifyThemes;
 use Modules\Notify\Models\NotifyTheme;
-use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class NotifyThemeResource extends Resource
 {
