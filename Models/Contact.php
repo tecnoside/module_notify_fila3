@@ -110,7 +110,7 @@ class Contact extends BaseModel
      *
      * @var array<int, string>
      */
-    protected array $fillable = [
+    protected $fillable = [
         'model_id', 'model_type', 'contact_type', 'value',
         'verified_at', 'updated_at', 'created_at',
         'updated_by', 'created_by', 'user_id', 'token',
@@ -119,7 +119,7 @@ class Contact extends BaseModel
     /**
      * @var array<string, string>
      */
-    protected array $casts = [
+    protected $casts = [
         // 'date_start' => 'datetime:Y-m-d\TH:i',
         // 'date_end' => 'datetime:Y-m-d\TH:i',
         'model_id' => 'string',
