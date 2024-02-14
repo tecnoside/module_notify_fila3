@@ -28,9 +28,9 @@ abstract class BasePivot extends Pivot
 
     // use Searchable;
     /**
-* @var string
-*/
-protected $connection = 'notify';
+     * @var string
+     */
+    protected $connection = 'notify';
 
     // this will use the specified database connection
 
