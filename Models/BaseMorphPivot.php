@@ -29,9 +29,7 @@ abstract class BaseMorphPivot extends MorphPivot
     /** @var bool */
     public $timestamps = true;
 
-    /**
-     * @var int
-     */
+    /** @var int */
     protected $perPage = 30;
 
     protected $connection = 'notify';
