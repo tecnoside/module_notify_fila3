@@ -38,11 +38,7 @@ abstract class BasePivot extends Pivot
 
     // this will use the specified database connection
 
-    /**
-     * The accessors to append to the model's array form.
-     *
-     * @var array<int, string>
-     */
+    /** @var array<int, string> */
     protected $appends = [];
 
     /**
