@@ -24,9 +24,7 @@ abstract class BasePivot extends Pivot
      */
     public static $snakeAttributes = true;
 
-    /**
-     * @var bool
-     */
+    /** @var bool */
     public $incrementing = true;
 
     /**
@@ -35,9 +33,7 @@ abstract class BasePivot extends Pivot
     protected $perPage = 30;
 
     // use Searchable;
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $connection = 'notify';
 
     // this will use the specified database connection
@@ -62,8 +58,6 @@ abstract class BasePivot extends Pivot
     /**
      * Undocumented variable.
      */
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $primaryKey = 'id';
 }

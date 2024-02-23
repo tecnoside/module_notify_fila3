@@ -70,9 +70,7 @@ class NotifyTheme extends BaseModel implements HasMedia
 {
     use InteractsWithMedia;
 
-    /**
-     * @var array<int, string>
-     */
+    /** @var  array<int, string> */
     protected $fillable = [
         'id',
         'lang',
