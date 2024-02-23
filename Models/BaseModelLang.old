@@ -47,26 +47,18 @@ abstract class BaseModelLang extends Model {
      */
     protected $dates = ['published_at', 'created_at', 'updated_at'];
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $primaryKey = 'id';
 
-    /**
-     * @var bool
-     */
+    /** @var bool */
     public $incrementing = true;
 
-    /**
-     * @var array<int, string>
-     */
+    /** @var  array<int, string> */
     protected $hidden = [
         // 'password'
     ];
 
-    /**
-     * @var bool
-     */
+    /** @var bool */
     public $timestamps = true;
 
     // -----------
