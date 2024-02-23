@@ -70,7 +70,7 @@ class NotifyTheme extends BaseModel implements HasMedia
 {
     use InteractsWithMedia;
 
-    /** @var  array<int, string> */
+    /** @var array<int, string> */
     protected $fillable = [
         'id',
         'lang',
@@ -89,11 +89,7 @@ class NotifyTheme extends BaseModel implements HasMedia
         'view_params',
     ];
 
-    /**
-     * The accessors to append to the model's array form.
-     *
-     * @var array<int, string>
-     */
+    /** @var array<int, string> */
     protected $appends = [
         'logo',
     ];
