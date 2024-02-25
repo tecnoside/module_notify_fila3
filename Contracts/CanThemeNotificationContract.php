@@ -13,5 +13,13 @@ interface CanThemeNotificationContract
 
     public function getModel(): Model;
 
-    public function sendEmailCallback(): mixed;
+    /**
+     * @return mixed|void
+     */
+    public function sendEmailCallback();
+
+    /**
+     * @return mixed|void
+     */
+    public function sendSmsCallback();
 }
