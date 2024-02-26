@@ -15,6 +15,7 @@ use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Stringable;
 use Kreait\Firebase\Messaging\CloudMessage;
 use Modules\User\Models\DeviceUser;
 
@@ -88,11 +89,13 @@ class SendPushNotification extends Page implements HasForms
     public function sendNotification(): void
     {
         $data = $this->notificationForm->getState();
-        // json key is missing the client_email field
 
         $messaging = app('firebase.messaging');
         $deviceToken = $data['deviceToken'];
 
+        /**
+         * @var array<non-empty-string, string|Stringable>|\Kreait\Firebase\Messaging\MessageData
+         */
         $push_data = [
             'type' => $data['type'],
             'title' => $data['title'],
