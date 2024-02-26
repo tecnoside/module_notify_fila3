@@ -15,12 +15,8 @@ use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Mail;
 use Kreait\Firebase\Messaging\CloudMessage;
-use Modules\Notify\Datas\EmailData;
-use Modules\Notify\Emails\EmailDataEmail;
 use Modules\User\Models\DeviceUser;
-use Modules\Xot\Datas\XotData;
 
 /**
  * @property ComponentContainer $notificationForm
@@ -43,24 +39,40 @@ class SendPushNotification extends Page implements HasForms
 
     public function notificationForm(Form $form): Form
     {
-        $profileClass = XotData::make()->getProfileClass();
-
-        $devides = DeviceUser::with(['profile', 'device'])
+        $devices = DeviceUser::with(['profile', 'device'])
             ->where('push_notifications_token', '!=', null)
+            ->where('push_notifications_token', '!=', 'unknown')
             ->where('push_notifications_enabled', 1)
+            // ->whereHas('profile') //db separato percio' da errore cosi'
+            ->whereHas('device')
             ->get();
 
-        dddx($devides);
-        $to = [
-        ];
+        $callback = function ($item) {
+            return [$item->push_notifications_token => $item->profile->full_name.' ('.$item->device?->robot.') '.substr($item->push_notifications_token, -5)];
+        };
+
+        $to = $devices
+            ->mapWithKeys($callback)
+            ->toArray();
 
         return $form
             ->schema(
                 [
-                    Forms\Components\Select::make('to')
+                    Forms\Components\Select::make('deviceToken')
+                        ->label('profile.full_name (device.robot) ultimi 5 cararatteri push_notifications_token')
                         ->options($to),
-                    Forms\Components\RichEditor::make('body')
+
+                    Forms\Components\TextInput::make('type')
                         ->required(),
+                    Forms\Components\TextInput::make('title')
+                        ->required(),
+                    Forms\Components\TextInput::make('body')
+                        ->required(),
+                    Forms\Components\Repeater::make('data')
+                        ->schema([
+                            Forms\Components\TextInput::make('name')->required(),
+                            Forms\Components\TextInput::make('value')->required(),
+                        ]),
                 ]
             )
             // ->model($this->getUser())
@@ -73,23 +85,21 @@ class SendPushNotification extends Page implements HasForms
         // json key is missing the client_email field
 
         $messaging = app('firebase.messaging');
-        /*
-        $deviceToken = 'esG_c14XSBiYSJ6qYpyAtP:APA91bGKC8Vpi94RYnHGu4Bua3dH-BBPI_D6fszHHdJbCohDTY_CbYOB7So4mjiE85S8Sm6HYvofvqHpCanHbsq11aKCW8Ln4K7nvQ3cfStD4uwWZj3fAe5fwGVk60NCr_ssqQBnkEFY';
+        $deviceToken = $data['deviceToken'];
+
+        $push_data = [
+            'type' => $data['type'],
+            'title' => $data['title'],
+            'body' => $data['body'],
+            'data' => json_encode($data['data']),
+        ];
+
         $message = CloudMessage::withTarget('token', $deviceToken)
-            ->withNotification(Notification::create('Title', 'Body'))
-            ->withData(['key' => 'value']);
+            ->withHighestPossiblePriority()
+            ->withData($push_data);
 
         $messaging->send($message);
-        */
-        $user = \Modules\User\Models\User::first();
 
-        /*
-        $email_data = EmailData::from($data);
-
-        Mail::to($data['email_to'])->send(
-            new EmailDataEmail($email_data)
-        );
-        */
         Notification::make()
             ->success()
             // ->title(__('filament-panels::pages/auth/edit-profile.notifications.saved.title'))
