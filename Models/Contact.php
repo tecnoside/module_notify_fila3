@@ -116,9 +116,7 @@ class Contact extends BaseModel
         'updated_by', 'created_by', 'user_id', 'token',
     ];
 
-    /**
-     * @var array<string, string>
-     */
+    /** @var array<string, string> */
     protected $casts = [
         // 'date_start' => 'datetime:Y-m-d\TH:i',
         // 'date_end' => 'datetime:Y-m-d\TH:i',

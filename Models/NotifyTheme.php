@@ -94,9 +94,7 @@ class NotifyTheme extends BaseModel implements HasMedia
         'logo',
     ];
 
-    /**
-     * @var array<string, string>
-     */
+    /** @var array<string, string> */
     protected $casts = [
         // 'published_at' => 'datetime:Y-m-d', // da verificare
         'view_params' => 'array',
