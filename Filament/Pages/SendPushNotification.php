@@ -41,16 +41,15 @@ class SendPushNotification extends Page implements HasForms
 
     public function notificationForm(Form $form): Form
     {
+        $to = [];
+
         return $form
             ->schema(
                 [
-                    Forms\Components\Section::make()
-                        ->schema(
-                            [
-                                Forms\Components\RichEditor::make('body')
-                                    ->required(),
-                            ]
-                        ),
+                    Forms\Components\Select::make('to')
+                        ->options($to),
+                    Forms\Components\RichEditor::make('body')
+                        ->required(),
                 ]
             )
             // ->model($this->getUser())
