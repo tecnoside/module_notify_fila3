@@ -91,7 +91,7 @@ class SendPushNotification extends Page implements HasForms
         $data = $this->notificationForm->getState();
 
         $messaging = app('firebase.messaging');
-        $deviceToken = $data['deviceToken'];
+        Assert::stringNotEmpty($deviceToken = $data['deviceToken']);
 
         /**
          * @var array<non-empty-string, string|Stringable>|\Kreait\Firebase\Messaging\MessageData
