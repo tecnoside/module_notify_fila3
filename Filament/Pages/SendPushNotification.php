@@ -52,11 +52,22 @@ class SendPushNotification extends Page implements HasForms
             ->whereHas('device')
             ->get();
 
+        /**
+         * ---.
+         */
         $callback = function ($item) {
             return [$item->push_notifications_token => $item->profile->full_name.' ('.$item->device?->robot.') '.substr($item->push_notifications_token, -5)];
         };
 
+        /**
+         * ---.
+         */
+        $filterCallback = function ($item) {
+            return null != $item->profile;
+        };
+
         $to = $devices
+            ->filter($filterCallback)
             ->mapWithKeys($callback)
             ->toArray();
 
