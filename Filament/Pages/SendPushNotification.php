@@ -18,6 +18,10 @@ use Illuminate\Database\Eloquent\Model;
 use Kreait\Firebase\Messaging\CloudMessage;
 use Modules\User\Models\DeviceUser;
 
+use function Safe\json_encode;
+
+use Webmozart\Assert\Assert;
+
 /**
  * @property ComponentContainer $notificationForm
  */
@@ -54,6 +58,8 @@ class SendPushNotification extends Page implements HasForms
         $to = $devices
             ->mapWithKeys($callback)
             ->toArray();
+
+        Assert::isArray($to);
 
         return $form
             ->schema(
