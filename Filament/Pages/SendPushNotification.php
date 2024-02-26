@@ -19,6 +19,8 @@ use Illuminate\Support\Facades\Mail;
 use Kreait\Firebase\Messaging\CloudMessage;
 use Modules\Notify\Datas\EmailData;
 use Modules\Notify\Emails\EmailDataEmail;
+use Modules\User\Models\DeviceUser;
+use Modules\Xot\Datas\XotData;
 
 /**
  * @property ComponentContainer $notificationForm
@@ -41,7 +43,16 @@ class SendPushNotification extends Page implements HasForms
 
     public function notificationForm(Form $form): Form
     {
-        $to = [];
+        $profileClass = XotData::make()->getProfileClass();
+
+        $devides = DeviceUser::with(['profile', 'device'])
+            ->where('push_notifications_token', '!=', null)
+            ->where('push_notifications_enabled', 1)
+            ->get();
+
+        dddx($devides);
+        $to = [
+        ];
 
         return $form
             ->schema(
