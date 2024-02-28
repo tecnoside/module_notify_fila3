@@ -8,22 +8,28 @@ declare(strict_types=1);
 namespace Modules\Notify\Notifications;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Stringable;
 use Kreait\Firebase\Messaging\AndroidConfig;
 use Kreait\Firebase\Messaging\CloudMessage;
+use Kreait\Firebase\Messaging\Message;
 use Kreait\Firebase\Messaging\Notification as FirebaseNotification;
+use Modules\Notify\Contracts\MobilePushNotification;
+use Modules\Notify\Datas\FirebaseNotificationData;
+use Modules\Notify\Notifications\Channels\FirebaseCloudMessagingChannel;
 
-class FirebaseAndroidNotification extends Notification
+class FirebaseAndroidNotification extends Notification implements MobilePushNotification
 {
     use Queueable;
+
+    public FirebaseNotificationData $data;
 
     /**
      * Create a new notification instance.
      */
-    public function __construct()
+    public function __construct(FirebaseNotificationData $data)
     {
+        $this->data = $data;
     }
 
     /**
@@ -35,55 +41,12 @@ class FirebaseAndroidNotification extends Notification
      */
     public function via($notifiable): array
     {
-        $channels = ['firebase'];
-
-        // if (empty($channels)) {
-        //    throw new \InvalidArgumentException('No delivery channels are available for the notifiable entity.');
-        // }
+        $channels = [
+            // 'firebase',
+            FirebaseCloudMessagingChannel::class,
+        ];
 
         return $channels;
-    }
-
-    /*
-     * Get the mail representation of the notification.
-     *
-     * @param mixed $notifiable the entity to be notified
-
-    public function toMail($notifiable): MailMessage
-    {
-        try {
-            $url = 'https://laravel.com';
-            $mailMessage = (new MailMessage())
-                ->line('The introduction to the notification.')
-                ->action('Notification Action', $url)
-                ->line('Thank you for using our application!');
-
-            return $mailMessage;
-        } catch (\Exception $exception) {
-            // Log the exception and optionally alert the developers
-            Log::error("Failed to generate mail message: {$exception->getMessage()}", [
-                'notifiable_id' => method_exists($notifiable, 'getKey') ? $notifiable->getKey() : 'N/A',
-                'notifiable_type' => method_exists($notifiable, 'getMorphClass') ? $notifiable->getMorphClass() : 'N/A',
-            ]);
-
-            // Return a generic error mail message
-            return (new MailMessage())
-                ->error()
-                ->subject('Notification Error')
-                ->line('An error occurred while trying to send the notification.')
-                ->line('Our team has been notified and will look into this issue.');
-        }
-    }
-    */
-
-    /**
-     * Get the array representation of the notification.
-     *
-     * @param mixed $notifiable the entity to be notified
-     */
-    public function toArray($notifiable): array
-    {
-        return [];
     }
 
     /**
@@ -96,13 +59,37 @@ class FirebaseAndroidNotification extends Notification
     public function toFirebase($notifiable)
     {
         return CloudMessage::new()
-            ->withNotification(FirebaseNotification::create('Title', 'Body'))
+            ->withNotification(FirebaseNotification::create($this->data->title, $this->data->body))
             ->withAndroidConfig(AndroidConfig::fromArray([
                 'ttl' => '3600s',
                 'priority' => 'high',
-                'notification' => [
-                    'click_action' => 'FLUTTER_NOTIFICATION_CLICK',
-                ],
+                'notification' => $this->data->data,
+                // 'notification' => [
+                //    'click_action' => 'FLUTTER_NOTIFICATION_CLICK',
+                // ],
             ]));
+    }
+
+    /**
+     * Get the array representation of the notification.
+     *
+     * @return array<string, mixed>
+     */
+    public function toArray(?object $notifiable): array
+    {
+        // return $this->data->toArray();
+        return [];
+    }
+
+    public function toCloudMessage(): Message
+    {
+        /**
+         * @var array<non-empty-string, string|Stringable>|\Kreait\Firebase\Messaging\MessageData
+         */
+        $data = $this->data->data;
+
+        return CloudMessage::new()
+            ->withHighestPossiblePriority()
+            ->withData($data);
     }
 }
