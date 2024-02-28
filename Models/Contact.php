@@ -105,11 +105,7 @@ use Illuminate\Support\Carbon;
  */
 class Contact extends BaseModel
 {
-    /**
-     * Undocumented variable.
-     *
-     * @var array<int, string>
-     */
+    /** @var array<int, string> */
     protected $fillable = [
         'model_id', 'model_type', 'contact_type', 'value',
         'verified_at', 'updated_at', 'created_at',

@@ -30,14 +30,13 @@ abstract class BaseModelLang extends Model {
      * @var bool
      */
     public static $snakeAttributes = true;
-
+    /** @var int */
     protected $perPage = 30;
 
+    /** @var string */
     protected $connection = 'notify';
 
-    /**
-     * @var array<string, string>
-     */
+    /** @var array<string, string> */
     protected $casts = [
         // 'published_at' => 'datetime:Y-m-d', // da verificare
     ];

@@ -39,6 +39,7 @@ abstract class BaseModel extends Model
     /** @var int */
     protected $perPage = 30;
 
+    /** @var string */
     protected $connection = 'notify';
 
     /** @var array<string, string> */
