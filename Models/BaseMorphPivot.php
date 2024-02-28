@@ -32,6 +32,7 @@ abstract class BaseMorphPivot extends MorphPivot
     /** @var int */
     protected $perPage = 30;
 
+    /** @var string */
     protected $connection = 'notify';
 
     /** @var array<int, string> */
