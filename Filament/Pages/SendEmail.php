@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Mail;
 use Modules\Notify\Datas\EmailData;
 use Modules\Notify\Emails\EmailDataEmail;
+use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 
 /**
  * @property ComponentContainer $emailForm
@@ -25,6 +26,7 @@ use Modules\Notify\Emails\EmailDataEmail;
 class SendEmail extends Page implements HasForms
 {
     use InteractsWithForms;
+    use NavigationLabelTrait;
 
     public ?array $emailData = [];
 
