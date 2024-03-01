@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Stringable;
 use Kreait\Firebase\Messaging\CloudMessage;
 use Modules\User\Models\DeviceUser;
+use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 
 use function Safe\json_encode;
 
@@ -29,6 +30,7 @@ use Webmozart\Assert\Assert;
 class SendPushNotification extends Page implements HasForms
 {
     use InteractsWithForms;
+    use NavigationLabelTrait;
 
     public ?array $notificationData = [];
 

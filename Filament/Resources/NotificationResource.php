@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Notify\Filament\Resources;
 
 use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables\Actions\BulkActionGroup;
 use Filament\Tables\Actions\DeleteBulkAction;
 use Filament\Tables\Actions\EditAction;
@@ -16,11 +15,12 @@ use Modules\Notify\Filament\Resources\NotificationResource\Pages\EditNotificatio
 // use Filament\Forms;
 use Modules\Notify\Filament\Resources\NotificationResource\Pages\ListNotifications;
 use Modules\Notify\Models\Notification;
+use Modules\Xot\Filament\Resources\XotBaseResource;
 
 // use Illuminate\Database\Eloquent\Builder;
 // use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class NotificationResource extends Resource
+class NotificationResource extends XotBaseResource
 {
     protected static ?string $model = Notification::class;
 

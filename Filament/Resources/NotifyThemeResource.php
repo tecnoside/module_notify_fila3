@@ -10,7 +10,6 @@ use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables\Actions\CreateAction;
 use Filament\Tables\Actions\DeleteBulkAction;
 use Filament\Tables\Actions\EditAction;
@@ -21,8 +20,9 @@ use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages\CreateNotifyThem
 use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages\EditNotifyTheme;
 use Modules\Notify\Filament\Resources\NotifyThemeResource\Pages\ListNotifyThemes;
 use Modules\Notify\Models\NotifyTheme;
+use Modules\Xot\Filament\Resources\XotBaseResource;
 
-class NotifyThemeResource extends Resource
+class NotifyThemeResource extends XotBaseResource
 {
     // //
 
