@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Datas;
 
+use Illuminate\Support\Str;
+use Modules\Xot\Datas\XotData;
 use Spatie\LaravelData\Data;
 
 class FirebaseNotificationData extends Data
@@ -18,10 +20,11 @@ class FirebaseNotificationData extends Data
 
     public static function fromType(string $type): self
     {
+        $main_module = Str::of(XotData::make()->main_module)->lower()->toString();
         $data = [
             'type' => $type,
-            'title' => trans('camping::notifications.'.strtoupper($type).'.title'),
-            'body' => trans('camping::notifications.'.strtoupper($type).'.body'),
+            'title' => trans($main_module.'::notifications.'.strtoupper($type).'.title'),
+            'body' => trans($main_module.'::notifications.'.strtoupper($type).'.body'),
             'data' => [],
         ];
 
