@@ -95,14 +95,19 @@ class NotifyTheme extends BaseModel implements HasMedia
     ];
 
     /** @var array<string, string> */
-    protected $casts = [
+    protected function casts(): array
+    {
+        return [
+
         'updated_by' => 'string',
         'created_by' => 'string',
         'deleted_by' => 'string',
 
         // 'published_at' => 'datetime:Y-m-d', // da verificare
         'view_params' => 'array',
-    ];
+
+        ];
+    }
 
     public function getLogoAttribute(?array $value): array
     {

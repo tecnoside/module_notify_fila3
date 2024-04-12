@@ -37,9 +37,14 @@ abstract class BaseModelLang extends Model {
     protected $connection = 'notify';
 
     /** @var array<string, string> */
-    protected $casts = [
+    protected function casts(): array
+    {
+        return [
+
         // 'published_at' => 'datetime:Y-m-d', // da verificare
-    ];
+
+        ];
+    }
 
     /**
      * @var string[]

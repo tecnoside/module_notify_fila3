@@ -113,7 +113,10 @@ class Contact extends BaseModel
     ];
 
     /** @var array<string, string> */
-    protected $casts = [
+    protected function casts(): array
+    {
+        return [
+
         'updated_by' => 'string',
         'created_by' => 'string',
         'deleted_by' => 'string',
@@ -122,5 +125,7 @@ class Contact extends BaseModel
         // 'date_end' => 'datetime:Y-m-d\TH:i',
         'model_id' => 'string',
         'user_id' => 'string',
-    ];
+
+        ];
+    }
 }
