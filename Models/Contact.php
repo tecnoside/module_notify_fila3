@@ -112,7 +112,7 @@ class Contact extends BaseModel
         'updated_by', 'created_by', 'user_id', 'token',
     ];
 
-    /** @var array<string, string> */
+    /** @return array<string, string> */
     protected function casts(): array
     {
         return [
