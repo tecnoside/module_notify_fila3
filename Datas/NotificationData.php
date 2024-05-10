@@ -41,7 +41,7 @@ class NotificationData extends Data
     {
         // dddx(['driver'=>$driver,'a'=>$a]);
         // return $this->routes[$driver] ?? null;
-        if ($driver === 'database') {
+        if ('database' === $driver) {
             return app(NotificationModel::class);
         }
 

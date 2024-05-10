@@ -41,16 +41,16 @@ class Get
 
         $trad_mod = $module_name_low.'::'.$type.'.'.$name;
 
-        if ($theme->subject === null) {
+        if (null === $theme->subject) {
             $subject = trans($trad_mod.'.subject');
             $theme->update(['subject' => $subject]);
         }
 
-        if ($theme->theme === null) {
+        if (null === $theme->theme) {
             $theme->update(['theme' => 'ark']);
         }
 
-        if ($theme->body_html === null) {
+        if (null === $theme->body_html) {
             $html = trans($trad_mod.'.body_html');
             if (isset($view_params['body_html']) && $html === $trad_mod.'.body_html') {
                 $html = '##body_html##';
@@ -69,7 +69,7 @@ class Get
         $body_html = (string) $theme->body_html;
         $subject = (string) $theme->subject;
 
-        if ($theme->theme !== 'empty') {
+        if ('empty' !== $theme->theme) {
             $view_params['logo'] = $theme->logo;
         } else {
             $view_params['logo'] = '<img src="'.$theme->logo['path'].'" width="'.$theme->logo['width'].' "height="'.$theme->logo['height'].'" />';

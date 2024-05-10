@@ -30,6 +30,7 @@ abstract class BaseModelLang extends Model {
      * @var bool
      */
     public static $snakeAttributes = true;
+<<<<<<< HEAD
     /** @var int */
     protected $perPage = 30;
 
@@ -45,12 +46,26 @@ abstract class BaseModelLang extends Model {
 
         ];
     }
+=======
+
+    protected $perPage = 30;
+
+    protected $connection = 'notify';
+
+    /**
+     * @var array<string, string>
+     */
+    protected $casts = [
+        // 'published_at' => 'datetime:Y-m-d', // da verificare
+    ];
+>>>>>>> 25230a84 (first)
 
     /**
      * @var string[]
      */
     protected $dates = ['published_at', 'created_at', 'updated_at'];
 
+<<<<<<< HEAD
     /** @var string */
     protected $primaryKey = 'id';
 
@@ -58,11 +73,32 @@ abstract class BaseModelLang extends Model {
     public $incrementing = true;
 
     /** @var  array<int, string> */
+=======
+    /**
+     * @var string
+     */
+    protected $primaryKey = 'id';
+
+    /**
+     * @var bool
+     */
+    public $incrementing = true;
+
+    /**
+     * @var array<int, string>
+     */
+>>>>>>> 25230a84 (first)
     protected $hidden = [
         // 'password'
     ];
 
+<<<<<<< HEAD
     /** @var bool */
+=======
+    /**
+     * @var bool
+     */
+>>>>>>> 25230a84 (first)
     public $timestamps = true;
 
     // -----------

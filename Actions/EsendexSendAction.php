@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Modules\Notify\Actions;
 
 use Modules\Notify\Datas\SmsData;
-use Spatie\QueueableAction\QueueableAction;
-use Webmozart\Assert\Assert;
 
 use function Safe\curl_exec;
 use function Safe\curl_getinfo;
@@ -14,6 +12,9 @@ use function Safe\curl_init;
 use function Safe\curl_setopt;
 use function Safe\json_decode;
 use function Safe\json_encode;
+
+use Spatie\QueueableAction\QueueableAction;
+use Webmozart\Assert\Assert;
 
 /**
  * @property string $base_endpoint
@@ -61,7 +62,7 @@ class EsendexSendAction
         $info = curl_getinfo($ch);
         curl_close($ch);
         Assert::isArray($info);
-        if ($info['http_code'] !== 201) {
+        if (201 !== $info['http_code']) {
             return [];
         }
 
@@ -98,7 +99,7 @@ class EsendexSendAction
 
         curl_close($curlHandle);
         Assert::isArray($info);
-        if ($info['http_code'] !== 200) {
+        if (200 !== $info['http_code']) {
             return null;
         }
 
