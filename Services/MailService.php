@@ -28,7 +28,7 @@ class MailService
     public static function getInstance(): self
     {
         if (! self::$instance instanceof MailService) {
-            self::$instance = new self();
+            self::$instance = new self;
         }
 
         return self::$instance;
