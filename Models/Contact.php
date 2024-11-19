@@ -100,10 +100,10 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|Contact whereFirstName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact whereUsesleft($value)
  *
- * @property \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property \Modules\Xot\Contracts\ProfileContract|null $updater
- * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Spatie\MediaLibrary\MediaCollections\Models\Media> $media
- * @property-read int|null $media_count
+ * @property \Modules\Xot\Contracts\ProfileContract|null                                                                                       $creator
+ * @property \Modules\Xot\Contracts\ProfileContract|null                                                                                       $updater
+ * @property \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Spatie\MediaLibrary\MediaCollections\Models\Media> $media
+ * @property int|null                                                                                                                          $media_count
  *
  * @mixin \Eloquent
  */
@@ -117,7 +117,7 @@ class Contact extends BaseModel
     ];
 
     /** @return array<string, string> */
-    protected function casts(): array
+    public function casts(): array
     {
         return [
             'id' => 'string',

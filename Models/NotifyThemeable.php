@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
 
 /**
@@ -37,4 +38,5 @@ use Illuminate\Support\Carbon;
  */
 class NotifyThemeable extends BaseMorphPivot
 {
+    // ...
 }
